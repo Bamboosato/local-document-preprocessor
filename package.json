@@ -1,0 +1,46 @@
+{
+  "name": "local-document-preprocessor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "postbuild": "node scripts/copy-third-party-licenses.mjs",
+    "preview": "vite preview",
+    "test": "npm run test:unit",
+    "test:unit": "vitest run",
+    "test:unit:watch": "vitest",
+    "test:e2e": "playwright test",
+    "fixtures:pdf": "node scripts/generate-pdf-fixtures.mjs",
+    "check:dist": "node scripts/check-dist.mjs",
+    "check": "npm run test:unit && npm run build && npm run check:dist"
+  },
+  "dependencies": {
+    "@embedpdf/pdfium": "2.14.4",
+    "@firecrawl/anydoc-wasm": "0.1.7",
+    "fflate": "0.8.3",
+    "pdf-lib": "1.17.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-markdown": "^10.1.0",
+    "remark-breaks": "4.0.0",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "unified": "^11.0.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@testing-library/jest-dom": "^7.0.0",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.3",
+    "@types/node": "^26.1.2",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.0.5",
+    "jsdom": "^29.1.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.1",
+    "vitest": "^4.1.10"
+  }
+}

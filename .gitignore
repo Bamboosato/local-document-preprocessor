@@ -141,3 +141,11 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# Playwright
+playwright-report/
+test-results/
+.playwright-cli/
+
+# Local diagnostics (may contain document-derived evidence)
+tmp/
