@@ -65,6 +65,9 @@ test('実 WASM で日本語と半角カタカナを端末内変換する', async
   await expect(page.getByText('変換成功（要原本照合）').first()).toBeVisible({
     timeout: 30_000,
   });
+  await expect(page.locator('.result-handoff')).toContainText(
+    '結果は local-pii-masker へ手動で受け渡せます。',
+  );
   await expect(page.getByTestId('markdown-preview')).toContainText(expected);
 
   await page.getByRole('tab', { name: 'plain text' }).click();
@@ -93,6 +96,25 @@ test('実 WASM で日本語と半角カタカナを端末内変換する', async
   expect(
     await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
   ).toBe(true);
+
+  await page.setViewportSize({ width: 320, height: 800 });
+  await page.goto('/');
+  await expect(page.getByRole('heading', { name: 'Local Document Preprocessor' })).toBeVisible();
+  const smallViewportLayout = await page.locator('h1').evaluate((element) => {
+    const title = element as HTMLElement;
+    const rect = title.getBoundingClientRect();
+    const lineHeight = Number.parseFloat(getComputedStyle(title).lineHeight);
+    return {
+      pageFitsViewport: document.documentElement.scrollWidth <= window.innerWidth,
+      titleSingleLine: rect.height <= lineHeight * 1.2,
+      titleFitsViewport: rect.right <= window.innerWidth,
+    };
+  });
+  expect(smallViewportLayout).toEqual({
+    pageFitsViewport: true,
+    titleSingleLine: true,
+    titleFitsViewport: true,
+  });
 });
 
 test('Type0・ToUnicode欠落PDFを客観比較し、完全一致のpartialとして出力する', async ({
@@ -374,15 +396,108 @@ test('DOCX等の安定ページ境界がない形式は文書全体のみと明�
   await expect(page.locator('.selection-summary')).toContainText('文書全体');
 });
 
-test('iPhone相当の狭幅でも重要な制約と選択操作が横にはみ出さない', async ({ page }) => {
+test('初期表示で STEP 1 とドロップエリアをファーストビューに配置する', async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto('/');
+
+  await expect(page.getByRole('heading', { name: 'Local Document Preprocessor' })).toBeVisible();
+  await expect(page.locator('.hero-title-row .privacy-badge')).toBeVisible();
+  const fontFamily = await page.evaluate(() => getComputedStyle(document.documentElement).fontFamily);
+  expect(fontFamily).toContain('Inter');
+  expect(fontFamily).toContain('Segoe UI');
+  expect(fontFamily).toContain('Hiragino Kaku Gothic ProN');
+  const typography = await page.evaluate(() => ({
+    titleSize: Number.parseFloat(getComputedStyle(document.querySelector('h1')!).fontSize),
+    stepHeadingSize: Number.parseFloat(getComputedStyle(document.querySelector('.section-heading h2')!).fontSize),
+  }));
+  expect(typography.titleSize).toBeCloseTo(28, 1);
+  expect(typography.stepHeadingSize).toBeCloseTo(24, 1);
+  const titleBadgeAlignment = await page.evaluate(() => {
+    const title = document.querySelector<HTMLElement>('.hero-title-row h1');
+    const badge = document.querySelector<HTMLElement>('.hero-title-row .privacy-badge');
+    if (!title || !badge) throw new Error('Title badge layout is missing.');
+    const titleRect = title.getBoundingClientRect();
+    const badgeRect = badge.getBoundingClientRect();
+    return Math.abs(titleRect.bottom - badgeRect.bottom) < 2;
+  });
+  expect(titleBadgeAlignment).toBe(true);
+  await expect(
+    page.getByText(
+      '文書を、端末の中だけでテキストへ。ブラウザ内で完結し、外部送信やサーバー保存は行いません。',
+    ),
+  ).toBeVisible();
+  await expect(page.getByRole('heading', { name: '文書を選択' })).toBeVisible();
+  await expect(page.locator('.drop-zone')).toBeVisible();
+  await expect(page.locator('.hero-description')).toHaveCSS('color', 'rgb(74, 85, 104)');
+  await expect(page.locator('.boundary-info')).toHaveCSS('color', 'rgb(82, 82, 82)');
+  await expect(page.locator('.drop-zone')).toHaveCSS('border-style', 'dashed');
+  await expect(page.getByText(/外部送信・永続保存なし/)).toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: '変換後は必ず原本と照合してください' }),
+  ).toHaveCount(0);
+
+  const dropZone = page.locator('.drop-zone');
+  await dropZone.dispatchEvent('dragenter');
+  await expect(dropZone).toHaveClass(/is-dragging/);
+  await expect(dropZone).toHaveCSS('border-style', 'solid');
+  await expect(dropZone).toHaveCSS('border-color', 'rgb(10, 107, 80)');
+  await expect(dropZone).toHaveCSS('background-color', 'rgb(230, 244, 241)');
+  await dropZone.dispatchEvent('dragleave');
+  await expect(dropZone).not.toHaveClass(/is-dragging/);
+
+  const layout = await page.evaluate(() => {
+    const title = document.querySelector<HTMLElement>('h1');
+    const dropZone = document.querySelector<HTMLElement>('.drop-zone');
+    const boundaryInfo = document.querySelector<HTMLElement>('.boundary-info');
+    if (!title || !dropZone || !boundaryInfo) throw new Error('Initial workspace layout is missing.');
+
+    const titleRect = title.getBoundingClientRect();
+    const dropRect = dropZone.getBoundingClientRect();
+    const infoRect = boundaryInfo.getBoundingClientRect();
+    const titleLineHeight = Number.parseFloat(getComputedStyle(title).lineHeight);
+    const infoVerticallyCentered = [...boundaryInfo.querySelectorAll('li')].every((item) => {
+      const icon = item.querySelector<HTMLElement>('.boundary-info-icon');
+      const label = item.children[1] as HTMLElement | undefined;
+      if (!icon || !label) return false;
+      const iconRect = icon.getBoundingClientRect();
+      const labelRect = label.getBoundingClientRect();
+      return Math.abs(iconRect.top + iconRect.height / 2 - (labelRect.top + labelRect.height / 2)) < 2;
+    });
+    return {
+      pageFitsViewport: document.documentElement.scrollWidth <= window.innerWidth,
+      titleSingleLine: titleRect.height <= titleLineHeight * 1.2,
+      titleFitsViewport: titleRect.right <= window.innerWidth,
+      dropZoneVisible: dropRect.top >= 0 && dropRect.bottom <= window.innerHeight,
+      infoBelowDropZone: infoRect.top >= dropRect.bottom,
+      infoVisible: infoRect.bottom <= window.innerHeight,
+      infoVerticallyCentered,
+    };
+  });
+
+  expect(layout).toEqual({
+    pageFitsViewport: true,
+    titleSingleLine: true,
+    titleFitsViewport: true,
+    dropZoneVisible: true,
+    infoBelowDropZone: true,
+    infoVisible: true,
+    infoVerticallyCentered: true,
+  });
+});
+
+test('iPhone相当の狭幅でも補足情報と選択操作が横にはみ出さない', async ({ page }) => {
   await page.setViewportSize({ width: 375, height: 812 });
   await page.goto('/');
 
-  await expect(page.getByText('送信・保存なし')).toBeVisible();
-  await expect(page.getByText('OCR 非対応')).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Local Document Preprocessor' })).toBeVisible();
+  await expect(page.locator('.hero-title-row .privacy-badge')).toBeVisible();
+  await expect(page.getByRole('heading', { name: '文書を選択' })).toBeVisible();
+  await expect(page.getByText(/外部送信・永続保存なし/)).toBeVisible();
+  await expect(page.getByText(/OCR非対応/)).toBeVisible();
+  await expect(page.getByText(/local-pii-masker へ手動でコピー／ダウンロード/)).toBeVisible();
   await expect(
     page.getByRole('heading', { name: '変換後は必ず原本と照合してください' }),
-  ).toBeVisible();
+  ).toHaveCount(0);
   await expect(page.locator('input[type="file"]')).toBeEnabled();
   expect(
     await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
