@@ -1,0 +1,26 @@
+{
+  "id": "/",
+  "name": "Local Document Preprocessor",
+  "short_name": "LDP",
+  "description": "文書をブラウザ内だけで Markdown と plain text に変換します。",
+  "lang": "ja",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f5f7f3",
+  "theme_color": "#f5f7f3",
+  "icons": [
+    {
+      "src": "/ldp_icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/ldp_icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

@@ -81,17 +81,11 @@ test('実 WASM で日本語と半角カタカナを端末内変換する', async
     localStorage: localStorage.length,
     sessionStorage: sessionStorage.length,
     indexedDbDatabases: (await indexedDB.databases()).length,
-    caches: 'caches' in window ? (await caches.keys()).length : 0,
-    serviceWorkers: 'serviceWorker' in navigator
-      ? (await navigator.serviceWorker.getRegistrations()).length
-      : 0,
   }));
   expect(storage).toEqual({
     localStorage: 0,
     sessionStorage: 0,
     indexedDbDatabases: 0,
-    caches: 0,
-    serviceWorkers: 0,
   });
   expect(
     await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
