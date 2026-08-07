@@ -310,49 +310,35 @@ export default function App() {
     : undefined;
 
   return (
-    <div className="app-shell">
+      <div className="app-shell">
       <header className="hero">
         <div className="hero-copy">
-          <p className="product-label">LOCAL DOCUMENT PREPROCESSOR</p>
-          <h1>文書を、端末の中だけでテキストへ。</h1>
+          <div className="hero-title-row">
+            <h1>Local Document Preprocessor</h1>
+            <div className="privacy-badge" aria-label="ローカル処理・保存なし">
+              <svg
+                className="privacy-badge-icon"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M12 3 19 6v5c0 4.6-3 8.3-7 10-4-1.7-7-5.4-7-10V6l7-3Z" />
+                <path d="m9.5 12 1.6 1.6 3.5-3.5" />
+              </svg>
+              ローカル処理・保存なし
+            </div>
+          </div>
           <p className="hero-description">
-            文書をブラウザ内の Web Worker で Markdown / plain text に変換します。
-            サーバー送信、外部 API、一時保存・永続保存は行いません。
+            文書を、端末の中だけでテキストへ。ブラウザ内で完結し、外部送信やサーバー保存は行いません。
           </p>
-        </div>
-        <div className="privacy-badge" aria-label="ローカル処理">
-          <span aria-hidden="true">●</span>
-          端末内処理
         </div>
       </header>
 
       <main>
-        <section className="boundary-grid" aria-label="重要な制約">
-          <div className="boundary-card safe">
-            <strong>送信・保存なし</strong>
-            <span>選択した文書と結果は、このタブのメモリ内だけで扱います。</span>
-          </div>
-          <div className="boundary-card caution">
-            <strong>OCR 非対応</strong>
-            <span>画像のみ／スキャン PDF は変換できません。</span>
-          </div>
-          <div className="boundary-card neutral">
-            <strong>PII 処理は別アプリ</strong>
-            <span>必要に応じて plain text を local-pii-masker へ手動で渡してください。</span>
-          </div>
-        </section>
-
-        <section className="critical-warning" aria-labelledby="quality-warning-title">
-          <div className="warning-mark" aria-hidden="true">!</div>
-          <div>
-            <h2 id="quality-warning-title">変換後は必ず原本と照合してください</h2>
-            <p>
-              変換成功は「欠落なし」を意味しません。氏名・所属・住所・メール・電話・ID、
-              とくに PDF の半角カタカナを重点確認してください。
-            </p>
-          </div>
-        </section>
-
         <section className="workspace" aria-labelledby="input-title">
           <div className="section-heading">
             <div>
@@ -394,6 +380,20 @@ export default function App() {
             <span>またはクリックして選択</span>
             <small>Word / PowerPoint / Excel / OpenDocument / RTF / EPUB / CSV / PDF</small>
           </label>
+          <ul className="boundary-info" aria-label="利用上の注意">
+            <li>
+              <span className="boundary-info-icon" aria-hidden="true">🔒</span>
+              <span>外部送信・永続保存なし（タブを閉じると結果は失われます）</span>
+            </li>
+            <li>
+              <span className="boundary-info-icon" aria-hidden="true">🚫</span>
+              <span>OCR非対応（画像のみ／スキャンPDFは不可）</span>
+            </li>
+            <li>
+              <span className="boundary-info-icon" aria-hidden="true">↗</span>
+              <span>PII処理は local-pii-masker へ手動でコピー／ダウンロード</span>
+            </li>
+          </ul>
           <p className="selection-notice" role="alert">{selectionNotice}</p>
 
           {items.length > 0 && (
@@ -514,7 +514,10 @@ export default function App() {
                 <p className="step-label">STEP 2</p>
                 <h2 id="results-title">結果を確認</h2>
               </div>
-              <p>plain text は local-pii-masker へ手動で受け渡せます。</p>
+              <p className="result-handoff">
+                <span aria-hidden="true">↗</span>
+                結果は local-pii-masker へ手動で受け渡せます。
+              </p>
             </div>
             <div className="result-list">
               {resultItems.map((item) => (
@@ -529,10 +532,6 @@ export default function App() {
           </section>
         )}
       </main>
-
-      <footer>
-        このアプリは OCR・PII 検出・マスキングを行いません。タブを閉じると画面上の結果は失われます。
-      </footer>
       {dialogItem && (
         <SelectionDialog
           key={dialogItem.id}
