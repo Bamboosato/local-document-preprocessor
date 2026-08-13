@@ -1,4 +1,5 @@
 import { expect, test, type Page } from '@playwright/test';
+import { strToU8, zipSync } from 'fflate';
 import { resolve } from 'node:path';
 
 async function confirmDefaultScope(page: Page) {
@@ -16,6 +17,34 @@ async function selectRange(page: Page, start: number, end: number) {
   await page.getByLabel('開始').fill(String(start));
   await page.getByLabel('終了').fill(String(end));
   await page.getByRole('button', { name: 'この範囲に決定' }).click();
+}
+
+function docxFixture(includePageBreak: boolean): Buffer {
+  const contentTypes = `<?xml version="1.0" encoding="UTF-8"?>
+    <Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
+      <Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>
+      <Default Extension="xml" ContentType="application/xml"/>
+      <Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/>
+      <Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/>
+    </Types>`;
+  const documentXml = `<?xml version="1.0" encoding="UTF-8"?>
+    <w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+      <w:body><w:p><w:r><w:t>DOCX_PAGE_ONE</w:t>${includePageBreak ? '<w:br w:type="page"/>' : ''}<w:t>DOCX_PAGE_TWO</w:t></w:r></w:p>
+      <w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440"/></w:sectPr></w:body>
+    </w:document>`;
+  const rootRelationships = `<?xml version="1.0" encoding="UTF-8"?>
+    <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
+      <Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/>
+    </Relationships>`;
+  const stylesXml = '<w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"/>';
+  return Buffer.from(
+    zipSync({
+      '[Content_Types].xml': strToU8(contentTypes),
+      '_rels/.rels': strToU8(rootRelationships),
+      'word/document.xml': strToU8(documentXml),
+      'word/styles.xml': strToU8(stylesXml),
+    }),
+  );
 }
 
 test('実 WASM で日本語と半角カタカナを端末内変換する', async ({ page }) => {
@@ -378,7 +407,7 @@ test('DOCX等の安定ページ境界がない形式は文書全体のみと明�
   await page.locator('input[type="file"]').setInputFiles({
     name: 'document.docx',
     mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-    buffer: Buffer.from('inspection-only fixture'),
+    buffer: docxFixture(false),
   });
 
   await expect(page.getByRole('dialog', { name: '変換範囲を選択' })).toBeVisible({
@@ -388,6 +417,43 @@ test('DOCX等の安定ページ境界がない形式は文書全体のみと明�
   await expect(page.getByRole('radio')).toHaveCount(0);
   await page.getByRole('button', { name: 'この範囲に決定' }).click();
   await expect(page.locator('.selection-summary')).toContainText('文書全体');
+});
+
+test('[page-break] DOCXの明示改ページをMarkdownだけの区切りとして保持する', async ({ page }) => {
+  await page.goto('/');
+  await page.locator('input[type="file"]').setInputFiles({
+    name: 'explicit-page-breaks.docx',
+    mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+    buffer: docxFixture(true),
+  });
+
+  await expect(page.getByRole('dialog', { name: '変換範囲を選択' })).toBeVisible({
+    timeout: 30_000,
+  });
+  await expect(page.getByText('明示された改ページはMarkdownの区切りとして保持できます。')).toBeVisible();
+  await page.getByRole('button', { name: 'この範囲に決定' }).click();
+
+  const pageBreakOption = page.getByRole('checkbox', {
+    name: /Markdownにページ区切りを挿入する/u,
+  });
+  await expect(pageBreakOption).toBeChecked();
+  await expect(page.getByText('Word文書の明示改ページを独立行の「---」として保持します')).toBeVisible();
+  await page.getByRole('button', { name: '1 ファイルを変換' }).click();
+
+  await expect(page.getByText('変換成功（要原本照合）').first()).toBeVisible({ timeout: 30_000 });
+  await expect(page.getByTestId('markdown-preview')).toContainText('DOCX_PAGE_ONE');
+  await expect(page.getByTestId('markdown-preview')).toContainText('DOCX_PAGE_TWO');
+  await expect(page.getByTestId('markdown-preview').locator('hr')).toHaveCount(1);
+  await page.getByRole('tab', { name: 'plain text' }).click();
+  await expect(page.locator('.plain-preview')).toContainText('DOCX_PAGE_ONE');
+  await expect(page.locator('.plain-preview')).toContainText('DOCX_PAGE_TWO');
+  await expect(page.locator('.plain-preview')).not.toContainText('---');
+
+  await pageBreakOption.uncheck();
+  await expect(page.getByRole('heading', { name: '結果を確認' })).not.toBeVisible();
+  await page.getByRole('button', { name: '1 ファイルを変換' }).click();
+  await expect(page.getByText('変換成功（要原本照合）').first()).toBeVisible({ timeout: 30_000 });
+  await expect(page.getByTestId('markdown-preview').locator('hr')).toHaveCount(0);
 });
 
 test('初期表示で STEP 1 とドロップエリアをファーストビューに配置する', async ({ page }) => {

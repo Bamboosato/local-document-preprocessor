@@ -1,3 +1,4 @@
+import { strFromU8, strToU8, unzipSync, zipSync } from 'fflate';
 import { describe, expect, it, vi } from 'vitest';
 import type { Converter } from '../converter/contracts';
 import type { PdfPageService } from '../selection/documentSelection';
@@ -16,6 +17,33 @@ function recordingConverter(calls: number[]): Converter {
       const unit = bytes[0] ?? 0;
       calls.push(unit);
       return { markdown: `PAGE_${unit}`, detectedFormat: 'pdf' };
+    },
+  };
+}
+
+function docxBytes(): Uint8Array {
+  return zipSync({
+    '[Content_Types].xml': strToU8('<Types/>'),
+    'word/document.xml': strToU8(`
+      <w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+        <w:body><w:p><w:r><w:t>DOCX_ONE</w:t><w:br w:type="page"/>
+          <w:t>DOCX_TWO</w:t><w:br w:type="page"/><w:t>DOCX_THREE</w:t>
+        </w:r></w:p><w:sectPr/></w:body>
+      </w:document>
+    `),
+  });
+}
+
+function docxMarkerConverter(calls: string[]): Converter {
+  return {
+    convert: async ({ bytes }) => {
+      const xml = strFromU8(unzipSync(bytes)['word/document.xml']);
+      calls.push(xml);
+      const markers = xml.match(/LDPExplicitPageBreakMarkerA7F3A*/g) ?? [];
+      return {
+        markdown: `DOCX_ONE${markers[0] ?? ''}DOCX_TWO${markers[1] ?? ''}DOCX_THREE`,
+        detectedFormat: 'docx',
+      };
     },
   };
 }
@@ -76,5 +104,35 @@ describe('convertWithPageBreaks', () => {
 
     expect(calls).toEqual([5]);
     expect(result.markdown).toBe('PAGE_5');
+  });
+
+  it('[正常系・DOCX] 明示改ページをMarkdownの区切りへ変換する', async () => {
+    const calls: string[] = [];
+    const result = await convertWithPageBreaks(
+      docxMarkerConverter(calls),
+      { fileName: 'explicit-breaks.docx', bytes: docxBytes() },
+      true,
+      pdfService(9),
+    );
+
+    expect(calls).toHaveLength(1);
+    expect(calls[0]).toContain('LDPExplicitPageBreakMarkerA7F3');
+    expect(result.markdown).toBe('DOCX_ONE\n\n---\n\nDOCX_TWO\n\n---\n\nDOCX_THREE');
+    expect(result.markdown.match(/^---$/gmu)).toHaveLength(2);
+  });
+
+  it('[異常系・DOCX] 改ページマーカーが変換結果から欠落したら成功扱いにしない', async () => {
+    const converter: Converter = {
+      convert: async () => ({ markdown: 'DOCX_ONLY', detectedFormat: 'docx' }),
+    };
+
+    await expect(
+      convertWithPageBreaks(
+        converter,
+        { fileName: 'explicit-breaks.docx', bytes: docxBytes() },
+        true,
+        pdfService(9),
+      ),
+    ).rejects.toMatchObject({ code: 'postprocessingFailed' });
   });
 });

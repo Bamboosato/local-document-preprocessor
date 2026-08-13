@@ -81,4 +81,27 @@ describe('SelectionDialog', () => {
     expect(screen.getByText('文書全体を変換します')).toBeInTheDocument();
     expect(screen.queryByRole('radio')).not.toBeInTheDocument();
   });
+
+  it('明示改ページを含むDOCXには指定された案内文を表示する', () => {
+    render(
+      <SelectionDialog
+        fileName="explicit-breaks.docx"
+        inspection={{
+          selectionKind: 'document',
+          supportsSelection: false,
+          sheets: [],
+          explicitPageBreakCount: 2,
+        }}
+        selection={{ mode: 'all' }}
+        onCancel={vi.fn()}
+        onConfirm={vi.fn()}
+      />,
+    );
+
+    expect(
+      screen.getByText(
+        'ページ範囲の指定には対応していません。Word文書内の明示された改ページはMarkdownの区切りとして保持します。',
+      ),
+    ).toBeInTheDocument();
+  });
 });

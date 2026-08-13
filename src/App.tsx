@@ -71,7 +71,9 @@ function selectionSummary(
 function defaultOptions(inspection: DocumentInspection): ConversionOptions {
   return {
     insertPageBreaks:
-      inspection.selectionKind === 'pages' || inspection.selectionKind === 'slides',
+      inspection.selectionKind === 'pages' ||
+      inspection.selectionKind === 'slides' ||
+      (inspection.explicitPageBreakCount ?? 0) > 0,
   };
 }
 
@@ -421,7 +423,8 @@ export default function App() {
                           className={`selection-controls ${
                             item.options &&
                             (item.inspection.selectionKind === 'pages' ||
-                              item.inspection.selectionKind === 'slides')
+                              item.inspection.selectionKind === 'slides' ||
+                              (item.inspection.explicitPageBreakCount ?? 0) > 0)
                               ? 'has-page-break-option'
                               : ''
                           }`}
@@ -441,7 +444,8 @@ export default function App() {
                           </div>
                           {item.options &&
                             (item.inspection.selectionKind === 'pages' ||
-                              item.inspection.selectionKind === 'slides') && (
+                              item.inspection.selectionKind === 'slides' ||
+                              (item.inspection.explicitPageBreakCount ?? 0) > 0) && (
                               <label className="option-row">
                                 <input
                                   type="checkbox"
@@ -466,7 +470,11 @@ export default function App() {
                                 />
                                 <span>
                                   <strong>Markdownにページ区切りを挿入する</strong>
-                                  <small>ページ間に独立行の「---」を挿入します</small>
+                                  <small>
+                                    {item.inspection.selectionKind === 'document'
+                                      ? 'Word文書の明示改ページを独立行の「---」として保持します'
+                                      : 'ページ間に独立行の「---」を挿入します'}
+                                  </small>
                                 </span>
                               </label>
                             )}

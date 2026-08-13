@@ -65,6 +65,8 @@
 | N-11 | 正常系 | UI/機能 | DOCX または安定ページ境界のない形式 | 「文書全体」を明示し、存在しないページ範囲を推測しないこと |
 | N-12 | 正常系 | 機能/データ | PDF 2ページまたはPPTX 2スライド、区切りオン | 順序を保持し、Markdown の境界間だけ `---` が1件、plain text は0件となること |
 | N-13 | 正常系 | 機能/UI | PDF/PPTX、区切りオフ | 文書を1回の連続出力として変換し、Markdown に区切りがないこと |
+| N-14 | 正常系 | 機能/データ/UI | 明示 `w:br type="page"` を2件含む DOCX、区切りオン | 文書全体を変換し、Markdown に区切りが2件、plain text に `---` がないこと |
+| N-15 | 境界値 | 機能/データ | DOCX の通常 `w:br`、`w:pageBreakBefore`、セクション区切り | 明示 `w:br type="page"` 以外を改ページとして推測しないこと |
 | A-01 | 異常系 | データ/機能 | password 付き文書 | `encrypted` を password 非対応として明示すること |
 | A-02 | 異常系 | データ/機能 | 破損文書 | `malformed` / `missingPart` を破損・内部欠落として区別すること |
 | A-03 | 異常系 | データ/機能 | 画像のみ PDF | `ocr_required` と OCR 非対応を明示し、failed で出力を停止すること |
@@ -107,6 +109,7 @@
 
 - Unit: plain text 規則、品質診断、エラー分類、キュー逐次性、Worker cancel。
 - Unit: OOXML 構造検査・選択再構成、範囲境界、XML entity、非表示シート、選択外混入 0 件。
+- Unit: DOCX 本文の明示 `w:br type="page"` 検出、衝突しない一時マーカー、変換結果からのマーカー欠落時の安全停止。
 - Component: 段落内改行と空行の表示、外部画像/リンクを生成しないプレビュー、状態・警告表示。
 - Browser integration: 実 anydoc/PDFium WASM で CSV、PDF範囲、PPTX範囲、XLSXシート、Type0 fixture を選択し、両出力、選択外混入 0 件、外部通信なしを確認。
 - Fixture regression: 実文書またはライセンス上格納可能な最小 fixture で形式別に検証。
