@@ -1,7 +1,11 @@
 import { strFromU8, strToU8, unzipSync, zipSync } from 'fflate';
 import { describe, expect, it, vi } from 'vitest';
 import type { PdfPageService } from './documentSelection';
-import { inspectDocument, prepareSelectedDocument } from './documentSelection';
+import {
+  inspectDocument,
+  prepareDocxPageBreaks,
+  prepareSelectedDocument,
+} from './documentSelection';
 
 function packageWith(path: string, xml: string, extras: Record<string, string> = {}): Uint8Array {
   return zipSync({
@@ -27,6 +31,13 @@ const workbookXml = `<?xml version="1.0" encoding="UTF-8"?>
   <sheet name="Hidden Two" sheetId="2" state="hidden" r:id="rId2"/>
   <sheet name="三番目" sheetId="3" r:id="rId3"/>
 </sheets></workbook>`;
+
+const docxXml = `<?xml version="1.0" encoding="UTF-8"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:body><w:p><w:r><w:t>DOCX_ONE</w:t><w:br w:type="page"/><w:t>DOCX_TWO</w:t>
+    <w:br w:type="textWrapping"/><w:br w:type="page"/><w:t>DOCX_THREE</w:t>
+  </w:r></w:p><w:sectPr/></w:body>
+</w:document>`;
 
 describe('document selection', () => {
   it('PDFのページ数を検査し、指定範囲だけをPDFサービスへ渡す', async () => {
@@ -123,5 +134,25 @@ describe('document selection', () => {
         pdfPages,
       ),
     ).rejects.toMatchObject({ code: 'invalidSelection' });
+  });
+
+  it('DOCXの明示改ページだけを検出し、変換前の一時マーカーへ置換する', async () => {
+    const bytes = packageWith('word/document.xml', docxXml);
+
+    await expect(inspectDocument('explicit-breaks.docx', bytes, pdfPages)).resolves.toMatchObject({
+      selectionKind: 'document',
+      supportsSelection: false,
+      explicitPageBreakCount: 2,
+    });
+
+    const prepared = prepareDocxPageBreaks(bytes);
+    const preparedXml = strFromU8(unzipSync(prepared.bytes)['word/document.xml']);
+    const originalXml = strFromU8(unzipSync(bytes)['word/document.xml']);
+
+    expect(prepared.count).toBe(2);
+    expect(preparedXml.match(new RegExp(prepared.marker, 'g'))).toHaveLength(2);
+    expect(preparedXml).not.toContain('w:type="page"');
+    expect(preparedXml).toContain('w:type="textWrapping"');
+    expect(originalXml).toContain('w:type="page"');
   });
 });

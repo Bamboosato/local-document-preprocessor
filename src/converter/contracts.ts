@@ -89,6 +89,8 @@ export interface DocumentInspection {
   supportsSelection: boolean;
   totalUnits?: number;
   sheets: SheetInfo[];
+  /** Number of explicit DOCX body page breaks, when structurally inspectable. */
+  explicitPageBreakCount?: number;
 }
 
 export type DocumentSelection =

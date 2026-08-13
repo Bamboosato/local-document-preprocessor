@@ -104,7 +104,11 @@ export function SelectionDialog({
         {inspection.selectionKind === 'document' ? (
           <div className="document-scope-notice">
             <strong>文書全体を変換します</strong>
-            <p>安定したページ境界を取得できないため、ページ指定には対応していません。</p>
+            <p>
+              {(inspection.explicitPageBreakCount ?? 0) > 0
+                ? 'ページ範囲の指定には対応していません。Word文書内の明示された改ページはMarkdownの区切りとして保持します。'
+                : '安定したページ境界を取得できないため、ページ指定には対応していません。'}
+            </p>
           </div>
         ) : (
           <div className="scope-options">

@@ -9,9 +9,12 @@ const PRESENTATION_EXTENSIONS = new Set(['.pptx', '.pptm', '.ppsx', '.ppsm']);
 const SPREADSHEET_EXTENSIONS = new Set(['.xlsx', '.xlsm']);
 const PRESENTATION_XML = 'ppt/presentation.xml';
 const WORKBOOK_XML = 'xl/workbook.xml';
+const DOCX_DOCUMENT_XML = 'word/document.xml';
+const DOCX_EXTENSIONS = new Set(['.docx']);
 const MAX_STRUCTURE_XML_BYTES = 8 * 1024 * 1024;
 const MAX_REPACKED_BYTES = 256 * 1024 * 1024;
 const MAX_ARCHIVE_ENTRIES = 10_000;
+const DOCX_PAGE_BREAK_MARKER_BASE = 'LDPExplicitPageBreakMarkerA7F3';
 
 export interface PdfPageService {
   countPages(bytes: Uint8Array): Promise<number>;
@@ -171,6 +174,42 @@ function rewriteXmlEntry(
   }
 }
 
+function docxPageBreakTag(): RegExp {
+  return /<(?:[\w.-]+:)?br\b(?=[^>]*\b(?:[\w.-]+:)?type\s*=\s*(?:"page"|'page'))[^>]*\/\s*>/giu;
+}
+
+function countExplicitDocxPageBreaks(xml: string): number {
+  return xml.match(docxPageBreakTag())?.length ?? 0;
+}
+
+export interface DocxPageBreakPreparation {
+  bytes: Uint8Array;
+  count: number;
+  marker: string;
+}
+
+export function countDocxPageBreaks(bytes: Uint8Array): number {
+  return countExplicitDocxPageBreaks(readXmlEntry(bytes, DOCX_DOCUMENT_XML));
+}
+
+export function prepareDocxPageBreaks(bytes: Uint8Array): DocxPageBreakPreparation {
+  const xml = readXmlEntry(bytes, DOCX_DOCUMENT_XML);
+  let marker = DOCX_PAGE_BREAK_MARKER_BASE;
+  while (xml.includes(marker)) marker += 'A';
+
+  let count = 0;
+  const rewrittenXml = xml.replace(docxPageBreakTag(), () => {
+    count += 1;
+    return `<w:t xml:space="preserve">${marker}</w:t>`;
+  });
+
+  return {
+    bytes: count === 0 ? bytes : rewriteXmlEntry(bytes, DOCX_DOCUMENT_XML, () => rewrittenXml),
+    count,
+    marker,
+  };
+}
+
 function presentationCount(bytes: Uint8Array): number {
   const xml = readXmlEntry(bytes, PRESENTATION_XML);
   const slides = childTags(elementContent(xml, 'sldIdLst').inner, 'sldId');
@@ -207,6 +246,20 @@ export async function inspectDocument(
   pdfPages: PdfPageService,
 ): Promise<DocumentInspection> {
   const extension = extensionOf(fileName);
+  if (DOCX_EXTENSIONS.has(extension)) {
+    try {
+      return {
+        selectionKind: 'document',
+        supportsSelection: false,
+        sheets: [],
+        explicitPageBreakCount: countDocxPageBreaks(bytes),
+      };
+    } catch {
+      // Keep document-level inspection available; anydoc remains responsible for
+      // classifying malformed DOCX input during conversion.
+      return { selectionKind: 'document', supportsSelection: false, sheets: [] };
+    }
+  }
   if (extension === '.pdf') {
     const totalUnits = await pdfPages.countPages(bytes);
     if (totalUnits < 1) throw codedError('malformed', 'The PDF does not contain any pages.');
