@@ -17,6 +17,16 @@ export function outputFileName(inputName: string, extension: '.md' | '.txt'): st
   return `${safeBase || 'converted'}${extension}`;
 }
 
+export function markdownDownloadContent(
+  markdown: string,
+  originalFileName: string,
+  originalUpdatedAt: number,
+): string {
+  const title = JSON.stringify(originalFileName);
+  const updatedAt = JSON.stringify(new Date(originalUpdatedAt).toISOString());
+  return `---\ntitle: ${title}\noriginal_updatedAt: ${updatedAt}\n---\n\n${markdown}`;
+}
+
 export function downloadText(fileName: string, text: string, mimeType: string): void {
   const blob = new Blob([text], { type: `${mimeType};charset=utf-8` });
   const url = URL.createObjectURL(blob);
