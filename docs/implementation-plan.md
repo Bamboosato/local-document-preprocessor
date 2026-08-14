@@ -12,7 +12,7 @@
 - Converter 層、Web Worker、逐次キュー、キャンセル再生成を実装する。
 - Markdown から決定的 plain text を生成する。
 - 安全なプレビュー、コピー、ダウンロードを実装する。
-- Markdown ダウンロード時だけ、元ファイル名を `title`、元 `File.lastModified` を UTC ISO 8601 の `original_updatedAt` として YAML frontmatter に付与する。plain text、プレビュー、コピーには付与しない。
+- Markdown ダウンロード時だけ、元ファイル名を `title`、元 `File.lastModified` を UTC ISO 8601 の `originalUpdatedAt` として YAML frontmatter に付与する。plain text、プレビュー、コピーには付与しない。
 - anydoc エラー分類、アプリ上限、原本照合・PDF リスク警告を実装する。
 - Worker 内構造検査と、PDFページ・PowerPointスライド・Excelシートのファイル別範囲選択を実装する。安定した境界がない形式は文書全体のみとする。
 - PDF／PowerPoint はページ区切りを既定オンで選択可能にし、安定境界ごとの逐次変換を `---` で結合する。plain text には区切り文字を残さない。

@@ -88,7 +88,7 @@ describe('ResultCard quality state', () => {
 
     expect(mockedDownloadText).toHaveBeenCalledWith(
       '元資料.md',
-      '---\ntitle: "元資料.pdf"\noriginal_updatedAt: "1970-01-01T00:00:00.000Z"\n---\n\n検証結果',
+      '---\ntitle: "元資料.pdf"\noriginalUpdatedAt: "1970-01-01T00:00:00.000Z"\n---\n\n検証結果',
       'text/markdown',
     );
   });

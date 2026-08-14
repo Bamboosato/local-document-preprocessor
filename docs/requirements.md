@@ -59,7 +59,7 @@ anydoc 0.1.7 の公式対応範囲を本 MVP の候補形式とする。
 15. PDF と PowerPoint OOXML では「Markdownにページ区切りを挿入する」オプションをファイルごとに表示し、既定値をオンとする。DOCX は `word/document.xml` の本文中に明示された `w:br` の `type="page"` を検出できる場合だけ同じオプションを表示し、既定値をオンとする。
 16. PDF／PowerPoint の選択単位は Worker 内で安定した境界単位へ分け、元の順序で逐次変換する。DOCX は文書全体を一度変換し、検出した明示改ページだけを Markdown の独立行 `---` として保持する。自動改ページ、`w:pageBreakBefore`、セクション区切りは推測しない。
 17. ページ区切りは Markdown の構造としてのみ保持し、決定的 plain text では文字列 `---` を出力しない。オプション変更時は既存結果を破棄し、未変換状態へ戻す。
-18. Markdown のダウンロード時だけ、本文の先頭に YAML frontmatter を付与する。`title` は元ファイル名（拡張子を含む）、`original_updatedAt` は元 `File.lastModified` を UTC の ISO 8601 文字列へ変換した値とする。frontmatter は変換結果の Markdown 本文、plain text、プレビュー、コピーには混入させない。
+18. Markdown のダウンロード時だけ、本文の先頭に YAML frontmatter を付与する。`title` は元ファイル名（拡張子を含む）、`originalUpdatedAt` は元 `File.lastModified` を UTC の ISO 8601 文字列へ変換した値とする。frontmatter は変換結果の Markdown 本文、plain text、プレビュー、コピーには混入させない。
 
 ### 形式別の変換範囲
 
@@ -121,7 +121,7 @@ anydoc 0.1.7 の公式対応範囲を本 MVP の候補形式とする。
 - PDF のページ、PowerPoint のスライド、Excel のシートを指定でき、範囲外の固有文字列が両出力へ混入しない。DOCX は文書全体のみと明示する。
 - PDF／PowerPoint ではページ区切りオプションが既定オンで、選択した N 単位に対して Markdown の区切りが N-1 件となる。明示改ページを含む DOCX では検出数と同数の区切りを保持する。オフでは 0 件、plain text では設定によらず 0 件となる。
 - 成功結果が必ず原本照合を要求し、PDF 固有リスクを追加表示する。
-- Markdown のダウンロードに `title` と `original_updatedAt` が含まれ、元ファイル名の拡張子と更新日時が失われない。plain text のダウンロード、プレビュー、コピーにはこの frontmatter が含まれない。
+- Markdown のダウンロードに `title` と `originalUpdatedAt` が含まれ、元ファイル名の拡張子と更新日時が失われない。plain text のダウンロード、プレビュー、コピーにはこの frontmatter が含まれない。
 - 主要な anydoc エラーが利用者向け日本語に分類される。
 - プレビューに外部 `img` / `a` 要素が生成されず、raw HTML が実行されない。
 - ビルド成果物が静的ホスティングでき、変換時の外部通信がない。
