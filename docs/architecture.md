@@ -48,7 +48,7 @@ flowchart LR
 5. PDF は同じ選択入力を PDFium WASM でもページ別に抽出し、文字異常と欠落差を比較する。PDFium fallback も同じページ区切り設定に従う。
 6. 異常時は改善が客観確認できた PDFium 出力だけを `partial` として採用する。推測置換や正規化は行わない。
 7. Worker は採用 Markdown から plain text を決定的に導出する。Markdown の thematic break は plain text では空行となり、`---` は残さない。
-8. コピーとプレビューは `ConversionResult` の Markdown / plain text をそのまま使用する。Markdown ダウンロードだけ、ダウンロード直前に `title` と `original_updatedAt` の YAML frontmatter を付与する。plain text ダウンロードには付与しない。
+8. コピーとプレビューは `ConversionResult` の Markdown / plain text をそのまま使用する。Markdown ダウンロードだけ、ダウンロード直前に `title` と `originalUpdatedAt` の YAML frontmatter を付与する。plain text ダウンロードには付与しない。
 9. コピーは Clipboard API、ダウンロードは短命な Blob URL を使用し、直後に revoke する。
 10. クリア、再読み込み、タブ終了で参照を失い、復元経路は持たない。
 

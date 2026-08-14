@@ -9,7 +9,7 @@
 - 形式判定、anydoc/PDFium WASM 遅延初期化、Markdown 変換、plain text 変換。
 - 複数ファイルの逐次処理、部分失敗後の継続、キャンセルと再実行。
 - プレビュー、コピー、ダウンロード、クリア。
-- Markdown ダウンロード時だけの YAML frontmatter（`title` / `original_updatedAt`）付与。
+- Markdown ダウンロード時だけの YAML frontmatter（`title` / `originalUpdatedAt`）付与。
 - password、破損、画像のみ PDF、resource limit の分類通知。
 - `success` / `partial` / `failed` の品質判定、原本照合、PDF/文字異常警告、failed の出力停止。
 - Worker 内の構造検査、PDF ページ範囲、PowerPoint スライド範囲、Excel シート選択、全体のみ形式の制御。
@@ -70,7 +70,7 @@
 | N-13 | 正常系 | 機能/UI | PDF/PPTX、区切りオフ | 文書を1回の連続出力として変換し、Markdown に区切りがないこと |
 | N-14 | 正常系 | 機能/データ/UI | 明示 `w:br type="page"` を2件含む DOCX、区切りオン | 文書全体を変換し、Markdown に区切りが2件、plain text に `---` がないこと |
 | N-15 | 境界値 | 機能/データ | DOCX の通常 `w:br`、`w:pageBreakBefore`、セクション区切り | 明示 `w:br type="page"` 以外を改ページとして推測しないこと |
-| N-16 | 正常系 | 機能/データ/UI | `source.pdf` と固定した `lastModified` を持つ変換済み結果 | Markdown ダウンロードの先頭だけに `title: "source.pdf"` と UTC ISO 8601 の `original_updatedAt` が現れ、変換本文は保持されること |
+| N-16 | 正常系 | 機能/データ/UI | `source.pdf` と固定した `lastModified` を持つ変換済み結果 | Markdown ダウンロードの先頭だけに `title: "source.pdf"` と UTC ISO 8601 の `originalUpdatedAt` が現れ、変換本文は保持されること |
 | N-17 | 正常系 | 機能/UI | 同じ変換結果で plain text を選択 | plain text ダウンロードに frontmatter が付かず、元の plain text と完全一致すること |
 | A-01 | 異常系 | データ/機能 | password 付き文書 | `encrypted` を password 非対応として明示すること |
 | A-02 | 異常系 | データ/機能 | 破損文書 | `malformed` / `missingPart` を破損・内部欠落として区別すること |
@@ -89,7 +89,7 @@
 | B-05 | 境界値 | データ | 異常文字 0/1 件、Type0 PDF の欠落差 0/1 件 | 1文字欠落を検出し、Type0/ToUnicode 欠落を success にしないこと |
 | B-06 | 境界値 | 機能/UI | 開始/終了が 1、最終、逆転、0、最終+1、シート 0/1 件 | 有効な境界だけ確定でき、無効値を変換要求へ渡さないこと |
 | B-07 | 境界値 | 機能/データ | 1ページ/1スライド、または選択範囲が1単位 | 区切りオンでも先頭・末尾を含め `---` を挿入しないこと |
-| B-08 | 境界値 | データ/機能 | 日本語・引用符・拡張子を含むファイル名、`lastModified = 0` | `title` の値を壊さず、`original_updatedAt` を `1970-01-01T00:00:00.000Z` として安全に直列化すること |
+| B-08 | 境界値 | データ/機能 | 日本語・引用符・拡張子を含むファイル名、`lastModified = 0` | `title` の値を壊さず、`originalUpdatedAt` を `1970-01-01T00:00:00.000Z` として安全に直列化すること |
 | S-01 | 状態遷移 | 機能 | `ready` から開始 | `ready → converting → completed/partial/failed` のみ遷移すること |
 | S-02 | 状態遷移 | 機能 | 変換中にキャンセル | Worker を terminate・再生成し、実行中/待機中を cancelled にすること |
 | S-03 | 状態遷移 | 機能 | キャンセル直後に再実行 | 古い Worker の応答が新しい状態を上書きしないこと |

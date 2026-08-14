@@ -6,7 +6,7 @@ describe('markdownDownloadContent', () => {
     expect(markdownDownloadContent('# 本文', 'source.pdf', 1_750_138_400_000)).toBe(
       '---\n' +
         'title: "source.pdf"\n' +
-        'original_updatedAt: "2025-06-17T05:33:20.000Z"\n' +
+        'originalUpdatedAt: "2025-06-17T05:33:20.000Z"\n' +
         '---\n\n' +
         '# 本文',
     );
@@ -16,7 +16,7 @@ describe('markdownDownloadContent', () => {
     const content = markdownDownloadContent('本文', '見積書 "確定".pdf', 0);
 
     expect(content).toContain('title: "見積書 \\"確定\\".pdf"');
-    expect(content).toContain('original_updatedAt: "1970-01-01T00:00:00.000Z"');
+    expect(content).toContain('originalUpdatedAt: "1970-01-01T00:00:00.000Z"');
     expect(content.endsWith('\n\n本文')).toBe(true);
   });
 });

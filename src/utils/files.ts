@@ -24,7 +24,7 @@ export function markdownDownloadContent(
 ): string {
   const title = JSON.stringify(originalFileName);
   const updatedAt = JSON.stringify(new Date(originalUpdatedAt).toISOString());
-  return `---\ntitle: ${title}\noriginal_updatedAt: ${updatedAt}\n---\n\n${markdown}`;
+  return `---\ntitle: ${title}\noriginalUpdatedAt: ${updatedAt}\n---\n\n${markdown}`;
 }
 
 export function downloadText(fileName: string, text: string, mimeType: string): void {
