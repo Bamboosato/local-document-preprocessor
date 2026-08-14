@@ -3,12 +3,18 @@ import type {
   ConversionDisposition,
   ConversionResult,
 } from '../converter/contracts';
-import { copyText, downloadText, outputFileName } from '../utils/files';
+import {
+  copyText,
+  downloadText,
+  markdownDownloadContent,
+  outputFileName,
+} from '../utils/files';
 import { MarkdownPreview } from './MarkdownPreview';
 
 interface ResultCardProps {
   id: string;
   fileName: string;
+  originalUpdatedAt: number;
   result: ConversionResult;
 }
 
@@ -26,7 +32,7 @@ const QUALITY_HEADINGS: Record<ConversionDisposition, string> = {
   failed: '変換結果の完全性を保証できません',
 };
 
-export function ResultCard({ id, fileName, result }: ResultCardProps) {
+export function ResultCard({ id, fileName, originalUpdatedAt, result }: ResultCardProps) {
   const [activeOutput, setActiveOutput] = useState<OutputKind>('markdown');
   const [notice, setNotice] = useState('');
   const text = activeOutput === 'markdown' ? result.markdown : result.plainText;
@@ -45,9 +51,12 @@ export function ResultCard({ id, fileName, result }: ResultCardProps) {
   const handleDownload = () => {
     if (!result.quality.safeToExport) return;
     const isMarkdown = activeOutput === 'markdown';
+    const downloadContent = isMarkdown
+      ? markdownDownloadContent(text, fileName, originalUpdatedAt)
+      : text;
     downloadText(
       outputFileName(fileName, isMarkdown ? '.md' : '.txt'),
-      text,
+      downloadContent,
       isMarkdown ? 'text/markdown' : 'text/plain',
     );
     setNotice(`${outputLabel} のダウンロードを開始しました。`);

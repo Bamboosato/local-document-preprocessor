@@ -32,6 +32,7 @@ interface QueueItem {
   id: string;
   name: string;
   size: number;
+  originalUpdatedAt: number;
   file?: File;
   status: ItemStatus;
   result?: ConversionResult;
@@ -128,6 +129,7 @@ export default function App() {
           id: createId(),
           name: file.name,
           size: file.size,
+          originalUpdatedAt: file.lastModified,
           status: 'failed',
           errorCode: 'appFileTooLarge',
         };
@@ -137,6 +139,7 @@ export default function App() {
         id: createId(),
         name: file.name,
         size: file.size,
+        originalUpdatedAt: file.lastModified,
         file,
         status: 'inspecting',
       };
@@ -533,6 +536,7 @@ export default function App() {
                   key={item.id}
                   id={item.id}
                   fileName={item.name}
+                  originalUpdatedAt={item.originalUpdatedAt}
                   result={item.result}
                 />
               ))}

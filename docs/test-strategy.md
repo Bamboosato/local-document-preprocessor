@@ -1,6 +1,6 @@
 # テスト戦略
 
-更新日: 2026-08-07
+更新日: 2026-08-14
 
 ## 1. テスト観点（ケースより先に固定）
 
@@ -9,6 +9,7 @@
 - 形式判定、anydoc/PDFium WASM 遅延初期化、Markdown 変換、plain text 変換。
 - 複数ファイルの逐次処理、部分失敗後の継続、キャンセルと再実行。
 - プレビュー、コピー、ダウンロード、クリア。
+- Markdown ダウンロード時だけの YAML frontmatter（`title` / `original_updatedAt`）付与。
 - password、破損、画像のみ PDF、resource limit の分類通知。
 - `success` / `partial` / `failed` の品質判定、原本照合、PDF/文字異常警告、failed の出力停止。
 - Worker 内の構造検査、PDF ページ範囲、PowerPoint スライド範囲、Excel シート選択、全体のみ形式の制御。
@@ -32,6 +33,7 @@
 - `U+FFFD`、C0/C1 制御文字、CJK 部首補助、非文字、孤立サロゲート、文字頻度差、空ページ。
 - 空、極小、上限直下、上限一致、上限超過、圧縮爆弾相当。
 - 表、結合セル、箇条書き、脚注、リンク、画像 alt、raw HTML。
+- 元ファイル名（拡張子・日本語・引用符を含む）と `File.lastModified` の ISO 8601 変換。
 - 拡張子不一致、署名なし CSV、壊れたコンテナ、暗号化文書。
 - 1/最終ページ、単一ページ、中間範囲、全範囲、スライド順、Unicode/長い/非表示シート名、シート全解除。
 - ページ区切りオン/オフ、0/1/複数境界、空ページ、先頭/末尾の不要な区切り、本文中の既存 horizontal rule。
@@ -45,6 +47,7 @@
 - 警告とエラーが色だけに依存せず、読み上げられる。
 - キーボード操作、フォーカス、狭幅、長いファイル名、長文プレビュー。
 - コピー成功/失敗、ダウンロード名、モバイル Safari の共有・ダウンロード挙動。
+- Markdown ダウンロードだけに frontmatter が現れ、plain text、プレビュー、コピーには現れないこと。
 - Vercel版相当の「変換範囲」「変更」要約、範囲ダイアログ、単位別文言、入力エラー、狭幅での操作性。
 - PDF／PowerPointだけにページ区切り設定を表示し、既定オン、説明文、設定変更後の未変換状態を色以外でも判別できること。
 
@@ -67,6 +70,8 @@
 | N-13 | 正常系 | 機能/UI | PDF/PPTX、区切りオフ | 文書を1回の連続出力として変換し、Markdown に区切りがないこと |
 | N-14 | 正常系 | 機能/データ/UI | 明示 `w:br type="page"` を2件含む DOCX、区切りオン | 文書全体を変換し、Markdown に区切りが2件、plain text に `---` がないこと |
 | N-15 | 境界値 | 機能/データ | DOCX の通常 `w:br`、`w:pageBreakBefore`、セクション区切り | 明示 `w:br type="page"` 以外を改ページとして推測しないこと |
+| N-16 | 正常系 | 機能/データ/UI | `source.pdf` と固定した `lastModified` を持つ変換済み結果 | Markdown ダウンロードの先頭だけに `title: "source.pdf"` と UTC ISO 8601 の `original_updatedAt` が現れ、変換本文は保持されること |
+| N-17 | 正常系 | 機能/UI | 同じ変換結果で plain text を選択 | plain text ダウンロードに frontmatter が付かず、元の plain text と完全一致すること |
 | A-01 | 異常系 | データ/機能 | password 付き文書 | `encrypted` を password 非対応として明示すること |
 | A-02 | 異常系 | データ/機能 | 破損文書 | `malformed` / `missingPart` を破損・内部欠落として区別すること |
 | A-03 | 異常系 | データ/機能 | 画像のみ PDF | `ocr_required` と OCR 非対応を明示し、failed で出力を停止すること |
@@ -84,12 +89,14 @@
 | B-05 | 境界値 | データ | 異常文字 0/1 件、Type0 PDF の欠落差 0/1 件 | 1文字欠落を検出し、Type0/ToUnicode 欠落を success にしないこと |
 | B-06 | 境界値 | 機能/UI | 開始/終了が 1、最終、逆転、0、最終+1、シート 0/1 件 | 有効な境界だけ確定でき、無効値を変換要求へ渡さないこと |
 | B-07 | 境界値 | 機能/データ | 1ページ/1スライド、または選択範囲が1単位 | 区切りオンでも先頭・末尾を含め `---` を挿入しないこと |
+| B-08 | 境界値 | データ/機能 | 日本語・引用符・拡張子を含むファイル名、`lastModified = 0` | `title` の値を壊さず、`original_updatedAt` を `1970-01-01T00:00:00.000Z` として安全に直列化すること |
 | S-01 | 状態遷移 | 機能 | `ready` から開始 | `ready → converting → completed/partial/failed` のみ遷移すること |
 | S-02 | 状態遷移 | 機能 | 変換中にキャンセル | Worker を terminate・再生成し、実行中/待機中を cancelled にすること |
 | S-03 | 状態遷移 | 機能 | キャンセル直後に再実行 | 古い Worker の応答が新しい状態を上書きしないこと |
 | S-04 | 状態遷移 | 機能 | 完了/失敗/キャンセル後にクリア | `File` と結果参照が消え idle に戻ること |
 | S-05 | 状態遷移 | 機能/UI | 構造検査中の再選択、完了後の範囲変更 | 古い検査応答を無視し、範囲変更時は旧結果を破棄して queued に戻ること |
 | S-06 | 状態遷移 | 機能/UI | 完了後にページ区切りをオン/オフ | 旧結果を破棄して queued に戻り、再変換結果だけを表示すること |
+| S-07 | 状態遷移 | 機能/UI | `partial` / `failed` の結果でダウンロード操作 | `partial` は frontmatter 付き Markdown を許可し、`failed` は従来どおり全出力操作を停止すること |
 
 ## 3. 最重要回帰
 
@@ -108,9 +115,10 @@
 ## 4. 実行レイヤーと証跡
 
 - Unit: plain text 規則、品質診断、エラー分類、キュー逐次性、Worker cancel。
+- Unit: Markdown ダウンロード frontmatter のキー名、値のエスケープ、`lastModified` の ISO 8601 変換、plain text 非付与。
 - Unit: OOXML 構造検査・選択再構成、範囲境界、XML entity、非表示シート、選択外混入 0 件。
 - Unit: DOCX 本文の明示 `w:br type="page"` 検出、衝突しない一時マーカー、変換結果からのマーカー欠落時の安全停止。
-- Component: 段落内改行と空行の表示、外部画像/リンクを生成しないプレビュー、状態・警告表示。
+- Component: 段落内改行と空行の表示、外部画像/リンクを生成しないプレビュー、状態・警告表示、Markdown/plain text ダウンロード境界。
 - Browser integration: 実 anydoc/PDFium WASM で CSV、PDF範囲、PPTX範囲、XLSXシート、Type0 fixture を選択し、両出力、選択外混入 0 件、外部通信なしを確認。
 - Fixture regression: 実文書またはライセンス上格納可能な最小 fixture で形式別に検証。
 - Real device: Safari / iPhone Safari の Worker、WASM、メモリ、ダウンロードを確認。
