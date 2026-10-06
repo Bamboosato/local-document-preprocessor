@@ -1,5 +1,9 @@
 # MVP 検証結果
 
+> 過去の MVP 検証記録。以下の日時・件数・証跡は原記録として保持する。実行コミットが記録されていないため、現在の実装すべてを検証済みとする根拠には使用しない。後続の PWA・DOCX 明示改ページ・Markdown ダウンロードメタデータを含む現状照合は [2026-10-06 の文書整合性監査](documentation-audit.md) を参照する。
+>
+> 特に「Cache・Service Worker 0」は PWA 導入前の記録である。現行は静的アプリ資産のみキャッシュする。文書と結果の非保存要件は継続する。以下の「現行 suite」は当時の suite を指す。
+
 実施日: 2026-08-07
 環境: Windows / PowerShell / Playwright Chromium（同一実機、直列実行）
 
@@ -56,7 +60,7 @@ PDF 2ページとPPTX 2スライドで既定オンの区切り1件、plain text 
 ## 未実施範囲と残存リスク
 
 - Edge 実ブラウザ、macOS Safari、iPhone Safari 実機は未実施。WASM 初期化、メモリ上限、Clipboard、ダウンロード差異が残る。
-- Word、OpenDocument、RTF、EPUB の実 fixture E2E は未実施。
+- 当時の Word、OpenDocument、RTF、EPUB の実 fixture E2E は未実施。後続で DOCX の明示改ページ fixture E2E を追加したが、Word 全形式の品質確認完了を意味しない。
 - PowerPoint は `.pptx`、Excel は `.xlsx` の範囲 fixture を実施済み。旧 Office、マクロ有効 Office、OpenDocument、RTF、EPUB は文書全体変換のみで、実 fixture E2E は未実施。
 - password 付き、破損 PDF、実 resource limit は分類 unit までで、実ファイル E2E は未実施。
 - PDF の一部が画像でも背景・装飾だけのページとの機械的区別はできない。テキストなしページは安全側に mixed とする。

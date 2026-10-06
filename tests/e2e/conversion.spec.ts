@@ -430,7 +430,9 @@ test('[page-break] DOCXの明示改ページをMarkdownだけの区切りとし�
   await expect(page.getByRole('dialog', { name: '変換範囲を選択' })).toBeVisible({
     timeout: 30_000,
   });
-  await expect(page.getByText('明示された改ページはMarkdownの区切りとして保持できます。')).toBeVisible();
+  await expect(page.getByRole('dialog', { name: '変換範囲を選択' })).toContainText(
+    'Word文書内の明示された改ページはMarkdownの区切りとして保持します。',
+  );
   await page.getByRole('button', { name: 'この範囲に決定' }).click();
 
   const pageBreakOption = page.getByRole('checkbox', {

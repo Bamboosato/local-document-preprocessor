@@ -13,6 +13,7 @@
 - `AnyDocConverter` だけが anydoc を import し、アプリ固有の `Converter` 契約へ変換する。
 - Converter は Web Worker 内でのみ生成する。
 - Worker は最初の変換時に動的 import と `init()` を行い、以後再利用する。
+- 上記初期化時点は anydoc のもの。PDFium は後続の範囲選択実装により PDF 構造確認から使用する。両エンジンとも Worker 内でのみ初期化する。
 - 複数ファイルは UI 側オーケストレータが逐次 `convert` する。
 - キャンセルは cooperative cancel ではなく Worker の `terminate()` と即時再生成で保証する。
 - plain text は anydoc へ再入力せず、Markdown AST から決定的に生成する。
@@ -22,7 +23,7 @@
 
 ### 利点
 
-- 入力バイトと変換本文はブラウザプロセス外へ出ない。
+- 入力バイトと変換本文をアプリから外部サービスへ送信しない。コピー／ダウンロードは利用者の明示操作で行う。静的資産キャッシュの範囲は ADR-0004 に従う。
 - UI 応答性とキャンセルの確実性を保ちやすい。
 - anydoc API 変更の影響範囲が Converter に限定される。
 - Markdown と plain text の対応が再現可能になる。
