@@ -1,0 +1,97 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      full_e2e:
+        description: Run the complete Chromium suite
+        type: boolean
+        default: false
+  schedule:
+    - cron: '0 0 * * 1'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event_name }}-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  verify:
+    name: Verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Select E2E scope
+        id: scope
+        env:
+          CI_E2E_FULL: ${{ inputs.full_e2e }}
+        run: node scripts/ci-e2e-scope.mjs
+      - name: Test audit policy and scope selection
+        run: npm run test:security
+      - name: Audit production and all dependencies
+        run: npm run audit:security
+      - name: Check document links and structure
+        if: github.event_name != 'schedule'
+        run: npm run check:docs
+      - name: Unit, type check, build and distribution checks
+        if: github.event_name != 'schedule'
+        run: npm run check
+      - name: Install Chromium
+        if: github.event_name != 'schedule' && steps.scope.outputs.scope != 'none'
+        run: npx --no-install playwright install --with-deps chromium
+      - name: Chromium E2E
+        id: e2e
+        if: github.event_name != 'schedule' && steps.scope.outputs.scope != 'none'
+        env:
+          E2E_SCOPE: ${{ steps.scope.outputs.scope }}
+          E2E_GREP: ${{ steps.scope.outputs.grep }}
+        run: |
+          if [ "$E2E_SCOPE" = targeted ]; then
+            npm run test:e2e -- --workers=1 --grep "$E2E_GREP"
+          else
+            npm run test:e2e -- --workers=1
+          fi
+      - name: Upload dependency audit reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dependency-audit
+          path: .security-audit/*.json
+          if-no-files-found: ignore
+          retention-days: 7
+      - name: Upload synthetic-fixture E2E failure evidence
+        if: failure() && steps.e2e.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: chromium-failure-evidence
+          path: test-results/
+          retention-days: 7
+      - name: Record verification scope
+        if: always()
+        env:
+          E2E_SCOPE: ${{ steps.scope.outputs.scope }}
+          SCOPE_REASON: ${{ steps.scope.outputs.reason }}
+          E2E_OUTCOME: ${{ steps.e2e.outcome }}
+        run: |
+          {
+            echo '### Verification scope'
+            printf 'E2E selection: %s (%s)\n\n' "$E2E_SCOPE" "$SCOPE_REASON"
+            printf 'E2E outcome: %s\n\n' "$E2E_OUTCOME"
+            echo 'Chromium only; Edge, Safari, physical devices and offline/install/update behavior are not verified.'
+            echo 'Scheduled runs perform dependency auditing only.'
+          } >> "$GITHUB_STEP_SUMMARY"
