@@ -16,6 +16,7 @@
     "audit:security": "node scripts/security-audit.mjs",
     "fixtures:pdf": "node scripts/generate-pdf-fixtures.mjs",
     "check:dist": "node scripts/check-dist.mjs",
+    "check:docs": "node scripts/check-docs.mjs",
     "check": "npm run test:unit && npm run build && npm run check:dist"
   },
   "dependencies": {

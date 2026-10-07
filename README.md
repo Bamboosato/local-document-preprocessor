@@ -67,6 +67,7 @@ npm run dev
 npm run check
 npm run test:security
 npm run audit:security
+npm run check:docs
 npm run fixtures:pdf
 npx playwright install chromium
 npm run test:e2e -- --grep 'PWA|\[page-break\]'

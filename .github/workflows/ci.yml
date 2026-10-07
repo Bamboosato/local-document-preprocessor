@@ -45,6 +45,9 @@ jobs:
         run: npm run test:security
       - name: Audit production and all dependencies
         run: npm run audit:security
+      - name: Check document links and structure
+        if: github.event_name != 'schedule'
+        run: npm run check:docs
       - name: Unit, type check, build and distribution checks
         if: github.event_name != 'schedule'
         run: npm run check

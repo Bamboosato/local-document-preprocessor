@@ -120,6 +120,7 @@
 - Ubuntu / Node.js 24、mainへのPR / push、手動実行、月曜09:00 JSTの監査を実装。追加のLintやFirebase/Javaステップは導入しない。
 - `scripts/security-audit.mjs` と純粋な監査判定、`npm run test:security` / `npm run audit:security` を実装。本番・全依存とも全深刻度をブロックし、例外は設けない。
 - `scripts/ci-e2e-scope.mjs` で変更ファイルから対象を判定。文書のみは未実施、PWA / UI / 品質は対象ケース、共通処理・依存・CI・未分類は全件。手動は主要ケースが既定で、全件は明示入力。判定自体のテストも追加した。
+- `npm run check:docs` でREADME / AGENTS / docsのローカルリンク・見出し参照・コードフェンスを検査する。週次監査以外で実行する。
 - PRの旧実行だけ取消、監査JSONはalways、合成fixtureの失敗証跡は失敗時のみ、保持は7日。ジョブsummaryに実施・未実施を記録する。
 - 初期導入は既存Playwrightのbuild経路を維持する。Safari実機とPWAインストール・更新・オフラインをCI成功だけで検証済みとは扱わない。
 

@@ -17,10 +17,13 @@
 | ローカルUnit / Component | 成功 | 14 files / 63 tests |
 | TypeScript / build / check:dist | 成功 | 両WASM、Worker、PWA、5ライセンス |
 | ローカルChromium E2E | 成功 | 全14件、1 worker、production previewポート4191、新規context |
-| GitHub Actions / Linux | 確認待ち | PR更新後に実行結果を記録 |
-| main必須チェック登録 | 確認待ち | Verify成功後に設定 |
+| 文書リンク・構造 | 成功 | 14文書、26ローカルリンク、問題0件 |
+| GitHub Actions / Linux | 成功 | [Verify実行記録](https://github.com/Bamboosato/local-document-preprocessor/actions/runs/37570509856)、コミット `1e19366`。npm ci、監査、ポリシー、Unit、build、成果物、Chromium全14件 |
+| main必須チェック登録 | 成功 | GitHub ActionsのVerify（app ID 15368）必須、最新base要求、管理者にも適用。force push / 削除禁止 |
 
 ローカルはWindows / Node.js 24.13.0。サンドボックスではNodeテストランナーの子プロセス起動が `spawn EPERM` で制限されるため、検証は許可された制限外実行で行った。製品不具合とは分類しない。
+
+初回Linux CIでは文書リンク検査の追加前のコミットを検証した。追加した文書検査はローカルで成功し、最終PRコミットでもVerifyの成功をマージ条件とする。週次監査の初回到来、手動実行、PRの文書のみ・個別機能の分岐は今回の実イベントでは未実施（対象選定の単体テストでは分岐を確認）。
 
 ## E2E範囲の選定
 
