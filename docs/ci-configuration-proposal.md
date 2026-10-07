@@ -52,7 +52,7 @@
 | 項目 | 設定案・理由 |
 | --- | --- |
 | ワークフロー | `.github/workflows/ci.yml`、名称 `CI` |
-| 起動 | mainへのPR / push、手動実行。週次で監査のみ（月曜09:00 JST = 月曜00:00 UTC）も追加候補 |
+| 起動 | mainへのPR / push、手動実行。週次で監査のみ（月曜06:00 JST = 日曜21:00 UTC）。Dependabot収集予定の月曜07:17 JSTより前に設定するが、定期実行の遅延はあり得る |
 | 実行環境 | `ubuntu-latest` / Node.js 24 / npmキャッシュ。lockfileを基準にインストール |
 | 権限 | `contents: read`。PR検証に秘密情報・本番文書は渡さない |
 | 同時実行 | 同一PRの旧実行のみ取消。mainへのpush・定期監査は取消対象から分ける。1ランナー内の検証は直列、E2Eは1 worker |
@@ -117,7 +117,7 @@
 
 ## 採用した実装
 
-- Ubuntu / Node.js 24、mainへのPR / push、手動実行、月曜09:00 JSTの監査を実装。追加のLintやFirebase/Javaステップは導入しない。
+- Ubuntu / Node.js 24、mainへのPR / push、手動実行、月曜06:00 JSTの監査を実装。追加のLintやFirebase/Javaステップは導入しない。
 - `scripts/security-audit.mjs` と純粋な監査判定、`npm run test:security` / `npm run audit:security` を実装。本番・全依存とも全深刻度をブロックし、例外は設けない。
 - `scripts/ci-e2e-scope.mjs` で変更ファイルから対象を判定。文書のみは未実施、PWA / UI / 品質は対象ケース、共通処理・依存・CI・未分類は全件。手動は主要ケースが既定で、全件は明示入力。判定自体のテストも追加した。
 - `npm run check:docs` でREADME / AGENTS / docsのローカルリンク・見出し参照・コードフェンスを検査する。週次監査以外で実行する。
