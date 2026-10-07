@@ -12,6 +12,8 @@
     "test:unit": "vitest run",
     "test:unit:watch": "vitest",
     "test:e2e": "playwright test",
+    "test:security": "node --test scripts/security-audit-policy.test.mjs scripts/ci-e2e-scope.test.mjs",
+    "audit:security": "node scripts/security-audit.mjs",
     "fixtures:pdf": "node scripts/generate-pdf-fixtures.mjs",
     "check:dist": "node scripts/check-dist.mjs",
     "check": "npm run test:unit && npm run build && npm run check:dist"
@@ -41,6 +43,6 @@
     "jsdom": "^29.1.1",
     "typescript": "^7.0.2",
     "vite": "^8.2.1",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.11"
   }
 }

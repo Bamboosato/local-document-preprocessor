@@ -149,3 +149,4 @@ test-results/
 
 # Local diagnostics (may contain document-derived evidence)
 tmp/
+.security-audit/

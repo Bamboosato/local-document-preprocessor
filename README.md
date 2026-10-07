@@ -65,6 +65,8 @@ npm run dev
 
 ```powershell
 npm run check
+npm run test:security
+npm run audit:security
 npm run fixtures:pdf
 npx playwright install chromium
 npm run test:e2e -- --grep 'PWA|\[page-break\]'
@@ -73,6 +75,12 @@ npm run test:e2e -- --grep 'PWA|\[page-break\]'
 `check` は Unit / Component、production build（ライセンス同梱）、`check:dist` を順に実行します。E2E の実施範囲は変更リスクで選びます。上の例は PWA とページ区切りの対象ケースのみで、全件が必要な場合は `npm run test:e2e` を使用します。同一実機では `workers: 1` で直列実行します。
 
 Playwright は production preview を起動しますが、既存サーバーを再利用する設定です。最新成果物を確認するときは別ポートを `$env:PLAYWRIGHT_PORT = '4187'` のように指定するか既存サーバーを停止してください。Edge、macOS Safari、iPhone Safari は未検証の実機ゲートです。
+
+### GitHub Actions
+
+`CI / Verify` は main への PR / push と手動実行で、Node.js 24 / Ubuntu 上の `npm ci`、監査ポリシーテスト、本番・全依存の脆弱性監査、Unit / 型 / build / 成果物検査を実行します。脆弱性は深刻度にかかわらず1件でも失敗、取得不能・不正応答も失敗とし、例外はありません。毎週月曜09:00 JSTには監査とポリシーテストだけを実行します。
+
+E2E は文書だけなら未実施、PWA / UI / 品質変更なら対象ケース、依存・共通処理・CIや未分類の変更なら影響範囲が広いため全件を選び、常に1 workerで直列実行します。手動実行は主要な変換・プライバシーケースが既定で、`full_e2e` を明示すると全件です。監査JSONと合成fixtureの失敗証跡は7日保持し、実施・未実施範囲をジョブsummaryへ記録します。詳細は [CI導入仕様](docs/ci-configuration-proposal.md) と [導入検証](docs/ci-validation-report.md) を参照してください。
 
 ## ドキュメント
 
