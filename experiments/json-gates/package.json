@@ -1,0 +1,21 @@
+{
+  "name": "ldp-json-gates-prototype",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --test --test-concurrency=1 --test-reporter=./redacted-reporter.mjs core.test.mjs deadline.test.mjs",
+    "browser": "node browser-check.mjs",
+    "serve": "node serve.mjs",
+    "build": "node serve.mjs --build",
+    "preview": "node serve.mjs --preview",
+    "memory": "node memory-check.mjs"
+  },
+  "dependencies": {
+    "jsonc-parser": "3.3.1",
+    "mermaid": "12.2.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0"
+  }
+}

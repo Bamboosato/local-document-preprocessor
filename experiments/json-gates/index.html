@@ -1,0 +1,6 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>JSON 技術検証</title></head>
+<body><h1>JSON 技術検証用ハーネス</h1><p>合成データ専用・製品には未統合</p><button id="open">設定を開く</button><button id="cancel-worker">Workerを破棄</button><output id="notice" aria-live="polite"></output><div id="results"></div>
+<dialog aria-labelledby="heading"><h2 id="heading" tabindex="-1">JSONの変換設定</h2><div class="content"><div class="layout"><section><h3>対象を1つ選択</h3><div id="tree"></div><button id="previous-window">前の表示窓</button><button id="next-window">次の表示窓</button><p id="tree-count"></p></section><section><h3>選択範囲</h3><output id="selection"></output><button id="locate">選択位置を表示</button><pre id="detail"></pre></section></div>
+<fieldset id="styles"><legend>出力スタイル</legend><label><input type="radio" name="style" value="items" checked>項目表</label><label><input type="radio" name="style" value="records">一覧表</label><label><input type="radio" name="style" value="mermaid">Mermaid構造図</label></fieldset><p id="reason"></p></div><footer><button id="cancel">キャンセル</button><button id="confirm">この設定に決定</button></footer></dialog>
+<script type="module" src="/app.mjs"></script></body></html>
