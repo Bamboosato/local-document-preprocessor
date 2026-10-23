@@ -87,6 +87,8 @@ E2E は文書だけなら未実施、PWA / UI / 品質変更なら対象ケー�
 
 - [開発・テスト設計ルール](AGENTS.md)
 - [要件定義](docs/requirements.md)
+- [JSON入力追加 要件定義 v0.2（設計・未実装）](docs/local-document-preprocessor-json-requirements-v0.2.md)
+- [JSON入力追加 画面設計 v0.2（設計・未実装）](docs/local-document-preprocessor-json-screen-design-v0.2.md)
 - [ADR-0001](docs/adr/0001-browser-only-anydoc-wasm.md)
 - [ADR-0002](docs/adr/0002-pdf-objective-text-verification.md)
 - [ADR-0003: ページ区切り](docs/adr/0003-deterministic-page-break-markers.md)
