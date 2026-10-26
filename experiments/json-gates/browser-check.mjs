@@ -16,8 +16,10 @@ for(const engine of targets){
     if(process.env.GATE_FILTER&&!new RegExp(process.env.GATE_FILTER).test(id)){checks.push({id,intent,status:'not-run'});return;}
     if(['G04-02','G04-03'].includes(id)&&!(await page.evaluate(()=>gates.diagram.state().validated))){checks.push({id,intent,status:'blocked',reason:'verified-source-unavailable'});return;}
     const start=performance.now();
-    try{const data=await fn();checks.push({id,intent,status:'pass',milliseconds:Math.round(performance.now()-start),data});console.log(`${engine} ${id} PASS`);}
-    catch(error){const data=error.gateMeasurement;checks.push({id,intent,status:'fail',milliseconds:Math.round(performance.now()-start),errorType:error.name,errorCode:error.code,data});console.log(`${engine} ${id} FAIL ${error.name} ${error.code??''}`);if(page)await page.screenshot({path:root+`evidence/${engine}-${id}.png`,fullPage:true,mask:[page.locator('#tree'),page.locator('#detail'),page.locator('#selection'),page.locator('#results'),page.locator('#notice')]}).catch(()=>{});}
+    let caseTimer;
+    try{const data=await Promise.race([fn(),new Promise((_,reject)=>{caseTimer=setTimeout(()=>reject(Object.assign(new Error('case-deadline'),{code:'case-deadline'})),45000);})]);checks.push({id,intent,status:'pass',milliseconds:Math.round(performance.now()-start),data});console.log(`${engine} ${id} PASS`);}
+    catch(error){const data=error.gateMeasurement;checks.push({id,intent,status:'fail',milliseconds:Math.round(performance.now()-start),errorType:error.name,errorCode:error.code,data});console.log(`${engine} ${id} FAIL ${error.name} ${error.code??''}`);if(page)await page.screenshot({path:root+`evidence/${engine}-${id}.png`,timeout:5000,fullPage:true,mask:[page.locator('#tree'),page.locator('#detail'),page.locator('#selection'),page.locator('#results'),page.locator('#notice')]}).catch(()=>{});}
+    finally{clearTimeout(caseTimer);}
   };
   try{
     browser=await engines[engine]();context=await browser.newContext({viewport:{width:1280,height:900}});context.setDefaultTimeout(25000);context.setDefaultNavigationTimeout(30000);page=await context.newPage();
@@ -112,16 +114,34 @@ for(const engine of targets){
       await page.click('#cancel');return {maximumRows:300,hiddenSelectionPreserved:true,locatedSibling:50};
     });
     await check('G03-03','depth128 at 320px and separate 32px text/640px layout keep controls reachable, indentation bounded',async()=>{
-      await context.setOffline(false);await page.setViewportSize({width:320,height:700});
-      await page.evaluate(async()=>{gates.install('deep','['.repeat(128)+'0'+']'.repeat(128));await gates.open('deep');await gates.select('/0'.repeat(127));});
-      await page.click('#locate');await page.waitForFunction(()=>document.activeElement?.value==='/0'.repeat(127));
-      const geometry=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth,maxIndent:Math.max(...[...document.querySelectorAll('#tree .row')].map(el=>parseFloat(getComputedStyle(el).paddingLeft))),focusVisible:document.activeElement.getBoundingClientRect().width>0}));
-      assert.equal(geometry.overflow,false);assert.ok(geometry.maxIndent<=64);assert.equal(geometry.focusVisible,true);
-      assert.equal(await page.evaluate(()=>['cancel','confirm'].every(id=>{const r=document.getElementById(id).getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight;})),true);
-      await page.screenshot({path:root+`evidence/${engine}-320px.png`,fullPage:true,mask:[page.locator('#tree'),page.locator('#detail'),page.locator('#selection'),page.locator('#results'),page.locator('#notice')]});
-      await page.setViewportSize({width:640,height:450});await page.evaluate(()=>document.body.style.fontSize='32px');
-      assert.equal(await page.evaluate(()=>getComputedStyle(document.querySelector('#tree label')).fontSize),'32px');
-      assert.equal(await page.locator('#cancel').isVisible(),true);await page.click('#cancel');await page.evaluate(()=>document.body.style.fontSize='');await page.setViewportSize({width:1280,height:900});return {...geometry,textPixels:32,textViewport:640};
+      await page.evaluate(()=>{if(document.querySelector('dialog').open)gates.close();});
+      // Windows Firefox can stall resizing even a blank page (viewport-probe).
+      // Separate initial viewports verify layout without claiming resize support.
+      const atViewport=async(viewport,fn)=>{
+        const isolated=await browser.newContext({viewport});
+        try{
+          const p=await isolated.newPage();p.setDefaultTimeout(25000);
+          await p.goto('http://127.0.0.1:4187');await p.waitForFunction(()=>!!window.gates);
+          await p.evaluate(async()=>{gates.install('deep','['.repeat(128)+'0'+']'.repeat(128));await gates.open('deep');await gates.select('/0'.repeat(127));});
+          await p.click('#locate');await p.waitForFunction(()=>document.activeElement?.value==='/0'.repeat(127));
+          return await fn(p);
+        }finally{await isolated.close();}
+      };
+      console.log(`${engine} G03-03 stage initial-narrow`);
+      const geometry=await atViewport({width:320,height:700},async p=>{
+        const g=await p.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth,maxIndent:Math.max(...[...document.querySelectorAll('#tree .row')].map(el=>parseFloat(getComputedStyle(el).paddingLeft))),focusVisible:document.activeElement.getBoundingClientRect().width>0}));
+        assert.equal(g.overflow,false);assert.ok(g.maxIndent<=64);assert.equal(g.focusVisible,true);
+        assert.equal(await p.evaluate(()=>['cancel','confirm'].every(id=>{const r=document.getElementById(id).getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight;})),true);
+        await p.screenshot({path:root+`evidence/${engine}-320px.png`,timeout:5000,fullPage:true,mask:[p.locator('#tree'),p.locator('#detail'),p.locator('#selection'),p.locator('#results'),p.locator('#notice')]});
+        return g;
+      });
+      console.log(`${engine} G03-03 stage initial-text-layout`);
+      await atViewport({width:640,height:450},async p=>{
+        await p.evaluate(()=>document.body.style.fontSize='32px');
+        assert.equal(await p.evaluate(()=>getComputedStyle(document.querySelector('#tree label')).fontSize),'32px');
+        assert.equal(await p.locator('#cancel').isVisible(),true);await p.click('#cancel');
+      });
+      return {...geometry,textPixels:32,textViewport:640,initialViewports:true,dynamicResizeVerified:false};
     });
     await check('G04-00','probe strict Mermaid.parse Worker compatibility without treating failure as valid output',async()=>{
       const result=await page.evaluate(async()=>{

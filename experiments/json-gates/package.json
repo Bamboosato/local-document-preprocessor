@@ -4,7 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "test": "node --test --test-concurrency=1 --test-reporter=./redacted-reporter.mjs core.test.mjs deadline.test.mjs",
+    "test": "node --test --test-concurrency=1 --test-reporter=./redacted-reporter.mjs core.test.mjs deadline.test.mjs readiness-sw.test.mjs",
+    "build:readiness": "node readiness-build.mjs",
+    "check:readiness": "node --test --test-reporter=./redacted-reporter.mjs readiness-artifacts.test.mjs",
+    "audit:security": "node ../../scripts/security-audit.mjs",
     "browser": "node browser-check.mjs",
     "serve": "node serve.mjs",
     "build": "node serve.mjs --build",

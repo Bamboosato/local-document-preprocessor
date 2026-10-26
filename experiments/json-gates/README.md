@@ -103,3 +103,41 @@ node origin-stop-check.mjs
 旧環境との比較は、`$env:PW_BASELINE='1'`を設定して対象のprobeまたは`alternative-check.mjs`を実行し、完了後に`Remove-Item Env:PW_BASELINE`で解除する。旧ブラウザーも保持する場合、インストール時に`PLAYWRIGHT_SKIP_BROWSER_GC=1`を使用する。新旧バージョンの証跡を上書きせず区別する。
 
 この候補は独自のSVG表示方式であり、Mermaid標準レンダラーとの外観一致や、設計済みの拡大縮小・支援技術操作の完成を意味しない。ソース出力は従来のMermaidのまま維持する。
+
+## 2026-10-26 製品採用前の追加候補
+
+追加の[観点・ケース](../../docs/json-product-readiness-plan.md)、[要件対応表](../../docs/json-requirement-evidence-matrix.md)、[採用案](../../docs/json-product-adoption-proposal.md)、[今回の検証報告](../../docs/json-product-readiness-validation.md)、[実機手順](../../docs/json-device-validation-runbook.md)を参照する。本体統合は保留。従来4187のBlob/data方式を置き換えず、静的URL Workerを別ビルド・別ポート4188で検証する。
+
+```powershell
+npm ci --ignore-scripts
+npm test
+npm run build
+npm run build:readiness
+npm run check:readiness
+node readiness-build.mjs --preview
+```
+
+別ターミナルから下記を順次実行する。4187を使用する検査では、先に既存の `npm run preview` も起動する。全コマンドを同時に走らせない。
+
+```powershell
+$env:EVIDENCE_SUFFIX='-final'
+node readiness-check.mjs chrome edge firefox webkit
+node alternative-check.mjs chrome edge firefox webkit
+$env:GATE_FILTER='G01-browser|G02-|G03-'
+node browser-check.mjs chrome edge firefox webkit
+Remove-Item Env:GATE_FILTER, Env:EVIDENCE_SUFFIX
+node selection-race-check.mjs chrome edge firefox webkit
+node memory-readiness-check.mjs
+```
+
+各nodeコマンドの終了コードと証跡を確認してから次へ進む。エラーを後続コマンドの成功で上書きしない。フィルターで省略したケースは `not-run` となる。`readiness-*-final.json` と `selection-race-*.json` に入力本文を含めず件数・状態・照合判定を保存する。
+
+`readiness-build.mjs` は検証ページ、ローカルfavicon、検証・配置Workerだけの資産一覧と世代付きSWを生成する。CSPはHTTPヘッダーで設定し、`worker-src 'self'`、Blob/data代替なし。追加候補にanydoc/PDFiumを含めない。生成物は `dist-readiness/` として除外する。
+
+`readiness-sw.test.mjs` は保存拒否・容量不足・旧世代削除境界のNode検査。実機PWA更新を証明しない。`readiness-artifacts.test.mjs` はHTMLを含む配布資産の全量一致を検査する。`selection-race-check.mjs` は実Workerの正常応答を保留・重複配送し、現設定の判定前に確定できないことを検査する。逐次キューなので詳細要求同士の逆転を発生させた主張はしない。
+
+`memory-readiness-check.mjs` はChromeで50 MiB単一入力、20件の完了済み表、200ノード図と図資産を順次含める追加診断。`memory-readiness-chrome.json` にUI/JSON Workerのヒープ・backing storage・保持件数を記録し、GC前後を分ける。真のピーク、OS/ネイティブ領域、図Workerの一時ピーク、20最大入力を同時受付した実機の保証にはならない。
+
+`viewport-probe.mjs` はアプリなしの固定ページで動的リサイズと初期狭幅を対照測定する。Firefoxの未達を除外して成功終了にはしない。G03-03は独立contextの初期画面幅でレイアウトを検査し、動的リサイズ成功とは扱わない。`READINESS_FILTER` では追加候補の対象ケースを指定でき、省略はnot-runと記録する。
+
+配信設定の比較には、previewを停止してから `$env:READINESS_CORS='1'` を設定し `node readiness-build.mjs --preview` を起動する。同じビルドで `Vary: Origin` の有無を比較できる。比較後は停止し環境変数を解除して通常起動へ戻す。キャッシュ照合やCSPを緩める回避策は使用しない。過去・比較・最終の証跡は `EVIDENCE_SUFFIX` で区別する。

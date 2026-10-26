@@ -2,7 +2,7 @@ import validationURL from './validation-worker.mjs?worker&url';
 import layoutURL from './layout-worker.mjs?worker&url';
 import {startDeadline} from './deadline.mjs';
 const NS='http://www.w3.org/2000/svg';
-export function createWorkerDiagramController(container){
+export function createWorkerDiagramController(container,{workerLoader}={}){
   let validator,worker,deadline,pendingValidation,generation=0,source,mode={},state={status:'idle',validated:false,outputAllowed:false};
   const trace=[];
   const blobURLs=new Set();
@@ -13,7 +13,7 @@ export function createWorkerDiagramController(container){
     catch{return false;}
     finally{probe?.terminate();URL.revokeObjectURL(url);}
   }
-  const loadWorker=async(url,current)=>{
+  const loadWorker=workerLoader??(async(url,current)=>{
     state.staticStage='cache-lookup';
     const absolute=new URL(url,location.href).href;
     const cached=globalThis.caches?await (await caches.open('json-g04-alternative-static-v1')).match(absolute):undefined;
@@ -31,7 +31,7 @@ export function createWorkerDiagramController(container){
     state.workerScheme=blobSupported?'blob':'data';
     state.staticStage='worker-create';
     return new Worker(scriptURL);
-  };
+  });
   const record=(status,extra={})=>{state={...state,status,...extra};trace.push({status,generation,at:performance.now()});};
   const destroy=()=>{deadline?.cancel();deadline=undefined;validator?.terminate();worker?.terminate();validator=worker=undefined;for(const url of blobURLs)URL.revokeObjectURL(url);blobURLs.clear();};
   const clear=()=>{destroy();pendingValidation?.(false);pendingValidation=undefined;generation++;source=undefined;container.replaceChildren();state={status:'idle',validated:false,outputAllowed:false};record('cleared');};

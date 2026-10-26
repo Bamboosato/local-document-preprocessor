@@ -23,6 +23,47 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
+  json-prototype:
+    name: JSON prototype checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            experiments/json-gates/package-lock.json
+      - name: Install root build tools
+        run: npm ci
+      - name: Install fixed prototype dependencies
+        run: npm ci --ignore-scripts
+        working-directory: experiments/json-gates
+      - name: Audit prototype production and all dependencies
+        run: npm run audit:security
+        working-directory: experiments/json-gates
+      - name: Test parser, deadlines and cache failure boundaries
+        if: github.event_name != 'schedule'
+        run: npm test
+        working-directory: experiments/json-gates
+      - name: Build both prototype candidates and verify static manifest
+        if: github.event_name != 'schedule'
+        run: |
+          npm run build
+          npm run build:readiness
+          npm run check:readiness
+        working-directory: experiments/json-gates
+      - name: Upload prototype audit reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: json-prototype-dependency-audit
+          path: experiments/json-gates/.security-audit/*.json
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 7
   verify:
     name: Verify
     runs-on: ubuntu-latest
@@ -73,6 +114,7 @@ jobs:
         with:
           name: dependency-audit
           path: .security-audit/*.json
+          include-hidden-files: true
           if-no-files-found: ignore
           retention-days: 7
       - name: Upload synthetic-fixture E2E failure evidence
