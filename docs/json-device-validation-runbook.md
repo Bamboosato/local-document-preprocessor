@@ -1,5 +1,7 @@
 # JSON残ゲートの実機検証手順
 
+> 対象範囲更新（2026-10-26）: [採用決定](json-adoption-decision.md)によりmacOS/iOS関連は今回対象外。以下のSafari・iPhone・VoiceOver手順はユーザーによる後日確認用として保持する。Windows向けの該当操作は引き続き残件。Apple環境未確認は今回のWindows向け統合判定を止めない。
+
 作成日: 2026-10-26。**本手順は実測結果ではない。実機項目は未実施。**
 参照: [計画](json-product-readiness-plan.md)、[採用案](json-product-adoption-proposal.md)、[今回の判定](json-product-readiness-validation.md)。本体統合は保留。
 

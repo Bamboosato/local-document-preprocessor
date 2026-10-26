@@ -1,6 +1,9 @@
 import {chromium,playwrightVersion} from './browser-runtime.mjs';
 import {mkdir,writeFile} from 'node:fs/promises';
 import assert from 'node:assert/strict';
+import {PDFDocument,StandardFonts} from 'pdf-lib';
+const adopted=process.env.MEMORY_PROFILE==='adopted';
+const fixtureId=adopted?'G02-M02':'G02-M01';
 await mkdir(new URL('./evidence/',import.meta.url),{recursive:true});
 let browser;const samples=[];let status='fail',errorType;
 try{
@@ -24,17 +27,28 @@ try{
   await page.evaluate(async()=>{gates.install('max','"'+'x'.repeat(50*1024**2-2)+'"');await gates.inspect('max');});
   await sample('50MiB-inspected');await sample('50MiB-inspected-GC',true);
   await page.evaluate(async()=>{gates.install('max','{}');await gates.inspect('A');});await sample('50MiB-evicted-GC',true);
+  if(adopted){
+    const pdf=await PDFDocument.create(),font=await pdf.embedFont(StandardFonts.Helvetica);pdf.addPage().drawText('Synthetic memory fixture',{font,size:12});
+    const bytes=Array.from(await pdf.save());
+    const converted=await page.evaluate(async bytes=>{gates.install('memory-pdf','');return gates.raw('memory-pdf','pdf',{bytes:new Uint8Array(bytes).buffer});},bytes);
+    assert.equal(converted.pdfConverted,true);assert.equal(converted.hasOutput,true);await sample('WASM-converted-before-maximum-inputs');
+    const inputBytes=await page.evaluate(()=>{
+      const prefix='{"results":'+JSON.stringify(Array(1000).fill({text:'x'.repeat(900)}))+',"padding":"',suffix='"}';
+      window.maximumMemoryFixture=prefix+'p'.repeat(50*1024**2-prefix.length-suffix.length)+suffix;
+      return new TextEncoder().encode(maximumMemoryFixture).byteLength;
+    });assert.equal(inputBytes,50*1024**2);
+  }
   for(let i=0;i<20;i++){
-    await page.evaluate(async i=>{const id='result-'+i;gates.install(id,JSON.stringify(Array(1000).fill({text:'x'.repeat(900)})));await gates.convert(id,'','records');},i);
+    await page.evaluate(async({i,adopted})=>{const id='result-'+i;gates.install(id,adopted?maximumMemoryFixture:JSON.stringify(Array(1000).fill({text:'x'.repeat(900)})));await gates.convert(id,adopted?'/results':'','records');},{i,adopted});
     await sample('completed-'+(i+1));
   }
   assert.equal(samples.at(-1).completed,20);await sample('20-results-GC',true);
   await page.evaluate(async()=>{gates.install('diagram',JSON.stringify(Array(199).fill('😀'.repeat(90))));const result=await gates.request('diagram','generate',{style:'mermaid'});await gates.diagram.show(result);});
   await page.waitForFunction(()=>gates.diagram.state().status==='rendered');await sample('20-results-plus-200-node-diagram');await sample('20-results-plus-diagram-GC',true);
-  await page.evaluate(async()=>{gates.diagram.clear();for(let i=0;i<20;i++)gates.install('result-'+i,'{}');gates.install('diagram','{}');await gates.inspect('A');});
+  await page.evaluate(async()=>{gates.diagram.clear();for(let i=0;i<20;i++)gates.install('result-'+i,'{}');gates.install('diagram','{}');delete window.maximumMemoryFixture;await gates.inspect('A');});
   await sample('results-replaced-and-parse-evicted-GC',true);assert.equal(samples.at(-1).completed,0);
-  status='pass';console.log('G02-M01 PASS samples='+samples.length);
-}catch(error){errorType=error.name;process.exitCode=1;console.log('G02-M01 FAIL '+errorType);}
+  status='pass';console.log(fixtureId+' PASS samples='+samples.length);
+}catch(error){errorType=error.name;process.exitCode=1;console.log(fixtureId+' FAIL '+errorType);}
 finally{
-  await writeFile(new URL('./evidence/memory-readiness-chrome.json',import.meta.url),JSON.stringify({base:'48f975a',playwrightVersion,browser:browser?.version(),id:'G02-M01',status,errorType,metric:'sampled CDP UI and JSON Worker heap/backing storage; excludes OS/native/process total, diagram Worker transient peak; GC samples are diagnostic',samples},null,2));await browser?.close();
+  await writeFile(new URL('./evidence/'+(adopted?'memory-adopted-chrome':'memory-readiness-chrome')+'.json',import.meta.url),JSON.stringify({base:'48f975a',playwrightVersion,browser:browser?.version(),id:fixtureId,status,errorType,maximumInputs:adopted?{count:20,bytesEach:50*1024**2,WASMInitialized:true}:undefined,metric:'sampled CDP UI and JSON Worker heap/backing storage; excludes OS/native/process total, diagram Worker transient peak; GC samples are diagnostic',samples},null,2));await browser?.close();
 }

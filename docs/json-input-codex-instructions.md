@@ -1,5 +1,7 @@
 # JSON入力追加 Codex向け作業指示書
 
+> 2026-10-26の後続ユーザー指示: [採用決定と今回の対象範囲](json-adoption-decision.md)に従い、独自SVG表示＋静的URL Workerを採用する。macOS/iOS関連は今回対象外でユーザーの後日確認とし、本書中の実Safari/iPhone未確認を今回の停止条件にはしない。本体統合はWindows向け残条件を満たすまで保留。
+
 版: v1.0\
 作成日: 2026-10-26\
 対象: Bamboosato/local-document-preprocessor\

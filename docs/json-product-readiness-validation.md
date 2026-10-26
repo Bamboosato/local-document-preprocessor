@@ -1,5 +1,7 @@
 # JSON製品採用前の残件検証・設計結果
 
+> 後続決定（2026-10-26）: [採用決定と対象範囲](json-adoption-decision.md)により、方式の未決定状態は解消し、macOS/iOS関連はユーザーの後日確認へ分離した。以下は採用前に行った検証の履歴であり、当時の保留理由を保持する。今回のWindows向け判定は後続決定を優先する。
+
 実施日: 2026-10-26 / 基準コミット: `48f975a`\
 作業ブランチ: `codex/json-gates-product-readiness`。測定はこの基準に本PRの試作変更を加えた作業ツリーで実施。\
 仕様: [要件v0.2追補1](local-document-preprocessor-json-requirements-v0.2.md)・[画面設計v0.2追補1](local-document-preprocessor-json-screen-design-v0.2.md)\

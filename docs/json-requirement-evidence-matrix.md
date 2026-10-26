@@ -1,5 +1,9 @@
 # JSON要件・コード・証拠・残件の対応表
 
+> 2026-10-26更新: [採用決定と対象範囲](json-adoption-decision.md)により独自SVG＋静的URL Workerを採用。macOS/iOSの残件はユーザーによる後日確認へ移し、今回のWindows向け停止条件から外す。以下の既存証拠・残件一覧は確認履歴として保持する。
+
+> 後続の図操作・更新/回復・最大入力・配布ライセンス原文の対応は[追加検証結果](json-adoption-followup-validation.md)を参照。AD-01～06はJ-AC-12/14/21・UI-13/23/24の図層、UP-01～04はG-04更新、AD-07は配布原文、G02-M02はG-02追加負荷に対応する。実読み上げ・実PWA・製品キュー全体を完了扱いにはしない。
+
 作成日: 2026-10-26 / 基準: `48f975a`。コードはすべて `experiments/json-gates/` の試作。production接続済みとは扱わない。
 
 旧証拠は[初回](json-gates-validation.md)・[代替初版](json-g04-alternative-validation.md)・[追加結果](json-g04-followup-validation.md)。今回の実行条件・成否は[今回の報告](json-product-readiness-validation.md)。表の試験IDは対応先を示し、全受入条件を今回完了した主張ではない。

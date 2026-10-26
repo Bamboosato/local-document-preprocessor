@@ -2,7 +2,7 @@ import validationURL from './validation-worker.mjs?worker&url';
 import layoutURL from './layout-worker.mjs?worker&url';
 import {startDeadline} from './deadline.mjs';
 const NS='http://www.w3.org/2000/svg';
-export function createWorkerDiagramController(container,{workerLoader}={}){
+export function createWorkerDiagramController(container,{workerLoader,onStateChange=()=>{}}={}){
   let validator,worker,deadline,pendingValidation,generation=0,source,mode={},state={status:'idle',validated:false,outputAllowed:false};
   const trace=[];
   const blobURLs=new Set();
@@ -32,7 +32,7 @@ export function createWorkerDiagramController(container,{workerLoader}={}){
     state.staticStage='worker-create';
     return new Worker(scriptURL);
   });
-  const record=(status,extra={})=>{state={...state,status,...extra};trace.push({status,generation,at:performance.now()});};
+  const record=(status,extra={})=>{state={...state,status,...extra};trace.push({status,generation,at:performance.now()});onStateChange({...state});};
   const destroy=()=>{deadline?.cancel();deadline=undefined;validator?.terminate();worker?.terminate();validator=worker=undefined;for(const url of blobURLs)URL.revokeObjectURL(url);blobURLs.clear();};
   const clear=()=>{destroy();pendingValidation?.(false);pendingValidation=undefined;generation++;source=undefined;container.replaceChildren();state={status:'idle',validated:false,outputAllowed:false};record('cleared');};
   const fallback=(status,reason)=>{destroy();generation++;container.textContent='図を表示できませんでした。Mermaidソースを表示します。\n'+(state.validated?source.code:'');record(status,{workerAlive:false,failureReason:reason});};

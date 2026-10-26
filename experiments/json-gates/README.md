@@ -106,6 +106,8 @@ node origin-stop-check.mjs
 
 ## 2026-10-26 製品採用前の追加候補
 
+> 後続ユーザー承認により、独自SVG＋静的URL Workerを採用した。[採用決定と対象範囲](../../docs/json-adoption-decision.md)と[承認後の追加計画](../../docs/json-adoption-followup-plan.md)を優先する。macOS/iOSは今回対象外、本体統合はWindows向け残条件を満たすまで保留。
+
 追加の[観点・ケース](../../docs/json-product-readiness-plan.md)、[要件対応表](../../docs/json-requirement-evidence-matrix.md)、[採用案](../../docs/json-product-adoption-proposal.md)、[今回の検証報告](../../docs/json-product-readiness-validation.md)、[実機手順](../../docs/json-device-validation-runbook.md)を参照する。本体統合は保留。従来4187のBlob/data方式を置き換えず、静的URL Workerを別ビルド・別ポート4188で検証する。
 
 ```powershell
@@ -139,5 +141,28 @@ node memory-readiness-check.mjs
 `memory-readiness-check.mjs` はChromeで50 MiB単一入力、20件の完了済み表、200ノード図と図資産を順次含める追加診断。`memory-readiness-chrome.json` にUI/JSON Workerのヒープ・backing storage・保持件数を記録し、GC前後を分ける。真のピーク、OS/ネイティブ領域、図Workerの一時ピーク、20最大入力を同時受付した実機の保証にはならない。
 
 `viewport-probe.mjs` はアプリなしの固定ページで動的リサイズと初期狭幅を対照測定する。Firefoxの未達を除外して成功終了にはしない。G03-03は独立contextの初期画面幅でレイアウトを検査し、動的リサイズ成功とは扱わない。`READINESS_FILTER` では追加候補の対象ケースを指定でき、省略はnot-runと記録する。
+
+## 採用決定後の表示・更新・配布物検査
+
+`diagram-view.mjs` は全体表示・倍率上下限・100%・図/ソース・検証済み本文保持の再試行を提供する。`readiness-policy.mjs` が配信CSPを共有する。`license-assets.mjs` は試作production依存の原文とNOTICE、版、取得元、integrityを `dist-readiness/licenses/` に生成する。ライセンスメタデータ未宣言はnullで明示し、原文を省略しない。原文・取得元・integrityの欠落はbuild失敗。収集成功とEPL等の配布条件の最終確認を混同しない。ライセンス文書は実行資産の先行Cacheには含めない。
+
+ビルド・preview後に以下を一つずつ実行する。
+
+```powershell
+node adoption-check.mjs chrome edge
+node update-check.mjs chrome edge
+$env:MEMORY_PROFILE='adopted'
+node memory-readiness-check.mjs
+Remove-Item Env:MEMORY_PROFILE
+$env:EVIDENCE_SUFFIX='-adopted'
+node readiness-check.mjs chrome edge
+Remove-Item Env:EVIDENCE_SUFFIX
+```
+
+AD-01～06は操作・全量保持・ソース出力可否、UP-01～04は二世代SW・複数タブ・配信404・容量不足/保存拒否の故障注入を検査する。UP検査はケース専用のlocalhostサーバーを起動・終了するためpreviewを必要としない。実OSインストール済みPWAや実ストレージ制限の証明にはしない。`adoption-*.json`、`update-*.json`、`readiness-*-adopted.json`を証跡として保存する。画像の文書領域はマスクする。
+
+`MEMORY_PROFILE=adopted` はG02-M02として、合成PDFの実WASM変換後に50 MiB JSONを20件保持し、部分配列の20完了結果と最大図を含めて段階測定する。証跡は `memory-adopted-chrome.json`。JSON全体の上限を守り、巨大な兄弟値を部分出力へ混入させない条件で測る。解析と図は既存4187のハーネスを使用する。Fileのネイティブ領域・OS総量・WASM処理中の瞬間ピークは含まない。既定のG02-M01とは別条件であり、同じ結果として扱わない。
+
+CIでは試作SDKのChromiumでAD/UPを逐次実行し、独立previewを開始・終了する。ローカルで同じCI経路を再現する場合は4188の手動previewを停止してから、対応Chromiumを準備し `node run-adoption-ci.mjs` を実行する。CIのChromiumをWindows Chrome/Edge実測の代用にはしない。
 
 配信設定の比較には、previewを停止してから `$env:READINESS_CORS='1'` を設定し `node readiness-build.mjs --preview` を起動する。同じビルドで `Vary: Origin` の有無を比較できる。比較後は停止し環境変数を解除して通常起動へ戻す。キャッシュ照合やCSPを緩める回避策は使用しない。過去・比較・最終の証跡は `EVIDENCE_SUFFIX` で区別する。

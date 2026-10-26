@@ -64,6 +64,25 @@ jobs:
           include-hidden-files: true
           if-no-files-found: ignore
           retention-days: 7
+      # Browser coverage uses the prototype SDK, independently of root E2E.
+      - name: Install prototype Chromium
+        if: github.event_name != 'schedule'
+        run: npx --no-install playwright install --with-deps chromium
+        working-directory: experiments/json-gates
+      - name: Verify adopted view and update lifecycle sequentially
+        if: github.event_name != 'schedule'
+        run: node run-adoption-ci.mjs
+        working-directory: experiments/json-gates
+      - name: Upload prototype browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: json-prototype-browser-evidence
+          path: |
+            experiments/json-gates/evidence/*chromium*.json
+            experiments/json-gates/evidence/adoption-chromium-controls.png
+          if-no-files-found: ignore
+          retention-days: 7
   verify:
     name: Verify
     runs-on: ubuntu-latest

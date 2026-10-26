@@ -1,14 +1,15 @@
-import {createWorkerDiagramController} from './diagram-worker-host.mjs';
+import './readiness.css';
+import {createDiagramView} from './diagram-view.mjs';
 
 // No text fetch, Blob/data URL, executable document interpolation or fallback.
-const diagram=createWorkerDiagramController(document.querySelector('#diagram'),{
+const view=createDiagramView(document.querySelector('#diagram-view'),{
   workerLoader:async url=>{
     const absolute=new URL(url,location.href);
     if(absolute.origin!==location.origin||absolute.search||!/^\/assets\/[^/]+\.js$/.test(absolute.pathname))throw new Error('static-worker-only');
     return new Worker(absolute);
   },
 });
-window.readiness={diagram};
+window.readiness=view;
 if(!new URL(location.href).searchParams.has('no-sw')){
   navigator.serviceWorker.register('/readiness-sw.js').then(async registration=>{
     await navigator.serviceWorker.ready;
