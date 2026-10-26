@@ -1,3 +1,5 @@
 evidence/
 dist/
+dist-readiness/
 .vite/
+.security-audit/

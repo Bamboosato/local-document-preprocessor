@@ -1,0 +1,14 @@
+:root { font-family: system-ui, sans-serif; color: #18212b; background: #f6f8fa; }
+* { box-sizing: border-box; }
+body { margin: 0 auto; padding: 1rem; max-width: 72rem; }
+h1 { font-size: 1.5rem; } h2 { font-size: 1.2rem; }
+section { padding: 1rem; background: white; border: 1px solid #c9d2dc; border-radius: .5rem; min-width: 0; }
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin-block: .5rem; }
+button { min-height: 44px; padding: .5rem .75rem; border: 1px solid #6b7888; border-radius: .3rem; background: white; color: #18212b; font: inherit; }
+button[aria-pressed="true"] { background: #dcecff; border-color: #245a91; }
+button:disabled { color: #687586; border-color: #ccd2da; }
+button:focus-visible, [tabindex]:focus-visible, textarea:focus-visible { outline: 3px solid #265eac; outline-offset: 2px; }
+#diagram-viewport { height: min(60vh, 32rem); min-height: 160px; overflow: auto; border: 1px solid #aab6c4; }
+#diagram svg { display: block; max-width: none; }
+#diagram-source { display: block; width: 100%; max-width: 100%; overflow: auto; font: 1rem/1.5 monospace; }
+[hidden] { display: none !important; }

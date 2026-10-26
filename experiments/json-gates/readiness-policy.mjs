@@ -1,0 +1,1 @@
+export const readinessCSP="default-src 'none'; script-src 'self'; worker-src 'self'; connect-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; frame-src 'none'; form-action 'none'";
