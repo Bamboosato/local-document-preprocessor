@@ -4,6 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "test:sources": "node --test --test-concurrency=1 --test-reporter=./redacted-reporter.mjs source-archive.test.mjs source-records.test.mjs",
+    "research:source-prepare": "node source-audit.mjs prepare",
+    "research:source-collect": "node source-audit.mjs collect",
+    "research:source-review": "node source-audit.mjs review",
+    "research:elk": "node trace-elk-source.mjs",
+    "research:pdfium": "node pdfium-license-research.mjs",
     "test:distribution": "node --test --test-concurrency=1 --test-reporter=./redacted-reporter.mjs distribution-research.test.mjs distribution-records.test.mjs",
     "research:distribution": "node distribution-research.mjs",
     "manual:describe": "node manual-session.mjs --describe",

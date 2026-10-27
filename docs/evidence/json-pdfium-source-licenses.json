@@ -1,0 +1,395 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-10-27T07:24:18.329Z",
+  "repository": "https://github.com/embedpdf/pdfium",
+  "commit": "cb29e78f2ba00c9298714d5f4a8bf7765f1e802f",
+  "scope": "conservative source/DEPS license candidates; not proof of components linked into published WASM",
+  "sources": [
+    {
+      "url": "https://api.github.com/repos/embedpdf/pdfium/git/trees/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f?recursive=1",
+      "sha256": "2c8eb18da8c2d3c69673383404b8d11a65bbf80c759ad189b9dda6c0d313e014",
+      "treeObject": "cb29e78f2ba00c9298714d5f4a8bf7765f1e802f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/DEPS",
+      "sha256": "f456f116824717cde93a32fa9cb2df1bae776226dadfa225a211dd5686ed05f1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/NotoSansCJK/README.pdfium",
+      "sha256": "ac0940f34e06960b7d77e87af3e48264ffd9826b6bc985fa0245dac5255192d9",
+      "declaredLicense": "OFL-1.1",
+      "shipped": "no"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/agg23/README.pdfium",
+      "sha256": "713568e50716e884ae5c9d41c997731699cef43359134af03e64f42ed0c00c5f",
+      "declaredLicense": "MIT",
+      "shipped": "yes"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/cpu_features/README.pdfium",
+      "sha256": "4a57bc96194a6d2c446960976c5c22746026033ea220336cc8a2771c23bfed9a",
+      "declaredLicense": "Apache-2.0",
+      "shipped": "no"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/dragonbox/README.pdfium",
+      "sha256": "8b99baf72acc5629ced05a62f8d9e422f3ff3dd528727b48f3b8945fa73510c4",
+      "declaredLicense": "Apache-with-LLVM-Exception, BSL-1.0",
+      "shipped": "yes"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/fast_float/README.pdfium",
+      "sha256": "ec809f78429130b9c7892e24714a98cb26e8d07d4f77567ac412f98f60c67bcc",
+      "declaredLicense": "MIT",
+      "shipped": "yes"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/fp16/README.pdfium",
+      "sha256": "a60fd6dd224d82e63841e7897104b83c96f80ee0850382df42e62361aeb455ba",
+      "declaredLicense": "MIT",
+      "shipped": "yes"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/freetype/README.pdfium",
+      "sha256": "bc13ca45f159104d9edbea9c6332bc7f54bea0e3ff81cd798ee766a3dd1b72d8",
+      "declaredLicense": "FTL",
+      "shipped": "yes"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/googletest/README.pdfium",
+      "sha256": "f51855f55f306d248fdd3e4a39768aa2ffc7ec2b48909fbdd6211d45b850489b",
+      "declaredLicense": "BSD-3-Clause",
+      "shipped": "no"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/harfbuzz-ng/README.pdfium",
+      "sha256": "387f39b35f9d21da1fdb63f501a19dc3af0d34b29f0e60c956d033d1f7ad824b",
+      "declaredLicense": "MIT-Modern-Variant",
+      "shipped": "yes"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/highway/README.pdfium",
+      "sha256": "7941f9733fdfafe2188481140b912c11161dd2c5fbb651f0a007f23d9e58476d",
+      "declaredLicense": "Apache-2.0",
+      "shipped": "yes"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/lcms/README.pdfium",
+      "sha256": "9189bca964d6eb996a6a2228fcb320547ff0661291a636a9bec016be7faa76ec",
+      "declaredLicense": "MIT",
+      "shipped": "yes"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/libopenjpeg/README.pdfium",
+      "sha256": "c179bc13b0fd06061e22cc3aeb73a3bc4b60b9590d0362a4d10a0486e2000a9d",
+      "declaredLicense": "BSD-2-Clause",
+      "shipped": "yes"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/libtiff/README.pdfium",
+      "sha256": "a0c0d843a9b8d2c156a99d25b438a31468f8a4b485b1d54092a1ee1c40de8ddc",
+      "declaredLicense": "libtiff",
+      "shipped": "yes"
+    }
+  ],
+  "originals": [
+    {
+      "id": "in-tree/AUTHORS",
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/AUTHORS",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/in-tree__AUTHORS.txt",
+      "sha256": "294a637d1cbc298f355282bef80fcf803d49dd3ee57560bdeb63e37dca48f4df",
+      "bytes": 2437,
+      "sourceKind": "fixed-pdfium-source"
+    },
+    {
+      "id": "in-tree/LICENSE",
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/LICENSE",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/in-tree__LICENSE.txt",
+      "sha256": "1fe9dea718fbd75cf149adaf4d8a22a4335604d964ddb76d1b45383dec8668c9",
+      "bytes": 12896,
+      "sourceKind": "fixed-pdfium-source"
+    },
+    {
+      "id": "in-tree/third_party/NotoSansCJK/LICENSE",
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/NotoSansCJK/LICENSE",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/in-tree__third_party__NotoSansCJK__LICENSE.txt",
+      "sha256": "d6639d6624144ef0611b03172e085251c29d4c929b3c11e891e72db6a5b5c2e1",
+      "bytes": 4361,
+      "sourceKind": "fixed-pdfium-source"
+    },
+    {
+      "id": "in-tree/third_party/agg23/copying",
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/agg23/copying",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/in-tree__third_party__agg23__copying.txt",
+      "sha256": "0e16f9c2285583269242e94c6f502de0c9910dfcbbc7b386e236cdf29ecd4333",
+      "bytes": 443,
+      "sourceKind": "fixed-pdfium-source"
+    },
+    {
+      "id": "in-tree/third_party/bigint/LICENSE",
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/bigint/LICENSE",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/in-tree__third_party__bigint__LICENSE.txt",
+      "sha256": "32759d1397d8f7b9e15ece146e4038b22b90e93b4935b5a840bcef4d2ba5ea55",
+      "bytes": 3367,
+      "sourceKind": "fixed-pdfium-source"
+    },
+    {
+      "id": "in-tree/third_party/fp16/LICENSE",
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/fp16/LICENSE",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/in-tree__third_party__fp16__LICENSE.txt",
+      "sha256": "c91377adafa2f498211a4fe017788e20c38892124673860f068f2919c289193d",
+      "bytes": 1158,
+      "sourceKind": "fixed-pdfium-source"
+    },
+    {
+      "id": "in-tree/third_party/freetype/FTL.TXT",
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/freetype/FTL.TXT",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/in-tree__third_party__freetype__FTL.TXT.txt",
+      "sha256": "f4b133e25df1f86ad3ffea453aa0e613f0474f34778dbbb3e437e7b2724937d8",
+      "bytes": 6741,
+      "sourceKind": "fixed-pdfium-source"
+    },
+    {
+      "id": "in-tree/third_party/highway/LICENSE",
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/highway/LICENSE",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/in-tree__third_party__highway__LICENSE.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357,
+      "sourceKind": "fixed-pdfium-source"
+    },
+    {
+      "id": "in-tree/third_party/lcms/LICENSE",
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/lcms/LICENSE",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/in-tree__third_party__lcms__LICENSE.txt",
+      "sha256": "6dbd60437f8ef91d8de1f08ad75882547fd4931bfcc3566a0735f28db1484d31",
+      "bytes": 1080,
+      "sourceKind": "fixed-pdfium-source"
+    },
+    {
+      "id": "in-tree/third_party/libopenjpeg/LICENSE",
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/libopenjpeg/LICENSE",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/in-tree__third_party__libopenjpeg__LICENSE.txt",
+      "sha256": "a6af136f3e15038a666b61f376612a07d9a4e48cb7c01adbf3e33b3f14ab49b6",
+      "bytes": 2112,
+      "sourceKind": "fixed-pdfium-source"
+    },
+    {
+      "id": "in-tree/third_party/libtiff/LICENSE.md",
+      "url": "https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/third_party/libtiff/LICENSE.md",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/in-tree__third_party__libtiff__LICENSE.md.txt",
+      "sha256": "0780558a8bfba0af1160ec1ff11ade4f41c0d7deafd6ecfc796b492a788e380d",
+      "bytes": 1164,
+      "sourceKind": "fixed-pdfium-source"
+    },
+    {
+      "id": "deps/abseil/AUTHORS",
+      "url": "https://chromium.googlesource.com/chromium/src/third_party/abseil-cpp/+/675d3d37ecbec78fd51378c6774c45715b1e4382/AUTHORS?format=TEXT",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/deps__abseil__AUTHORS.txt",
+      "sha256": "1fd39030c119b4c97014f59e0ad0ed65f23475bbdf55a52740f31eb82b34b4ee",
+      "bytes": 295,
+      "sourceKind": "fixed-deps-candidate"
+    },
+    {
+      "id": "deps/abseil/LICENSE",
+      "url": "https://chromium.googlesource.com/chromium/src/third_party/abseil-cpp/+/675d3d37ecbec78fd51378c6774c45715b1e4382/LICENSE?format=TEXT",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/deps__abseil__LICENSE.txt",
+      "sha256": "c79a7fea0e3cac04cd43f20e7b648e5a0ff8fa5344e644b0ee09ca1162b62747",
+      "bytes": 11361,
+      "sourceKind": "fixed-deps-candidate"
+    },
+    {
+      "id": "deps/brotli/LICENSE",
+      "url": "https://chromium.googlesource.com/chromium/src/third_party/brotli/+/ac16a36bc55c4c896135084e878f0d6a2f9b347e/LICENSE?format=TEXT",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/deps__brotli__LICENSE.txt",
+      "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94",
+      "bytes": 1084,
+      "sourceKind": "fixed-deps-candidate"
+    },
+    {
+      "id": "deps/fast-float/AUTHORS",
+      "url": "https://chromium.googlesource.com/external/github.com/fastfloat/fast_float/+/cb1d42aaa1e14b09e1452cfdef373d051b8c02a4/AUTHORS?format=TEXT",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/deps__fast-float__AUTHORS.txt",
+      "sha256": "ed249424bce4e318fa190dd6d8becf60cfc37287132ad3f89e16e0f28d878dcf",
+      "bytes": 36,
+      "sourceKind": "fixed-deps-candidate"
+    },
+    {
+      "id": "deps/fast-float/LICENSE-APACHE",
+      "url": "https://chromium.googlesource.com/external/github.com/fastfloat/fast_float/+/cb1d42aaa1e14b09e1452cfdef373d051b8c02a4/LICENSE-APACHE?format=TEXT",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/deps__fast-float__LICENSE-APACHE.txt",
+      "sha256": "097a889aa954d04e088b790b10a4014d6189561d0a6013935a73ce3d4ddaaf06",
+      "bytes": 10767,
+      "sourceKind": "fixed-deps-candidate"
+    },
+    {
+      "id": "deps/fast-float/LICENSE-BOOST",
+      "url": "https://chromium.googlesource.com/external/github.com/fastfloat/fast_float/+/cb1d42aaa1e14b09e1452cfdef373d051b8c02a4/LICENSE-BOOST?format=TEXT",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/deps__fast-float__LICENSE-BOOST.txt",
+      "sha256": "8d8291caf1cee26d23acf3eb67c9f9a2d58f1c681b16a4fbe8cbfb9e3c0b5a9b",
+      "bytes": 1337,
+      "sourceKind": "fixed-deps-candidate"
+    },
+    {
+      "id": "deps/fast-float/LICENSE-MIT",
+      "url": "https://chromium.googlesource.com/external/github.com/fastfloat/fast_float/+/cb1d42aaa1e14b09e1452cfdef373d051b8c02a4/LICENSE-MIT?format=TEXT",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/deps__fast-float__LICENSE-MIT.txt",
+      "sha256": "e562f3f974ced7e69dd1db77b820b36bcf8f30377f1aa105723fba449c53c4e6",
+      "bytes": 1079,
+      "sourceKind": "fixed-deps-candidate"
+    },
+    {
+      "id": "deps/freetype/LICENSE.TXT",
+      "url": "https://chromium.googlesource.com/chromium/src/third_party/freetype2/+/b91f75bd02db43b06d634591eb286d3eb0ce3b65/LICENSE.TXT?format=TEXT",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/deps__freetype__LICENSE.TXT.txt",
+      "sha256": "bd36c8b474855fa294c2ec5c184544478ef3720aad37d65a6296a4f264fd2d3b",
+      "bytes": 2149,
+      "sourceKind": "fixed-deps-candidate"
+    },
+    {
+      "id": "deps/freetype/docs/FTL.TXT",
+      "url": "https://chromium.googlesource.com/chromium/src/third_party/freetype2/+/b91f75bd02db43b06d634591eb286d3eb0ce3b65/docs/FTL.TXT?format=TEXT",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/deps__freetype__docs__FTL.TXT.txt",
+      "sha256": "5a5ee54c5001bbad1cdc1a57cc3dd4c42199b2da09d39c7ee41fab002d02967f",
+      "bytes": 6743,
+      "sourceKind": "fixed-deps-candidate"
+    },
+    {
+      "id": "deps/freetype/docs/GPLv2.TXT",
+      "url": "https://chromium.googlesource.com/chromium/src/third_party/freetype2/+/b91f75bd02db43b06d634591eb286d3eb0ce3b65/docs/GPLv2.TXT?format=TEXT",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/deps__freetype__docs__GPLv2.TXT.txt",
+      "sha256": "c4120c6752c910c299e3bd9cb3a46ff262c268303ca2069b61f92f10a5656c18",
+      "bytes": 17994,
+      "sourceKind": "fixed-deps-candidate"
+    },
+    {
+      "id": "deps/harfbuzz/AUTHORS",
+      "url": "https://chromium.googlesource.com/external/github.com/harfbuzz/harfbuzz/+/fa2908bf16d2ccd6623f4d575455fea72a1a722b/AUTHORS?format=TEXT",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/deps__harfbuzz__AUTHORS.txt",
+      "sha256": "19bfe8f5ed100636cd24ab0c90a3f71c21d8b02d9ba00719447a0faab364d49f",
+      "bytes": 201,
+      "sourceKind": "fixed-deps-candidate"
+    },
+    {
+      "id": "deps/harfbuzz/COPYING",
+      "url": "https://chromium.googlesource.com/external/github.com/harfbuzz/harfbuzz/+/fa2908bf16d2ccd6623f4d575455fea72a1a722b/COPYING?format=TEXT",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/deps__harfbuzz__COPYING.txt",
+      "sha256": "ba8f810f2455c2f08e2d56bb49b72f37fcf68f1f4fade38977cfd7372050ad64",
+      "bytes": 1971,
+      "sourceKind": "fixed-deps-candidate"
+    },
+    {
+      "id": "deps/icu/LICENSE",
+      "url": "https://chromium.googlesource.com/chromium/deps/icu/+/a86a32e67b8d1384b33f8fa48c83a6079b86f8cd/LICENSE?format=TEXT",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/deps__icu__LICENSE.txt",
+      "sha256": "451167c55c0fa447cc2d5632714f5e3c567fe4f1e1badefab2c1333852198aca",
+      "bytes": 26487,
+      "sourceKind": "fixed-deps-candidate"
+    },
+    {
+      "id": "deps/icu/license.html",
+      "url": "https://chromium.googlesource.com/chromium/deps/icu/+/a86a32e67b8d1384b33f8fa48c83a6079b86f8cd/license.html?format=TEXT",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/deps__icu__license.html.txt",
+      "sha256": "c62d7697c03979f5056d28b338fafc7a1152820f7b379adf4a9d88cd37160f96",
+      "bytes": 622,
+      "sourceKind": "fixed-deps-candidate"
+    },
+    {
+      "id": "deps/libpng/LICENSE",
+      "url": "https://chromium.googlesource.com/chromium/src/third_party/libpng/+/172f83835c98264e6eefdbe8ae82dc08be337ad0/LICENSE?format=TEXT",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/deps__libpng__LICENSE.txt",
+      "sha256": "bf5e22b9dce8464064ae17a48ea1133c3369ac9e1d80ef9e320e5219aa14ea9b",
+      "bytes": 5345,
+      "sourceKind": "fixed-deps-candidate"
+    },
+    {
+      "id": "deps/zlib/LICENSE",
+      "url": "https://chromium.googlesource.com/chromium/src/third_party/zlib/+/980253c1cc835c893c57b5cfc10c5b942e10bc46/LICENSE?format=TEXT",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/deps__zlib__LICENSE.txt",
+      "sha256": "e1cfcc55c325b3f78cf55df9664abaa066e2271dffe8213347d9fccdfbac8f2c",
+      "bytes": 910,
+      "sourceKind": "fixed-deps-candidate"
+    },
+    {
+      "id": "deps/jpeg-turbo/LICENSE.md",
+      "url": "https://chromium.googlesource.com/chromium/deps/libjpeg_turbo/+/6bb85251a8382b5e07f635a981ac685cc5ab5053/LICENSE.md?format=TEXT",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/deps__jpeg-turbo__LICENSE.md.txt",
+      "sha256": "96f5b328adbb78eeaaec6980d73fd558cb1e4d62560ed615646bc3cf5e532430",
+      "bytes": 5620,
+      "sourceKind": "fixed-deps-candidate"
+    },
+    {
+      "id": "deps/jpeg-turbo/README.ijg",
+      "url": "https://chromium.googlesource.com/chromium/deps/libjpeg_turbo/+/6bb85251a8382b5e07f635a981ac685cc5ab5053/README.ijg?format=TEXT",
+      "reviewPath": "docs/third-party-source-licenses/pdfium/deps__jpeg-turbo__README.ijg.txt",
+      "sha256": "75815e3bf6484201a3c3d17a1bbf10f2e8e3237f84df10a2357ea896db2a81d6",
+      "bytes": 12799,
+      "sourceKind": "fixed-deps-candidate"
+    }
+  ],
+  "external": [
+    {
+      "id": "abseil",
+      "revision": "675d3d37ecbec78fd51378c6774c45715b1e4382",
+      "repository": "https://chromium.googlesource.com/chromium/src/third_party/abseil-cpp",
+      "originalCount": 2,
+      "inclusionInPublishedWASM": "not-proven"
+    },
+    {
+      "id": "brotli",
+      "revision": "ac16a36bc55c4c896135084e878f0d6a2f9b347e",
+      "repository": "https://chromium.googlesource.com/chromium/src/third_party/brotli",
+      "originalCount": 1,
+      "inclusionInPublishedWASM": "not-proven"
+    },
+    {
+      "id": "fast-float",
+      "revision": "cb1d42aaa1e14b09e1452cfdef373d051b8c02a4",
+      "repository": "https://chromium.googlesource.com/external/github.com/fastfloat/fast_float",
+      "originalCount": 4,
+      "inclusionInPublishedWASM": "not-proven"
+    },
+    {
+      "id": "freetype",
+      "revision": "b91f75bd02db43b06d634591eb286d3eb0ce3b65",
+      "repository": "https://chromium.googlesource.com/chromium/src/third_party/freetype2",
+      "originalCount": 3,
+      "inclusionInPublishedWASM": "not-proven"
+    },
+    {
+      "id": "harfbuzz",
+      "revision": "fa2908bf16d2ccd6623f4d575455fea72a1a722b",
+      "repository": "https://chromium.googlesource.com/external/github.com/harfbuzz/harfbuzz",
+      "originalCount": 2,
+      "inclusionInPublishedWASM": "not-proven"
+    },
+    {
+      "id": "icu",
+      "revision": "a86a32e67b8d1384b33f8fa48c83a6079b86f8cd",
+      "repository": "https://chromium.googlesource.com/chromium/deps/icu",
+      "originalCount": 2,
+      "inclusionInPublishedWASM": "not-proven"
+    },
+    {
+      "id": "libpng",
+      "revision": "172f83835c98264e6eefdbe8ae82dc08be337ad0",
+      "repository": "https://chromium.googlesource.com/chromium/src/third_party/libpng",
+      "originalCount": 1,
+      "inclusionInPublishedWASM": "not-proven"
+    },
+    {
+      "id": "zlib",
+      "revision": "980253c1cc835c893c57b5cfc10c5b942e10bc46",
+      "repository": "https://chromium.googlesource.com/chromium/src/third_party/zlib",
+      "originalCount": 1,
+      "inclusionInPublishedWASM": "not-proven"
+    },
+    {
+      "id": "jpeg-turbo",
+      "revision": "6bb85251a8382b5e07f635a981ac685cc5ab5053",
+      "repository": "https://chromium.googlesource.com/chromium/deps/libjpeg_turbo",
+      "originalCount": 2,
+      "inclusionInPublishedWASM": "not-proven"
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # JSON採用方式の配布条件確認表
 
+> 最新の[ELK/WASM追加調査](json-source-license-validation.md)でanydocのWASM target 96依存・原文195件、PDFium候補29件、ELK関連2件を収集した。以下の188候補/未収集という記述は初回調査時点の履歴として保持し、現在の未収集状態を示さない。実バイナリ対応等の残条件は最新報告を参照する。
+
 > 2026-10-27追加調査: 固定版metadata/出典の[機械記録](evidence/json-distribution-source-records.json)、[追加報告](json-followup-review-validation.md)、[告知文の下書き](json-third-party-notice-draft.md)を追加した。原文/対応ソースの残条件は継続する。
 
 2026-10-27。[接続前計画](json-integration-readiness-plan.md)に沿う独立調査。本体へ新しい依存を追加せず、公開・デプロイも行っていない。

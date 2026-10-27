@@ -1,0 +1,2 @@
+# Byte-exact third-party originals retain their upstream line endings and spacing.
+**/*.txt -text -whitespace

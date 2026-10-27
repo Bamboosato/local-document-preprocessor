@@ -178,3 +178,7 @@ CIでは試作SDKのChromiumでAD/UPを逐次実行し、独立previewを開始�
 `npm run test:distribution`はネットワークなしの調査guard単体。`npm run research:distribution`は公開一次資料を読み、npm SRI・固定ソース・Cargo.lockのregistry候補metadataを照合して`evidence/distribution-research.json`へ記録する。上流コードは実行せず、通常build/CIからネットワーク調査を呼ばない。crate原文・WASM target closure・署名検証・配布承認は別条件。レビュー時のsnapshotは`docs/evidence/json-distribution-source-records.json`。
 
 実機補助の説明だけを見る場合は`npm run manual:describe`。ユーザーが実施する場合だけ`node manual-session.mjs chrome ready`（edge、invalid、display-failure、emptyも指定可）を起動する。新規一時contextと専用previewを使い、ブラウザーを閉じるかCtrl+Cで終了する。既存プロファイル/製品へ接続しない。PWAインストール機能はなく、fixture準備は実機PASSではない。[Windows手順](../../docs/json-windows-manual-runbook.md)と[追加報告](../../docs/json-followup-review-validation.md)を参照する。
+
+## ELK/WASM原文の後続調査
+
+`npm run test:sources`はSLのオフライン検査。`research:source-prepare`→固定Rustコンテナーの`resolve-wasm-closure.sh`→`research:source-collect`→`research:source-review`でanydoc targetを解決し原文をレビュー用に生成する。`research:elk`と`research:pdfium`はそれぞれ別の固定出典を追跡する。これらのネットワーク調査はCIから呼ばない。原文は`docs/third-party-source-licenses/`、manifestは`docs/evidence/`へ保存し、製品に組み込まない。[結果と限界](../../docs/json-source-license-validation.md)、[再現手順](../../docs/json-source-license-reproduction.md)を参照する。

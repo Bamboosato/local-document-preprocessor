@@ -1,5 +1,7 @@
 # 第三者ソフトウェア告知文（配布前レビュー用下書き）
 
+> 後続の[追加収集結果](json-source-license-validation.md)と原文manifestを反映してから公開判断する。収集した226原文をそのまま全実バイナリの内包証明とはしない。
+
 2026-10-27。**未公開の下書き。対応ソースとWASM内包物の確認が未完了のため、このまま製品の最終告知として使用しない。** 本体の画面・配布物へは組み込まない。
 
 ## 告知本文案
@@ -15,7 +17,7 @@ EPL-2.0対象のelkjsとその生成元については、対応する編集用�
 |実行資産と版|integration-assets.json / licenses/bundled.json相当|実際の製品ビルドへ再生成し、公開場所から到達できることを確認|
 |著作権・原文・NOTICE|試作の122 npm依存の原文124ファイル|実配布内包物との照合を完了。WASM内包物の追加原文を含める|
 |elkjsのソース|固定commit `a8304cf79fde75bc2ab1a89d28320f53f8637436`|ELK本体の生成元commit/変更・GWT等の対応を固定し、編集用ソースと条件を提供|
-|anydocのソース|固定commit `4a45addbd607e8b59f0c263bca26aab228e10370`と188 crate候補|WASM対象graphと原文/NOTICEを確定。署名未検証のattestation内容だけで提供完了にしない|
+|anydocのソース|固定commit `4a45addbd607e8b59f0c263bca26aab228e10370`、WASM target 96 registry依存の解決と195原文|実公開WASMとの対応と内包物の網羅性、配布条件の選択・告知を確認。署名未検証のattestation内容だけで提供完了にしない|
 |PDFiumのソース|viewer `07ed5fe3739ec22522450863282b1b0618b88a6f`、submodule `cb29e78f2ba00c9298714d5f4a8bf7765f1e802f`|vendor WASMとの対応ビルドと第三者原文の網羅性を確認|
 |取得先の到達性・保持|未設定|版を固定した取得先、必要な期間の保持方針、オンライン到達性を確認してから公開|
 

@@ -1,0 +1,125 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-10-27T07:14:09.052Z",
+  "elkjsCommit": "a8304cf79fde75bc2ab1a89d28320f53f8637436",
+  "releaseURL": "https://github.com/kieler/elkjs/releases/tag/0.9.3",
+  "releasePublishedAt": "2024-04-16T08:27:47Z",
+  "baseline": {
+    "tag": "v0.9.1",
+    "commit": "62d5909f96fad541bc101ad52dabaece6b7eab7e"
+  },
+  "requiredPatch": {
+    "pull": 955,
+    "commit": "7ca51784e42a24201f29bc13e458728b6fc61cdc",
+    "head": "cd7d2bb09bda891380b30e15cfd85f6deab678d9"
+  },
+  "latestBeforeRelease": {
+    "commit": "9bc93474e1dc649450e8c97abb45d16b7c88e35b",
+    "date": "2024-04-15T16:59:29Z"
+  },
+  "sourceRoots": [
+    "plugins/org.eclipse.elk.core/src",
+    "plugins/org.eclipse.elk.graph/src",
+    "plugins/org.eclipse.elk.graph.json/src",
+    "plugins/org.eclipse.elk.alg.common/src",
+    "plugins/org.eclipse.elk.alg.disco/src",
+    "plugins/org.eclipse.elk.alg.force/src",
+    "plugins/org.eclipse.elk.alg.layered/src",
+    "plugins/org.eclipse.elk.alg.mrtree/src",
+    "plugins/org.eclipse.elk.alg.rectpacking/src",
+    "plugins/org.eclipse.elk.alg.radial/src",
+    "plugins/org.eclipse.elk.alg.spore/src"
+  ],
+  "baselineToPatch": {
+    "compareURL": "https://github.com/eclipse-elk/elk/compare/62d5909f96fad541bc101ad52dabaece6b7eab7e...7ca51784e42a24201f29bc13e458728b6fc61cdc",
+    "runtimeFiles": [
+      "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/NodeContext.java",
+      "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/algorithm/NodeSizeCalculator.java"
+    ]
+  },
+  "patchToLatest": {
+    "compareURL": "https://github.com/eclipse-elk/elk/compare/7ca51784e42a24201f29bc13e458728b6fc61cdc...9bc93474e1dc649450e8c97abb45d16b7c88e35b",
+    "commits": [
+      "e486c42c2135c97441f51cc497e5cf94d1b3938d",
+      "dcde05603c2cde775bfd51262f44fd0efe54ba2f",
+      "9bc93474e1dc649450e8c97abb45d16b7c88e35b"
+    ],
+    "changedFiles": [
+      "plugins/org.eclipse.elk.core.meta.ui/src/org/eclipse/elk/core/meta/ui/MetaDataUiModule.xtend",
+      "plugins/org.eclipse.elk.core.meta/src/org/eclipse/elk/core/meta/MetaDataRuntimeModule.xtend",
+      "plugins/org.eclipse.elk.core.meta/src/org/eclipse/elk/core/meta/validation/MelkUniqueClassNameValidator.xtend"
+    ],
+    "runtimeFiles": []
+  },
+  "sourceChecks": [
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/NodeContext.java",
+      "checks": [
+        {
+          "commit": "62d5909f96fad541bc101ad52dabaece6b7eab7e",
+          "url": "https://raw.githubusercontent.com/eclipse-elk/elk/62d5909f96fad541bc101ad52dabaece6b7eab7e/plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/NodeContext.java",
+          "sha256": "abf19c274a0a48ed25e3f306e0bbf5e865fafec3d2539f7fbbb63b0df6aa07a9"
+        },
+        {
+          "commit": "7ca51784e42a24201f29bc13e458728b6fc61cdc",
+          "url": "https://raw.githubusercontent.com/eclipse-elk/elk/7ca51784e42a24201f29bc13e458728b6fc61cdc/plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/NodeContext.java",
+          "sha256": "b64854991e77ec95156c06bf5a488ac6212fd8220c11e2eb86a0d84e6bf2c1cd"
+        },
+        {
+          "commit": "9bc93474e1dc649450e8c97abb45d16b7c88e35b",
+          "url": "https://raw.githubusercontent.com/eclipse-elk/elk/9bc93474e1dc649450e8c97abb45d16b7c88e35b/plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/NodeContext.java",
+          "sha256": "b64854991e77ec95156c06bf5a488ac6212fd8220c11e2eb86a0d84e6bf2c1cd"
+        }
+      ],
+      "patchAndLatestEqual": true
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/algorithm/NodeSizeCalculator.java",
+      "checks": [
+        {
+          "commit": "62d5909f96fad541bc101ad52dabaece6b7eab7e",
+          "url": "https://raw.githubusercontent.com/eclipse-elk/elk/62d5909f96fad541bc101ad52dabaece6b7eab7e/plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/algorithm/NodeSizeCalculator.java",
+          "sha256": "b1eb2f38fa243d183590bd9fcca0148ffe7b94b4bfa81f203d16733e910a09c5"
+        },
+        {
+          "commit": "7ca51784e42a24201f29bc13e458728b6fc61cdc",
+          "url": "https://raw.githubusercontent.com/eclipse-elk/elk/7ca51784e42a24201f29bc13e458728b6fc61cdc/plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/algorithm/NodeSizeCalculator.java",
+          "sha256": "2adb4b9e7e0c3e24d395093a1dfc5ae044fc84c26e935a8f856dbf6683c707d0"
+        },
+        {
+          "commit": "9bc93474e1dc649450e8c97abb45d16b7c88e35b",
+          "url": "https://raw.githubusercontent.com/eclipse-elk/elk/9bc93474e1dc649450e8c97abb45d16b7c88e35b/plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/algorithm/NodeSizeCalculator.java",
+          "sha256": "2adb4b9e7e0c3e24d395093a1dfc5ae044fc84c26e935a8f856dbf6683c707d0"
+        }
+      ],
+      "patchAndLatestEqual": true
+    }
+  ],
+  "originals": [
+    {
+      "id": "elkjs",
+      "url": "https://raw.githubusercontent.com/kieler/elkjs/a8304cf79fde75bc2ab1a89d28320f53f8637436/LICENSE.md",
+      "reviewPath": "docs/third-party-source-licenses/elk/elkjs-LICENSE.txt",
+      "sha256": "89591d4578fb1ebd91501312a3d25f021bd865a2e436641c1cf7b1bc7e3c1617",
+      "bytes": 14480
+    },
+    {
+      "id": "elk-source-candidate",
+      "url": "https://raw.githubusercontent.com/eclipse-elk/elk/7ca51784e42a24201f29bc13e458728b6fc61cdc/LICENSE.md",
+      "reviewPath": "docs/third-party-source-licenses/elk/elk-source-candidate-LICENSE.txt",
+      "sha256": "89591d4578fb1ebd91501312a3d25f021bd865a2e436641c1cf7b1bc7e3c1617",
+      "bytes": 14480
+    }
+  ],
+  "resolution": "runtime-source-variant-narrowed; exact publisher checkout and complete generated-source chain not uniquely proven",
+  "generatedWorker": {
+    "url": "https://raw.githubusercontent.com/kieler/elkjs/a8304cf79fde75bc2ab1a89d28320f53f8637436/lib/elk-worker.js",
+    "sha256": "90ab078ad34ff826ca0ece1ee338ae98071a6b3e6cfbb00ce2eb671b32eacd88",
+    "matchesInstalled": true,
+    "features": {
+      "topdownContext": true,
+      "widthUsesExistingSize": true,
+      "heightUsesExistingSize": true
+    }
+  }
+}
