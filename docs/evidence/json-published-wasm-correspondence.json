@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-10-27T07:52:24.283Z",
+  "scope": "Published archive bytes and registry verification; not a reproducible build or linked-code SBOM",
+  "packages": [
+    {
+      "name": "@firecrawl/anydoc-wasm",
+      "version": "0.1.7",
+      "tarball": "https://registry.npmjs.org/@firecrawl/anydoc-wasm/-/anydoc-wasm-0.1.7.tgz",
+      "integrity": "sha512-FkuHl7K8Cl/kyt1ZS9DbX/0GubvW7dHPgiDWrmMoFDFI3GGAtyWsyvAnoqncbFA6yW/ZCjSiZ8jjhH0zeeBxfQ==",
+      "archiveSha256": "0c9005506f19e275ba970485a4877e0ffdec6bce51cc563ac707e17f458cc645",
+      "archiveBytes": 2909258,
+      "archiveIntegrity": "verified",
+      "archivePath": "package/anydoc_wasm_bg.wasm",
+      "wasmSha256": "409e45e75062df06bed445c352ffddaf3bae15ff376f5d514d45f4891debd09e",
+      "wasmBytes": 6485379,
+      "installedMatch": true
+    },
+    {
+      "name": "@embedpdf/pdfium",
+      "version": "2.14.4",
+      "tarball": "https://registry.npmjs.org/@embedpdf/pdfium/-/pdfium-2.14.4.tgz",
+      "integrity": "sha512-0tDPQEH1WtfXcASNVp5U3dqfzZboNvcE4rDok/P4JCN+DCTaJDG2E9lYHGMo9FtuS2IdHgrzkmPRpOo5WV9MKQ==",
+      "archiveSha256": "3ae8f6aab9e24a35d5e5978c3a12f3e2dea6e4e43b0c991b8c6c33e91b9dc36d",
+      "archiveBytes": 2665003,
+      "archiveIntegrity": "verified",
+      "archivePath": "package/dist/pdfium.wasm",
+      "wasmSha256": "c0af5a6aca30d7e54a149c3a68e317116ca906d6edc28fd3318b12c7d9478ac8",
+      "wasmBytes": 4633788,
+      "installedMatch": true
+    }
+  ]
+}

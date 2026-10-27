@@ -54,7 +54,29 @@ command: node pdfium-license-research.mjs --local-tree
 
 生成先は原文フォルダーとJSONのみ。パッケージ本体や製品SW/CSPを変更しない。失敗時にTLS検証・保護設定を無効化しない。固定URL/hash、失敗したsource ID/状態だけを記録し、本文・秘密情報・個人のパスはログへ出さない。
 
-## オフラインの検査
+## 公開WASM・npm署名の追補
+
+[追加結果](json-published-wasm-validation.md)。cwdは引き続き`experiments/json-gates`。
+
+```powershell
+node published-wasm-research.mjs prepare
+```
+
+専用private package/lockをGit管理外`evidence/published-wasm`へ生成する。既存Nodeのdigest固定コンテナーへこのディレクトリーだけを`/audit`として共有し、`--workdir /audit`で次を逐次実行する。イメージは上記Nodeと同じで、npm 11.19.1を記録する。資格情報やユーザー設定は共有しない。
+
+```sh
+npm ci --ignore-scripts --no-audit --no-fund > install.log 2>&1
+npm audit signatures > signatures.log 2>&1
+npm audit signatures --json --include-attestations > signatures.json
+```
+
+各終了コード0を確認してから次へ進む。失敗出力を成功した記録へ混入させない。ホストで`node published-wasm-research.mjs review`を実行すると、保存結果のdigest/sourceと件数を検査し、レビュー用JSON/bundleとテキスト結果を保存する。reviewは暗号検証そのものではない。
+
+`node published-wasm-research.mjs collect`は固定root lockの2 tarballを取得し、SRI照合、安全tar読取、内包WASMと導入済みbytesを照合する。Nodeコンテナーで実行する場合、prototypeとroot node_modules/package-lock.jsonを読取専用で`/work`以下の同じ相対位置へ、`docs/evidence`だけを書込可能で共有する。上流WASMを実行せず、製品distは変更しない。
+
+履歴照会のURL/run/jobは[観測JSON](evidence/json-build-history-observations.json)を使う。将来のAPI応答は変わるので、この観測の0件/410/queuedを恒久的な状態とみなさない。
+
+## オフライン検査の実行
 
 ```powershell
 npm run test:sources

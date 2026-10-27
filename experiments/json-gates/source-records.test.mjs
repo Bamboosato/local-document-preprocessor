@@ -38,3 +38,19 @@ test('SL-09: PDFium candidates and every committed original remain complete with
   const base=new URL('docs/third-party-source-licenses/',project);
   const files=(await readdir(base,{recursive:true})).map(p=>p.replaceAll('\\','/')).filter(p=>p.endsWith('.txt')).map(p=>'docs/third-party-source-licenses/'+p).sort();assert.deepEqual(files,expected);assert.equal(files.length,226);
 });
+
+test('SL-10: published archive WASM matches installed bytes and fixed lock integrity',async()=>{
+  const record=await readJSON('docs/evidence/json-published-wasm-correspondence.json');
+  const lock=await readJSON('package-lock.json');assert.equal(record.packages.length,2);
+  assert.match(record.scope,/not a reproducible build/);
+  for(const p of record.packages){const fixed=lock.packages['node_modules/'+p.name];assert.equal(p.integrity,fixed.integrity);assert.equal(p.version,fixed.version);assert.equal(p.tarball,fixed.resolved);assert.equal(p.archiveIntegrity,'verified');assert.equal(p.installedMatch,true);const path=p.name==='@firecrawl/anydoc-wasm'?'anydoc_wasm_bg.wasm':'dist/pdfium.wasm';const bytes=await readFile(new URL('node_modules/'+p.name+'/'+path,project));assert.equal(p.wasmSha256,sha256(bytes));assert.equal(p.wasmBytes,bytes.length);}
+});
+
+test('SL-11: attestation digest and source match; unavailable history cannot identify ELK checkout',async()=>{
+  const result=await readJSON('docs/evidence/json-npm-signature-verification.json');assert.deepEqual(result.invalid,[]);assert.deepEqual(result.missing,[]);
+  const p=result.verified.find(p=>p.name==='@firecrawl/anydoc-wasm');assert.equal(p.version,'0.1.7');
+  const bundle=p.attestationBundles.find(b=>b.predicateType==='https://slsa.dev/provenance/v1');const claim=JSON.parse(Buffer.from(bundle.bundle.dsseEnvelope.payload,'base64'));
+  const archive=(await readJSON('docs/evidence/json-published-wasm-correspondence.json')).packages[0];assert.equal(claim.subject[0].digest.sha512,Buffer.from(archive.integrity.slice(7),'base64').toString('hex'));
+  assert.equal(claim.predicate.buildDefinition.resolvedDependencies[0].digest.gitCommit,'4a45addbd607e8b59f0c263bca26aab228e10370');
+  const history=await readJSON('docs/evidence/json-build-history-observations.json');assert.equal(history.elk.checkoutResolution,'not-uniquely-proven');assert.equal(history.elk.totalCount,0);assert.equal(history.pdfium.logHTTPStatus,410);assert.equal(history.anydoc.jobCount,0);
+});

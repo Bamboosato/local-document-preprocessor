@@ -4,6 +4,8 @@
 
 ## 結論と残る境界
 
+追補: [公開WASMの署名・対応とELK実checkoutの追跡](json-published-wasm-validation.md)。公式npmでregistry署名2件とanydocのprovenance検証1件に成功し、両tarball内のWASMが導入済みbytesと一致した。anydocは署名付き公開工程から固定source参照への対応を確認したが、完全な再現ビルド・内包依存全量は未証明。ELK実checkoutとPDFium実リンクgraphは公開履歴から確定できなかった。以下は先行調査の記録として保持する。
+
 anydocは固定ソースのWASM向け依存解決を実施し、registry依存96件を特定、全件の原文/NOTICE等を収集した。Cargoをホストへインストールする必要はなくなった。ELKは0.9.1に#955を加えた直接の実装ソース相当まで絞り込み、公開JSの特徴と照合した。PDFiumは固定ソース/DEPSの候補から原文を追加収集した。
 
 今回の原文は合計226ファイル（anydoc関連195、PDFium候補29、ELK関連2）。[レビュー用原文](third-party-source-licenses/)へbytesを保持して収録し、取得元・版・hashと対応付けた。これは最終配布承認ではない。実バイナリの完全な内包物証明、ELKの一意なビルド時checkout/生成依存、実配布告知と提供先の整合は残る。
