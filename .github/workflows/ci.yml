@@ -48,6 +48,10 @@ jobs:
         if: github.event_name != 'schedule'
         run: npm test
         working-directory: experiments/json-gates
+      - name: Test distribution research guards without network access
+        if: github.event_name != 'schedule'
+        run: npm run test:distribution
+        working-directory: experiments/json-gates
       - name: Build both prototype candidates and verify static manifest
         if: github.event_name != 'schedule'
         run: |

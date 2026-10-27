@@ -1,5 +1,7 @@
 # JSON本体接続前の設計・共存検証結果
 
+> 後続の配布調査・接続レビュー・Windows手順整備は[追加結果](json-followup-review-validation.md)を参照。以下のブラウザー検証は前回実績として保持し、手順整備を実機確認の成功に数えない。
+
 2026-10-27。mainを`e927fe1`（PR #16取り込み済み）へfast-forward更新後、`codex/json-integration-readiness`で作業した。
 
 ## 判断

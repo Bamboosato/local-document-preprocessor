@@ -172,3 +172,9 @@ CIでは試作SDKのChromiumでAD/UPを逐次実行し、独立previewを開始�
 製品本体へ登録しない専用ビルド。`npm run build:integration` → `npm run check:integration` → `npm run browser:integration -- chrome edge`の順で実行する。ブラウザーは逐次実行し、専用preview 4190はwrapperが終了時に停止する。CIは`node run-integration-check.mjs chromium`を使用する。
 
 既存WASM・逐次処理・出力関数と静的JSON Workerを同じCSPで検証する。本文等を保存せず、静的資産だけを専用Cacheへ保持する。ビルド出力は`dist-integration/`、状態のみの証跡は`evidence/integration-*.json`。[計画](../../docs/json-integration-readiness-plan.md)、[結果と未実施範囲](../../docs/json-integration-readiness-validation.md)、[接続設計](../../docs/json-product-connection-design.md)、[配布条件](../../docs/json-distribution-readiness.md)を参照する。
+
+## 配布調査とユーザー向け実機準備
+
+`npm run test:distribution`はネットワークなしの調査guard単体。`npm run research:distribution`は公開一次資料を読み、npm SRI・固定ソース・Cargo.lockのregistry候補metadataを照合して`evidence/distribution-research.json`へ記録する。上流コードは実行せず、通常build/CIからネットワーク調査を呼ばない。crate原文・WASM target closure・署名検証・配布承認は別条件。レビュー時のsnapshotは`docs/evidence/json-distribution-source-records.json`。
+
+実機補助の説明だけを見る場合は`npm run manual:describe`。ユーザーが実施する場合だけ`node manual-session.mjs chrome ready`（edge、invalid、display-failure、emptyも指定可）を起動する。新規一時contextと専用previewを使い、ブラウザーを閉じるかCtrl+Cで終了する。既存プロファイル/製品へ接続しない。PWAインストール機能はなく、fixture準備は実機PASSではない。[Windows手順](../../docs/json-windows-manual-runbook.md)と[追加報告](../../docs/json-followup-review-validation.md)を参照する。

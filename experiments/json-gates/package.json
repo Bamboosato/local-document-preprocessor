@@ -4,6 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "test:distribution": "node --test --test-concurrency=1 --test-reporter=./redacted-reporter.mjs distribution-research.test.mjs distribution-records.test.mjs",
+    "research:distribution": "node distribution-research.mjs",
+    "manual:describe": "node manual-session.mjs --describe",
     "build:integration": "node integration-build.mjs",
     "check:integration": "node --test --test-reporter=./redacted-reporter.mjs integration-artifacts.test.mjs",
     "browser:integration": "node run-integration-check.mjs",
