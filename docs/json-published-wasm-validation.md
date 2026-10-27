@@ -51,3 +51,21 @@ SL-10は固定lock/SRIと公開tarball内WASM・導入済みbytesの対応、SL-
 4. 配布前: 対応ソース・原文・NOTICE・バンドル版と提供先の整合。原文226件の収集と配布承認は別段階。
 
 上流への連絡・issue作成は行っていない。実機確認・本体統合・配布は今回の作業対象に含めない。
+
+### CI完了確認（2026-10-27追記）
+
+確認観点は、機能: 両jobと対象検査の成功、非機能: 環境準備待ちと失敗の区別、データ: PR headとrun headの一致、UI/報告: CI成功を実機・本体統合の完了へ読み替えないこと。正常完了/失敗/取消・timeout/実行中→完了を切り分け、完了前に成功と報告しない。
+
+[CI #29](https://github.com/Bamboosato/local-document-preprocessor/actions/runs/40470860823)はhead `29617e77469f1bcc3745d7e91dfd1c754c9d0545`でcompleted/success。Verify（job `122077379899`）とJSON prototype checks（job `122077379738`）とも成功し、失敗stepは0件だった。前回のChromiumインストール待ちは完了し、取得エラーの記録もなく、失敗による修正や再実行は不要だった。
+
+|検査|完了結果|
+|---|---|
+|製品側|単体63件、型/build/配布物検査成功|
+|文書|48文書・169リンク、問題0件|
+|製品E2E|Chromium全14件成功。既存selectorが共通/未分類変更としてfullを選択|
+|試作単体・出典|既存28件・DS8件・SL11件成功|
+|試作配布物|readiness 2件・integration 2件成功|
+|試作ブラウザー|Chromium AD6・UP4・IC7・IU4、計21件成功。各profile内は逐次実行|
+|依存監査|root/prototypeともproduction・全依存の検出0件|
+
+本追記はCI結果の文書反映のみ。ローカルE2Eの再実行は、runtime/依存/CI設定を変更しないため未実施とした。CIのUbuntu/Chromiumでの成功はWindows実機・Edge・macOS/iOS・本体統合・最終配布条件の証明ではない。ELK実checkoutやWASM全内包物の残件も未解消のまま保持する。
