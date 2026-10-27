@@ -48,12 +48,20 @@ jobs:
         if: github.event_name != 'schedule'
         run: npm test
         working-directory: experiments/json-gates
+      - name: Test distribution research guards without network access
+        if: github.event_name != 'schedule'
+        run: |
+          npm run test:distribution
+          npm run test:sources
+        working-directory: experiments/json-gates
       - name: Build both prototype candidates and verify static manifest
         if: github.event_name != 'schedule'
         run: |
           npm run build
           npm run build:readiness
           npm run check:readiness
+          npm run build:integration
+          npm run check:integration
         working-directory: experiments/json-gates
       - name: Upload prototype audit reports
         if: always()
@@ -72,6 +80,10 @@ jobs:
       - name: Verify adopted view and update lifecycle sequentially
         if: github.event_name != 'schedule'
         run: node run-adoption-ci.mjs
+        working-directory: experiments/json-gates
+      - name: Verify isolated product CSP, WASM and JSON contracts sequentially
+        if: github.event_name != 'schedule'
+        run: node run-integration-check.mjs chromium
         working-directory: experiments/json-gates
       - name: Upload prototype browser evidence
         if: always()

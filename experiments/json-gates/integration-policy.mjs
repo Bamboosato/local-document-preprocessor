@@ -1,0 +1,1 @@
+export const integrationCSP="default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; connect-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; frame-src 'none'; form-action 'none'";

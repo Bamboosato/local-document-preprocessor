@@ -1,5 +1,7 @@
 # JSON図表示の採用決定と今回の対象範囲
 
+> 2026-10-27追記: PR #16取り込み後の[本体接続前の追加結果](json-integration-readiness-validation.md)と[接続設計](json-product-connection-design.md)を参照。本体統合保留とmacOS/iOS対象外は継続する。
+
 決定日: 2026-10-26。ユーザー指示により確定。既存の報告は各実施時点の履歴として保持し、今回の方式・対象判定では本書を優先する。
 
 ## 採用する方式

@@ -166,3 +166,19 @@ AD-01～06は操作・全量保持・ソース出力可否、UP-01～04は二世
 CIでは試作SDKのChromiumでAD/UPを逐次実行し、独立previewを開始・終了する。ローカルで同じCI経路を再現する場合は4188の手動previewを停止してから、対応Chromiumを準備し `node run-adoption-ci.mjs` を実行する。CIのChromiumをWindows Chrome/Edge実測の代用にはしない。
 
 配信設定の比較には、previewを停止してから `$env:READINESS_CORS='1'` を設定し `node readiness-build.mjs --preview` を起動する。同じビルドで `Vary: Origin` の有無を比較できる。比較後は停止し環境変数を解除して通常起動へ戻す。キャッシュ照合やCSPを緩める回避策は使用しない。過去・比較・最終の証跡は `EVIDENCE_SUFFIX` で区別する。
+
+## 本体接続前の追加試作（2026-10-27）
+
+製品本体へ登録しない専用ビルド。`npm run build:integration` → `npm run check:integration` → `npm run browser:integration -- chrome edge`の順で実行する。ブラウザーは逐次実行し、専用preview 4190はwrapperが終了時に停止する。CIは`node run-integration-check.mjs chromium`を使用する。
+
+既存WASM・逐次処理・出力関数と静的JSON Workerを同じCSPで検証する。本文等を保存せず、静的資産だけを専用Cacheへ保持する。ビルド出力は`dist-integration/`、状態のみの証跡は`evidence/integration-*.json`。[計画](../../docs/json-integration-readiness-plan.md)、[結果と未実施範囲](../../docs/json-integration-readiness-validation.md)、[接続設計](../../docs/json-product-connection-design.md)、[配布条件](../../docs/json-distribution-readiness.md)を参照する。
+
+## 配布調査とユーザー向け実機準備
+
+`npm run test:distribution`はネットワークなしの調査guard単体。`npm run research:distribution`は公開一次資料を読み、npm SRI・固定ソース・Cargo.lockのregistry候補metadataを照合して`evidence/distribution-research.json`へ記録する。上流コードは実行せず、通常build/CIからネットワーク調査を呼ばない。crate原文・WASM target closure・署名検証・配布承認は別条件。レビュー時のsnapshotは`docs/evidence/json-distribution-source-records.json`。
+
+実機補助の説明だけを見る場合は`npm run manual:describe`。ユーザーが実施する場合だけ`node manual-session.mjs chrome ready`（edge、invalid、display-failure、emptyも指定可）を起動する。新規一時contextと専用previewを使い、ブラウザーを閉じるかCtrl+Cで終了する。既存プロファイル/製品へ接続しない。PWAインストール機能はなく、fixture準備は実機PASSではない。[Windows手順](../../docs/json-windows-manual-runbook.md)と[追加報告](../../docs/json-followup-review-validation.md)を参照する。
+
+## ELK/WASM原文の後続調査
+
+`npm run test:sources`はSLのオフライン検査。`research:source-prepare`→固定Rustコンテナーの`resolve-wasm-closure.sh`→`research:source-collect`→`research:source-review`でanydoc targetを解決し原文をレビュー用に生成する。`research:elk`と`research:pdfium`はそれぞれ別の固定出典を追跡する。これらのネットワーク調査はCIから呼ばない。原文は`docs/third-party-source-licenses/`、manifestは`docs/evidence/`へ保存し、製品に組み込まない。[結果と限界](../../docs/json-source-license-validation.md)、[再現手順](../../docs/json-source-license-reproduction.md)を参照する。

@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-10-27",
+  "scope": "Public API observations only; missing history does not establish whether a build ran or which ELK checkout was used",
+  "elk": {
+    "query": "https://api.github.com/repos/kieler/elkjs/actions/runs?head_sha=a8304cf79fde75bc2ab1a89d28320f53f8637436&per_page=10",
+    "totalCount": 0,
+    "release": "https://api.github.com/repos/kieler/elkjs/releases/tags/0.9.3",
+    "releaseAssetCount": 0,
+    "checkoutResolution": "not-uniquely-proven"
+  },
+  "anydoc": {
+    "id": 31127846118,
+    "head_sha": "4a45addbd607e8b59f0c263bca26aab228e10370",
+    "head_branch": "v0.1.7",
+    "path": ".github/workflows/release.yml",
+    "event": "push",
+    "status": "queued",
+    "conclusion": null,
+    "created_at": "2026-08-06T20:46:04Z",
+    "updated_at": "2026-08-06T22:16:44Z",
+    "html_url": "https://github.com/firecrawl/anydoc/actions/runs/31127846118",
+    "run_attempt": 1,
+    "jobCount": 0
+  },
+  "pdfium": {
+    "query": "https://api.github.com/repos/embedpdf/embed-pdf-viewer/actions/runs?head_sha=07ed5fe3739ec22522450863282b1b0618b88a6f&per_page=100",
+    "totalCount": 20,
+    "releaseRun": {
+      "id": 27126180386,
+      "head_sha": "07ed5fe3739ec22522450863282b1b0618b88a6f",
+      "path": ".github/workflows/release.yml",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/embedpdf/embed-pdf-viewer/actions/runs/27126180386"
+    },
+    "jobId": 80055244087,
+    "logHTTPStatus": 410,
+    "artifactCount": 0
+  }
+}
