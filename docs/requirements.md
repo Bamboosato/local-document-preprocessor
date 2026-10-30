@@ -2,7 +2,7 @@
 
 更新日: 2026-10-06
 
-> 2026-10-30追記: JSON専用Worker・対象設定・既存キュー/結果/出力への[第一段階の接続検証](json-product-connection-validation.md)を検証ブランチで実施する。anydocにJSONを渡さない。JSONの詳細上限は[専用要件](local-document-preprocessor-json-requirements-v0.2.md)を参照。main取り込み・公開は今回許可されていない。
+> 2026-10-30追記: PR #19でJSON専用Worker・対象設定・既存キュー/結果/出力への第一段階をmainへ取り込んだ。[第二段階の対象UI検証](json-target-ui-validation.md)は別ブランチで実施。anydocにJSONを渡さない。詳細上限は[専用要件](local-document-preprocessor-json-requirements-v0.2.md)を参照。第二段階のmain取り込み・デプロイは行わない。
 
 ## 1. 目的と製品境界
 

@@ -1,6 +1,7 @@
 import {ParseCache} from './core.mjs';
 import {browseJson,convertJson} from './pipeline';
 import type {JsonRequest} from './contracts';
+import {targetPage} from './targetUi';
 const cache=new ParseCache();
 const scope=self as unknown as {onmessage:((event:MessageEvent<JsonRequest>)=>void)|null;postMessage:(value:unknown)=>void};
 scope.onmessage=async({data:request}:{data:JsonRequest})=>{
@@ -9,6 +10,7 @@ scope.onmessage=async({data:request}:{data:JsonRequest})=>{
     let payload;
     if(request.operation==='inspect')payload={selectionKind:'document',supportsSelection:true,sheets:[],json:true};
     else if(request.operation==='browse')payload=browseJson(model,request.settings,request.offset);
+    else if(request.operation==='target'&&request.view)payload=targetPage(model,request.settings,request.view,request.reveal);
     else if(request.operation==='convert')payload=await convertJson(model,request.settings,request.fileName,async code=>{
       const {default:mermaid}=await import('mermaid');
       mermaid.initialize({startOnLoad:false,securityLevel:'strict',htmlLabels:false,suppressErrorRendering:true,maxTextSize:100000});
