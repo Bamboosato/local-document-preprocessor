@@ -1,4 +1,3 @@
-import { useEffect,useRef,useState } from 'react';
 import type {
   ConversionDisposition,
   ConversionResult,
@@ -11,6 +10,7 @@ import {
 } from '../utils/files';
 import { MarkdownPreview } from './MarkdownPreview';
 import {JsonDiagram} from './JsonDiagram';
+import {JsonTablePreview} from './JsonTablePreview';
 
 interface ResultCardProps {
   id: string;
@@ -41,6 +41,7 @@ export function ResultCard({ id, fileName, originalUpdatedAt, result }: ResultCa
   const [notice, setNotice] = useState('');
   const text = activeOutput === 'markdown' ? result.markdown : result.plainText;
   const outputLabel = activeOutput === 'markdown' ? 'Markdown' : 'plain text';
+  const plainPreview=useMemo(()=>result.detectedFormat==='JSON'?boundedTextPreview(result.plainText):{text:result.plainText,excerpt:false},[result]);
 
   const handleCopy = async () => {
     if (!result.quality.safeToExport || liveResult.current!==result) return;
@@ -127,9 +128,9 @@ export function ResultCard({ id, fileName, originalUpdatedAt, result }: ResultCa
 
           <div className="preview-shell" role="tabpanel">
             {activeOutput === 'markdown' ? (
-              result.jsonDiagram?<JsonDiagram code={result.jsonDiagram.code}/>:<MarkdownPreview markdown={result.markdown} />
+              result.jsonDiagram?<JsonDiagram code={result.jsonDiagram.code}/>:result.jsonTable?<JsonTablePreview markdown={result.markdown} rows={result.jsonTable.rows}/>:<MarkdownPreview markdown={result.markdown} />
             ) : (
-              <pre className="plain-preview">{result.plainText}</pre>
+              <>{plainPreview.excerpt&&<p role="status">plain textは先頭10,000文字の抜粋表示です。コピー・ダウンロードは全行です。</p>}<pre className="plain-preview">{plainPreview.text}</pre></>
             )}
           </div>
 
@@ -149,3 +150,5 @@ export function ResultCard({ id, fileName, originalUpdatedAt, result }: ResultCa
     </article>
   );
 }
+import {useEffect,useMemo,useRef,useState} from 'react';
+import {boundedTextPreview} from '../json/outputPreview';

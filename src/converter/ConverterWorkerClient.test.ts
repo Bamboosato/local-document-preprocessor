@@ -1,6 +1,9 @@
 import { describe, expect, it, vi } from 'vitest';
-import { ConverterWorkerClient } from './ConverterWorkerClient';
+import { ConverterWorkerClient as ProductionClient } from './ConverterWorkerClient';
 import type { WorkerRequest, WorkerResponse } from './contracts';
+class ConverterWorkerClient extends ProductionClient {
+  constructor(factory:()=>Worker){super(factory,file=>file.arrayBuffer());}
+}
 
 class FakeWorker {
   onmessage: ((event: MessageEvent<WorkerResponse>) => void) | null = null;
@@ -23,6 +26,19 @@ const fakeFile = {
 } as File;
 
 describe('ConverterWorkerClient', () => {
+  it('SR-30 stale Worker errors do not cancel the new document request or recreate a disposed client',async()=>{
+    const workers:FakeWorker[]=[],client=new ConverterWorkerClient(()=>{const worker=new FakeWorker();workers.push(worker);return worker as unknown as Worker;});
+    const failed=client.inspect(fakeFile).catch(error=>error.code);await vi.waitFor(()=>expect(workers[0].posted).toHaveLength(1));workers[0].onerror?.call(window,new Event('error'));expect(await failed).toBe('unknown');expect(workers).toHaveLength(1);
+    workers[0].onerror?.call(window,new Event('error'));expect(workers).toHaveLength(1);
+    const next=client.inspect(fakeFile);await vi.waitFor(()=>expect(workers[1].posted).toHaveLength(1));workers[0].onerror?.call(window,new Event('error'));
+    workers[1].respond({type:'inspect-success',id:workers[1].posted[0].id,inspection:{selectionKind:'document',supportsSelection:false,sheets:[]}});await next;expect(workers).toHaveLength(2);
+    client.dispose();workers[1].onerror?.call(window,new Event('error'));expect(workers).toHaveLength(2);
+  });
+  it('SR-21 cancellation during native I/O never posts the obsolete document to the replacement Worker',async()=>{
+    const workers:FakeWorker[]=[],client=new ProductionClient(()=>{const worker=new FakeWorker();workers.push(worker);return worker as unknown as Worker;});
+    const pending=client.inspect(new File(['a,b\n1,2'],'synthetic.csv')).catch(error=>error.name);client.cancel();
+    expect(await pending).toBe('AbortError');expect(workers.every(worker=>worker.posted.length===0)).toBe(true);client.dispose();
+  });
   it('構造検査要求と変換範囲をWorkerへ渡す', async () => {
     const worker = new FakeWorker();
     const client = new ConverterWorkerClient(() => worker as unknown as Worker);

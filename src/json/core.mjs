@@ -83,10 +83,23 @@ export function* walk(node, pointer = '', key = 'root', parent = null) {
   for (const child of children(node)) yield* walk(child.node, `${pointer}/${encodeSegment(child.key)}`, child.key, pointer);
 }
 export function compact(model, node) {
-  if (node.type === 'number') return model.source.slice(node.offset, node.offset + node.length);
-  if (node.type === 'object') return '{' + children(node).map(c => literal(c.key) + ':' + compact(model, c.node)).join(',') + '}';
-  if (node.type === 'array') return '[' + children(node).map(c => compact(model, c.node)).join(',') + ']';
-  return literal(node.value);
+  function* chunks(current) {
+    if (current.type === 'number') { if(current.length>limits.markdown)fail('markdown');yield model.source.slice(current.offset,current.offset+current.length); return; }
+    if (['object','array'].includes(current.type)) {
+      const object=current.type==='object';yield object?'{':'[';let first=true;
+      for (const child of children(current)) {
+        if(!first)yield ',';first=false;
+        if(object){if(child.key.length>limits.markdown)fail('markdown');yield literal(child.key)+':';}
+        yield* chunks(child.node);
+      }
+      yield object?'}':']';return;
+    }
+    if(current.type==='string'&&current.value.length>limits.markdown)fail('markdown');
+    yield literal(current.value);
+  }
+  let text='',bytes=0;const encoder=new TextEncoder();
+  for(const chunk of chunks(node)){bytes+=encoder.encode(chunk).length;if(bytes>limits.markdown)fail('markdown');text+=chunk;}
+  return text;
 }
 export function valueText(model, node) {
   if (node.type === 'object') return `${node.children?.length ?? 0}項目`;
@@ -103,7 +116,14 @@ export const markdownText = value => {
   const pad=content.startsWith('`')||content.endsWith('`')||(/^ .* $/u.test(content))?' ':'';
   return fence+pad+content.replace(/\|/g,'\\|')+pad+fence;
 };
-const table = rows => [rows[0].map(markdownText).join(' | '), rows[0].map(() => '---').join(' | '), ...rows.slice(1).map(r => r.map(markdownText).join(' | '))].map(r => '| ' + r + ' |').join('\n');
+const table = rows => {
+  const lines=[];let bytes=0;const encoder=new TextEncoder();
+  const append=line=>{bytes+=encoder.encode(line).length+(lines.length?1:0);if(bytes>limits.markdown)fail('markdown');lines.push(line);};
+  append('| '+rows[0].map(markdownText).join(' | ')+' |');
+  append('| '+rows[0].map(()=>'---').join(' | ')+' |');
+  for(const row of rows.slice(1))append('| '+row.map(markdownText).join(' | ')+' |');
+  return lines.join('\n');
+};
 // Keep ordinary labels (including original numeric tokens) readable in source;
 // grammar punctuation enters only as Mermaid numeric entities inside quotes.
 export const diagramText = value => value.replace(/[^\p{L}\p{N} ,._:+\-/]/gu, ch => `#${ch.codePointAt(0)};`);
@@ -121,12 +141,14 @@ export const diagramLiteral = value => '"'+Array.from(value,ch=>{
 export function generate(model, pointer = '', style = 'items', fileName = 'fixture.json') {
   const selected = resolve(model, pointer);
   if (pointer !== '' && !['object', 'array'].includes(selected.type)) fail('selection');
+  if(pointer.length>limits.markdown||fileName.length>limits.markdown)fail('markdown');
   const header = `元ファイル: ${markdownText(literal(fileName))}\n\n変換対象: ${markdownText(literal(pointer))}${pointer === '' ? ' ファイル全体（ルート）' : ''}\n\n出力スタイル: ${style}\n\n`;
   let body, rows, code, labels, graph;
   if (style === 'items') {
     rows = [['パス', '型', '値']];
     for (const { node, pointer: path } of walk(selected, pointer)) {
       if (rows.length > limits.rows) fail('rows');
+      if(path.length>limits.markdown)fail('markdown');
       rows.push([literal(path), node.type, valueText(model, node)]);
     }
     body = table(rows);
@@ -136,14 +158,19 @@ export function generate(model, pointer = '', style = 'items', fileName = 'fixtu
     if (records.length > limits.rows) fail('rows');
     const keys = [...new Set(records.flatMap(c => children(c.node).map(x => x.key)))];
     if (keys.length > limits.columns) fail('columns');
+    if(keys.some(key=>key.length>limits.markdown))fail('markdown');
     rows = [['配列位置', ...keys.map(literal)], ...records.map((record, i) => {
       const map = new Map(children(record.node).map(c => [c.key, c.node]));
       return [String(i), ...keys.map(key => map.has(key) ? compact(model, map.get(key)) : '（項目なし）')];
     })];
     body = table(rows);
   } else if (style === 'mermaid') {
-    const nodes = [...walk(selected, pointer)];
-    if (nodes.length > limits.diagramNodes) fail('diagramNodes');
+    const nodes=[];
+    for(const entry of walk(selected,pointer)){
+      if(nodes.length===limits.diagramNodes)fail('diagramNodes');
+      nodes.push(entry);
+    }
+    if(nodes.some(entry=>entry.key.length>limits.label*2||(entry.node.type==='string'&&entry.node.value.length>limits.label*2)||(entry.node.type==='number'&&entry.node.length>limits.label)))fail('label');
     labels = nodes.map(({ node, key }) => `${diagramLiteral(key)}｜${node.type}｜${node.type==='string'?diagramLiteral(node.value):valueText(model, node)}`);
     if (labels.some(label => cpLength(label) > limits.label)) fail('label');
     const ids = new Map(nodes.map((n, i) => [n.pointer, `n${i}`]));

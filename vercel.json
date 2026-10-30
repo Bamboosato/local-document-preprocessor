@@ -3,6 +3,7 @@
   "git": {
     "deploymentEnabled": {
       "main": false,
+      "codex/json-state-recovery": false,
       "codex/json-target-ui": false,
       "codex/json-product-connection": false,
       "codex/json-gates-product-readiness": false,

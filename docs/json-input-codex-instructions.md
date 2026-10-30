@@ -1,5 +1,7 @@
 # JSON入力追加 Codex向け作業指示書
 
+> 2026-10-30追加承認: PR #20をマージしmainを同期した。[CUR-02計画](json-state-recovery-plan.md)・[追加検証](json-state-recovery-validation.md)と、専用要件/画面設計の特大プレビュー追補を参照。新PRマージ・デプロイは行わず、macOS/iOS対象外、実機はユーザー別途を継続する。
+
 > 2026-10-30追加承認: PR #19をマージしmainを同期した。次段階は[対象UIの計画](json-target-ui-plan.md)と[結果](json-target-ui-validation.md)を参照。新PRのマージ・デプロイは行わず、macOS/iOS対象外、実機はユーザー別途を継続する。
 
 > 2026-10-30残件整理: [現行残件台帳](json-current-backlog.md)を作業予定の正とする。旧方式固有の改善/強制中断/ズーム/旧CSP・旧独立PWA整備は「方式変更により対象外」としてクローズ。以下の旧指示や旧報告の残件欄をそのまま再開しない。過去証跡は履歴として保持し、現行本体に必要なCUR-01～05だけを進める。

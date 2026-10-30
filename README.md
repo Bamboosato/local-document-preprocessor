@@ -12,7 +12,7 @@
 
 ## 対応形式
 
-Word、PowerPoint、Excel、OpenDocument、RTF、EPUB、CSV、機械可読テキストを含む PDF。PR #19でJSON専用Worker・3スタイル・標準Mermaid表示の第一段階をmainへ取り込みました。検証ブランチでは[対象ツリーと詳細UIの第二段階](docs/json-target-ui-validation.md)を進めています。[要件定義](docs/requirements.md)と[現行残件](docs/json-current-backlog.md)を参照してください。第二段階のmain取り込み・デプロイは行いません。
+Word、PowerPoint、Excel、OpenDocument、RTF、EPUB、CSV、機械可読テキストを含む PDF。PR #19・#20でJSON専用Worker・3スタイル・標準Mermaid表示・対象ツリー/詳細をmainへ取り込みました。検証ブランチでは[状態・保持量・故障回復の追加検証](docs/json-state-recovery-validation.md)を進めています。[要件定義](docs/requirements.md)と[現行残件](docs/json-current-backlog.md)を参照してください。今回の変更のmain取り込み・デプロイは行いません。
 
 入力受付形式と実ファイル検証済み範囲は異なります。未検証形式は [検証記録](docs/validation-report.md) を参照してください。
 

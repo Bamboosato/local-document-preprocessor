@@ -1,5 +1,5 @@
 import {children, encodeSegment, generate, literal, resolve, type JsonModel, type JsonNode} from './core.mjs';
-import type {JsonSettings, JsonView, JsonTargetPage, JsonTreeRow, JsonStyle} from './contracts';
+import type {JsonSettings, JsonView, JsonTargetPage, JsonTreeRow, JsonStyle,JsonSuitability} from './contracts';
 
 export {initialJsonView} from './contracts';
 const container = (node:JsonNode) => node.type === 'object' || node.type === 'array';
@@ -44,6 +44,20 @@ const reasons:Record<string,string> = {
   diagramNodes:'構造図のノード数上限（200）を超えています。', label:'構造図のラベル上限（200文字）を超えています。',
   code:'構造図のソース長上限を超えています。', markdown:'Markdown の出力容量上限を超えています。',
 };
+// Keep only a small assessment per selected node; never cache generated output.
+// Weak keys allow the entire evicted parse set to be collected.
+let assessment:{node:WeakRef<JsonNode>;styles:JsonSuitability[]}|undefined;
+export function suitability(model:JsonModel,pointer:string):JsonSuitability[]{
+  const node=resolve(model,pointer);if(assessment?.node.deref()===node)return assessment.styles;
+  const styles=(['items','records','mermaid'] as JsonStyle[]).map(style=>{
+    try{
+      const output=generate(model,pointer,style,'fixture.json');
+      const count=style==='mermaid'?`${output.labels?.length??0} ノード`:style==='records'?`${Math.max(0,(output.rows?.length??1)-1)} データ行 / ${output.rows?.[0]?.length??0} 列`:`${Math.max(0,(output.rows?.length??1)-1)} 行`;
+      return {style,valid:true,reason:'この対象で生成できます。',count};
+    }catch(error){return {style,valid:false,reason:reasons[(error as {code?:string}).code??'']??'この対象・出力方式は生成条件を満たしません。',count:'生成不可'};}
+  });
+  assessment={node:new WeakRef(node),styles};return styles;
+}
 
 export function targetPage(model:JsonModel, settings:JsonSettings, requested:JsonView, reveal=false):JsonTargetPage {
   const selected=resolve(model,settings.pointer);
@@ -84,15 +98,7 @@ export function targetPage(model:JsonModel, settings:JsonSettings, requested:Jso
   const selectedChildren=children(selected);
   view.detailPage=pageNumber(view.detailPage,selectedChildren.length,10);
   const detail=view.detailOpen ? boundedDetail(model,selected) : {text:'',truncated:false};
-  const styles=(['items','records','mermaid'] as JsonStyle[]).map(style=>{
-    try {
-      const output=generate(model,settings.pointer,style,'fixture.json');
-      const count=style==='mermaid' ? `${output.labels?.length??0} ノード` : style==='records' ? `${Math.max(0,(output.rows?.length??1)-1)} データ行 / ${output.rows?.[0]?.length??0} 列` : `${Math.max(0,(output.rows?.length??1)-1)} 行`;
-      return {style,valid:true,reason:'この対象で生成できます。',count};
-    } catch(error) {
-      return {style,valid:false,reason:reasons[(error as {code?:string}).code??'']??'この対象・出力方式は生成条件を満たしません。',count:'生成不可'};
-    }
-  });
+  const styles=suitability(model,settings.pointer);
   return {view,rows:window,total,selectedIndex,pointer:settings.pointer,type:selected.type,childCount:selectedChildren.length,
     children:selectedChildren.slice(view.detailPage*10,view.detailPage*10+10).map(child=>({pointer:childPointer(settings.pointer,child.key),name:literal(child.key),type:child.node.type,container:container(child.node),preview:''})),
     detail:detail.text,truncated:detail.truncated,styles};

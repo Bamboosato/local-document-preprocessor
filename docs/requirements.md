@@ -2,7 +2,7 @@
 
 更新日: 2026-10-06
 
-> 2026-10-30追記: PR #19でJSON専用Worker・対象設定・既存キュー/結果/出力への第一段階をmainへ取り込んだ。[第二段階の対象UI検証](json-target-ui-validation.md)は別ブランチで実施。anydocにJSONを渡さない。詳細上限は[専用要件](local-document-preprocessor-json-requirements-v0.2.md)を参照。第二段階のmain取り込み・デプロイは行わない。
+> 2026-10-30追記: PR #19・#20でJSON専用Worker・対象ツリー/詳細・既存キュー/結果/出力をmainへ取り込んだ。[状態・保持量・故障回復の追加検証](json-state-recovery-validation.md)は別ブランチで実施。anydocにJSONを渡さない。特大プレビューの抜粋表示と全量出力の区別は[専用要件](local-document-preprocessor-json-requirements-v0.2.md)のCUR-02追補を参照。今回の変更のmain取り込み・デプロイは行わない。
 
 ## 1. 目的と製品境界
 

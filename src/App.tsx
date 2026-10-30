@@ -189,7 +189,8 @@ export default function App() {
               currentItem.id === item.id
                 ? {
                     ...currentItem,
-                    status: 'queued',
+                    status: inspection.json&&inspection.jsonInitialValid===false?'failed':'queued',
+                    errorCode:inspection.json&&inspection.jsonInitialValid===false?'resourceLimit':undefined,
                     inspection,
                     selection: { mode: 'all' },
                     options: defaultOptions(inspection),
@@ -432,7 +433,7 @@ export default function App() {
                       <span>{formatBytes(item.size)}</span>
                       {item.errorCode && (
                         <p className="inline-error" role="alert">
-                          {conversionErrorMessage(item.errorCode)}
+                          {item.inspection?.json&&['initializationFailed','conversionFailed'].includes(item.errorCode)?'JSONの生成・構文検証を完了できませんでした。「変更」で設定を再確認して確定し、変換を開始してください。':conversionErrorMessage(item.errorCode)}
                         </p>
                       )}
                       {item.inspection && item.selection && (
