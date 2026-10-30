@@ -73,7 +73,9 @@ test('実 WASM で日本語と半角カタカナを端末内変換する', async
     buffer: Buffer.from(`項目,値\n所属,${expected}\n氏名,山田太郎`, 'utf-8'),
   });
 
-  await expect(page.getByText('regression.csv')).toBeVisible();
+  // Inspection can open the scope dialog before this assertion runs. Verify
+  // queue admission without matching the same filename in that dialog.
+  await expect(page.getByLabel('処理キュー').getByText('regression.csv', { exact: true })).toBeVisible();
   await confirmDefaultScope(page);
   expect(pageErrors).toEqual([]);
   expect(consoleErrors).toEqual([]);
