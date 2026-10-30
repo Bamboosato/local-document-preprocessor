@@ -39,6 +39,12 @@
 
 TU-00〜06: `src/json/targetUi.test.ts`、TU-07〜10・13: `tests/e2e/json-target-ui.spec.ts`、TU-11〜12: `src/json/JsonWorkerClient.test.ts`。従来のJSON出力6ケースは `tests/e2e/json.spec.ts` をラジオUIへ合わせて維持した。
 
+## CI とレビュー
+
+PR #19 マージ後 main の [CI #40](https://github.com/Bamboosato/local-document-preprocessor/actions/runs/41006065792) は成功。第二段階の実装 head `cfe73833eea12c1a97004c85ae5fc3e8f5834260` の [CI #41](https://github.com/Bamboosato/local-document-preprocessor/actions/runs/41007722304) も Verify / JSON prototype checks とも成功した。Linux のクリーンインストール、型/ビルド/配布物、Chromium全25件、旧試作の共通core・標準描画・製品CSP共存を確認している。
+
+レビュー用 [PR #20](https://github.com/Bamboosato/local-document-preprocessor/pull/20) を作成した。CI #41 後の追記は本節と TU-10 の終端照合強化（同名ラジオの last ではなく `/7/44` を直接照合、ローカル対象1件成功）。最終 head の CI 状態は [PR checks](https://github.com/Bamboosato/local-document-preprocessor/pull/20/checks) を正とする。新PRはマージせず、デプロイしていない。
+
 ## 失敗分析
 
 - 環境問題: サンドボックス内の別実行で Vitest 一時ファイルの rename が EPERM。テスト本体へ到達していない。通常環境での成功と分けて記録した。

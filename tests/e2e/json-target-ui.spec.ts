@@ -53,8 +53,10 @@ test('TU-10 virtual windows never mount more than 300 rows and restore an offscr
   for(let i=7;i>=0;i--) {await page.getByRole('button',{name:`"${i}"を開く`,exact:true}).click();await ready(page);}
   await expect(page.locator('.json-tree-row')).toHaveCount(300);
   await page.locator('.json-virtual-tree').evaluate(el=>{el.scrollTop=el.scrollHeight;});await ready(page);
-  const last=page.getByRole('radio',{name:'"44"',exact:true}).last();await last.check();await ready(page);
+  // Wait for the actual last parent/child, not a same-named radio in an old window.
+  const last=page.locator('input[name=json-target][value="/7/44"]');await last.check();await ready(page);
   const pointer=await page.locator('.json-full-pointer').textContent();
+  expect(pointer).toBe('"/7/44"');
   await page.locator('.json-virtual-tree').evaluate(el=>{el.scrollTop=0;});await ready(page);await expect(page.locator('.json-tree-row')).toHaveCount(300);
   await expect(page.locator('.json-full-pointer')).toHaveText(pointer!);
   await root(page).focus();await page.keyboard.press('Tab');await expect(page.locator('.json-full-pointer')).toHaveText(pointer!);
