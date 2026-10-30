@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { ResultCard } from './components/ResultCard';
+import {PwaStatus,usePwaState} from './components/PwaStatus';
 import { SelectionDialog } from './components/SelectionDialog';
 import {JsonSelectionDialog} from './components/JsonSelectionDialog';
 import {JsonWorkerClient} from './json/JsonWorkerClient';
@@ -84,6 +85,7 @@ function defaultOptions(inspection: DocumentInspection): ConversionOptions {
 }
 
 export default function App() {
+  const pwa=usePwaState();
   const [items, setItems] = useState<QueueItem[]>([]);
   const [isConverting, setIsConverting] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
@@ -240,7 +242,7 @@ export default function App() {
         Boolean(item.selection) &&
         Boolean(item.options),
     );
-    if (runnable.length === 0 || isConverting || convertingRef.current || isInspecting || dialogItemId) {
+    if (runnable.length === 0 || isConverting || convertingRef.current || isInspecting || dialogItemId || !pwa.canConvert) {
       return;
     }
 
@@ -415,6 +417,7 @@ export default function App() {
             </li>
           </ul>
           <p className="selection-notice" role="alert">{selectionNotice}</p>
+          <PwaStatus busy={isInspecting||isConverting||Boolean(dialogItemId)}/>
 
           {items.length > 0 && (
             <div className="queue-panel" aria-labelledby="queue-title">
@@ -511,7 +514,7 @@ export default function App() {
                 <button
                   type="button"
                   className="primary-button"
-                  disabled={queuedCount === 0 || isConverting || isInspecting || Boolean(dialogItemId)}
+                  disabled={queuedCount === 0 || isConverting || isInspecting || Boolean(dialogItemId)||!pwa.canConvert}
                   onClick={startConversion}
                 >
                   {isConverting ? '逐次変換中…' : `${queuedCount} ファイルを変換`}

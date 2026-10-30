@@ -12,7 +12,7 @@
 
 ## 対応形式
 
-Word、PowerPoint、Excel、OpenDocument、RTF、EPUB、CSV、機械可読テキストを含む PDF。PR #19・#20でJSON専用Worker・3スタイル・標準Mermaid表示・対象ツリー/詳細をmainへ取り込みました。検証ブランチでは[状態・保持量・故障回復の追加検証](docs/json-state-recovery-validation.md)を進めています。[要件定義](docs/requirements.md)と[現行残件](docs/json-current-backlog.md)を参照してください。今回の変更のmain取り込み・デプロイは行いません。
+Word、PowerPoint、Excel、OpenDocument、RTF、EPUB、CSV、機械可読テキストを含む PDF。PR #19〜#21でJSON接続・対象ツリー・表示制御・状態回復をmainへ取り込みました。検証ブランチでは[本体PWAの世代管理・更新回復](docs/pwa-generation-validation.md)を進めています。[要件定義](docs/requirements.md)と[現行残件](docs/json-current-backlog.md)を参照してください。今回の変更のmain取り込み・デプロイは行いません。
 
 入力受付形式と実ファイル検証済み範囲は異なります。未検証形式は [検証記録](docs/validation-report.md) を参照してください。
 
@@ -22,7 +22,7 @@ Word、PowerPoint、Excel、OpenDocument、RTF、EPUB、CSV、機械可読テキ
 | `.pptx`, `.pptm`, `.ppsx`, `.ppsm` | 連続スライド範囲 | 既定オン、選択 N スライドの間に N-1 件の独立行 `---` |
 | `.xlsx`, `.xlsm` | 1 件以上のシート（非表示状態も表示） | ページ区切り設定なし |
 | `.docx` | 文書全体 | 本文の明示 `w:br type="page"` を検出した場合だけ設定を表示し、既定オン |
-| `.json`（接続検証中） | ファイル全体または単一object/array。階層ごと最大300行のページ閲覧 | ページ区切りなし。項目表/一覧表/Mermaid。UI全受入・PWA/実機は残件 |
+| `.json`（接続検証中） | 全体または単一object/array。兄弟50件ページと最大300行の仮想ツリー | 項目表/一覧表/Mermaid。大きなプレビューは抜粋、コピー/DLは全量。実機・配布条件は残件 |
 | その他の受付形式 | 文書全体 | ページ境界を推測しない |
 
 DOCX の自動改ページ、`w:pageBreakBefore`、セクション区切りは推測しません。plain text にはページ区切りの `---` を残しません。範囲・区切り設定はファイルごとに保持し、変更すると旧結果を破棄します。
@@ -49,9 +49,9 @@ PDF の `partial` には、改善確認済み PDFium フォールバック、Typ
 
 ## PWA と静的配布
 
-production build はホーム画面追加用 manifest とアイコンを含み、ロード後に `/sw.js` を登録します。Service Worker は同一オリジンのクエリなし GET に限り、アプリ HTML、manifest、アイコン、`/assets/` 直下の JS/CSS/Worker/WASM 等を Cache API の `ldp-static-v1` に保存します。文書や変換結果は保存せず、localStorage、sessionStorage、IndexedDB も使用しません。
+production build は全静的配布物のサイズ/SHA-256と世代IDを生成し、ロード後に `/sw.js` を登録します。HTML、JS/CSS/Worker/両WASM/図の遅延資産、manifest、アイコン、ライセンス原文等を約24MB事前取得し、検証後だけ同じ世代のキャッシュを準備済みにします。JSONだけの利用でもPWA準備の取得は行います。文書・結果・設定は保存しません。
 
-HTML / manifest はネットワーク優先、その他の対象資産はキャッシュ優先です。WASM は必要時に取得するため、初回起動だけでオフライン変換を保証しません。未取得資産が必要な場合やキャッシュが消去された場合は通信が必要です。インストールや Safari 実機でのオフライン動作は未検証です。
+更新は旧タブ/PWAの終了まで待機し、結果を自動で消す再読込・強制切替はしません。初回の未制御ページはオンライン利用を続けられますが、このタブでオフライン利用するには案内に従って入力・結果を保存後に再読込します。保存拒否/容量不足/資産欠落では再取得を案内し、HTML欠落時にも更新を確認できる復旧画面を返します。二世代分の容量が必要です。実インストール・復帰・実容量はユーザー別途、macOS/iOSは対象外です。[設計](docs/adr/0005-pwa-generation-cache.md)を参照してください。
 
 `dist/` を HTTPS（開発時は localhost）のオリジン直下で配信してください。現行の Service Worker、manifest、アイコン URL は `/` 固定のため、Vite `base` の変更だけでサブパス配信には対応できません。詳しくは [アーキテクチャ](docs/architecture.md#静的配布) を参照してください。
 
@@ -74,7 +74,7 @@ npx playwright install chromium
 npm run test:e2e -- --grep 'PWA|\[page-break\]'
 ```
 
-`check` は Unit / Component、production build（ライセンス同梱）、`check:dist` を順に実行します。E2E の実施範囲は変更リスクで選びます。上の例は PWA とページ区切りの対象ケースのみで、全件が必要な場合は `npm run test:e2e` を使用します。同一実機では `workers: 1` で直列実行します。
+`check` は単体/Component、SWの故障境界テスト、production build（ライセンス/世代manifest同梱）、`check:dist` を順に実行します。単体ファイルとE2Eは1 workerで直列実行します。PWA対象は `npm run test:e2e -- tests/e2e/pwa.spec.ts tests/e2e/pwa-generation.spec.js`、全回帰は `npm run test:e2e` です。
 
 Playwright は production preview を起動しますが、既存サーバーを再利用する設定です。最新成果物を確認するときは別ポートを `$env:PLAYWRIGHT_PORT = '4187'` のように指定するか既存サーバーを停止してください。Edge、macOS Safari、iPhone Safari は未検証の実機ゲートです。
 

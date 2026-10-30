@@ -6,10 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "postbuild": "node scripts/copy-third-party-licenses.mjs",
+    "postbuild": "node scripts/copy-third-party-licenses.mjs && node scripts/build-pwa-manifest.mjs",
     "preview": "vite preview",
     "test": "npm run test:unit",
     "test:unit": "vitest run",
+    "test:pwa": "node --test scripts/pwa.test.mjs",
     "test:unit:watch": "vitest",
     "test:e2e": "playwright test",
     "test:security": "node --test scripts/security-audit-policy.test.mjs scripts/ci-e2e-scope.test.mjs",
@@ -17,7 +18,7 @@
     "fixtures:pdf": "node scripts/generate-pdf-fixtures.mjs",
     "check:dist": "node scripts/check-dist.mjs",
     "check:docs": "node scripts/check-docs.mjs",
-    "check": "npm run test:unit && npm run build && npm run check:dist"
+    "check": "npm run test:unit && npm run test:pwa && npm run build && npm run check:dist"
   },
   "dependencies": {
     "@embedpdf/pdfium": "2.14.4",

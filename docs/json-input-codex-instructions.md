@@ -1,5 +1,7 @@
 # JSON入力追加 Codex向け作業指示書
 
+> 2026-10-30最新承認: PR #21をマージしmainを同期した。CUR-03は[本体PWAの世代固定・回復](pwa-generation-validation.md)と[ADR-0005](adr/0005-pwa-generation-cache.md)をレビュー用ブランチで実装・検証する。新PRマージ・デプロイは行わず、macOS/iOS対象外、実機ユーザー別途を継続する。旧記載より本追記と現行残件台帳を優先する。
+
 > 2026-10-30追加承認: PR #20をマージしmainを同期した。[CUR-02計画](json-state-recovery-plan.md)・[追加検証](json-state-recovery-validation.md)と、専用要件/画面設計の特大プレビュー追補を参照。新PRマージ・デプロイは行わず、macOS/iOS対象外、実機はユーザー別途を継続する。
 
 > 2026-10-30追加承認: PR #19をマージしmainを同期した。次段階は[対象UIの計画](json-target-ui-plan.md)と[結果](json-target-ui-validation.md)を参照。新PRのマージ・デプロイは行わず、macOS/iOS対象外、実機はユーザー別途を継続する。

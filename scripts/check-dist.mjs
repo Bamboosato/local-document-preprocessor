@@ -23,6 +23,22 @@ assert.ok(anydocWasmName, 'The production build must contain the anydoc WASM ass
 assert.ok(pdfiumWasmName, 'The production build must contain the PDFium WASM asset.');
 const manifest = JSON.parse(await readFile(new URL('manifest.webmanifest', distributionRoot), 'utf8'));
 const serviceWorker = await readFile(new URL('sw.js', distributionRoot), 'utf8');
+const pwa=JSON.parse(await readFile(new URL('pwa-manifest.json',distributionRoot),'utf8'));
+assert.match(pwa.id,/^[a-f0-9]{24}$/);
+assert.ok(serviceWorker.startsWith('self.__LDP_BUILD__='));
+const embedded=JSON.parse(serviceWorker.slice('self.__LDP_BUILD__='.length,serviceWorker.indexOf(';\n')));
+assert.equal(embedded.id,pwa.id,'PWA worker/page generation mismatch');
+assert.ok((await readFile(new URL('index.html',distributionRoot),'utf8')).includes(`<meta name="ldp-generation" content="${pwa.id}">`),'PWA HTML generation missing');
+assert.deepEqual(embedded.assets.filter(asset=>asset.url!=='/pwa-manifest.json'),pwa.assets,'PWA embedded manifest mismatch');
+const manifestBytes=await readFile(new URL('pwa-manifest.json',distributionRoot));
+assert.equal(embedded.assets.find(asset=>asset.url==='/pwa-manifest.json')?.sha256,createHash('sha256').update(manifestBytes).digest('hex'));
+assert.ok(!/\.(skipWaiting|claim)\(/.test(serviceWorker),'PWA update must not force takeover');
+for(const entry of pwa.assets){
+  const bytes=await readFile(new URL(entry.url.slice(1),distributionRoot));
+  assert.equal(bytes.length,entry.bytes,'PWA size mismatch');
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),entry.sha256,'PWA digest mismatch');
+}
+assert.ok(pwa.assets.some(entry=>entry.url.includes('json.worker-'))&&pwa.assets.some(entry=>entry.url.endsWith('.wasm'))&&pwa.assets.some(entry=>entry.url==='/licenses/inventory.json'));
 await Promise.all(
   ['ldp_icon-192.png', 'ldp_icon-512.png'].map((name) => readFile(new URL(name, distributionRoot))),
 );

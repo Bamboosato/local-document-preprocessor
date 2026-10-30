@@ -21,6 +21,9 @@ export default defineConfig({
     target: 'es2022',
   },
   test: {
+    // Avoid desktop fork fanout; physical/browser scripts also run serially.
+    maxWorkers: 1,
+    fileParallelism: false,
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.ts'],
     css: true,

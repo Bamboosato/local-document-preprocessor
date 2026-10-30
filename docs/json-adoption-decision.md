@@ -1,5 +1,7 @@
 # JSON図表示の採用決定と今回の対象範囲
 
+> 2026-10-30最新承認: PR #21をマージしmainを同期した。標準Mermaidの採用基準は維持し、次段階の[本体PWA世代固定・回復](pwa-generation-validation.md)をレビュー用ブランチで進める。次の作業は[現行残件台帳](json-current-backlog.md)を正とする。新PRマージ・デプロイは行わず、macOS/iOS対象外、実機ユーザー別途を継続する。
+
 > 2026-10-30追加承認: PR #20をマージしmainを同期した。次は[CUR-02の状態・保持量・故障回復](json-state-recovery-validation.md)をレビュー用ブランチで検証する。JSON表/平文の特大プレビューは抜粋と全量出力を区別する設計追補を加える。Mermaidの採用基準は維持。新PRマージ・デプロイ・macOS/iOS・実機操作は行わない。
 
 > 2026-10-30追加承認: PR #19のマージで第一段階の本体接続をmainへ取り込んだ。[第二段階の対象UI検証](json-target-ui-validation.md)は別ブランチで進め、新PRマージ・デプロイ・macOS/iOS・実機操作は行わない。

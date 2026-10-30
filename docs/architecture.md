@@ -99,7 +99,7 @@ stateDiagram-v2
 - CSP は `connect-src 'self'` とし、WASM を含む同一オリジンへの通信を許可し、外部オリジンへの通信を拒否する。
 - プレビューの画像は代替テキスト、リンクは通常テキストとして描画する。
 - raw HTML をスキップし、スクリプト・iframe・object を生成しない。
-- production に限り `/sw.js` を登録し、静的資産のキャッシュを許可する。解析 SDK は使用しない。SW 登録失敗は UI を停止せず、オンラインの変換経路を使用する。
+- production に限り `/sw.js` を登録し、静的資産だけを保存する。初回未制御で登録が失敗してもオンライン利用は可能。制御中の世代が不明/不一致なら新しい変換を止め、既存結果を維持する。解析SDKは使用しない。
 - ソース、出力、ファイル名を console・telemetry・エラー詳細へ送らない。
 - Blob URL はダウンロード操作の同期範囲だけで使用して revoke する。
 - Markdown パーサーの named-character decoder は Worker 対応 export に固定し、成果物に `document.createElement` が混入していないことを検査する。
@@ -108,6 +108,6 @@ stateDiagram-v2
 
 `npm run build` の `dist/` を HTTPS（localhost は開発例外）のオリジン直下で静的配信する。WASM、Worker、JavaScript のハッシュ付き成果物を `dist/assets/`、第三者ライセンスを `dist/licenses/` に含める。`check:dist` は両 WASM、Worker、ライセンス、manifest、アイコンと SW の静的 URL 制限を検査する。
 
-`src/main.tsx` は production の load 後に `/sw.js` を登録する。SW のキャッシュ対象は同一オリジン・クエリなし GET の `/`、`/index.html`、`/manifest.webmanifest`、`/assets/` 直下、アイコン URL に限定する。install 時は HTML / manifest / アイコンを保存し、JS / CSS / Worker / WASM は取得時に保存する。HTML / manifest はネットワーク優先、その他はキャッシュ優先。activate 時は旧 `ldp-static-*` キャッシュを削除する。
+`src/main.tsx` は production の load 後に `/sw.js` を登録する。[ADR-0005](adr/0005-pwa-generation-cache.md)に従い、ライセンス収集後の静的配布物をサイズ/SHA-256付きで列挙し、HTMLとSWに同じ世代IDを持たせる。全資産の保存成功後だけ完了標識を置く。現世代キャッシュを使い、欠落は同じhashのネットワーク応答だけで補修する。本文・File ID等は保存しない。許可外/クエリ/POST/外部を保存せず、ルートnavigationのクエリは固定indexに写像する。
 
-未取得 WASM、キャッシュ消去、更新時の旧資産との組み合わせにより、オフライン変換を常時保証しない。現行 SW 登録、manifest の `id` / `start_url` / `scope`、アイコンはルート固定のため、サブパス配信には Vite `base` 以外の修正と検証も必要である。インストール・更新・オフライン・Safari 実機は未検証ゲートとする。
+skipWaiting/clients.claimは使用しない。旧制御タブの終了まで待機し、初回の未制御ページと準備完了をUIで区別する。異なる世代/未知の旧SWでは新しい変換を止め、結果は保持する。HTML欠落はnonce付き固定スクリプトの復旧503ページで更新の準備を要求できるが、ここからも強制移行しない。旧キャッシュ整理は後続のinstalling/waitingを検出すると中止する。ルート配信固定、実インストール/PWA復帰・実容量は別途、macOS/iOSは対象外。常時のCache保持を保証しない。
