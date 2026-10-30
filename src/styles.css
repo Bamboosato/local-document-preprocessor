@@ -1047,3 +1047,4 @@ h1 {
     transition-duration: 0.01ms !important;
   }
 }
+.json-settings{width:min(900px,92vw);max-height:90vh;overflow:auto;border:1px solid #888;border-radius:12px;padding:20px}.json-settings::backdrop{background:#0006}.json-settings button,.json-diagram button{min-height:44px;margin:4px}.json-node-page{max-height:45vh;overflow:auto;padding:0;list-style:none}.json-node-page li{display:flex;flex-wrap:wrap;gap:8px;align-items:center;border-bottom:1px solid #ddd;overflow-wrap:anywhere}.json-node-page li span{flex:1;min-width:120px}.json-source{white-space:pre;overflow:auto;max-height:60vh}.json-svg{overflow:auto;max-height:65vh}.json-svg svg{max-width:none!important}.render-staging{position:fixed;left:-100000px;top:0;visibility:hidden}

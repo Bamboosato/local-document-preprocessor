@@ -1,5 +1,7 @@
 # 標準Mermaid表示の採用方針・設計
 
+> 本書はPR #18の独立試作段階の設計記録。2026-10-30の追加承認で[本体接続の第一段階](json-product-connection-validation.md)へ進める。製品CSPは元からstyle-src unsafe-inlineを含むため、接続ブランチではCSPをさらに緩めずに表示を確認する。公開/PWA/実機の完了にはしない。
+
 2026-10-30のユーザー承認を反映する。基準はローカルknowledge-board `2df91ca`のMermaidBlock.tsx / mermaidRenderer.ts / sanitizeSvg.ts。参照のみで別プロジェクトは変更しない。こちらの固定Mermaid 12.2.0を維持し、knowledge-boardの11系へダウングレードしない。
 
 ## 新しい採用基準

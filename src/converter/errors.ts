@@ -4,6 +4,7 @@ import type {
 } from './contracts';
 
 const KNOWN_CODES = new Set<ConversionErrorCode>([
+  'jsonInvalid',
   'unsupported',
   'malformed',
   'encrypted',
@@ -28,6 +29,8 @@ export function serializeConversionError(error: unknown): SerializedConversionEr
 
 export function conversionErrorMessage(code: ConversionErrorCode): string {
   switch (code) {
+    case 'jsonInvalid':
+      return 'JSONを検査できませんでした。UTF-8、構文、重複キー、文字列のUnicodeを確認してください。';
     case 'encrypted':
       return 'パスワード付き・暗号化文書は変換できません。パスワードを解除した複製を選択してください。';
     case 'unsupported':

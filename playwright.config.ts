@@ -22,7 +22,7 @@ export default defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { browserName: 'chromium' },
+      use: { browserName: 'chromium',channel:process.env.PLAYWRIGHT_CHANNEL },
     },
   ],
 });

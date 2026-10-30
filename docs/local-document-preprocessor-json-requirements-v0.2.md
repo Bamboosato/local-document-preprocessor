@@ -1,5 +1,7 @@
 # local-document-preprocessor JSON入力追加 要件定義書
 
+> 2026-10-30追加承認: 検証ブランチで[本体接続の第一段階](json-product-connection-validation.md)を実施する。本書の「本体統合保留」は接続変更のmain取り込み/公開保留へ読み替える。階層ページUIは先行実装で、展開型仮想ツリー等の全要件達成とは扱わない。実機・macOS/iOS・新PRマージ/デプロイは今回対象外。
+
 > **採用変更（2026-10-30）**: [最新方針](json-standard-mermaid-design.md)を優先する。knowledge-board同等の標準Mermaid表示を採用し、独自SVG・図の5秒強制中断・図内ズームの必須条件を解除する。JSON生成の精度/上限・本文構文検証・非送信/非永続化は維持。表示50 KiBと生成上限を分離する。本体統合保留、macOS/iOS対象外、実機はユーザー別途。旧試作の証拠を新方式のPWA/CSP/配布証明に転用しない。
 
 版: v0.2（追補1）\

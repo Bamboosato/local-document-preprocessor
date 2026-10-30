@@ -1,10 +1,12 @@
 import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
 import { readFile, readdir } from 'node:fs/promises';
 
 const assetDirectory = new URL('../dist/assets/', import.meta.url);
 const licenseDirectory = new URL('../dist/licenses/', import.meta.url);
 const distributionRoot = new URL('../dist/', import.meta.url);
 const assets = await readdir(assetDirectory);
+assert.ok(assets.some(name=>name.startsWith('json.worker-')&&name.endsWith('.js')),'JSON worker asset missing');
 const licenses = await readdir(licenseDirectory);
 const workerName = assets.find(
   (name) => name.startsWith('converter.worker-') && name.endsWith('.js'),
@@ -50,11 +52,24 @@ assert.deepEqual(
     'embedpdf-pdfium-MIT.txt',
     'fflate-MIT.txt',
     'pdf-lib-MIT.txt',
-  ],
+    'dependencies',
+    'inventory.json',
+  ].sort(),
   'The production build must retain all third-party license files.',
 );
 
 const worker = await readFile(new URL(workerName, assetDirectory), 'utf8');
+const inventory=JSON.parse(await readFile(new URL('inventory.json',licenseDirectory),'utf8'));
+const lock=JSON.parse(await readFile(new URL('../package-lock.json',import.meta.url),'utf8'));
+assert.ok(inventory.scope.includes('not linked WASM SBOM'));
+for(const name of ['mermaid','jsonc-parser'])assert.ok(inventory.packages.some(pkg=>pkg.name===name));
+for(const pkg of inventory.packages){
+  assert.equal(pkg.version,lock.packages[pkg.lockPath]?.version);assert.equal(pkg.integrity,lock.packages[pkg.lockPath]?.integrity);
+  for(const original of pkg.originals){
+  assert.ok(original.path.startsWith('dependencies/')&&!original.path.includes('..'));
+  assert.equal(createHash('sha256').update(await readFile(new URL(original.path,licenseDirectory))).digest('hex'),original.sha256);
+}
+}
 assert.ok(
   !worker.includes('document.createElement'),
   'The converter worker must not bundle DOM-only dependencies.',
