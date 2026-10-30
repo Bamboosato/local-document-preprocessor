@@ -47,7 +47,11 @@ Reactスキルの観点で、重い描画libraryの遅延取得、effect解除�
 
 root依存へ試作と同じjsonc-parser 3.3.1/Mermaid 12.2.0を固定追加。新規production依存の@antfu/install-pkgがtinyexec ^1.3.1を要求するため、既存tinyexecも1.3.0→1.3.1へ解決された。他の既存package版は変更していない。原文同梱と出典整合は、EPL/各WASM内包物の配布条件全体の承認ではない。
 
-## 次の段階・未受入項目
+## CI結果
+
+[CI #37](https://github.com/Bamboosato/local-document-preprocessor/actions/runs/41003609995)はhead `80374a44393be20e69eebdbae202a1d0080a9bb5`でVerify / JSON prototype checksともsuccess。Linuxでroot/prototypeのクリーンnpm ci、root単体71・製品E2E20・方針12、型/build/原文inventory、旧試作の単体/配布物/表示/更新/共存とSM8件、文書/依存監査が成功した。Windowsでの成功だけをLinuxへ流用せず、CI実行を確認した。実機/PWA二世代更新/全要件達成の証明ではない。
+
+## 次段階の詳細
 
 1. 展開型の仮想ツリー/表示位置復元/詳細抜粋/適合表示など、画面設計全体の完成。現状は階層ごとのページ閲覧で、長い同接頭辞キーの照合UIも含め全J-SC/UI受入とはしない。
 2. 最大入力・完了結果・図・両WASMを含む保持量、OS負荷、ファイル切替の長時間反復、全UI-26故障注入。第一段階の混在/取消成功でG-02や全接続設計を通過扱いにしない。
