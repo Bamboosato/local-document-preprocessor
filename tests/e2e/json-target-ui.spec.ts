@@ -18,6 +18,11 @@ test('TU-07 paging, details, reveal and cancel preserve selection/style independ
   await page.getByRole('button',{name:'JSON詳細を開く',exact:true}).click();await ready(page);await expect(page.locator('.json-detail-source')).toContainText('50');
   await page.keyboard.press('Escape');await expect(page.getByRole('dialog')).toHaveCount(0);
   await page.getByRole('button',{name:'変更',exact:true}).click();await ready(page);await expect(root(page)).toBeChecked();
+  for(const direction of ['Tab','Shift+Tab'])for(let i=0;i<15;i++){
+    await page.keyboard.press(direction);
+    expect(await page.getByRole('dialog').evaluate(el=>el.contains(document.activeElement))).toBe(true);
+  }
+  await page.keyboard.press('Escape');await expect(page.getByRole('button',{name:'変更',exact:true})).toBeFocused();
 });
 
 test('TU-08 selected incompatible style remains checked and blocks confirmation until compatible again',async({page})=>{

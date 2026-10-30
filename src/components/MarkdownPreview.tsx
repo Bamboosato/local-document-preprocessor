@@ -1,12 +1,13 @@
 import ReactMarkdown from 'react-markdown';
 import remarkBreaks from 'remark-breaks';
 import remarkGfm from 'remark-gfm';
+import {memo} from 'react';
 
 interface MarkdownPreviewProps {
   markdown: string;
 }
 
-export function MarkdownPreview({ markdown }: MarkdownPreviewProps) {
+export const MarkdownPreview=memo(function MarkdownPreview({ markdown }: MarkdownPreviewProps) {
   return (
     <div className="markdown-preview" data-testid="markdown-preview">
       <ReactMarkdown
@@ -40,4 +41,4 @@ export function MarkdownPreview({ markdown }: MarkdownPreviewProps) {
       </ReactMarkdown>
     </div>
   );
-}
+});

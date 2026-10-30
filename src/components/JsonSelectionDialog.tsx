@@ -16,21 +16,33 @@ export function JsonSelectionDialog({file,client,settings,onCancel,onConfirm}:{f
   const [request,setRequest]=useState(()=>({view:structuredClone(savedViews.get(file)??initialJsonView()),reveal:false}));
   const [answer,setAnswer]=useState<{request:typeof request;draft:JsonSettings;page:JsonTargetPage}>();
   const [message,setMessage]=useState('対象とスタイルを確認中');
+  const [failed,setFailed]=useState(false);
   const current=answer?.request===request&&answer.draft===draft ? answer.page : undefined;
   const visible=answer?.page;
   const valid=current?.styles.find(style=>style.style===draft.style)?.valid===true;
 
-  useEffect(()=>{const el=dialog.current;el?.showModal();return()=>el?.close();},[]);
+  useEffect(()=>{
+    const el=dialog.current,origin=document.activeElement instanceof HTMLElement?document.activeElement:undefined;
+    const trap=(event:KeyboardEvent)=>{
+      if(event.key!=='Tab'||!el?.open)return;
+      const controls=[...el.querySelectorAll<HTMLElement>('button:not(:disabled),input:not(:disabled),select:not(:disabled),textarea:not(:disabled),a[href],[tabindex]:not([tabindex="-1"])')].filter(control=>control.getClientRects().length>0);
+      const first=controls[0],last=controls.at(-1),active=document.activeElement;
+      if(first&&last&&(!el.contains(active)||(event.shiftKey&&active===first)||(!event.shiftKey&&active===last))){event.preventDefault();(event.shiftKey?last:first).focus();}
+    };
+    el?.showModal();document.addEventListener('keydown',trap,true);
+    return()=>{document.removeEventListener('keydown',trap,true);el?.close();if(origin?.isConnected)origin.focus();};
+  },[]);
   useEffect(()=>{
     const controller=new AbortController();
-    setMessage('対象とスタイルを確認中');
+    setMessage('JSONを再読込中：対象とスタイルを確認中');
+    setFailed(false);
     void client.target(file,draft,request.view,request.reveal,controller.signal).then(page=>{
       if(controller.signal.aborted)return;
       savedViews.set(file,{...page.view,scrollTop:tree.current?.scrollTop??0});
       setAnswer({request,draft,page});
       setMessage('対象と出力スタイルの確認が完了しました。');
     }).catch(()=>{
-      if(!controller.signal.aborted)setMessage('JSONを再読込できませんでした。設定を閉じて再度開くか、ファイルを選び直してください。');
+      if(!controller.signal.aborted){setAnswer(undefined);setFailed(true);setMessage('JSONを再読込できませんでした。再試行するか、ファイルを選び直してください。');}
     });
     return()=>controller.abort();
   },[client,file,draft,request]);
@@ -62,6 +74,8 @@ export function JsonSelectionDialog({file,client,settings,onCancel,onConfirm}:{f
       <button type="button" onClick={()=>changeView({},true)}>選択位置を表示</button>
     </div>
     <p role="status">{message}</p>
+    {failed&&<div><button type="button" onClick={()=>changeView({})}>JSONを再読込</button><button type="button" onClick={()=>select('')}>ルートを選択して再読込</button></div>}
+    {current&&current.styles.every(style=>!style.valid)&&<p role="alert">選択対象を縮小してください。小さいコンテナーを選択できない場合は、入力を分割・縮小して再選択してください。</p>}
     <div className="json-selection-columns">
       <section aria-label="対象ツリー"><p>開閉・ページ移動は変換対象を変更しません。object・array（ルートはすべての型）から一つ選びます。</p>
         <div ref={tree} className="json-virtual-tree" aria-label="JSON階層の項目" role="group"

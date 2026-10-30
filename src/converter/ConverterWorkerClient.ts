@@ -8,6 +8,7 @@ import type {
   WorkerResponse,
 } from './contracts';
 import { DEFAULT_CONVERSION_OPTIONS as defaultConversionOptions } from './contracts';
+import {readFileBytes} from './readFileBytes';
 
 type WorkerFactory = () => Worker;
 
@@ -32,6 +33,9 @@ function abortError(): DOMException {
 export class ConverterWorkerClient {
   private worker: Worker;
   private readonly pending = new Map<string, PendingRequest>();
+  private readonly reads=new Set<AbortController>();
+  private disposed=false;
+  private needsWorker=false;
 
   constructor(
     private readonly workerFactory: WorkerFactory = () =>
@@ -39,6 +43,7 @@ export class ConverterWorkerClient {
         type: 'module',
         name: 'local-document-converter',
       }),
+    private readonly readBytes=(file:File,signal:AbortSignal)=>readFileBytes(file,signal,code=>new WorkerConversionError(code)),
   ) {
     this.worker = this.createWorker();
   }
@@ -82,12 +87,18 @@ export class ConverterWorkerClient {
     if (signal?.aborted) {
       throw abortError();
     }
+    if(this.disposed)throw abortError();
 
-    const buffer = await file.arrayBuffer();
+    const controller=new AbortController(),abortRead=()=>controller.abort();
+    this.reads.add(controller);signal?.addEventListener('abort',abortRead,{once:true});
+    let buffer:ArrayBuffer;
+    try{buffer=await this.readBytes(file,controller.signal);if(controller.signal.aborted)throw abortError();}
+    finally{this.reads.delete(controller);signal?.removeEventListener('abort',abortRead);}
     if (signal?.aborted) {
       throw abortError();
     }
 
+    if(this.needsWorker){this.worker=this.createWorker();this.needsWorker=false;}
     const id = crypto.randomUUID();
 
     return new Promise<TResult>((resolve, reject) => {
@@ -116,12 +127,17 @@ export class ConverterWorkerClient {
   }
 
   cancel(): void {
+    if(this.disposed)return;
+    for(const read of this.reads)read.abort();
     this.worker.terminate();
     this.rejectAll(abortError());
+    this.needsWorker=false;
     this.worker = this.createWorker();
   }
 
   dispose(): void {
+    this.disposed=true;
+    for(const read of this.reads)read.abort();
     this.worker.terminate();
     this.rejectAll(abortError());
   }
@@ -129,6 +145,7 @@ export class ConverterWorkerClient {
   private createWorker(): Worker {
     const worker = this.workerFactory();
     worker.onmessage = (event: MessageEvent<WorkerResponse>) => {
+      if(this.disposed||this.worker!==worker)return;
       const response = event.data;
       const pending = this.pending.get(response.id);
       if (!pending) {
@@ -148,11 +165,12 @@ export class ConverterWorkerClient {
       }
     };
     worker.onerror = () => {
+      if(this.disposed||this.worker!==worker||this.needsWorker)return;
       this.rejectAll(new WorkerConversionError('unknown'));
       worker.terminate();
-      if (this.worker === worker) {
-        this.worker = this.createWorker();
-      }
+      // A missing/offline worker asset must not start an eager retry loop.
+      // Recreate only when a later explicit request needs it.
+      this.needsWorker=true;
     };
     return worker;
   }

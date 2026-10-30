@@ -88,6 +88,7 @@ export interface SheetInfo {
 
 export interface DocumentInspection {
   json?: boolean;
+  jsonInitialValid?:boolean;
   selectionKind: SelectionKind;
   supportsSelection: boolean;
   totalUnits?: number;
@@ -117,6 +118,7 @@ export interface ConverterOutput {
 
 export interface ConversionResult extends ConverterOutput {
   jsonDiagram?: {code:string};
+  jsonTable?:{rows:number};
   plainText: string;
   quality: ConversionQuality;
 }

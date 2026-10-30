@@ -46,11 +46,11 @@ describe('CUR-01 target presentation (synthetic fixtures)',()=>{
     const prefix='x'.repeat(400),model=parseText(JSON.stringify({[prefix+'A']:{},[prefix+'B']:{}}));
     const page=targetPage(model,{pointer:'/'+prefix+'B',style:'items'},initialJsonView());
     expect(page.rows[1].name).not.toBe(page.rows[2].name);expect(page.rows[2].name).toContain('B');
-    const deep=parseText('['.repeat(128)+'0'+']'.repeat(128));
-    const pointer='/0'.repeat(127);
+    const deep=parseText('['.repeat(128)+'{}'+']'.repeat(128));
+    const pointer='/0'.repeat(128);
     const revealed=targetPage(deep,{pointer,style:'items'},initialJsonView(),true);
     expect(revealed.rows.some(row=>row.pointer===pointer)).toBe(true);
-    expect(revealed.rows.at(-1)?.depth).toBe(127);
+    expect(revealed.rows.at(-1)?.depth).toBe(128);
   });
   it('TU-05 bounds detail by codepoints, retains numeric tokens and string escapes',()=>{
     const model=parseText('{"n":1e400,"z":-0,"s":"\\n\\\"😀"}');

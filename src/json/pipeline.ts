@@ -18,6 +18,7 @@ export async function convertJson(model:JsonModel,settings:JsonSettings,fileName
   if(generated.code)await validate(generated.code);
   return {markdown:generated.markdown,plainText:markdownToPlainText(generated.markdown),detectedFormat:'JSON',
     jsonDiagram:generated.code?{code:generated.code}:undefined,
+    jsonTable:generated.rows?{rows:generated.rows.length-1}:undefined,
     quality:{reviewRequired:true,disposition:'success',safeToExport:true,extractionSource:'json',outputCharacterCount:generated.markdown.replace(/\s/g,'').length,
       issues:[{code:'sourceComparisonRequired',severity:'warning',message:'JSONの対象・値・出力スタイルを原本と照合してください。'}]}};
 }

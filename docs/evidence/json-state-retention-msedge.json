@@ -1,0 +1,465 @@
+{
+  "schema": 1,
+  "environment": {
+    "platform": "win32",
+    "browser": "156.0.4314.42",
+    "channel": "msedge",
+    "headless": true
+  },
+  "fixtures": {
+    "maximumBytes": 52428800,
+    "maximumNodes": 100000,
+    "completedResults": 4,
+    "completedPayloadBytes": 9437184,
+    "cycles": 3
+  },
+  "wasm": [
+    "anydoc",
+    "pdfium"
+  ],
+  "jsonHeapDropsBytes": [
+    52413411,
+    52420023,
+    52416623
+  ],
+  "loadDurations": [
+    {
+      "fixture": "small.json",
+      "milliseconds": 236
+    },
+    {
+      "fixture": "maximum.json",
+      "milliseconds": 2108
+    },
+    {
+      "fixture": "small.json",
+      "milliseconds": 119
+    },
+    {
+      "fixture": "maximum.json",
+      "milliseconds": 1546
+    },
+    {
+      "fixture": "small.json",
+      "milliseconds": 133
+    },
+    {
+      "fixture": "maximum.json",
+      "milliseconds": 2096
+    },
+    {
+      "fixture": "small.json",
+      "milliseconds": 68
+    },
+    {
+      "fixture": "nodes.json",
+      "milliseconds": 327
+    }
+  ],
+  "responsiveness": [
+    {
+      "phase": "conversion-and-initial-preview",
+      "maximumTimerGapMs": 359.2999999523163
+    }
+  ],
+  "samples": [
+    {
+      "phase": "baseline",
+      "gc": true,
+      "page": {
+        "usedSize": 1871780,
+        "totalSize": 2621440,
+        "embedderHeapUsedSize": 754816,
+        "backingStorageSize": 416153
+      },
+      "workers": []
+    },
+    {
+      "phase": "completed-results-and-assets",
+      "gc": true,
+      "page": {
+        "usedSize": 50320400,
+        "totalSize": 51195904,
+        "embedderHeapUsedSize": 1929192,
+        "backingStorageSize": 2694217
+      },
+      "workers": [
+        {
+          "kind": "json",
+          "heap": {
+            "usedSize": 21827388,
+            "totalSize": 22286336,
+            "embedderHeapUsedSize": 62408,
+            "backingStorageSize": 10331373
+          }
+        },
+        {
+          "kind": "document",
+          "heap": {
+            "usedSize": 3229236,
+            "totalSize": 3588096,
+            "embedderHeapUsedSize": 29624,
+            "backingStorageSize": 6045211
+          }
+        }
+      ]
+    },
+    {
+      "phase": "maximum-0-before-gc",
+      "gc": false,
+      "page": {
+        "usedSize": 51134064,
+        "totalSize": 56176640,
+        "embedderHeapUsedSize": 5111248,
+        "backingStorageSize": 2695739
+      },
+      "workers": [
+        {
+          "kind": "json",
+          "heap": {
+            "usedSize": 21861228,
+            "totalSize": 22810624,
+            "embedderHeapUsedSize": 655984,
+            "backingStorageSize": 105751787
+          }
+        },
+        {
+          "kind": "document",
+          "heap": {
+            "usedSize": 3229236,
+            "totalSize": 3588096,
+            "embedderHeapUsedSize": 480376,
+            "backingStorageSize": 6045211
+          }
+        }
+      ]
+    },
+    {
+      "phase": "maximum-0-after-gc",
+      "gc": true,
+      "page": {
+        "usedSize": 50679460,
+        "totalSize": 51982336,
+        "embedderHeapUsedSize": 2079464,
+        "backingStorageSize": 2695138
+      },
+      "workers": [
+        {
+          "kind": "json",
+          "heap": {
+            "usedSize": 21827640,
+            "totalSize": 22286336,
+            "embedderHeapUsedSize": 62408,
+            "backingStorageSize": 53322987
+          }
+        },
+        {
+          "kind": "document",
+          "heap": {
+            "usedSize": 3229236,
+            "totalSize": 3588096,
+            "embedderHeapUsedSize": 29624,
+            "backingStorageSize": 6045211
+          }
+        }
+      ]
+    },
+    {
+      "phase": "evicted-0-after-gc",
+      "gc": true,
+      "page": {
+        "usedSize": 50738408,
+        "totalSize": 51720192,
+        "embedderHeapUsedSize": 2425808,
+        "backingStorageSize": 2695170
+      },
+      "workers": [
+        {
+          "kind": "json",
+          "heap": {
+            "usedSize": 21843004,
+            "totalSize": 22548480,
+            "embedderHeapUsedSize": 62408,
+            "backingStorageSize": 894212
+          }
+        },
+        {
+          "kind": "document",
+          "heap": {
+            "usedSize": 3229236,
+            "totalSize": 3588096,
+            "embedderHeapUsedSize": 29624,
+            "backingStorageSize": 6045211
+          }
+        }
+      ]
+    },
+    {
+      "phase": "maximum-1-before-gc",
+      "gc": false,
+      "page": {
+        "usedSize": 51218268,
+        "totalSize": 56700928,
+        "embedderHeapUsedSize": 4745296,
+        "backingStorageSize": 2705854
+      },
+      "workers": [
+        {
+          "kind": "json",
+          "heap": {
+            "usedSize": 22657108,
+            "totalSize": 25169920,
+            "embedderHeapUsedSize": 638624,
+            "backingStorageSize": 105751787
+          }
+        },
+        {
+          "kind": "document",
+          "heap": {
+            "usedSize": 3229236,
+            "totalSize": 3588096,
+            "embedderHeapUsedSize": 594264,
+            "backingStorageSize": 6045211
+          }
+        }
+      ]
+    },
+    {
+      "phase": "maximum-1-after-gc",
+      "gc": true,
+      "page": {
+        "usedSize": 50796512,
+        "totalSize": 51982336,
+        "embedderHeapUsedSize": 2325488,
+        "backingStorageSize": 2705241
+      },
+      "workers": [
+        {
+          "kind": "json",
+          "heap": {
+            "usedSize": 21852840,
+            "totalSize": 22286336,
+            "embedderHeapUsedSize": 62408,
+            "backingStorageSize": 53322987
+          }
+        },
+        {
+          "kind": "document",
+          "heap": {
+            "usedSize": 3229236,
+            "totalSize": 3588096,
+            "embedderHeapUsedSize": 29624,
+            "backingStorageSize": 6045211
+          }
+        }
+      ]
+    },
+    {
+      "phase": "evicted-1-after-gc",
+      "gc": true,
+      "page": {
+        "usedSize": 50829688,
+        "totalSize": 51982336,
+        "embedderHeapUsedSize": 2423408,
+        "backingStorageSize": 2695170
+      },
+      "workers": [
+        {
+          "kind": "json",
+          "heap": {
+            "usedSize": 21861592,
+            "totalSize": 22286336,
+            "embedderHeapUsedSize": 62408,
+            "backingStorageSize": 894212
+          }
+        },
+        {
+          "kind": "document",
+          "heap": {
+            "usedSize": 3229236,
+            "totalSize": 3588096,
+            "embedderHeapUsedSize": 29624,
+            "backingStorageSize": 6045211
+          }
+        }
+      ]
+    },
+    {
+      "phase": "maximum-2-before-gc",
+      "gc": false,
+      "page": {
+        "usedSize": 51309056,
+        "totalSize": 56438784,
+        "embedderHeapUsedSize": 5327200,
+        "backingStorageSize": 2705854
+      },
+      "workers": [
+        {
+          "kind": "json",
+          "heap": {
+            "usedSize": 22664432,
+            "totalSize": 24907776,
+            "embedderHeapUsedSize": 627600,
+            "backingStorageSize": 105751787
+          }
+        },
+        {
+          "kind": "document",
+          "heap": {
+            "usedSize": 3229236,
+            "totalSize": 3588096,
+            "embedderHeapUsedSize": 456840,
+            "backingStorageSize": 6045211
+          }
+        }
+      ]
+    },
+    {
+      "phase": "maximum-2-after-gc",
+      "gc": true,
+      "page": {
+        "usedSize": 50871920,
+        "totalSize": 51720192,
+        "embedderHeapUsedSize": 2327656,
+        "backingStorageSize": 2705241
+      },
+      "workers": [
+        {
+          "kind": "json",
+          "heap": {
+            "usedSize": 21861328,
+            "totalSize": 22286336,
+            "embedderHeapUsedSize": 62408,
+            "backingStorageSize": 53322987
+          }
+        },
+        {
+          "kind": "document",
+          "heap": {
+            "usedSize": 3229236,
+            "totalSize": 3588096,
+            "embedderHeapUsedSize": 29624,
+            "backingStorageSize": 6045211
+          }
+        }
+      ]
+    },
+    {
+      "phase": "evicted-2-after-gc",
+      "gc": true,
+      "page": {
+        "usedSize": 50868604,
+        "totalSize": 51982336,
+        "embedderHeapUsedSize": 2397208,
+        "backingStorageSize": 2695170
+      },
+      "workers": [
+        {
+          "kind": "json",
+          "heap": {
+            "usedSize": 21873480,
+            "totalSize": 22286336,
+            "embedderHeapUsedSize": 62408,
+            "backingStorageSize": 894212
+          }
+        },
+        {
+          "kind": "document",
+          "heap": {
+            "usedSize": 3229236,
+            "totalSize": 3588096,
+            "embedderHeapUsedSize": 29624,
+            "backingStorageSize": 6045211
+          }
+        }
+      ]
+    },
+    {
+      "phase": "100000-nodes-before-gc",
+      "gc": false,
+      "page": {
+        "usedSize": 52008780,
+        "totalSize": 55390208,
+        "embedderHeapUsedSize": 5908776,
+        "backingStorageSize": 2696567
+      },
+      "workers": [
+        {
+          "kind": "json",
+          "heap": {
+            "usedSize": 25783144,
+            "totalSize": 46075904,
+            "embedderHeapUsedSize": 535648,
+            "backingStorageSize": 1934175
+          }
+        },
+        {
+          "kind": "document",
+          "heap": {
+            "usedSize": 3229236,
+            "totalSize": 3588096,
+            "embedderHeapUsedSize": 445072,
+            "backingStorageSize": 6045211
+          }
+        }
+      ]
+    },
+    {
+      "phase": "100000-nodes-after-gc",
+      "gc": true,
+      "page": {
+        "usedSize": 51038576,
+        "totalSize": 51982336,
+        "embedderHeapUsedSize": 3076480,
+        "backingStorageSize": 2695462
+      },
+      "workers": [
+        {
+          "kind": "json",
+          "heap": {
+            "usedSize": 25616324,
+            "totalSize": 26152960,
+            "embedderHeapUsedSize": 62408,
+            "backingStorageSize": 1394183
+          }
+        },
+        {
+          "kind": "document",
+          "heap": {
+            "usedSize": 3229236,
+            "totalSize": 3588096,
+            "embedderHeapUsedSize": 29624,
+            "backingStorageSize": 6045211
+          }
+        }
+      ]
+    },
+    {
+      "phase": "cleared-after-gc",
+      "gc": true,
+      "page": {
+        "usedSize": 50459812,
+        "totalSize": 51720192,
+        "embedderHeapUsedSize": 1755800,
+        "backingStorageSize": 2666019
+      },
+      "workers": [
+        {
+          "kind": "document",
+          "heap": {
+            "usedSize": 3229236,
+            "totalSize": 3588096,
+            "embedderHeapUsedSize": 29624,
+            "backingStorageSize": 6045211
+          }
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Synthetic Windows/headless measurement; not physical-device acceptance",
+    "Snapshots include JS heap and backing storage; not true transient peaks, process RSS or complete WASM/native allocations",
+    "Explicit GC is a diagnostic observation, not a production release guarantee",
+    "100ms timer gaps are observations, not a hard responsiveness guarantee"
+  ]
+}

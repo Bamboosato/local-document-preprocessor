@@ -10,5 +10,5 @@ export const initialJsonView = ():JsonView => ({expanded:[''],pages:{},start:0,d
 export interface JsonTreeRow {kind:'node'|'pager';pointer:string;name:string;type:string;depth:number;count:number;expanded:boolean;page:number;selectable:boolean}
 export interface JsonSuitability {style:JsonStyle;valid:boolean;reason:string;count:string}
 export interface JsonTargetPage {view:JsonView;rows:JsonTreeRow[];total:number;selectedIndex:number;pointer:string;type:string;childCount:number;children:JsonRow[];detail:string;truncated:boolean;styles:JsonSuitability[]}
-export type JsonOperation='inspect'|'browse'|'target'|'convert';
-export interface JsonRequest {id:string;operation:JsonOperation;fileId:string;fileName:string;buffer:ArrayBuffer;settings:JsonSettings;offset:number;view?:JsonView;reveal?:boolean}
+export type JsonOperation='inspect'|'browse'|'target'|'convert'|'release';
+export interface JsonRequest {id:string;operation:JsonOperation;fileId:string;fileName:string;parseGeneration:number;buffer?:ArrayBuffer;settings:JsonSettings;offset:number;view?:JsonView;reveal?:boolean}
