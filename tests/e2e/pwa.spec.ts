@@ -54,7 +54,7 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
     return { cacheNames, urls, serviceWorkers: serviceWorkers.length };
   });
 
-  expect(cacheState.cacheNames).toContain('ldp-static-v1');
+  expect(cacheState.cacheNames.some(name=>/^ldp-static-[a-f0-9]{24}$/.test(name))).toBe(true);
   expect(cacheState.serviceWorkers).toBeGreaterThan(0);
   expect(cacheState.urls.some((url) => url.includes('ldp-user-data'))).toBe(false);
   expect(
@@ -66,6 +66,9 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
         (parsed.pathname === '/' ||
           parsed.pathname === '/index.html' ||
           parsed.pathname === '/manifest.webmanifest' ||
+          parsed.pathname === '/pwa-manifest.json' ||
+          parsed.pathname === '/__ldp_static_ready__' ||
+          parsed.pathname.startsWith('/licenses/') ||
           parsed.pathname.startsWith('/assets/') ||
           /^\/ldp_icon(?:-\d+)?\.png$/.test(parsed.pathname))
       );

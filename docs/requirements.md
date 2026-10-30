@@ -2,7 +2,7 @@
 
 更新日: 2026-10-06
 
-> 2026-10-30追記: PR #19・#20でJSON専用Worker・対象ツリー/詳細・既存キュー/結果/出力をmainへ取り込んだ。[状態・保持量・故障回復の追加検証](json-state-recovery-validation.md)は別ブランチで実施。anydocにJSONを渡さない。特大プレビューの抜粋表示と全量出力の区別は[専用要件](local-document-preprocessor-json-requirements-v0.2.md)のCUR-02追補を参照。今回の変更のmain取り込み・デプロイは行わない。
+> 2026-10-30追記: PR #19～21でJSON専用Worker・対象ツリー/詳細・既存キュー/結果/出力・状態/保持量/故障回復をmainへ取り込んだ。anydocにJSONを渡さない。特大プレビューと全量出力の区別は[専用要件](local-document-preprocessor-json-requirements-v0.2.md)のCUR-02追補を参照。[本体PWA世代固定・回復](pwa-generation-validation.md)は別ブランチのレビュー対象。今回の新変更のmain取り込み・デプロイは行わない。
 
 ## 1. 目的と製品境界
 
@@ -14,7 +14,7 @@
 - Markdown / plain text のプレビュー、コピー、ダウンロードを提供する。
 - Markdown のダウンロードには、元ファイル名と元ファイルの更新日時を YAML frontmatter のメタデータとして付与する。plain text のダウンロード、プレビュー、コピーには付与しない。
 - 1 回の選択に含まれる複数ファイルを選択順に逐次処理する。再選択は既存キューと結果を置き換える。
-- PWA のホーム画面追加用 manifest とアイコンを提供し、production では静的アプリ資産だけをキャッシュする。文書データの保存禁止とは区別する（ADR-0004）。
+- PWA のホーム画面追加用 manifest とアイコンを提供し、production では静的アプリ資産だけをキャッシュする。文書データの保存禁止はADR-0004、レビュー中の全資産/世代固定/更新・回復方式は[ADR-0005](adr/0005-pwa-generation-cache.md)に従う。
 - plain text は Markdown から同一入力に対して常に同一結果となる規則で生成する。
 - `local-pii-masker` へは plain text の手動コピーまたはダウンロードで渡す。
 
@@ -119,7 +119,7 @@ anydoc の変換形式は可能な限り内容から判定する。CSV のよう
 - 配布物は静的ファイルのみで成立する。
 - 文書、結果、履歴、設定を `localStorage`、`sessionStorage`、IndexedDB、Cache API 等へ保存しない。production の Service Worker / Cache API は同一オリジン・クエリなし GET の静的アプリ資産に限って使用する（[ADR-0004](adr/0004-pwa-static-asset-cache.md)）。
 - PWA は `/sw.js`、manifest、アイコン、`start_url` と scope を `/` から参照する。現行配布はオリジン直下とし、サブパス配信を対応済みとしない。
-- オフラインでは取得済みの静的資産のみ利用可能とする。初回起動や未取得 WASM のオフライン動作、端末のキャッシュ保持、インストール UI は保証しない。
+- [ADR-0005](adr/0005-pwa-generation-cache.md)に従い静的全資産の検証付き事前保存と世代固定を行う。初回未制御・更新待機・保存失敗を区別し、利用者の保存前に再読込/強制activateしない。端末のCache保持、実容量、インストール/復帰は保証しない。
 - 変換中もメインスレッドを長時間占有せず、キャンセル操作を受け付ける。
 - アプリ自身から外部オリジンへ通信しない。実行に必要な JS/WASM/CSS は同一オリジンから取得する。
 - CSP で外部接続・外部画像・プラグイン・フォーム送信を拒否する。
