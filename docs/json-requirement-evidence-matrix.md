@@ -1,5 +1,7 @@
 # JSON要件・コード・証拠・残件の対応表
 
+> 2026-10-30: [標準Mermaid報告](json-standard-mermaid-validation.md)が新しい表示基準の証拠。以下の旧SVG/iframe証拠は当時の履歴として保持。SM-01～08は新G-04/UI-24の表示・安全・上限・旧応答・回復の証拠に限定し、本体UI-26・実機/PWA・配布承認は未確認。
+
 > 2026-10-27追加: [接続前設計・共存検証結果](json-integration-readiness-validation.md)のIC-01/05/07はG-04のWASM/CSP共存、IC-02/03は混在逐次処理・取消、IC-04はJ-AC-11の出力純粋関数、IU-01～04はWASM込み更新/失敗維持、IC-L01は配布出典の独立証拠。製品UI-26、実PWA、配布条件全体の受入完了にはしない。
 
 > 2026-10-26更新: [採用決定と対象範囲](json-adoption-decision.md)により独自SVG＋静的URL Workerを採用。macOS/iOSの残件はユーザーによる後日確認へ移し、今回のWindows向け停止条件から外す。以下の既存証拠・残件一覧は確認履歴として保持する。

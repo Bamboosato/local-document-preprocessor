@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>標準Mermaid独立試作</title></head>
+<body><h1>JSON構造図・標準Mermaid独立試作</h1><p>合成データによる表示検証専用。本体統合は保留。入力は保存しません。</p>
+<label for="standard-input">JSON入力</label><textarea id="standard-input" rows="6"></textarea><button id="standard-convert">生成</button><button id="standard-clear">消去</button>
+<section id="standard-view" aria-label="JSON構造図">
+<button id="standard-show-diagram" aria-pressed="true">図</button><button id="standard-show-source" aria-pressed="false">Mermaidソース</button>
+<p id="standard-status" role="status"></p><button id="standard-retry" hidden>図を再試行</button>
+<p>資産取得の失敗が続く場合は、必要な入力・ソースを手元に保存して再読込してください。入力は自動復元されません。</p>
+<div id="standard-diagram" tabindex="0" role="region" aria-label="JSON構造図の表示領域"></div>
+<textarea id="standard-source" aria-label="検証済みMermaidソース" rows="12" readonly hidden></textarea></section>
+<script type="module" src="/standard.mjs"></script></body></html>

@@ -1,5 +1,7 @@
 # JSON図表示・製品化の採用方式
 
+> 2026-10-30: 本書の方式比較は旧検討履歴。ユーザー承認でknowledge-board同等の標準Mermaid表示へ変更した。[最新の方針・設計](json-standard-mermaid-design.md)と[採用決定](json-adoption-decision.md)を優先し、旧独自SVGの解除条件を新表示の必須条件として扱わない。新方式のCSP/PWA/配布条件は別途未確認。
+
 > 2026-10-26ユーザー承認: 独自SVG表示＋静的URL Worker、検証済みMermaidソース出力を採用する。macOS/iOSは今回対象外。[採用決定と今回の対象範囲](json-adoption-decision.md)が以下の旧案・解除条件に優先する。本体統合はWindows向け残条件を満たすまで保留。
 
 作成日: 2026-10-26 / 比較基準: `48f975a`。方式はユーザー承認済み。本体統合完了・実Safari対応完了を意味しない。

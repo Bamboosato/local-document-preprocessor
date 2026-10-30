@@ -4,6 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "build:standard": "node standard-build.mjs",
+    "browser:standard": "node standard-check.mjs",
     "test:sources": "node --test --test-concurrency=1 --test-reporter=./redacted-reporter.mjs source-archive.test.mjs source-records.test.mjs",
     "research:source-prepare": "node source-audit.mjs prepare",
     "research:source-collect": "node source-audit.mjs collect",
