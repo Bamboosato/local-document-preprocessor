@@ -2,6 +2,8 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "git": {
     "deploymentEnabled": {
+      "main": false,
+      "codex/json-product-connection": false,
       "codex/json-gates-product-readiness": false,
       "codex/json-integration-readiness": false,
       "codex/json-standard-mermaid": false
