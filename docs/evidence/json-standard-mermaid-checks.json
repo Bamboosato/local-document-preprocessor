@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "checkedAt": "2026-10-30",
+  "base": "4ad89476a4adf3401416b80a97ed57bb0830203a",
+  "scope": "Headless synthetic fixture verification only; not physical device, production integration, PWA or distribution approval",
+  "mermaid": "12.2.0",
+  "displayLimitBytes": 51200,
+  "generationCodepointLimit": 50000,
+  "targets": [
+    {"browser": "chrome", "version": "156.0.8078.74", "passed": ["SM-01", "SM-02", "SM-03", "SM-04", "SM-05", "SM-06", "SM-07", "SM-08"], "externalRequests": 0, "unexpectedPageErrors": 0},
+    {"browser": "edge", "version": "156.0.4314.42", "passed": ["SM-01", "SM-02", "SM-03", "SM-04", "SM-05", "SM-06", "SM-07", "SM-08"], "externalRequests": 0, "unexpectedPageErrors": 0}
+  ],
+  "unverified": ["physical-device", "accessibility", "installed-PWA", "macOS-iOS", "production-CSP-WASM-coexistence", "full-distribution-conditions"],
+  "forcedRenderTermination": "not-required-or-guaranteed"
+}

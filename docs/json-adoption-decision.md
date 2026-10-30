@@ -2,14 +2,14 @@
 
 > 2026-10-27追記: PR #16取り込み後の[本体接続前の追加結果](json-integration-readiness-validation.md)と[接続設計](json-product-connection-design.md)を参照。本体統合保留とmacOS/iOS対象外は継続する。
 
-決定日: 2026-10-26。ユーザー指示により確定。既存の報告は各実施時点の履歴として保持し、今回の方式・対象判定では本書を優先する。
+決定日: 2026-10-26、採用変更: 2026-10-30。ユーザー指示によりknowledge-board同等の標準Mermaid表示へ変更する。[最新設計](json-standard-mermaid-design.md)と[検証計画](json-standard-mermaid-plan.md)を優先する。旧独自SVG報告は履歴として保持し、新方式の成功へ流用しない。
 
 ## 採用する方式
 
-- アプリ内の図はJSON木専用の独自SVGで表示する。全ラベル・値・親子関係の一致を必須とし、標準Mermaidとの配置・折返し・外観の差を許容する。
-- 構文検証と配置は同一オリジンの静的URL Workerで処理する。Blob/data起動への自動切替は採用しない。
+- アプリ内の図は固定Mermaid版の標準renderで表示する。strict・HTML無効・SVGサニタイズ・50 KiB自動描画上限・図/ソース切替・古い描画排除を採用する。
+- 構文検証は静的URL Worker、標準描画は画面DOMで行う。画面側同期描画の5秒強制中断と独立配置Workerを必須条件から外す。
 - Markdown／plain textの出力は、固定版Mermaidで検証したソースを維持する。表示方式の変更を理由にソースの検証や全量照合を省かない。
-- 図の全体表示・拡大縮小・リセット、図／ソース切替、検証済み本文を維持した図再試行を製品化する。未検証時の出力は停止する。
+- 図/ソース切替・スクロール・失敗案内・検証済み本文を維持した明示再試行を採用する。図内ズーム・全体表示・リセットは必須外。表示上限超過でも検証済み出力を維持し、未検証時の出力は停止する。
 
 ## 今回の対象と後日確認
 
@@ -23,8 +23,8 @@ Windows上のPWA更新・容量不足・複数タブ・回復、読み上げ、�
 
 方式採用の未決定状態は解消した。本体統合は引き続き保留し、今回対象のG-01～04条件を証拠付きで満たしてから判断する。macOS/iOSの後日確認を待つ必要はないが、対象外化をWindowsの未確認条件の解消に流用しない。
 
-次の作業は、[追加計画](json-adoption-followup-plan.md)に沿った独立試作の修正・検証と、製品CSP・資産・回復・更新・配布ライセンスの具体化とする。マージ・デプロイは実施しない。PR更新時の自動Preview生成を避けるため、`vercel.json`でこの作業ブランチだけGit自動デプロイを無効化する。他ブランチはこの設定の対象にしない。
+次の作業は[標準Mermaid計画](json-standard-mermaid-plan.md)の独立試作・検証とする。旧方式のCSP/更新/配布条件と区別し、新方式の残件を[報告書](json-standard-mermaid-validation.md)へ残す。マージ・デプロイは実施しない。新レビュー用ブランチもvercel.jsonでGit自動デプロイを無効化する。
 
 関連資料: [要件](local-document-preprocessor-json-requirements-v0.2.md)、[画面設計](local-document-preprocessor-json-screen-design-v0.2.md)、[方式比較](json-product-adoption-proposal.md)、[既存結果](json-product-readiness-validation.md)、[要件対応表](json-requirement-evidence-matrix.md)、[後日実機手順](json-device-validation-runbook.md)。
 
-今回の実装と検証結果は[採用方式のWindows追加検証](json-adoption-followup-validation.md)を参照する。
+新方式の実装と検証は[標準Mermaid報告](json-standard-mermaid-validation.md)を参照。旧方式の[Windows追加検証](json-adoption-followup-validation.md)は履歴として保持する。

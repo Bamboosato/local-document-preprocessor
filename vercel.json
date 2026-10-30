@@ -3,7 +3,8 @@
   "git": {
     "deploymentEnabled": {
       "codex/json-gates-product-readiness": false,
-      "codex/json-integration-readiness": false
+      "codex/json-integration-readiness": false,
+      "codex/json-standard-mermaid": false
     }
   }
 }

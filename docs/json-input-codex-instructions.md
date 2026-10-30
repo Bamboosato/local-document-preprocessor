@@ -1,5 +1,7 @@
 # JSON入力追加 Codex向け作業指示書
 
+> 2026-10-30採用変更: [標準Mermaid設計](json-standard-mermaid-design.md)・[計画](json-standard-mermaid-plan.md)を最新基準とする。knowledge-board同等の表示へ変更し、独自SVG・5秒強制中断・図内ズームを必須外とする。以下の旧表示方式指示は履歴であり、新方式の受入へ流用しない。本体統合保留・macOS/iOS対象外・実機ユーザー別途・マージ/デプロイ禁止は維持。
+
 > 2026-10-27追記: PR #16取り込み後の[接続前設計・共存検証結果](json-integration-readiness-validation.md)を参照。本体統合保留、macOS/iOS対象外、マージ・デプロイ禁止を継続する。
 
 > 2026-10-26の後続ユーザー指示: [採用決定と今回の対象範囲](json-adoption-decision.md)に従い、独自SVG表示＋静的URL Workerを採用する。macOS/iOS関連は今回対象外でユーザーの後日確認とし、本書中の実Safari/iPhone未確認を今回の停止条件にはしない。本体統合はWindows向け残条件を満たすまで保留。
