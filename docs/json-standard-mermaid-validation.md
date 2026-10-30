@@ -37,8 +37,6 @@ SM-01は実UI入力/生成/図/ソース、SM-02は51,199/51,200/51,201 bytesと
 
 E2E選定は新しい表示経路の対象ケースをChrome/Edgeでクロスブラウザー実行。製品ローカルE2E全件は未実施（src/public/依存を変更していないため）。CIの製品E2Eは既存selectorへ委ねる。実機・読み上げ・実ブラウザー200%ズーム・タッチ・Apple・インストール済みPWA/実負荷は未実施。headless成功を実機受入へ一般化しない。
 
-## 判明した制約と残件
-
 ## CI結果
 
 [CI #32](https://github.com/Bamboosato/local-document-preprocessor/actions/runs/40995546870)はhead `221176c909dc106d67a49e873810692aba37f688`でVerify / JSON prototype checksともsuccess。新方式Chromium SM-01～08、製品単体63件・E2E14件、旧試作単体28・DS8・SL11・配布物各2、既存表示/共存/更新検査も成功した。root/prototypeのproduction・全依存監査は検出0件。製品E2E全件は既存selectorの共通/未分類変更判定によるもので、今後の全件既定化を意味しない。CIのUbuntu/Chromium成功をユーザー実機の成功には読み替えない。
