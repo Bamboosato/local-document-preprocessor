@@ -3,7 +3,7 @@ const json=(name:string,text:string)=>({name,mimeType:'application/octet-stream'
 const fixture='{ "a/b": {"~key":9007199254740993,"n":-0,"s":"hello"}, "outside":"NOT_SELECTED" }';
 const dialog=(page:Page)=>page.getByRole('dialog',{name:'JSONの変換設定'});
 async function confirm(page:Page,style='items'){
-  await expect(dialog(page)).toBeVisible();await page.getByLabel('JSON出力スタイル').selectOption(style);
+  await expect(dialog(page)).toBeVisible();await page.getByRole('radio',{name:({items:'項目表',records:'一覧表',mermaid:'Mermaid構造図'} as Record<string,string>)[style],exact:true}).check();
   await page.getByRole('button',{name:'この設定に決定'}).click();await expect(dialog(page)).not.toBeVisible();
 }
 async function convert(page:Page){await page.getByRole('button',{name:/^\d+ ファイルを変換$/}).click();await expect(page.locator('.result-card')).toHaveCount(1);}
@@ -12,7 +12,7 @@ test('JC-03 JSON selected subtree preserves numeric tokens in MD/TXT downloads w
   await page.addInitScript(()=>{Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async(value:string)=>{(window as Window & {copiedFixture?:string}).copiedFixture=value;}}});});
   const wasm:string[]=[],external:string[]=[];page.on('request',r=>{if(r.url().endsWith('.wasm'))wasm.push('wasm');const u=new URL(r.url());if(['http:','https:'].includes(u.protocol)&&u.hostname!=='127.0.0.1')external.push('external');});
   await page.goto('/');await page.locator('input[type=file]').setInputFiles(json('fixture.JSON',fixture));await expect(dialog(page)).toBeVisible();
-  await page.getByRole('button',{name:'"a/b"を対象にする',exact:true}).click();await confirm(page);await convert(page);
+  await page.getByRole('radio',{name:'"a/b"',exact:true}).check();await confirm(page);await convert(page);
   const card=page.locator('.result-card');await expect(card).toContainText('9007199254740993');await expect(card).not.toContainText('NOT_SELECTED');
   await card.getByRole('button',{name:'Markdown をコピー',exact:true}).click();expect(await page.evaluate(()=>{const text=(window as Window & {copiedFixture?:string}).copiedFixture;return Boolean(text?.includes('9007199254740993'))&&!text?.includes('originalUpdatedAt:');})).toBe(true);
   const mdPromise=page.waitForEvent('download');await card.getByRole('button',{name:'Markdown をダウンロード'}).click();const md=await mdPromise;const mdText=await (await md.createReadStream())!.toArray();const content=Buffer.concat(mdText).toString('utf8');expect(content).toContain('title: "fixture.JSON"');expect(content).toContain('9007199254740993');expect(content).toContain('/a~1b');
@@ -27,7 +27,7 @@ test('JC-03 JSON Mermaid uses standard SVG under product CSP; source/plain text 
 
 test('JC-04 JSON records, draft cancel, confirmed invalidation and fresh settings do not mix results',async({page})=>{
   await page.goto('/');await page.locator('input[type=file]').setInputFiles(json('records.json','[{"a":1},{"b":2}]'));await confirm(page,'records');await convert(page);await expect(page.locator('.result-card')).toContainText('（項目なし）');
-  await page.getByRole('button',{name:'変更',exact:true}).click();await page.getByLabel('JSON出力スタイル').selectOption('mermaid');await page.getByRole('button',{name:'キャンセル',exact:true}).click();await expect(page.locator('.result-card')).toHaveCount(1);
+  await page.getByRole('button',{name:'変更',exact:true}).click();await page.getByRole('radio',{name:'Mermaid構造図',exact:true}).check();await page.getByRole('button',{name:'キャンセル',exact:true}).click();await expect(page.locator('.result-card')).toHaveCount(1);
   await page.getByRole('button',{name:'変更',exact:true}).click();await confirm(page,'mermaid');await expect(page.locator('.result-card')).toHaveCount(0);await convert(page);await expect(page.locator('.json-svg svg')).toBeVisible();await page.getByRole('button',{name:'すべてクリア'}).click();await expect(page.locator('.result-card')).toHaveCount(0);await page.reload();await expect(page.locator('.file-list')).toHaveCount(0);
 });
 

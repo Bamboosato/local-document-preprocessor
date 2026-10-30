@@ -1,5 +1,7 @@
 # JSON図表示の採用決定と今回の対象範囲
 
+> 2026-10-30追加承認: PR #19のマージで第一段階の本体接続をmainへ取り込んだ。[第二段階の対象UI検証](json-target-ui-validation.md)は別ブランチで進め、新PRマージ・デプロイ・macOS/iOS・実機操作は行わない。
+
 > 2026-10-30追加承認: PR #18マージと、検証ブランチでの段階的な本体接続が許可された。[接続結果](json-product-connection-validation.md)を参照。以下の旧「本体統合保留」は接続変更のmain取り込み/公開保留として扱う。新PRのマージ/デプロイ・macOS/iOS・実機操作は行わない。
 
 > 2026-10-27追記: PR #16取り込み後の[本体接続前の追加結果](json-integration-readiness-validation.md)と[接続設計](json-product-connection-design.md)を参照。本体統合保留とmacOS/iOS対象外は継続する。

@@ -1,5 +1,8 @@
 import {it,expect,vi} from 'vitest';
 import {JsonWorkerClient} from './JsonWorkerClient';
+import {initialJsonView} from './contracts';
+import {targetPage} from './targetUi';
+import {parseText} from './core.mjs';
 class FakeWorker {
   onmessage:((e:{data:unknown})=>void)|null=null;onerror:((e:unknown)=>void)|null=null;
   sent:Record<string,unknown>[]=[];terminated=false;
@@ -24,4 +27,18 @@ it('JC-02 unknown request IDs cannot resolve another file and disposal rejects u
 it('JC-02 incomplete convert payload cannot become a successful exportable result',async()=>{
   const w=new FakeWorker(),c=new JsonWorkerClient(()=>w as unknown as Worker);
   const pending=c.convert(file(),{pointer:'',style:'items'}).catch(e=>e.code);await Promise.resolve();w.reply({markdown:'incomplete'});expect(await pending).toBe('conversionFailed');c.dispose();
+});
+it('TU-11 aborted target requests reject and late replies cannot overwrite the current target',async()=>{
+  const w=new FakeWorker(),c=new JsonWorkerClient(()=>w as unknown as Worker),controller=new AbortController();
+  const first=c.target(file(),{pointer:'',style:'items'},initialJsonView(),false,controller.signal).catch(e=>e.name);
+  await Promise.resolve();const old=w.sent[0];controller.abort();expect(await first).toBe('AbortError');expect(w.terminated).toBe(false);
+  const next=c.target(file(),{pointer:'/b',style:'items'},initialJsonView());await Promise.resolve();
+  w.onmessage?.({data:{id:old.id,operation:'target',payload:{pointer:'/old'}}});
+  w.reply(targetPage(parseText('{"b":{}}'),{pointer:'/b',style:'items'},initialJsonView()));
+  expect((await next).pointer).toBe('/b');c.dispose();
+});
+it('TU-12 malformed target response is rejected instead of enabling confirmation',async()=>{
+  const w=new FakeWorker(),c=new JsonWorkerClient(()=>w as unknown as Worker);
+  const pending=c.target(file(),{pointer:'',style:'items'},initialJsonView()).catch(e=>e.code);await Promise.resolve();
+  w.reply({pointer:'',rows:[],styles:[]});expect(await pending).toBe('conversionFailed');c.dispose();
 });
