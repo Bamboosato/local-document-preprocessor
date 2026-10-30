@@ -1,6 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { ResultCard } from './components/ResultCard';
 import { SelectionDialog } from './components/SelectionDialog';
+import {JsonSelectionDialog} from './components/JsonSelectionDialog';
+import {JsonWorkerClient} from './json/JsonWorkerClient';
+import {defaultJsonSettings,isJsonFile,pointerLabel} from './json/contracts';
 import {
   ConverterWorkerClient,
   WorkerConversionError,
@@ -29,6 +32,7 @@ type ItemStatus =
   | 'cancelled';
 
 interface QueueItem {
+  settingsVersion?:number;
   id: string;
   name: string;
   size: number;
@@ -70,6 +74,7 @@ function selectionSummary(
 }
 
 function defaultOptions(inspection: DocumentInspection): ConversionOptions {
+  if(inspection.json)return {insertPageBreaks:false,json:{...defaultJsonSettings}};
   return {
     insertPageBreaks:
       inspection.selectionKind === 'pages' ||
@@ -85,10 +90,14 @@ export default function App() {
   const [selectionNotice, setSelectionNotice] = useState('');
   const [dialogItemId, setDialogItemId] = useState<string | undefined>();
   const workerClientRef = useRef<ConverterWorkerClient | undefined>(undefined);
+  const jsonClientRef=useRef<JsonWorkerClient|undefined>(undefined);
+  const documentClient=()=>workerClientRef.current??(workerClientRef.current=new ConverterWorkerClient());
+  const jsonClient=()=>jsonClientRef.current??(jsonClientRef.current=new JsonWorkerClient());
   const abortControllerRef = useRef<AbortController | undefined>(undefined);
   const inspectionAbortControllerRef = useRef<AbortController | undefined>(undefined);
   const inspectionGenerationRef = useRef(0);
   const runIdRef = useRef(0);
+  const convertingRef=useRef(false);
 
   const queuedCount = useMemo(
     () => items.filter((item) => item.status === 'queued' && item.file).length,
@@ -105,12 +114,13 @@ export default function App() {
       abortControllerRef.current?.abort();
       inspectionAbortControllerRef.current?.abort();
       workerClientRef.current?.dispose();
+      jsonClientRef.current?.dispose();
     },
     [],
   );
 
   const replaceSelection = (files: File[]) => {
-    if (isConverting) {
+    if (isConverting || convertingRef.current) {
       return;
     }
 
@@ -119,8 +129,10 @@ export default function App() {
     inspectionGenerationRef.current += 1;
     inspectionAbortControllerRef.current?.abort();
     inspectionAbortControllerRef.current = undefined;
+    jsonClientRef.current?.cancel();
     if (items.some((item) => item.status === 'inspecting')) {
       workerClientRef.current?.cancel();
+      jsonClientRef.current?.cancel();
     }
     const generation = inspectionGenerationRef.current;
     const nextItems = accepted.map<QueueItem>((file) => {
@@ -164,15 +176,13 @@ export default function App() {
     );
     if (inspectable.length === 0) return;
 
-    const client = workerClientRef.current ?? new ConverterWorkerClient();
-    workerClientRef.current = client;
     const controller = new AbortController();
     inspectionAbortControllerRef.current = controller;
 
     void (async () => {
       for (const item of inspectable) {
         try {
-          const inspection = await client.inspect(item.file, controller.signal);
+          const inspection = await (isJsonFile(item.name)?jsonClient():documentClient()).inspect(item.file, controller.signal);
           if (generation !== inspectionGenerationRef.current) return;
           setItems((current) =>
             current.map((currentItem) =>
@@ -183,6 +193,7 @@ export default function App() {
                     inspection,
                     selection: { mode: 'all' },
                     options: defaultOptions(inspection),
+                    settingsVersion:0,
                   }
                 : currentItem,
             ),
@@ -207,12 +218,12 @@ export default function App() {
     })();
   };
 
-  const patchItem = (id: string, patch: Partial<QueueItem>, runId: number) => {
+  const patchItem = (id: string, patch: Partial<QueueItem>, runId: number,settingsVersion:number|undefined) => {
     if (runId !== runIdRef.current) {
       return;
     }
     setItems((current) =>
-      current.map((item) => (item.id === id ? { ...item, ...patch } : item)),
+      current.map((item) => (item.id === id&&item.settingsVersion===settingsVersion ? { ...item, ...patch } : item)),
     );
   };
 
@@ -228,42 +239,42 @@ export default function App() {
         Boolean(item.selection) &&
         Boolean(item.options),
     );
-    if (runnable.length === 0 || isConverting || isInspecting) {
+    if (runnable.length === 0 || isConverting || convertingRef.current || isInspecting || dialogItemId) {
       return;
     }
 
-    const client = workerClientRef.current ?? new ConverterWorkerClient();
-    workerClientRef.current = client;
     const abortController = new AbortController();
     abortControllerRef.current = abortController;
     const runId = runIdRef.current + 1;
     runIdRef.current = runId;
+    convertingRef.current=true;
     setIsConverting(true);
 
     try {
       await processSequentially(
         runnable,
-        (item, signal) => client.convert(item.file, item.selection, item.options, signal),
+        (item, signal) => isJsonFile(item.name)?jsonClient().convert(item.file,item.options.json??defaultJsonSettings,signal):documentClient().convert(item.file, item.selection, item.options, signal),
         {
           onStart: (item) =>
-            patchItem(item.id, { status: 'converting', errorCode: undefined }, runId),
+            patchItem(item.id, { status: 'converting', errorCode: undefined }, runId,item.settingsVersion),
           onSuccess: (item, result) => {
             const status =
               result.quality.disposition === 'success'
                 ? 'completed'
                 : result.quality.disposition;
-            patchItem(item.id, { status, result }, runId);
+            patchItem(item.id, { status, result }, runId,item.settingsVersion);
           },
           onError: (item, error) => {
             const errorCode =
               error instanceof WorkerConversionError ? error.code : 'unknown';
-            patchItem(item.id, { status: 'failed', errorCode }, runId);
+            patchItem(item.id, { status: 'failed', errorCode }, runId,item.settingsVersion);
           },
         },
         abortController.signal,
       );
     } finally {
       if (runId === runIdRef.current) {
+        convertingRef.current=false;
         setIsConverting(false);
         abortControllerRef.current = undefined;
       }
@@ -271,14 +282,16 @@ export default function App() {
   };
 
   const cancelConversion = () => {
-    if (!isConverting) {
+    if (!isConverting && !convertingRef.current) {
       return;
     }
 
     runIdRef.current += 1;
+    convertingRef.current=false;
     abortControllerRef.current?.abort();
     abortControllerRef.current = undefined;
     workerClientRef.current?.cancel();
+    jsonClientRef.current?.cancel();
     setItems((current) =>
       current.map((item) =>
         item.status === 'queued' || item.status === 'converting'
@@ -290,7 +303,8 @@ export default function App() {
   };
 
   const clearAll = () => {
-    if (isConverting) {
+    jsonClientRef.current?.cancel();
+    if (isConverting || convertingRef.current) {
       cancelConversion();
     }
     inspectionGenerationRef.current += 1;
@@ -383,7 +397,7 @@ export default function App() {
             <span className="drop-icon" aria-hidden="true">↓</span>
             <strong>ファイルをここにドロップ</strong>
             <span>またはクリックして選択</span>
-            <small>Word / PowerPoint / Excel / OpenDocument / RTF / EPUB / CSV / PDF</small>
+            <small>Word / PowerPoint / Excel / OpenDocument / RTF / EPUB / CSV / PDF / JSON</small>
           </label>
           <ul className="boundary-info" aria-label="利用上の注意">
             <li>
@@ -435,7 +449,7 @@ export default function App() {
                           <div className="selection-summary">
                             <span>
                               <strong>変換範囲</strong>
-                              <small>{selectionSummary(item.inspection, item.selection)}</small>
+                              <small>{item.inspection.json?`JSON ${pointerLabel(item.options?.json?.pointer??'')} / ${item.options?.json?.style??'items'}`:selectionSummary(item.inspection, item.selection)}</small>
                             </span>
                             <button
                               type="button"
@@ -462,6 +476,7 @@ export default function App() {
                                           ? {
                                               ...currentItem,
                                               options: { insertPageBreaks },
+                                              settingsVersion:(currentItem.settingsVersion??0)+1,
                                               status: 'queued',
                                               result: undefined,
                                               errorCode: undefined,
@@ -495,7 +510,7 @@ export default function App() {
                 <button
                   type="button"
                   className="primary-button"
-                  disabled={queuedCount === 0 || isConverting || isInspecting}
+                  disabled={queuedCount === 0 || isConverting || isInspecting || Boolean(dialogItemId)}
                   onClick={startConversion}
                 >
                   {isConverting ? '逐次変換中…' : `${queuedCount} ファイルを変換`}
@@ -533,7 +548,7 @@ export default function App() {
             <div className="result-list">
               {resultItems.map((item) => (
                 <ResultCard
-                  key={item.id}
+                  key={`${item.id}:${item.settingsVersion??0}`}
                   id={item.id}
                   fileName={item.name}
                   originalUpdatedAt={item.originalUpdatedAt}
@@ -544,7 +559,12 @@ export default function App() {
           </section>
         )}
       </main>
-      {dialogItem && (
+      {dialogItem && dialogItem.inspection.json && dialogItem.file && <JsonSelectionDialog
+        key={dialogItem.id} file={dialogItem.file} client={jsonClient()} settings={dialogItem.options?.json}
+        onCancel={()=>setDialogItemId(undefined)}
+        onConfirm={settings=>{setItems(current=>current.map(item=>item.id===dialogItem.id?{...item,settingsVersion:(item.settingsVersion??0)+1,options:{insertPageBreaks:false,json:settings},status:'queued',result:undefined,errorCode:undefined}:item));setDialogItemId(undefined);}}
+      />}
+      {dialogItem && !dialogItem.inspection.json && (
         <SelectionDialog
           key={dialogItem.id}
           fileName={dialogItem.name}
@@ -558,6 +578,7 @@ export default function App() {
                   ? {
                       ...item,
                       selection,
+                      settingsVersion:(item.settingsVersion??0)+1,
                       status: 'queued',
                       result: undefined,
                       errorCode: undefined,

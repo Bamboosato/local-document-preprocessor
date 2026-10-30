@@ -1,5 +1,7 @@
 # JSON図表示の採用決定と今回の対象範囲
 
+> 2026-10-30追加承認: PR #18マージと、検証ブランチでの段階的な本体接続が許可された。[接続結果](json-product-connection-validation.md)を参照。以下の旧「本体統合保留」は接続変更のmain取り込み/公開保留として扱う。新PRのマージ/デプロイ・macOS/iOS・実機操作は行わない。
+
 > 2026-10-27追記: PR #16取り込み後の[本体接続前の追加結果](json-integration-readiness-validation.md)と[接続設計](json-product-connection-design.md)を参照。本体統合保留とmacOS/iOS対象外は継続する。
 
 決定日: 2026-10-26、採用変更: 2026-10-30。ユーザー指示によりknowledge-board同等の標準Mermaid表示へ変更する。[最新設計](json-standard-mermaid-design.md)と[検証計画](json-standard-mermaid-plan.md)を優先する。旧独自SVG報告は履歴として保持し、新方式の成功へ流用しない。

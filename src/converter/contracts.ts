@@ -2,6 +2,7 @@ export const MAX_FILE_SIZE_BYTES = 50 * 1024 * 1024;
 export const MAX_FILE_COUNT = 20;
 
 export const SUPPORTED_EXTENSIONS = [
+  '.json',
   '.doc',
   '.docx',
   '.docm',
@@ -26,6 +27,7 @@ export const SUPPORTED_EXTENSIONS = [
 ] as const;
 
 export type ConversionErrorCode =
+  | 'jsonInvalid'
   | 'unsupported'
   | 'malformed'
   | 'encrypted'
@@ -64,7 +66,7 @@ export interface ConversionQuality {
   reviewRequired: true;
   disposition: ConversionDisposition;
   safeToExport: boolean;
-  extractionSource: 'anydoc' | 'pdfium_fallback';
+  extractionSource: 'anydoc' | 'pdfium_fallback' | 'json';
   outputCharacterCount: number;
   pageCount?: number;
   pagesWithoutText?: number;
@@ -85,6 +87,7 @@ export interface SheetInfo {
 }
 
 export interface DocumentInspection {
+  json?: boolean;
   selectionKind: SelectionKind;
   supportsSelection: boolean;
   totalUnits?: number;
@@ -100,6 +103,7 @@ export type DocumentSelection =
 
 export interface ConversionOptions {
   insertPageBreaks: boolean;
+  json?: import('../json/contracts').JsonSettings;
 }
 
 export const DEFAULT_CONVERSION_OPTIONS: Readonly<ConversionOptions> = {
@@ -112,6 +116,7 @@ export interface ConverterOutput {
 }
 
 export interface ConversionResult extends ConverterOutput {
+  jsonDiagram?: {code:string};
   plainText: string;
   quality: ConversionQuality;
 }

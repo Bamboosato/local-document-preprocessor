@@ -12,7 +12,7 @@
 
 ## 対応形式
 
-Word、PowerPoint、Excel、OpenDocument、RTF、EPUB、CSV、機械可読テキストを含む PDF。詳細は [要件定義](docs/requirements.md) を参照してください。
+Word、PowerPoint、Excel、OpenDocument、RTF、EPUB、CSV、機械可読テキストを含む PDF。検証ブランチではJSON専用Workerによる対象設定・3スタイル・標準Mermaid表示を本体へ接続しています。[第一段階の報告](docs/json-product-connection-validation.md)と[要件定義](docs/requirements.md)を参照してください。JSON接続のmain取り込み・公開は未承認です。
 
 入力受付形式と実ファイル検証済み範囲は異なります。未検証形式は [検証記録](docs/validation-report.md) を参照してください。
 
@@ -22,6 +22,7 @@ Word、PowerPoint、Excel、OpenDocument、RTF、EPUB、CSV、機械可読テキ
 | `.pptx`, `.pptm`, `.ppsx`, `.ppsm` | 連続スライド範囲 | 既定オン、選択 N スライドの間に N-1 件の独立行 `---` |
 | `.xlsx`, `.xlsm` | 1 件以上のシート（非表示状態も表示） | ページ区切り設定なし |
 | `.docx` | 文書全体 | 本文の明示 `w:br type="page"` を検出した場合だけ設定を表示し、既定オン |
+| `.json`（接続検証中） | ファイル全体または単一object/array。階層ごと最大300行のページ閲覧 | ページ区切りなし。項目表/一覧表/Mermaid。UI全受入・PWA/実機は残件 |
 | その他の受付形式 | 文書全体 | ページ境界を推測しない |
 
 DOCX の自動改ページ、`w:pageBreakBefore`、セクション区切りは推測しません。plain text にはページ区切りの `---` を残しません。範囲・区切り設定はファイルごとに保持し、変更すると旧結果を破棄します。
@@ -87,8 +88,8 @@ E2E は文書だけなら未実施、PWA / UI / 品質変更なら対象ケー�
 
 - [開発・テスト設計ルール](AGENTS.md)
 - [要件定義](docs/requirements.md)
-- [JSON入力追加 要件定義 v0.2（設計・未実装）](docs/local-document-preprocessor-json-requirements-v0.2.md)
-- [JSON入力追加 画面設計 v0.2（設計・未実装）](docs/local-document-preprocessor-json-screen-design-v0.2.md)
+- [JSON入力追加 要件定義 v0.2（段階的接続検証中）](docs/local-document-preprocessor-json-requirements-v0.2.md)
+- [JSON入力追加 画面設計 v0.2（全UI受入は未完）](docs/local-document-preprocessor-json-screen-design-v0.2.md)
 - [JSON入力追加 Codex向け作業指示書](docs/json-input-codex-instructions.md)
 - [ADR-0001](docs/adr/0001-browser-only-anydoc-wasm.md)
 - [ADR-0002](docs/adr/0002-pdf-objective-text-verification.md)

@@ -1,5 +1,9 @@
 # JSON入力追加 Codex向け作業指示書
 
+> 2026-10-30残件整理: [現行残件台帳](json-current-backlog.md)を作業予定の正とする。旧方式固有の改善/強制中断/ズーム/旧CSP・旧独立PWA整備は「方式変更により対象外」としてクローズ。以下の旧指示や旧報告の残件欄をそのまま再開しない。過去証跡は履歴として保持し、現行本体に必要なCUR-01～05だけを進める。
+
+> 2026-10-30追加承認: PR #18のみマージ後、本体接続を新しい検証ブランチで段階的に進めることが許可された。[第一段階計画](json-product-connection-plan.md)と[結果・残件](json-product-connection-validation.md)を優先する。以下の「本体統合保留」はmainへの接続変更取り込み/公開保留として読み替える。新PRマージ・デプロイ・macOS/iOS・実機操作は対象外。
+
 > 2026-10-30採用変更: [標準Mermaid設計](json-standard-mermaid-design.md)・[計画](json-standard-mermaid-plan.md)を最新基準とする。knowledge-board同等の表示へ変更し、独自SVG・5秒強制中断・図内ズームを必須外とする。以下の旧表示方式指示は履歴であり、新方式の受入へ流用しない。本体統合保留・macOS/iOS対象外・実機ユーザー別途・マージ/デプロイ禁止は維持。
 
 > 2026-10-27追記: PR #16取り込み後の[接続前設計・共存検証結果](json-integration-readiness-validation.md)を参照。本体統合保留、macOS/iOS対象外、マージ・デプロイ禁止を継続する。

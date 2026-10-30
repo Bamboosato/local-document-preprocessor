@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect,useRef,useState } from 'react';
 import type {
   ConversionDisposition,
   ConversionResult,
@@ -10,6 +10,7 @@ import {
   outputFileName,
 } from '../utils/files';
 import { MarkdownPreview } from './MarkdownPreview';
+import {JsonDiagram} from './JsonDiagram';
 
 interface ResultCardProps {
   id: string;
@@ -33,23 +34,26 @@ const QUALITY_HEADINGS: Record<ConversionDisposition, string> = {
 };
 
 export function ResultCard({ id, fileName, originalUpdatedAt, result }: ResultCardProps) {
+  const liveResult=useRef<ConversionResult|undefined>(result);
+  liveResult.current=result;
+  useEffect(()=>{liveResult.current=result;return()=>{liveResult.current=undefined;};},[result]);
   const [activeOutput, setActiveOutput] = useState<OutputKind>('markdown');
   const [notice, setNotice] = useState('');
   const text = activeOutput === 'markdown' ? result.markdown : result.plainText;
   const outputLabel = activeOutput === 'markdown' ? 'Markdown' : 'plain text';
 
   const handleCopy = async () => {
-    if (!result.quality.safeToExport) return;
+    if (!result.quality.safeToExport || liveResult.current!==result) return;
     try {
       await copyText(text);
-      setNotice(`${outputLabel} をコピーしました。`);
+      if(liveResult.current===result)setNotice(`${outputLabel} をコピーしました。`);
     } catch {
-      setNotice('コピーできませんでした。ブラウザの権限を確認してください。');
+      if(liveResult.current===result)setNotice('コピーできませんでした。ブラウザの権限を確認してください。');
     }
   };
 
   const handleDownload = () => {
-    if (!result.quality.safeToExport) return;
+    if (!result.quality.safeToExport || liveResult.current!==result) return;
     const isMarkdown = activeOutput === 'markdown';
     const downloadContent = isMarkdown
       ? markdownDownloadContent(text, fileName, originalUpdatedAt)
@@ -123,7 +127,7 @@ export function ResultCard({ id, fileName, originalUpdatedAt, result }: ResultCa
 
           <div className="preview-shell" role="tabpanel">
             {activeOutput === 'markdown' ? (
-              <MarkdownPreview markdown={result.markdown} />
+              result.jsonDiagram?<JsonDiagram code={result.jsonDiagram.code}/>:<MarkdownPreview markdown={result.markdown} />
             ) : (
               <pre className="plain-preview">{result.plainText}</pre>
             )}

@@ -1,5 +1,9 @@
 # JSON要件・コード・証拠・残件の対応表
 
+> 2026-10-30残件整理: 現行の残件は[現行台帳](json-current-backlog.md)を正とする。旧方式固有OLD-01～06は「方式変更により対象外」でクローズ。本書の以降の表は当時の証拠対応と当時の残件の履歴であり、現行の未完了一覧ではない。旧欄の方式採用/Safari/独自図/旧PWA等を再び必須作業へ取り込まない。
+
+> 2026-10-30追加: [本体接続の第一段階](json-product-connection-validation.md)のJC-01/02は専用adapter/client、JC-03/04は本体設定/キュー/標準表示/出力/取消の対象証拠。G-01全受入・展開型ツリー・全UI-26・G-02実メモリ・PWA二世代更新/実機/配布承認の完了にはしない。
+
 > 2026-10-30: [標準Mermaid報告](json-standard-mermaid-validation.md)が新しい表示基準の証拠。以下の旧SVG/iframe証拠は当時の履歴として保持。SM-01～08は新G-04/UI-24の表示・安全・上限・旧応答・回復の証拠に限定し、本体UI-26・実機/PWA・配布承認は未確認。
 
 > 2026-10-27追加: [接続前設計・共存検証結果](json-integration-readiness-validation.md)のIC-01/05/07はG-04のWASM/CSP共存、IC-02/03は混在逐次処理・取消、IC-04はJ-AC-11の出力純粋関数、IU-01～04はWASM込み更新/失敗維持、IC-L01は配布出典の独立証拠。製品UI-26、実PWA、配布条件全体の受入完了にはしない。
@@ -12,7 +16,7 @@
 
 旧証拠は[初回](json-gates-validation.md)・[代替初版](json-g04-alternative-validation.md)・[追加結果](json-g04-followup-validation.md)。今回の実行条件・成否は[今回の報告](json-product-readiness-validation.md)。表の試験IDは対応先を示し、全受入条件を今回完了した主張ではない。
 
-## ゲート
+## 履歴: ゲートと当時の残件
 
 |要件ID|関連コード|既存証拠|今回の検証|残件|
 |---|---|---|---|---|
@@ -21,7 +25,7 @@
 |G-03|app.mjs、index.html、style.css|PCの行数・位置復元・適合復帰|G03-01～03の対象再現|実Safari・読み上げ・実ズーム・タッチ、DEV-04～07|
 |G-04|diagram-worker-host.mjs、validation-worker.mjs、layout-worker.mjs|旧iframe未達、後続ALT48件は過去結果|ALT回帰、PR-01～08、SW-01～05、PR-B01|方式採用、製品CSP、実PWA更新・Safari、DEV-08～11|
 
-## J-AC受入条件
+## 履歴: J-AC受入条件と当時の残件
 
 |ID|関連コード|既存証拠／今回対応試験|残件|
 |---|---|---|---|
