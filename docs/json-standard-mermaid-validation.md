@@ -39,6 +39,12 @@ E2E選定は新しい表示経路の対象ケースをChrome/Edgeでクロスブ
 
 ## 判明した制約と残件
 
+## CI結果
+
+[CI #32](https://github.com/Bamboosato/local-document-preprocessor/actions/runs/40995546870)はhead `221176c909dc106d67a49e873810692aba37f688`でVerify / JSON prototype checksともsuccess。新方式Chromium SM-01～08、製品単体63件・E2E14件、旧試作単体28・DS8・SL11・配布物各2、既存表示/共存/更新検査も成功した。root/prototypeのproduction・全依存監査は検出0件。製品E2E全件は既存selectorの共通/未分類変更判定によるもので、今後の全件既定化を意味しない。CIのUbuntu/Chromium成功をユーザー実機の成功には読み替えない。
+
+## 制約の詳細
+
 検出・修正した問題: 初期サニタイズはCSSの@規則をすべて除去し、標準テーマに含まれるkeyframesまで失っていた。文字/辺数だけの検査では見た目の欠落を検出できず、SM-01にstyle存在とcomputed fillの検査を加えて両ブラウザーで再現した。分類は実装問題とテスト観点不足。keyframes/mediaだけを許可し、import/font-face/エスケープCSS/外部URLの拒否を維持した。SM-03にも安全なkeyframesの保持を追加し、修正後の通し16件が成功した。
 
 全親子辺の検査も追加した。初期テストはSVG idのrender世代prefixを見落として失敗したため、生成されたdata-idの連番端点を照合するよう修正した（テストのデータ形式理解不足）。ノード/辺数だけを一致証明とせず、すべての親子接続を確認する。
