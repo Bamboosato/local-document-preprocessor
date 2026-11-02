@@ -51,7 +51,7 @@
 前提: 先に対象commit・生成物・配布origin・HTTPS・origin直下の配置・検証担当を固定する。個人文書やPIIを使わず、fixture ID、hash、HTTP状態、MIME、時刻、世代ID、版だけを記録する。未公開候補を公開する必要がある場合は、具体的な配信先・対象・公開範囲を提示して別途承認を得る。今回その公開や配信先への書込みは行わない。
 
 1. **基準を固定:** 既存の検証済みビルドと `pwa-manifest.json`、SW埋込みmanifest、indexの世代ID、各原文のinventory、別提供物のhashを保管する。固定commitと生成環境、ビルド単位を記録する。SW自身はブラウザー更新機構で取得され、公開manifestの一覧対象ではないため別に照合する。
-2. **HTTPとbytes:** 一覧の全静的資産について、同一origin・クエリなしGETの最終状態、redirect、MIME、サイズ、SHA-256を期待値と照合する。HTTP 200だけを成功にせず、アプリHTMLへのフォールバックやgzip等の転送による表現差を区別する。SWの期待MIMEはJS `text/javascript` または `application/javascript`、CSS `text/css`、WASM `application/wasm`、HTML `text/html`。他形式は配信先で定めた期待値も別途記録する。外部リンクは対象と範囲を事前に明示して確認する。
+2. **HTTPとbytes:** 一覧の全静的資産について、同一origin・クエリなしGETの最終状態、redirect、MIME、サイズ、SHA-256を期待値と照合する。HTTP 200だけを成功にせず、アプリHTMLへのフォールバックを検出する。gzip等の転送時は復号後のresponse bodyをmanifestのbytes/hashと比較し、圧縮後の `Content-Length` をそのまま期待サイズと比較しない。SWの期待MIMEはJS `text/javascript` または `application/javascript`、CSS `text/css`、WASM `application/wasm`、HTML `text/html`。他形式は配信先で定めた期待値も別途記録する。外部リンクは対象と範囲を事前に明示して確認する。
 3. **原文/告知/ソース:** 画面のリンクから原文・NOTICEの本文と版を確認し、決定済みのソース提供先がある場合はその版・hash・範囲・取得方法を確認する。404、本文がHTML、対象外版、権限拒否を失敗として記録。未確定のELK生成元やWASM内包物をこの確認で証明したことにしない。
 4. **更新・回復:** 保存済み合成結果のある旧タブを2つ開き、新世代の待機、旧結果保持、全旧タブ/PWA終了後の新世代適用を確認する。資産欠落/配信不能を分離し、誤った成功表示がなく、復帰後に明示再取得できることを確認する。検証環境の障害注入は専用環境で行い、他利用者の配信を変更しない。
 5. **オフライン・実機:** 準備完了と制御状態を確認後、通信断で未使用のJSON/図/WASMと原文を確認する。インストール済みPWA・容量・休止復帰・読み上げ/倍率/タッチはユーザーのWindows実機手順へ渡す。[実機手順](pwa-generation-validation.md)を参照し、対象外のmacOS/iOSへ結果を一般化しない。
