@@ -9,7 +9,7 @@ import {buildPwaManifest} from './build-pwa-manifest.mjs';
 const source=await readFile(new URL('../public/sw.js',import.meta.url),'utf8'),origin='https://pwa.invalid';
 const digest=value=>createHash('sha256').update(value).digest('hex');
 function harness({id='a'.repeat(24),store=new Map(),fault={},network={}}={}){
-  const bodies={'/index.html':['<html>A</html>','text/html'],'/assets/a.js':['export const version="A";','text/javascript'],'/assets/a.wasm':['binary-A','application/wasm']};
+  const bodies={'/index.html':['<html>A</html>','text/html'],'/assets/a.js':['export const version="A";','text/javascript'],'/assets/a.wasm':['binary-A','application/wasm'],'/licenses/@scope__pkg@1/LICENSE':['fixture license','text/plain']};
   const assets=Object.entries(bodies).map(([url,[body]])=>({url,sha256:digest(body),bytes:Buffer.byteLength(body)}));
   const key=request=>new URL(typeof request==='string'?request:request.url,origin).href;
   const cache=name=>({
@@ -29,7 +29,7 @@ function harness({id='a'.repeat(24),store=new Map(),fault={},network={}}={}){
 }
 test('PW-01 install verifies all assets and status; activation cleans only owned old generations',async()=>{
   const h=harness();h.store.set('ldp-static-old',new Map());h.store.set('unrelated-cache',new Map());await h.dispatch('install');
-  assert.equal((await h.message('LDP_STATUS')).complete,true);assert.equal(h.fetches.length,3);await h.dispatch('activate');assert.equal(h.store.has('ldp-static-old'),false);assert.equal(h.store.has('unrelated-cache'),true);
+  assert.equal((await h.message('LDP_STATUS')).complete,true);assert.equal(h.fetches.length,4);await h.dispatch('activate');assert.equal(h.store.has('ldp-static-old'),false);assert.equal(h.store.has('unrelated-cache'),true);
   await h.cache().put('/__ldp_static_ready__',new Response('wrong-generation'));assert.equal((await h.message('LDP_STATUS')).complete,false);
 });
 test('PW-02 corrupt update rolls back only the new cache and preserves the active generation',async()=>{
@@ -69,4 +69,10 @@ test('PW-09 build inventory is deterministic and includes unvisited lazy assets 
 });
 test('PW-10 activation does not collect a later installing or waiting generation',async()=>{
   const h=harness();await h.dispatch('install');h.store.set('ldp-static-future',new Map());h.self.registration={waiting:{}};await h.dispatch('activate');assert.equal(h.store.has('ldp-static-future'),true);
+});
+test('PW-11 literal and encoded at-signs address the same verified cached license',async()=>{
+  const h=harness();await h.dispatch('install');h.fetches.length=0;
+  assert.equal(await(await h.request('/licenses/@scope__pkg@1/LICENSE','navigate')).text(),'fixture license');
+  assert.equal(await(await h.request('/licenses/%40scope__pkg%401/LICENSE','navigate')).text(),'fixture license');
+  assert.equal(h.fetches.length,0);
 });

@@ -5,7 +5,7 @@ const READY='/__ldp_static_ready__';
 const entries=new Map((BUILD?.assets??[]).map(asset=>[asset.url,asset]));
 const origin=self.location.origin;
 let degraded=false;
-function pathOf(url){try{return url.pathname.split('/').map(segment=>encodeURIComponent(decodeURIComponent(segment))).join('/');}catch{return '';}}
+function pathOf(url){try{return url.pathname.split('/').map(segment=>encodeURIComponent(decodeURIComponent(segment)).replace(/%40/gi,'@')).join('/');}catch{return '';}}
 function isStaticAsset(url){return url.search === '' && entries.has(pathOf(url));}
 function appPath(url){const path=pathOf(url);return path==='/'?'/index.html':path;}
 async function valid(response,entry){
