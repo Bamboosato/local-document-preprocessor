@@ -28,7 +28,7 @@
 |CUR-01・1|PR #20をマージ済み|展開型仮想ツリー/50件ページ/位置復元/詳細/適合理由をmainへ接続。[第二段階の結果](json-target-ui-validation.md)を参照。実機はCUR-05|
 |CUR-02・2|PR #21をマージ済み|[状態・保持量・故障回復の報告](json-state-recovery-validation.md)。UI-01〜26、20ファイル、混在PDF取消、世代/設定照合、中断可能読込、50MiB/10万ノードと完了結果・両WASM/図の反復を検証。全環境の一括受入ではなく、全プロセス/実負荷はCUR-05|
 |CUR-03・3|PR #22マージ済み、実機は後日|[PWA世代固定・回復の報告と実機手順](pwa-generation-validation.md)。保存拒否・容量不足は故障注入。実インストール/復帰/実容量はCUR-05|
-|CUR-04・4|調査中/こちら|[配布条件の途中報告](distribution-license-review.md)。233 package inventoryは保守的候補で最小リンク一覧ではない。対応ソース・告知・製品画面からの到達性と未証明の内包物を引き続き照合する|
+|CUR-04・4|設計レビュー/こちら|[配布物・告知の対応表、提供方式、配布先検証手順](distribution-delivery-plan.md)。233 package inventoryは保守的候補で最小リンク一覧ではない。対応ソースと告知範囲、配布先、実配信・公開判断は未決定|
 |CUR-05・並行|未実施/ユーザー、前提整備はこちら|Windows読み上げ・実ブラウザー200%倍率・対応機タッチ・復帰と、安全な実負荷/インストール済みPWA。現行UI/パッケージの前提が整った項目から別途実施。旧手順をそのまま転用しない|
 
 CUR-02の文書混入/未検証出力、CUR-03の世代混在/回復不能は致命・重大リスクを優先して検査する。CUR-01の操作不能や警告不可視も重大として扱う。第一段階の成功証拠は保持し、既に確認済みのCSP共存・基本変換/出力を理由なく未着手へ戻さない。
@@ -41,6 +41,6 @@ CUR-04で**現行バンドルに存在するもの**とその配布方法を確�
 
 ## 対象外・権限と履歴
 
-ユーザーの追加承認によりPR #22をマージし、mainを同期した（`a6642c3bcc0bc53a0e2e121f381bc9ea0b03b6d7`）。CUR-04の変更は `codex/distribution-license-review` のレビュー用PRまで。macOS/iOSは対象外、実機はユーザー別途。新PRのマージ・デプロイ、main自動デプロイ再有効化は行わない。
+ユーザーの追加承認によりPR #23をマージし、mainを同期した（`f0f2a8e3c10addadc8f033e5055cef864eaf5e6c`）。CUR-04の本追補は `codex/distribution-delivery-plan` のレビュー用PRまで。macOS/iOSは対象外、実機はユーザー別途。アーカイブの公開・添付、新PRのマージ・デプロイ、main自動デプロイ再有効化は行わない。
 
 旧[初回](json-gates-validation.md)・[代替](json-g04-alternative-validation.md)・[後続](json-g04-followup-validation.md)・[採用検証](json-adoption-followup-validation.md)・[接続前共存](json-integration-readiness-validation.md)・[出典/原文](json-source-license-validation.md)の内容と証跡は、各実施時点の履歴として保持する。履歴の「残件」はその時点の記述であり、現行の作業指示は本書のCUR-01～05だけとする。
