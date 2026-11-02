@@ -33,7 +33,7 @@
 
 - Windowsの `npm run check`: 単体/Component 121件、SW 10件、ビルド・配布物検査成功。その後のURL修正ではSW 11件とビルド・配布物検査を再実行。追加E2EはChromiumで1件成功。文書検査は62文書・249リンク・0件問題、監査ポリシー12件成功、依存脆弱性は本番/全依存とも0件（検査時点）。
 - ビルド出力は443静的資産、約24.5MB。列挙した原文の全hashを確認した。npm installからのクリーン環境再現ではない。
-- 変更がSWに及ぶため、Chrome/EdgeのPWA対象6件ずつをWindowsで直列実行し、両方成功（Chrome 1.9分、Edge 2.2分）。通常の全E2E、Firefox、実インストール済みPWA/実容量、macOS/iOSは今回未実施。自動化成功は実機・本番配信の証明ではない。
+- 変更がSWに及ぶため、Chrome/EdgeのPWA対象6件ずつをWindowsで直列実行し、両方成功（Chrome 1.9分、Edge 2.2分）。ローカルでの全E2E、Firefox、実インストール済みPWA/実容量、macOS/iOSは未実施。PRのCI結果はChecksを参照する。自動化成功は実機・本番配信の証明ではない。
 
 ## 条件と残る確認
 
