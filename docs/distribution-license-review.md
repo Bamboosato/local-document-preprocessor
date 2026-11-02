@@ -23,6 +23,26 @@
 |anydoc WASM 0.1.7|npmパッケージのMIT原文|[npmアーカイブ](https://registry.npmjs.org/@firecrawl/anydoc-wasm/-/anydoc-wasm-0.1.7.tgz)と[上流調査](json-source-license-validation.md)。Rust依存候補96件と実WASMの完全対応は未証明|
 |PDFium wrapper 2.14.4|wrapper MITと同梱PDFium Apache-2.0原文|[npmアーカイブ](https://registry.npmjs.org/@embedpdf/pdfium/-/pdfium-2.14.4.tgz)と[上流調査](json-source-license-validation.md)。実リンクgraphと内包物の網羅性は未証明|
 
+## 追加照合: バイト・ソース参照・原文の対応
+
+2026-11-02に、PR #23のローカルビルド出力と保存済み[公開WASM対応記録](evidence/json-published-wasm-correspondence.json)・[収集原文](third-party-source-licenses/)を照合した。次の「確認済み」は対象を指定したバイト/参照の一致であり、配布条件の最終承認や全リンク構成の証明ではない。
+
+|対象|確認済み|候補・未証明|
+|---|---|---|
+|ELK / elkjs 0.9.3|標準図でELK chunkが取得される。配布一覧にELK由来chunk 2件、npm原文 `LICENSE.md`（SHA-256 `89591d4578fb1ebd91501312a3d25f021bd865a2e436641c1cf7b1bc3c1617`）。[0.9.3リリース](https://github.com/kieler/elkjs/releases/tag/0.9.3)はELK 0.9.1と#955を記載。elkjs側commitは `a8304cf79fde75bc2ab1a89d28320f53f8637436`。保存したELK原文2件は記録hashと一致|ELK側 `7ca51784e42a24201f29bc13e458728b6fc61cdc` と `9bc93474e1dc649450e8c97abb45d16b7c88e35b` は直接ソース候補。実checkout・生成依存・公開chunkとの完全な生成対応は不明。[追跡記録](evidence/json-elk-source-trace.json)参照。npm原文があることは編集用ソース全体の提供を意味しない|
+|anydoc WASM 0.1.7|配布WASMと導入済みnpm内WASMのSHA-256は共に `409e45e75062df06bed445c352ffddaf3bae15ff376f5d514d45f4891debd09e`。保存済み公開tarball内bytesとも一致。既存の署名検証済みprovenanceは[固定source commit](https://github.com/firecrawl/anydoc/tree/4a45addbd607e8b59f0c263bca26aab228e10370)と公開workflowを参照。実際のHTTP APIでもcommitの存在を確認。保存したRust target候補195原文のhash不一致0件|target候補96依存は固定sourceのCargo解決結果で、実WASMのリンク一覧ではない。公開run APIは引き続きqueued・conclusionなしであり、成功ビルドログとは扱わない。コンパイラ/lock/実リンク内容と全告知の一致は不明|
+|PDFium wrapper 2.14.4|配布WASMと導入済みnpm内WASMのSHA-256は共に `c0af5a6aca30d7e54a149c3a68e317116ca906d6edc28fd3318b12c7d9478ac8`。保存済み公開tarballとviewer tag内bytesの一致記録あり。npm wrapperのMIT原文と `LICENSE.pdfium` を同梱し、保存したsource/DEPS候補29原文のhash不一致0件|[固定DEPS原文](https://raw.githubusercontent.com/embedpdf/pdfium/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/DEPS)は取得可能。2026-11-02時点の旧commit GitHub APIは移動応答で、新しい取得先の同等性は未確認。viewerのrelease run成功は確認できたが、保存済み調査ではjob log HTTP 410・artifact 0件。実submodule/ビルド引数/リンクgraphは不明|
+
+3対象の保存原文は合計226件で全hash一致。これらはリポジトリ内の調査証跡であり `dist/licenses/dependencies/` に同じパスで一括収録されるわけではない。npm原文一覧内の任意ファイルと同じhashを持つ件数は、anydoc候補195件中5件、PDFium候補29件中0件、ELK候補2件中2件。汎用的な同一ライセンス文の重複もあり、この件数から実内包物や法的に必要な原文の件数は決められない。
+
+### 次の最小作業と受入条件
+
+1. **こちらで可能な照合**: 実配布候補に使う固定版ごとに、実行資産のhash、公開tarball/署名記録、source候補、同梱/調査用原文とNOTICEの所在、告知候補を一つの対応表に固定する。受入条件は各欄に証拠へのリンクと「一致/候補/不明」を付け、不明を空欄や成功にしないこと。ELK chunkからの再現やWASMリンクgraphは、そのための証拠が得られない限り不明のままにする。
+2. **実配信・実機**: 公開前の実配信先でhash/MIME/案内先とソース取得先の到達性を確認し、ユーザーがWindowsのインストール済みPWA・オフライン・実容量を確認する。受入条件は対象バージョン・ブラウザー・配信元・操作順・結果を記録すること。macOS/iOSは対象外。
+3. **配布判断**: 実際に含まれる対象物について、原文/NOTICEの提供場所、EPL該当時の対応ソースと取得方法、二重ライセンスの選択、未証明の許容可否を判断する。受入条件は、選んだ配布形態と対象バージョンに対し、根拠と責任者の判断が記録されること。権利者への連絡や承認取得は今回行っていない。
+
+実装検証head `12658041a87049e9ab401d3f8a6514c893d06c4f` の[CI](https://github.com/Bamboosato/local-document-preprocessor/actions/runs/41377275454)は両ジョブ成功し、UbuntuのVerifyで `Install dependencies`（`npm ci`）も成功した。これはWindowsでのクリーンインストール再現を示さない。今回の追加作業は静的証跡と文書のみで、実機の並列操作や全E2Eの再実行はしていない。文書更新後のheadのCI結果はPRのChecksを参照する。
+
 ## パス不一致の検出・修正
 
 `@`を`%40`にした原文URLにローカルVite previewが200でアプリHTMLを返す現象を再現した。200だけでは原文到達を証明できず、同じURLをSHA-256で検査するPWA installも完了できない。影響は重大（オフライン準備失敗）。原因は配布URLの正規化と配信側の解釈の不一致、および実サーバーで本文まで照合しないテスト観点不足。従来E2Eの非同期predicateもactivationの完了保証になっていなかった。
