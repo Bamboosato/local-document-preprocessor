@@ -24,6 +24,9 @@ assert.ok(pdfiumWasmName, 'The production build must contain the PDFium WASM ass
 const manifest = JSON.parse(await readFile(new URL('manifest.webmanifest', distributionRoot), 'utf8'));
 const serviceWorker = await readFile(new URL('sw.js', distributionRoot), 'utf8');
 const pwa=JSON.parse(await readFile(new URL('pwa-manifest.json',distributionRoot),'utf8'));
+const inventory=JSON.parse(await readFile(new URL('licenses/inventory.json',distributionRoot),'utf8'));
+const dompurify=inventory.packages.find(item=>item.name==='dompurify');
+if(dompurify)assert.ok(dompurify.originals.some(item=>item.path.endsWith('/LICENSE-MPL')),'DOMPurify MPL original is missing');
 assert.match(pwa.id,/^[a-f0-9]{24}$/);
 assert.ok(serviceWorker.startsWith('self.__LDP_BUILD__='));
 const embedded=JSON.parse(serviceWorker.slice('self.__LDP_BUILD__='.length,serviceWorker.indexOf(';\n')));
@@ -69,13 +72,14 @@ assert.deepEqual(
     'fflate-MIT.txt',
     'pdf-lib-MIT.txt',
     'dependencies',
+    'index.html',
     'inventory.json',
   ].sort(),
   'The production build must retain all third-party license files.',
 );
 
 const worker = await readFile(new URL(workerName, assetDirectory), 'utf8');
-const inventory=JSON.parse(await readFile(new URL('inventory.json',licenseDirectory),'utf8'));
+const licensePage=await readFile(new URL('index.html',licenseDirectory),'utf8');
 const lock=JSON.parse(await readFile(new URL('../package-lock.json',import.meta.url),'utf8'));
 assert.ok(inventory.scope.includes('not linked WASM SBOM'));
 for(const name of ['mermaid','jsonc-parser'])assert.ok(inventory.packages.some(pkg=>pkg.name===name));
@@ -83,8 +87,13 @@ for(const pkg of inventory.packages){
   assert.equal(pkg.version,lock.packages[pkg.lockPath]?.version);assert.equal(pkg.integrity,lock.packages[pkg.lockPath]?.integrity);
   for(const original of pkg.originals){
   assert.ok(original.path.startsWith('dependencies/')&&!original.path.includes('..'));
+  assert.ok(licensePage.includes(original.path.split('/').map(segment=>encodeURIComponent(segment).replace(/%40/gi,'@')).join('/')),'License page must link to every collected original');
   assert.equal(createHash('sha256').update(await readFile(new URL(original.path,licenseDirectory))).digest('hex'),original.sha256);
 }
+}
+const originalHashes=new Set(inventory.packages.flatMap(pkg=>pkg.originals.map(original=>original.sha256)));
+for(const name of ['PDFium-Apache-2.0.txt','anydoc-MIT.txt','embedpdf-pdfium-MIT.txt','fflate-MIT.txt','pdf-lib-MIT.txt']){
+  assert.ok(originalHashes.has(createHash('sha256').update(await readFile(new URL(name,licenseDirectory))).digest('hex')),'Top-level license must be reachable from the index');
 }
 assert.ok(
   !worker.includes('document.createElement'),

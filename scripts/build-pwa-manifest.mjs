@@ -18,7 +18,7 @@ export async function buildPwaManifest(directory=resolve(root,'dist')){
     if(name==='sw.js'||name==='pwa-manifest.json')continue;
     if(!/^(assets\/|licenses\/|index\.html$|manifest\.webmanifest$|ldp_icon(?:-\d+)?\.png$)/.test(name))throw new Error('unclassified-distribution-file');
     const bytes=await readFile(path);
-    assets.push({url:'/'+name.split('/').map(encodeURIComponent).join('/'),sha256:sha(bytes),bytes:bytes.length});
+    assets.push({url:'/'+name.split('/').map(segment=>encodeURIComponent(segment).replace(/%40/gi,'@')).join('/'),sha256:sha(bytes),bytes:bytes.length});
   }
   const id=sha(template+JSON.stringify(assets)).slice(0,24);
   html=html.replace('</head>',`<meta name="ldp-generation" content="${id}">\n</head>`);

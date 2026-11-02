@@ -1,6 +1,6 @@
 # ADR-0005: 配布世代を固定したPWAキャッシュと待機更新
 
-- 状態: レビュー用ブランチで実装・検証（mainへの取り込み・デプロイは別途）
+- 状態: PR #22でmainへ取り込み済み。公開・実機確認は別途。
 - 日付: 2026-10-30
 - 置換対象: [ADR-0004](0004-pwa-static-asset-cache.md)の取得時キャッシュ・network-first HTML・強制移行。静的資産だけを保存する境界は維持する。
 - 観点・証拠: [計画](../pwa-generation-plan.md)、[結果](../pwa-generation-validation.md)

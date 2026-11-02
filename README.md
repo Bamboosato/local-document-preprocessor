@@ -12,7 +12,7 @@
 
 ## 対応形式
 
-Word、PowerPoint、Excel、OpenDocument、RTF、EPUB、CSV、機械可読テキストを含む PDF。PR #19〜#21でJSON接続・対象ツリー・表示制御・状態回復をmainへ取り込みました。検証ブランチでは[本体PWAの世代管理・更新回復](docs/pwa-generation-validation.md)を進めています。[要件定義](docs/requirements.md)と[現行残件](docs/json-current-backlog.md)を参照してください。今回の変更のmain取り込み・デプロイは行いません。
+Word、PowerPoint、Excel、OpenDocument、RTF、EPUB、CSV、機械可読テキストを含む PDF。PR #19〜#22でJSON接続・対象ツリー・状態回復とPWA世代固定をmainへ取り込みました。検証ブランチでは[配布条件とライセンス](docs/distribution-license-review.md)を照合しています。[要件定義](docs/requirements.md)と[現行残件](docs/json-current-backlog.md)を参照してください。今回の新変更のmain取り込み・デプロイは行いません。
 
 入力受付形式と実ファイル検証済み範囲は異なります。未検証形式は [検証記録](docs/validation-report.md) を参照してください。
 
@@ -104,7 +104,7 @@ E2E は文書だけなら未実施、PWA / UI / 品質変更なら対象ケー�
 ## ライセンスと公式仕様
 
 anydoc、`@embedpdf/pdfium` の JS wrapper、fflate、pdf-lib は MIT License です。同梱 PDFium WASM は Apache-2.0 です。
-production build には `dist/licenses/` として各ライセンス本文を同梱します。
+production build には `dist/licenses/` として本番npm依存の原文を同梱し、画面の「第三者ライセンス」から別タブで閲覧できます。標準MermaidのJSON図でもEPL-2.0のELKを利用します。WASMの内包物や対応ソースを含む配布条件の調査状況は[照合報告](docs/distribution-license-review.md)を参照してください。
 
 - [firecrawl/anydoc](https://github.com/firecrawl/anydoc)
 - [WASM API](https://github.com/firecrawl/anydoc/blob/main/wasm/README.md)

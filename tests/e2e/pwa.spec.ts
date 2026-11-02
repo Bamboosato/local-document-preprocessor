@@ -1,18 +1,16 @@
 import { expect, test, type Page } from '@playwright/test';
 
 async function waitForActiveServiceWorker(page: Page) {
-  await page.waitForFunction(
-    async () =>
-      'serviceWorker' in navigator &&
-      (await navigator.serviceWorker.getRegistrations()).some(
-        (registration) => registration.active?.scriptURL.endsWith('/sw.js'),
-      ),
-    undefined,
-    { timeout: 30_000 },
-  );
+  await expect.poll(() => page.evaluate(async () =>
+    'serviceWorker' in navigator && (await navigator.serviceWorker.getRegistrations()).some(
+      registration => registration.active?.state === 'activated' && registration.active.scriptURL.endsWith('/sw.js'),
+    )), { timeout: 60_000 }).toBe(true);
 }
 
 test('PWA manifestとService Workerは静的アセットだけを扱う', async ({ page }) => {
+  // All distribution assets are installed sequentially; the readiness check
+  // must await activation rather than treating an async predicate as truthy.
+  test.setTimeout(90_000);
   await page.goto('/');
   await expect(page.locator('link[rel="manifest"]')).toHaveAttribute(
     'href',
@@ -74,4 +72,21 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
       );
     }),
   ).toBe(true);
+
+  await page.reload();
+  await expect(page.getByText('この世代のオフライン資産は準備済みです。', { exact: true })).toBeVisible();
+  await page.context().setOffline(true);
+  try {
+    const popupPromise=page.waitForEvent('popup');
+    await page.getByRole('link', { name: '第三者ライセンス' }).click();
+    const popup=await popupPromise;
+    await expect(popup.getByRole('heading', { name: '第三者ライセンス' })).toBeVisible();
+    const entry=popup.locator('li').filter({has:popup.getByText('dompurify 3.4.17', { exact: true })});
+    const href=await entry.getByRole('link', { name: 'LICENSE-MPL' }).getAttribute('href');
+    expect(href).toBeTruthy();
+    const result=await popup.evaluate(async path=>{const response=await fetch(path!);return {status:response.status,text:await response.text()};},href);
+    expect(result.status).toBe(200);
+    expect(result.text).toContain('Mozilla Public License Version 2.0');
+    await popup.close();
+  } finally { await page.context().setOffline(false); }
 });

@@ -2,7 +2,7 @@
 
 更新日: 2026-10-06
 
-> 2026-10-30追記: PR #19～21でJSON専用Worker・対象ツリー/詳細・既存キュー/結果/出力・状態/保持量/故障回復をmainへ取り込んだ。anydocにJSONを渡さない。特大プレビューと全量出力の区別は[専用要件](local-document-preprocessor-json-requirements-v0.2.md)のCUR-02追補を参照。[本体PWA世代固定・回復](pwa-generation-validation.md)は別ブランチのレビュー対象。今回の新変更のmain取り込み・デプロイは行わない。
+> 2026-11-02追記: PR #19～22でJSON専用Worker・対象ツリー/詳細・既存キュー/結果/出力・状態/保持量/故障回復と[本体PWA世代固定・回復](pwa-generation-validation.md)をmainへ取り込んだ。anydocにJSONを渡さない。特大プレビューと全量出力の区別は[専用要件](local-document-preprocessor-json-requirements-v0.2.md)のCUR-02追補を参照。[配布条件・ライセンス照合](distribution-license-review.md)の新変更はレビュー対象であり、main取り込み・デプロイは行わない。
 
 ## 1. 目的と製品境界
 
