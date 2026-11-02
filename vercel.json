@@ -3,6 +3,7 @@
   "git": {
     "deploymentEnabled": {
       "main": false,
+      "codex/distribution-release-gates": false,
       "codex/distribution-delivery-plan": false,
       "codex/distribution-license-review": false,
       "codex/pwa-generation-recovery": false,
