@@ -27,7 +27,7 @@
 |es-toolkit 1.53.0|`dependencies/es-toolkit@1.53.0/LICENSE` と `NOTICE`|NOTICE原文を同梱|NOTICEの対象部分と配布物への適用・表示方法の最終判定|
 |その他npm候補|`/licenses/index.html` と `/licenses/inventory.json` から各原文へ|一覧中の236原文のhash照合、主要5原文の重複hash確認|各条件・告知の最終判定。metadata未記載も原文確認し、一覧の存在を自動的な配布承認にしない|
 
-原文・NOTICEの収集先と、実際に必要な告知は別に判断する。[EPL-2.0原文](https://www.eclipse.org/legal/epl/epl-v20.html)3.1/3.3と[Apache-2.0原文](https://www.apache.org/licenses/LICENSE-2.0.html)4節などについて、対象物・例外・配布方法に応じた判断を記録する。法的な充足や第三者の承認は今回得ていない。
+原文・NOTICEの収集先と、実際に必要な告知は別に判断する。[EPL-2.0原文](https://www.eclipse.org/legal/epl/epl-v20.html)3.1・3.2のソース提供と3.3の権利表示保持、および[Apache-2.0原文](https://www.apache.org/licenses/LICENSE-2.0.html)4節などについて対象物と配布方法に応じた判断を記録する。EPL 3.3はソース提供の免除条項ではない。法的な充足や第三者の承認は今回得ていない。
 
 ## 2. 提供方法の具体案
 

@@ -80,6 +80,7 @@ assert.deepEqual(
 
 const worker = await readFile(new URL(workerName, assetDirectory), 'utf8');
 const licensePage=await readFile(new URL('index.html',licenseDirectory),'utf8');
+assert.ok(licensePage.includes('<strong>dompurify 3.4.17</strong> ((MPL-2.0 OR Apache-2.0)) <span>選択したライセンス: Apache-2.0</span>'),'DOMPurify license selection must be visible in the distribution license index');
 const lock=JSON.parse(await readFile(new URL('../package-lock.json',import.meta.url),'utf8'));
 assert.ok(inventory.scope.includes('not linked WASM SBOM'));
 for(const name of ['mermaid','jsonc-parser'])assert.ok(inventory.packages.some(pkg=>pkg.name===name));

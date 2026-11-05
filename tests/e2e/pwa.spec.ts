@@ -82,11 +82,22 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
     const popup=await popupPromise;
     await expect(popup.getByRole('heading', { name: '第三者ライセンス' })).toBeVisible();
     const entry=popup.locator('li').filter({has:popup.getByText('dompurify 3.4.17', { exact: true })});
+    await expect(entry.getByText('選択したライセンス: Apache-2.0', { exact: true })).toBeVisible();
     const href=await entry.getByRole('link', { name: 'LICENSE-MPL' }).getAttribute('href');
     expect(href).toBeTruthy();
     const result=await popup.evaluate(async path=>{const response=await fetch(path!);return {status:response.status,text:await response.text()};},href);
     expect(result.status).toBe(200);
     expect(result.text).toContain('Mozilla Public License Version 2.0');
+    const apacheHref=await entry.getByRole('link', { name: 'LICENSE', exact: true }).getAttribute('href');
+    const noticeEntry=popup.locator('li').filter({has:popup.getByText('es-toolkit 1.53.0', { exact: true })});
+    const noticeHref=await noticeEntry.getByRole('link', { name: 'NOTICE', exact: true }).getAttribute('href');
+    expect(apacheHref).toBeTruthy();
+    expect(noticeHref).toBeTruthy();
+    const texts=await popup.evaluate(async paths=>Promise.all(paths.map(async path=>{const response=await fetch(path!);return {status:response.status,text:await response.text()};})),[apacheHref,noticeHref]);
+    expect(texts[0].status).toBe(200);
+    expect(texts[0].text).toContain('Apache License');
+    expect(texts[1].status).toBe(200);
+    expect(texts[1].text).toContain('Lodash');
     await popup.close();
   } finally { await page.context().setOffline(false); }
 });
