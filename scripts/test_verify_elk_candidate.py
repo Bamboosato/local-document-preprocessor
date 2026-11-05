@@ -71,6 +71,41 @@ class VerifyCandidateTests(unittest.TestCase):
         finally:
             module.MAX_FILE = old
 
+    def test_root_and_directory_entries_are_checked(self):
+        # A legitimate root and child directory may appear before the file.
+        def with_directories(names):
+            with tarfile.open(self.path, 'w:gz') as tar:
+                for name in names:
+                    info = tarfile.TarInfo(name)
+                    info.type = tarfile.DIRTYPE
+                    tar.addfile(info)
+                info = tarfile.TarInfo(module.ROOT + 'src/a')
+                info.size = 3
+                tar.addfile(info, io.BytesIO(b'abc'))
+
+        with_directories([module.ROOT.rstrip('/'), module.ROOT + 'src'])
+        self.assertEqual(module.verify(self.path, self.commit, self.tree), {'files': 1, 'bytes': 3})
+        for names in [[module.ROOT + '../outside'], ['/outside'],
+                      [module.ROOT + 'src', module.ROOT + 'src/'],
+                      [module.ROOT + 'src/a'],
+                      [module.ROOT.rstrip('/'), module.ROOT.rstrip('/')]]:
+            with self.subTest(names=names):
+                with_directories(names)
+                with self.assertRaises(ValueError):
+                    module.verify(self.path, self.commit, self.tree)
+
+        old = module.MAX_ENTRIES
+        try:
+            module.MAX_ENTRIES = 3
+            # Exactly three total members pass; a fourth directory does not.
+            with_directories([module.ROOT.rstrip('/'), module.ROOT + 'src'])
+            self.assertEqual(module.verify(self.path, self.commit, self.tree)['files'], 1)
+            with_directories([module.ROOT + f'd{i}' for i in range(5)])
+            with self.assertRaisesRegex(ValueError, 'duplicate-or-excess-archive-entry'):
+                module.verify(self.path, self.commit, self.tree)
+        finally:
+            module.MAX_ENTRIES = old
+
 
 if __name__ == '__main__':
     unittest.main()

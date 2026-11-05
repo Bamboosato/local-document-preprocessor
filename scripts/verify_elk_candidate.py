@@ -36,18 +36,30 @@ def verify(archive_path, commit_record, tree_record, commit=COMMIT, tree=TREE):
     if not blobs:
         raise ValueError('empty-tree')
     seen = set()
+    seen_entries = set()
     total = 0
     with tarfile.open(archive_path, 'r:gz') as archive:
         for member in archive:
+            name = member.name
+            if member.isdir() and name.endswith('/'):
+                name = name[:-1]
+            if name == ROOT[:-1] and member.isdir():
+                path = ''
+            elif name.startswith(ROOT):
+                path = name[len(ROOT):]
+            else:
+                raise ValueError('invalid-archive-entry')
+            if path and (path.startswith('/') or '\\' in path or any(p in ('', '.', '..') for p in path.split('/')) or PurePosixPath(path).is_absolute() or any(ord(c) < 32 or ord(c) == 127 for c in path)):
+                raise ValueError('unsafe-archive-path')
+            if not path and (not member.isdir() or name != ROOT[:-1]):
+                raise ValueError('unsafe-archive-path')
+            if path in seen_entries or len(seen_entries) >= MAX_ENTRIES:
+                raise ValueError('duplicate-or-excess-archive-entry')
+            seen_entries.add(path)
             if member.isdir():
                 continue
-            if not member.isfile() or member.issparse() or not member.name.startswith(ROOT):
+            if not member.isfile() or member.issparse():
                 raise ValueError('invalid-archive-entry')
-            path = member.name[len(ROOT):]
-            if not path or path.startswith('/') or '\\' in path or any(p in ('', '.', '..') for p in path.split('/')) or PurePosixPath(path).is_absolute():
-                raise ValueError('unsafe-archive-path')
-            if path in seen or len(seen) >= MAX_ENTRIES:
-                raise ValueError('duplicate-or-excess-archive-entry')
             seen.add(path)
             if member.size < 0 or member.size > MAX_FILE or total + member.size > MAX_TOTAL:
                 raise ValueError('archive-size-limit')
