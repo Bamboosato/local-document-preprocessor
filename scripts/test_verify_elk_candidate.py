@@ -37,6 +37,18 @@ class VerifyCandidateTests(unittest.TestCase):
         self.archive([('src/a', b'abc')])
         self.assertEqual(module.verify(self.path, self.commit, self.tree), {'files': 1, 'bytes': 3})
 
+    def test_second_fixed_commit_uses_its_own_archive_root(self):
+        commit = '9bc93474e1dc649450e8c97abb45d16b7c88e35b'
+        tree = '96d01f92f5768fdae183eeb4a93ca9d32719f110'
+        with tarfile.open(self.path, 'w:gz') as tar:
+            info = tarfile.TarInfo(f'elk-{commit}/src/a')
+            info.size = 3
+            tar.addfile(info, io.BytesIO(b'abc'))
+        self.assertEqual(module.verify(self.path, {'sha': commit, 'tree': {'sha': tree}},
+                         {**self.tree, 'sha': tree}, commit, tree), {'files': 1, 'bytes': 3})
+        with self.assertRaises(ValueError):
+            module.verify(self.path, self.commit, self.tree)
+
     def test_modified_missing_duplicate_and_unsafe_paths_fail(self):
         for files in [[('src/a', b'bad')], [], [('src/a', b'abc'), ('src/a', b'abc')], [('../outside', b'abc')]]:
             with self.subTest(files=files):

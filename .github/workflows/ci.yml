@@ -142,7 +142,7 @@ jobs:
         run: node --test scripts/local-delivery-check.test.mjs
       - name: Test ELK source candidate verification
         if: github.event_name != 'schedule'
-        run: python -m unittest scripts/test_verify_elk_candidate.py scripts/test_build_elk_local_candidate.py
+        run: python -m unittest scripts/test_verify_elk_candidate.py scripts/test_build_elk_local_candidate.py scripts/test_build_elk_generator_candidate.py
       - name: Install Chromium
         if: github.event_name != 'schedule' && steps.scope.outputs.scope != 'none'
         run: npx --no-install playwright install --with-deps chromium
