@@ -35,6 +35,7 @@ def verify(archive_path, commit_record, tree_record, commit=COMMIT, tree=TREE):
         blobs[path] = item.get('sha')
     if not blobs:
         raise ValueError('empty-tree')
+    archive_root = 'elk-' + commit + '/'
     seen = set()
     seen_entries = set()
     total = 0
@@ -43,15 +44,15 @@ def verify(archive_path, commit_record, tree_record, commit=COMMIT, tree=TREE):
             name = member.name
             if member.isdir() and name.endswith('/'):
                 name = name[:-1]
-            if name == ROOT[:-1] and member.isdir():
+            if name == archive_root[:-1] and member.isdir():
                 path = ''
-            elif name.startswith(ROOT):
-                path = name[len(ROOT):]
+            elif name.startswith(archive_root):
+                path = name[len(archive_root):]
             else:
                 raise ValueError('invalid-archive-entry')
             if path and (path.startswith('/') or '\\' in path or any(p in ('', '.', '..') for p in path.split('/')) or PurePosixPath(path).is_absolute() or any(ord(c) < 32 or ord(c) == 127 for c in path)):
                 raise ValueError('unsafe-archive-path')
-            if not path and (not member.isdir() or name != ROOT[:-1]):
+            if not path and (not member.isdir() or name != archive_root[:-1]):
                 raise ValueError('unsafe-archive-path')
             if path in seen_entries or len(seen_entries) >= MAX_ENTRIES:
                 raise ValueError('duplicate-or-excess-archive-entry')
