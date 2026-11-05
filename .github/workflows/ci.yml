@@ -137,6 +137,9 @@ jobs:
       - name: Unit, type check, build and distribution checks
         if: github.event_name != 'schedule'
         run: npm run check
+      - name: Test local delivery verification
+        if: github.event_name != 'schedule'
+        run: node --test scripts/local-delivery-check.test.mjs
       - name: Install Chromium
         if: github.event_name != 'schedule' && steps.scope.outputs.scope != 'none'
         run: npx --no-install playwright install --with-deps chromium

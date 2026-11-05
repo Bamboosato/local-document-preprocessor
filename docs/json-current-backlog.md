@@ -29,6 +29,7 @@
 |CUR-02・2|PR #21をマージ済み|[状態・保持量・故障回復の報告](json-state-recovery-validation.md)。UI-01〜26、20ファイル、混在PDF取消、世代/設定照合、中断可能読込、50MiB/10万ノードと完了結果・両WASM/図の反復を検証。全環境の一括受入ではなく、全プロセス/実負荷はCUR-05|
 |CUR-03・3|PR #22マージ済み、実機は後日|[PWA世代固定・回復の報告と実機手順](pwa-generation-validation.md)。保存拒否・容量不足は故障注入。実インストール/復帰/実容量はCUR-05|
 |CUR-04・4|候補ゲートのレビュー/こちら|[配布候補の固定証跡・告知案・未解決ゲート](distribution-release-candidate.md)と[提供方式・検証手順](distribution-delivery-plan.md)。233 package inventoryは保守的候補で最小リンク一覧ではない。対応ソースと告知範囲、配布先、実配信・公開判断は未決定|
+|CUR-04・追加|ローカル検証のみ|[配信照合の試行](local-delivery-verification.md)。実配信・対応ソースの完全性の証明にはならない|
 |CUR-05・並行|未実施/ユーザー、前提整備はこちら|Windows読み上げ・実ブラウザー200%倍率・対応機タッチ・復帰と、安全な実負荷/インストール済みPWA。現行UI/パッケージの前提が整った項目から別途実施。旧手順をそのまま転用しない|
 
 CUR-02の文書混入/未検証出力、CUR-03の世代混在/回復不能は致命・重大リスクを優先して検査する。CUR-01の操作不能や警告不可視も重大として扱う。第一段階の成功証拠は保持し、既に確認済みのCSP共存・基本変換/出力を理由なく未着手へ戻さない。
@@ -42,5 +43,7 @@ CUR-04で**現行バンドルに存在するもの**とその配布方法を確�
 ## 対象外・権限と履歴
 
 ユーザーの追加承認によりPR #24をマージし、mainを同期した（`13c7a9c17a5e255b6833db1f887861b0f66b38b9`）。CUR-04の本追補は `codex/distribution-release-gates` のレビュー用PRまで。macOS/iOSは対象外、実機はユーザー別途。アーカイブの公開・添付、新PRのマージ・デプロイ、main自動デプロイ再有効化は行わない。
+
+その後 PR #25 を承認によりマージし、main `1bcb8de46aa5007f1aa2b4e99513124a3dbd943d` を基点としてローカル配信照合を試行した。最新の作業範囲と未確認は[報告](local-delivery-verification.md)を参照する。
 
 旧[初回](json-gates-validation.md)・[代替](json-g04-alternative-validation.md)・[後続](json-g04-followup-validation.md)・[採用検証](json-adoption-followup-validation.md)・[接続前共存](json-integration-readiness-validation.md)・[出典/原文](json-source-license-validation.md)の内容と証跡は、各実施時点の履歴として保持する。履歴の「残件」はその時点の記述であり、現行の作業指示は本書のCUR-01～05だけとする。
