@@ -59,6 +59,6 @@
 
 未証明の理由、必要な証拠、配布方式・対象版・提供先・受入範囲の判断は[配布判断の根拠表](distribution-decision-matrix.md)に、承認済みの[版別アーカイブのローカル検証](distribution-local-archive-validation.md)は別途整理した。生成したZIPはローカルのみで保持する。
 
-[EPL-2.0原文](https://www.eclipse.org/legal/epl/epl-v20.html)の3.1は、実行形式を配布する場合の対応ソースの提供と取得方法の案内を規定し、3.3には例外もある。実際の配布対象・適用関係・対応ソースと案内方法を個別に確認する必要がある。[Apache-2.0原文](https://www.apache.org/licenses/LICENSE-2.0.html)の4節は、対象物にNOTICEがある場合の告知などを規定する。各依存の適用範囲や配布形態を確定するまでは、原文同梱だけを条件充足とみなさない。
+[EPL-2.0原文](https://www.eclipse.org/legal/epl/epl-v20.html)の3.1・3.2は対象 Program の配布時のソース提供・案内とソース配布条件を規定する。3.3は権利表示や免責等の削除・改変を禁じる条項であり、ソース提供の免除ではない。以前の「3.3には例外もある」は不正確だったため訂正する。実際の配布対象・適用関係・対応ソースと案内方法を個別に確認する必要がある。[Apache-2.0原文](https://www.apache.org/licenses/LICENSE-2.0.html)の4節は、対象物にNOTICEがある場合の告知などを規定する。各依存の適用範囲や配布形態を確定するまでは、原文同梱だけを条件充足とみなさない。
 
 未完: クリーンインストールからの再現、実配布先/CDNと第三者ソース取得先の継続的な到達性、各依存の告知と対応ソースの最終判定、anydoc/PDFium内包物の未証明範囲の評価。特にELKの[EPL原文](https://github.com/kieler/elkjs/blob/0.9.3/LICENSE.md)と[elkjs 0.9.3リリース](https://github.com/kieler/elkjs/releases/tag/0.9.3)を候補として記録するが、対応ソースの完全性は未確定。既存の[ELK・WASM原文調査](json-source-license-validation.md)のELK実checkout・公開WASMとの完全対応・PDFium実リンクgraphは未証明のまま保持する。配布判断前に、該当する条件・告知・ソース提供方法について権利者または専門家による確認が必要。
