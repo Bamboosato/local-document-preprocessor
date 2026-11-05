@@ -140,6 +140,9 @@ jobs:
       - name: Test local delivery verification
         if: github.event_name != 'schedule'
         run: node --test scripts/local-delivery-check.test.mjs
+      - name: Test ELK source candidate verification
+        if: github.event_name != 'schedule'
+        run: python -m unittest scripts/test_verify_elk_candidate.py
       - name: Install Chromium
         if: github.event_name != 'schedule' && steps.scope.outputs.scope != 'none'
         run: npx --no-install playwright install --with-deps chromium
