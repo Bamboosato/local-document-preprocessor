@@ -14,7 +14,7 @@
 
 |項目|確認済み・証拠|追加作業（こちら）|判断待ち・推奨案|
 |---|---|---|---|
-|基準の固定|Windows で別途導入して生成した444ファイルが既存のローカル候補と一致。[検証](windows-clean-rebuild-validation.md)|最終版の commit、lock、manifest、SW、原文・NOTICE の hash を再固定|責任者が対象版・配布形態を決定。推奨は最終受入済みの単一 commit と生成物を一組として固定|
+|基準の固定|Windows で別途導入して生成した444ファイルが既存のローカル候補と一致。[検証](windows-clean-rebuild-validation.md)。PR #30 後の[ローカル候補台帳](distribution-candidate-57ad1ab.md)を作成|最終版を決め、変更後に commit、lock、manifest、SW、原文・NOTICE の hash を再固定|責任者が対象版・配布形態を決定。推奨は最終受入済みの単一 commit と生成物を一組として固定|
 |ELK / EPL-2.0|標準 Mermaid でも ELK chunk を取得。elkjs 原文とソース候補を確認。[照合](distribution-license-review.md)|対象 asset と elkjs/ELK 候補の対応根拠、生成時 checkout の不明点、取得先を判断資料に残す|[EPL 2.0 原文](https://www.eclipse.org/legal/epl/epl-v20.html)と対象配布物・例外を照らし、提供すべきソースと案内方法を責任者・必要に応じ専門家が判断。推奨は対応が確認された固定ソースを版別に提供し、不明が解消するまで完全対応と案内しない|
 |anydoc WASM|配布 WASM と公開 npm bytes の一致、公開工程の source 参照を確認。96依存・195原文は target 候補であり実リンク一覧ではない。[照合](distribution-license-review.md)|候補由来・対象と必要原文/告知の未証明範囲を判断資料に整理|責任者・必要に応じ専門家が必要な原文・告知と証拠不足の扱いを判断。推奨は不明を明示して不足を埋め、候補を実リンク一覧と断定しない|
 |PDFium WASM|公開 npm bytes と一致。実リンク graph 未証明。ローカル source 候補からテスト用PDF `testing/resources/feature_linearized_loading.pdf` 1件を除外した部分収録で、必要な提供範囲への影響は未判定。[除外の記録](distribution-local-archive-validation.md)|除外物の扱いと source 候補の範囲・由来・代替根拠を提示|責任者・必要に応じ専門家が提供範囲を判断。推奨は除外の扱いと必要な対応ソースを確認するまで現行 ZIP を完全版として使わない|
