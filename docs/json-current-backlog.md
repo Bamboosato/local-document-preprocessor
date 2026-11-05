@@ -33,6 +33,7 @@
 |CUR-04・追加|Windows ローカル再生成を確認|[クリーンインストール検証](windows-clean-rebuild-validation.md)。生成物444件一致。既定設定は単一ワーカーで、一括検査の再実行は成功。他環境と実配信は未確認|
 |CUR-04・方針|準備を継続、公開可否は保留|[採用した配布準備方針](distribution-adopted-policy.md)と公開前4条件。Vercel/GitHub Releases は採用方針であり、公開・添付・デプロイの実施許可ではない|
 |CUR-04・候補照合|個別判断は未完|[ELK ソース範囲と WASM 原文の照合](distribution-source-triage.md)。現行 ELK ZIP は本体2ファイルの部分候補、WASM 原文224件の個別適用は保留|
+|CUR-04・WASM準備|2依存の原文を保守的に追加|[anydoc 候補原文の準備](wasm-candidate-originals-preparation.md)。実リンク・条件適用、他の候補、実配信・実機は未完|
 |CUR-04・ELK取得|ローカル候補の同一性を確認|[固定ソース候補の照合](elk-fixed-source-validation.md)。候補の全2,111ファイルと上流 tree は一致。ビルド時 checkout・必要範囲・提供物の最終判断は未完|
 |CUR-04・ELK準備|ローカル候補のみ|[パス形式と11領域の候補](elk-source-pattern-review.md)。候補の提供可否・必要範囲・checkout の対応は未判定|
 |CUR-05・並行|未実施/ユーザー、前提整備はこちら|Windows読み上げ・実ブラウザー200%倍率・対応機タッチ・復帰と、安全な実負荷/インストール済みPWA。現行UI/パッケージの前提が整った項目から別途実施。旧手順をそのまま転用しない|

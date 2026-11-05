@@ -72,6 +72,7 @@ assert.deepEqual(
     'fflate-MIT.txt',
     'pdf-lib-MIT.txt',
     'dependencies',
+    'wasm-candidates',
     'index.html',
     'inventory.json',
   ].sort(),
@@ -82,6 +83,28 @@ const worker = await readFile(new URL(workerName, assetDirectory), 'utf8');
 const licensePage=await readFile(new URL('index.html',licenseDirectory),'utf8');
 assert.ok(licensePage.includes('<strong>dompurify 3.4.17</strong> ((MPL-2.0 OR Apache-2.0)) <span>選択したライセンス: Apache-2.0</span>'),'DOMPurify license selection must be visible in the distribution license index');
 const lock=JSON.parse(await readFile(new URL('../package-lock.json',import.meta.url),'utf8'));
+const candidateEvidence=JSON.parse(await readFile(new URL('../docs/evidence/json-anydoc-target-licenses.json',import.meta.url),'utf8'));
+assert.deepEqual(inventory.wasmCandidates.map(({name,version})=>`${name}@${version}`),['encoding_rs@0.8.35','unicode-ident@1.0.24']);
+assert.ok(licensePage.includes('WASM 依存候補の原文')&&licensePage.includes('WASM に含まれることや依存一覧の網羅性を示すものではありません'));
+for(const candidate of inventory.wasmCandidates){
+  const source=candidateEvidence.packages.find(pkg=>pkg.name===candidate.name&&pkg.version===candidate.version);
+  assert.ok(source);
+  assert.equal(candidate.declaredLicense,source.declaredLicense);
+  assert.equal(candidate.originals.length,source.originals.length);
+  for(const original of source.originals){
+    const name=original.path.split('/').at(-1);
+    const relative=`wasm-candidates/anydoc/${candidate.name}@${candidate.version}/${name}`;
+    const matches=candidate.originals.filter(item=>item.path===relative);
+    assert.equal(matches.length,1,'Candidate original missing or duplicated');
+    const bytes=await readFile(new URL(relative,licenseDirectory));
+    assert.equal(bytes.length,original.bytes);
+    assert.equal(createHash('sha256').update(bytes).digest('hex'),original.sha256);
+    assert.equal(matches[0].sha256,original.sha256);
+    assert.equal(matches[0].bytes,original.bytes);
+    assert.ok(licensePage.includes(relative.split('/').map(segment=>encodeURIComponent(segment).replace(/%40/gi,'@')).join('/')),'Candidate original must be linked');
+    assert.ok(pwa.assets.some(asset=>asset.url==='/licenses/'+relative&&asset.sha256===original.sha256),'Candidate original must be in PWA manifest');
+  }
+}
 assert.ok(inventory.scope.includes('not linked WASM SBOM'));
 for(const name of ['mermaid','jsonc-parser'])assert.ok(inventory.packages.some(pkg=>pkg.name===name));
 for(const pkg of inventory.packages){
