@@ -1,0 +1,2677 @@
+{
+  "schema": 1,
+  "scope": "Direct build.gradle source-root blob equality and candidate zip content only; not evidence of actual publisher checkout, generated metadata, dependencies, or byte reproducibility.",
+  "baseline_app_commit": "b431665171a7b6649e71ea7d9c23dc5fb1181641",
+  "elkjs_commit": "a8304cf79fde75bc2ab1a89d28320f53f8637436",
+  "elk_first_commit": "7ca51784e42a24201f29bc13e458728b6fc61cdc",
+  "elk_first_tree": "f3d84ee746c3ce3f324d63d4b34120505893f056",
+  "elk_second_commit": "9bc93474e1dc649450e8c97abb45d16b7c88e35b",
+  "elk_second_tree": "96d01f92f5768fdae183eeb4a93ca9d32719f110",
+  "candidate_zip_sha256": "ee19af9f3d3be729584fcfdf4d08a4c860a5d48fcfb1ce840e4849802d83fbc8",
+  "source_roots": [
+    "plugins/org.eclipse.elk.core/src",
+    "plugins/org.eclipse.elk.graph/src",
+    "plugins/org.eclipse.elk.graph.json/src",
+    "plugins/org.eclipse.elk.alg.common/src",
+    "plugins/org.eclipse.elk.alg.disco/src",
+    "plugins/org.eclipse.elk.alg.force/src",
+    "plugins/org.eclipse.elk.alg.layered/src",
+    "plugins/org.eclipse.elk.alg.mrtree/src",
+    "plugins/org.eclipse.elk.alg.rectpacking/src",
+    "plugins/org.eclipse.elk.alg.radial/src",
+    "plugins/org.eclipse.elk.alg.spore/src"
+  ],
+  "elkjs_files_compared": 58,
+  "direct_source_count": 658,
+  "direct_source_blobs": [
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/META-INF/services/org.eclipse.elk.core.data.ILayoutMetaDataProvider",
+      "git_blob_sha1": "cf9c7a44a8b765f80c8612036a4142c2ba8cb7e0"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/BowyerWatsonTriangulation.java",
+      "git_blob_sha1": "c40ca195a055b1adf63ec2e980d0e4046b280b30"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/ICostFunction.java",
+      "git_blob_sha1": "52a38abed987f4acfc36399359ffe9fd415d0346"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/NaiveMinST.java",
+      "git_blob_sha1": "8be804fade9d909f91b9cf6f93b1dabdbe587f8c"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/NodeMicroLayout.java",
+      "git_blob_sha1": "3efdd9b4468642c5463c549d269693e1abd7e433"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/Point.java",
+      "git_blob_sha1": "14032b8b0de39c28efc29657ad81724eee1512dc"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/RectilinearConvexHull.java",
+      "git_blob_sha1": "8186132c16f8ffd38016ebb0d1de41f6776fca83"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/TEdge.java",
+      "git_blob_sha1": "4e4279ad9bfa8e65897cbe00985b289f283225af"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/TTriangle.java",
+      "git_blob_sha1": "1d8bbcd8cfeb8a787b2b17709acf02e05a11bf79"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/Tree.java",
+      "git_blob_sha1": "b357bdbb942363d9a408a09f571b6df77b7bfb11"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/compaction/DebugUtil.java",
+      "git_blob_sha1": "6bb3463faaa32b3bd0480e578e56f6b568dadea5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/compaction/Polyomino.melk",
+      "git_blob_sha1": "273efe057f2532e0abe6e222e6a648d4acc21008"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/compaction/Scanline.java",
+      "git_blob_sha1": "aecd7cbd7805d31589337a6b6a926ac644159594"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/compaction/oned/CGraph.java",
+      "git_blob_sha1": "41db9bdbf8237304b53547393c7fa2aaae291069"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/compaction/oned/CGroup.java",
+      "git_blob_sha1": "f2be1b1db71a6939b34258b9879be5776718e027"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/compaction/oned/CNode.java",
+      "git_blob_sha1": "59f206050a05dab1ee55f79d78b80d84f53ea679"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/compaction/oned/CompareFuzzy.java",
+      "git_blob_sha1": "99f6e79e7d2eb8f69dcc39a9908e604a5e55f1db"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/compaction/oned/ICompactionAlgorithm.java",
+      "git_blob_sha1": "dd3bb3db66ae005de7e5d7f185bdb6c18e6bfa49"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/compaction/oned/IConstraintCalculationAlgorithm.java",
+      "git_blob_sha1": "3d0f06312929dcdae1a9ba5257c2bd7adfa48046"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/compaction/oned/ILockFunction.java",
+      "git_blob_sha1": "3e95c79f540da5976273821af4bb1adab20c6487"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/compaction/oned/ISpacingsHandler.java",
+      "git_blob_sha1": "8bec55952f0dc90f0c0e383c436eed412bdea72f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/compaction/oned/LongestPathCompaction.java",
+      "git_blob_sha1": "a534203f6faff55d280f60e506f29fc7933bef89"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/compaction/oned/OneDimensionalCompactor.java",
+      "git_blob_sha1": "79ff8bafff6375353b98b3f4650d4fb51fd85580"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/compaction/oned/QuadraticConstraintCalculation.java",
+      "git_blob_sha1": "a0e88ba321adabf5aa66f1243ca63cbb370c3f9b"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/compaction/oned/Quadruplet.java",
+      "git_blob_sha1": "c6f62ad9084df983ba2dfb814b007ab8ff2532fb"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/compaction/oned/ScanlineConstraintCalculator.java",
+      "git_blob_sha1": "8bf65a9448f00593f65a0e46e688368a446a6f6b"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/compaction/options/HighLevelSortingCriterion.java",
+      "git_blob_sha1": "c5ae9a2846550856c01cbfa1ded5b37f3f19085c"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/compaction/options/LowLevelSortingCriterion.java",
+      "git_blob_sha1": "759a48803bf19f36120dd75b9361fb51168265d7"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/compaction/options/TraversalStrategy.java",
+      "git_blob_sha1": "050be2a86fd7ec00aba37de981e1f0d4fd5d0d48"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/networksimplex/NEdge.java",
+      "git_blob_sha1": "6acea005a4b8e7aaf375f4a71a375c5c2a04788f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/networksimplex/NGraph.java",
+      "git_blob_sha1": "c687e1ae3e52f90f3c07a3126edd703abaae5b96"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/networksimplex/NNode.java",
+      "git_blob_sha1": "b3ded8257c44142f0ef95c06b3147ced4cc0d4d7"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/networksimplex/NetworkSimplex.java",
+      "git_blob_sha1": "67b2f641392bbd650f917a05942c1de6244b3075"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/NodeDimensionCalculation.java",
+      "git_blob_sha1": "aa24a66e363529839c10f08d06ba2e316c543464"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/NodeLabelAndSizeCalculator.java",
+      "git_blob_sha1": "e84c875d848c8534431bb5d9dae6f826c3637df2"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/NodeMarginCalculator.java",
+      "git_blob_sha1": "15abd8d074af686907dcdda16eba35b42898c755"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/cellsystem/AtomicCell.java",
+      "git_blob_sha1": "8d76661f029ba7c3512e668a8af49bb0f7f08cdd"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/cellsystem/Cell.java",
+      "git_blob_sha1": "a774939e4c09cc2d8c06498c45410b372a14aea1"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/cellsystem/ContainerArea.java",
+      "git_blob_sha1": "927c46f39d4a89a567a1b6486ee64bc11127cfa1"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/cellsystem/ContainerCell.java",
+      "git_blob_sha1": "02c1f8245530c31085d479c728fa45114dce5c3d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/cellsystem/GridContainerCell.java",
+      "git_blob_sha1": "7428cd6897169839c9944a2226faa2713930e0ce"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/cellsystem/HorizontalLabelAlignment.java",
+      "git_blob_sha1": "60245df1995821b4c254121e1d9f93022442e486"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/cellsystem/LabelCell.java",
+      "git_blob_sha1": "0c2afa85bdb3a1bdf477dacc94396089f933c751"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/cellsystem/StripContainerCell.java",
+      "git_blob_sha1": "659cc346ec3a96ce5e0f41d6512c76317f8bf2a9"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/cellsystem/VerticalLabelAlignment.java",
+      "git_blob_sha1": "6bcee4a0ef2c0e7c04ad75f5d53e715505bc93db"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/NodeContext.java",
+      "git_blob_sha1": "e69ad4b31c3e1d3ac00837233bbb88a8b7a961bf"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/NodeLabelLocation.java",
+      "git_blob_sha1": "dd91d3c83a2b0cafc3bdc863d1c9a46355f8b088"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/PortContext.java",
+      "git_blob_sha1": "9180710a6666060cada89e4e6df7ce7199ffa9d0"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/algorithm/CellSystemConfigurator.java",
+      "git_blob_sha1": "af80092b414e0ef647db9c32b4d9aad4c5d69ee3"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/algorithm/HorizontalPortPlacementSizeCalculator.java",
+      "git_blob_sha1": "560a4ea2ea0b9472466518e48a14a5fe81fe406b"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/algorithm/InsidePortLabelCellCreator.java",
+      "git_blob_sha1": "781e02188cfcdc29e14f9f0acae76556301bf131"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/algorithm/LabelPlacer.java",
+      "git_blob_sha1": "0bb8570fae9ffd83ca33a631a405cf2466af5083"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/algorithm/NodeLabelAndSizeUtilities.java",
+      "git_blob_sha1": "9b0f4c38ef7d667123858ebc36bfc93057f5e640"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/algorithm/NodeLabelCellCreator.java",
+      "git_blob_sha1": "abd69696ea010fa232b77030f359cc47edc73b8b"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/algorithm/NodeSizeCalculator.java",
+      "git_blob_sha1": "b03f1341a717f6f13a2f67d6a541c32609071f68"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/algorithm/PortContextCreator.java",
+      "git_blob_sha1": "6636138af92c6db9a81ae91e4c8f33d68a241c56"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/algorithm/PortLabelPlacementCalculator.java",
+      "git_blob_sha1": "6b1015636b2191b4f9a6b46b3f5af9aa6a63e1df"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/algorithm/PortPlacementCalculator.java",
+      "git_blob_sha1": "41f4d4442b70d4cd29536f202aa714e426480872"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/nodespacing/internal/algorithm/VerticalPortPlacementSizeCalculator.java",
+      "git_blob_sha1": "eeae501d4052100d518e83072462393693f19002"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/overlaps/GreedyRectangleStripOverlapRemover.java",
+      "git_blob_sha1": "c062806e60ceef5e0db1dca501f5ffc122d52173"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/overlaps/IRectangleStripOverlapRemovalStrategy.java",
+      "git_blob_sha1": "08fa69ee9bc75ac0714443f4bab9939ae1bbfaf7"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/overlaps/RectangleStripOverlapRemover.java",
+      "git_blob_sha1": "1586d7a5cbccf7a98b6f12d25e41e65788e2a0cf"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/polyomino/PolyominoCompactor.java",
+      "git_blob_sha1": "75bf595f10a5a220d3f8e137b5d91c7347295ecc"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/polyomino/ProfileFill.java",
+      "git_blob_sha1": "5e8933a0b240ba9a53cdb58716544a32f12ef166"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/polyomino/SuccessorCombination.java",
+      "git_blob_sha1": "58066359d5c498124b05448d158400fba949cc62"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/polyomino/SuccessorJitter.java",
+      "git_blob_sha1": "23d6217b444e9eb7b55e078eac57d8ba9ecb2684"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/polyomino/SuccessorLineByLine.java",
+      "git_blob_sha1": "926646a90eaed03230d7291439c6698fbc331164"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/polyomino/SuccessorManhattan.java",
+      "git_blob_sha1": "037aecc4026218e4a97d13b9104506c83622ed9f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/polyomino/SuccessorMaxNormWindingInMathPosSense.java",
+      "git_blob_sha1": "89bd86ed524728a8ed0115a6b7a93e943e798a3d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/polyomino/SuccessorQuadrantsGeneric.java",
+      "git_blob_sha1": "5cd11a2b7f00def62994faf80e93fc87de5c98f0"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/polyomino/structures/Direction.java",
+      "git_blob_sha1": "e17756e3632bc6745870438f0797bc994c8d027b"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/polyomino/structures/IThreeValueGrid.java",
+      "git_blob_sha1": "1df781fa08a8c3160482cfae354ed8e62259a70e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/polyomino/structures/PlanarGrid.java",
+      "git_blob_sha1": "e46ae636d1667799ad2f1b65045f893ccb55a4f2"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/polyomino/structures/Polyomino.java",
+      "git_blob_sha1": "0c47fb9b02e4ec60ce2b282aad395e65c30339b1"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/polyomino/structures/Polyominoes.java",
+      "git_blob_sha1": "01882a4fbb463705445690d1259fa383bf93f4b2"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/polyomino/structures/TwoBitGrid.java",
+      "git_blob_sha1": "c90a74233e6b292dffc72e7215c83f64cd3288c2"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/spore/DepthFirstCompaction.java",
+      "git_blob_sha1": "72b2df5ba5eb4bf9b7c2ea0f73c7b10ce569e723"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/spore/IOverlapHandler.java",
+      "git_blob_sha1": "dc14ff09411f2878acf03838f483c22da2fb47e2"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/spore/InternalProperties.java",
+      "git_blob_sha1": "8644123309cace845cfee1ed6f0454a67ae038cb"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/spore/Node.java",
+      "git_blob_sha1": "c36b3abdf04e091df5e7f74e268566ab0f944354"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/spore/ScanlineOverlapCheck.java",
+      "git_blob_sha1": "96203072fa753b452c7b02b54ddacc5c731d9bf2"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/utils/SVGImage.java",
+      "git_blob_sha1": "252bf6f4ccd52477922571603ac38552734b498d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/utils/UniqueTriple.java",
+      "git_blob_sha1": "b87d91814a6e139fb6f91fbd3e75ea56e3ae3f4d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.common/src/org/eclipse/elk/alg/common/utils/Utils.java",
+      "git_blob_sha1": "260e073886b18258ebbf794a94f93f7e6f7aaffa"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.disco/src/META-INF/services/org.eclipse.elk.core.data.ILayoutMetaDataProvider",
+      "git_blob_sha1": "93cf7f741d1089a020b068687fbbe976de47b0a3"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.disco/src/org/eclipse/elk/alg/disco/DisCoLayoutProvider.java",
+      "git_blob_sha1": "54ebf20cabff853d6919de68e5daa1a6f8945b53"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.disco/src/org/eclipse/elk/alg/disco/DisCoPolyominoCompactor.java",
+      "git_blob_sha1": "a45f365aec277094c346b378dbe25726b8ebebbc"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.disco/src/org/eclipse/elk/alg/disco/Disco.melk",
+      "git_blob_sha1": "1815adbe0510911babdc8fef85ffe8c74e42ef87"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.disco/src/org/eclipse/elk/alg/disco/ICompactor.java",
+      "git_blob_sha1": "a747204bddd58c0c259b4e86621cb6f90bb95d4a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.disco/src/org/eclipse/elk/alg/disco/graph/DCComponent.java",
+      "git_blob_sha1": "413f37df5b2fbbd92e5988b9d037277c80dbdd3d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.disco/src/org/eclipse/elk/alg/disco/graph/DCDirection.java",
+      "git_blob_sha1": "f3c4c80ea7f88c524ead4ea6ebe6c568e9fc889c"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.disco/src/org/eclipse/elk/alg/disco/graph/DCElement.java",
+      "git_blob_sha1": "b0ddb6edf30115cb5e9e6c4467aba2e65e176350"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.disco/src/org/eclipse/elk/alg/disco/graph/DCExtension.java",
+      "git_blob_sha1": "9021675c9d271129f671a8a4f4f9716db99ba446"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.disco/src/org/eclipse/elk/alg/disco/graph/DCGraph.java",
+      "git_blob_sha1": "352d4c79c1429327046cfcfa2ef612efc7322ce1"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.disco/src/org/eclipse/elk/alg/disco/options/CompactionStrategy.java",
+      "git_blob_sha1": "64f3ebed3045b2a29574c0533c780f826cdecfa2"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.disco/src/org/eclipse/elk/alg/disco/structures/DCPolyomino.java",
+      "git_blob_sha1": "b1f6dc4a88d1e03c26a9d208f0c89e70e3e00020"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.disco/src/org/eclipse/elk/alg/disco/transform/ElkGraphComponentsProcessor.java",
+      "git_blob_sha1": "4e47659cb36123285954ad3fe6155e909e721691"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.disco/src/org/eclipse/elk/alg/disco/transform/ElkGraphTransformer.java",
+      "git_blob_sha1": "796a5eb89dfc15efa0813ec6e96c3e0f171b548d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.disco/src/org/eclipse/elk/alg/disco/transform/IGraphTransformer.java",
+      "git_blob_sha1": "de3f656a54087ce6e157a2e636ff7c8f3d8223ec"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.force/src/META-INF/services/org.eclipse.elk.core.data.ILayoutMetaDataProvider",
+      "git_blob_sha1": "eab3b81d152c304e05e907db581d46608ee02b3d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.force/src/org/eclipse/elk/alg/force/ComponentsProcessor.java",
+      "git_blob_sha1": "3abe7a46e84e7af338b88d93d1070047658a14dd"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.force/src/org/eclipse/elk/alg/force/ElkGraphImporter.java",
+      "git_blob_sha1": "6cc72fc77abe5530d515c56beb078e9c29070606"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.force/src/org/eclipse/elk/alg/force/Force.melk",
+      "git_blob_sha1": "acd45f2a7f603f9e9acad143e932e1f7132ca9ae"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.force/src/org/eclipse/elk/alg/force/ForceLayoutProvider.java",
+      "git_blob_sha1": "4c135ef6ebbb5ae6194da51efeeaa831175943b9"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.force/src/org/eclipse/elk/alg/force/IGraphImporter.java",
+      "git_blob_sha1": "8fb964c5fb0788e5379aeeb4002029aa155deaa1"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.force/src/org/eclipse/elk/alg/force/graph/FBendpoint.java",
+      "git_blob_sha1": "59ec6dcd453ca5c18cd09393ec820a1fb0aa59a1"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.force/src/org/eclipse/elk/alg/force/graph/FEdge.java",
+      "git_blob_sha1": "0014d38d2138892f4b0ff3de1231bcc6fef79d28"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.force/src/org/eclipse/elk/alg/force/graph/FGraph.java",
+      "git_blob_sha1": "f632c1555056eccc721612095089cf7e21d3b9fc"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.force/src/org/eclipse/elk/alg/force/graph/FLabel.java",
+      "git_blob_sha1": "8f5fe44caecf4eec73d6b5c5349da52e0bd791ab"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.force/src/org/eclipse/elk/alg/force/graph/FNode.java",
+      "git_blob_sha1": "27fecfe588fdfb7ea0b77a0a53b207c16f7eeb55"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.force/src/org/eclipse/elk/alg/force/graph/FParticle.java",
+      "git_blob_sha1": "3672c1fc0e51e1806f1bdd197b020aaf7296ce4e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.force/src/org/eclipse/elk/alg/force/model/AbstractForceModel.java",
+      "git_blob_sha1": "cfab5caba20c80694ab33cb468c72026fee107b0"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.force/src/org/eclipse/elk/alg/force/model/EadesModel.java",
+      "git_blob_sha1": "b6ea823cd451fea56536b4be6efd8d2c4234e3f4"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.force/src/org/eclipse/elk/alg/force/model/FruchtermanReingoldModel.java",
+      "git_blob_sha1": "2086a05ec1a43e5ca39f10faeef0516edcc03b22"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.force/src/org/eclipse/elk/alg/force/options/ForceModelStrategy.java",
+      "git_blob_sha1": "ba75d60a6b20261739d9d53e11383b89425668c0"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.force/src/org/eclipse/elk/alg/force/options/InternalProperties.java",
+      "git_blob_sha1": "39b74395f258564c9e57b85fab281c716783c5da"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.force/src/org/eclipse/elk/alg/force/stress/Stress.melk",
+      "git_blob_sha1": "7cb8bd952e6d73e244c7e27dd9db724a067aa65d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.force/src/org/eclipse/elk/alg/force/stress/StressLayoutProvider.java",
+      "git_blob_sha1": "22939365c74a78d40369895ea52898ffffe505af"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.force/src/org/eclipse/elk/alg/force/stress/StressMajorization.java",
+      "git_blob_sha1": "1e1522e84d07ce8b8856e982520ce8a4d5519744"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/META-INF/services/org.eclipse.elk.core.data.ILayoutMetaDataProvider",
+      "git_blob_sha1": "1a55d95507850989157ed02a4b9e21f4b7e7b67f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/DebugUtil.java",
+      "git_blob_sha1": "f66389ce7d1521c93fcb1aeab166d6537e6187ea"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/DotDebugUtil.java",
+      "git_blob_sha1": "a87bd4b147bbe3150e46588e0537471c2d7d2ddf"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/ElkLayered.java",
+      "git_blob_sha1": "39ca4fc032c42db3793a464c85c826d8d859f19a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/GraphConfigurator.java",
+      "git_blob_sha1": "a773d427979853d9ad50509ece1ed4809f2a9c37"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/IHierarchyAwareLayoutProcessor.java",
+      "git_blob_sha1": "1f890281642a1e860ba776df1c7411430f1790c3"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/InteractiveLayeredGraphVisitor.java",
+      "git_blob_sha1": "4b4c772f816ef4233ff9b6afa691a4ad543a5619"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/JsonDebugUtil.java",
+      "git_blob_sha1": "df6f0a902309eacc535c1cb2b9ede711047a5060"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/Layered.melk",
+      "git_blob_sha1": "ec3c4a0b578e5633b9f3fcfd0d4b3b933d234dec"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/LayeredLayoutProvider.java",
+      "git_blob_sha1": "71dcbb85f9bdeab7057d821a7c29809d87936950"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/LayeredPhases.java",
+      "git_blob_sha1": "d6743771306d298ce64fdadaf14d0231c20ea4af"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/components/ComponentsToCGraphTransformer.java",
+      "git_blob_sha1": "6c1738ad8798d4f1bf5d6c9e21ea03ce94d06bb6"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/components/IComponent.java",
+      "git_blob_sha1": "cc9b6f63f3d384249a07277cf2993f801f390eca"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/components/IConnectedComponents.java",
+      "git_blob_sha1": "3c3e1ed927b8ef23a07a8e0e1fcc2fb7f60145d3"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/components/IExternalExtension.java",
+      "git_blob_sha1": "b4f7e1998c16d0c17417c0f448635dbb238cb086"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/components/OneDimensionalComponentsCompaction.java",
+      "git_blob_sha1": "c0cf0de7c451fcad80290363367c39c6a6e20235"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/oned/CGraph.java",
+      "git_blob_sha1": "3488b2fa16687cd1af6328852f9f29f02639c8a5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/oned/CGroup.java",
+      "git_blob_sha1": "84edcb17fa125de1c7fcfb896d7fe2009e183e46"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/oned/CNode.java",
+      "git_blob_sha1": "d46928adf0c538c137e6373d29bb4375db29c88b"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/oned/CompareFuzzy.java",
+      "git_blob_sha1": "5870071b0856549ca25f51506a892abda866278d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/oned/ICGraphTransformer.java",
+      "git_blob_sha1": "ad91ee62c70e6e8c73426e4e16106f749d11911b"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/oned/ISpacingsHandler.java",
+      "git_blob_sha1": "77c4f28d0c3cc6c331fd109b0b2881cf8af12247"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/oned/OneDimensionalCompactor.java",
+      "git_blob_sha1": "759b0d981c07159b38f4c581b0771109a0c2f580"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/oned/Quadruplet.java",
+      "git_blob_sha1": "d5cc36bb5b7dceccbe423a8d7786a881abdb41fa"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/oned/algs/ICompactionAlgorithm.java",
+      "git_blob_sha1": "04b954489de04a43e09ca1a79d556661017dc4cb"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/oned/algs/IConstraintCalculationAlgorithm.java",
+      "git_blob_sha1": "5e85854286b044fdbf828c01eeee55c8a8fba77c"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/oned/algs/LongestPathCompaction.java",
+      "git_blob_sha1": "75b22cabb84e5026df45f04e8faceeb297ddee0d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/oned/algs/QuadraticConstraintCalculation.java",
+      "git_blob_sha1": "4a6fb5d0455bb08279dc552350eabd17fbb6d3e7"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/oned/algs/ScanlineConstraintCalculator.java",
+      "git_blob_sha1": "1a0ef301f1a9cd61c3128b38a235fadfc97a92e3"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/recthull/Point.java",
+      "git_blob_sha1": "d5b3e01786cebee035153ffd96b149ce82639289"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/recthull/RectilinearConvexHull.java",
+      "git_blob_sha1": "6da6e8270d49f60e503d74a163c23142ae4bbd03"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compaction/recthull/Scanline.java",
+      "git_blob_sha1": "eb2b6281c1f7448e6950e7bd80f885082e2b35d2"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/components/AbstractGraphPlacer.java",
+      "git_blob_sha1": "7f510721eacc9d683a784d4ac8e439f6bdb8be02"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/components/ComponentGroup.java",
+      "git_blob_sha1": "ff2b3a131939aee898800024051c598dff0c7dba"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/components/ComponentGroupGraphPlacer.java",
+      "git_blob_sha1": "456e73f14467c861ac265a165331d6bc55547142"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/components/ComponentGroupModelOrderGraphPlacer.java",
+      "git_blob_sha1": "f9e5f243f38e5d6aa7181a458a9b200cbac7c893"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/components/ComponentOrderingStrategy.java",
+      "git_blob_sha1": "87bac4c530ec0b416d08e4d75d91e79f45e6cb2a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/components/ComponentsCompactor.java",
+      "git_blob_sha1": "f2d8ef8d146c6719373f840e2ad2eca978857856"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/components/ComponentsProcessor.java",
+      "git_blob_sha1": "2581be2d962d9e35b4b6297ea59e7e83a7eb9033"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/components/ModelOrderComponentGroup.java",
+      "git_blob_sha1": "0a6a9206a52cc3ade0336391fe0f4971e039d160"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/components/ModelOrderRowGraphPlacer.java",
+      "git_blob_sha1": "ca8a29eed8db188930ad24cf3dcdbe5699994637"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/components/SimpleRowGraphPlacer.java",
+      "git_blob_sha1": "b3266fa129ae4099cc94d846e364941d15f86902"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compound/CompoundGraphPostprocessor.java",
+      "git_blob_sha1": "cd486b1777fab81fe567990e6f469662811aa303"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compound/CompoundGraphPreprocessor.java",
+      "git_blob_sha1": "efe9a8d6f061cc88b2dc8f6007a575822f6a1e72"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compound/CrossHierarchyEdge.java",
+      "git_blob_sha1": "792dc9261d1b299b76345a22315f9cf636ff0e54"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/compound/CrossHierarchyEdgeComparator.java",
+      "git_blob_sha1": "63b4e725233bb086bc3b682ac4e0335764eaf013"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/graph/LEdge.java",
+      "git_blob_sha1": "db3d005dd938f236abd85430e93c92c726688a4e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/graph/LGraph.java",
+      "git_blob_sha1": "cd6d59a2ccc8f914959d4ae5ce577937732b50aa"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/graph/LGraphAdapters.java",
+      "git_blob_sha1": "952a95f761810b67d2af364550e52852c438720d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/graph/LGraphElement.java",
+      "git_blob_sha1": "e9138bef7e1ed4757ff4468e2b5289d7a14b6e15"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/graph/LGraphUtil.java",
+      "git_blob_sha1": "6c120d8147840ee593e9782da751fa366321bcef"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/graph/LLabel.java",
+      "git_blob_sha1": "0e0ecacda60ea3a67d266eaabef09b78322cd697"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/graph/LMargin.java",
+      "git_blob_sha1": "67f86589b06f09b80428b30c97ef327963911fb3"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/graph/LNode.java",
+      "git_blob_sha1": "ea3fa7b73e43bb119b00d852751bd001c26f4a93"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/graph/LPadding.java",
+      "git_blob_sha1": "248520e542a8966e126d6a3f247ab43d1b98a892"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/graph/LPort.java",
+      "git_blob_sha1": "d68e06b2d8b01f2d88bc9b2d866de8badab2c85f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/graph/LShape.java",
+      "git_blob_sha1": "c9188840cdfa1a6edbe6b456b663cb5930db41a4"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/graph/Layer.java",
+      "git_blob_sha1": "de5b55fae7aad7d1a4fe24bf27132e1a681a3eec"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/graph/transform/ElkGraphImporter.java",
+      "git_blob_sha1": "a224e607541ae7ab381d7a2d656d20db73103456"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/graph/transform/ElkGraphLayoutTransferrer.java",
+      "git_blob_sha1": "7bb903e4b9ba771e17ccaa99af655679dfaa7520"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/graph/transform/ElkGraphTransformer.java",
+      "git_blob_sha1": "4b3dbcaf312a0634534d0d5e23f95da680cf8a74"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/graph/transform/IGraphTransformer.java",
+      "git_blob_sha1": "6fb3408724e7e4d60e8019774393431d3a926717"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/BiLinkedHashMultiMap.java",
+      "git_blob_sha1": "a2a3a4bdef52ca7468084875e8e48ccf62711371"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/CommentNodeMarginCalculator.java",
+      "git_blob_sha1": "86e7a6711682a5c9bcdf6ddf16726ee3d206f56a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/CommentPostprocessor.java",
+      "git_blob_sha1": "12c02ef8747f033bfe807ab7c7f742506091aa1a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/CommentPreprocessor.java",
+      "git_blob_sha1": "f8370c125bef377ae4288eb683817933c7c388e8"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/ConstraintsPostprocessor.java",
+      "git_blob_sha1": "ba7b184ef7f8a36713566a93ca75b985fd2e514a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/DummySelfLoopProcessor.java",
+      "git_blob_sha1": "bf1dc978255a05871ef499731a75ad6546a35036"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/EdgeAndLayerConstraintEdgeReverser.java",
+      "git_blob_sha1": "ab427db7dabf8319a09ee77b6a80f737bb13af3f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/EndLabelPostprocessor.java",
+      "git_blob_sha1": "ad6d48b03345c69745a287e53163f794f60c667e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/EndLabelPreprocessor.java",
+      "git_blob_sha1": "24c2a73ac9465b095a27f42d3d9ebb19d9df0e15"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/EndLabelSorter.java",
+      "git_blob_sha1": "325cc29aec5ee35599d33fa9d83a505553ba4107"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/FinalSplineBendpointsCalculator.java",
+      "git_blob_sha1": "1d019bfbbf3950dcda226194148483bdb0013d13"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/GraphTransformer.java",
+      "git_blob_sha1": "b7f7daee899a8417b78731e02bf5e53db78d7396"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/HierarchicalNodeResizingProcessor.java",
+      "git_blob_sha1": "e14c3af86f8f8f65cf424ff4a734c1c60adf4336"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/HierarchicalPortConstraintProcessor.java",
+      "git_blob_sha1": "61806221ddcc5ff7a76c176576300fbdfd945e33"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/HierarchicalPortDummySizeProcessor.java",
+      "git_blob_sha1": "f4c11511c51f2bf305dddbdedda8db7afe3ff5f3"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/HierarchicalPortOrthogonalEdgeRouter.java",
+      "git_blob_sha1": "bac1b983ab298a9362afaeef09800bb587daea6c"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/HierarchicalPortPositionProcessor.java",
+      "git_blob_sha1": "b9bb5a64c7d10a3453bf20c2a4275662e5965c83"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/HighDegreeNodeLayeringProcessor.java",
+      "git_blob_sha1": "b83a0d474dfce0d616c825ee40eb5837932e891c"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/HyperedgeDummyMerger.java",
+      "git_blob_sha1": "5b89fba34cc595f17e026eed6b7cebb99b95288d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/HypernodesProcessor.java",
+      "git_blob_sha1": "c3de55f5beec4c3c35c2cde62ea7090e63ba9a71"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/InLayerConstraintProcessor.java",
+      "git_blob_sha1": "858e611bfaa43fa5da5f51960353da8cf36bfe6b"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/InnermostNodeMarginCalculator.java",
+      "git_blob_sha1": "4669c3c969924174ace5197f36a3df779f361a8f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/InteractiveExternalPortPositioner.java",
+      "git_blob_sha1": "ec99aaf63341aab635fb2ca2036d7b67ffae0069"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/IntermediateProcessorStrategy.java",
+      "git_blob_sha1": "6bdee42b1f270412a81cc547a62e4d67caf2dbab"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/InvertedPortProcessor.java",
+      "git_blob_sha1": "d1151b25ce2e0026969521dd27f3fa3a04e804f9"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/LabelAndNodeSizeProcessor.java",
+      "git_blob_sha1": "975aac32d19748d893b76fa79e103a0a8dc9bdbd"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/LabelDummyInserter.java",
+      "git_blob_sha1": "2d6043c335e99b5beed968449700f757f26af338"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/LabelDummyRemover.java",
+      "git_blob_sha1": "da8a9045d95358d236fba035a23a49747ea729dc"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/LabelDummySwitcher.java",
+      "git_blob_sha1": "703951061c52bf0803e5ba4b7a2c9cd1ebf0e5fa"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/LabelManagementProcessor.java",
+      "git_blob_sha1": "9ce4c650d6f64d967b644bd8c3436804390f77d8"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/LabelSideSelector.java",
+      "git_blob_sha1": "69564b936248a4d20304d410926e161885c24bba"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/LayerConstraintPostprocessor.java",
+      "git_blob_sha1": "05ed5a43f010a418ef9d792aae082dd596cd0928"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/LayerConstraintPreprocessor.java",
+      "git_blob_sha1": "0f13f601f214ddc05bf3dd9a007210b313e4679b"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/LayerSizeAndGraphHeightCalculator.java",
+      "git_blob_sha1": "b5053d486bf1ff803cad8f136cb68fa26cb217c5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/LongEdgeJoiner.java",
+      "git_blob_sha1": "1048bdf76e346c9d6babd5acedd364d86cf29dd8"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/LongEdgeSplitter.java",
+      "git_blob_sha1": "af45fccf1c29890718b621e5005a5fc03b95a867"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/NodePromotion.java",
+      "git_blob_sha1": "7fdfb37e937a8a5fc63c446941b6e55418913feb"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/NorthSouthPortPostprocessor.java",
+      "git_blob_sha1": "f5d0866a521e31651503de630aa9bee3967416df"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/NorthSouthPortPreprocessor.java",
+      "git_blob_sha1": "19259c0a27aeb00a813c08b2318e3b2b58d3b081"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/PartitionMidprocessor.java",
+      "git_blob_sha1": "6c4f3efe1769217289e8c6b236a6bf2ce670b703"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/PartitionPostprocessor.java",
+      "git_blob_sha1": "c6708d53489fdc10820f52f197360092dcda0172"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/PartitionPreprocessor.java",
+      "git_blob_sha1": "01595abb1d06ac7be08830a5fd3683a9159a2df0"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/PortListSorter.java",
+      "git_blob_sha1": "a7e9fa38099f7d0fc8736edf77982b3a3deae030"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/PortSideProcessor.java",
+      "git_blob_sha1": "ae264824efd69684fcea5a6b71e64e6c6d98fb81"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/ReversedEdgeRestorer.java",
+      "git_blob_sha1": "de226a74df5de14776e17f94aa0b6817fce7c9b4"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/SelfLoopPortRestorer.java",
+      "git_blob_sha1": "5e640c5198c2fccccec2745a10feda471bfe2ebe"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/SelfLoopPostProcessor.java",
+      "git_blob_sha1": "4d01182682a62889c3cd7745ae3463cfc59f2842"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/SelfLoopPreProcessor.java",
+      "git_blob_sha1": "a2fa12f95fbbbd8a9c9cc944330c83cc3fdbb962"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/SelfLoopRouter.java",
+      "git_blob_sha1": "16723adacc42843f1a71163faba2100e273397b6"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/SemiInteractiveCrossMinProcessor.java",
+      "git_blob_sha1": "c950a6d866e86671b047414ba8c327d33e7a3fd5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/SortByInputModelProcessor.java",
+      "git_blob_sha1": "5ee21df8bbe506da0f4757c1c343fe76e0634022"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/compaction/EdgeAwareScanlineConstraintCalculation.java",
+      "git_blob_sha1": "78a2ae7aa62fdfbdf9d95914898b0a2312413dd8"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/compaction/HorizontalGraphCompactor.java",
+      "git_blob_sha1": "1065deecd69c0facfbd0c6f44d81201426154be5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/compaction/LGraphToCGraphTransformer.java",
+      "git_blob_sha1": "4ce09c4006b70e63c6e9f56f7cc81da1c38aed3f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/compaction/NetworkSimplexCompaction.java",
+      "git_blob_sha1": "b8977c1c792a9cf3afde061606e7c0a8f8335ff6"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/compaction/VerticalSegment.java",
+      "git_blob_sha1": "7eecd3a158b52a7e453769296e4219db4afbd0e4"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/greedyswitch/BetweenLayerEdgeTwoNodeCrossingsCounter.java",
+      "git_blob_sha1": "90a1538723a6a414d8f6fe606c8886e0105b4284"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/greedyswitch/CrossingMatrixFiller.java",
+      "git_blob_sha1": "ea8dc5581ac802d38049d520556b27fa09239de2"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/greedyswitch/GreedySwitchHeuristic.java",
+      "git_blob_sha1": "d5a3b88ba11f7ae56405aa64ebe2f3ccab85c0cc"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/greedyswitch/NorthSouthEdgeNeighbouringNodeCrossingsCounter.java",
+      "git_blob_sha1": "a7a789a5db2fd2ac4c0fe8f2b8f51a3e69271a57"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/greedyswitch/SwitchDecider.java",
+      "git_blob_sha1": "1ab83aec1acf1398cf6da04f78b9c73bddbf24e4"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/loops/SelfHyperLoop.java",
+      "git_blob_sha1": "e94b9520d34a07c3eb703599a4cacf8864ea29dd"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/loops/SelfHyperLoopLabels.java",
+      "git_blob_sha1": "e9bdff9d11a49242f78b45ec5e867df7b6c49c44"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/loops/SelfLoopEdge.java",
+      "git_blob_sha1": "4a4bf0c17b780a084570886f03a76e4854bdc8d1"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/loops/SelfLoopHolder.java",
+      "git_blob_sha1": "06ca2d0cc7dff54dd99ca95600de4105288b46d9"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/loops/SelfLoopPort.java",
+      "git_blob_sha1": "8bca3aeb908a86b0f20a8040de94242c06e66756"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/loops/SelfLoopType.java",
+      "git_blob_sha1": "93cf21f3cec4491ad47cd8b3918b8366cbd7e7ef"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/loops/ordering/PortRestorer.java",
+      "git_blob_sha1": "358a566a80f58bab66cff9a9944fde4e05d6771f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/loops/ordering/PortSideAssigner.java",
+      "git_blob_sha1": "22849153eae1fb8e9e3bed380e416735c446f14a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/loops/routing/AbstractSelfLoopRouter.java",
+      "git_blob_sha1": "8850551ec71f86dc79117a49f586d9b3d63f92d8"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/loops/routing/LabelPlacer.java",
+      "git_blob_sha1": "3bf07f3c2825f4be7a1d92bbfce6ada44ff0bbe6"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/loops/routing/OrthogonalSelfLoopRouter.java",
+      "git_blob_sha1": "58c59c0b15507a8afda8b97bf352aca73d9762f9"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/loops/routing/PolylineSelfLoopRouter.java",
+      "git_blob_sha1": "2267e79e952c61df9feb2ea27d1d6729664d2c36"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/loops/routing/RoutingDirector.java",
+      "git_blob_sha1": "7135ce861baad5839d9cee8e425f7efb431d6861"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/loops/routing/RoutingSlotAssigner.java",
+      "git_blob_sha1": "558f2775b41ca2c6f8b54a6edcc571c13e6101b3"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/loops/routing/SplineSelfLoopRouter.java",
+      "git_blob_sha1": "a62caf1390d6a4801bd4fb246f8b702d347822d8"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/preserveorder/ModelOrderNodeComparator.java",
+      "git_blob_sha1": "bd429dc2a0d392b70b4b803be3b52051a0a8c863"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/preserveorder/ModelOrderPortComparator.java",
+      "git_blob_sha1": "20241c4a4d5da835b6c4f4a66b9fdf07b9d6b24e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/wrapping/ARDCutIndexHeuristic.java",
+      "git_blob_sha1": "51e200c35725390e6f332f4af306fda222c0b829"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/wrapping/BreakingPointInserter.java",
+      "git_blob_sha1": "b6530f9593de0616c37de091e6aa47a37e8d7607"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/wrapping/BreakingPointProcessor.java",
+      "git_blob_sha1": "fc7695d19a7c7bdb4bad72fcdb69c515d43bd57e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/wrapping/BreakingPointRemover.java",
+      "git_blob_sha1": "235a5bf8771bb6bd0a7aed7876c4dee35dbf36cb"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/wrapping/CuttingUtils.java",
+      "git_blob_sha1": "e6b337dd0cd1b2539e2b3647344c2bcaaa5ce10e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/wrapping/GraphStats.java",
+      "git_blob_sha1": "dd54da9a9611579c87972588b94ef57ff694fc3e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/wrapping/ICutIndexCalculator.java",
+      "git_blob_sha1": "7ba347f4794319145e78b02420f9422d0be147c0"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/wrapping/MSDCutIndexHeuristic.java",
+      "git_blob_sha1": "51fe8c61470310cbe5f66b78e7a780aaaaa058d3"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/intermediate/wrapping/SingleEdgeGraphWrapper.java",
+      "git_blob_sha1": "b8fb9fce865806594f537f39bcf9900b700b535e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/CenterEdgeLabelPlacementStrategy.java",
+      "git_blob_sha1": "1862546976c700cfbb3fa9defe8b7eccf5bbea80"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/ConstraintCalculationStrategy.java",
+      "git_blob_sha1": "f19dc138b18c924b90df20e8377a01460b85b748"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/CrossingMinimizationStrategy.java",
+      "git_blob_sha1": "3435e83a33d802965c9fb86db2f978900c68a9ea"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/CuttingStrategy.java",
+      "git_blob_sha1": "fe7436d82e4e674c6d9f5f0acddda5134fc78970"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/CycleBreakingStrategy.java",
+      "git_blob_sha1": "9e4151e34c8a62ab0e07e0e803f2bf9e201f77e4"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/DirectionCongruency.java",
+      "git_blob_sha1": "07d5136f7fdde77c740f5f9a9c00103697b6db40"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/EdgeConstraint.java",
+      "git_blob_sha1": "63f97698d572ebd65ca00cff67f0305fb149defa"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/EdgeLabelSideSelection.java",
+      "git_blob_sha1": "d971c045fc84f7da96da79bfb0880bd05dfb434d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/EdgeStraighteningStrategy.java",
+      "git_blob_sha1": "0b42933bd6c82378bd63e84b65bbcd1047ea9b96"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/FixedAlignment.java",
+      "git_blob_sha1": "935459a70dbfdf69917d906165b552f1cee39daa"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/GraphCompactionStrategy.java",
+      "git_blob_sha1": "1f59a15bcbd53f632bf3c0571f7b75c3301af63f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/GraphProperties.java",
+      "git_blob_sha1": "c58943dcccb1dbfacbe6c180625ccefa3d7e055b"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/GreedySwitchType.java",
+      "git_blob_sha1": "02f0c1e4eafdc46d37ae046fd43a0989f5455fa1"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/InLayerConstraint.java",
+      "git_blob_sha1": "7f771c949b33e51878ba04b2dfd86eb382a1d1f3"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/InteractiveReferencePoint.java",
+      "git_blob_sha1": "73e6bed23ceb54dc99a15462fcd50d94b8725a72"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/InternalProperties.java",
+      "git_blob_sha1": "c05db6165c80fec8d4653a41bcf02b42f111e6cd"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/LayerConstraint.java",
+      "git_blob_sha1": "6fb3bf5f27a6b8411dcd23076813a7652bbbf583"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/LayeredSpacings.java",
+      "git_blob_sha1": "a9cb1f201c49a94dba207645152eb19be2496052"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/LayeringStrategy.java",
+      "git_blob_sha1": "afa84c88830c6db73f9e4ae05dea2d78285863b7"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/LongEdgeOrderingStrategy.java",
+      "git_blob_sha1": "45e7ef06abf40796239bc6e7b47a94b2e1556bd6"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/NodeFlexibility.java",
+      "git_blob_sha1": "ae79285dbe0aa7718f0ab54fe75e4aaaf21e50d5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/NodePlacementStrategy.java",
+      "git_blob_sha1": "4db69f5fea9d93c0e3e3aa97bb0b08a2706967bd"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/NodePromotionStrategy.java",
+      "git_blob_sha1": "d02c852dee110f27a0f49e19bd9a5bad0911ecd9"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/OrderingStrategy.java",
+      "git_blob_sha1": "6d7bc51bd6228789cf59c48f004cf1c1e640a32d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/PortSortingStrategy.java",
+      "git_blob_sha1": "bfbbc2a6a44221235b06ef019759d2926e72214c"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/PortType.java",
+      "git_blob_sha1": "310ce098be8380c175bed3e39216f2792584d71f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/SelfLoopDistributionStrategy.java",
+      "git_blob_sha1": "e1365460d51c55dc8ee9098ca2a53b2b26836e69"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/SelfLoopOrderingStrategy.java",
+      "git_blob_sha1": "470195e49f719d95cd21740631a72b3c2f28b07b"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/SelfLoopPlacementStrategy.java",
+      "git_blob_sha1": "b48cf14301040cd06f0de421988ae7a8781f6ca9"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/Spacings.java",
+      "git_blob_sha1": "6e13a6c2432aed179a1d4c25de0035d2e6e2ead3"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/SplineRoutingMode.java",
+      "git_blob_sha1": "bf6ec746c480571fa7336e0e7c997dda3f1c97a5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/ValidifyStrategy.java",
+      "git_blob_sha1": "981755cb1baf355f4cb822a227f9b8800a0313d4"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/options/WrappingStrategy.java",
+      "git_blob_sha1": "81fc5c2001f3927ed5c9c3f28f27dbb5f7e359b8"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p1cycles/DepthFirstCycleBreaker.java",
+      "git_blob_sha1": "8ca4bfab566d2a3d3930d5d5ba0db58ea8145e54"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p1cycles/GreedyCycleBreaker.java",
+      "git_blob_sha1": "5c3978e11282da8cf86212becdd9c5c5d82221b5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p1cycles/GreedyModelOrderCycleBreaker.java",
+      "git_blob_sha1": "0aac2532ae5d68d7853224ea96f309186bbcb827"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p1cycles/InteractiveCycleBreaker.java",
+      "git_blob_sha1": "e58b451544c511491844e02ec1e2a576dcc8fa56"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p1cycles/ModelOrderCycleBreaker.java",
+      "git_blob_sha1": "79afcd858c8e64367e5ed3289b79400917f290ec"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p2layers/BreadthFirstModelOrderLayerer.java",
+      "git_blob_sha1": "3f38ffacee8a7e95218b97e80a4ec40d62cceb33"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p2layers/CoffmanGrahamLayerer.java",
+      "git_blob_sha1": "400d822682f35cbd846fabf6b522e7395afd2dbe"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p2layers/DepthFirstModelOrderLayerer.java",
+      "git_blob_sha1": "5ae7f3731796b29dd9147d0a0e4e4418778b38e6"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p2layers/InteractiveLayerer.java",
+      "git_blob_sha1": "59c5148581c0e3ed7bd3fd989d58827f22b11f23"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p2layers/LongestPathLayerer.java",
+      "git_blob_sha1": "6a56571bacf4e994e3c61003ddbe3e6eaec2bc7b"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p2layers/LongestPathSourceLayerer.java",
+      "git_blob_sha1": "5ef12f1b5ab27cef46fcd63164deff84a01d2a56"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p2layers/MinWidthLayerer.java",
+      "git_blob_sha1": "eccc1099f6521e4ba0ad8aba26edc27f109a3531"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p2layers/NetworkSimplexLayerer.java",
+      "git_blob_sha1": "41d384be62ff534cafc53abdf6df7a809d376f22"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p2layers/StretchWidthLayerer.java",
+      "git_blob_sha1": "53c14ceb93342e568dd1fcd60b48a1813c822762"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/AbstractBarycenterPortDistributor.java",
+      "git_blob_sha1": "3d11891021cc77531701c699055530d28f2b5000"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/BarycenterHeuristic.java",
+      "git_blob_sha1": "76c0ea97ab5e9a404fda8343303a130d8cef8842"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/ForsterConstraintResolver.java",
+      "git_blob_sha1": "9a015f4ea8383dd2c38566a73d7d7bfd8658ed18"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/GraphInfoHolder.java",
+      "git_blob_sha1": "fc8de7395e120f34cb57b3109c98e2d418e81d7e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/GreedyPortDistributor.java",
+      "git_blob_sha1": "327f5e2e70602254665dc59b2ac2fa72b2f47c9e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/ICrossingMinimizationHeuristic.java",
+      "git_blob_sha1": "52ce22969c436e5800d3910382f6a0a54d376bf2"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/ISweepPortDistributor.java",
+      "git_blob_sha1": "447f0a73ce7f197252b6e0b9f209ecb6570dba0c"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/InteractiveCrossingMinimizer.java",
+      "git_blob_sha1": "c17cf3c0bcce72c0a75ceb623e875238697182c7"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/LayerSweepCrossingMinimizer.java",
+      "git_blob_sha1": "07ed1d79a6a0d5f2458977c8e5e923da1f4e5355"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/LayerSweepTypeDecider.java",
+      "git_blob_sha1": "e565e035b6c1246f46a97ba89c71d2334f71b6af"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/LayerTotalPortDistributor.java",
+      "git_blob_sha1": "edb18e8824856afe7cf01d83c9274e05f2aca67e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/ModelOrderBarycenterHeuristic.java",
+      "git_blob_sha1": "f70fa6577d61c29c263b3e4c4af1165559f227c8"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/NoCrossingMinimizer.java",
+      "git_blob_sha1": "64fc72ebec15e487aa44ccf06c14b41579090c7f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/NodeRelativePortDistributor.java",
+      "git_blob_sha1": "0038933f20f3b90c097636fdeaf83428443710d7"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/SweepCopy.java",
+      "git_blob_sha1": "28e96c53ab1a025d5f50ecdc6e70084625d21a4a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/counting/AllCrossingsCounter.java",
+      "git_blob_sha1": "8d6b4c5698098b8d6542810626c07b933b535872"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/counting/BinaryIndexedTree.java",
+      "git_blob_sha1": "808fa3b8d152bc61842c4898d1899ed3f4c97896"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/counting/CrossMinUtil.java",
+      "git_blob_sha1": "4b561731b43949509e1e532c95fd691da936dd37"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/counting/CrossingsCounter.java",
+      "git_blob_sha1": "6f84b6d722303e1fcc5a3d40c13584025c81b32e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/counting/HyperedgeCrossingsCounter.java",
+      "git_blob_sha1": "57d578b547b24a1cebb0639b3ea4a5edb55c1ad2"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p3order/counting/IInitializable.java",
+      "git_blob_sha1": "7910444a12be4f2b44d1c8ea1d13035cf4c1bae1"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p4nodes/InteractiveNodePlacer.java",
+      "git_blob_sha1": "e1e17824d3ef94e2778c7badd1749e6b6e61cb43"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p4nodes/LinearSegmentsNodePlacer.java",
+      "git_blob_sha1": "5751c15a8735bbdcb46a852e45d0411140ececc4"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p4nodes/NetworkSimplexPlacer.java",
+      "git_blob_sha1": "100fc5df3a957a338482c4880502e055a7aa303d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p4nodes/SimpleNodePlacer.java",
+      "git_blob_sha1": "cfc5ecd8f87c5825ecdc318e01acfbd45864f80b"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p4nodes/bk/BKAlignedLayout.java",
+      "git_blob_sha1": "5f1d27bbbf67f0e293a3a4d7e0488c63e27e8d59"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p4nodes/bk/BKAligner.java",
+      "git_blob_sha1": "a21c2409cd42e4104c7d1b0729dab1423e5b1344"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p4nodes/bk/BKCompactor.java",
+      "git_blob_sha1": "bfd20ea19d920968f967456963ac7fc55b5e2b21"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p4nodes/bk/BKNodePlacer.java",
+      "git_blob_sha1": "2f72b421997dfb3d09fbf3ca292ad7bccb09f69a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p4nodes/bk/ICompactor.java",
+      "git_blob_sha1": "48560a701e47b8e31e8d1a9fb0dc1d8ecd182538"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p4nodes/bk/NeighborhoodInformation.java",
+      "git_blob_sha1": "9a95e58b59fabbb6e5c2a1804123def267510668"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p4nodes/bk/ThresholdStrategy.java",
+      "git_blob_sha1": "d1b2eac28298e1664218fba99f1c2f6c5730e58d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p5edges/EdgeRouterFactory.java",
+      "git_blob_sha1": "fc859b2d94be7f34b606930da5b6ec9ac2f79da9"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p5edges/OrthogonalEdgeRouter.java",
+      "git_blob_sha1": "4d82ab66ad287269df908e631ac1fe5bb9d0355a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p5edges/PolylineEdgeRouter.java",
+      "git_blob_sha1": "939650e12446a989d25f62619c531042dcbdb33e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p5edges/orthogonal/HyperEdgeCycleDetector.java",
+      "git_blob_sha1": "ca54c3be0c23c2622ac01d5ee0bd15a96170c775"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p5edges/orthogonal/HyperEdgeSegment.java",
+      "git_blob_sha1": "4204d0caba3e6b8c8d2a7c227698e5d77a5233a6"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p5edges/orthogonal/HyperEdgeSegmentDependency.java",
+      "git_blob_sha1": "d85e1d9ab33f608e9e2cad9cba5d00bd7f056023"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p5edges/orthogonal/HyperEdgeSegmentSplitter.java",
+      "git_blob_sha1": "22a927fda111390aed92d1e480cfe79ed2e147e6"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p5edges/orthogonal/OrthogonalRoutingGenerator.java",
+      "git_blob_sha1": "cb4b7c382412cda6e6533fd66b8eddebcdca2d06"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p5edges/orthogonal/direction/BaseRoutingDirectionStrategy.java",
+      "git_blob_sha1": "2ca24e80ef4f6fdefdbd685877ef7a3a4e598e3d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p5edges/orthogonal/direction/NorthToSouthRoutingStrategy.java",
+      "git_blob_sha1": "556c57c544b810dba7e7092fd6b6b8e7387ffc83"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p5edges/orthogonal/direction/RoutingDirection.java",
+      "git_blob_sha1": "820f744060ca17a91a2b2c913af8ee501a672f02"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p5edges/orthogonal/direction/SouthToNorthRoutingStrategy.java",
+      "git_blob_sha1": "553a84674b3b6a27fed1cceba61f2448eae708e4"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p5edges/orthogonal/direction/WestToEastRoutingStrategy.java",
+      "git_blob_sha1": "d021c85a6d5aee4836c2a7f25883bde72a517680"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p5edges/splines/NubSpline.java",
+      "git_blob_sha1": "a85da547fe231ec8b61539e7ee236d0b9ccddcf9"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p5edges/splines/NubsSelfLoop.java",
+      "git_blob_sha1": "4ce34b8cf82132ae9371683d02970c635af5e902"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p5edges/splines/Rectangle.java",
+      "git_blob_sha1": "c25c0287ff9765b49bf2ecfc955c53875d170da7"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p5edges/splines/SplineEdgeRouter.java",
+      "git_blob_sha1": "2c408f6ac836f72de9f05245eda2c38ca686417a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p5edges/splines/SplineSegment.java",
+      "git_blob_sha1": "9fb4e6d6b9317e0e2671cfb5ea7bc4bf75fa21bc"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.layered/src/org/eclipse/elk/alg/layered/p5edges/splines/SplinesMath.java",
+      "git_blob_sha1": "446443df0814687e0bd996c6e7f403cf94556095"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/META-INF/services/org.eclipse.elk.core.data.ILayoutMetaDataProvider",
+      "git_blob_sha1": "c2ef024a73163a337e89a6d8be0d309f1853326a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/ComponentsProcessor.java",
+      "git_blob_sha1": "92b78481dac6cdedf5a6ea792f256bc7d7f981e2"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/ElkGraphImporter.java",
+      "git_blob_sha1": "eaeb082c06b3a7e7ea328b049d2484463aec3b51"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/IGraphImporter.java",
+      "git_blob_sha1": "71d6028f56717e87bea72bba6ae9ca75935ce37f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/InteractiveMrTreeGraphVisitor.java",
+      "git_blob_sha1": "cac1d0c90be54cad55b7d0b25d2dcac4afa3d049"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/MrTree.java",
+      "git_blob_sha1": "c6a8a16ea1c5bd817c93af3810ca84234d226215"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/Tree.melk",
+      "git_blob_sha1": "b7016e78f37e026b0b9950735b215502da0cb28c"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/TreeLayoutPhases.java",
+      "git_blob_sha1": "add7dfa6ff6eaf347c2ef962a8aa2e19a09d2447"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/TreeLayoutProvider.java",
+      "git_blob_sha1": "03c1b767a3931b66b68720a10716763b420f75f5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/TreeUtil.java",
+      "git_blob_sha1": "7689daf31849155ae79b282bb56e901d2360dc65"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/graph/TEdge.java",
+      "git_blob_sha1": "3ec02a27e16680940e6c457746d28445cf69fc2d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/graph/TGraph.java",
+      "git_blob_sha1": "c25d179df26dee2a8a0a5646f280eb4b731cf0e8"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/graph/TGraphElement.java",
+      "git_blob_sha1": "042c845b555fb4b9d58bacb94dc0bd081bf0baf6"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/graph/TLabel.java",
+      "git_blob_sha1": "37fe22f29068454f627a6c357eb3c01182c5c7ec"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/graph/TNode.java",
+      "git_blob_sha1": "fb6122c5eb2228c4d7fde31853a55202a0c8c26c"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/graph/TShape.java",
+      "git_blob_sha1": "c085e27ea44f25a885e1c8532ce0bc1301e756ee"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/intermediate/CompactionProcessor.java",
+      "git_blob_sha1": "2dc5052db3ec2e8d1c4798fb5832316fc132c8fe"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/intermediate/DirectionProcessor.java",
+      "git_blob_sha1": "99af999edc78c95be69370e7e0fe2a2650395475"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/intermediate/FanProcessor.java",
+      "git_blob_sha1": "bbc28d41f1e767b617828c730e215f095e0e313f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/intermediate/GraphBoundsProcessor.java",
+      "git_blob_sha1": "3da77b12004ccfdb5820a08999c95e7ad6e5fb46"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/intermediate/IntermediateProcessorStrategy.java",
+      "git_blob_sha1": "7ea489a678e038cebb0f54213a44b28040e106d1"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/intermediate/LevelCoordinatesProcessor.java",
+      "git_blob_sha1": "70b66fce85d683bae15de671c1e3655def914920"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/intermediate/LevelHeightProcessor.java",
+      "git_blob_sha1": "c520a668498a270faf8b929f31f6c7fa5e9e7a2a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/intermediate/LevelProcessor.java",
+      "git_blob_sha1": "3ce32d9777e9e9619dd09299c8ff50d44eca3dea"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/intermediate/NeighborsProcessor.java",
+      "git_blob_sha1": "43371f552b759d06fb358c44c4b93ee03f45141a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/intermediate/NodePositionProcessor.java",
+      "git_blob_sha1": "bf884bbb063d7563c7c41f1823c83e5f0ba0ef2f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/intermediate/RootProcessor.java",
+      "git_blob_sha1": "a294f06ed31b86facc885173550de0d3aab1a13c"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/intermediate/Untreeifyer.java",
+      "git_blob_sha1": "77f9b33a2e4fbfd906b4d8a2a0c89d6ee631bc49"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/options/CompactionMode.java",
+      "git_blob_sha1": "dca0e73634787545071f19a532f315ec3b94eba4"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/options/EdgeRoutingMode.java",
+      "git_blob_sha1": "6672a05b8023f7e2efec07b7b4bfaaecb0eb1d1f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/options/GraphProperties.java",
+      "git_blob_sha1": "5d837f0289f6fc46e06f03881714b4c5cdad1beb"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/options/InternalProperties.java",
+      "git_blob_sha1": "62066cc00beb65e36ad5615aaff4a9424d684cc3"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/options/OrderWeighting.java",
+      "git_blob_sha1": "9dbd7eedf7331b5bd9bbedeaf8bd981f6628fb2c"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/options/TreeifyingOrder.java",
+      "git_blob_sha1": "45ca1af723a14084c13db54241317b132596e70c"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/p1treeify/DFSTreeifyer.java",
+      "git_blob_sha1": "19d4232ec37010054e7080b8a2e5f14b21e8025e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/p2order/NodeOrderer.java",
+      "git_blob_sha1": "ba7d0fe9428eadf9eb7e5b47ce13b100f0872cc9"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/p2order/OrderBalance.java",
+      "git_blob_sha1": "45a28eae2b04ce35d7cfb8f7998e85d4bf7e3f48"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/p3place/NodePlacer.java",
+      "git_blob_sha1": "14d014c0548bfdf6b529eb70aa4a63f56721a345"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/p4route/EdgeRouter.java",
+      "git_blob_sha1": "63da4cf065f6eea419f8bcac108deb605bb025b2"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.mrtree/src/org/eclipse/elk/alg/mrtree/p4route/MultiLevelEdgeNodeNodeGap.java",
+      "git_blob_sha1": "819172df52b4b1d4e4056144859a48af71e16aec"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/META-INF/services/org.eclipse.elk.core.data.ILayoutMetaDataProvider",
+      "git_blob_sha1": "f4777c3342e9c6b9e48d515d5a7fafdf54155ea7"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/InternalProperties.java",
+      "git_blob_sha1": "6a7fd8a2f2c235544b471d940b54397b1aab39c5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/Radial.melk",
+      "git_blob_sha1": "afef45d06fb369fcebcbf041f59336f07bf7726f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/RadialLayoutPhases.java",
+      "git_blob_sha1": "bc19a9e7f6496fac08860d1e71d5710eb0717440"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/RadialLayoutProvider.java",
+      "git_blob_sha1": "a2c7f34780a5ecb8ad5c7211ec30758644394547"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/RadialUtil.java",
+      "git_blob_sha1": "20f79625efa83e72de5119095503908d638ca4e7"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/intermediate/CalculateGraphSize.java",
+      "git_blob_sha1": "403a312f6d427ba541880704bc3febfdc55ccf17"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/intermediate/EdgeAngleCalculator.java",
+      "git_blob_sha1": "d272bea22398200357ec2faaeecc8c377c831879"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/intermediate/IntermediateProcessorStrategy.java",
+      "git_blob_sha1": "9a9ae7ee9a59cc5f34e481ca3a17759763e6594d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/intermediate/compaction/AbstractRadiusExtensionCompaction.java",
+      "git_blob_sha1": "6723ec5cf575d5e95da69507a0971f3a28611a11"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/intermediate/compaction/AnnulusWedgeCompaction.java",
+      "git_blob_sha1": "cc04a77178c803c84703637c7fff8962937bd02a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/intermediate/compaction/GeneralCompactor.java",
+      "git_blob_sha1": "37ccdc4026388f08666cf95737bd7ae91922fc4f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/intermediate/compaction/IRadialCompactor.java",
+      "git_blob_sha1": "4dbe847c9dbff3bb0139c66f088d94f23ea8f47a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/intermediate/compaction/RadialCompaction.java",
+      "git_blob_sha1": "9e46f04e978cabc5bac8b5849a8f20a9470ad2de"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/intermediate/optimization/CrossingMinimizationPosition.java",
+      "git_blob_sha1": "4dcde70890016d87f789a39effaf5407d7d08325"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/intermediate/optimization/EdgeLengthOptimization.java",
+      "git_blob_sha1": "ef1ac10c36ce5292d8e5f63621f574e48d2d7ca1"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/intermediate/optimization/EdgeLengthPositionOptimization.java",
+      "git_blob_sha1": "822e7eb0cb318c0ecab097786787ed87a85550bd"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/intermediate/optimization/IEvaluation.java",
+      "git_blob_sha1": "196ccbe500f00fc9dc79afd5fd7cd6dd347efa59"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/intermediate/overlaps/IOverlapRemoval.java",
+      "git_blob_sha1": "921c363585a061b496767c9923ef8daff6dfb656"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/intermediate/overlaps/RadiusExtensionOverlapRemoval.java",
+      "git_blob_sha1": "3f43ce84a59023d813d730bd085ff5c2b8da7da6"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/intermediate/rotation/AngleRotation.java",
+      "git_blob_sha1": "797b95d9d055116e3957e4e2cbd3cfac6ebdbecc"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/intermediate/rotation/GeneralRotator.java",
+      "git_blob_sha1": "4b8c2a98810b8ffbdc8306a82a870dc71207ad73"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/intermediate/rotation/IRadialRotator.java",
+      "git_blob_sha1": "e02af67c301aea1ad65a51ad51ca23603c26ccf6"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/options/AnnulusWedgeCriteria.java",
+      "git_blob_sha1": "72bdce9decd8fa8cda2638e8e1254d30cafb0c3a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/options/CompactionStrategy.java",
+      "git_blob_sha1": "ddd4fb136efa0c0b044c10125ad90a604853e70f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/options/OverlapRemovalStrategy.java",
+      "git_blob_sha1": "b6619e82ceb78f95174a85b17810a3538de7a27a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/options/RadialTranslationStrategy.java",
+      "git_blob_sha1": "d03e3e8e8c66e7bb04adad8dfc6dc926b4808c11"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/options/SortingStrategy.java",
+      "git_blob_sha1": "090f7a2075f972ab7bba90d069696662876834ce"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/p1position/EadesRadial.java",
+      "git_blob_sha1": "413cd47f51bc284411e4b9942430d14e176b04cd"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/p1position/wedge/AnnulusWedgeByLeafs.java",
+      "git_blob_sha1": "cb117183b1f45e1a9db675f94c5ce7466142ea4a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/p1position/wedge/AnnulusWedgeByNodeSpace.java",
+      "git_blob_sha1": "509445516cbc71407bdff4c0f4f62c904616cad3"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/p1position/wedge/IAnnulusWedgeCriteria.java",
+      "git_blob_sha1": "9fcbae8397d1ccfc2c7ae993eec2ae3340496222"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/p2routing/IRadialEdgeRouter.java",
+      "git_blob_sha1": "4e4d18d005821285a51e60d54c8416133da7f8af"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/p2routing/StraightLineEdgeRouter.java",
+      "git_blob_sha1": "85657bcfca9b37e784835959dbcc6fa88c31cd93"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/sorting/IDSorter.java",
+      "git_blob_sha1": "04aa2c193d205b133ec231599f3b0730f49264ad"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/sorting/IRadialSorter.java",
+      "git_blob_sha1": "9fe4cf5e6a878f283644f04c2da5c888e4788124"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.radial/src/org/eclipse/elk/alg/radial/sorting/PolarCoordinateSorter.java",
+      "git_blob_sha1": "31a460dfd06743ba81dd826b1cca47874589be3f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/META-INF/services/org.eclipse.elk.core.data.ILayoutMetaDataProvider",
+      "git_blob_sha1": "f21bfa89b926b052be1a49d39a1219f1bfcb4363"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/InteractiveRectPackingGraphVisitor.java",
+      "git_blob_sha1": "7eceb322ac5338505ad6cb99ea314680cdd28ce8"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/RectPacking.melk",
+      "git_blob_sha1": "6ab4286f8da38086ecf7b9425c924afe80bc140b"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/RectPackingLayoutPhases.java",
+      "git_blob_sha1": "5b3154ea30a7adfeb7bc00e04a648f6d5f3d6bfc"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/RectPackingLayoutProvider.java",
+      "git_blob_sha1": "2fb18b557bb36667f3a0e96382debd3d5f341907"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/intermediate/InteractiveNodeReorderer.java",
+      "git_blob_sha1": "36999aea46535c48d29cb3d27b9f2356f4dbdcd5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/intermediate/IntermediateProcessorStrategy.java",
+      "git_blob_sha1": "8164c56b3e64b5b2bf7beb1d0ea6ac4eb1fce0ec"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/intermediate/MinSizePostProcessor.java",
+      "git_blob_sha1": "67a372634c9e83004bb982068c8212efe86b9c45"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/intermediate/MinSizePreProcessor.java",
+      "git_blob_sha1": "8ea289a50e8a685fe545a6df736ed83bb5b4c606"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/options/InternalProperties.java",
+      "git_blob_sha1": "a5f68d1fef99b7b1dc43a0be3d973b4402d2b2c5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/options/OptimizationGoal.java",
+      "git_blob_sha1": "df12c5f3e1e58ad460c80b37fdef8b2e396905f2"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/p1widthapproximation/AreaApproximation.java",
+      "git_blob_sha1": "9845490b791a1ac3786204c321476898a0d9416e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/p1widthapproximation/AreaFilter.java",
+      "git_blob_sha1": "2e1fe882b4c59acdbb59a7063f13fc69b2ede51f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/p1widthapproximation/AspectRatioFilter.java",
+      "git_blob_sha1": "adb437ffd1c5c3d26a16a6475fffd282ef39c7b4"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/p1widthapproximation/BestCandidateFilter.java",
+      "git_blob_sha1": "542b6940b8f3270a15dbbf21853fb0223349d4e9"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/p1widthapproximation/Calculations.java",
+      "git_blob_sha1": "68d135ea4e0c4c1097abe951f4f011b3ec0d9637"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/p1widthapproximation/GreedyWidthApproximator.java",
+      "git_blob_sha1": "f592b6c448f68bb3db07ac2ba3c24237af9bbc1b"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/p1widthapproximation/ScaleMeasureFilter.java",
+      "git_blob_sha1": "00fad10c6aa2b0ef6c5badf1fcbb9be4141cad56"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/p1widthapproximation/TargetWidthWidthApproximator.java",
+      "git_blob_sha1": "e8a9815b5376b40049cfba55753db39680ec7f1f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/p1widthapproximation/WidthApproximationStrategy.java",
+      "git_blob_sha1": "a42fc67b798de0c8ec1ffcf6ca809dc07eec9ca8"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/p2packing/Compaction.java",
+      "git_blob_sha1": "a7aa57c8fdd07e57fbad794e3bd50bdbac34a9e1"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/p2packing/Compactor.java",
+      "git_blob_sha1": "a151fde44864350f93843750b536668c6e8ddd67"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/p2packing/InitialPlacement.java",
+      "git_blob_sha1": "20442cc3b38c5486e87ce91749c5eee62eee392e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/p2packing/NoPlacement.java",
+      "git_blob_sha1": "be4c1fc77aded3310ddbeeafd57f335573c59e36"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/p2packing/PackingStrategy.java",
+      "git_blob_sha1": "a8e4c028655cea2f846f2f72371adc140fd8f0b1"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/p2packing/RowFillingAndCompaction.java",
+      "git_blob_sha1": "04d497a07883423287dc6fb5db49765c02ee5bce"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/p2packing/SimplePlacement.java",
+      "git_blob_sha1": "da67e6a9c87dec5bb2e9c945fc0b827e139739fa"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/p3whitespaceelimination/EqualWhitespaceEliminator.java",
+      "git_blob_sha1": "e5b7b52336286d20a75d56ac4c40f1545468de02"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/p3whitespaceelimination/RectangleExpansion.java",
+      "git_blob_sha1": "44995f407b1967644a0a9222a016a4f143cc4c43"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/p3whitespaceelimination/ToAspectratioNodeExpander.java",
+      "git_blob_sha1": "34f519f8a41e45ee5db86a00014a7e4cc73b17a6"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/p3whitespaceelimination/WhiteSpaceEliminationStrategy.java",
+      "git_blob_sha1": "493c91fec54f28179e511cc26b7e249776bb9cd0"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/util/Block.java",
+      "git_blob_sha1": "65b7b8f9f2ec2999ba2d9f3485e3a5a5031e58a8"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/util/BlockRow.java",
+      "git_blob_sha1": "a3c683a0033652eb4a3b46bac746c36c5d117cd9"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/util/BlockStack.java",
+      "git_blob_sha1": "6232ce996a58ca9a3ff7c00ccbc33eb3dc14e671"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/util/DrawingData.java",
+      "git_blob_sha1": "a97da22f7292df1c4a99dbf40d4133c62e27f496"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/util/DrawingDataDescriptor.java",
+      "git_blob_sha1": "2b398d560bc3c34b56e8c594bea0bde87d17d3b5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/util/DrawingUtil.java",
+      "git_blob_sha1": "be3d31e58605d2ec3ac52baacaeaecfee76040a5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.rectpacking/src/org/eclipse/elk/alg/rectpacking/util/RectRow.java",
+      "git_blob_sha1": "7451bce977f05ac391f722b78dea3e103c25bdcd"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.spore/src/META-INF/services/org.eclipse.elk.core.data.ILayoutMetaDataProvider",
+      "git_blob_sha1": "b951986e26e8dc53c9537332fb0129e22f1fa925"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.spore/src/org/eclipse/elk/alg/spore/ElkGraphImporter.java",
+      "git_blob_sha1": "e3fa0891ab12fea30ea4547bb4991ff9dfbe93e1"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.spore/src/org/eclipse/elk/alg/spore/IGraphImporter.java",
+      "git_blob_sha1": "5d9b436a8d56e28a69402f071ea00c8901bcdbe1"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.spore/src/org/eclipse/elk/alg/spore/OverlapRemovalLayoutProvider.java",
+      "git_blob_sha1": "3a34b7856cf92c47a9c8f28239ea0ded78d74e9c"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.spore/src/org/eclipse/elk/alg/spore/SPOrE.melk",
+      "git_blob_sha1": "86e16c92dfd49cee8dce1a950ec32d1f7e5b98d5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.spore/src/org/eclipse/elk/alg/spore/SPOrEPhases.java",
+      "git_blob_sha1": "f70c01c54d6cddbed3a817d319c7672d162acb1f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.spore/src/org/eclipse/elk/alg/spore/ShrinkTree.java",
+      "git_blob_sha1": "cc3f60e47ede53eb203195f30a08f35aa5c0bb27"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.spore/src/org/eclipse/elk/alg/spore/ShrinkTreeLayoutProvider.java",
+      "git_blob_sha1": "897614d052e0878e4d63291f335b11cf5a4b28af"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.spore/src/org/eclipse/elk/alg/spore/graph/Graph.java",
+      "git_blob_sha1": "35e0a418032357e258f3ea85d44b55ea49b315f8"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.spore/src/org/eclipse/elk/alg/spore/options/CompactionStrategy.java",
+      "git_blob_sha1": "5610134cb8239c88286a0f711a4aff1055a6b45e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.spore/src/org/eclipse/elk/alg/spore/options/OverlapRemovalStrategy.java",
+      "git_blob_sha1": "780a99c7b2e7779da669f0efa5a12169fdb1c075"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.spore/src/org/eclipse/elk/alg/spore/options/RootSelection.java",
+      "git_blob_sha1": "b60397468d9789278019c02ed7eeccd74a085983"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.spore/src/org/eclipse/elk/alg/spore/options/SpanningTreeCostFunction.java",
+      "git_blob_sha1": "8d8d2d4eb98c2cbd22e85714a836fb438951968b"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.spore/src/org/eclipse/elk/alg/spore/options/StructureExtractionStrategy.java",
+      "git_blob_sha1": "c74071737983e744f4e04546f2cb0c0c9a7f6ad7"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.spore/src/org/eclipse/elk/alg/spore/options/TreeConstructionStrategy.java",
+      "git_blob_sha1": "d2fc4e823b6fa809c228dcb636b4f74973dddfbf"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.spore/src/org/eclipse/elk/alg/spore/p1structure/DelaunayTriangulationPhase.java",
+      "git_blob_sha1": "f70253f8fa4abc99bdb94fe5bdfa080d87d51e6a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.spore/src/org/eclipse/elk/alg/spore/p2processingorder/MaxSTPhase.java",
+      "git_blob_sha1": "eb421811791ea6176312de3fdbffc01dc58fd787"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.spore/src/org/eclipse/elk/alg/spore/p2processingorder/MinSTPhase.java",
+      "git_blob_sha1": "91f7e251db141070bce6ac3b769478411f20f331"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.spore/src/org/eclipse/elk/alg/spore/p3execution/GrowTreePhase.java",
+      "git_blob_sha1": "792ff5eda3d6551082064cf670fc4f8a2eb4597e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.alg.spore/src/org/eclipse/elk/alg/spore/p3execution/ShrinkTreeCompactionPhase.java",
+      "git_blob_sha1": "911c408dbc836b38d6bf932017e4c2c9b948c125"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/META-INF/services/org.eclipse.elk.core.data.ILayoutMetaDataProvider",
+      "git_blob_sha1": "399eed27dd2edf15c58e0e54ff6a4076977d2f38"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/AbstractLayoutProvider.java",
+      "git_blob_sha1": "1ce4aaf5f01b6671b989046d76ddadfc4a576fdd"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/Core.melk",
+      "git_blob_sha1": "d5b059bab51d043e6fc7c9201b929ea83c06fc93"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/IGraphLayoutEngine.java",
+      "git_blob_sha1": "0b2cd31963691a7309a125689ebeb682d22d4da7"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/ITopdownLayoutProvider.java",
+      "git_blob_sha1": "5fe594927b72d36a7046b3e5055114e70f2f5157"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/LayoutConfigurator.java",
+      "git_blob_sha1": "32d8582a9144adb4c18432db4ce920a9526ec897"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/RecursiveGraphLayoutEngine.java",
+      "git_blob_sha1": "6c94d17390195817db3729988a8e8b5c542bbd2f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/UnsupportedConfigurationException.java",
+      "git_blob_sha1": "9ec18360f9f5377131bbdfe7517188ec970251aa"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/UnsupportedGraphException.java",
+      "git_blob_sha1": "fdbb518a2305e4cfc218e7b7ccabab3f4380c40a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/alg/AlgorithmAssembler.java",
+      "git_blob_sha1": "62b756ac97f3db1e70f56820e4a438a6cf19f429"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/alg/EnumBasedFactoryComparator.java",
+      "git_blob_sha1": "bfca58ad85b713a9dc8322bd4d46127bfe624555"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/alg/ILayoutPhase.java",
+      "git_blob_sha1": "10372d7e86fff399087102ee710730605b7fc06d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/alg/ILayoutPhaseFactory.java",
+      "git_blob_sha1": "e3079c04b6c2f3512d2951f489236d34c0e2a9ea"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/alg/ILayoutProcessor.java",
+      "git_blob_sha1": "fc62c8af40690232207d99185d3f0c9e872fbaf5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/alg/ILayoutProcessorFactory.java",
+      "git_blob_sha1": "f84f26b92ef3b1601707be21d44026d353eef274"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/alg/LayoutProcessorConfiguration.java",
+      "git_blob_sha1": "1fd78d356fee72a403f03538b65b2da83b549ec4"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/comments/AbstractNormalizedMatcher.java",
+      "git_blob_sha1": "48e5801768c00e41ffd737740a15fefcbab6b26f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/comments/AggregatedMatchDecider.java",
+      "git_blob_sha1": "999a3af6ed88d2e30b539bed25e6b7599649335f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/comments/AlignmentMatcher.java",
+      "git_blob_sha1": "7c9a60df02ad80b4ccf1f543f8af3eb537042229"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/comments/CommentAttacher.java",
+      "git_blob_sha1": "1c55cc4a3a709b6dd3493285789a6f457e556ce9"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/comments/DistanceMatcher.java",
+      "git_blob_sha1": "24b1cf94be2f8ec7fc561a49cc95fac2a200fb81"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/comments/ElkGraphBoundsProvider.java",
+      "git_blob_sha1": "9754c02f366cc6aa6598a7bb022e1fcd66ed06b7"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/comments/ElkGraphDataProvider.java",
+      "git_blob_sha1": "4b1b3b036ac561d0ce6c77d31a9634bb24bf9248"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/comments/IBoundsProvider.java",
+      "git_blob_sha1": "3dd2299a5ee16fbd062c8dd0464d7f7202cb6e70"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/comments/IDataProvider.java",
+      "git_blob_sha1": "b048cb5797bc8ec474f2e1c46f6788f48e68a2be"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/comments/IDecider.java",
+      "git_blob_sha1": "e8c69b223bc4aebf8ea52aa08b397c74ed21557b"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/comments/IExplicitAttachmentProvider.java",
+      "git_blob_sha1": "e62003640509bc73bc9b802b04bfd446194ea680"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/comments/IFilter.java",
+      "git_blob_sha1": "0889306ac27b9398475734916deedaf544fdd32e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/comments/IMatcher.java",
+      "git_blob_sha1": "23ca589c69fc7991461e39e061bf9055c9571dfa"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/comments/NodeReferenceMatcher.java",
+      "git_blob_sha1": "3ee4a69fcb491d991d27d5f69cac93ebc85245b5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/comments/SizeFilter.java",
+      "git_blob_sha1": "17ad6aa6081229c5259c3d6897515e6c8e5009e8"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/comments/TextPrefixFilter.java",
+      "git_blob_sha1": "76573675afc0890e7d2891310da0eb7d31b2b729"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/data/DeprecatedLayoutOptionReplacer.java",
+      "git_blob_sha1": "80a38ffb87e1382310670f6122d3c5088fc90d3d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/data/ILayoutMetaData.java",
+      "git_blob_sha1": "07b38fee9482cb2f8a2da026b4fff0590e287389"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/data/ILayoutMetaDataProvider.java",
+      "git_blob_sha1": "bc83ed9decb539a9f95c9c61b6cff20ff2462d47"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/data/LayoutAlgorithmData.java",
+      "git_blob_sha1": "61d14b1ddcfa4ad73cc958c764c99778e0093b11"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/data/LayoutAlgorithmResolver.java",
+      "git_blob_sha1": "97e7fa9b70dff195a5aec854436678b710917784"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/data/LayoutCategoryData.java",
+      "git_blob_sha1": "5e0baa532f714cad72fd1f80d22d6867a2f723ce"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/data/LayoutDataContentAssist.java",
+      "git_blob_sha1": "8cfa93bca7dc3f15261e53a08688b54228011c32"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/data/LayoutMetaDataService.java",
+      "git_blob_sha1": "0350fd94e21de757a34872dc7a982891b9277137"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/data/LayoutOptionData.java",
+      "git_blob_sha1": "50dac6b2aab6f42a31043cd41dd86ccc0be8cf72"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/labels/ILabelManager.java",
+      "git_blob_sha1": "92c78b5ed9c47c46e4c4bd238654e365b7ee6388"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/labels/Labels.melk",
+      "git_blob_sha1": "0a56eb9bd32cb1c2a041bad09582d5cd5b4604dc"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/math/BezierSpline.java",
+      "git_blob_sha1": "02f8c218e67ac68d95b130b380f6f70473878db1"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/math/CubicSplineInterpolator.java",
+      "git_blob_sha1": "66aef8de49b68bfb7ccc64c878a23d42513c40a2"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/math/ElkMargin.java",
+      "git_blob_sha1": "01d6078753995a7f84f48891728252e01b3c657d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/math/ElkMath.java",
+      "git_blob_sha1": "f3595b07257f68a0a280dee0eaf1885a365d3c03"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/math/ElkPadding.java",
+      "git_blob_sha1": "f449d1deeadb8480d95a28e1ef0305e6c65e1923"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/math/ElkRectangle.java",
+      "git_blob_sha1": "4b8816c9b931e92b2fe23d2f10f1e42ec8768f92"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/math/ISplineInterpolator.java",
+      "git_blob_sha1": "607f29d3b099136246bc1d88c8ed239a052fc2f9"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/math/KVector.java",
+      "git_blob_sha1": "edfb99529a70f52366eef5dfc0862f266433db06"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/math/KVectorChain.java",
+      "git_blob_sha1": "8ec52fdf0458c6be5ed3e3cb3d0d2a0f202c1cb3"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/math/Spacing.java",
+      "git_blob_sha1": "d3bf06aeeb5ca13886c9638760eaec78bafdcb3b"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/options/Alignment.java",
+      "git_blob_sha1": "69a6397652960b3c6278a1dab2c5b2a447431378"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/options/ContentAlignment.java",
+      "git_blob_sha1": "1813e2cb81a869d4c885bea8c9737ed9cf500a4a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/options/Direction.java",
+      "git_blob_sha1": "9657a96ef2a408a6e286a626f1aad91e2618753d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/options/EdgeLabelPlacement.java",
+      "git_blob_sha1": "a839ede5286e637203fa868d1ad9e466f7238e88"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/options/EdgeRouting.java",
+      "git_blob_sha1": "b7e4b70181f2ccf06a4f0aaa189ce5022093c1e7"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/options/EdgeType.java",
+      "git_blob_sha1": "631a4c3c6bba0296ca6146ffdef7ba3d3c0513c2"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/options/HierarchyHandling.java",
+      "git_blob_sha1": "c66290ff8b633f822322bf2e02ab19fc0d4e28d7"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/options/LabelSide.java",
+      "git_blob_sha1": "44dbbf6fc237f58dcb121929fee6d86d5d3a68d9"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/options/NodeLabelPlacement.java",
+      "git_blob_sha1": "cb71904716bf2a6874477a3e1c18787f99d0239d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/options/PortAlignment.java",
+      "git_blob_sha1": "8dbb9b0992d35f73139601c4abf305648ee125b7"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/options/PortConstraints.java",
+      "git_blob_sha1": "90b75521ffbac6fba9962b8ac9ddf539a3e98133"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/options/PortLabelPlacement.java",
+      "git_blob_sha1": "c37cf30eecde3faee8573db30ea72e10fedbe7e5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/options/PortSide.java",
+      "git_blob_sha1": "d85e42093c593b6ecb1d2ec2a9007d44256dc516"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/options/SizeConstraint.java",
+      "git_blob_sha1": "54857142a608283593865841dd98598ea292a076"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/options/SizeOptions.java",
+      "git_blob_sha1": "417cdba83d2ee4884ab7f1bf0caf83cfb157ced4"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/options/TopdownNodeTypes.java",
+      "git_blob_sha1": "6550165efc6452f6ad54184bb42344ea0c107c8c"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/options/TopdownSizeApproximator.java",
+      "git_blob_sha1": "b7d1a427a6808201407ee5fefb2c1428da9ec6b1"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/testing/IWhiteBoxTestable.java",
+      "git_blob_sha1": "a8e0ec308362cafcd8b73e7fb01c55126caff5c6"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/testing/TestController.java",
+      "git_blob_sha1": "06502b83e4aa3845eb58455219a9c556eb3f355a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/AbstractRandomListAccessor.java",
+      "git_blob_sha1": "8960a0587cbe47bf3b65d0e49a4e9c3bb1112714"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/AlgorithmFactory.java",
+      "git_blob_sha1": "408ebd7eac0c4344f76fbed578aec7a6f2a0c31e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/BasicProgressMonitor.java",
+      "git_blob_sha1": "fba2ce17afa8d8a36729c490a2dd6bf6f40c9ba9"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/BoxLayoutProvider.java",
+      "git_blob_sha1": "6170bade68def9db1f0be90eb981878618d24834"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/DefaultFactory.java",
+      "git_blob_sha1": "9e2bdcc86f911f389aacafb901e531a7d78d21ea"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/ElkSpacings.java",
+      "git_blob_sha1": "f90287411a2de3f64cd76bc3e2cbddee0d87bc51"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/ElkUtil.java",
+      "git_blob_sha1": "9269afa115908f32c68e0b89c60eac79e7da70fd"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/ExclusiveBounds.java",
+      "git_blob_sha1": "71611eebcd177b7a2682cee832928dca798a5a0c"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/FixedLayoutProvider.java",
+      "git_blob_sha1": "1271459347d737944a8dac230913805529488e8c"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/IDataObject.java",
+      "git_blob_sha1": "8385abdb9212dafda25222c2462dcf5ec98e5225"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/IElkCancelIndicator.java",
+      "git_blob_sha1": "d58ad458f17fb93f7419e095c8730a011e73900e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/IElkProgressMonitor.java",
+      "git_blob_sha1": "7adb25d672e4d7115646333d9b4688c95085ee44"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/IFactory.java",
+      "git_blob_sha1": "94cb1e2c40ccc78d5ebf4f60a1fdd9b772eabd14"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/IGraphElementVisitor.java",
+      "git_blob_sha1": "b119e12dbb2eca2a957f093ae181d2a96a516687"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/IndividualSpacings.java",
+      "git_blob_sha1": "0cf94deb13f594ac028f0be425fec668dbfcf816"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/InstancePool.java",
+      "git_blob_sha1": "4cc3cdba1170f41a7aed6e7064a6db196986d241"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/LoggedGraph.java",
+      "git_blob_sha1": "2c509622a271383978445004425556e4ecf420b5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/Maybe.java",
+      "git_blob_sha1": "08fc33ce6e39cfe7eeb656ddc103ddd441b8eca0"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/NullElkProgressMonitor.java",
+      "git_blob_sha1": "3200e959d1ff5ee6249915e7239fa3e71899ba88"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/Pair.java",
+      "git_blob_sha1": "e14818a10a8e4c26519bfd433904d3a7b156df1b"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/PropertyConstantsDelegator.java",
+      "git_blob_sha1": "9021a192cbb543e335964d021e5499fed39f2def"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/Quadruple.java",
+      "git_blob_sha1": "8a458f2a6ca1d102cdb6864b4102b9dec6b5208f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/RandomLayoutProvider.java",
+      "git_blob_sha1": "caf8afa2430984992044c0e4981dec51a7194ab5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/Triple.java",
+      "git_blob_sha1": "d067b385bfe1aca33954706fbacbaf520181ea49"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/WrappedException.java",
+      "git_blob_sha1": "34ed09eb8e380a66754f0386d400f579cad83d93"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/adapters/ElkGraphAdapters.java",
+      "git_blob_sha1": "dc20ae4050e8fe2866f1fcc8db5eb71fb64d998f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/adapters/GraphAdapters.java",
+      "git_blob_sha1": "57ca0a92880115943e5b646221f73384cd1f1ef1"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/internal/LayoutOptionProxy.java",
+      "git_blob_sha1": "554a52dfb50d26979521c9050d296a64135d10a7"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/persistence/ElkGraphResource.java",
+      "git_blob_sha1": "2c35e5841edc5a9f8f5a0f7aff07dcc4ba456972"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/persistence/ElkGraphResourceFactory.java",
+      "git_blob_sha1": "dff195f80213994aba9f78f8d248ab1ddbf46bfb"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/persistence/ElkGraphXMIHelper.java",
+      "git_blob_sha1": "979afa9c493b781dae15ebd831b426c03de35bd3"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/persistence/ElkGraphXMISave.java",
+      "git_blob_sha1": "f93c633184d2b9e3aca64c8b48afc403860eb396"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/selection/DefaultSelectionIterator.java",
+      "git_blob_sha1": "56a3a6e9e5d5e167a5efc8ce97ec61b56d9d2cfe"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/util/selection/SelectionIterator.java",
+      "git_blob_sha1": "12e170bb825490d2dc4e4dde85943929653d403e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/validation/GraphIssue.java",
+      "git_blob_sha1": "2a708345649fa7dc2feb54578aa1fa567af37740"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/validation/GraphValidationException.java",
+      "git_blob_sha1": "f7837558ee4ba309ccdf8139eab950f08c19f99f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/validation/GraphValidator.java",
+      "git_blob_sha1": "9811cb2f064a611717bd448e161037c206116407"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/validation/IValidatingGraphElementVisitor.java",
+      "git_blob_sha1": "39007111cb3888c09207892717bc607fbfc3fdbf"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/src/org/eclipse/elk/core/validation/LayoutOptionValidator.java",
+      "git_blob_sha1": "d81e2a0f64fd2435068fafa2b907c94ca485733a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph.json/src/org/eclipse/elk/graph/json/ElkGraphJson.java",
+      "git_blob_sha1": "da6bb9f6cd6688f14febf6eff78319b2774423c5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph.json/src/org/eclipse/elk/graph/json/JsonAdapter.xtend",
+      "git_blob_sha1": "dd2e145c5d176554d3667925cacfbfdb5099cbd5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph.json/src/org/eclipse/elk/graph/json/JsonExporter.xtend",
+      "git_blob_sha1": "c610004eb22e17f506f5b6f1b718f794c1378fd1"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph.json/src/org/eclipse/elk/graph/json/JsonImportException.xtend",
+      "git_blob_sha1": "2ffe6a23119343fba7c2342f76ae0436741c1c09"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph.json/src/org/eclipse/elk/graph/json/JsonImporter.xtend",
+      "git_blob_sha1": "7990e0f7ff807ff1b577bb798a2184216d5687c2"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph.json/src/org/eclipse/elk/graph/json/JsonMetaDataConverter.xtend",
+      "git_blob_sha1": "2392c61ef8bdcbc5bee4b7f5c35e9d6930635a54"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/EMapPropertyHolder.java",
+      "git_blob_sha1": "0265fce6f1214ec1e82a376970769b8bf21185f6"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/ElkBendPoint.java",
+      "git_blob_sha1": "d4cb0c678c9e520882032264100116ddee995703"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/ElkConnectableShape.java",
+      "git_blob_sha1": "f4eabec4f97c45c2f0cd6ea46d94f71a0d8431c5"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/ElkEdge.java",
+      "git_blob_sha1": "6fda767f271218d9c5010e0f935093698f23e561"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/ElkEdgeSection.java",
+      "git_blob_sha1": "74d6df952f41bb3f991ab1d2e47649916509d5b6"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/ElkGraphElement.java",
+      "git_blob_sha1": "719ffdb54f24f66b6404d24cf2e88f6608c237ba"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/ElkGraphFactory.java",
+      "git_blob_sha1": "42a5f62c0ccdd2fb351f55d7057ffffaebb30836"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/ElkGraphPackage.java",
+      "git_blob_sha1": "b36d855ad027f424abce75eaa5b5c4c31f6486c4"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/ElkLabel.java",
+      "git_blob_sha1": "a4d06806534d3b717e960ec3ace16fa10ae56353"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/ElkNode.java",
+      "git_blob_sha1": "c35d970ba7200eba5cbb5dc4952003e51d35e145"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/ElkPersistentEntry.java",
+      "git_blob_sha1": "894db06e4a103cba9139071285800167d503d92f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/ElkPort.java",
+      "git_blob_sha1": "cab68e50f3db18748a1071d264e040fb4dd3e93f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/ElkShape.java",
+      "git_blob_sha1": "79416576d8fa9ff2edfb085c035cbe2917c67ebf"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/impl/EMapPropertyHolderImpl.java",
+      "git_blob_sha1": "f3af008765dc5c8cedc9b45fe4fbe72accec1c0b"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/impl/ElkBendPointImpl.java",
+      "git_blob_sha1": "1367fdc0c6cc5a1ed0f76f2e24db3bd366c0286c"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/impl/ElkConnectableShapeImpl.java",
+      "git_blob_sha1": "0ea0bfeeb96a5a39020e4e33a88aea5d77ce7cb0"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/impl/ElkEdgeImpl.java",
+      "git_blob_sha1": "9c31bd025dc73df4f2d86873b2e1c642a042d0c1"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/impl/ElkEdgeSectionImpl.java",
+      "git_blob_sha1": "ca35e1d07e71140048291160dd0d491b40242067"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/impl/ElkGraphElementImpl.java",
+      "git_blob_sha1": "4f827704a6d9d16cdecaac4bc89f817f2c9a5e8a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/impl/ElkGraphFactoryImpl.java",
+      "git_blob_sha1": "23a02d0e54dee78221ac504a230445efbb237fec"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/impl/ElkGraphPackageImpl.java",
+      "git_blob_sha1": "2e91d4caa2b45c8fc7488781ba453cea13d66b2e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/impl/ElkLabelImpl.java",
+      "git_blob_sha1": "f956d9d6fd5efbcf464918ec1dab1d8167c42eb3"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/impl/ElkNodeImpl.java",
+      "git_blob_sha1": "47ef27f06c955fe66230aa51ded776678aac0535"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/impl/ElkPortImpl.java",
+      "git_blob_sha1": "d6666eb3636f6044abb1e917d20b658409694530"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/impl/ElkPropertyToValueMapEntryImpl.java",
+      "git_blob_sha1": "8435ba67b24fc29aad408addc674700f4110ec6a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/impl/ElkShapeImpl.java",
+      "git_blob_sha1": "293e399f24cbd492bc2f85d7b3ea0579b9b14961"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/properties/AdvancedPropertyValue.java",
+      "git_blob_sha1": "baa79433acdac58e80541c7edaa2900ed66b8957"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/properties/ExperimentalPropertyValue.java",
+      "git_blob_sha1": "455a6a8d3bcb557c8e578698e30ffe5ebf2fda75"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/properties/GraphFeature.java",
+      "git_blob_sha1": "0e051e752d6e2a4789b68fa96823ca66810dd5e8"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/properties/IProperty.java",
+      "git_blob_sha1": "c401795af9acec6b50720c3fa691c68099cedd4d"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/properties/IPropertyHolder.java",
+      "git_blob_sha1": "2987ba518b1ec3839083ddc7bbd9190b5e5483c3"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/properties/IPropertyValueProxy.java",
+      "git_blob_sha1": "d109b4fceacf7712594ddd65012d13c65354c3ee"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/properties/MapPropertyHolder.java",
+      "git_blob_sha1": "cb3e83c38bf4d05b894813aaf07e0e217800e75a"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/properties/Property.java",
+      "git_blob_sha1": "05f3f17180b0f4ab69858b9f0edec14032041693"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/properties/PropertyHolderComparator.java",
+      "git_blob_sha1": "fbe7db21c633045d94f5881b15fab7ea5f5f0978"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/util/ElkGraphAdapterFactory.java",
+      "git_blob_sha1": "fe05ea1219b0e05e6e6a01c00cfb3b8a647d790f"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/util/ElkGraphSwitch.java",
+      "git_blob_sha1": "b6ad768a2aeade77a440aaf7461e26b225b8d8e2"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/util/ElkGraphUtil.java",
+      "git_blob_sha1": "4b4c52100d7e395bf10cccdf75d3b22bb9f1fae0"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/util/ElkReflect.java",
+      "git_blob_sha1": "b53a544d9b363f7bd6b6b2025bbc3d6dd6565026"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.graph/src/org/eclipse/elk/graph/util/GraphIdentifierGenerator.java",
+      "git_blob_sha1": "aa77f1a426ebbda86455443490ade34a67f60339"
+    }
+  ],
+  "other_tree_changes": [
+    {
+      "path": "plugins/org.eclipse.elk.core.meta.ui/src/org/eclipse/elk/core/meta/ui/MetaDataUiModule.xtend",
+      "first_blob": "adbf92b137f87c1f7d2195d1b250b85f82a36622",
+      "second_blob": "50782e5a6132397de2b8fdd9a0917709c32c70ed"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core.meta/src/org/eclipse/elk/core/meta/MetaDataRuntimeModule.xtend",
+      "first_blob": "52b98a5a1071a242faa58acbb6aa6fb215df2967",
+      "second_blob": "a61fa406f569cfbcdafe480fde18be328a84d51e"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core.meta/src/org/eclipse/elk/core/meta/validation/MelkUniqueClassNameValidator.xtend",
+      "first_blob": null,
+      "second_blob": "799788da5fdee3493fbab09fd6c203f7a193db0d"
+    }
+  ]
+}
