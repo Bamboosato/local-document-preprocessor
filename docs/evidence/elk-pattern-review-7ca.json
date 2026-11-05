@@ -1,0 +1,255 @@
+{
+  "schema": 1,
+  "source_commit": "7ca51784e42a24201f29bc13e458728b6fc61cdc",
+  "scope": "Pattern matches in source archive; path values and content omitted. Classification is context only, not privacy or legal clearance.",
+  "items": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "647f518803f1ed0863b22e3e1b3459c5cb80f68e8ffeda8b8f02db95205c37ab",
+      "bytes": 1646,
+      "match_count": 4,
+      "context": "build_or_automation_path",
+      "disposition": "review_required"
+    },
+    {
+      "path": ".github/workflows/elkjs.yml",
+      "sha256": "b87c88c191dc960957b243f379ee444319dd229b02d57adbf2e3cebd63e097ba",
+      "bytes": 1773,
+      "match_count": 1,
+      "context": "build_or_automation_path",
+      "disposition": "review_required"
+    },
+    {
+      "path": ".github/workflows/nightly.yml",
+      "sha256": "298419bd9f6b4678d2303516345307db4a838d2b891b3288ed5e50d93da40c32",
+      "bytes": 1761,
+      "match_count": 4,
+      "context": "build_or_automation_path",
+      "disposition": "review_required"
+    },
+    {
+      "path": "build/Jenkinsfile",
+      "sha256": "59a5de53a267b821bc793707d7df378c4099aa3facc38bc84bdf497a46784dcd",
+      "bytes": 9461,
+      "match_count": 10,
+      "context": "build_or_automation_path",
+      "disposition": "review_required"
+    },
+    {
+      "path": "build/RELEASE.md",
+      "sha256": "34357c3ec4d1ff0c124a3e99c122826b4f6017f86f2be7821e9fcc2594955f28",
+      "bytes": 3996,
+      "match_count": 1,
+      "context": "build_or_automation_path",
+      "disposition": "review_required"
+    },
+    {
+      "path": "build/releng/manage.py",
+      "sha256": "aa890ee9ea87bdc46cff3f70aa1ba423df4347305928b9f8bf3e677b74d0553c",
+      "bytes": 4056,
+      "match_count": 1,
+      "context": "build_or_automation_path",
+      "disposition": "review_required"
+    },
+    {
+      "path": "docs/static/img/architecture.svg",
+      "sha256": "c0e7748d807a3025085aba2a06dff8d8e4219d1fc3c697733229410e19638833",
+      "bytes": 16103,
+      "match_count": 1,
+      "context": "svg_export_or_file_uri",
+      "disposition": "review_required"
+    },
+    {
+      "path": "docs/static/img/graph_graph.svg",
+      "sha256": "994acee8b826ce5ab257f1901fc3e07adc079d9abae97cc67538e1e3a86c4820",
+      "bytes": 39636,
+      "match_count": 7,
+      "context": "svg_export_or_file_uri",
+      "disposition": "review_required"
+    },
+    {
+      "path": "docs/static/img/graph_metamodel.svg",
+      "sha256": "50e4d75655cfd5960d8f19d98667ab777518b6eb5144960a46db14d08479a5c4",
+      "bytes": 45247,
+      "match_count": 9,
+      "context": "svg_export_or_file_uri",
+      "disposition": "review_required"
+    },
+    {
+      "path": "docs/static/img/layout-reference-points.svg",
+      "sha256": "bcea89f27087a79c86db992221e35a008edf806f96d4cfe0dc612c1d5c944f4e",
+      "bytes": 49315,
+      "match_count": 1,
+      "context": "svg_export_or_file_uri",
+      "disposition": "review_required"
+    },
+    {
+      "path": "docs/static/img/layout_layers.svg",
+      "sha256": "61c4b12a480793b8d5b602be5dad6a084b35d0de3e65909c093ac9f4930d4b48",
+      "bytes": 17727,
+      "match_count": 1,
+      "context": "svg_export_or_file_uri",
+      "disposition": "review_required"
+    },
+    {
+      "path": "docs/static/img/topdown-example.svg",
+      "sha256": "fac210ec81afc24c3f61784ace0999797af569c4654056441b5052530cbbd2ae",
+      "bytes": 100456,
+      "match_count": 2,
+      "context": "svg_export_or_file_uri",
+      "disposition": "review_required"
+    },
+    {
+      "path": "features/org.eclipse.elk.algorithms.feature/epl-2.0.html",
+      "sha256": "c4f59ec7dbb64e15498b0e6ffe419282c54678afca22ceae22c59359bcdef918",
+      "bytes": 51916,
+      "match_count": 3,
+      "context": "eclipse_website_url",
+      "disposition": "review_required"
+    },
+    {
+      "path": "features/org.eclipse.elk.feature/epl-2.0.html",
+      "sha256": "c4f59ec7dbb64e15498b0e6ffe419282c54678afca22ceae22c59359bcdef918",
+      "bytes": 51916,
+      "match_count": 3,
+      "context": "eclipse_website_url",
+      "disposition": "review_required"
+    },
+    {
+      "path": "features/org.eclipse.elk.gmf.feature/epl-2.0.html",
+      "sha256": "c4f59ec7dbb64e15498b0e6ffe419282c54678afca22ceae22c59359bcdef918",
+      "bytes": 51916,
+      "match_count": 3,
+      "context": "eclipse_website_url",
+      "disposition": "review_required"
+    },
+    {
+      "path": "features/org.eclipse.elk.graph.json.feature/epl-2.0.html",
+      "sha256": "c4f59ec7dbb64e15498b0e6ffe419282c54678afca22ceae22c59359bcdef918",
+      "bytes": 51916,
+      "match_count": 3,
+      "context": "eclipse_website_url",
+      "disposition": "review_required"
+    },
+    {
+      "path": "features/org.eclipse.elk.graphviz.feature/epl-2.0.html",
+      "sha256": "c4f59ec7dbb64e15498b0e6ffe419282c54678afca22ceae22c59359bcdef918",
+      "bytes": 51916,
+      "match_count": 3,
+      "context": "eclipse_website_url",
+      "disposition": "review_required"
+    },
+    {
+      "path": "features/org.eclipse.elk.sdk.feature/epl-2.0.html",
+      "sha256": "c4f59ec7dbb64e15498b0e6ffe419282c54678afca22ceae22c59359bcdef918",
+      "bytes": 51916,
+      "match_count": 3,
+      "context": "eclipse_website_url",
+      "disposition": "review_required"
+    },
+    {
+      "path": "features/org.eclipse.elk.ui.feature/epl-2.0.html",
+      "sha256": "c4f59ec7dbb64e15498b0e6ffe419282c54678afca22ceae22c59359bcdef918",
+      "bytes": 51916,
+      "match_count": 3,
+      "context": "eclipse_website_url",
+      "disposition": "review_required"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/images/options/node_size_constraints_full.svg",
+      "sha256": "ed1351dd2706f65cc045d3101b5bf4fd442ec3a16d25ae3468acfccb89d7e5fa",
+      "bytes": 15940,
+      "match_count": 4,
+      "context": "svg_export_or_file_uri",
+      "disposition": "review_required"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/images/options/node_size_constraints_nodelabels.svg",
+      "sha256": "d88e9fa4d42cf6d69e0dc0db3343d0c6a8245b486e4a26ee9416cbf0eb87c60a",
+      "bytes": 16091,
+      "match_count": 4,
+      "context": "svg_export_or_file_uri",
+      "disposition": "review_required"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/images/options/node_size_constraints_nodelabels_ports.svg",
+      "sha256": "36058d81c4e02d2ec6363b32aaf87f8fa7dc17b570ace8699db679147b6f14f6",
+      "bytes": 15855,
+      "match_count": 4,
+      "context": "svg_export_or_file_uri",
+      "disposition": "review_required"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/images/options/node_size_constraints_nodelabels_ports_portlabels.svg",
+      "sha256": "caca02e3a2111df705aad43ec3c26fe341f9759cfd031c86c4e8461a5c8be473",
+      "bytes": 15966,
+      "match_count": 4,
+      "context": "svg_export_or_file_uri",
+      "disposition": "review_required"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/images/options/node_size_constraints_none.svg",
+      "sha256": "2fb2a6e8a1cc15e18de817b27c294b804ad04526a56b9fb32d0e40ab2a6e698b",
+      "bytes": 15779,
+      "match_count": 3,
+      "context": "svg_export_or_file_uri",
+      "disposition": "review_required"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/images/options/node_size_options_asymmetrical.svg",
+      "sha256": "3cdb30bfdae1af0938462337c18155dc92fcedd8e947a3dd91b66b4f89321adb",
+      "bytes": 25352,
+      "match_count": 1,
+      "context": "svg_export_or_file_uri",
+      "disposition": "review_required"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/images/options/node_size_options_force_tabular_node_labels.svg",
+      "sha256": "a9e0e0d1558a46dacedce5d964ff549da26ad53351bb0f7efdc64d823ffba316",
+      "bytes": 16503,
+      "match_count": 1,
+      "context": "svg_export_or_file_uri",
+      "disposition": "review_required"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/images/options/node_size_options_min_size_accounts_for_padding.svg",
+      "sha256": "f7b6aa6f70174f225ee7aa9aa77c84c2c814abb8d837629d29a5f67651716054",
+      "bytes": 15816,
+      "match_count": 1,
+      "context": "svg_export_or_file_uri",
+      "disposition": "review_required"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/images/options/node_size_options_outside_node_labels_overhang.svg",
+      "sha256": "2c9a4796e009129b5f4c199d4171174a35c4c6074be9084bc2494dfee0d8a511",
+      "bytes": 13587,
+      "match_count": 1,
+      "context": "svg_export_or_file_uri",
+      "disposition": "review_required"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/images/options/node_size_options_ports_overhang.svg",
+      "sha256": "9894fd88df20a6fb9b6821d391235eae65ed4fedf90807fa6e1ae45f77443691",
+      "bytes": 18242,
+      "match_count": 1,
+      "context": "svg_export_or_file_uri",
+      "disposition": "review_required"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/images/options/node_size_options_space_efficient_port_labels.svg",
+      "sha256": "42aa625ca88832c26339b3424de6dbde265cc6d4000a20bb1a370751579d8550",
+      "bytes": 18270,
+      "match_count": 1,
+      "context": "svg_export_or_file_uri",
+      "disposition": "review_required"
+    },
+    {
+      "path": "plugins/org.eclipse.elk.core/images/options/node_size_options_uniform_port_spacing.svg",
+      "sha256": "e694efc552b5ebe80d3d0a65faea001554befe60476299b862786d0eb8697916",
+      "bytes": 18249,
+      "match_count": 1,
+      "context": "svg_export_or_file_uri",
+      "disposition": "review_required"
+    }
+  ]
+}
