@@ -3,6 +3,7 @@
   "git": {
     "deploymentEnabled": {
       "main": false,
+      "codex/wasm-license-triage": false,
       "codex/distribution-policy-preparation": false,
       "codex/fixed-distribution-evidence": false,
       "codex/distribution-decision-register": false,
