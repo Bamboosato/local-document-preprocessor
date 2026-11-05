@@ -15,7 +15,7 @@
 
 ## 実施内容
 
-`scripts/local-delivery-check.mjs` は、明示された `http://127.0.0.1:PORT/` だけに接続する試行用ツール。manifest を事前検証し、重複・空一覧・不正パスを拒否する。各資産を順番に取得し、200、復号後の byte 数と SHA-256、JS/CSS/WASM/HTML の MIME を確認する。リダイレクトは追跡せず失敗とし、転送時 Content-Length は用いない。失敗があれば非ゼロ終了する。外部配布先には使用できない。
+`scripts/local-delivery-check.mjs` は、明示された `http://127.0.0.1:PORT/` だけに接続する試行用ツール。manifest を事前検証し、重複・空一覧・不正パスを拒否する。各資産を順番に取得し、200、復号後の byte 数と SHA-256、JS/CSS/WASM/HTML と公開 manifest の MIME を確認する。リダイレクトは追跡せず失敗とし、転送時 Content-Length は用いない。失敗があれば非ゼロ終了する。外部配布先には使用できない。
 
 手順: `npm run build` と `npm run check:dist` で基準を生成し、別端末に公開しないループバックの静的サーバーを起動した上で `node scripts/local-delivery-check.mjs http://127.0.0.1:PORT/ dist/pwa-manifest.json` を実行する。ポートは実際に起動したものを指定し、終了後サーバーを停止する。基準の真正性やサーバー側の設定をこのツールだけで保証できない。
 
@@ -23,7 +23,17 @@
 
 - 対象テスト4件成功。gzip 成功、別本文・誤 MIME・404・302、空/重複/不正 manifest、接続断を合成 HTTP 応答で確認した。初回は環境のループバック通信制限で接続が失敗し、通信可能な環境で再実行して成功した。製品の障害とは判定しない。
 - 上記 main を基点にビルド・`check:dist` 成功。Vite preview のループバックで公開 manifest 内 442 資産を照合し、失敗0。manifest 世代は `c86c92d953f97dd762782d79`。これはローカル生成物とローカル応答の一致であり、実配信の証明ではない。
-- 公開 manifest 自身と `sw.js` は一覧外のため本ツールの対象外。原文の法的な適用、ソースの完全性、JS/CSS/WASM/HTML 以外の MIME、キャッシュ更新、UI、TLS、CDN、アクセス制御、外部ホストの可用性は検証していない。実配信時は[提供計画](distribution-delivery-plan.md)の手順で別途確認する。
+- この時点では公開 manifest 自身と `sw.js` は一覧外のため対象外だった。下記追補でローカル照合を追加した。原文の法的な適用、ソースの完全性、その他の MIME、キャッシュ更新、UI、TLS、CDN、アクセス制御、外部ホストの可用性は検証していない。実配信時は[提供計画](distribution-delivery-plan.md)の手順で別途確認する。
 - 製品の UI・実行経路は変更していないためローカル E2E は未実施。実機はユーザー別途、macOS/iOS 対象外。アーカイブ公開・添付やデプロイは行っていない。
 
 ELK 実 checkout、WASM 実リンク graph、PDFium 候補の除外1件、対応ソース・告知範囲と提供先の判断は[既存報告](distribution-release-candidate.md)の未解決事項のまま。
+
+## PR #26 マージ後の追補: manifest と SW の同一世代確認
+
+2026-11-05、main `3511841bb5c69b3008914504f85bdd1aea2d2277` を基点に実施。優先する重大リスクは、旧 SW または旧 manifest を新資産と混在させたまま一致と誤認すること。上表の正常・異常・境界・状態遷移の観点に加え、機能は両ファイルの HTTP/bytes、非機能は manifest の JSON MIME と SW の JS MIME、データは生成 ID・埋込一覧・manifest 自身の hash、UI は失敗対象の識別を確認する。実際のブラウザー更新状態は対象外。
+
+同一ディレクトリー内の `pwa-manifest.json` と `sw.js` を基準として読み、SW の埋込 ID・資産一覧・manifest の byte 数と SHA-256 が一致しない場合は通信前に失敗する。これらを既存一覧に追加して同じローカルサーバーから照合する。SW には循環参照を避けて自身の hash を埋めず、生成物そのものから期待 hash を計算する。基準ファイル自体が信頼できるか、SW の動作が正しいかをこれだけで保証しない。
+
+模擬 HTTP テスト6件成功。正常な組合せと、旧世代 ID、一覧改変、manifest 重複、不正な SW、manifest/SW 個別の配信内容違いを確認した。`npm run build` と `npm run check:dist` の後、Vite preview のループバックで一覧442件と manifest・SW の計444件を照合し、失敗0。生成 ID は `c86c92d953f97dd762782d79`。公開先・実機への接続はしていない。
+
+製品 UI・変換処理は未変更のため、ローカル E2E は未実施。ブラウザーによる SW の更新・旧タブ維持・復帰は[実機手順](pwa-generation-validation.md)などで別途確認する。配布先での TLS・キャッシュ・MIME や、ライセンス条件・提供先・対応ソースの最終判断は未完。アーカイブの公開・添付、デプロイは行っていない。
