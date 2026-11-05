@@ -3,6 +3,7 @@
   "git": {
     "deploymentEnabled": {
       "main": false,
+      "codex/distribution-decision-register": false,
       "codex/windows-check-followup": false,
       "codex/windows-clean-rebuild": false,
       "codex/local-generation-verification": false,
