@@ -1,0 +1,1724 @@
+{
+  "schema": 1,
+  "source_commit": "57ad1abe9d557626a77eeeded9fb114ea710ff29",
+  "status": "local-review-candidate-not-release-approval",
+  "scope": "Built locally; npm inventory is not a WASM link graph. Archives are local candidates, not published or approved.",
+  "lock_sha256": "ca28ec7d0ade3ff0a349dad2f91f661f7b05d841c420a0bba3d30681002d771c",
+  "manifest_sha256": "255ad9a0570b21f1dd8d183c3a34a73bfcb843bec23019086dc74efd26ff7b85",
+  "generation": "c86c92d953f97dd762782d79",
+  "manifest_asset_count": 442,
+  "sw_sha256": "ee05a73bad634fdf4a8465d9a253ffcec7eaf7ff7f742fb968488ad7a306dc9e",
+  "license_inventory_sha256": "c58ccb1b7430f5050bad4102d4c1f309435e60dcf83ec83a8b89699236c51901",
+  "license_package_count": 233,
+  "license_original_count": 236,
+  "runtime_assets": [
+    {
+      "url": "/assets/anydoc_wasm_bg-BGHlcte-.wasm",
+      "sha256": "409e45e75062df06bed445c352ffddaf3bae15ff376f5d514d45f4891debd09e",
+      "bytes": 6485379
+    },
+    {
+      "url": "/assets/elk-QONTBCTQ-D4A5a_2-.js",
+      "sha256": "f78b38873074b103d3f902fd042a011e01c7dd0f43d5ca9d2af753bb1f34dcff",
+      "bytes": 1463700
+    },
+    {
+      "url": "/assets/elk-QONTBCTQ-DUyLT7Mo.js",
+      "sha256": "45670abe036092c8527b0ecd86b6b4b12490edc117112382a331c88afbb3fb5e",
+      "bytes": 1462860
+    },
+    {
+      "url": "/assets/pdfium-RAgkpwfK.wasm",
+      "sha256": "c0af5a6aca30d7e54a149c3a68e317116ca906d6edc28fd3318b12c7d9478ac8",
+      "bytes": 4633788
+    }
+  ],
+  "license_originals": [
+    {
+      "package": "@antfu/install-pkg",
+      "version": "2.1.0",
+      "url": "/licenses/dependencies/@antfu__install-pkg@2.1.0/LICENSE",
+      "sha256": "67cd5e903c1f908edfa27c25606fa806ce629d9a8ddb7d83019d9fd1f83f7fde",
+      "bytes": 1094
+    },
+    {
+      "package": "@braintree/sanitize-url",
+      "version": "7.1.2",
+      "url": "/licenses/dependencies/@braintree__sanitize-url@7.1.2/LICENSE",
+      "sha256": "0984740e0c3d725c8044dec7edcefe1dbce180ef5a7bc710c251e19607000158",
+      "bytes": 1066
+    },
+    {
+      "package": "@chevrotain/cst-dts-gen",
+      "version": "13.2.0",
+      "url": "/licenses/dependencies/@chevrotain__cst-dts-gen@13.2.0/LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "package": "@chevrotain/gast",
+      "version": "13.2.0",
+      "url": "/licenses/dependencies/@chevrotain__gast@13.2.0/LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "package": "@chevrotain/regexp-to-ast",
+      "version": "13.2.0",
+      "url": "/licenses/dependencies/@chevrotain__regexp-to-ast@13.2.0/LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "package": "@chevrotain/types",
+      "version": "13.2.0",
+      "url": "/licenses/dependencies/@chevrotain__types@13.2.0/LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "package": "@chevrotain/utils",
+      "version": "13.2.0",
+      "url": "/licenses/dependencies/@chevrotain__utils@13.2.0/LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "package": "@embedpdf/pdfium",
+      "version": "2.14.4",
+      "url": "/licenses/dependencies/@embedpdf__pdfium@2.14.4/LICENSE",
+      "sha256": "f5031b66adba8ef5ef57666deff980a7f2ccff5c8a8c22a8117e854d2b8dfcd3",
+      "bytes": 1075
+    },
+    {
+      "package": "@embedpdf/pdfium",
+      "version": "2.14.4",
+      "url": "/licenses/dependencies/@embedpdf__pdfium@2.14.4/LICENSE.pdfium",
+      "sha256": "b033ffb8fc19c23ca81f7e98019ab658cc6f4cf14587c7c6a2a67fb0f6ac0f5a",
+      "bytes": 12880
+    },
+    {
+      "package": "@firecrawl/anydoc-wasm",
+      "version": "0.1.7",
+      "url": "/licenses/dependencies/@firecrawl__anydoc-wasm@0.1.7/LICENSE",
+      "sha256": "03a9e7657aac6536fb6458bd220347c4e7f85bd0a51d8d9e8528530b7a682ade",
+      "bytes": 1084
+    },
+    {
+      "package": "@iconify/types",
+      "version": "2.0.0",
+      "url": "/licenses/dependencies/@iconify__types@2.0.0/license.txt",
+      "sha256": "045ce74712fc613fdd74d1c55f5140a08d623836ff2aca44132b38d68fbc67ad",
+      "bytes": 1096
+    },
+    {
+      "package": "@iconify/utils",
+      "version": "3.1.7",
+      "url": "/licenses/dependencies/@iconify__utils@3.1.7/license.txt",
+      "sha256": "a86793ac023162ce98b91899601c15f6712f44943163c4f92a0a4bf89152b3bf",
+      "bytes": 1083
+    },
+    {
+      "package": "@mermaid-js/parser",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/@mermaid-js__parser@2.0.1/LICENSE",
+      "sha256": "d374061c40bfb6f99c5033290caefda97a9b3e7e477e5ee02f487143ef2177e8",
+      "bytes": 1077
+    },
+    {
+      "package": "@pdf-lib/standard-fonts",
+      "version": "1.0.0",
+      "url": "/licenses/dependencies/@pdf-lib__standard-fonts@1.0.0/LICENSE.md",
+      "sha256": "45cc2bb9957ed43f5c7f5eb1912f9f670730394d614079510477cae626194649",
+      "bytes": 1070
+    },
+    {
+      "package": "@pdf-lib/upng",
+      "version": "1.0.1",
+      "url": "/licenses/dependencies/@pdf-lib__upng@1.0.1/LICENSE",
+      "sha256": "c1fb8861eca211bf5aea574358aba7039396c0c1824c2a1477cc126d398efd89",
+      "bytes": 1065
+    },
+    {
+      "package": "@types/d3",
+      "version": "7.4.3",
+      "url": "/licenses/dependencies/@types__d3@7.4.3/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-array",
+      "version": "3.2.2",
+      "url": "/licenses/dependencies/@types__d3-array@3.2.2/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-axis",
+      "version": "3.0.6",
+      "url": "/licenses/dependencies/@types__d3-axis@3.0.6/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-brush",
+      "version": "3.0.6",
+      "url": "/licenses/dependencies/@types__d3-brush@3.0.6/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-chord",
+      "version": "3.0.6",
+      "url": "/licenses/dependencies/@types__d3-chord@3.0.6/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-color",
+      "version": "3.1.3",
+      "url": "/licenses/dependencies/@types__d3-color@3.1.3/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-contour",
+      "version": "3.0.6",
+      "url": "/licenses/dependencies/@types__d3-contour@3.0.6/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-delaunay",
+      "version": "6.0.4",
+      "url": "/licenses/dependencies/@types__d3-delaunay@6.0.4/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-dispatch",
+      "version": "3.0.7",
+      "url": "/licenses/dependencies/@types__d3-dispatch@3.0.7/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-drag",
+      "version": "3.0.7",
+      "url": "/licenses/dependencies/@types__d3-drag@3.0.7/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-dsv",
+      "version": "3.0.7",
+      "url": "/licenses/dependencies/@types__d3-dsv@3.0.7/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-ease",
+      "version": "3.0.2",
+      "url": "/licenses/dependencies/@types__d3-ease@3.0.2/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-fetch",
+      "version": "3.0.7",
+      "url": "/licenses/dependencies/@types__d3-fetch@3.0.7/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-force",
+      "version": "3.0.10",
+      "url": "/licenses/dependencies/@types__d3-force@3.0.10/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-format",
+      "version": "3.0.4",
+      "url": "/licenses/dependencies/@types__d3-format@3.0.4/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-geo",
+      "version": "3.1.1",
+      "url": "/licenses/dependencies/@types__d3-geo@3.1.1/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-hierarchy",
+      "version": "3.1.7",
+      "url": "/licenses/dependencies/@types__d3-hierarchy@3.1.7/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-interpolate",
+      "version": "3.0.4",
+      "url": "/licenses/dependencies/@types__d3-interpolate@3.0.4/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-path",
+      "version": "3.1.1",
+      "url": "/licenses/dependencies/@types__d3-path@3.1.1/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-polygon",
+      "version": "3.0.2",
+      "url": "/licenses/dependencies/@types__d3-polygon@3.0.2/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-quadtree",
+      "version": "3.0.6",
+      "url": "/licenses/dependencies/@types__d3-quadtree@3.0.6/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-random",
+      "version": "3.0.4",
+      "url": "/licenses/dependencies/@types__d3-random@3.0.4/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-scale",
+      "version": "4.0.9",
+      "url": "/licenses/dependencies/@types__d3-scale@4.0.9/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-scale-chromatic",
+      "version": "3.1.0",
+      "url": "/licenses/dependencies/@types__d3-scale-chromatic@3.1.0/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-selection",
+      "version": "3.0.12",
+      "url": "/licenses/dependencies/@types__d3-selection@3.0.12/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-shape",
+      "version": "3.2.0",
+      "url": "/licenses/dependencies/@types__d3-shape@3.2.0/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-time",
+      "version": "3.0.4",
+      "url": "/licenses/dependencies/@types__d3-time@3.0.4/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-time-format",
+      "version": "4.0.3",
+      "url": "/licenses/dependencies/@types__d3-time-format@4.0.3/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-timer",
+      "version": "3.0.2",
+      "url": "/licenses/dependencies/@types__d3-timer@3.0.2/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-transition",
+      "version": "3.0.9",
+      "url": "/licenses/dependencies/@types__d3-transition@3.0.9/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/d3-zoom",
+      "version": "3.0.9",
+      "url": "/licenses/dependencies/@types__d3-zoom@3.0.9/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/debug",
+      "version": "4.1.13",
+      "url": "/licenses/dependencies/@types__debug@4.1.13/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/estree",
+      "version": "1.0.9",
+      "url": "/licenses/dependencies/@types__estree@1.0.9/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/estree-jsx",
+      "version": "1.0.5",
+      "url": "/licenses/dependencies/@types__estree-jsx@1.0.5/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/geojson",
+      "version": "7946.0.16",
+      "url": "/licenses/dependencies/@types__geojson@7946.0.16/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/hast",
+      "version": "3.0.5",
+      "url": "/licenses/dependencies/@types__hast@3.0.5/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/mdast",
+      "version": "4.0.4",
+      "url": "/licenses/dependencies/@types__mdast@4.0.4/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/ms",
+      "version": "2.1.0",
+      "url": "/licenses/dependencies/@types__ms@2.1.0/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/react",
+      "version": "19.2.18",
+      "url": "/licenses/dependencies/@types__react@19.2.18/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/trusted-types",
+      "version": "2.0.7",
+      "url": "/licenses/dependencies/@types__trusted-types@2.0.7/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@types/unist",
+      "version": "3.0.3",
+      "url": "/licenses/dependencies/@types__unist@3.0.3/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "@ungap/structured-clone",
+      "version": "1.3.3",
+      "url": "/licenses/dependencies/@ungap__structured-clone@1.3.3/LICENSE",
+      "sha256": "dc6d4961d8b6ee747231582ae9c53ce1d66bf76bc9f5a28f554c0e97210953bf",
+      "bytes": 765
+    },
+    {
+      "package": "@upsetjs/venn.js",
+      "version": "2.0.0",
+      "url": "/licenses/dependencies/@upsetjs__venn.js@2.0.0/LICENSE",
+      "sha256": "6a3508febf2cfccfee96597394543a6154a4bb0b1f91f28404be42c09e9fcb54",
+      "bytes": 1106
+    },
+    {
+      "package": "bail",
+      "version": "2.0.2",
+      "url": "/licenses/dependencies/bail@2.0.2/license",
+      "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf",
+      "bytes": 1099
+    },
+    {
+      "package": "ccount",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/ccount@2.0.1/license",
+      "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf",
+      "bytes": 1099
+    },
+    {
+      "package": "character-entities",
+      "version": "2.0.2",
+      "url": "/licenses/dependencies/character-entities@2.0.2/license",
+      "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf",
+      "bytes": 1099
+    },
+    {
+      "package": "character-entities-html4",
+      "version": "2.1.0",
+      "url": "/licenses/dependencies/character-entities-html4@2.1.0/license",
+      "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf",
+      "bytes": 1099
+    },
+    {
+      "package": "character-entities-legacy",
+      "version": "3.0.0",
+      "url": "/licenses/dependencies/character-entities-legacy@3.0.0/license",
+      "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf",
+      "bytes": 1099
+    },
+    {
+      "package": "character-reference-invalid",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/character-reference-invalid@2.0.1/license",
+      "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf",
+      "bytes": 1099
+    },
+    {
+      "package": "chevrotain",
+      "version": "13.2.0",
+      "url": "/licenses/dependencies/chevrotain@13.2.0/LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "package": "comma-separated-tokens",
+      "version": "2.0.3",
+      "url": "/licenses/dependencies/comma-separated-tokens@2.0.3/license",
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d",
+      "bytes": 1099
+    },
+    {
+      "package": "commander",
+      "version": "7.2.0",
+      "url": "/licenses/dependencies/commander@7.2.0/LICENSE",
+      "sha256": "04512a63dce4d2d506ad612dc0bd7681ccf6e3655f7b6eaef7dfac8323d1ec0b",
+      "bytes": 1098
+    },
+    {
+      "package": "cose-base",
+      "version": "1.0.3",
+      "url": "/licenses/dependencies/cose-base@1.0.3/LICENSE",
+      "sha256": "5fb3cf4a14c3c5af6e473a192df8bca10c77754e3a0c6492c79fb92a76a5478a",
+      "bytes": 1081
+    },
+    {
+      "package": "csstype",
+      "version": "3.2.3",
+      "url": "/licenses/dependencies/csstype@3.2.3/LICENSE",
+      "sha256": "11d55bd4541c75ee7879547ac49089c489163dae49551389713c3d026cab383e",
+      "bytes": 1062
+    },
+    {
+      "package": "cytoscape",
+      "version": "3.34.4",
+      "url": "/licenses/dependencies/cytoscape@3.34.4/LICENSE",
+      "sha256": "eb319c6e6f233607f71e8e2f450391751883cfc0eeb3ca7ef574c13d1d9c2203",
+      "bytes": 1082
+    },
+    {
+      "package": "cytoscape-cose-bilkent",
+      "version": "4.1.0",
+      "url": "/licenses/dependencies/cytoscape-cose-bilkent@4.1.0/LICENSE",
+      "sha256": "440fc58a56a12814e417d2b341da89b050da052dc75bdb235607d37ec5fe74ef",
+      "bytes": 1084
+    },
+    {
+      "package": "cytoscape-fcose",
+      "version": "2.2.0",
+      "url": "/licenses/dependencies/cytoscape-fcose@2.2.0/LICENSE",
+      "sha256": "2837634f403949215760fcdd2fa1ed0c64875d02099ecc8318c704b852f1421d",
+      "bytes": 1079
+    },
+    {
+      "package": "cose-base",
+      "version": "2.2.0",
+      "url": "/licenses/dependencies/cose-base@2.2.0/LICENSE",
+      "sha256": "5fb3cf4a14c3c5af6e473a192df8bca10c77754e3a0c6492c79fb92a76a5478a",
+      "bytes": 1081
+    },
+    {
+      "package": "layout-base",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/layout-base@2.0.1/LICENSE",
+      "sha256": "eabb762d8a95109a39c9be3247325529a5239a7aca327d909c3ccdc41f3a06bf",
+      "bytes": 1069
+    },
+    {
+      "package": "d3",
+      "version": "7.9.0",
+      "url": "/licenses/dependencies/d3@7.9.0/LICENSE",
+      "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4",
+      "bytes": 731
+    },
+    {
+      "package": "d3-array",
+      "version": "3.2.4",
+      "url": "/licenses/dependencies/d3-array@3.2.4/LICENSE",
+      "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4",
+      "bytes": 731
+    },
+    {
+      "package": "d3-axis",
+      "version": "3.0.0",
+      "url": "/licenses/dependencies/d3-axis@3.0.0/LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "bytes": 731
+    },
+    {
+      "package": "d3-brush",
+      "version": "3.0.0",
+      "url": "/licenses/dependencies/d3-brush@3.0.0/LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "bytes": 731
+    },
+    {
+      "package": "d3-chord",
+      "version": "3.0.1",
+      "url": "/licenses/dependencies/d3-chord@3.0.1/LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "bytes": 731
+    },
+    {
+      "package": "d3-color",
+      "version": "3.1.0",
+      "url": "/licenses/dependencies/d3-color@3.1.0/LICENSE",
+      "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884",
+      "bytes": 731
+    },
+    {
+      "package": "d3-contour",
+      "version": "4.0.2",
+      "url": "/licenses/dependencies/d3-contour@4.0.2/LICENSE",
+      "sha256": "e51cba0e4fa1d8c078e15319868f2b90188f413f9ce9dac1043b62db32901e93",
+      "bytes": 731
+    },
+    {
+      "package": "d3-delaunay",
+      "version": "6.0.4",
+      "url": "/licenses/dependencies/d3-delaunay@6.0.4/LICENSE",
+      "sha256": "582c3022bd01942336095f92b58a90b1be624dc547d987555c6c956512dd24c1",
+      "bytes": 757
+    },
+    {
+      "package": "d3-dispatch",
+      "version": "3.0.1",
+      "url": "/licenses/dependencies/d3-dispatch@3.0.1/LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "bytes": 731
+    },
+    {
+      "package": "d3-drag",
+      "version": "3.0.0",
+      "url": "/licenses/dependencies/d3-drag@3.0.0/LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "bytes": 731
+    },
+    {
+      "package": "d3-dsv",
+      "version": "3.0.1",
+      "url": "/licenses/dependencies/d3-dsv@3.0.1/LICENSE",
+      "sha256": "7842a82012622e5a37bfe4f6c1b67cd3bae6350716b5bf87f36cea0bdc1319dc",
+      "bytes": 731
+    },
+    {
+      "package": "d3-ease",
+      "version": "3.0.1",
+      "url": "/licenses/dependencies/d3-ease@3.0.1/LICENSE",
+      "sha256": "b989d9085148d21ff64a75e14462aefa06b2589a55553b07b1460c70081c7d08",
+      "bytes": 1504
+    },
+    {
+      "package": "d3-fetch",
+      "version": "3.0.1",
+      "url": "/licenses/dependencies/d3-fetch@3.0.1/LICENSE",
+      "sha256": "ffdc17dc9040006bddeb891c95bfbb492e86d6bc64a4a4233666febab1be35e0",
+      "bytes": 731
+    },
+    {
+      "package": "d3-force",
+      "version": "3.0.0",
+      "url": "/licenses/dependencies/d3-force@3.0.0/LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "bytes": 731
+    },
+    {
+      "package": "d3-format",
+      "version": "3.1.2",
+      "url": "/licenses/dependencies/d3-format@3.1.2/LICENSE",
+      "sha256": "2a6d2d5f32ba0b755ddbc1c833f766e30cdbe6ebe9a6d4e3e24427721f0b63d3",
+      "bytes": 731
+    },
+    {
+      "package": "d3-geo",
+      "version": "3.1.1",
+      "url": "/licenses/dependencies/d3-geo@3.1.1/LICENSE",
+      "sha256": "3e3edc1224eec9c39cd26491a21304a62883c1e5b6a65c5283ccc7a6cc94baee",
+      "bytes": 1857
+    },
+    {
+      "package": "d3-hierarchy",
+      "version": "3.1.2",
+      "url": "/licenses/dependencies/d3-hierarchy@3.1.2/LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "bytes": 731
+    },
+    {
+      "package": "d3-interpolate",
+      "version": "3.0.1",
+      "url": "/licenses/dependencies/d3-interpolate@3.0.1/LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "bytes": 731
+    },
+    {
+      "package": "d3-path",
+      "version": "3.1.0",
+      "url": "/licenses/dependencies/d3-path@3.1.0/LICENSE",
+      "sha256": "a09b0d6d76e768fca2085fad05743ee81ddd11946bcda160a3cf5e1081a479aa",
+      "bytes": 731
+    },
+    {
+      "package": "d3-polygon",
+      "version": "3.0.1",
+      "url": "/licenses/dependencies/d3-polygon@3.0.1/LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "bytes": 731
+    },
+    {
+      "package": "d3-quadtree",
+      "version": "3.0.1",
+      "url": "/licenses/dependencies/d3-quadtree@3.0.1/LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "bytes": 731
+    },
+    {
+      "package": "d3-random",
+      "version": "3.0.1",
+      "url": "/licenses/dependencies/d3-random@3.0.1/LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "bytes": 731
+    },
+    {
+      "package": "d3-sankey",
+      "version": "0.12.3",
+      "url": "/licenses/dependencies/d3-sankey@0.12.3/LICENSE",
+      "sha256": "2bf785e778d67a4f5266cffcd4f2cc5bb98cde73791666e7efeb8002ba32dfa5",
+      "bytes": 1471
+    },
+    {
+      "package": "d3-array",
+      "version": "2.12.1",
+      "url": "/licenses/dependencies/d3-array@2.12.1/LICENSE",
+      "sha256": "0747bebeb06b10954913149be9b9a8bdf6fad3e6fdcbd9f9524e7a94c13d2cea",
+      "bytes": 1475
+    },
+    {
+      "package": "d3-path",
+      "version": "1.0.9",
+      "url": "/licenses/dependencies/d3-path@1.0.9/LICENSE",
+      "sha256": "b8265327ab678f554800e71188b1cc6b1ff57522e292d2b1c0be66f27cf328b6",
+      "bytes": 1475
+    },
+    {
+      "package": "d3-shape",
+      "version": "1.3.7",
+      "url": "/licenses/dependencies/d3-shape@1.3.7/LICENSE",
+      "sha256": "7eea8533ea92bd8c32a901e89ecb0305890905bb12711449565ddff96891146d",
+      "bytes": 1475
+    },
+    {
+      "package": "internmap",
+      "version": "1.0.1",
+      "url": "/licenses/dependencies/internmap@1.0.1/LICENSE",
+      "sha256": "9ea8903938dab5f12c4572d60725069bec2d1b0dc3bcc210b09bae946a5ebb1f",
+      "bytes": 726
+    },
+    {
+      "package": "d3-scale",
+      "version": "4.0.2",
+      "url": "/licenses/dependencies/d3-scale@4.0.2/LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "bytes": 731
+    },
+    {
+      "package": "d3-scale-chromatic",
+      "version": "3.1.0",
+      "url": "/licenses/dependencies/d3-scale-chromatic@3.1.0/LICENSE",
+      "sha256": "0986d93944902cca9af86824b6a641b4b7c2d10602fc510c433a8bcd443919fe",
+      "bytes": 1423
+    },
+    {
+      "package": "d3-selection",
+      "version": "3.0.0",
+      "url": "/licenses/dependencies/d3-selection@3.0.0/LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "bytes": 731
+    },
+    {
+      "package": "d3-shape",
+      "version": "3.2.0",
+      "url": "/licenses/dependencies/d3-shape@3.2.0/LICENSE",
+      "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884",
+      "bytes": 731
+    },
+    {
+      "package": "d3-time",
+      "version": "3.1.0",
+      "url": "/licenses/dependencies/d3-time@3.1.0/LICENSE",
+      "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884",
+      "bytes": 731
+    },
+    {
+      "package": "d3-time-format",
+      "version": "4.1.0",
+      "url": "/licenses/dependencies/d3-time-format@4.1.0/LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "bytes": 731
+    },
+    {
+      "package": "d3-timer",
+      "version": "3.0.1",
+      "url": "/licenses/dependencies/d3-timer@3.0.1/LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "bytes": 731
+    },
+    {
+      "package": "d3-transition",
+      "version": "3.0.1",
+      "url": "/licenses/dependencies/d3-transition@3.0.1/LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "bytes": 731
+    },
+    {
+      "package": "d3-zoom",
+      "version": "3.0.0",
+      "url": "/licenses/dependencies/d3-zoom@3.0.0/LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "bytes": 731
+    },
+    {
+      "package": "dagre-d3-es",
+      "version": "7.0.14",
+      "url": "/licenses/dependencies/dagre-d3-es@7.0.14/LICENSE.md",
+      "sha256": "d01eb84ccce437dbf5fd40853bceea0f287930920acea066597a4a25ead63858",
+      "bytes": 1328
+    },
+    {
+      "package": "dayjs",
+      "version": "1.11.23",
+      "url": "/licenses/dependencies/dayjs@1.11.23/LICENSE",
+      "sha256": "5faab7526d055651be3aab769d58897be6bd91f3d39d137f25f12dba1b31d5dc",
+      "bytes": 1072
+    },
+    {
+      "package": "debug",
+      "version": "4.4.3",
+      "url": "/licenses/dependencies/debug@4.4.3/LICENSE",
+      "sha256": "3a61c6c96caf5c1d9b623fb9b04c822b783dfcb78aa7e49c76a3f643e6ed7f95",
+      "bytes": 1139
+    },
+    {
+      "package": "decode-named-character-reference",
+      "version": "1.3.0",
+      "url": "/licenses/dependencies/decode-named-character-reference@1.3.0/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "delaunator",
+      "version": "5.1.0",
+      "url": "/licenses/dependencies/delaunator@5.1.0/LICENSE",
+      "sha256": "0b348fff56384b43dbb37593906904e56d0f9deb51eae590d4dc6d427fbf1808",
+      "bytes": 738
+    },
+    {
+      "package": "dequal",
+      "version": "2.0.3",
+      "url": "/licenses/dependencies/dequal@2.0.3/license",
+      "sha256": "306fa513e39b23a6e8747520de761809d206b99800ef41907b530226574c59ae",
+      "bytes": 1114
+    },
+    {
+      "package": "devlop",
+      "version": "1.1.0",
+      "url": "/licenses/dependencies/devlop@1.1.0/license",
+      "sha256": "6f296a5eccc1dc96714bb94ebaa9cac25b0a1467d74cc5263ac4d0646ab01f62",
+      "bytes": 1099
+    },
+    {
+      "package": "dompurify",
+      "version": "3.4.17",
+      "url": "/licenses/dependencies/dompurify@3.4.17/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "package": "dompurify",
+      "version": "3.4.17",
+      "url": "/licenses/dependencies/dompurify@3.4.17/LICENSE-MPL",
+      "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85",
+      "bytes": 16726
+    },
+    {
+      "package": "elkjs",
+      "version": "0.9.3",
+      "url": "/licenses/dependencies/elkjs@0.9.3/LICENSE.md",
+      "sha256": "89591d4578fb1ebd91501312a3d25f021bd865a2e436641c1cf7b1bc7e3c1617",
+      "bytes": 14480
+    },
+    {
+      "package": "es-toolkit",
+      "version": "1.53.0",
+      "url": "/licenses/dependencies/es-toolkit@1.53.0/LICENSE",
+      "sha256": "51f3674294d988d89dbebd31273baaeb3c697a15482d9699b14d1fded2e132a7",
+      "bytes": 1077
+    },
+    {
+      "package": "es-toolkit",
+      "version": "1.53.0",
+      "url": "/licenses/dependencies/es-toolkit@1.53.0/NOTICE",
+      "sha256": "11ee5e3bce9b0a4dde7f73811caf98978e710228d891c3111ad8ef8d7d2a916f",
+      "bytes": 1698
+    },
+    {
+      "package": "escape-string-regexp",
+      "version": "5.0.0",
+      "url": "/licenses/dependencies/escape-string-regexp@5.0.0/license",
+      "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+      "bytes": 1117
+    },
+    {
+      "package": "estree-util-is-identifier-name",
+      "version": "3.0.0",
+      "url": "/licenses/dependencies/estree-util-is-identifier-name@3.0.0/license",
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+      "bytes": 1099
+    },
+    {
+      "package": "extend",
+      "version": "3.0.2",
+      "url": "/licenses/dependencies/extend@3.0.2/LICENSE",
+      "sha256": "97af7428f93afbab9bf79cd09254da1357161794f4255eb1b4599f04dd2d2e7c",
+      "bytes": 1081
+    },
+    {
+      "package": "fflate",
+      "version": "0.8.3",
+      "url": "/licenses/dependencies/fflate@0.8.3/LICENSE",
+      "sha256": "0a1df3a083d0c010560aa342e87959c8c1070e6fd54545741f083f22d0c8b551",
+      "bytes": 1069
+    },
+    {
+      "package": "hachure-fill",
+      "version": "0.5.2",
+      "url": "/licenses/dependencies/hachure-fill@0.5.2/LICENSE",
+      "sha256": "5e807b516a9be9229ed459880bf353a336e2d947867247290680d437017be391",
+      "bytes": 1068
+    },
+    {
+      "package": "hast-util-to-jsx-runtime",
+      "version": "2.3.6",
+      "url": "/licenses/dependencies/hast-util-to-jsx-runtime@2.3.6/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "hast-util-whitespace",
+      "version": "3.0.0",
+      "url": "/licenses/dependencies/hast-util-whitespace@3.0.0/license",
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d",
+      "bytes": 1099
+    },
+    {
+      "package": "html-url-attributes",
+      "version": "3.0.1",
+      "url": "/licenses/dependencies/html-url-attributes@3.0.1/license",
+      "sha256": "e18cf5173e928f808f0cd208097fee8fbec9d28fc0255213938e4c559e29ff58",
+      "bytes": 1070
+    },
+    {
+      "package": "iconv-lite",
+      "version": "0.6.3",
+      "url": "/licenses/dependencies/iconv-lite@0.6.3/LICENSE",
+      "sha256": "ac779f7314c74f232ef847ea86e714abe25cf6eeb5cc97b69451b74e2af6492d",
+      "bytes": 1064
+    },
+    {
+      "package": "import-meta-resolve",
+      "version": "4.2.0",
+      "url": "/licenses/dependencies/import-meta-resolve@4.2.0/license",
+      "sha256": "8770a1a4b69ee722636643e81340ce4a8f0b8415b1c568487edc9062338bfcc7",
+      "bytes": 3493
+    },
+    {
+      "package": "inline-style-parser",
+      "version": "0.2.7",
+      "url": "/licenses/dependencies/inline-style-parser@0.2.7/LICENSE",
+      "sha256": "395c95f20598da653ff1eb1cb9d74947c7fac689697147f1d192fd0242a0e635",
+      "bytes": 1098
+    },
+    {
+      "package": "internmap",
+      "version": "2.0.3",
+      "url": "/licenses/dependencies/internmap@2.0.3/LICENSE",
+      "sha256": "9ea8903938dab5f12c4572d60725069bec2d1b0dc3bcc210b09bae946a5ebb1f",
+      "bytes": 726
+    },
+    {
+      "package": "is-alphabetical",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/is-alphabetical@2.0.1/license",
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d",
+      "bytes": 1099
+    },
+    {
+      "package": "is-alphanumerical",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/is-alphanumerical@2.0.1/license",
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d",
+      "bytes": 1099
+    },
+    {
+      "package": "is-decimal",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/is-decimal@2.0.1/license",
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d",
+      "bytes": 1099
+    },
+    {
+      "package": "is-hexadecimal",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/is-hexadecimal@2.0.1/license",
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d",
+      "bytes": 1099
+    },
+    {
+      "package": "is-plain-obj",
+      "version": "4.1.0",
+      "url": "/licenses/dependencies/is-plain-obj@4.1.0/license",
+      "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+      "bytes": 1117
+    },
+    {
+      "package": "jsonc-parser",
+      "version": "3.3.1",
+      "url": "/licenses/dependencies/jsonc-parser@3.3.1/LICENSE.md",
+      "sha256": "c3a24c02d678e5f0711623dcf3ab3f243b273c2633f638a1fa8e35fb7c7f8e4d",
+      "bytes": 1092
+    },
+    {
+      "package": "katex",
+      "version": "0.18.10",
+      "url": "/licenses/dependencies/katex@0.18.10/LICENSE",
+      "sha256": "766ccc1f306c885aa45542a9846bbd0a505b27a0374f146778171c2254ce18e3",
+      "bytes": 1107
+    },
+    {
+      "package": "commander",
+      "version": "15.0.0",
+      "url": "/licenses/dependencies/commander@15.0.0/LICENSE",
+      "sha256": "04512a63dce4d2d506ad612dc0bd7681ccf6e3655f7b6eaef7dfac8323d1ec0b",
+      "bytes": 1098
+    },
+    {
+      "package": "khroma",
+      "version": "2.1.0",
+      "url": "/licenses/dependencies/khroma@2.1.0/license",
+      "sha256": "66b333b0f66759a0b710459e03f7029abe17f4358114a128d2c972e642961b49",
+      "bytes": 1105
+    },
+    {
+      "package": "layout-base",
+      "version": "1.0.2",
+      "url": "/licenses/dependencies/layout-base@1.0.2/LICENSE",
+      "sha256": "eabb762d8a95109a39c9be3247325529a5239a7aca327d909c3ccdc41f3a06bf",
+      "bytes": 1069
+    },
+    {
+      "package": "lodash-es",
+      "version": "4.18.1",
+      "url": "/licenses/dependencies/lodash-es@4.18.1/LICENSE",
+      "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc",
+      "bytes": 1952
+    },
+    {
+      "package": "longest-streak",
+      "version": "3.1.0",
+      "url": "/licenses/dependencies/longest-streak@3.1.0/license",
+      "sha256": "9f084fac69d8cf1e6ce983ba5a3499c7695ed74a26ec625c38f0fd19fddd5e10",
+      "bytes": 1106
+    },
+    {
+      "package": "markdown-table",
+      "version": "3.0.4",
+      "url": "/licenses/dependencies/markdown-table@3.0.4/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "marked",
+      "version": "16.4.2",
+      "url": "/licenses/dependencies/marked@16.4.2/LICENSE.md",
+      "sha256": "8e3a3f82f59a60958f56ca08f445647c32a4733dc7ca6c2c46f6eb898471ab9c",
+      "bytes": 2942
+    },
+    {
+      "package": "mdast-util-find-and-replace",
+      "version": "3.0.2",
+      "url": "/licenses/dependencies/mdast-util-find-and-replace@3.0.2/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "mdast-util-from-markdown",
+      "version": "2.0.3",
+      "url": "/licenses/dependencies/mdast-util-from-markdown@2.0.3/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "mdast-util-gfm",
+      "version": "3.1.0",
+      "url": "/licenses/dependencies/mdast-util-gfm@3.1.0/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "mdast-util-gfm-autolink-literal",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/mdast-util-gfm-autolink-literal@2.0.1/license",
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+      "bytes": 1099
+    },
+    {
+      "package": "mdast-util-gfm-footnote",
+      "version": "2.1.0",
+      "url": "/licenses/dependencies/mdast-util-gfm-footnote@2.1.0/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "mdast-util-gfm-strikethrough",
+      "version": "2.0.0",
+      "url": "/licenses/dependencies/mdast-util-gfm-strikethrough@2.0.0/license",
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+      "bytes": 1099
+    },
+    {
+      "package": "mdast-util-gfm-table",
+      "version": "2.0.0",
+      "url": "/licenses/dependencies/mdast-util-gfm-table@2.0.0/license",
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+      "bytes": 1099
+    },
+    {
+      "package": "mdast-util-gfm-task-list-item",
+      "version": "2.0.0",
+      "url": "/licenses/dependencies/mdast-util-gfm-task-list-item@2.0.0/license",
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+      "bytes": 1099
+    },
+    {
+      "package": "mdast-util-mdx-expression",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/mdast-util-mdx-expression@2.0.1/license",
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+      "bytes": 1099
+    },
+    {
+      "package": "mdast-util-mdx-jsx",
+      "version": "3.2.0",
+      "url": "/licenses/dependencies/mdast-util-mdx-jsx@3.2.0/license",
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+      "bytes": 1099
+    },
+    {
+      "package": "mdast-util-mdxjs-esm",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/mdast-util-mdxjs-esm@2.0.1/license",
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+      "bytes": 1099
+    },
+    {
+      "package": "mdast-util-newline-to-break",
+      "version": "2.0.0",
+      "url": "/licenses/dependencies/mdast-util-newline-to-break@2.0.0/license",
+      "sha256": "d8fc337aaf98fc7a0f5498edc18b47a9df8cdfcc1a0f013519105905722c7a4c",
+      "bytes": 1099
+    },
+    {
+      "package": "mdast-util-phrasing",
+      "version": "4.1.0",
+      "url": "/licenses/dependencies/mdast-util-phrasing@4.1.0/license",
+      "sha256": "b6d1a4e1831b177acc96f22a817d4f0f4c18419355badc3125754445fc69e3a7",
+      "bytes": 1150
+    },
+    {
+      "package": "mdast-util-to-hast",
+      "version": "13.2.1",
+      "url": "/licenses/dependencies/mdast-util-to-hast@13.2.1/license",
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d",
+      "bytes": 1099
+    },
+    {
+      "package": "mdast-util-to-markdown",
+      "version": "2.1.2",
+      "url": "/licenses/dependencies/mdast-util-to-markdown@2.1.2/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "mdast-util-to-string",
+      "version": "4.0.0",
+      "url": "/licenses/dependencies/mdast-util-to-string@4.0.0/license",
+      "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf",
+      "bytes": 1099
+    },
+    {
+      "package": "mermaid",
+      "version": "12.2.0",
+      "url": "/licenses/dependencies/mermaid@12.2.0/LICENSE",
+      "sha256": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80",
+      "bytes": 1089
+    },
+    {
+      "package": "micromark",
+      "version": "4.0.2",
+      "url": "/licenses/dependencies/micromark@4.0.2/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-core-commonmark",
+      "version": "2.0.3",
+      "url": "/licenses/dependencies/micromark-core-commonmark@2.0.3/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-extension-gfm",
+      "version": "3.0.0",
+      "url": "/licenses/dependencies/micromark-extension-gfm@3.0.0/license",
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+      "bytes": 1099
+    },
+    {
+      "package": "micromark-extension-gfm-autolink-literal",
+      "version": "2.1.0",
+      "url": "/licenses/dependencies/micromark-extension-gfm-autolink-literal@2.1.0/license",
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+      "bytes": 1099
+    },
+    {
+      "package": "micromark-extension-gfm-footnote",
+      "version": "2.1.0",
+      "url": "/licenses/dependencies/micromark-extension-gfm-footnote@2.1.0/license",
+      "sha256": "807a88522a850092aece49486207c17c313c4d5708ac276524840fe1caa0b0fa",
+      "bytes": 1099
+    },
+    {
+      "package": "micromark-extension-gfm-strikethrough",
+      "version": "2.1.0",
+      "url": "/licenses/dependencies/micromark-extension-gfm-strikethrough@2.1.0/license",
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+      "bytes": 1099
+    },
+    {
+      "package": "micromark-extension-gfm-table",
+      "version": "2.1.1",
+      "url": "/licenses/dependencies/micromark-extension-gfm-table@2.1.1/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-extension-gfm-tagfilter",
+      "version": "2.0.0",
+      "url": "/licenses/dependencies/micromark-extension-gfm-tagfilter@2.0.0/license",
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+      "bytes": 1099
+    },
+    {
+      "package": "micromark-extension-gfm-task-list-item",
+      "version": "2.1.0",
+      "url": "/licenses/dependencies/micromark-extension-gfm-task-list-item@2.1.0/license",
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61",
+      "bytes": 1099
+    },
+    {
+      "package": "micromark-factory-destination",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/micromark-factory-destination@2.0.1/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-factory-label",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/micromark-factory-label@2.0.1/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-factory-space",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/micromark-factory-space@2.0.1/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-factory-title",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/micromark-factory-title@2.0.1/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-factory-whitespace",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/micromark-factory-whitespace@2.0.1/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-util-character",
+      "version": "2.1.1",
+      "url": "/licenses/dependencies/micromark-util-character@2.1.1/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-util-chunked",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/micromark-util-chunked@2.0.1/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-util-classify-character",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/micromark-util-classify-character@2.0.1/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-util-combine-extensions",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/micromark-util-combine-extensions@2.0.1/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-util-decode-numeric-character-reference",
+      "version": "2.0.2",
+      "url": "/licenses/dependencies/micromark-util-decode-numeric-character-reference@2.0.2/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-util-decode-string",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/micromark-util-decode-string@2.0.1/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-util-encode",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/micromark-util-encode@2.0.1/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-util-html-tag-name",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/micromark-util-html-tag-name@2.0.1/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-util-normalize-identifier",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/micromark-util-normalize-identifier@2.0.1/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-util-resolve-all",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/micromark-util-resolve-all@2.0.1/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-util-sanitize-uri",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/micromark-util-sanitize-uri@2.0.1/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-util-subtokenize",
+      "version": "2.1.0",
+      "url": "/licenses/dependencies/micromark-util-subtokenize@2.1.0/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-util-symbol",
+      "version": "2.0.1",
+      "url": "/licenses/dependencies/micromark-util-symbol@2.0.1/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "micromark-util-types",
+      "version": "2.0.2",
+      "url": "/licenses/dependencies/micromark-util-types@2.0.2/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "ms",
+      "version": "2.1.3",
+      "url": "/licenses/dependencies/ms@2.1.3/license.md",
+      "sha256": "1662fae9b5314d11cf51284e2dcd1f006a354f7343f08712a730fcff9a359801",
+      "bytes": 1079
+    },
+    {
+      "package": "package-manager-detector",
+      "version": "1.9.0",
+      "url": "/licenses/dependencies/package-manager-detector@1.9.0/LICENSE",
+      "sha256": "05c365176db3cc00e951c44b921c809c75b8e99d2d724f7daf00381e26fb0850",
+      "bytes": 1102
+    },
+    {
+      "package": "pako",
+      "version": "1.0.11",
+      "url": "/licenses/dependencies/pako@1.0.11/LICENSE",
+      "sha256": "a04665b3b2de56c66730c1f720f528175739e4104f79073614aa611da1e85539",
+      "bytes": 1104
+    },
+    {
+      "package": "parse-entities",
+      "version": "4.0.2",
+      "url": "/licenses/dependencies/parse-entities@4.0.2/license",
+      "sha256": "5d0698266086f217bb11ea0499d33453e401fe479fb9126ad04e625e63d3557b",
+      "bytes": 1101
+    },
+    {
+      "package": "@types/unist",
+      "version": "2.0.11",
+      "url": "/licenses/dependencies/@types__unist@2.0.11/LICENSE",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141
+    },
+    {
+      "package": "path-data-parser",
+      "version": "0.1.0",
+      "url": "/licenses/dependencies/path-data-parser@0.1.0/LICENSE",
+      "sha256": "e9754a00aebde654e80f40bcf41dab667d6a41dfbbd2912bcf14fb07d468bf71",
+      "bytes": 1068
+    },
+    {
+      "package": "pdf-lib",
+      "version": "1.17.1",
+      "url": "/licenses/dependencies/pdf-lib@1.17.1/LICENSE.md",
+      "sha256": "f2c9fc00fdb66eb99ac156ba52d734af66d8d309f65753ae809ad34ee2883bcb",
+      "bytes": 1070
+    },
+    {
+      "package": "points-on-curve",
+      "version": "0.2.0",
+      "url": "/licenses/dependencies/points-on-curve@0.2.0/LICENSE",
+      "sha256": "e9754a00aebde654e80f40bcf41dab667d6a41dfbbd2912bcf14fb07d468bf71",
+      "bytes": 1068
+    },
+    {
+      "package": "points-on-path",
+      "version": "0.2.1",
+      "url": "/licenses/dependencies/points-on-path@0.2.1/LICENSE",
+      "sha256": "b6fc1f7f1d96a48bc97176f3dcef959e364c5c17ba44167511de421500a86c6c",
+      "bytes": 1062
+    },
+    {
+      "package": "property-information",
+      "version": "7.2.0",
+      "url": "/licenses/dependencies/property-information@7.2.0/license",
+      "sha256": "5d0698266086f217bb11ea0499d33453e401fe479fb9126ad04e625e63d3557b",
+      "bytes": 1101
+    },
+    {
+      "package": "react",
+      "version": "19.2.8",
+      "url": "/licenses/dependencies/react@19.2.8/LICENSE",
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "bytes": 1088
+    },
+    {
+      "package": "react-dom",
+      "version": "19.2.8",
+      "url": "/licenses/dependencies/react-dom@19.2.8/LICENSE",
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "bytes": 1088
+    },
+    {
+      "package": "react-markdown",
+      "version": "10.1.0",
+      "url": "/licenses/dependencies/react-markdown@10.1.0/license",
+      "sha256": "f6196c64e144f9a6fa9154c3a80bc8b89615a9567934b83a8951879f06ba2aef",
+      "bytes": 1079
+    },
+    {
+      "package": "remark-breaks",
+      "version": "4.0.0",
+      "url": "/licenses/dependencies/remark-breaks@4.0.0/license",
+      "sha256": "d8fc337aaf98fc7a0f5498edc18b47a9df8cdfcc1a0f013519105905722c7a4c",
+      "bytes": 1099
+    },
+    {
+      "package": "remark-gfm",
+      "version": "4.0.1",
+      "url": "/licenses/dependencies/remark-gfm@4.0.1/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "remark-parse",
+      "version": "11.0.0",
+      "url": "/licenses/dependencies/remark-parse@11.0.0/license",
+      "sha256": "413654b0a78b98661dce96d2aff2e4d075603d220b8483e28b1aa010ccc138b4",
+      "bytes": 1099
+    },
+    {
+      "package": "remark-rehype",
+      "version": "11.1.2",
+      "url": "/licenses/dependencies/remark-rehype@11.1.2/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "remark-stringify",
+      "version": "11.0.0",
+      "url": "/licenses/dependencies/remark-stringify@11.0.0/license",
+      "sha256": "413654b0a78b98661dce96d2aff2e4d075603d220b8483e28b1aa010ccc138b4",
+      "bytes": 1099
+    },
+    {
+      "package": "robust-predicates",
+      "version": "3.0.3",
+      "url": "/licenses/dependencies/robust-predicates@3.0.3/LICENSE",
+      "sha256": "88d9b4eb60579c191ec391ca04c16130572d7eedc4a86daa58bf28c6e14c9bcd",
+      "bytes": 1210
+    },
+    {
+      "package": "roughjs",
+      "version": "4.6.6",
+      "url": "/licenses/dependencies/roughjs@4.6.6/LICENSE",
+      "sha256": "dca9a392272606ac748ac0976a2a1133f14eef841c27beaa51a844d53c56a09d",
+      "bytes": 1068
+    },
+    {
+      "package": "rw",
+      "version": "1.3.3",
+      "url": "/licenses/dependencies/rw@1.3.3/LICENSE",
+      "sha256": "e273680c43c2ab5bb3b50af28de6a08000b333396834db7bf6129cd6f130c9cd",
+      "bytes": 1429
+    },
+    {
+      "package": "safer-buffer",
+      "version": "2.1.2",
+      "url": "/licenses/dependencies/safer-buffer@2.1.2/LICENSE",
+      "sha256": "4bc935e71be198c67ddf3c2b5fddb195f6edc182bfc155a96a6db61b44b494b9",
+      "bytes": 1094
+    },
+    {
+      "package": "scheduler",
+      "version": "0.27.0",
+      "url": "/licenses/dependencies/scheduler@0.27.0/LICENSE",
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "bytes": 1088
+    },
+    {
+      "package": "space-separated-tokens",
+      "version": "2.0.2",
+      "url": "/licenses/dependencies/space-separated-tokens@2.0.2/license",
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d",
+      "bytes": 1099
+    },
+    {
+      "package": "stringify-entities",
+      "version": "4.0.4",
+      "url": "/licenses/dependencies/stringify-entities@4.0.4/license",
+      "sha256": "9f084fac69d8cf1e6ce983ba5a3499c7695ed74a26ec625c38f0fd19fddd5e10",
+      "bytes": 1106
+    },
+    {
+      "package": "style-to-js",
+      "version": "1.1.21",
+      "url": "/licenses/dependencies/style-to-js@1.1.21/LICENSE",
+      "sha256": "bbb380e5c1a717079378d6ea4d33c8a5a81655d4612b749f882e34e46712aab5",
+      "bytes": 1110
+    },
+    {
+      "package": "style-to-object",
+      "version": "1.0.14",
+      "url": "/licenses/dependencies/style-to-object@1.0.14/LICENSE",
+      "sha256": "896c9fd6b5fc48ac31800b9d29a6e3ffcb0c2d534ed077ebfa5c2fa388cc38b7",
+      "bytes": 1110
+    },
+    {
+      "package": "stylis",
+      "version": "4.4.0",
+      "url": "/licenses/dependencies/stylis@4.4.0/LICENSE",
+      "sha256": "88c579c6ee44b41137a21321190d177982e5b17d4fa1b83a4a2e3ea325a8fc9a",
+      "bytes": 1078
+    },
+    {
+      "package": "tinyexec",
+      "version": "1.3.1",
+      "url": "/licenses/dependencies/tinyexec@1.3.1/LICENSE",
+      "sha256": "f95f668fe64081ddb4153b322e34fdd719b991285ed08177d5ad7133b7988d92",
+      "bytes": 1065
+    },
+    {
+      "package": "trim-lines",
+      "version": "3.0.1",
+      "url": "/licenses/dependencies/trim-lines@3.0.1/license",
+      "sha256": "9f084fac69d8cf1e6ce983ba5a3499c7695ed74a26ec625c38f0fd19fddd5e10",
+      "bytes": 1106
+    },
+    {
+      "package": "trough",
+      "version": "2.2.0",
+      "url": "/licenses/dependencies/trough@2.2.0/license",
+      "sha256": "6c03fd41cfd7c92d8aa8a2fa521b94b2683f059123281dcf921ddea9216b6254",
+      "bytes": 1099
+    },
+    {
+      "package": "ts-dedent",
+      "version": "2.3.0",
+      "url": "/licenses/dependencies/ts-dedent@2.3.0/LICENSE",
+      "sha256": "eff13095d9d762c3bd9dda74370c81e2130c28f2691bc455603abf973bac25b9",
+      "bytes": 1073
+    },
+    {
+      "package": "tslib",
+      "version": "1.14.1",
+      "url": "/licenses/dependencies/tslib@1.14.1/LICENSE.txt",
+      "sha256": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751",
+      "bytes": 655
+    },
+    {
+      "package": "unified",
+      "version": "11.0.5",
+      "url": "/licenses/dependencies/unified@11.0.5/license",
+      "sha256": "05811400116ed61f1a7693b78fe8ca6598c155a12f3978e609db4df648a4cb3d",
+      "bytes": 1099
+    },
+    {
+      "package": "unist-util-is",
+      "version": "6.0.1",
+      "url": "/licenses/dependencies/unist-util-is@6.0.1/license",
+      "sha256": "82974dbf2639d13edab95c32ed9cb6c0867ede272cd2e07ce47ce8548fe55c05",
+      "bytes": 1099
+    },
+    {
+      "package": "unist-util-position",
+      "version": "5.0.0",
+      "url": "/licenses/dependencies/unist-util-position@5.0.0/license",
+      "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf",
+      "bytes": 1099
+    },
+    {
+      "package": "unist-util-stringify-position",
+      "version": "4.0.0",
+      "url": "/licenses/dependencies/unist-util-stringify-position@4.0.0/license",
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d",
+      "bytes": 1099
+    },
+    {
+      "package": "unist-util-visit",
+      "version": "5.1.0",
+      "url": "/licenses/dependencies/unist-util-visit@5.1.0/license",
+      "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf",
+      "bytes": 1099
+    },
+    {
+      "package": "unist-util-visit-parents",
+      "version": "6.0.2",
+      "url": "/licenses/dependencies/unist-util-visit-parents@6.0.2/license",
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d",
+      "bytes": 1099
+    },
+    {
+      "package": "uuid",
+      "version": "14.0.3",
+      "url": "/licenses/dependencies/uuid@14.0.3/LICENSE.md",
+      "sha256": "beaa6b04fb82e41dd2ad679e19e27953afb5999b1abbb455b6564e78ebfeb332",
+      "bytes": 1109
+    },
+    {
+      "package": "vfile",
+      "version": "6.0.3",
+      "url": "/licenses/dependencies/vfile@6.0.3/license",
+      "sha256": "05811400116ed61f1a7693b78fe8ca6598c155a12f3978e609db4df648a4cb3d",
+      "bytes": 1099
+    },
+    {
+      "package": "vfile-message",
+      "version": "4.0.3",
+      "url": "/licenses/dependencies/vfile-message@4.0.3/license",
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb",
+      "bytes": 1094
+    },
+    {
+      "package": "zwitch",
+      "version": "2.0.4",
+      "url": "/licenses/dependencies/zwitch@2.0.4/license",
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d",
+      "bytes": 1099
+    }
+  ],
+  "local_archive_candidates": [
+    {
+      "name": "anydoc-wasm-0.1.7.zip",
+      "sha256": "6eebf106f0f9172c23dc7f6c14105fbc065ec4f2db952278151033ec441b2a50",
+      "bytes": 1184008,
+      "manifest_sha256": "e44606a4f087e86deb05ccd1ea5d7b502808f2b8a30c79d99ef3f0eee6388071",
+      "omitted_count": 0,
+      "state": "local-candidate-not-approved"
+    },
+    {
+      "name": "elkjs-0.9.3.zip",
+      "sha256": "1fbd83748e92e19aab1b5ba248590878f9a0a6a28fab91766e4b0f4b0600fe69",
+      "bytes": 1881214,
+      "manifest_sha256": "0b081d2732cbe267c3416cdae87cb067c931434ca91ef3051a4ebeb1e9783e31",
+      "omitted_count": 0,
+      "state": "local-candidate-not-approved"
+    },
+    {
+      "name": "npm-production-originals.zip",
+      "sha256": "f58b4f6c9f55131ef08e97053fe37b1cbb65cb66d82fdcbc841018b96ea028da",
+      "bytes": 291056,
+      "manifest_sha256": "43b0a9d2796791085f0ceafee4073969ce6b1bea9c1e2727d580dca204ffffa6",
+      "omitted_count": 0,
+      "state": "local-candidate-not-approved"
+    },
+    {
+      "name": "pdfium-2.14.4.zip",
+      "sha256": "a4c93c8c9b5159ce96606a819677e4568649b1359beeb637c2d1602dcc0918c4",
+      "bytes": 15561676,
+      "manifest_sha256": "f5155891efadc7ea27caca424c45e0acae87c0f10f98599419ec6d37c851bd93",
+      "omitted_count": 1,
+      "state": "local-candidate-not-approved"
+    }
+  ]
+}

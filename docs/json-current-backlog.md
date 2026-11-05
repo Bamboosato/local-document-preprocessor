@@ -55,4 +55,6 @@ PR #28 のマージ後、既定テスト設定の記述を訂正し、同じク�
 
 PR #29 を承認によりマージ後、main `17aa0fe254214fbec327f2870098c7fc1e8e329d` を基点に[配布判断表](distribution-decision-register.md)を整理した。未証明・未決定は維持し、実機確認と公開は別途行う。
 
+PR #30 マージ後、main `57ad1abe9d557626a77eeeded9fb114ea710ff29` を基点に[ローカル配布候補と原文・ソース候補の台帳](distribution-candidate-57ad1ab.md)を作成した。最終版の承認や実配信の証明ではない。
+
 旧[初回](json-gates-validation.md)・[代替](json-g04-alternative-validation.md)・[後続](json-g04-followup-validation.md)・[採用検証](json-adoption-followup-validation.md)・[接続前共存](json-integration-readiness-validation.md)・[出典/原文](json-source-license-validation.md)の内容と証跡は、各実施時点の履歴として保持する。履歴の「残件」はその時点の記述であり、現行の作業指示は本書のCUR-01～05だけとする。
