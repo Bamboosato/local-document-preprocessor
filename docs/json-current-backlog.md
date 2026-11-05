@@ -30,7 +30,7 @@
 |CUR-03・3|PR #22マージ済み、実機は後日|[PWA世代固定・回復の報告と実機手順](pwa-generation-validation.md)。保存拒否・容量不足は故障注入。実インストール/復帰/実容量はCUR-05|
 |CUR-04・4|候補ゲートのレビュー/こちら|[配布候補の固定証跡・告知案・未解決ゲート](distribution-release-candidate.md)と[提供方式・検証手順](distribution-delivery-plan.md)。233 package inventoryは保守的候補で最小リンク一覧ではない。対応ソースと告知範囲、配布先、実配信・公開判断は未決定|
 |CUR-04・追加|ローカル検証のみ|[配信照合の試行](local-delivery-verification.md)。manifest と SW を含む同一世代の照合を追加。実配信・対応ソースの完全性の証明にはならない|
-|CUR-04・追加|Windows ローカル再生成を確認|[クリーンインストール検証](windows-clean-rebuild-validation.md)。同一条件の生成物444件一致。既定並列テスト停止の原因、他環境と実配信は未確認|
+|CUR-04・追加|Windows ローカル再生成を確認|[クリーンインストール検証](windows-clean-rebuild-validation.md)。生成物444件一致。既定設定は単一ワーカーで、一括検査の再実行は成功。他環境と実配信は未確認|
 |CUR-05・並行|未実施/ユーザー、前提整備はこちら|Windows読み上げ・実ブラウザー200%倍率・対応機タッチ・復帰と、安全な実負荷/インストール済みPWA。現行UI/パッケージの前提が整った項目から別途実施。旧手順をそのまま転用しない|
 
 CUR-02の文書混入/未検証出力、CUR-03の世代混在/回復不能は致命・重大リスクを優先して検査する。CUR-01の操作不能や警告不可視も重大として扱う。第一段階の成功証拠は保持し、既に確認済みのCSP共存・基本変換/出力を理由なく未着手へ戻さない。
@@ -50,5 +50,7 @@ CUR-04で**現行バンドルに存在するもの**とその配布方法を確�
 PR #26 も承認によりマージし、main `3511841bb5c69b3008914504f85bdd1aea2d2277` を基点に manifest と SW のローカル照合を追加した。
 
 PR #27 のマージ後、main `1dfafd115a3632963a029027bf7cabd9a59c8e36` を基点に Windows のクリーン再生成を検証した。未確認の範囲は[報告](windows-clean-rebuild-validation.md)を参照する。
+
+PR #28 のマージ後、既定テスト設定の記述を訂正し、同じクリーン環境で `npm run check` の終了コード0を確認した。[追補](windows-clean-rebuild-validation.md)に中断時の証拠と再実行の範囲を記録する。
 
 旧[初回](json-gates-validation.md)・[代替](json-g04-alternative-validation.md)・[後続](json-g04-followup-validation.md)・[採用検証](json-adoption-followup-validation.md)・[接続前共存](json-integration-readiness-validation.md)・[出典/原文](json-source-license-validation.md)の内容と証跡は、各実施時点の履歴として保持する。履歴の「残件」はその時点の記述であり、現行の作業指示は本書のCUR-01～05だけとする。
