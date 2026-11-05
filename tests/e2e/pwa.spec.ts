@@ -98,6 +98,22 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
     expect(texts[0].text).toContain('Apache License');
     expect(texts[1].status).toBe(200);
     expect(texts[1].text).toContain('Lodash');
+    await expect(popup.getByRole('heading', { name: 'WASM 依存候補の原文' })).toBeVisible();
+    await expect(popup.getByText('調査対象の候補であり、WASM に含まれることや依存一覧の網羅性を示すものではありません。')).toBeVisible();
+    const encoding=popup.locator('li').filter({has:popup.getByText('encoding_rs 0.8.35',{exact:true})});
+    const unicode=popup.locator('li').filter({has:popup.getByText('unicode-ident 1.0.24',{exact:true})});
+    await expect(encoding.getByRole('link')).toHaveCount(4);
+    await expect(unicode.getByRole('link')).toHaveCount(3);
+    const candidatePaths=await Promise.all([
+      encoding.getByRole('link',{name:'LICENSE-WHATWG',exact:true}).getAttribute('href'),
+      unicode.getByRole('link',{name:'LICENSE-UNICODE',exact:true}).getAttribute('href'),
+    ]);
+    expect(candidatePaths.every(Boolean)).toBe(true);
+    const candidateTexts=await popup.evaluate(async paths=>Promise.all(paths.map(async path=>{const response=await fetch(path!);return {status:response.status,text:await response.text()};})),candidatePaths);
+    expect(candidateTexts[0].status).toBe(200);
+    expect(candidateTexts[0].text).toContain('WHATWG');
+    expect(candidateTexts[1].status).toBe(200);
+    expect(candidateTexts[1].text).toContain('UNICODE LICENSE V3');
     await popup.close();
   } finally { await page.context().setOffline(false); }
 });

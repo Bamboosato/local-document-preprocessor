@@ -3,6 +3,7 @@
   "git": {
     "deploymentEnabled": {
       "main": false,
+      "codex/wasm-notice-review": false,
       "codex/elk-source-pattern-review": false,
       "codex/elk-fixed-source-evidence": false,
       "codex/wasm-license-triage": false,
