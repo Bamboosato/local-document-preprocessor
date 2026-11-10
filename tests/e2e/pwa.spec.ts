@@ -193,10 +193,12 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
       }
       return texts;
     });
-    expect(dataNotices).toHaveLength(2);
+    expect(dataNotices).toHaveLength(3);
     expect(dataNotices[0]).toContain('Redistributions in binary form');
     expect(dataNotices[0]).toContain('Neither the name of Adobe');
     expect(dataNotices[1]).toContain('Original code copyright 2014 Foxit');
+    expect(dataNotices[2]).toContain('Copyright (c) 1990-1994 Adobe Systems Incorporated');
+    await expect(popup.getByRole('link',{name:'MMフォント内のAdobe著作権表示（許諾条件確認中）',exact:true})).toBeVisible();
     await popup.close();
   } finally { await page.context().setOffline(false); }
 });

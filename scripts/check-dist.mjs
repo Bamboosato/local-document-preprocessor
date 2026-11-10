@@ -190,7 +190,7 @@ assert.ok(
 
 
 const confirmedData=await verifyWasmDataMaterials();
-assert.equal(inventory.confirmedWasmData.originals.length,2);
+assert.equal(inventory.confirmedWasmData.originals.length,3);
 for(const f of confirmedData.files){
  assert.deepEqual(await readFile(new URL(f.outputPath,licenseDirectory)),f.bytes);
  assert.ok(inventory.confirmedWasmData.originals.some(i=>i.path===f.outputPath&&i.sha256===f.sha256));
