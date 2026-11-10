@@ -15,3 +15,4 @@ docs/evidence/pdf-lib-borrowed-license-review.json -text whitespace=cr-at-eol
 docs/evidence/wasm-remaining-condition-review.json -text whitespace=cr-at-eol
 docs/third-party-wasm-notices/** -text -whitespace
 docs/evidence/pdfium-notice-materials.json -text whitespace=cr-at-eol
+docs/evidence/wasm-data-inclusion-review.json -text whitespace=cr-at-eol
