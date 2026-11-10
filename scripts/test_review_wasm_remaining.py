@@ -1,6 +1,7 @@
 import unittest
 from unittest.mock import patch
 from scripts.review_wasm_remaining import conditional_profile, review
+from scripts.compare_borrowed_sources import normalize, closure
 
 
 class ConditionalProfileTests(unittest.TestCase):
@@ -25,6 +26,18 @@ class ConditionalProfileTests(unittest.TestCase):
         for expression in ['MIT AND BSD-3-Clause', 'MIT AND Unicode-3.0', 'MIT OR LicenseRef-Unknown', '']:
             with self.subTest(expression=expression), self.assertRaises(ValueError):
                 conditional_profile(expression)
+
+
+class BorrowedSourceFingerprintTests(unittest.TestCase):
+    def test_comments_and_quote_spelling_do_not_erase_literal_content(self):
+        self.assertEqual(normalize('var a = "x // y"; /* note */'), normalize("var a='x // y';"))
+        self.assertNotEqual(normalize("var a='a b';"), normalize("var a='ab';"))
+        self.assertNotEqual(normalize('return 1;'), normalize('return 2;'))
+
+    def test_missing_closure_is_unknown_instead_of_equal_empty_sources(self):
+        self.assertIsNone(closure('unrelated source', 'Stream'))
+        source = 'var Stream = (function StreamClosure() { return Stream; })();'
+        self.assertEqual(closure(source, 'Stream'), source)
 
 
 if __name__ == '__main__':

@@ -161,6 +161,27 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
     expect(candidateTexts[1].text).toContain('UNICODE LICENSE V3');
     expect(candidateTexts[2].status).toBe(200);
     expect(candidateTexts[2].text).toContain('2024 Trifecta Tech Foundation');
+    await expect(popup.getByRole('heading',{name:'PDFiumの原文候補と貢献表示案',exact:true})).toBeVisible();
+    await expect(popup.getByText('固定source/DEPSの提供準備資料です。公開WASM内の実リンク・条件充足は未確認です。',{exact:true})).toBeVisible();
+    await expect(popup.getByRole('link',{name:'条件付き貢献表示案',exact:true})).toBeVisible();
+    const pdfiumNotices=await popup.evaluate(async()=>{
+      const inventory=await(await fetch('./inventory.json')).json(),candidate=inventory.pdfiumNoticeCandidates;
+      const items=[...candidate.groups.flatMap((g:{originals:{path:string;sha256:string}[]})=>g.originals),candidate.credits];
+      const texts=[];
+      for(const item of items){
+        const response=await fetch(item.path);if(!response.ok)throw Error('candidate unavailable');const bytes=await response.arrayBuffer();
+        const hash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(b=>b.toString(16).padStart(2,'0')).join('');
+        if(hash!==item.sha256)throw Error('candidate hash');texts.push(new TextDecoder().decode(bytes));
+      }
+      return {groups:candidate.groups.length,files:items.length,text:texts.join('\n')};
+    });
+    expect(pdfiumNotices.groups).toBe(6);expect(pdfiumNotices.files).toBe(10);
+    expect(pdfiumNotices.text).toContain('Copyright (C) 2010 The Android Open Source Project');
+    expect(pdfiumNotices.text).toContain('LLVM');
+    expect(pdfiumNotices.text).toContain('Boost Software License');
+    expect(pdfiumNotices.text).toContain('not a verified list');
+    expect(pdfiumNotices.text).toContain('FreeType Team');
+    expect(pdfiumNotices.text).toContain('Independent JPEG Group');
     await popup.close();
   } finally { await page.context().setOffline(false); }
 });

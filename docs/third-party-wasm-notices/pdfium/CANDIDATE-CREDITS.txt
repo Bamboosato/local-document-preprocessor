@@ -1,0 +1,19 @@
+PDFium third-party candidate acknowledgments - preparation draft
+
+These materials describe fixed source/DEPS candidates, not a verified list of
+components linked into the published WASM. They do not approve distribution.
+
+If the final distribution includes FreeType under FTL, the binary documentation
+acknowledgment is prepared as follows (actual component/version still to verify):
+This software is based in part on the work of the FreeType Team.
+
+If the final distribution includes the IJG/libjpeg code described by the
+libjpeg-turbo originals, the binary documentation acknowledgment is prepared as:
+This software is based in part on the work of the Independent JPEG Group.
+
+For ICU, retain the complete supplied LICENSE and license.html with incorporated
+third-party notices; this paragraph does not replace those originals.
+
+Before release: confirm actual components, applicable license choices, local
+source changes, notice requirements and the final placement of these credits.
+No copyright year or component inclusion is invented by this draft.

@@ -1,0 +1,307 @@
+{
+  "schema": 1,
+  "date": "2026-11-10",
+  "base64": {
+    "pdfLibIntroductionCommit": "762a22bb8d2b60059c206bf3e37f834b604d3f19",
+    "introductionDate": "2019-06-30T15:30:21Z",
+    "file": "src/utils/base64.ts",
+    "introducedSourceSha256": "433dc1d78f6e12c89a3118671499e0eb8ae333bedc059209ceb21250303ff7ed",
+    "publishedNpmSourceByteIdentical": true,
+    "candidatePublicationDates": {
+      "0.1.2": "2014-03-18T08:12:46.731Z",
+      "0.2.0": "2019-04-28T07:13:14.396Z",
+      "1.0.2": "2022-01-22T14:31:13.057Z"
+    },
+    "release1_0_2ExcludedAsActualBorrowSource": true,
+    "actualBorrowedRelease": "not uniquely identified; MIT/copyright/common-original correspondence retained"
+  },
+  "pdfjs": {
+    "copyCommit": "a942700f0ad0d184ba6147f450fdb9f6f2a21b24",
+    "copyDate": "2019-05-22T00:48:26Z",
+    "conversionCommit": "825e6161304c650b438d492960d2f4db5491e945",
+    "associatedPRsAndCommitCommentsObserved": 0,
+    "fingerprints": {
+      "method": "Lexical comment/whitespace and quoted-string spelling normalization on selected ES5 closures only; not semantic, full-file or unique-origin proof",
+      "results": [
+        {
+          "tag": "v1.4.20",
+          "classes": [
+            {
+              "name": "Ascii85Stream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": false
+            },
+            {
+              "name": "AsciiHexStream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": true
+            },
+            {
+              "name": "DecodeStream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": false
+            },
+            {
+              "name": "FlateStream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": false
+            },
+            {
+              "name": "LZWStream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": false
+            },
+            {
+              "name": "RunLengthStream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": true
+            },
+            {
+              "name": "Stream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": false
+            }
+          ],
+          "matches": 2
+        },
+        {
+          "tag": "v1.7.225",
+          "classes": [
+            {
+              "name": "Ascii85Stream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": true
+            },
+            {
+              "name": "AsciiHexStream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": true
+            },
+            {
+              "name": "DecodeStream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": false
+            },
+            {
+              "name": "FlateStream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": false
+            },
+            {
+              "name": "LZWStream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": false
+            },
+            {
+              "name": "RunLengthStream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": true
+            },
+            {
+              "name": "Stream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": false
+            }
+          ],
+          "matches": 3
+        },
+        {
+          "tag": "v1.10.100",
+          "classes": [
+            {
+              "name": "Ascii85Stream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": true
+            },
+            {
+              "name": "AsciiHexStream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": true
+            },
+            {
+              "name": "DecodeStream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": false
+            },
+            {
+              "name": "FlateStream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": false
+            },
+            {
+              "name": "LZWStream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": true
+            },
+            {
+              "name": "RunLengthStream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": true
+            },
+            {
+              "name": "Stream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": false
+            }
+          ],
+          "matches": 4
+        },
+        {
+          "tag": "v2.0.943",
+          "classes": [
+            {
+              "name": "Ascii85Stream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": true
+            },
+            {
+              "name": "AsciiHexStream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": true
+            },
+            {
+              "name": "DecodeStream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": true
+            },
+            {
+              "name": "FlateStream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": false
+            },
+            {
+              "name": "LZWStream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": true
+            },
+            {
+              "name": "RunLengthStream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": true
+            },
+            {
+              "name": "Stream",
+              "localFound": true,
+              "upstreamFound": true,
+              "normalizedEqual": true
+            }
+          ],
+          "matches": 6
+        }
+      ]
+    },
+    "actualBorrowedRevision": "not uniquely identified; selected closures match multiple revisions, one stream differs"
+  },
+  "sourceInputs": [
+    {
+      "name": "pdfjs-v1.4.20",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/v1.4.20/src/core/stream.js",
+      "bytes": 85612,
+      "sha256": "b41a6c9875a8e533a030259c5aff617db2c718418ddaa86c044674a328c958ea"
+    },
+    {
+      "name": "pdfjs-v1.7.225",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/v1.7.225/src/core/stream.js",
+      "bytes": 84206,
+      "sha256": "33c2db011fb71a466dfed5a04c2ecc89785912fb4ec44daee73283930118c65e"
+    },
+    {
+      "name": "pdfjs-v1.10.100",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/v1.10.100/src/core/stream.js",
+      "bytes": 44441,
+      "sha256": "84b837e6c18c6c0ec2031e2e7a1a65db0c6729fdaded8cc492196045332aaa1f"
+    },
+    {
+      "name": "pdfjs-v2.0.943",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/v2.0.943/src/core/stream.js",
+      "bytes": 40056,
+      "sha256": "c997a3d4c44736d74eb4855b08857b5f7ccec38b16c0930a3e8ca335ac99da64"
+    },
+    {
+      "name": "pdflib-Ascii85Stream",
+      "url": "https://raw.githubusercontent.com/Hopding/pdf-lib/a942700f0ad0d184ba6147f450fdb9f6f2a21b24/src/core/streams/Ascii85Stream.js",
+      "bytes": 2369,
+      "sha256": "2b0b2373cf1d43fdadd5de5aec272ab148b7479a33d187a8cb23dd43509f0d88"
+    },
+    {
+      "name": "pdflib-AsciiHexStream",
+      "url": "https://raw.githubusercontent.com/Hopding/pdf-lib/a942700f0ad0d184ba6147f450fdb9f6f2a21b24/src/core/streams/AsciiHexStream.js",
+      "bytes": 2172,
+      "sha256": "fcbeab930baa184bdfdf9cd82ac411b952a7dcbce338abdf1f28a5830b740085"
+    },
+    {
+      "name": "pdflib-DecodeStream",
+      "url": "https://raw.githubusercontent.com/Hopding/pdf-lib/a942700f0ad0d184ba6147f450fdb9f6f2a21b24/src/core/streams/DecodeStream.js",
+      "bytes": 4171,
+      "sha256": "615f9a2e194ee3397e9b012e0376ddc1e4f458de61693084dfb6f57d15c294bc"
+    },
+    {
+      "name": "pdflib-FlateStream",
+      "url": "https://raw.githubusercontent.com/Hopding/pdf-lib/a942700f0ad0d184ba6147f450fdb9f6f2a21b24/src/core/streams/FlateStream.js",
+      "bytes": 14530,
+      "sha256": "0dd93e388dd1d5eb8f8895efde0455b956021618d7d8ad363c9125e38d85e235"
+    },
+    {
+      "name": "pdflib-LZWStream",
+      "url": "https://raw.githubusercontent.com/Hopding/pdf-lib/a942700f0ad0d184ba6147f450fdb9f6f2a21b24/src/core/streams/LZWStream.js",
+      "bytes": 4618,
+      "sha256": "a7e723fd916e40b622793819d1c218dc2c3a4e78dda36c92b38f7427cb8f0697"
+    },
+    {
+      "name": "pdflib-RunLengthStream",
+      "url": "https://raw.githubusercontent.com/Hopding/pdf-lib/a942700f0ad0d184ba6147f450fdb9f6f2a21b24/src/core/streams/RunLengthStream.js",
+      "bytes": 1956,
+      "sha256": "53fd21be27bfb7276d6b2275ba000a105d3ca053c1420031b987cb153e49a587"
+    },
+    {
+      "name": "pdflib-Stream",
+      "url": "https://raw.githubusercontent.com/Hopding/pdf-lib/a942700f0ad0d184ba6147f450fdb9f6f2a21b24/src/core/streams/Stream.js",
+      "bytes": 2914,
+      "sha256": "4fd79a6fad0438f587def6435a7f4c7ae7ebfec46df8da69f54fd1303c404581"
+    },
+    {
+      "name": "pdflib-base64-introduced",
+      "url": "https://raw.githubusercontent.com/Hopding/pdf-lib/762a22bb8d2b60059c206bf3e37f834b604d3f19/src/utils/base64.ts",
+      "bytes": 2903,
+      "sha256": "433dc1d78f6e12c89a3118671499e0eb8ae333bedc059209ceb21250303ff7ed"
+    },
+    {
+      "name": "pdflib-base64-release",
+      "url": "https://raw.githubusercontent.com/Hopding/pdf-lib/v1.17.1/src/utils/base64.ts",
+      "bytes": 2903,
+      "sha256": "433dc1d78f6e12c89a3118671499e0eb8ae333bedc059209ceb21250303ff7ed"
+    }
+  ],
+  "limits": [
+    "Static fingerprints are not semantic/full-file identity or unique origin proof",
+    "No absence claim for NOTICE in unidentified borrowed revision",
+    "No final release approval"
+  ]
+}

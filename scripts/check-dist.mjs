@@ -5,6 +5,7 @@ import {verifyTinySnapshot} from './tiny-materials.mjs';
 import {verifyTinyRuntime} from './tiny-release.mjs';
 import {verifyPakoMaterials} from './pako-materials.mjs';
 import {verifyInternalNotices} from './internal-notices.mjs';
+import {verifyPdfiumNoticeMaterials} from './pdfium-notice-materials.mjs';
 
 const assetDirectory = new URL('../dist/assets/', import.meta.url);
 const licenseDirectory = new URL('../dist/licenses/', import.meta.url);
@@ -33,6 +34,13 @@ const manifest = JSON.parse(await readFile(new URL('manifest.webmanifest', distr
 const serviceWorker = await readFile(new URL('sw.js', distributionRoot), 'utf8');
 const pwa=JSON.parse(await readFile(new URL('pwa-manifest.json',distributionRoot),'utf8'));
 const inventory=JSON.parse(await readFile(new URL('licenses/inventory.json',distributionRoot),'utf8'));
+const pdfiumMaterials=await verifyPdfiumNoticeMaterials();
+assert.equal(inventory.pdfiumNoticeCandidates.groups.length,6);
+assert.equal(inventory.pdfiumNoticeCandidates.sourceCommit,pdfiumMaterials.record.pdfiumSourceCommit);
+for(const file of pdfiumMaterials.files){
+  assert.deepEqual(await readFile(new URL(file.outputPath,licenseDirectory)),file.bytes,'PDFium candidate bytes changed');
+  assert.ok(pwa.assets.some(item=>item.url==='/licenses/'+file.outputPath&&item.sha256===file.sha256),'PDFium candidate PWA mismatch');
+}
 const internal=await verifyInternalNotices();
 const pdfLib=inventory.packages.find(item=>item.name==='pdf-lib');
 for(const file of internal.files){
@@ -99,6 +107,7 @@ assert.deepEqual(
     'index.html',
     'inventory.json',
     'mermaid-tiny',
+    'pdfium-candidates',
   ].sort(),
   'The production build must retain all third-party license files.',
 );

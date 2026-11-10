@@ -13,3 +13,5 @@ docs/evidence/pdf-lib-1.17.1-notices.json -text whitespace=cr-at-eol
 docs/evidence/production-internal-notice-discovery.json -text whitespace=cr-at-eol
 docs/evidence/pdf-lib-borrowed-license-review.json -text whitespace=cr-at-eol
 docs/evidence/wasm-remaining-condition-review.json -text whitespace=cr-at-eol
+docs/third-party-wasm-notices/** -text -whitespace
+docs/evidence/pdfium-notice-materials.json -text whitespace=cr-at-eol
