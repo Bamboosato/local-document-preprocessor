@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "date": "2026-11-10",
+  "scope": "Selected code-family correspondence, not proof of a unique borrowed release/checkout or full semantic equivalence",
+  "base64": {
+    "upstreamLookupIntroductionCommit": "1616895ea14ed71f6e629501215512aa97f3b9c3",
+    "date": "2015-11-19T18:46:57Z",
+    "file": "lib/base64-arraybuffer.js",
+    "sourceUrl": "https://raw.githubusercontent.com/niklasvh/base64-arraybuffer/1616895ea14ed71f6e629501215512aa97f3b9c3/lib/base64-arraybuffer.js",
+    "sourceSha256": "f1749f1d4ac924264b74b5511385db93385398bb3c9668d6b91fece182558fd8",
+    "publishedV0_2_0RawIdentical": true,
+    "historyBeforePdfLibCopy": [
+      {
+        "commit": "1616895ea14ed71f6e629501215512aa97f3b9c3",
+        "change": "lookup Uint8Array replaces indexOf"
+      },
+      {
+        "commit": "2583015b434bb51f3483fe4b41b7f956479b25f0",
+        "change": "encode bug fix"
+      },
+      {
+        "commit": "2ec6e4209a57c33b1c82e878070fe8986ef96234",
+        "change": "initial commit"
+      }
+    ],
+    "query": "https://api.github.com/repos/niklasvh/base64-arraybuffer/commits?path=lib/base64-arraybuffer.js&until=2019-06-30T15%3A30%3A21Z&per_page=100",
+    "pdfLibLookupUsesSameCharCodeAtTablePattern": true,
+    "v0_1_2UsesIndexOfNotLookup": true,
+    "limit": "Adaptation could introduce the same pattern independently; commit family narrowed, exact borrow event still not independently recorded"
+  },
+  "pdfjs": {
+    "upstreamReference": "v2.0.943",
+    "upstreamCommit": "dc98bf76eb3f610bb86af441a5c71792bb58c825",
+    "referenceSourceSha256": "c997a3d4c44736d74eb4855b08857b5f7ccec38b16c0930a3e8ca335ac99da64",
+    "classes": [
+      {
+        "name": "Ascii85Stream",
+        "pdfLibSourceSha256": "2b0b2373cf1d43fdadd5de5aec272ab148b7479a33d187a8cb23dd43509f0d88",
+        "normalizedEqualBeforeExplicitDelta": true,
+        "explicitDelta": null,
+        "normalizedEqualAfterOnlyRecordedDelta": true
+      },
+      {
+        "name": "AsciiHexStream",
+        "pdfLibSourceSha256": "fcbeab930baa184bdfdf9cd82ac411b952a7dcbce338abdf1f28a5830b740085",
+        "normalizedEqualBeforeExplicitDelta": true,
+        "explicitDelta": null,
+        "normalizedEqualAfterOnlyRecordedDelta": true
+      },
+      {
+        "name": "DecodeStream",
+        "pdfLibSourceSha256": "615f9a2e194ee3397e9b012e0376ddc1e4f458de61693084dfb6f57d15c294bc",
+        "normalizedEqualBeforeExplicitDelta": true,
+        "explicitDelta": null,
+        "normalizedEqualAfterOnlyRecordedDelta": true
+      },
+      {
+        "name": "FlateStream",
+        "pdfLibSourceSha256": "0dd93e388dd1d5eb8f8895efde0455b956021618d7d8ad363c9125e38d85e235",
+        "normalizedEqualBeforeExplicitDelta": false,
+        "explicitDelta": "pdf-lib comments out this.dict = str.dict;",
+        "normalizedEqualAfterOnlyRecordedDelta": true
+      },
+      {
+        "name": "LZWStream",
+        "pdfLibSourceSha256": "a7e723fd916e40b622793819d1c218dc2c3a4e78dda36c92b38f7427cb8f0697",
+        "normalizedEqualBeforeExplicitDelta": true,
+        "explicitDelta": null,
+        "normalizedEqualAfterOnlyRecordedDelta": true
+      },
+      {
+        "name": "RunLengthStream",
+        "pdfLibSourceSha256": "53fd21be27bfb7276d6b2275ba000a105d3ca053c1420031b987cb153e49a587",
+        "normalizedEqualBeforeExplicitDelta": true,
+        "explicitDelta": null,
+        "normalizedEqualAfterOnlyRecordedDelta": true
+      },
+      {
+        "name": "Stream",
+        "pdfLibSourceSha256": "4fd79a6fad0438f587def6435a7f4c7ae7ebfec46df8da69f54fd1303c404581",
+        "normalizedEqualBeforeExplicitDelta": true,
+        "explicitDelta": null,
+        "normalizedEqualAfterOnlyRecordedDelta": true
+      }
+    ],
+    "normalizedOnly": "comments, whitespace, quoted-string spelling; plus the single explicitly identified FlateStream assignment delta",
+    "correction": "Prior prose said Stream differed; actual prior JSON and replay show FlateStream differed. Stream matched. Preserve original JSON as evidence."
+  }
+}

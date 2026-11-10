@@ -1,3 +1,4 @@
+import {verifyWasmDataMaterials} from './wasm-data-materials.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import { readFile, readdir } from 'node:fs/promises';
@@ -108,6 +109,7 @@ assert.deepEqual(
     'inventory.json',
     'mermaid-tiny',
     'pdfium-candidates',
+    'wasm-data',
   ].sort(),
   'The production build must retain all third-party license files.',
 );
@@ -184,5 +186,16 @@ assert.ok(
   !worker.includes('localStorage') && !worker.includes('indexedDB'),
   'The converter worker must not use persistent browser storage.',
 );
+
+
+
+const confirmedData=await verifyWasmDataMaterials();
+assert.equal(inventory.confirmedWasmData.originals.length,2);
+for(const f of confirmedData.files){
+ assert.deepEqual(await readFile(new URL(f.outputPath,licenseDirectory)),f.bytes);
+ assert.ok(inventory.confirmedWasmData.originals.some(i=>i.path===f.outputPath&&i.sha256===f.sha256));
+ assert.ok(licensePage.includes(f.outputPath));
+ assert.ok(pwa.assets.some(a=>a.url==='/licenses/'+f.outputPath&&a.sha256===f.sha256));
+}
 
 console.log(`dist check passed: ${workerName}, ${anydocWasmName}, ${pdfiumWasmName}`);

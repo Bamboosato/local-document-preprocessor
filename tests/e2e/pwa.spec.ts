@@ -182,6 +182,21 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
     expect(pdfiumNotices.text).toContain('not a verified list');
     expect(pdfiumNotices.text).toContain('FreeType Team');
     expect(pdfiumNotices.text).toContain('Independent JPEG Group');
+    await expect(popup.getByRole('heading',{name:'WASM内のデータと権利表示',exact:true})).toBeVisible();
+    const dataNotices=await popup.evaluate(async()=>{
+      const inventory=await(await fetch('./inventory.json')).json(),texts=[];
+      for(const item of inventory.confirmedWasmData.originals){
+        const response=await fetch(item.path);if(!response.ok)throw Error('data notice unavailable');
+        const bytes=await response.arrayBuffer();
+        const hash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(b=>b.toString(16).padStart(2,'0')).join('');
+        if(hash!==item.sha256)throw Error('data notice hash');texts.push(new TextDecoder().decode(bytes));
+      }
+      return texts;
+    });
+    expect(dataNotices).toHaveLength(2);
+    expect(dataNotices[0]).toContain('Redistributions in binary form');
+    expect(dataNotices[0]).toContain('Neither the name of Adobe');
+    expect(dataNotices[1]).toContain('Original code copyright 2014 Foxit');
     await popup.close();
   } finally { await page.context().setOffline(false); }
 });

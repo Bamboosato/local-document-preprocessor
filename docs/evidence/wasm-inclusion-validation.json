@@ -1,0 +1,114 @@
+{
+  "schema": 1,
+  "date": "2026-11-10",
+  "baseCommit": "16e2d1dd284ac71199d4f9392ee1727fc8e0b2d6",
+  "mergedPR": 43,
+  "mergedHead": "9c5ced7500933c8be0dd8e5480144ae987119c6a",
+  "preMergeCI": {
+    "run": 42772799647,
+    "bothJobs": "success",
+    "unresolvedReviews": 0
+  },
+  "environment": {
+    "os": "Windows",
+    "node": "24.22.1",
+    "npm": "11.19.1",
+    "browser": "Chrome headless 156.0.8078.81",
+    "python": "3.14"
+  },
+  "record": "wasm-data-inclusion-review.json",
+  "recordSha256": "f00d46fec2f40cdb1746bafc43ff9b8711a28796fcf08fb62cf89b2319c0531f",
+  "materialsRecord": "wasm-data-notice-materials.json",
+  "codeFamilyRecord": "borrowed-code-family-review.json",
+  "unchangedRuntimeAssets": [
+    {
+      "path": "dist/assets/anydoc_wasm_bg-BGHlcte-.wasm",
+      "bytes": 6485379,
+      "sha256": "409e45e75062df06bed445c352ffddaf3bae15ff376f5d514d45f4891debd09e"
+    },
+    {
+      "path": "dist/assets/converter.worker-ogDQCSzr.js",
+      "bytes": 752588,
+      "sha256": "8ac5bc078bb82a53aa973f30523edda5257931ab5232e452b58a5ccbe641ab41"
+    },
+    {
+      "path": "dist/assets/index-_-tn7U5c.css",
+      "bytes": 15304,
+      "sha256": "86d7d2e6fb682593d0f2fc655cde050cf96179e64d8a66c944e18d7572b75937"
+    },
+    {
+      "path": "dist/assets/index-D7qOaFf2.js",
+      "bytes": 423936,
+      "sha256": "eda64058c814b3cc82594a29dcb40c92bb1ae6c622b0eadec5689508129df81c"
+    },
+    {
+      "path": "dist/assets/json.worker-CAJiq6hk.js",
+      "bytes": 168140,
+      "sha256": "6e75d910874ee7f850cdd0a681e700018eb4068ef81b3aebfa015d09e3cf9aca"
+    },
+    {
+      "path": "dist/assets/mermaid.tiny-B1X2HQuM.js",
+      "bytes": 2852578,
+      "sha256": "c41f5236091b83f524c4940f97a16b2b14a76f21ff84aea4fd6b66421d8a2a9a"
+    },
+    {
+      "path": "dist/assets/pdfium-RAgkpwfK.wasm",
+      "bytes": 4633788,
+      "sha256": "c0af5a6aca30d7e54a149c3a68e317116ca906d6edc28fd3318b12c7d9478ac8"
+    }
+  ],
+  "validation": {
+    "newPythonCases": 8,
+    "combinedOfflineCases": 23,
+    "licenseCases": 4,
+    "fixedSourceInputs": "passed for 16 font sources, 168 CMaps and Adobe original",
+    "wasmReplay": "passed; static only, no instantiate",
+    "build": "passed",
+    "distributionCheck": "passed",
+    "targetedPWA": {
+      "startTime": "2026-11-10T07:39:23.991Z",
+      "duration": 10968.548,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "generation": "6f5fe39c47c93a9cf5497505",
+    "manifestAssets": 240,
+    "httpAssets": 242,
+    "httpFailures": 0,
+    "rootProductionAuditVulnerabilities": 0,
+    "rootFullAuditVulnerabilities": 0,
+    "tinyTargets": 67,
+    "tinyAuditVulnerabilities": 0,
+    "documentation": {
+      "documents": 86,
+      "localLinks": 438,
+      "issues": 0
+    }
+  },
+  "environmentIssue": {
+    "initialCombinedRun": "System temporary directory denied filesystem writes/cleanup in sandbox; 15 errors, unrelated to product",
+    "resolution": "Same tests and code with TEMP/TMP explicitly set to workspace tmp/python-test-temp; 23 passed",
+    "causeCategory": "environment"
+  },
+  "limits": [
+    "Static byte observations are not full SBOM, code reachability, exact build checkout or release approval",
+    "Active-data overlay is not execution or post-execution memory proof",
+    "Foxit/MM Adobe permission chain and other WASM obligations remain unresolved",
+    "No actual delivery/device acceptance; macOS/iOS excluded",
+    "New PR merge, archive publication/attachment and deployment not performed"
+  ],
+  "testedSourceSha256CanonicalLF": {
+    "scripts/inspect_wasm_materials.py": "2997498bf19977d127000316e2c7bd51e113c5bfa28d6c49350f0c33198a06c8",
+    "scripts/test_inspect_wasm_materials.py": "0907ea340f4ebca0a351c52ebffd1d4b1c346099903632cd29f79580f0ccf67a",
+    "scripts/verify_wasm_data_evidence.py": "88e418c3ae63f84fa3bc0acedb09f649762fcba942a9bd3c7f7fccfae61c458b",
+    "scripts/wasm-data-materials.mjs": "9fb6158830d21756b81de498369c4480f7fc832654491670a66a64d66be21780",
+    "scripts/wasm-data-materials.test.mjs": "f99f97979701444bc48a077096d0eef74dcea7e23c5f74876dac371ad480ce1d",
+    "scripts/copy-third-party-licenses.mjs": "9cfbe5381e8a8a80982ce3eb270eb2b9d30e426b554654e0811de46d9e343895",
+    "scripts/check-dist.mjs": "17a5fe4cec075f3d1d271ebe13b0bd729121f83372e729d8ea45c32519b4d5c5",
+    "tests/e2e/pwa.spec.ts": "769b4d1ee0a4917addd84c06346d69b90f6cd2970bafdf9565dd799272f41e20",
+    ".github/workflows/ci.yml": "b839dbfe3c0e38566598b16df9a325f3db19eaef2f71074786cff994fa66809a",
+    "package.json": "bc8ff46bef47029f871fad0f13bcbcf268babc3b72908dfd3f86d366178c8426"
+  }
+}
