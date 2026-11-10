@@ -14,7 +14,9 @@ export default defineConfig({
     screenshot: 'only-on-failure',
   },
   webServer: {
-    command: `npm run build && npm run preview -- --host 127.0.0.1 --port ${port}`,
+    command: process.env.PLAYWRIGHT_DEV==='true'
+      ? `npm run dev -- --host 127.0.0.1 --port ${port} --strictPort`
+      : `npm run build && npm run preview -- --host 127.0.0.1 --port ${port}`,
     url: `http://127.0.0.1:${port}`,
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,

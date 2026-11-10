@@ -81,23 +81,24 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
     await page.getByRole('link', { name: '第三者ライセンス' }).click();
     const popup=await popupPromise;
     await expect(popup.getByRole('heading', { name: '第三者ライセンス' })).toBeVisible();
-    const entry=popup.locator('li').filter({has:popup.getByText('dompurify 3.4.17', { exact: true })});
-    await expect(entry.getByText('選択したライセンス: Apache-2.0', { exact: true })).toBeVisible();
-    const href=await entry.getByRole('link', { name: 'LICENSE-MPL' }).getAttribute('href');
-    expect(href).toBeTruthy();
-    const result=await popup.evaluate(async path=>{const response=await fetch(path!);return {status:response.status,text:await response.text()};},href);
-    expect(result.status).toBe(200);
-    expect(result.text).toContain('Mozilla Public License Version 2.0');
-    const apacheHref=await entry.getByRole('link', { name: 'LICENSE', exact: true }).getAttribute('href');
-    const noticeEntry=popup.locator('li').filter({has:popup.getByText('es-toolkit 1.53.0', { exact: true })});
-    const noticeHref=await noticeEntry.getByRole('link', { name: 'NOTICE', exact: true }).getAttribute('href');
-    expect(apacheHref).toBeTruthy();
-    expect(noticeHref).toBeTruthy();
-    const texts=await popup.evaluate(async paths=>Promise.all(paths.map(async path=>{const response=await fetch(path!);return {status:response.status,text:await response.text()};})),[apacheHref,noticeHref]);
-    expect(texts[0].status).toBe(200);
-    expect(texts[0].text).toContain('Apache License');
-    expect(texts[1].status).toBe(200);
-    expect(texts[1].text).toContain('Lodash');
+    await popup.getByRole('link',{name:'Tiny 12.3.0 内包物のライセンス・由来・変更',exact:true}).click();
+    await expect(popup.getByRole('heading',{name:'Tiny内包物の第三者ライセンス原文',exact:true})).toBeVisible();
+    await expect(popup.getByText(/DOMPurifyはApache-2.0を選択/)).toBeVisible();
+    const entry=popup.locator('li').filter({has:popup.getByText('dompurify 3.4.17',{exact:true})});
+    await expect(entry.getByRole('link',{name:'LICENSE-MPL',exact:true})).toBeVisible();
+    await expect(popup.locator('li').filter({has:popup.getByText('@babel/helpers 7.29.10',{exact:true})}).getByRole('link',{name:'LICENSE',exact:true})).toBeVisible();
+    const verified=await popup.evaluate(async()=>{
+      const manifest=await(await fetch('./manifest.json')).json();
+      const items=[...manifest.items,manifest.sourceNotices,manifest.generatorReference,...manifest.patches];
+      for(const item of items){
+        const response=await fetch(item.path);if(!response.ok)return false;
+        const hash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',await response.arrayBuffer()))].map(b=>b.toString(16).padStart(2,'0')).join('');
+        if(hash!==item.sha256)return false;
+      }
+      return manifest.items.length===69;
+    });
+    expect(verified).toBe(true);
+    await popup.goBack();
     await expect(popup.getByRole('heading', { name: 'WASM 依存候補の原文' })).toBeVisible();
     await expect(popup.getByText('調査対象の候補であり、WASM に含まれることや依存一覧の網羅性を示すものではありません。')).toBeVisible();
     const encoding=popup.locator('li').filter({has:popup.getByText('encoding_rs 0.8.35',{exact:true})});

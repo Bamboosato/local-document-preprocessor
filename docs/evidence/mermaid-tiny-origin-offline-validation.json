@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-06",
+  "scope": "Local isolated PoC after adding two fixed source-origin originals",
+  "environment": {"os": "Windows", "node": "24.22.1", "browser": "Chrome headless 156.0.8078.81"},
+  "commands": ["node build.mjs", "node prepare-license-candidates.mjs UPSTREAM_ROOT", "node licenses-check.mjs", "node offline-check.mjs"],
+  "sourceOrigins": [
+    {"name": "js-sequence-diagrams", "commit": "27c7a2b4fcb7b3366b9e371fde18911e08b13054", "bytes": 1309, "sha256": "75edd32c01669aa6a3876f162d5e9a36d2e3dff3aff93c53578c32c287b54070"},
+    {"name": "Jekyll", "commit": "6dd3cc21c40b98054851846425af06c64f9fb466", "bytes": 1090, "sha256": "5d9f98524d5a7ac46ba836dfaec29d3b95665c50049fa79ea28cce5f0904f41b"}
+  ],
+  "results": {
+    "offlineOriginalsLinkedAndHashMatched": 68,
+    "sourceOriginCandidates": 2,
+    "sourceNoticesHashMatched": true,
+    "upstreamPatchesLinkedAndHashMatched": 2,
+    "externalRequestsObserved": 0,
+    "corruptOriginalRejectedBeforeOutput": true,
+    "offlineDiagramAfterFailedUpdate": true,
+    "oldControllerRetained": true,
+    "newWorkerWaitedWhileOldClientOpen": true
+  },
+  "limitations": "Recorded local execution results; not production integration, external delivery, legal applicability approval, installation or physical-device acceptance. Update test generations contain identical asset bytes."
+}

@@ -1,0 +1,33 @@
+import {readFile,readdir,mkdir,writeFile,copyFile,symlink} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+import path from 'node:path';
+const [prefix,packageArgument,outputArgument]=process.argv.slice(2);
+if(!/^mermaid-tiny-\d+\.\d+$/.test(prefix??'')||!packageArgument||!outputArgument)throw Error('usage: prepare-candidate-poc.mjs EVIDENCE_PREFIX CANDIDATE_PACKAGE NEW_TMP_PROJECT');
+const local=fileURLToPath(new URL('.',import.meta.url)),project=path.resolve(local,'../..');
+const packageRoot=path.resolve(packageArgument),output=path.resolve(outputArgument);
+for(const directory of [packageRoot,output])if(!directory.startsWith(path.join(project,'tmp')+path.sep))throw Error('candidate fixture must stay in workspace tmp');
+const sha=b=>createHash('sha256').update(b).digest('hex');
+await mkdir(output);
+const poc=path.join(output,'experiments/mermaid-no-elk'),evidence=path.join(output,'docs/evidence');
+await mkdir(poc,{recursive:true});await mkdir(evidence,{recursive:true});
+for(const entry of await readdir(local,{withFileTypes:true}))if(entry.isFile()&&(/\.mjs$/.test(entry.name)||['index.html','worker.js'].includes(entry.name)))await copyFile(path.join(local,entry.name),path.join(poc,entry.name));
+for(const name of ['package.json','package-lock.json'])await copyFile(path.join(packageRoot,name),path.join(poc,name));
+const junction=process.platform==='win32'?'junction':'dir';
+await symlink(path.join(project,'node_modules'),path.join(output,'node_modules'),junction);
+await symlink(path.join(packageRoot,'node_modules'),path.join(poc,'node_modules'),junction);
+await symlink(path.join(project,'experiments/json-gates'),path.join(output,'experiments/json-gates'),junction);
+for(const name of await readdir(path.join(project,'docs/evidence')))if(name.startsWith(prefix+'-')&&name.endsWith('.json'))await copyFile(path.join(project,'docs/evidence',name),path.join(evidence,name));
+for(const suffix of ['license-inventory','notice-audit','workspace-notice-audit','parser-lineage','source-origins','material-retrieval-plan'])await copyFile(path.join(evidence,prefix+'-'+suffix+'.json'),path.join(evidence,'mermaid-tiny-'+suffix+'.json'));
+// Reuse the exact standalone sanitizer body without importing the active product's
+// Tiny URL. This fixture tests the candidate only, not the active 12.2 loader.
+const renderer=await readFile(path.join(project,'src/json/mermaidRenderer.mjs'),'utf8');
+const start=renderer.indexOf('export function sanitizeStandardSvg('),end=renderer.indexOf('export function renderStandard(');
+if(start<0||end<=start)throw Error('sanitizer source boundary changed');
+const sanitizer=renderer.slice(start,end);await writeFile(path.join(poc,'svg-sanitizer.mjs'),sanitizer);
+const mainPath=path.join(poc,'main.mjs'),main=await readFile(mainPath,'utf8');
+if(!main.includes('../../src/json/mermaidRenderer.mjs'))throw Error('PoC sanitizer import changed');
+await writeFile(mainPath,main.replace('../../src/json/mermaidRenderer.mjs','./svg-sanitizer.mjs'));
+const descriptor={evidencePrefix:prefix,packageLockSha256:sha(await readFile(path.join(packageRoot,'package-lock.json'))),originalMainSha256:sha(main),fixtureMainSha256:sha(await readFile(mainPath)),productRendererSha256:sha(Buffer.from(renderer)),sanitizerFragmentSha256:sha(Buffer.from(sanitizer)),adaptation:'Only sanitizer import redirected to an exact copied function body; candidate Tiny package and evidence isolated; active product untouched'};
+await writeFile(path.join(output,'fixture-origin.json'),JSON.stringify(descriptor,null,2)+'\n');
+console.log(JSON.stringify({prepared:true,sanitizerFragmentSha256:descriptor.sanitizerFragmentSha256}));

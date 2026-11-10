@@ -1,0 +1,33 @@
+{
+  "sourceCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sourceTarSha256": "cc9efe255ea61aa2e991ea4c9c0c49f286b3f81e590fa58d04750723da758476",
+  "inventorySha256": "376faa14783679f8c0066589b30a0905c1e190f32d14752b9b40ddf473e57ed3",
+  "workspaces": [
+    {
+      "name": "mermaid",
+      "contributingInputs": 452,
+      "sourceTarMatches": 452,
+      "generated": []
+    },
+    {
+      "name": "parser",
+      "contributingInputs": 65,
+      "sourceTarMatches": 62,
+      "generated": [
+        {
+          "path": "src/language/generated/ast.ts",
+          "sha256": "d3f65a21b61c2c66e0b3a7464fec4b5fcce6ba63bd5ccb266d53f13674f224a4"
+        },
+        {
+          "path": "src/language/generated/grammar.ts",
+          "sha256": "2baa0fa32da1b13264470770784deb9512d159e4d761532758a44849091521be"
+        },
+        {
+          "path": "src/language/generated/module.ts",
+          "sha256": "02a77ad902c10e18dd15dd50d5bf1ab61c7c79c9e9cc2bc31befc1c9be73c07c"
+        }
+      ]
+    }
+  ],
+  "limitations": "Byte identity for source inputs only; generated parser files are hash-recorded, not sourced from the tar; legal completeness requires separate review."
+}

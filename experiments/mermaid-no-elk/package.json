@@ -1,0 +1,9 @@
+{
+  "name": "mermaid-no-elk-poc",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "dependencies": {
+    "@mermaid-js/tiny": "12.2.0"
+  }
+}

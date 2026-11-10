@@ -1,0 +1,502 @@
+{
+  "date": "2026-11-06T07:36:14.962Z",
+  "bundleSha256": "ea0cdf04eb31907eb20d956a34fe300095365c876887b54ffa29f1f847f56d00",
+  "inventorySha256": "376faa14783679f8c0066589b30a0905c1e190f32d14752b9b40ddf473e57ed3",
+  "auditLockSha256": "0172b7bb05e2c93f43d14fdb8123704459a3312f856984e9dd5327bd8ffc6ecc",
+  "contributors": [
+    {
+      "alias": "tiny-input-000",
+      "name": "@braintree/sanitize-url",
+      "version": "7.1.2"
+    },
+    {
+      "alias": "tiny-input-001",
+      "name": "@chevrotain/cst-dts-gen",
+      "version": "13.2.0"
+    },
+    {
+      "alias": "tiny-input-002",
+      "name": "@chevrotain/gast",
+      "version": "13.2.0"
+    },
+    {
+      "alias": "tiny-input-003",
+      "name": "@chevrotain/regexp-to-ast",
+      "version": "13.2.0"
+    },
+    {
+      "alias": "tiny-input-004",
+      "name": "@chevrotain/utils",
+      "version": "13.2.0"
+    },
+    {
+      "alias": "tiny-input-005",
+      "name": "@iconify/utils",
+      "version": "3.0.2"
+    },
+    {
+      "alias": "tiny-input-006",
+      "name": "@upsetjs/venn.js",
+      "version": "2.0.0"
+    },
+    {
+      "alias": "tiny-input-007",
+      "name": "chevrotain",
+      "version": "13.2.0"
+    },
+    {
+      "alias": "tiny-input-008",
+      "name": "chevrotain-allstar",
+      "version": "0.5.0"
+    },
+    {
+      "alias": "tiny-input-009",
+      "name": "d3",
+      "version": "7.9.0"
+    },
+    {
+      "alias": "tiny-input-010",
+      "name": "d3-array",
+      "version": "2.12.1"
+    },
+    {
+      "alias": "tiny-input-011",
+      "name": "d3-array",
+      "version": "3.2.4"
+    },
+    {
+      "alias": "tiny-input-012",
+      "name": "d3-axis",
+      "version": "3.0.0"
+    },
+    {
+      "alias": "tiny-input-013",
+      "name": "d3-brush",
+      "version": "3.0.0"
+    },
+    {
+      "alias": "tiny-input-014",
+      "name": "d3-chord",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-015",
+      "name": "d3-color",
+      "version": "3.1.0"
+    },
+    {
+      "alias": "tiny-input-016",
+      "name": "d3-contour",
+      "version": "4.0.2"
+    },
+    {
+      "alias": "tiny-input-017",
+      "name": "d3-delaunay",
+      "version": "6.0.4"
+    },
+    {
+      "alias": "tiny-input-018",
+      "name": "d3-dispatch",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-019",
+      "name": "d3-drag",
+      "version": "3.0.0"
+    },
+    {
+      "alias": "tiny-input-020",
+      "name": "d3-dsv",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-021",
+      "name": "d3-ease",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-022",
+      "name": "d3-fetch",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-023",
+      "name": "d3-force",
+      "version": "3.0.0"
+    },
+    {
+      "alias": "tiny-input-024",
+      "name": "d3-format",
+      "version": "3.1.0"
+    },
+    {
+      "alias": "tiny-input-025",
+      "name": "d3-geo",
+      "version": "3.1.1"
+    },
+    {
+      "alias": "tiny-input-026",
+      "name": "d3-hierarchy",
+      "version": "3.1.2"
+    },
+    {
+      "alias": "tiny-input-027",
+      "name": "d3-interpolate",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-028",
+      "name": "d3-path",
+      "version": "1.0.9"
+    },
+    {
+      "alias": "tiny-input-029",
+      "name": "d3-path",
+      "version": "3.1.0"
+    },
+    {
+      "alias": "tiny-input-030",
+      "name": "d3-polygon",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-031",
+      "name": "d3-quadtree",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-032",
+      "name": "d3-random",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-033",
+      "name": "d3-sankey",
+      "version": "0.12.3"
+    },
+    {
+      "alias": "tiny-input-034",
+      "name": "d3-scale",
+      "version": "4.0.2"
+    },
+    {
+      "alias": "tiny-input-035",
+      "name": "d3-scale-chromatic",
+      "version": "3.1.0"
+    },
+    {
+      "alias": "tiny-input-036",
+      "name": "d3-selection",
+      "version": "3.0.0"
+    },
+    {
+      "alias": "tiny-input-037",
+      "name": "d3-shape",
+      "version": "1.3.7"
+    },
+    {
+      "alias": "tiny-input-038",
+      "name": "d3-shape",
+      "version": "3.2.0"
+    },
+    {
+      "alias": "tiny-input-039",
+      "name": "d3-time",
+      "version": "3.1.0"
+    },
+    {
+      "alias": "tiny-input-040",
+      "name": "d3-time-format",
+      "version": "4.1.0"
+    },
+    {
+      "alias": "tiny-input-041",
+      "name": "d3-timer",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-042",
+      "name": "d3-transition",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-043",
+      "name": "d3-zoom",
+      "version": "3.0.0"
+    },
+    {
+      "alias": "tiny-input-044",
+      "name": "dagre-d3-es",
+      "version": "7.0.14"
+    },
+    {
+      "alias": "tiny-input-045",
+      "name": "dayjs",
+      "version": "1.11.21"
+    },
+    {
+      "alias": "tiny-input-046",
+      "name": "dompurify",
+      "version": "3.4.12"
+    },
+    {
+      "alias": "tiny-input-047",
+      "name": "es-toolkit",
+      "version": "1.45.1"
+    },
+    {
+      "alias": "tiny-input-048",
+      "name": "fastdom",
+      "version": "1.0.12"
+    },
+    {
+      "alias": "tiny-input-049",
+      "name": "internmap",
+      "version": "2.0.3"
+    },
+    {
+      "alias": "tiny-input-050",
+      "name": "js-yaml",
+      "version": "4.3.0"
+    },
+    {
+      "alias": "tiny-input-051",
+      "name": "khroma",
+      "version": "2.1.0"
+    },
+    {
+      "alias": "tiny-input-052",
+      "name": "langium",
+      "version": "4.4.0"
+    },
+    {
+      "alias": "tiny-input-053",
+      "name": "lodash-es",
+      "version": "4.18.1"
+    },
+    {
+      "alias": "tiny-input-054",
+      "name": "marked",
+      "version": "16.3.0"
+    },
+    {
+      "alias": "tiny-input-055",
+      "name": "roughjs",
+      "version": "4.6.6"
+    },
+    {
+      "alias": "tiny-input-056",
+      "name": "stylis",
+      "version": "4.3.6"
+    },
+    {
+      "alias": "tiny-input-057",
+      "name": "ts-dedent",
+      "version": "2.2.0"
+    },
+    {
+      "alias": "tiny-input-058",
+      "name": "vscode-jsonrpc",
+      "version": "9.0.3"
+    },
+    {
+      "alias": "tiny-input-059",
+      "name": "vscode-languageserver-protocol",
+      "version": "3.18.4"
+    },
+    {
+      "alias": "tiny-input-060",
+      "name": "vscode-languageserver-textdocument",
+      "version": "1.0.15"
+    },
+    {
+      "alias": "tiny-input-061",
+      "name": "vscode-languageserver-types",
+      "version": "3.18.4"
+    },
+    {
+      "alias": "tiny-input-062",
+      "name": "vscode-uri",
+      "version": "3.1.0"
+    }
+  ],
+  "audit": {
+    "auditReportVersion": 2,
+    "vulnerabilities": {
+      "dompurify": {
+        "name": "dompurify",
+        "severity": "critical",
+        "isDirect": true,
+        "via": [
+          {
+            "source": 1138538,
+            "name": "dompurify",
+            "dependency": "dompurify",
+            "title": "DOMPurify: IN_PLACE hook removal leaves a detached subtree executable, causing XSS",
+            "url": "https://github.com/advisories/GHSA-55q2-fjhq-7xh7",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-79"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": "<=3.4.12"
+          },
+          {
+            "source": 1241204,
+            "name": "dompurify",
+            "dependency": "dompurify",
+            "title": "DOMPurify: IN_PLACE returns a force-removed rawtext root whose text carries attacker markup — pure HTML reparse executes",
+            "url": "https://github.com/advisories/GHSA-6688-9rhm-gjv2",
+            "severity": "low",
+            "cwe": [
+              "CWE-79"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": "<=3.4.15"
+          },
+          {
+            "source": 1242880,
+            "name": "dompurify",
+            "dependency": "dompurify",
+            "title": "DOMPurify SAFE_FOR_TEMPLATES bypass: split template expressions survive in attached shadow root content on DOM output modes",
+            "url": "https://github.com/advisories/GHSA-cg2g-xh64-v4q7",
+            "severity": "critical",
+            "cwe": [
+              "CWE-79"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": ">=3.4.4 <=3.4.16"
+          },
+          {
+            "source": 1242881,
+            "name": "dompurify",
+            "dependency": "dompurify",
+            "title": "DOMPurify IN_PLACE: hook that removes a parent or sibling leaves the detached subtree's event handlers armed (incomplete fix for GHSA-p98j-92pf-mc4p)",
+            "url": "https://github.com/advisories/GHSA-mrv2-3pqr-j5jr",
+            "severity": "high",
+            "cwe": [
+              "CWE-79",
+              "CWE-693"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": "<=3.4.16"
+          },
+          {
+            "source": 1242882,
+            "name": "dompurify",
+            "dependency": "dompurify",
+            "title": "DOMPurify: SMIL attributeName=href guard is skipped when PARSER_MEDIA_TYPE is application/xhtml+xml",
+            "url": "https://github.com/advisories/GHSA-c6gr-qvv4-5v3f",
+            "severity": "low",
+            "cwe": [
+              "CWE-79"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": "<=3.4.16"
+          }
+        ],
+        "effects": [],
+        "range": "<=3.4.16",
+        "nodes": [
+          "node_modules/tiny-input-046"
+        ],
+        "fixAvailable": {
+          "name": "dompurify",
+          "version": "3.4.17",
+          "isSemVerMajor": false
+        }
+      },
+      "js-yaml": {
+        "name": "js-yaml",
+        "severity": "high",
+        "isDirect": true,
+        "via": [
+          {
+            "source": 1138115,
+            "name": "js-yaml",
+            "dependency": "js-yaml",
+            "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) — CVE-2026-59870 fix not backported",
+            "url": "https://github.com/advisories/GHSA-5p4m-2wfm-xmqj",
+            "severity": "high",
+            "cwe": [
+              "CWE-407"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": ">=4.0.0 <4.3.1"
+          },
+          {
+            "source": 1193727,
+            "name": "js-yaml",
+            "dependency": "js-yaml",
+            "title": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources",
+            "url": "https://github.com/advisories/GHSA-2883-xcg3-v3hh",
+            "severity": "high",
+            "cwe": [
+              "CWE-400",
+              "CWE-407"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": ">=4.0.0 <4.3.2"
+          }
+        ],
+        "effects": [],
+        "range": "4.0.0 - 4.3.1",
+        "nodes": [
+          "node_modules/tiny-input-050"
+        ],
+        "fixAvailable": {
+          "name": "js-yaml",
+          "version": "4.3.2",
+          "isSemVerMajor": false
+        }
+      }
+    },
+    "metadata": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 1,
+        "critical": 1,
+        "total": 2
+      },
+      "dependencies": {
+        "prod": 64,
+        "dev": 0,
+        "optional": 0,
+        "peer": 0,
+        "peerOptional": 0,
+        "total": 63
+      }
+    }
+  },
+  "scope": "All 63 reviewed package/version pairs, alias-preserved; package advisory matching is not proof of application reachability. No dependencies installed or executed.",
+  "latestTinyCandidate": {
+    "version": "12.3.0",
+    "integrity": "sha512-90BO2kQvmQWj9YjBX2IsLHCw61rN69dPTn5wFfDu+b9aT7qtzfzTA3wpKWeaRAKK85refSo9How5EOeY39DWfA==",
+    "source": "npm view @mermaid-js/tiny@latest version dist.integrity --json",
+    "status": "Registry metadata confirmed only; not installed, adopted, attributed or license-verified"
+  },
+  "disposition": "Public distribution adoption held. No advisory exception, dependency replacement or automatic audit fix applied. Static usage clues do not prove non-reachability."
+}

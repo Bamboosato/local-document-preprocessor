@@ -32,7 +32,7 @@ test('SR-10 UI-26 display-only failure keeps verified exports and explicit retry
 test('SR-11 UI-26 validation asset failure blocks output, preserves another result and only explicit reconversion recovers',async({browser})=>{
   const context=await browser.newContext({serviceWorkers:'block'}),page=await context.newPage();let blocked=true,faults=0;
   try{
-    await context.route('**/assets/mermaid.core-*.js',async route=>{if(blocked){faults++;await route.abort('failed');}else await route.continue();});
+    await context.route('**/assets/mermaid.tiny-*.js',async route=>{if(blocked){faults++;await route.abort('failed');}else await route.continue();});
     await page.goto('/');await page.locator('input[type=file]').setInputFiles([json('A.json','{"case":"PRESERVED_A"}'),json('B.json','{"case":"RECOVERED_B"}')]);
     await expect(page.getByText('構造確認中',{exact:true})).toHaveCount(0);
     await row(page,'B.json').getByRole('button',{name:'変更',exact:true}).click();await confirm(page,true);

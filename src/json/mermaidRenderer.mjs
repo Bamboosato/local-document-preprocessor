@@ -1,14 +1,8 @@
+import {loadTiny} from './tinyLoader.mjs';
 export const DISPLAY_LIMIT_BYTES=50*1024;
 export const utf8Bytes=code=>new TextEncoder().encode(code).length;
-let library,sequence=0,tail=Promise.resolve();
+let sequence=0,tail=Promise.resolve();
 // Mermaid uses shared DOM state: serialize actual rendering across all views.
-function load(){
-  if(!library)library=import('mermaid').then(({default:mermaid})=>{
-    mermaid.initialize({startOnLoad:false,securityLevel:'strict',theme:'default',htmlLabels:false,flowchart:{htmlLabels:false},maxTextSize:100000});
-    return mermaid;
-  }).catch(error=>{library=undefined;throw error;});
-  return library;
-}
 export function sanitizeStandardSvg(svg){
   const doc=new DOMParser().parseFromString(svg,'image/svg+xml');
   if(doc.querySelector('parsererror')||doc.documentElement.localName!=='svg')throw new Error('invalid-svg');
@@ -31,7 +25,7 @@ export function sanitizeStandardSvg(svg){
 export function renderStandard(code){
   if(utf8Bytes(code)>DISPLAY_LIMIT_BYTES)return Promise.reject(new Error('display-limit'));
   const task=tail.then(async()=>{
-    const mermaid=await load(),host=document.createElement('div');
+    const mermaid=await loadTiny(),host=document.createElement('div');
     host.className='render-staging';document.body.append(host);
     try {const result=await mermaid.render('standard-'+(++sequence),code,host);return sanitizeStandardSvg(result.svg);}
     finally{host.remove();}

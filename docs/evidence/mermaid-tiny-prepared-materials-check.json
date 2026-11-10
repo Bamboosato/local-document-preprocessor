@@ -1,0 +1,520 @@
+{
+  "bundleSha256": "ea0cdf04eb31907eb20d956a34fe300095365c876887b54ffa29f1f847f56d00",
+  "inventorySha256": "376faa14783679f8c0066589b30a0905c1e190f32d14752b9b40ddf473e57ed3",
+  "preparedManifestSha256": "017eac39ffeb6f7d93fbffceec853c19652b3c2fca3d354640b4ab9966990886",
+  "packages": [
+    {
+      "name": "@braintree/sanitize-url",
+      "version": "7.1.2",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "@chevrotain/cst-dts-gen",
+      "version": "13.2.0",
+      "reviewedLicense": "Apache-2.0",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "@chevrotain/gast",
+      "version": "13.2.0",
+      "reviewedLicense": "Apache-2.0",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "@chevrotain/regexp-to-ast",
+      "version": "13.2.0",
+      "reviewedLicense": "Apache-2.0",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "@chevrotain/utils",
+      "version": "13.2.0",
+      "reviewedLicense": "Apache-2.0",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "@iconify/utils",
+      "version": "3.0.2",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "@upsetjs/venn.js",
+      "version": "2.0.0",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "chevrotain",
+      "version": "13.2.0",
+      "reviewedLicense": "Apache-2.0",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "chevrotain-allstar",
+      "version": "0.5.0",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3",
+      "version": "7.9.0",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-array",
+      "version": "2.12.1",
+      "reviewedLicense": "BSD-3-Clause",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-array",
+      "version": "3.2.4",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-axis",
+      "version": "3.0.0",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-brush",
+      "version": "3.0.0",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-chord",
+      "version": "3.0.1",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-color",
+      "version": "3.1.0",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-contour",
+      "version": "4.0.2",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-delaunay",
+      "version": "6.0.4",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-dispatch",
+      "version": "3.0.1",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-drag",
+      "version": "3.0.0",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-dsv",
+      "version": "3.0.1",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-ease",
+      "version": "3.0.1",
+      "reviewedLicense": "BSD-3-Clause",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-fetch",
+      "version": "3.0.1",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-force",
+      "version": "3.0.0",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-format",
+      "version": "3.1.0",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-geo",
+      "version": "3.1.1",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-hierarchy",
+      "version": "3.1.2",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-interpolate",
+      "version": "3.0.1",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-path",
+      "version": "1.0.9",
+      "reviewedLicense": "BSD-3-Clause",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-path",
+      "version": "3.1.0",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-polygon",
+      "version": "3.0.1",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-quadtree",
+      "version": "3.0.1",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-random",
+      "version": "3.0.1",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-sankey",
+      "version": "0.12.3",
+      "reviewedLicense": "BSD-3-Clause",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-scale",
+      "version": "4.0.2",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-scale-chromatic",
+      "version": "3.1.0",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-selection",
+      "version": "3.0.0",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-shape",
+      "version": "1.3.7",
+      "reviewedLicense": "BSD-3-Clause",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-shape",
+      "version": "3.2.0",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-time",
+      "version": "3.1.0",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-time-format",
+      "version": "4.1.0",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-timer",
+      "version": "3.0.1",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-transition",
+      "version": "3.0.1",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "d3-zoom",
+      "version": "3.0.0",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "dagre-d3-es",
+      "version": "7.0.14",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "dayjs",
+      "version": "1.11.21",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "dompurify",
+      "version": "3.4.12",
+      "reviewedLicense": "Apache-2.0",
+      "originalCount": 2,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "es-toolkit",
+      "version": "1.45.1",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "fastdom",
+      "version": "1.0.12",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "internmap",
+      "version": "2.0.3",
+      "reviewedLicense": "ISC",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "js-yaml",
+      "version": "4.3.0",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "khroma",
+      "version": "2.1.0",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "langium",
+      "version": "4.4.0",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "lodash-es",
+      "version": "4.18.1",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "marked",
+      "version": "16.3.0",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "roughjs",
+      "version": "4.6.6",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "stylis",
+      "version": "4.3.6",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "ts-dedent",
+      "version": "2.2.0",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "vscode-jsonrpc",
+      "version": "9.0.3",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "vscode-languageserver-protocol",
+      "version": "3.18.4",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "vscode-languageserver-textdocument",
+      "version": "1.0.15",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "vscode-languageserver-types",
+      "version": "3.18.4",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    },
+    {
+      "name": "vscode-uri",
+      "version": "3.1.0",
+      "reviewedLicense": "MIT",
+      "originalCount": 1,
+      "hashesMatch": true,
+      "clauseMarkersFound": true
+    }
+  ],
+  "referenceCount": 4,
+  "generatorReference": {
+    "name": "langium-cli",
+    "version": "4.4.0",
+    "path": "/licenses/generator-license.txt",
+    "sha256": "599bf70b4e55f06250571d103dbd8441e0c47cb7f858c0147ca312ce38e9ef2a",
+    "role": "generator reference, not runtime contributor"
+  },
+  "limitations": "Hash and license-text marker checks only; semantic review, notices completeness and actual product distribution remain separate. No new legal approval is inferred."
+}

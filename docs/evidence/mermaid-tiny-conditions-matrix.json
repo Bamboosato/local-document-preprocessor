@@ -1,0 +1,1469 @@
+{
+  "bundleSha256": "ea0cdf04eb31907eb20d956a34fe300095365c876887b54ffa29f1f847f56d00",
+  "inventorySha256": "376faa14783679f8c0066589b30a0905c1e190f32d14752b9b40ddf473e57ed3",
+  "noticeAuditSha256": "f9ec4b6c9137cc2ec965c7475b20698ea97c69a132f3f8d79ae19cb8ab4978b0",
+  "preparedMaterialsSha256": "1b98cab7864b6f0df593286e47506d11b390d7e11195bddcf3c10497af3e1f00",
+  "scope": "Fixed Tiny bundle and parser contributor candidates; PoC material verification is separate from product distribution and legal applicability.",
+  "workspace": [
+    {
+      "name": "mermaid",
+      "version": "12.2.0",
+      "declaredLicense": "MIT",
+      "role": "mermaid",
+      "original": {
+        "path": "LICENSE",
+        "bytes": 1089,
+        "sha256": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80"
+      }
+    },
+    {
+      "name": "@mermaid-js/parser",
+      "version": "2.0.1",
+      "declaredLicense": "MIT",
+      "role": "parser",
+      "original": {
+        "path": "packages/parser/LICENSE",
+        "bytes": 1077,
+        "sha256": "d374061c40bfb6f99c5033290caefda97a9b3e7e477e5ee02f487143ef2177e8"
+      }
+    }
+  ],
+  "packages": [
+    {
+      "name": "@braintree/sanitize-url",
+      "version": "7.1.2",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1066,
+          "sha256": "0984740e0c3d725c8044dec7edcefe1dbce180ef5a7bc710c251e19607000158"
+        }
+      ],
+      "contributingFiles": 2,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "@chevrotain/cst-dts-gen",
+      "version": "13.2.0",
+      "declaredLicense": "Apache-2.0",
+      "originals": [
+        {
+          "name": "LICENSE.txt",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "contributingFiles": 3,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性",
+        "Apache-2.0の変更表示と該当NOTICEの有無を確認"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "@chevrotain/gast",
+      "version": "13.2.0",
+      "declaredLicense": "Apache-2.0",
+      "originals": [
+        {
+          "name": "LICENSE.txt",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "contributingFiles": 4,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性",
+        "Apache-2.0の変更表示と該当NOTICEの有無を確認"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "@chevrotain/regexp-to-ast",
+      "version": "13.2.0",
+      "declaredLicense": "Apache-2.0",
+      "originals": [
+        {
+          "name": "LICENSE.txt",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "contributingFiles": 5,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性",
+        "Apache-2.0の変更表示と該当NOTICEの有無を確認"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "@chevrotain/utils",
+      "version": "13.2.0",
+      "declaredLicense": "Apache-2.0",
+      "originals": [
+        {
+          "name": "LICENSE.txt",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "contributingFiles": 4,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性",
+        "Apache-2.0の変更表示と該当NOTICEの有無を確認"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "@iconify/utils",
+      "version": "3.0.2",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "license.txt",
+          "bytes": 1083,
+          "sha256": "a86793ac023162ce98b91899601c15f6712f44943163c4f92a0a4bf89152b3bf"
+        }
+      ],
+      "contributingFiles": 13,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "@upsetjs/venn.js",
+      "version": "2.0.0",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1106,
+          "sha256": "6a3508febf2cfccfee96597394543a6154a4bb0b1f91f28404be42c09e9fcb54"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "chevrotain",
+      "version": "13.2.0",
+      "declaredLicense": "Apache-2.0",
+      "originals": [
+        {
+          "name": "LICENSE.txt",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "contributingFiles": 37,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性",
+        "Apache-2.0の変更表示と該当NOTICEの有無を確認"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "chevrotain-allstar",
+      "version": "0.5.0",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1068,
+          "sha256": "1db2cfbc7ce5fa3b82699b4ac4badce8984084d25b5308ece00f5c9b1381a0a5"
+        }
+      ],
+      "contributingFiles": 4,
+      "markedFiles": 4,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性",
+        "寄与ファイルの権利表示が原文・表示に保持されるか個別照合"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3",
+      "version": "7.9.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-array",
+      "version": "2.12.1",
+      "declaredLicense": "BSD-3-Clause",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1475,
+          "sha256": "0747bebeb06b10954913149be9b9a8bdf6fad3e6fdcbd9f9524e7a94c13d2cea"
+        }
+      ],
+      "contributingFiles": 4,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-array",
+      "version": "3.2.4",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4"
+        }
+      ],
+      "contributingFiles": 10,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-axis",
+      "version": "3.0.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "contributingFiles": 3,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-brush",
+      "version": "3.0.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "contributingFiles": 5,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-chord",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-color",
+      "version": "3.1.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
+        }
+      ],
+      "contributingFiles": 5,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-contour",
+      "version": "4.0.2",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e51cba0e4fa1d8c078e15319868f2b90188f413f9ce9dac1043b62db32901e93"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-delaunay",
+      "version": "6.0.4",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 757,
+          "sha256": "582c3022bd01942336095f92b58a90b1be624dc547d987555c6c956512dd24c1"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-dispatch",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "contributingFiles": 2,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-drag",
+      "version": "3.0.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-dsv",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "7842a82012622e5a37bfe4f6c1b67cd3bae6350716b5bf87f36cea0bdc1319dc"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-ease",
+      "version": "3.0.1",
+      "declaredLicense": "BSD-3-Clause",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1504,
+          "sha256": "b989d9085148d21ff64a75e14462aefa06b2589a55553b07b1460c70081c7d08"
+        }
+      ],
+      "contributingFiles": 2,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-fetch",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "ffdc17dc9040006bddeb891c95bfbb492e86d6bc64a4a4233666febab1be35e0"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-force",
+      "version": "3.0.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-format",
+      "version": "3.1.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "contributingFiles": 16,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-geo",
+      "version": "3.1.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1857,
+          "sha256": "3e3edc1224eec9c39cd26491a21304a62883c1e5b6a65c5283ccc7a6cc94baee"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-hierarchy",
+      "version": "3.1.2",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "contributingFiles": 22,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-interpolate",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "contributingFiles": 18,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-path",
+      "version": "1.0.9",
+      "declaredLicense": "BSD-3-Clause",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1475,
+          "sha256": "b8265327ab678f554800e71188b1cc6b1ff57522e292d2b1c0be66f27cf328b6"
+        }
+      ],
+      "contributingFiles": 2,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-path",
+      "version": "3.1.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "a09b0d6d76e768fca2085fad05743ee81ddd11946bcda160a3cf5e1081a479aa"
+        }
+      ],
+      "contributingFiles": 2,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-polygon",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-quadtree",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-random",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-sankey",
+      "version": "0.12.3",
+      "declaredLicense": "BSD-3-Clause",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1471,
+          "sha256": "2bf785e778d67a4f5266cffcd4f2cc5bb98cde73791666e7efeb8002ba32dfa5"
+        }
+      ],
+      "contributingFiles": 5,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-scale",
+      "version": "4.0.2",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "contributingFiles": 11,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-scale-chromatic",
+      "version": "3.1.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1423,
+          "sha256": "0986d93944902cca9af86824b6a641b4b7c2d10602fc510c433a8bcd443919fe"
+        }
+      ],
+      "contributingFiles": 3,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-selection",
+      "version": "3.0.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "contributingFiles": 47,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-shape",
+      "version": "1.3.7",
+      "declaredLicense": "BSD-3-Clause",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1475,
+          "sha256": "7eea8533ea92bd8c32a901e89ecb0305890905bb12711449565ddff96891146d"
+        }
+      ],
+      "contributingFiles": 5,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-shape",
+      "version": "3.2.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
+        }
+      ],
+      "contributingFiles": 28,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-time",
+      "version": "3.1.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
+        }
+      ],
+      "contributingFiles": 11,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-time-format",
+      "version": "4.1.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "contributingFiles": 3,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-timer",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "contributingFiles": 3,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-transition",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "contributingFiles": 28,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "d3-zoom",
+      "version": "3.0.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "contributingFiles": 6,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "dagre-d3-es",
+      "version": "7.0.14",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE.md",
+          "bytes": 1328,
+          "sha256": "d01eb84ccce437dbf5fd40853bceea0f287930920acea066597a4a25ead63858"
+        }
+      ],
+      "contributingFiles": 42,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "dayjs",
+      "version": "1.11.21",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1072,
+          "sha256": "5faab7526d055651be3aab769d58897be6bd91f3d39d137f25f12dba1b31d5dc"
+        }
+      ],
+      "contributingFiles": 5,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "dompurify",
+      "version": "3.4.12",
+      "declaredLicense": "(MPL-2.0 OR Apache-2.0)",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "name": "LICENSE-MPL",
+          "bytes": 16726,
+          "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 1,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性",
+        "寄与ファイルの権利表示が原文・表示に保持されるか個別照合",
+        "Apache-2.0の変更表示と該当NOTICEの有無を確認"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "es-toolkit",
+      "version": "1.45.1",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1424,
+          "sha256": "ed68888a2a28f32a05e88f24d4d4ee75075a1bda2b6372a1f2e00fa0576a5524"
+        }
+      ],
+      "contributingFiles": 26,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "fastdom",
+      "version": "1.0.12",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "README.md",
+          "bytes": 7525,
+          "sha256": "cc5669ab6f7741bb061c8a7244addc8e3af1f84ec7d2445744b59d0169a87d11",
+          "note": "MIT license section; preserve attribution"
+        }
+      ],
+      "contributingFiles": 2,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": true,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性",
+        "上流パッチの変更内容と適用条件を確認"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "internmap",
+      "version": "2.0.3",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 726,
+          "sha256": "9ea8903938dab5f12c4572d60725069bec2d1b0dc3bcc210b09bae946a5ebb1f"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "js-yaml",
+      "version": "4.3.0",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1084,
+          "sha256": "a07bc24468b9654ce76a547d47a2db282d07733b715db4c73a98bd63961f9550"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "khroma",
+      "version": "2.1.0",
+      "declaredLicense": null,
+      "originals": [
+        {
+          "name": "license",
+          "bytes": 1105,
+          "sha256": "66b333b0f66759a0b710459e03f7029abe17f4358114a128d2c972e642961b49"
+        }
+      ],
+      "contributingFiles": 28,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性",
+        "manifest申告なしのため原文と対応版の適用を確認"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "langium",
+      "version": "4.4.0",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1052,
+          "sha256": "599bf70b4e55f06250571d103dbd8441e0c47cb7f858c0147ca312ce38e9ef2a"
+        }
+      ],
+      "contributingFiles": 51,
+      "markedFiles": 50,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性",
+        "寄与ファイルの権利表示が原文・表示に保持されるか個別照合"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "lodash-es",
+      "version": "4.18.1",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1952,
+          "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc"
+        }
+      ],
+      "contributingFiles": 242,
+      "markedFiles": 1,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性",
+        "寄与ファイルの権利表示が原文・表示に保持されるか個別照合"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "marked",
+      "version": "16.3.0",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE.md",
+          "bytes": 2942,
+          "sha256": "8e3a3f82f59a60958f56ca08f445647c32a4733dc7ca6c2c46f6eb898471ab9c"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 1,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性",
+        "寄与ファイルの権利表示が原文・表示に保持されるか個別照合"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "roughjs",
+      "version": "4.6.6",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1068,
+          "sha256": "dca9a392272606ac748ac0976a2a1133f14eef841c27beaa51a844d53c56a09d"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": true,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性",
+        "上流パッチの変更内容と適用条件を確認"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "stylis",
+      "version": "4.3.6",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1078,
+          "sha256": "88c579c6ee44b41137a21321190d177982e5b17d4fa1b83a4a2e3ea325a8fc9a"
+        }
+      ],
+      "contributingFiles": 6,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "ts-dedent",
+      "version": "2.2.0",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1073,
+          "sha256": "eff13095d9d762c3bd9dda74370c81e2130c28f2691bc455603abf973bac25b9"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "vscode-jsonrpc",
+      "version": "9.0.3",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "License.txt",
+          "bytes": 1095,
+          "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0"
+        }
+      ],
+      "contributingFiles": 14,
+      "markedFiles": 14,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性",
+        "寄与ファイルの権利表示が原文・表示に保持されるか個別照合"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "vscode-languageserver-protocol",
+      "version": "3.18.4",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "License.txt",
+          "bytes": 1095,
+          "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0"
+        }
+      ],
+      "contributingFiles": 27,
+      "markedFiles": 27,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性",
+        "寄与ファイルの権利表示が原文・表示に保持されるか個別照合"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "vscode-languageserver-textdocument",
+      "version": "1.0.15",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "License.txt",
+          "bytes": 1095,
+          "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 1,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性",
+        "寄与ファイルの権利表示が原文・表示に保持されるか個別照合"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "vscode-languageserver-types",
+      "version": "3.18.4",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "License.txt",
+          "bytes": 1095,
+          "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 1,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性",
+        "寄与ファイルの権利表示が原文・表示に保持されるか個別照合"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    },
+    {
+      "name": "vscode-uri",
+      "version": "3.1.0",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE.md",
+          "bytes": 1070,
+          "sha256": "c669138cb1eb01fbb745e8e460b291e4f2869c14a40061390b6095d845ed4c82"
+        }
+      ],
+      "contributingFiles": 1,
+      "markedFiles": 0,
+      "noticeCandidates": [],
+      "patched": false,
+      "requiredReview": [
+        "原文・権利表示の製品版への配置と到達性"
+      ],
+      "preparedOriginalsHashChecked": true,
+      "licenseTextMarkersChecked": true,
+      "status": "PoC資料準備確認済み。製品提供・最終版の条件照合は保留"
+    }
+  ],
+  "additionalSourceOrigins": [
+    {
+      "name": "langium-cli",
+      "version": "4.4.0",
+      "role": "generator templates",
+      "condition": "MIT reference; retain generator attribution and original as a conservative preparation; review substantial template content in generated output",
+      "status": "参考原文をPoCへ配置・オフライン照合済み。生成器と実行時依存を区別し製品提供は保留"
+    },
+    {
+      "name": "Jekyll",
+      "commit": "6dd3cc21c40b98054851846425af06c64f9fb466",
+      "source": "src/diagram-api/regexes.ts",
+      "licenseUrl": "https://raw.githubusercontent.com/jekyll/jekyll/6dd3cc21c40b98054851846425af06c64f9fb466/LICENSE",
+      "condition": "MIT; adapted Ruby frontmatter regex to JS anchors, indentation backreference, delimiters and dotAll; retain source copyright and permission original",
+      "status": "保留: 原文候補のPoCオフライン提供確認済み、最終適用・製品同梱未完"
+    },
+    {
+      "name": "js-sequence-diagrams",
+      "sourceCandidateCommit": "27c7a2b4fcb7b3366b9e371fde18911e08b13054",
+      "mermaidImportCommit": "2a0a2a2269545a26abf20c92de65f214eea5a425",
+      "source": "src/diagrams/sequence/parser/sequenceDiagram.jison",
+      "licenseUrl": "https://raw.githubusercontent.com/bramp/js-sequence-diagrams/27c7a2b4fcb7b3366b9e371fde18911e08b13054/LICENCE",
+      "condition": "Historical source and BSD-2-Clause original carry matching 2012-2013 Andrew Brampton attribution; adapted import differs in 10 line-change blocks; unique originating checkout not proven",
+      "status": "保留: 当時原文候補のPoCオフライン提供確認済み、製品同梱と最終適用判定未完"
+    }
+  ]
+}

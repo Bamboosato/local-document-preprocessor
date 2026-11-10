@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-10",
+  "candidate": "@mermaid-js/tiny@12.3.0",
+  "decision": "Adopted as active local product candidate; not public release approval",
+  "reason": "Fixed 12.3 bundle, originals, notices, PWA and installed-release-bound default advisory gate updated together; targeted local product checks passed.",
+  "latestTargetedValidation": "mermaid-tiny-12.3-acceptance-validation.json",
+  "environment": {
+    "os": "Windows",
+    "node": "24.22.1",
+    "browser": "Chrome headless 156.0.8078.81"
+  },
+  "generatorReference": {
+    "name": "langium-cli",
+    "version": "4.4.0",
+    "sha256": "599bf70b4e55f06250571d103dbd8441e0c47cb7f858c0147ca312ce38e9ef2a",
+    "role": "generation reference, not runtime contributor"
+  },
+  "localResults": {
+    "scope": "Active local 12.3 product candidate",
+    "originalsOfflineLinkedAndHashMatched": 69,
+    "baseOriginalsUnchangedAndFreshlyVerified": 68,
+    "generatorReferenceOfflineLinkedAndHashMatched": true,
+    "sourceNoticesOfflineHashMatched": true,
+    "upstreamPatchOriginalsOfflineHashMatched": 2,
+    "dependencyPackageVersionPairs": 63,
+    "extendedAdvisoryTargets": 67,
+    "advisoryFindings": 0,
+    "licenseAssets": 75,
+    "staticAssets": 79,
+    "targetedAcceptanceStagesPassed": 8,
+    "productOriginalsOfflineLinkedAndHashMatched": 69,
+    "productLicenseAssets": 75,
+    "productManifestAssets": 219,
+    "productGenerationAssets": 220,
+    "productHttpAssetsMatched": 221,
+    "productUnitTestsPassed": 124,
+    "productTargetedE2EPassed": 33,
+    "supplementalNormalMermaidMigrationPassed": 1,
+    "developmentStartupPassed": 1,
+    "defaultGateBoundToInstalledRelease": true,
+    "rootProductionAndFullAdvisoryFindings": 0,
+    "defaultEmbeddedAdvisoryTargets": 67,
+    "defaultEmbeddedAdvisoryFindings": 0,
+    "staticAssetsScope": "staticAssets=79 and targetedAcceptanceStagesPassed=8 refer to isolated candidate history"
+  },
+  "blockingAcceptanceGaps": [
+    "Final candidate commit/artifact pinning and review remain separate",
+    "User Windows physical-device acceptance and authorized actual delivery acceptance remain separate",
+    "anydoc/PDFium distribution conditions and final public-release judgement remain separate"
+  ],
+  "productMigration": "Implemented and verified locally; uncommitted branch, no merge or deployment",
+  "limitations": "Local Windows headless Chrome checks only; no remote CI, merge, deployment, external archive publication or physical-device acceptance. Final public distribution conditions remain separate.",
+  "cleanMaterialValidation": "mermaid-tiny-12.3-review.json",
+  "materialProcedure": "../mermaid-tiny-12.3-review.md",
+  "productAcceptanceRemaining": [
+    "Final candidate commit/artifact pinning and review remain separate",
+    "User Windows physical-device acceptance and authorized actual delivery acceptance remain separate",
+    "anydoc/PDFium distribution conditions and final public-release judgement remain separate"
+  ],
+  "latestProductValidation": "mermaid-tiny-12.3-product-cutover-validation.json",
+  "embeddedAdvisories": "mermaid-tiny-12.3-extended-audit.json",
+  "history": [
+    {
+      "candidate": "@mermaid-js/tiny@12.2.0",
+      "decision": "Local integration verified; distribution adoption held for embedded advisories",
+      "record": "mermaid-tiny-product-migration-validation.json",
+      "advisories": "mermaid-tiny-embedded-advisory-review.json"
+    },
+    {
+      "candidate": "@mermaid-js/tiny@12.3.0",
+      "date": "2026-11-06",
+      "decision": "Isolated replacement candidate recommended; product cutover pending at that time",
+      "record": "mermaid-tiny-12.3-acceptance-validation.json"
+    }
+  ],
+  "latestCandidateReview": "mermaid-tiny-12.3-review.json",
+  "candidateReviewGaps": [],
+  "activeLocalProductCandidate": "@mermaid-js/tiny@12.3.0",
+  "activeProductEmbeddedAdvisories": "mermaid-tiny-12.3-product-cutover-audit.json"
+}

@@ -19,7 +19,7 @@ export class JsonWorkerClient {
   private jobs=new Set<{reject:(error:unknown)=>void;cleanup:()=>void}>();
   private fileIds=new WeakMap<File,string>();
   private pending=new Map<string,{operation:JsonOperation;fileId:string;parseGeneration:number;settings:JsonSettings;resolve:(value:unknown)=>void;reject:(error:unknown)=>void;cleanup:()=>void}>();
-  constructor(private factory:()=>Worker=()=>new Worker(new URL('./json.worker.ts',import.meta.url),{type:'module',name:'local-json-converter'}),private readBytes:(file:File,signal:AbortSignal)=>Promise<ArrayBuffer>=readJsonFile){}
+  constructor(private factory:()=>Worker=()=>new Worker(new URL('./json.worker.ts',import.meta.url),{name:'local-json-converter'}),private readBytes:(file:File,signal:AbortSignal)=>Promise<ArrayBuffer>=readJsonFile){}
   inspect(file:File,signal?:AbortSignal){return this.request<DocumentInspection>(file,'inspect',defaultJsonSettings,0,signal);}
   browse(file:File,settings:JsonSettings,offset=0,signal?:AbortSignal){return this.request<JsonPage>(file,'browse',settings,offset,signal);}
   target(file:File,settings:JsonSettings,view:JsonView,reveal=false,signal?:AbortSignal){return this.request<JsonTargetPage>(file,'target',settings,0,signal,{view:structuredClone(view),reveal});}

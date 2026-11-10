@@ -1,0 +1,2104 @@
+{
+  "schema": 1,
+  "sourceCommit": "2086904e76c692331e34a45d7cc3bc30860d040e",
+  "upstreamLockSha256": "491bd71f2f09902927380c6c51b1ef0dcf31b4751a96129b039f7612c424c599",
+  "evidenceHashes": {
+    "mermaid-tiny-12.3-license-inventory.json": "0cd30ca36f7f99760f0ba5207f0bd02793b2ba56ccc25521b259e3ef01188add",
+    "mermaid-tiny-12.3-notice-audit.json": "22e5c54c9fc494398dd582e8db014693385114be01744a7fc5ed21047e7d55f6",
+    "mermaid-tiny-12.3-workspace-notice-audit.json": "ea41ef2335d9e5b40bb6d5239f2bd3556ca38080fe122d8047c273fd968ae0f6",
+    "mermaid-tiny-12.3-parser-lineage.json": "61edc6f680612391d79baf8b4e96811638256fa54a5222416ddd755330c823aa",
+    "mermaid-tiny-12.3-source-origins.json": "795ddb65dc4dfe66ef14f7d08671d9f8534fc7119be90113b6189d306778e2f8"
+  },
+  "source": {
+    "url": "https://codeload.github.com/mermaid-js/mermaid/tar.gz/2086904e76c692331e34a45d7cc3bc30860d040e",
+    "sha256": "04077bb929196318ead77bb37db35455044705f426d6ca9d527b611000cbf914",
+    "files": [
+      {
+        "member": "mermaid-2086904e76c692331e34a45d7cc3bc30860d040e/LICENSE",
+        "target": "LICENSE",
+        "bytes": 1089,
+        "sha256": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80"
+      },
+      {
+        "member": "mermaid-2086904e76c692331e34a45d7cc3bc30860d040e/packages/mermaid/src/diagram-api/regexes.ts",
+        "target": "packages/mermaid/src/diagram-api/regexes.ts",
+        "bytes": 8322,
+        "sha256": "2bda6a34c0762faab8abb7c3f09ebee2a5919d6bea874e2eae0b3fa7d15065e8"
+      },
+      {
+        "member": "mermaid-2086904e76c692331e34a45d7cc3bc30860d040e/packages/mermaid/src/diagrams/agentflow/parser/agentflow.jison",
+        "target": "packages/mermaid/src/diagrams/agentflow/parser/agentflow.jison",
+        "bytes": 32161,
+        "sha256": "8bb23d09c1dcdf4a3d3139c4ba29b8a823d726b755c69067010a74cb621fd2a6"
+      },
+      {
+        "member": "mermaid-2086904e76c692331e34a45d7cc3bc30860d040e/packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "target": "packages/mermaid/src/diagrams/c4/parser/c4Diagram.jison",
+        "bytes": 15053,
+        "sha256": "5a5054b08f05a02b805a8959b78d733bec2c8c74156bfd924be8d37c7df17582"
+      },
+      {
+        "member": "mermaid-2086904e76c692331e34a45d7cc3bc30860d040e/packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "target": "packages/mermaid/src/diagrams/class/parser/classDiagram.jison",
+        "bytes": 19242,
+        "sha256": "c2ea20022e4adf501dbbcda909a1bdb74e05a2ac53ff5276d09d00fd54a3e21e"
+      },
+      {
+        "member": "mermaid-2086904e76c692331e34a45d7cc3bc30860d040e/packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "target": "packages/mermaid/src/diagrams/flowchart/parser/flow.jison",
+        "bytes": 28503,
+        "sha256": "84e9476f613b4489ab07ec4a71d5dead3096f52b20c3c4b26ce8cef87c1c4e6f"
+      },
+      {
+        "member": "mermaid-2086904e76c692331e34a45d7cc3bc30860d040e/packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "target": "packages/mermaid/src/diagrams/gantt/parser/gantt.jison",
+        "bytes": 7282,
+        "sha256": "14d325aa626a7fa220c341a75faecc712d0121203e0f88db6c11e68f0bc7e82f"
+      },
+      {
+        "member": "mermaid-2086904e76c692331e34a45d7cc3bc30860d040e/packages/mermaid/src/diagrams/kanban/parser/kanban.jison",
+        "target": "packages/mermaid/src/diagrams/kanban/parser/kanban.jison",
+        "bytes": 6850,
+        "sha256": "e9e8bb8c6938e9abf7f47b496f57cafa6b6c5f1288e1aeeae2951e9efb096b81"
+      },
+      {
+        "member": "mermaid-2086904e76c692331e34a45d7cc3bc30860d040e/packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "target": "packages/mermaid/src/diagrams/requirement/parser/requirementDiagram.jison",
+        "bytes": 8358,
+        "sha256": "32030ae34660128966d31ecc25e5ce224ce9bf947e1e31bd3961f3879ae26ae7"
+      },
+      {
+        "member": "mermaid-2086904e76c692331e34a45d7cc3bc30860d040e/packages/mermaid/src/diagrams/sequence/parser/sequenceDiagram.jison",
+        "target": "packages/mermaid/src/diagrams/sequence/parser/sequenceDiagram.jison",
+        "bytes": 20500,
+        "sha256": "f3f21ae48e3c334fc259e3f78ac60ef70cf930ac6df2dd3c43f2b0de6f2b24db"
+      },
+      {
+        "member": "mermaid-2086904e76c692331e34a45d7cc3bc30860d040e/packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "target": "packages/mermaid/src/diagrams/state/parser/stateDiagram.jison",
+        "bytes": 13943,
+        "sha256": "94d4715707c3b35192b8586fa271e843f2c084e9ff70dd8db07c510c1a23e231"
+      },
+      {
+        "member": "mermaid-2086904e76c692331e34a45d7cc3bc30860d040e/packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "target": "packages/mermaid/src/diagrams/timeline/parser/timeline.jison",
+        "bytes": 2582,
+        "sha256": "65a1aaa24f2a9f5416b89b9774847e832cc2e810bb4233d77ad756c94f8baf8f"
+      },
+      {
+        "member": "mermaid-2086904e76c692331e34a45d7cc3bc30860d040e/packages/mermaid/src/diagrams/user-journey/parser/journey.jison",
+        "target": "packages/mermaid/src/diagrams/user-journey/parser/journey.jison",
+        "bytes": 2193,
+        "sha256": "2230b9f958f7c2f2381149b0e484cd203ff919cf43abd065beba7ab6b5a660a5"
+      },
+      {
+        "member": "mermaid-2086904e76c692331e34a45d7cc3bc30860d040e/packages/parser/LICENSE",
+        "target": "packages/parser/LICENSE",
+        "bytes": 1077,
+        "sha256": "d374061c40bfb6f99c5033290caefda97a9b3e7e477e5ee02f487143ef2177e8"
+      },
+      {
+        "member": "mermaid-2086904e76c692331e34a45d7cc3bc30860d040e/patches/fastdom.patch",
+        "target": "patches/fastdom.patch",
+        "bytes": 4381,
+        "sha256": "10bad52c2ff6c742f43492850f2a5a74e9d70a33f42a442cdbda4e174356aa87"
+      },
+      {
+        "member": "mermaid-2086904e76c692331e34a45d7cc3bc30860d040e/patches/roughjs.patch",
+        "target": "patches/roughjs.patch",
+        "bytes": 348,
+        "sha256": "3543d47108cb41b68ec6a671c0e1f9d0cfe2ce524fea5b0992511ae84c3c6b64"
+      }
+    ]
+  },
+  "npm": [
+    {
+      "name": "@braintree/sanitize-url",
+      "version": "7.1.2",
+      "patched": false,
+      "materialDirectory": "npm/000",
+      "url": "https://registry.npmjs.org/@braintree/sanitize-url/-/sanitize-url-7.1.2.tgz",
+      "integrity": "sha512-jigsZK+sMF/cuiB7sERuo9V7N9jx+dhmHHnQyDSVdpZwVutaBu7WvNYqMDLSgFgfB30n452TP3vjDAvFC973mA==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/000/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/000/LICENSE",
+          "sha256": "0984740e0c3d725c8044dec7edcefe1dbce180ef5a7bc710c251e19607000158",
+          "bytes": 1066
+        }
+      ]
+    },
+    {
+      "name": "@chevrotain/cst-dts-gen",
+      "version": "13.2.0",
+      "patched": false,
+      "materialDirectory": "npm/001",
+      "url": "https://registry.npmjs.org/@chevrotain/cst-dts-gen/-/cst-dts-gen-13.2.0.tgz",
+      "integrity": "sha512-bA9dvWlhAUcHkNwU+8w9yiUxJPlj/Lm3VqS7MD+NbIR/7LmpNLuK/AWNFdCo/T3SK5ND0/UHf3IJvl/Jn/i6yg==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/001/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE.txt",
+          "target": "npm/001/LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358
+        }
+      ]
+    },
+    {
+      "name": "@chevrotain/gast",
+      "version": "13.2.0",
+      "patched": false,
+      "materialDirectory": "npm/002",
+      "url": "https://registry.npmjs.org/@chevrotain/gast/-/gast-13.2.0.tgz",
+      "integrity": "sha512-bCARdAsG+eEbOveSXcOAC7pVxA04I1ionzeMOwIYf5NX7SaS7zgn4Dgug2BSqoL+iyKeMNSorQjsFSHJHsCNwg==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/002/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE.txt",
+          "target": "npm/002/LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358
+        }
+      ]
+    },
+    {
+      "name": "@chevrotain/regexp-to-ast",
+      "version": "13.2.0",
+      "patched": false,
+      "materialDirectory": "npm/003",
+      "url": "https://registry.npmjs.org/@chevrotain/regexp-to-ast/-/regexp-to-ast-13.2.0.tgz",
+      "integrity": "sha512-kxpUkLtiaK09ph+dib+Yvm+3sWSnuwlo25gqfKRgTPNmF6H7uW4gVkMjaRdtnN783S9sM6vUNWh9CsxYX4QwKw==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/003/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE.txt",
+          "target": "npm/003/LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358
+        }
+      ]
+    },
+    {
+      "name": "@chevrotain/utils",
+      "version": "13.2.0",
+      "patched": false,
+      "materialDirectory": "npm/004",
+      "url": "https://registry.npmjs.org/@chevrotain/utils/-/utils-13.2.0.tgz",
+      "integrity": "sha512-SzKYY68rseOrb9KILVzPsl6SjkQtdWw01SRGB5aCVI5kFcHltQsOYV3JB0Ffst72DgkvHCyDQ0NLwxtmCCf97Q==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/004/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE.txt",
+          "target": "npm/004/LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358
+        }
+      ]
+    },
+    {
+      "name": "@iconify/utils",
+      "version": "3.0.2",
+      "patched": false,
+      "materialDirectory": "npm/005",
+      "url": "https://registry.npmjs.org/@iconify/utils/-/utils-3.0.2.tgz",
+      "integrity": "sha512-EfJS0rLfVuRuJRn4psJHtK2A9TqVnkxPpHY6lYHiB9+8eSuudsxbwMiavocG45ujOo6FJ+CIRlRnlOGinzkaGQ==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/005/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/license.txt",
+          "target": "npm/005/license.txt",
+          "sha256": "a86793ac023162ce98b91899601c15f6712f44943163c4f92a0a4bf89152b3bf",
+          "bytes": 1083
+        }
+      ]
+    },
+    {
+      "name": "@upsetjs/venn.js",
+      "version": "2.0.0",
+      "patched": false,
+      "materialDirectory": "npm/006",
+      "url": "https://registry.npmjs.org/@upsetjs/venn.js/-/venn.js-2.0.0.tgz",
+      "integrity": "sha512-WbBhLrooyePuQ1VZxrJjtLvTc4NVfpOyKx0sKqioq9bX1C1m7Jgykkn8gLrtwumBioXIqam8DLxp88Adbue6Hw==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/006/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/006/LICENSE",
+          "sha256": "6a3508febf2cfccfee96597394543a6154a4bb0b1f91f28404be42c09e9fcb54",
+          "bytes": 1106
+        }
+      ]
+    },
+    {
+      "name": "chevrotain",
+      "version": "13.2.0",
+      "patched": false,
+      "materialDirectory": "npm/007",
+      "url": "https://registry.npmjs.org/chevrotain/-/chevrotain-13.2.0.tgz",
+      "integrity": "sha512-GTouk5YzgBxlTPCaDn5q0q2EJKkrYmnPF+HmF8v0Qo4r3iyPG7HJivkN1wthCXZcm3sIcZFpGTRovLPNdJNRCA==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/007/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE.txt",
+          "target": "npm/007/LICENSE.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358
+        }
+      ]
+    },
+    {
+      "name": "chevrotain-allstar",
+      "version": "0.5.0",
+      "patched": false,
+      "materialDirectory": "npm/008",
+      "url": "https://registry.npmjs.org/chevrotain-allstar/-/chevrotain-allstar-0.5.0.tgz",
+      "integrity": "sha512-KV7jVd28Qp4Kg9Ovhwlx5vyucoQxqxB22DLpxqRR2YDsHUHirr/NHAHx5bYk+bhJCD88xrLvOrfjlrrZRVa2Mg==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/008/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/008/LICENSE",
+          "sha256": "1db2cfbc7ce5fa3b82699b4ac4badce8984084d25b5308ece00f5c9b1381a0a5",
+          "bytes": 1068
+        },
+        {
+          "member": "package/lib/all-star-lookahead.js",
+          "target": "npm/008/lib/all-star-lookahead.js",
+          "sha256": "d4d99705b83166c37a2627c36386797e5c7b48fc6ebf19a8c8f9f8ee9b118a82",
+          "bytes": 24454
+        },
+        {
+          "member": "package/lib/atn.js",
+          "target": "npm/008/lib/atn.js",
+          "sha256": "c9893c4c3b1db6fd2f8f28b9545cbc764870d5da747db31855d0a2b56f576a7c",
+          "bytes": 13510
+        },
+        {
+          "member": "package/lib/dfa.js",
+          "target": "npm/008/lib/dfa.js",
+          "sha256": "9df7a8ea729ab0d73366268f7f29754b0f6ed5ce0e11483b2db3d0a59d9869bc",
+          "bytes": 1544
+        },
+        {
+          "member": "package/lib/index.js",
+          "target": "npm/008/lib/index.js",
+          "sha256": "128f53805e491e3e18ceda499cc4431965037c7b6bfa72941e0188f2bb4efa7f",
+          "bytes": 437
+        }
+      ]
+    },
+    {
+      "name": "d3",
+      "version": "7.9.0",
+      "patched": false,
+      "materialDirectory": "npm/009",
+      "url": "https://registry.npmjs.org/d3/-/d3-7.9.0.tgz",
+      "integrity": "sha512-e1U46jVP+w7Iut8Jt8ri1YsPOvFpg46k+K8TpCb0P+zjCkjkPnV7WzfDJzMHy1LnA+wj5pLT1wjO901gLXeEhA==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/009/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/009/LICENSE",
+          "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-array",
+      "version": "2.12.1",
+      "patched": false,
+      "materialDirectory": "npm/010",
+      "url": "https://registry.npmjs.org/d3-array/-/d3-array-2.12.1.tgz",
+      "integrity": "sha512-B0ErZK/66mHtEsR1TkPEEkwdy+WDesimkM5gpZr5Dsg54BiTA5RXtYW5qTLIAcekaS9xfZrzBLF/OAkB3Qn1YQ==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/010/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/010/LICENSE",
+          "sha256": "0747bebeb06b10954913149be9b9a8bdf6fad3e6fdcbd9f9524e7a94c13d2cea",
+          "bytes": 1475
+        }
+      ]
+    },
+    {
+      "name": "d3-array",
+      "version": "3.2.4",
+      "patched": false,
+      "materialDirectory": "npm/011",
+      "url": "https://registry.npmjs.org/d3-array/-/d3-array-3.2.4.tgz",
+      "integrity": "sha512-tdQAmyA18i4J7wprpYq8ClcxZy3SC31QMeByyCFyRt7BVHdREQZ5lpzoe5mFEYZUWe+oq8HBvk9JjpibyEV4Jg==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/011/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/011/LICENSE",
+          "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-axis",
+      "version": "3.0.0",
+      "patched": false,
+      "materialDirectory": "npm/012",
+      "url": "https://registry.npmjs.org/d3-axis/-/d3-axis-3.0.0.tgz",
+      "integrity": "sha512-IH5tgjV4jE/GhHkRV0HiVYPDtvfjHQlQfJHs0usq7M30XcSBvOotpmH1IgkcXsO/5gEQZD43B//fc7SRT5S+xw==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/012/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/012/LICENSE",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-brush",
+      "version": "3.0.0",
+      "patched": false,
+      "materialDirectory": "npm/013",
+      "url": "https://registry.npmjs.org/d3-brush/-/d3-brush-3.0.0.tgz",
+      "integrity": "sha512-ALnjWlVYkXsVIGlOsuWH1+3udkYFI48Ljihfnh8FZPF2QS9o+PzGLBslO0PjzVoHLZ2KCVgAM8NVkXPJB2aNnQ==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/013/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/013/LICENSE",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-chord",
+      "version": "3.0.1",
+      "patched": false,
+      "materialDirectory": "npm/014",
+      "url": "https://registry.npmjs.org/d3-chord/-/d3-chord-3.0.1.tgz",
+      "integrity": "sha512-VE5S6TNa+j8msksl7HwjxMHDM2yNK3XCkusIlpX5kwauBfXuyLAtNg9jCp/iHH61tgI4sb6R/EIMWCqEIdjT/g==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/014/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/014/LICENSE",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-color",
+      "version": "3.1.0",
+      "patched": false,
+      "materialDirectory": "npm/015",
+      "url": "https://registry.npmjs.org/d3-color/-/d3-color-3.1.0.tgz",
+      "integrity": "sha512-zg/chbXyeBtMQ1LbD/WSoW2DpC3I0mpmPdW+ynRTj/x2DAWYrIY7qeZIHidozwV24m4iavr15lNwIwLxRmOxhA==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/015/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/015/LICENSE",
+          "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-contour",
+      "version": "4.0.2",
+      "patched": false,
+      "materialDirectory": "npm/016",
+      "url": "https://registry.npmjs.org/d3-contour/-/d3-contour-4.0.2.tgz",
+      "integrity": "sha512-4EzFTRIikzs47RGmdxbeUvLWtGedDUNkTcmzoeyg4sP/dvCexO47AaQL7VKy/gul85TOxw+IBgA8US2xwbToNA==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/016/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/016/LICENSE",
+          "sha256": "e51cba0e4fa1d8c078e15319868f2b90188f413f9ce9dac1043b62db32901e93",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-delaunay",
+      "version": "6.0.4",
+      "patched": false,
+      "materialDirectory": "npm/017",
+      "url": "https://registry.npmjs.org/d3-delaunay/-/d3-delaunay-6.0.4.tgz",
+      "integrity": "sha512-mdjtIZ1XLAM8bm/hx3WwjfHt6Sggek7qH043O8KEjDXN40xi3vx/6pYSVTwLjEgiXQTbvaouWKynLBiUZ6SK6A==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/017/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/017/LICENSE",
+          "sha256": "582c3022bd01942336095f92b58a90b1be624dc547d987555c6c956512dd24c1",
+          "bytes": 757
+        }
+      ]
+    },
+    {
+      "name": "d3-dispatch",
+      "version": "3.0.1",
+      "patched": false,
+      "materialDirectory": "npm/018",
+      "url": "https://registry.npmjs.org/d3-dispatch/-/d3-dispatch-3.0.1.tgz",
+      "integrity": "sha512-rzUyPU/S7rwUflMyLc1ETDeBj0NRuHKKAcvukozwhshr6g6c5d8zh4c2gQjY2bZ0dXeGLWc1PF174P2tVvKhfg==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/018/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/018/LICENSE",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-drag",
+      "version": "3.0.0",
+      "patched": false,
+      "materialDirectory": "npm/019",
+      "url": "https://registry.npmjs.org/d3-drag/-/d3-drag-3.0.0.tgz",
+      "integrity": "sha512-pWbUJLdETVA8lQNJecMxoXfH6x+mO2UQo8rSmZ+QqxcbyA3hfeprFgIT//HW2nlHChWeIIMwS2Fq+gEARkhTkg==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/019/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/019/LICENSE",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-dsv",
+      "version": "3.0.1",
+      "patched": false,
+      "materialDirectory": "npm/020",
+      "url": "https://registry.npmjs.org/d3-dsv/-/d3-dsv-3.0.1.tgz",
+      "integrity": "sha512-UG6OvdI5afDIFP9w4G0mNq50dSOsXHJaRE8arAS5o9ApWnIElp8GZw1Dun8vP8OyHOZ/QJUKUJwxiiCCnUwm+Q==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/020/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/020/LICENSE",
+          "sha256": "7842a82012622e5a37bfe4f6c1b67cd3bae6350716b5bf87f36cea0bdc1319dc",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-ease",
+      "version": "3.0.1",
+      "patched": false,
+      "materialDirectory": "npm/021",
+      "url": "https://registry.npmjs.org/d3-ease/-/d3-ease-3.0.1.tgz",
+      "integrity": "sha512-wR/XK3D3XcLIZwpbvQwQ5fK+8Ykds1ip7A2Txe0yxncXSdq1L9skcG7blcedkOX+ZcgxGAmLX1FrRGbADwzi0w==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/021/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/021/LICENSE",
+          "sha256": "b989d9085148d21ff64a75e14462aefa06b2589a55553b07b1460c70081c7d08",
+          "bytes": 1504
+        }
+      ]
+    },
+    {
+      "name": "d3-fetch",
+      "version": "3.0.1",
+      "patched": false,
+      "materialDirectory": "npm/022",
+      "url": "https://registry.npmjs.org/d3-fetch/-/d3-fetch-3.0.1.tgz",
+      "integrity": "sha512-kpkQIM20n3oLVBKGg6oHrUchHM3xODkTzjMoj7aWQFq5QEM+R6E4WkzT5+tojDY7yjez8KgCBRoj4aEr99Fdqw==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/022/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/022/LICENSE",
+          "sha256": "ffdc17dc9040006bddeb891c95bfbb492e86d6bc64a4a4233666febab1be35e0",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-force",
+      "version": "3.0.0",
+      "patched": false,
+      "materialDirectory": "npm/023",
+      "url": "https://registry.npmjs.org/d3-force/-/d3-force-3.0.0.tgz",
+      "integrity": "sha512-zxV/SsA+U4yte8051P4ECydjD/S+qeYtnaIyAs9tgHCqfguma/aAQDjo85A9Z6EKhBirHRJHXIgJUlffT4wdLg==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/023/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/023/LICENSE",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-format",
+      "version": "3.1.0",
+      "patched": false,
+      "materialDirectory": "npm/024",
+      "url": "https://registry.npmjs.org/d3-format/-/d3-format-3.1.0.tgz",
+      "integrity": "sha512-YyUI6AEuY/Wpt8KWLgZHsIU86atmikuoOmCfommt0LYHiQSPjvX2AcFc38PX0CBpr2RCyZhjex+NS/LPOv6YqA==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/024/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/024/LICENSE",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-geo",
+      "version": "3.1.1",
+      "patched": false,
+      "materialDirectory": "npm/025",
+      "url": "https://registry.npmjs.org/d3-geo/-/d3-geo-3.1.1.tgz",
+      "integrity": "sha512-637ln3gXKXOwhalDzinUgY83KzNWZRKbYubaG+fGVuc/dxO64RRljtCTnf5ecMyE1RIdtqpkVcq0IbtU2S8j2Q==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/025/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/025/LICENSE",
+          "sha256": "3e3edc1224eec9c39cd26491a21304a62883c1e5b6a65c5283ccc7a6cc94baee",
+          "bytes": 1857
+        }
+      ]
+    },
+    {
+      "name": "d3-hierarchy",
+      "version": "3.1.2",
+      "patched": false,
+      "materialDirectory": "npm/026",
+      "url": "https://registry.npmjs.org/d3-hierarchy/-/d3-hierarchy-3.1.2.tgz",
+      "integrity": "sha512-FX/9frcub54beBdugHjDCdikxThEqjnR93Qt7PvQTOHxyiNCAlvMrHhclk3cD5VeAaq9fxmfRp+CnWw9rEMBuA==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/026/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/026/LICENSE",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-interpolate",
+      "version": "3.0.1",
+      "patched": false,
+      "materialDirectory": "npm/027",
+      "url": "https://registry.npmjs.org/d3-interpolate/-/d3-interpolate-3.0.1.tgz",
+      "integrity": "sha512-3bYs1rOD33uo8aqJfKP3JWPAibgw8Zm2+L9vBKEHJ2Rg+viTR7o5Mmv5mZcieN+FRYaAOWX5SJATX6k1PWz72g==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/027/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/027/LICENSE",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-path",
+      "version": "1.0.9",
+      "patched": false,
+      "materialDirectory": "npm/028",
+      "url": "https://registry.npmjs.org/d3-path/-/d3-path-1.0.9.tgz",
+      "integrity": "sha512-VLaYcn81dtHVTjEHd8B+pbe9yHWpXKZUC87PzoFmsFrJqgFwDe/qxfp5MlfsfM1V5E/iVt0MmEbWQ7FVIXh/bg==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/028/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/028/LICENSE",
+          "sha256": "b8265327ab678f554800e71188b1cc6b1ff57522e292d2b1c0be66f27cf328b6",
+          "bytes": 1475
+        }
+      ]
+    },
+    {
+      "name": "d3-path",
+      "version": "3.1.0",
+      "patched": false,
+      "materialDirectory": "npm/029",
+      "url": "https://registry.npmjs.org/d3-path/-/d3-path-3.1.0.tgz",
+      "integrity": "sha512-p3KP5HCf/bvjBSSKuXid6Zqijx7wIfNW+J/maPs+iwR35at5JCbLUT0LzF1cnjbCHWhqzQTIN2Jpe8pRebIEFQ==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/029/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/029/LICENSE",
+          "sha256": "a09b0d6d76e768fca2085fad05743ee81ddd11946bcda160a3cf5e1081a479aa",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-polygon",
+      "version": "3.0.1",
+      "patched": false,
+      "materialDirectory": "npm/030",
+      "url": "https://registry.npmjs.org/d3-polygon/-/d3-polygon-3.0.1.tgz",
+      "integrity": "sha512-3vbA7vXYwfe1SYhED++fPUQlWSYTTGmFmQiany/gdbiWgU/iEyQzyymwL9SkJjFFuCS4902BSzewVGsHHmHtXg==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/030/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/030/LICENSE",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-quadtree",
+      "version": "3.0.1",
+      "patched": false,
+      "materialDirectory": "npm/031",
+      "url": "https://registry.npmjs.org/d3-quadtree/-/d3-quadtree-3.0.1.tgz",
+      "integrity": "sha512-04xDrxQTDTCFwP5H6hRhsRcb9xxv2RzkcsygFzmkSIOJy3PeRJP7sNk3VRIbKXcog561P9oU0/rVH6vDROAgUw==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/031/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/031/LICENSE",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-random",
+      "version": "3.0.1",
+      "patched": false,
+      "materialDirectory": "npm/032",
+      "url": "https://registry.npmjs.org/d3-random/-/d3-random-3.0.1.tgz",
+      "integrity": "sha512-FXMe9GfxTxqd5D6jFsQ+DJ8BJS4E/fT5mqqdjovykEB2oFbTMDVdg1MGFxfQW+FBOGoB++k8swBrgwSHT1cUXQ==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/032/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/032/LICENSE",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-sankey",
+      "version": "0.12.3",
+      "patched": false,
+      "materialDirectory": "npm/033",
+      "url": "https://registry.npmjs.org/d3-sankey/-/d3-sankey-0.12.3.tgz",
+      "integrity": "sha512-nQhsBRmM19Ax5xEIPLMY9ZmJ/cDvd1BG3UVvt5h3WRxKg5zGRbvnteTyWAbzeSvlh3tW7ZEmq4VwR5mB3tutmQ==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/033/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/033/LICENSE",
+          "sha256": "2bf785e778d67a4f5266cffcd4f2cc5bb98cde73791666e7efeb8002ba32dfa5",
+          "bytes": 1471
+        }
+      ]
+    },
+    {
+      "name": "d3-scale",
+      "version": "4.0.2",
+      "patched": false,
+      "materialDirectory": "npm/034",
+      "url": "https://registry.npmjs.org/d3-scale/-/d3-scale-4.0.2.tgz",
+      "integrity": "sha512-GZW464g1SH7ag3Y7hXjf8RoUuAFIqklOAq3MRl4OaWabTFJY9PN/E1YklhXLh+OQ3fM9yS2nOkCoS+WLZ6kvxQ==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/034/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/034/LICENSE",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-scale-chromatic",
+      "version": "3.1.0",
+      "patched": false,
+      "materialDirectory": "npm/035",
+      "url": "https://registry.npmjs.org/d3-scale-chromatic/-/d3-scale-chromatic-3.1.0.tgz",
+      "integrity": "sha512-A3s5PWiZ9YCXFye1o246KoscMWqf8BsD9eRiJ3He7C9OBaxKhAd5TFCdEx/7VbKtxxTsu//1mMJFrEt572cEyQ==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/035/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/035/LICENSE",
+          "sha256": "0986d93944902cca9af86824b6a641b4b7c2d10602fc510c433a8bcd443919fe",
+          "bytes": 1423
+        }
+      ]
+    },
+    {
+      "name": "d3-selection",
+      "version": "3.0.0",
+      "patched": false,
+      "materialDirectory": "npm/036",
+      "url": "https://registry.npmjs.org/d3-selection/-/d3-selection-3.0.0.tgz",
+      "integrity": "sha512-fmTRWbNMmsmWq6xJV8D19U/gw/bwrHfNXxrIN+HfZgnzqTHp9jOmKMhsTUjXOJnZOdZY9Q28y4yebKzqDKlxlQ==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/036/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/036/LICENSE",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-shape",
+      "version": "1.3.7",
+      "patched": false,
+      "materialDirectory": "npm/037",
+      "url": "https://registry.npmjs.org/d3-shape/-/d3-shape-1.3.7.tgz",
+      "integrity": "sha512-EUkvKjqPFUAZyOlhY5gzCxCeI0Aep04LwIRpsZ/mLFelJiUfnK56jo5JMDSE7yyP2kLSb6LtF+S5chMk7uqPqw==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/037/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/037/LICENSE",
+          "sha256": "7eea8533ea92bd8c32a901e89ecb0305890905bb12711449565ddff96891146d",
+          "bytes": 1475
+        }
+      ]
+    },
+    {
+      "name": "d3-shape",
+      "version": "3.2.0",
+      "patched": false,
+      "materialDirectory": "npm/038",
+      "url": "https://registry.npmjs.org/d3-shape/-/d3-shape-3.2.0.tgz",
+      "integrity": "sha512-SaLBuwGm3MOViRq2ABk3eLoxwZELpH6zhl3FbAoJ7Vm1gofKx6El1Ib5z23NUEhF9AsGl7y+dzLe5Cw2AArGTA==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/038/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/038/LICENSE",
+          "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-time",
+      "version": "3.1.0",
+      "patched": false,
+      "materialDirectory": "npm/039",
+      "url": "https://registry.npmjs.org/d3-time/-/d3-time-3.1.0.tgz",
+      "integrity": "sha512-VqKjzBLejbSMT4IgbmVgDjpkYrNWUYJnbCGo874u7MMKIWsILRX+OpX/gTk8MqjpT1A/c6HY2dCA77ZN0lkQ2Q==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/039/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/039/LICENSE",
+          "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-time-format",
+      "version": "4.1.0",
+      "patched": false,
+      "materialDirectory": "npm/040",
+      "url": "https://registry.npmjs.org/d3-time-format/-/d3-time-format-4.1.0.tgz",
+      "integrity": "sha512-dJxPBlzC7NugB2PDLwo9Q8JiTR3M3e4/XANkreKSUxF8vvXKqm1Yfq4Q5dl8budlunRVlUUaDUgFt7eA8D6NLg==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/040/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/040/LICENSE",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-timer",
+      "version": "3.0.1",
+      "patched": false,
+      "materialDirectory": "npm/041",
+      "url": "https://registry.npmjs.org/d3-timer/-/d3-timer-3.0.1.tgz",
+      "integrity": "sha512-ndfJ/JxxMd3nw31uyKoY2naivF+r29V+Lc0svZxe1JvvIRmi8hUsrMvdOwgS1o6uBHmiz91geQ0ylPP0aj1VUA==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/041/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/041/LICENSE",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-transition",
+      "version": "3.0.1",
+      "patched": false,
+      "materialDirectory": "npm/042",
+      "url": "https://registry.npmjs.org/d3-transition/-/d3-transition-3.0.1.tgz",
+      "integrity": "sha512-ApKvfjsSR6tg06xrL434C0WydLr7JewBB3V+/39RMHsaXTOG0zmt/OAXeng5M5LBm0ojmxJrpomQVZ1aPvBL4w==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/042/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/042/LICENSE",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "d3-zoom",
+      "version": "3.0.0",
+      "patched": false,
+      "materialDirectory": "npm/043",
+      "url": "https://registry.npmjs.org/d3-zoom/-/d3-zoom-3.0.0.tgz",
+      "integrity": "sha512-b8AmV3kfQaqWAuacbPuNbL6vahnOJflOhexLzMMNLga62+/nh0JzvJ0aO/5a5MVgUFGS7Hu1P9P03o3fJkDCyw==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/043/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/043/LICENSE",
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+          "bytes": 731
+        }
+      ]
+    },
+    {
+      "name": "dagre-d3-es",
+      "version": "7.0.14",
+      "patched": false,
+      "materialDirectory": "npm/044",
+      "url": "https://registry.npmjs.org/dagre-d3-es/-/dagre-d3-es-7.0.14.tgz",
+      "integrity": "sha512-P4rFMVq9ESWqmOgK+dlXvOtLwYg0i7u0HBGJER0LZDJT2VHIPAMZ/riPxqJceWMStH5+E61QxFra9kIS3AqdMg==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/044/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE.md",
+          "target": "npm/044/LICENSE.md",
+          "sha256": "d01eb84ccce437dbf5fd40853bceea0f287930920acea066597a4a25ead63858",
+          "bytes": 1328
+        }
+      ]
+    },
+    {
+      "name": "dayjs",
+      "version": "1.11.21",
+      "patched": false,
+      "materialDirectory": "npm/045",
+      "url": "https://registry.npmjs.org/dayjs/-/dayjs-1.11.21.tgz",
+      "integrity": "sha512-98IT+HOahAisibz/yjKbzuOBwYcjJ7BCLPzARyHiyEBmRz4fatF+KPJszEHXsGYjUG234aH/cOjW1wwTbKUZlA==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/045/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/045/LICENSE",
+          "sha256": "5faab7526d055651be3aab769d58897be6bd91f3d39d137f25f12dba1b31d5dc",
+          "bytes": 1072
+        }
+      ]
+    },
+    {
+      "name": "dompurify",
+      "version": "3.4.17",
+      "patched": false,
+      "materialDirectory": "npm/046",
+      "url": "https://registry.npmjs.org/dompurify/-/dompurify-3.4.17.tgz",
+      "integrity": "sha512-B/pSlYVHQ58kqISD/yDjuJ1yfzI34m1gF4lAod2bwSRhiN4K5Cl3H8Af7hqB2PmTL911tdEudnnXn5FnhRoz0w==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/046/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/046/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358
+        },
+        {
+          "member": "package/LICENSE-MPL",
+          "target": "npm/046/LICENSE-MPL",
+          "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85",
+          "bytes": 16726
+        },
+        {
+          "member": "package/dist/purify.es.mjs",
+          "target": "npm/046/dist/purify.es.mjs",
+          "sha256": "60c5d5ccbb466de3de3ba863461a92bf134f8c156cef7992da43e0f659bc5cbd",
+          "bytes": 85820
+        }
+      ]
+    },
+    {
+      "name": "es-toolkit",
+      "version": "1.45.1",
+      "patched": false,
+      "materialDirectory": "npm/047",
+      "url": "https://registry.npmjs.org/es-toolkit/-/es-toolkit-1.45.1.tgz",
+      "integrity": "sha512-/jhoOj/Fx+A+IIyDNOvO3TItGmlMKhtX8ISAHKE90c4b/k1tqaqEZ+uUqfpU8DMnW5cgNJv606zS55jGvza0Xw==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/047/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/047/LICENSE",
+          "sha256": "ed68888a2a28f32a05e88f24d4d4ee75075a1bda2b6372a1f2e00fa0576a5524",
+          "bytes": 1424
+        }
+      ]
+    },
+    {
+      "name": "fastdom",
+      "version": "1.0.12",
+      "patched": true,
+      "materialDirectory": "npm/048",
+      "url": "https://registry.npmjs.org/fastdom/-/fastdom-1.0.12.tgz",
+      "integrity": "sha512-LB+xjSTEbjHE1cWsxu+tN2Xqr1kpi+V9aADI7sVM5ZMaXyYGPHULQMzpJMYqOTULK/73pUkWVzzObFRBkPr+hg==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/048/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/README.md",
+          "target": "npm/048/README.md",
+          "sha256": "cc5669ab6f7741bb061c8a7244addc8e3af1f84ec7d2445744b59d0169a87d11",
+          "bytes": 7525
+        }
+      ]
+    },
+    {
+      "name": "internmap",
+      "version": "2.0.3",
+      "patched": false,
+      "materialDirectory": "npm/049",
+      "url": "https://registry.npmjs.org/internmap/-/internmap-2.0.3.tgz",
+      "integrity": "sha512-5Hh7Y1wQbvY5ooGgPbDaL5iYLAPzMTUrjMulskHLH6wnv/A+1q5rgEaiuqEjB+oxGXIVZs1FF+R/KPN3ZSQYYg==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/049/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/049/LICENSE",
+          "sha256": "9ea8903938dab5f12c4572d60725069bec2d1b0dc3bcc210b09bae946a5ebb1f",
+          "bytes": 726
+        }
+      ]
+    },
+    {
+      "name": "js-yaml",
+      "version": "4.3.2",
+      "patched": false,
+      "materialDirectory": "npm/050",
+      "url": "https://registry.npmjs.org/js-yaml/-/js-yaml-4.3.2.tgz",
+      "integrity": "sha512-SFNOvSJ+Dgf/9An904Yx+CgSlIPCkIpao4qo51lpee25TIRejdH3rhR4EZMGoNx3/TP3O+wzWuiTFl4sqbltzA==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/050/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/050/LICENSE",
+          "sha256": "a07bc24468b9654ce76a547d47a2db282d07733b715db4c73a98bd63961f9550",
+          "bytes": 1084
+        }
+      ]
+    },
+    {
+      "name": "khroma",
+      "version": "2.1.0",
+      "patched": false,
+      "materialDirectory": "npm/051",
+      "url": "https://registry.npmjs.org/khroma/-/khroma-2.1.0.tgz",
+      "integrity": "sha512-Ls993zuzfayK269Svk9hzpeGUKob/sIgZzyHYdjQoAdQetRKpOLj+k/QQQ/6Qi0Yz65mlROrfd+Ev+1+7dz9Kw==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/051/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/license",
+          "target": "npm/051/license",
+          "sha256": "66b333b0f66759a0b710459e03f7029abe17f4358114a128d2c972e642961b49",
+          "bytes": 1105
+        }
+      ]
+    },
+    {
+      "name": "langium",
+      "version": "4.4.0",
+      "patched": false,
+      "materialDirectory": "npm/052",
+      "url": "https://registry.npmjs.org/langium/-/langium-4.4.0.tgz",
+      "integrity": "sha512-VFIFtohpsmJeQ+LkaeuUNtyvkklecklI0FSLxFS8JfiGABE9XCpUJwYUNnLk6C2aOyk0w99tNlvd0pmbJ2AW/w==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/052/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/052/LICENSE",
+          "sha256": "599bf70b4e55f06250571d103dbd8441e0c47cb7f858c0147ca312ce38e9ef2a",
+          "bytes": 1052
+        },
+        {
+          "member": "package/lib/default-module.js",
+          "target": "npm/052/lib/default-module.js",
+          "sha256": "37611eaa17285eca8365bf65dcf427bbb26626e08ae9e9ba596999ec518d0d15",
+          "bytes": 5728
+        },
+        {
+          "member": "package/lib/dependency-injection.js",
+          "target": "npm/052/lib/dependency-injection.js",
+          "sha256": "b80729ffe8380c9edb526271638f36dbdde7aa4541811f4062000080021c7152",
+          "bytes": 7316
+        },
+        {
+          "member": "package/lib/documentation/comment-provider.js",
+          "target": "npm/052/lib/documentation/comment-provider.js",
+          "sha256": "d9a391447e1590458fb7a738741da61d2db667f4731edda6bbe8435239c63049",
+          "bytes": 863
+        },
+        {
+          "member": "package/lib/documentation/documentation-provider.js",
+          "target": "npm/052/lib/documentation/documentation-provider.js",
+          "sha256": "3c49b9e4026bf52c2512cd9ea66cb68bb1a2b7c4e1f5e866ca37e959d8ab1394",
+          "bytes": 2737
+        },
+        {
+          "member": "package/lib/documentation/jsdoc.js",
+          "target": "npm/052/lib/documentation/jsdoc.js",
+          "sha256": "4d1d984bd7823089966bc2753bc4044abfaed4e0e846a0666acccb0ba5b3fa6c",
+          "bytes": 16759
+        },
+        {
+          "member": "package/lib/languages/grammar-config.js",
+          "target": "npm/052/lib/languages/grammar-config.js",
+          "sha256": "3f047276b9ad2de1e99272bdc8f0d95ececb7f1d51a25537adfc83927258f2a9",
+          "bytes": 1177
+        },
+        {
+          "member": "package/lib/parser/async-parser.js",
+          "target": "npm/052/lib/parser/async-parser.js",
+          "sha256": "a8f02f5ae76aec0beadf269d4dfa1fa9938e7538fca3bea1cf3ae6e99ba57a42",
+          "bytes": 5246
+        },
+        {
+          "member": "package/lib/parser/completion-parser-builder.js",
+          "target": "npm/052/lib/parser/completion-parser-builder.js",
+          "sha256": "a37e3013361654ba538d892852cd9cceeb2cd35d7ed26942edafef3da5d460a2",
+          "bytes": 795
+        },
+        {
+          "member": "package/lib/parser/cst-node-builder.js",
+          "target": "npm/052/lib/parser/cst-node-builder.js",
+          "sha256": "464808f686f28a9e35cb590944152090b7acfe4ab4f46e6a929465bf24c3d397",
+          "bytes": 12951
+        },
+        {
+          "member": "package/lib/parser/langium-parser-builder.js",
+          "target": "npm/052/lib/parser/langium-parser-builder.js",
+          "sha256": "2a2ade9ed79e86fa42755f4f31a940bd793fe252974058fdefddc7b23a8ae084",
+          "bytes": 1176
+        },
+        {
+          "member": "package/lib/parser/langium-parser.js",
+          "target": "npm/052/lib/parser/langium-parser.js",
+          "sha256": "d952290c8550756e44e0da2a9fd6542ef4153eb036a9db6469821a704b1c3b0b",
+          "bytes": 26690
+        },
+        {
+          "member": "package/lib/parser/lexer.js",
+          "target": "npm/052/lib/parser/lexer.js",
+          "sha256": "42074f2f7e1afe44432a9ad5b628ad90a8810570c9d355a152f3d16176c74c53",
+          "bytes": 3224
+        },
+        {
+          "member": "package/lib/parser/parser-builder-base.js",
+          "target": "npm/052/lib/parser/parser-builder-base.js",
+          "sha256": "f3174e10192b0db1c5e7cb537d9788f431c29eb1b82808a8a06604532a606c4e",
+          "bytes": 17243
+        },
+        {
+          "member": "package/lib/parser/token-builder.js",
+          "target": "npm/052/lib/parser/token-builder.js",
+          "sha256": "3be01a9f668bc9bdf48e3586a9b38271b24cafb699f1e2f78f89ddf6d82c6154",
+          "bytes": 4945
+        },
+        {
+          "member": "package/lib/parser/value-converter.js",
+          "target": "npm/052/lib/parser/value-converter.js",
+          "sha256": "ab34145a2447f49e45bba7ecc11c8934cba3261e5febf33e1e8a7c18211bc1a5",
+          "bytes": 3550
+        },
+        {
+          "member": "package/lib/references/linker.js",
+          "target": "npm/052/lib/references/linker.js",
+          "sha256": "66275373ea70177c2fb2a1153e36825845d97d6d72b46986ae7496400d94e529",
+          "bytes": 12674
+        },
+        {
+          "member": "package/lib/references/name-provider.js",
+          "target": "npm/052/lib/references/name-provider.js",
+          "sha256": "df327d184498fe0d2919256512c8e8a431b74a80356a545b5bf937da71c977c0",
+          "bytes": 766
+        },
+        {
+          "member": "package/lib/references/references.js",
+          "target": "npm/052/lib/references/references.js",
+          "sha256": "33416187c8f6d581de9cf5b352f750bf2c3ba5f66a098bcdfcc7e60b28e3a2ed",
+          "bytes": 6091
+        },
+        {
+          "member": "package/lib/references/scope-computation.js",
+          "target": "npm/052/lib/references/scope-computation.js",
+          "sha256": "a03e98ae21d9c0831f974ee9ff4d7b7a1dff8ce39bf2918bc33dcc4abb979e94",
+          "bytes": 4956
+        },
+        {
+          "member": "package/lib/references/scope-provider.js",
+          "target": "npm/052/lib/references/scope-provider.js",
+          "sha256": "4dceecad3e6b966db7ae4b43cf02d9af1d8fe0433ce0e0775feb39f86524c1de",
+          "bytes": 2906
+        },
+        {
+          "member": "package/lib/references/scope.js",
+          "target": "npm/052/lib/references/scope.js",
+          "sha256": "cc4c5cdd37ba6522bb4d557f6a83473d538db365e5cf0f13023eff6a873f406e",
+          "bytes": 5356
+        },
+        {
+          "member": "package/lib/serializer/hydrator.js",
+          "target": "npm/052/lib/serializer/hydrator.js",
+          "sha256": "3c7c7a0ddfd390158435b800dc8f848988862f4be319d9dd1a83d672d36b6020",
+          "bytes": 10306
+        },
+        {
+          "member": "package/lib/serializer/json-serializer.js",
+          "target": "npm/052/lib/serializer/json-serializer.js",
+          "sha256": "838a12d8fc23a30fac706ccca55f25ddf8d9c44eb2495e5b2b01683ddb4200b8",
+          "bytes": 10747
+        },
+        {
+          "member": "package/lib/service-registry.js",
+          "target": "npm/052/lib/service-registry.js",
+          "sha256": "08f902cc72e436980819c5e6c72f0c6c0ab915afd43226be309ff36627aa2e3f",
+          "bytes": 3095
+        },
+        {
+          "member": "package/lib/syntax-tree.js",
+          "target": "npm/052/lib/syntax-tree.js",
+          "sha256": "5e2ca3e9d6b49b9e5705b75fb26e60e4b567349e512c95e5160c92a04466440b",
+          "bytes": 4599
+        },
+        {
+          "member": "package/lib/utils/ast-utils.js",
+          "target": "npm/052/lib/utils/ast-utils.js",
+          "sha256": "e9e454fab26622e0f45a028627727c924cbef551effd0f2f50a70a9e3fd55f70",
+          "bytes": 10292
+        },
+        {
+          "member": "package/lib/utils/caching.js",
+          "target": "npm/052/lib/utils/caching.js",
+          "sha256": "1c43c2f2a449c6b34e4e07eb17299f21ec7852da898e7581918e01be9adca31a",
+          "bytes": 6262
+        },
+        {
+          "member": "package/lib/utils/cancellation.js",
+          "target": "npm/052/lib/utils/cancellation.js",
+          "sha256": "6585d656a63f3a7046317aa68c808b59ba2f290262f3eb913d70968537cc690c",
+          "bytes": 470
+        },
+        {
+          "member": "package/lib/utils/collections.js",
+          "target": "npm/052/lib/utils/collections.js",
+          "sha256": "cbaf55df51a2ca8a321c91b35ff4d8796e2b7bedb94fe33b27e9e65d7f5cdd86",
+          "bytes": 5736
+        },
+        {
+          "member": "package/lib/utils/cst-utils.js",
+          "target": "npm/052/lib/utils/cst-utils.js",
+          "sha256": "13f5f8c684eea897784e7b4e476c8689eba813af86f664777ca632fbf9e2f240",
+          "bytes": 12230
+        },
+        {
+          "member": "package/lib/utils/disposable.js",
+          "target": "npm/052/lib/utils/disposable.js",
+          "sha256": "3017e0f762ef634152a8eb6a2dc8cdc1d5af66a67a26ac74db775bede4708c87",
+          "bytes": 608
+        },
+        {
+          "member": "package/lib/utils/errors.js",
+          "target": "npm/052/lib/utils/errors.js",
+          "sha256": "eabad9bc072cc360dbeed5b4e0d64d29c6d4c10b1befbddfc4de2703744bbd34",
+          "bytes": 975
+        },
+        {
+          "member": "package/lib/utils/event.js",
+          "target": "npm/052/lib/utils/event.js",
+          "sha256": "0141d76d4f45995714f69e861694111ec1332ec5cafa8dfbb2768b12c02bba16",
+          "bytes": 428
+        },
+        {
+          "member": "package/lib/utils/grammar-loader.js",
+          "target": "npm/052/lib/utils/grammar-loader.js",
+          "sha256": "3ace25863489b074eb2a54a9d815b4dff93f3df0bb823eab525e72bafd6cc199",
+          "bytes": 1811
+        },
+        {
+          "member": "package/lib/utils/grammar-utils.js",
+          "target": "npm/052/lib/utils/grammar-utils.js",
+          "sha256": "b047b52adf3bffa60f30645ee17b1faa6cc643f759330261fb83851d38e007b8",
+          "bytes": 22606
+        },
+        {
+          "member": "package/lib/utils/promise-utils.js",
+          "target": "npm/052/lib/utils/promise-utils.js",
+          "sha256": "7ed8bd23ef95408ed7608273d0660be8952ca70aaca633275912bc8ed3e22d28",
+          "bytes": 3931
+        },
+        {
+          "member": "package/lib/utils/regexp-utils.js",
+          "target": "npm/052/lib/utils/regexp-utils.js",
+          "sha256": "6fe6d57273d9bad8b92279373d11e2df73b8d0ad97466176df95a4bfb5ebbefa",
+          "bytes": 10994
+        },
+        {
+          "member": "package/lib/utils/stream.js",
+          "target": "npm/052/lib/utils/stream.js",
+          "sha256": "d6e18a12467ae897a23bb444b5f808e3ee459c0723121de365837a7cb3942294",
+          "bytes": 16389
+        },
+        {
+          "member": "package/lib/utils/uri-utils.js",
+          "target": "npm/052/lib/utils/uri-utils.js",
+          "sha256": "f9441f75db77918e0f8c0a01e947c6d524c44a4648fd8c682ccb35079b9fea89",
+          "bytes": 6997
+        },
+        {
+          "member": "package/lib/validation/document-validator.js",
+          "target": "npm/052/lib/validation/document-validator.js",
+          "sha256": "a5822e06b2ba41bf0bb816cb97c897182b0abeed6a3b45ea44bf65189a6359aa",
+          "bytes": 12465
+        },
+        {
+          "member": "package/lib/validation/validation-registry.js",
+          "target": "npm/052/lib/validation/validation-registry.js",
+          "sha256": "3fd6c890510f1becf37eeaa4c0b9eebf7782c720844fc9d2d06d476ac2fb2099",
+          "bytes": 7626
+        },
+        {
+          "member": "package/lib/workspace/ast-descriptions.js",
+          "target": "npm/052/lib/workspace/ast-descriptions.js",
+          "sha256": "b69c07a1f25ecf9471fcadb967e92447915c9f25eb0cc66875182203bde4e08e",
+          "bytes": 3513
+        },
+        {
+          "member": "package/lib/workspace/ast-node-locator.js",
+          "target": "npm/052/lib/workspace/ast-node-locator.js",
+          "sha256": "21d0191721d0a032078fee139ba1d5a0690357a5dc47b460d7c29d32c7ba6e88",
+          "bytes": 1939
+        },
+        {
+          "member": "package/lib/workspace/configuration.js",
+          "target": "npm/052/lib/workspace/configuration.js",
+          "sha256": "4097bf2e5eee31e8bed6a45dd4fe9575c81f3667eb64d2b5bba59a9291968c06",
+          "bytes": 4019
+        },
+        {
+          "member": "package/lib/workspace/document-builder.js",
+          "target": "npm/052/lib/workspace/document-builder.js",
+          "sha256": "04badf818f8a9d6d7b784ccd094bcde54c9e68c7b1a21e7a1d3cfd24bb1a6469",
+          "bytes": 25676
+        },
+        {
+          "member": "package/lib/workspace/documents.js",
+          "target": "npm/052/lib/workspace/documents.js",
+          "sha256": "05b0cb9da9a75197d51fdd9920267a9a9cb946aa4ce4e124beb1a72ebd499102",
+          "bytes": 12100
+        },
+        {
+          "member": "package/lib/workspace/file-system-provider.js",
+          "target": "npm/052/lib/workspace/file-system-provider.js",
+          "sha256": "512e5a16807e7eb3a357f60c75fb2640d6dee1411d1a998865d01c81e7b902a7",
+          "bytes": 1218
+        },
+        {
+          "member": "package/lib/workspace/index-manager.js",
+          "target": "npm/052/lib/workspace/index-manager.js",
+          "sha256": "522c70c4740b47fde322c54fd1455811538f3e0870bf19b98d92094dd2c40292",
+          "bytes": 4262
+        },
+        {
+          "member": "package/lib/workspace/workspace-lock.js",
+          "target": "npm/052/lib/workspace/workspace-lock.js",
+          "sha256": "ab4ecc195d8166ff6e462c9df92c21322e1b53e3c55f52ecd3fcc41e49fe124c",
+          "bytes": 4316
+        },
+        {
+          "member": "package/lib/workspace/workspace-manager.js",
+          "target": "npm/052/lib/workspace/workspace-manager.js",
+          "sha256": "df0a7e212d29fd5244b84305b784cdbe3286528ae0372ca8d7cd0dc241d27e79",
+          "bytes": 6032
+        }
+      ]
+    },
+    {
+      "name": "lodash-es",
+      "version": "4.18.1",
+      "patched": false,
+      "materialDirectory": "npm/053",
+      "url": "https://registry.npmjs.org/lodash-es/-/lodash-es-4.18.1.tgz",
+      "integrity": "sha512-J8xewKD/Gk22OZbhpOVSwcs60zhd95ESDwezOFuA3/099925PdHJ7OFHNTGtajL3AlZkykD32HykiMo+BIBI8A==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/053/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/053/LICENSE",
+          "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc",
+          "bytes": 1952
+        },
+        {
+          "member": "package/lodash.js",
+          "target": "npm/053/lodash.js",
+          "sha256": "c4128d6e15996b3dbcec4902f743ffedbca7126ddfdc34c27cf1a261bb154f70",
+          "bytes": 17233
+        }
+      ]
+    },
+    {
+      "name": "marked",
+      "version": "16.3.0",
+      "patched": false,
+      "materialDirectory": "npm/054",
+      "url": "https://registry.npmjs.org/marked/-/marked-16.3.0.tgz",
+      "integrity": "sha512-K3UxuKu6l6bmA5FUwYho8CfJBlsUWAooKtdGgMcERSpF7gcBUrCGsLH7wDaaNOzwq18JzSUDyoEb/YsrqMac3w==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/054/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE.md",
+          "target": "npm/054/LICENSE.md",
+          "sha256": "8e3a3f82f59a60958f56ca08f445647c32a4733dc7ca6c2c46f6eb898471ab9c",
+          "bytes": 2942
+        },
+        {
+          "member": "package/lib/marked.esm.js",
+          "target": "npm/054/lib/marked.esm.js",
+          "sha256": "2cf87a5a5f9f677fedca30aee75c2d791e79b2330cccc77345efc87091d09f12",
+          "bytes": 39511
+        }
+      ]
+    },
+    {
+      "name": "roughjs",
+      "version": "4.6.6",
+      "patched": true,
+      "materialDirectory": "npm/055",
+      "url": "https://registry.npmjs.org/roughjs/-/roughjs-4.6.6.tgz",
+      "integrity": "sha512-ZUz/69+SYpFN/g/lUlo2FXcIjRkSu3nDarreVdGGndHEBJ6cXPdKguS8JGxwj5HA5xIbVKSmLgr5b3AWxtRfvQ==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/055/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/055/LICENSE",
+          "sha256": "dca9a392272606ac748ac0976a2a1133f14eef841c27beaa51a844d53c56a09d",
+          "bytes": 1068
+        }
+      ]
+    },
+    {
+      "name": "stylis",
+      "version": "4.3.6",
+      "patched": false,
+      "materialDirectory": "npm/056",
+      "url": "https://registry.npmjs.org/stylis/-/stylis-4.3.6.tgz",
+      "integrity": "sha512-yQ3rwFWRfwNUY7H5vpU0wfdkNSnvnJinhF9830Swlaxl03zsOjCfmX0ugac+3LtK0lYSgwL/KXc8oYL3mG4YFQ==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/056/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/056/LICENSE",
+          "sha256": "88c579c6ee44b41137a21321190d177982e5b17d4fa1b83a4a2e3ea325a8fc9a",
+          "bytes": 1078
+        }
+      ]
+    },
+    {
+      "name": "ts-dedent",
+      "version": "2.2.0",
+      "patched": false,
+      "materialDirectory": "npm/057",
+      "url": "https://registry.npmjs.org/ts-dedent/-/ts-dedent-2.2.0.tgz",
+      "integrity": "sha512-q5W7tVM71e2xjHZTlgfTDoPF/SmqKG5hddq9SzR49CH2hayqRKJtQ4mtRlSxKaJlR/+9rEM+mnBHf7I2/BQcpQ==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/057/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "npm/057/LICENSE",
+          "sha256": "eff13095d9d762c3bd9dda74370c81e2130c28f2691bc455603abf973bac25b9",
+          "bytes": 1073
+        }
+      ]
+    },
+    {
+      "name": "vscode-jsonrpc",
+      "version": "9.0.3",
+      "patched": false,
+      "materialDirectory": "npm/058",
+      "url": "https://registry.npmjs.org/vscode-jsonrpc/-/vscode-jsonrpc-9.0.3.tgz",
+      "integrity": "sha512-qETYf9PCl1lVfwR+oBmMfc4vP2nqLNA35ABxorw3j06+xlKRgDVxbLgKm4Y/xPL0YWdeDjLoI4ImICIT3nB0zQ==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/058/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/License.txt",
+          "target": "npm/058/License.txt",
+          "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0",
+          "bytes": 1095
+        },
+        {
+          "member": "package/lib/common/api.js",
+          "target": "npm/058/lib/common/api.js",
+          "sha256": "0d8ccd38514f3994256d0c271b9b6e288174e13847ed2c8561abd5f005bdeb76",
+          "bytes": 11346
+        },
+        {
+          "member": "package/lib/common/cancellation.js",
+          "target": "npm/058/lib/common/cancellation.js",
+          "sha256": "b851c4246fa5a644bcebe56b1fb74048948eab0886d706e59e2090fa7e41550b",
+          "bytes": 4808
+        },
+        {
+          "member": "package/lib/common/connection.js",
+          "target": "npm/058/lib/common/connection.js",
+          "sha256": "421934733f3449fd2af9c1ff376a0318f1d6b1bb75aa204cb434e09ed2018987",
+          "bytes": 53057
+        },
+        {
+          "member": "package/lib/common/disposable.js",
+          "target": "npm/058/lib/common/disposable.js",
+          "sha256": "ad43f37a324cf41af376ea66004063ac5867a2e3dfce81b47ab617b9105a0a7d",
+          "bytes": 677
+        },
+        {
+          "member": "package/lib/common/events.js",
+          "target": "npm/058/lib/common/events.js",
+          "sha256": "d521b1fc2887c04a2d3f4d4403b5bd9fa734ef83e6f53e99bcc781d791db1508",
+          "bytes": 4683
+        },
+        {
+          "member": "package/lib/common/is.js",
+          "target": "npm/058/lib/common/is.js",
+          "sha256": "db07129f8322e52c81034004a1a1eb9b1be743c9ec55f5f6a5b33da48cb8a2a8",
+          "bytes": 1143
+        },
+        {
+          "member": "package/lib/common/linkedMap.js",
+          "target": "npm/058/lib/common/linkedMap.js",
+          "sha256": "9c2041c8828be66893ba5f97933cc7d3698a1bad2f34b742761e6f2a3e615346",
+          "bytes": 12048
+        },
+        {
+          "member": "package/lib/common/messageBuffer.js",
+          "target": "npm/058/lib/common/messageBuffer.js",
+          "sha256": "27beae232413871d20551178d3342ee0bc927e8b05862883c75ce021291f11cc",
+          "bytes": 5699
+        },
+        {
+          "member": "package/lib/common/messageReader.js",
+          "target": "npm/058/lib/common/messageReader.js",
+          "sha256": "5f912919f4b2584a38812535e7894c851a13b8f51a7ad6b769f2b5e35beffaef",
+          "bytes": 9958
+        },
+        {
+          "member": "package/lib/common/messageWriter.js",
+          "target": "npm/058/lib/common/messageWriter.js",
+          "sha256": "cd9cd263bdd57b32eac86a0dd83ac7241aa95ffb7a43af1e680b65449799afbc",
+          "bytes": 6061
+        },
+        {
+          "member": "package/lib/common/messages.js",
+          "target": "npm/058/lib/common/messages.js",
+          "sha256": "7a06cfd7456c2f2471dc6aab3fb69683a62245d2a91859b337e03e0e66fa0b26",
+          "bytes": 14187
+        },
+        {
+          "member": "package/lib/common/ral.js",
+          "target": "npm/058/lib/common/ral.js",
+          "sha256": "9b4736fe0168adf1dff8a1f41cf76dc8e9f380684cbb39056403e81a05a51cb3",
+          "bytes": 834
+        },
+        {
+          "member": "package/lib/common/semaphore.js",
+          "target": "npm/058/lib/common/semaphore.js",
+          "sha256": "9a7afb92b0ae8d9c341373fdecfb0133b4ba7414455110408809c2f4a05af1d1",
+          "bytes": 2396
+        },
+        {
+          "member": "package/lib/common/sharedArrayCancellation.js",
+          "target": "npm/058/lib/common/sharedArrayCancellation.js",
+          "sha256": "91a1128bc09e21d95be67dd441e13a0373af7c97d6ccf912b7b4168d11190efa",
+          "bytes": 2639
+        }
+      ]
+    },
+    {
+      "name": "vscode-languageserver-protocol",
+      "version": "3.18.4",
+      "patched": false,
+      "materialDirectory": "npm/059",
+      "url": "https://registry.npmjs.org/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.18.4.tgz",
+      "integrity": "sha512-CCXbyr99dafRJzJH/0Ryk7ly5T8XPmSR0//OuF2w4m+9JiOin7zcAT5iET8GRE7Z9taFBejb3GbM0a0mbjdbrg==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/059/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/License.txt",
+          "target": "npm/059/License.txt",
+          "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0",
+          "bytes": 1095
+        },
+        {
+          "member": "package/lib/common/api.js",
+          "target": "npm/059/lib/common/api.js",
+          "sha256": "9e6a38c7fa9e9c895a9def3b2782aa6d237478fcb9ca50fe2bf7a8e01a30ae52",
+          "bytes": 3270
+        },
+        {
+          "member": "package/lib/common/connection.js",
+          "target": "npm/059/lib/common/connection.js",
+          "sha256": "a7b55f520671b542393beee973efbf243fc47db28c7e175bc46068adf4710759",
+          "bytes": 816
+        },
+        {
+          "member": "package/lib/common/messages.js",
+          "target": "npm/059/lib/common/messages.js",
+          "sha256": "491e071f4da94a5b4bbfb7d573c8194745597f761a9d0fbe6da3cdcb068c7cdc",
+          "bytes": 2737
+        },
+        {
+          "member": "package/lib/common/protocol.callHierarchy.js",
+          "target": "npm/059/lib/common/protocol.callHierarchy.js",
+          "sha256": "92f7bb30800e725bb687335cb3d19c088ae15f447e202f9db00b0df0c9a6b2b1",
+          "bytes": 2881
+        },
+        {
+          "member": "package/lib/common/protocol.colorProvider.js",
+          "target": "npm/059/lib/common/protocol.colorProvider.js",
+          "sha256": "2ca2588634b72e9dd03b174f52313da6f1cade1cfe53438321dd0937dc107573",
+          "bytes": 2099
+        },
+        {
+          "member": "package/lib/common/protocol.configuration.js",
+          "target": "npm/059/lib/common/protocol.configuration.js",
+          "sha256": "e87abad3e9be4e839070faba1e6c9457fcf6abac29c8c985e50759289271782b",
+          "bytes": 1544
+        },
+        {
+          "member": "package/lib/common/protocol.declaration.js",
+          "target": "npm/059/lib/common/protocol.declaration.js",
+          "sha256": "b094e776b11137cb606f34e74ef2e462a84c60e581ea4a55224279bff3242a1d",
+          "bytes": 1395
+        },
+        {
+          "member": "package/lib/common/protocol.diagnostic.js",
+          "target": "npm/059/lib/common/protocol.diagnostic.js",
+          "sha256": "52a3e4d87d094fc07aa76d555e7c676850ab1d03aff6fae9275815e371e7f1eb",
+          "bytes": 5167
+        },
+        {
+          "member": "package/lib/common/protocol.fileOperations.js",
+          "target": "npm/059/lib/common/protocol.fileOperations.js",
+          "sha256": "bae3899e7183f24d0ea4c1c688cb8061f093a426f9b335465b24871259938780",
+          "bytes": 5929
+        },
+        {
+          "member": "package/lib/common/protocol.foldingRange.js",
+          "target": "npm/059/lib/common/protocol.foldingRange.js",
+          "sha256": "baeecc15cc5d76bbfba6f1096c767034afa9554c353c077fa028e0ddcdb69f4a",
+          "bytes": 1931
+        },
+        {
+          "member": "package/lib/common/protocol.implementation.js",
+          "target": "npm/059/lib/common/protocol.implementation.js",
+          "sha256": "fc5ca87fb2c2b3af88df91ae568f0b7ba64377dc82332defbbc77d84e3b7a0c7",
+          "bytes": 1388
+        },
+        {
+          "member": "package/lib/common/protocol.inlayHint.js",
+          "target": "npm/059/lib/common/protocol.inlayHint.js",
+          "sha256": "d891eb86bde82dee8c44580adfae8aa1a5c81a45bb57d1fb08b98eb4d171fc49",
+          "bytes": 2631
+        },
+        {
+          "member": "package/lib/common/protocol.inlineCompletion.js",
+          "target": "npm/059/lib/common/protocol.inlineCompletion.js",
+          "sha256": "51e1126ff547dd732a937dd7cf2fb97f2aa0931e6839ccd8b81139bb9f92a452",
+          "bytes": 1331
+        },
+        {
+          "member": "package/lib/common/protocol.inlineValue.js",
+          "target": "npm/059/lib/common/protocol.inlineValue.js",
+          "sha256": "754720f427104773bc0fa70313ec575e05ef3dad34c6bfb758ec32bb22e466c3",
+          "bytes": 1867
+        },
+        {
+          "member": "package/lib/common/protocol.js",
+          "target": "npm/059/lib/common/protocol.js",
+          "sha256": "07f8786a8f601e519fd1034118d282b3c4b65256ebb7a621073255bfb347b8ea",
+          "bytes": 62967
+        },
+        {
+          "member": "package/lib/common/protocol.linkedEditingRange.js",
+          "target": "npm/059/lib/common/protocol.linkedEditingRange.js",
+          "sha256": "f3b76181d8c4c9afeed9be946fa0a723e138757a47891ad48adcdf1009e3c94a",
+          "bytes": 1183
+        },
+        {
+          "member": "package/lib/common/protocol.moniker.js",
+          "target": "npm/059/lib/common/protocol.moniker.js",
+          "sha256": "ea27088811886c348580c6e61447739627e4f4ee755d285e4a81fcd43cde2d68",
+          "bytes": 2599
+        },
+        {
+          "member": "package/lib/common/protocol.notebook.js",
+          "target": "npm/059/lib/common/protocol.notebook.js",
+          "sha256": "f5b46409ff764edab300aedf107bede6d1f194e8b89902c49c0cabf3bf905ab6",
+          "bytes": 11443
+        },
+        {
+          "member": "package/lib/common/protocol.progress.js",
+          "target": "npm/059/lib/common/protocol.progress.js",
+          "sha256": "79bd7aa21988af048003de7376b9130e34951ca7b1c94eb007c4c98b0523ecab",
+          "bytes": 2368
+        },
+        {
+          "member": "package/lib/common/protocol.selectionRange.js",
+          "target": "npm/059/lib/common/protocol.selectionRange.js",
+          "sha256": "030b6d71857f4ac1ebc4c6ccbc4c00ab5b0329f022ef2db7964154e4d84f807b",
+          "bytes": 1278
+        },
+        {
+          "member": "package/lib/common/protocol.semanticTokens.js",
+          "target": "npm/059/lib/common/protocol.semanticTokens.js",
+          "sha256": "90b7b9a28126b7fc3bf3248bca9829c512a2e28f76d7fb8be7932b17ca4765a0",
+          "bytes": 3989
+        },
+        {
+          "member": "package/lib/common/protocol.showDocument.js",
+          "target": "npm/059/lib/common/protocol.showDocument.js",
+          "sha256": "1ea7e9adbe3807d7086641fc3585add72779b230734858dfe3930977bad8f844",
+          "bytes": 1259
+        },
+        {
+          "member": "package/lib/common/protocol.textDocumentContent.js",
+          "target": "npm/059/lib/common/protocol.textDocumentContent.js",
+          "sha256": "316f2f26d5f2a2a248d6c2fa856ecae0b3dea694d1ffbca7281aaae75c4a9775",
+          "bytes": 2000
+        },
+        {
+          "member": "package/lib/common/protocol.typeDefinition.js",
+          "target": "npm/059/lib/common/protocol.typeDefinition.js",
+          "sha256": "d36018325431765a055d70627e34b13836077c58250dd7f2603876558b0e7a80",
+          "bytes": 1389
+        },
+        {
+          "member": "package/lib/common/protocol.typeHierarchy.js",
+          "target": "npm/059/lib/common/protocol.typeHierarchy.js",
+          "sha256": "a28b4ba2c95ccc41d87c541b9ed48b1224aa2711b8a05b9ead589e4dda513c2e",
+          "bytes": 2524
+        },
+        {
+          "member": "package/lib/common/protocol.workspaceFolder.js",
+          "target": "npm/059/lib/common/protocol.workspaceFolder.js",
+          "sha256": "cb140890bd30cafa74f6feeb1c3333077dbc4af12c871ca29facd4623ad96a66",
+          "bytes": 2090
+        },
+        {
+          "member": "package/lib/common/utils/is.js",
+          "target": "npm/059/lib/common/utils/is.js",
+          "sha256": "90686a238bf35cff10f2fbdb397f383a74a1de6067ac95576368547088fa296c",
+          "bytes": 1640
+        }
+      ]
+    },
+    {
+      "name": "vscode-languageserver-textdocument",
+      "version": "1.0.15",
+      "patched": false,
+      "materialDirectory": "npm/060",
+      "url": "https://registry.npmjs.org/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.15.tgz",
+      "integrity": "sha512-Gsfr9S8LU3S6885cS+NaleasJ0n3V5y/SOTqHCifQiXWFw3G9w9/YItDfwHrlCz+dSZWWZ8ilYVMcJe7Sz7Sxw==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/060/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/License.txt",
+          "target": "npm/060/License.txt",
+          "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0",
+          "bytes": 1095
+        },
+        {
+          "member": "package/lib/esm/main.js",
+          "target": "npm/060/lib/esm/main.js",
+          "sha256": "a0b45326a09bec7a4cde8062cdf39cd52d223b12752f0377e44a80a920421b3e",
+          "bytes": 11476
+        }
+      ]
+    },
+    {
+      "name": "vscode-languageserver-types",
+      "version": "3.18.4",
+      "patched": false,
+      "materialDirectory": "npm/061",
+      "url": "https://registry.npmjs.org/vscode-languageserver-types/-/vscode-languageserver-types-3.18.4.tgz",
+      "integrity": "sha512-nQsacoiijvl0fRf2q28uFDrAVwRhdCa3QveiF7/CX0r18mLR5FU/1WskSsCKOjmEbtteKUnY8x8Yzxop+k0zwg==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/061/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/License.txt",
+          "target": "npm/061/License.txt",
+          "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0",
+          "bytes": 1095
+        },
+        {
+          "member": "package/lib/esm/main.js",
+          "target": "npm/061/lib/esm/main.js",
+          "sha256": "a3b917f6fee370fa0393caf96803d2c13e05ed2713c4bbf2e35f758d4530b3a2",
+          "bytes": 83933
+        }
+      ]
+    },
+    {
+      "name": "vscode-uri",
+      "version": "3.1.0",
+      "patched": false,
+      "materialDirectory": "npm/062",
+      "url": "https://registry.npmjs.org/vscode-uri/-/vscode-uri-3.1.0.tgz",
+      "integrity": "sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "npm/062/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE.md",
+          "target": "npm/062/LICENSE.md",
+          "sha256": "c669138cb1eb01fbb745e8e460b291e4f2869c14a40061390b6095d845ed4c82",
+          "bytes": 1070
+        }
+      ]
+    },
+    {
+      "name": "langium-cli",
+      "version": "4.4.0",
+      "materialDirectory": "generator",
+      "role": "generator reference",
+      "url": "https://registry.npmjs.org/langium-cli/-/langium-cli-4.4.0.tgz",
+      "integrity": "sha512-CSqwKebp8qWa9Y5s1xgEl4qxGPH71Wf4yMXKPuwICoL2yRfVtUl2zpTwF4O5WhYOxnuSpf0rJrxzjQRK5whL7Q==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "generator/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/LICENSE",
+          "target": "generator/LICENSE",
+          "sha256": "599bf70b4e55f06250571d103dbd8441e0c47cb7f858c0147ca312ce38e9ef2a",
+          "bytes": 1052
+        }
+      ]
+    },
+    {
+      "name": "@mermaid-js/tiny",
+      "version": "12.3.0",
+      "materialDirectory": "tiny",
+      "role": "runtime bundle",
+      "url": "https://registry.npmjs.org/@mermaid-js/tiny/-/tiny-12.3.0.tgz",
+      "integrity": "sha512-90BO2kQvmQWj9YjBX2IsLHCw61rN69dPTn5wFfDu+b9aT7qtzfzTA3wpKWeaRAKK85refSo9How5EOeY39DWfA==",
+      "files": [
+        {
+          "member": "package/package.json",
+          "target": "tiny/package.json",
+          "identityOnly": true
+        },
+        {
+          "member": "package/dist/mermaid.tiny.js",
+          "target": "tiny/mermaid.tiny.js",
+          "sha256": "c41f5236091b83f524c4940f97a16b2b14a76f21ff84aea4fd6b66421d8a2a9a",
+          "bytes": 2852578
+        }
+      ]
+    }
+  ],
+  "originals": [
+    {
+      "name": "sequence-BSD.txt",
+      "url": "https://raw.githubusercontent.com/bramp/js-sequence-diagrams/27c7a2b4fcb7b3366b9e371fde18911e08b13054/LICENCE",
+      "bytes": 1309,
+      "sha256": "75edd32c01669aa6a3876f162d5e9a36d2e3dff3aff93c53578c32c287b54070",
+      "target": "origins/sequence-BSD.txt"
+    },
+    {
+      "name": "jekyll-MIT.txt",
+      "url": "https://raw.githubusercontent.com/jekyll/jekyll/6dd3cc21c40b98054851846425af06c64f9fb466/LICENSE",
+      "bytes": 1090,
+      "sha256": "5d9f98524d5a7ac46ba836dfaec29d3b95665c50049fa79ea28cce5f0904f41b",
+      "target": "origins/jekyll-MIT.txt"
+    }
+  ],
+  "notes": "Minimal research material snapshots, not executable patched dependencies. Package tarballs are pinned by upstream lock integrity; selected unchanged originals and source-notice files are pinned by reviewed hashes. No install scripts run."
+}

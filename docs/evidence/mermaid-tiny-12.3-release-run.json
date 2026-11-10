@@ -1,0 +1,10 @@
+{
+  "id": 41641880995,
+  "head_sha": "2086904e76c692331e34a45d7cc3bc30860d040e",
+  "status": "completed",
+  "conclusion": "success",
+  "html_url": "https://github.com/mermaid-js/mermaid/actions/runs/41641880995",
+  "created_at": "2026-11-03T13:09:49Z",
+  "updated_at": "2026-11-03T13:11:26Z",
+  "path": ".github/workflows/release.yml"
+}

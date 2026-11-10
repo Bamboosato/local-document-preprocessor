@@ -1,0 +1,177 @@
+{
+  "sources": [
+    {
+      "name": "sequence-upstream.jison",
+      "url": "https://raw.githubusercontent.com/bramp/js-sequence-diagrams/27c7a2b4fcb7b3366b9e371fde18911e08b13054/src/grammar.jison",
+      "bytes": 2137,
+      "sha256": "3e5faf5fe94d9fd15d953287947509d79284a4102d0b66646813e1a93b863ce4"
+    },
+    {
+      "name": "sequence-BSD.txt",
+      "url": "https://raw.githubusercontent.com/bramp/js-sequence-diagrams/27c7a2b4fcb7b3366b9e371fde18911e08b13054/LICENCE",
+      "bytes": 1309,
+      "sha256": "75edd32c01669aa6a3876f162d5e9a36d2e3dff3aff93c53578c32c287b54070"
+    },
+    {
+      "name": "mermaid-import.jison",
+      "url": "https://raw.githubusercontent.com/mermaid-js/mermaid/2a0a2a2269545a26abf20c92de65f214eea5a425/src/parser/js-sequence-diagram.jison",
+      "bytes": 2148,
+      "sha256": "3d557592e7116348d5bcdda62cceeb3b9e2dbdeae0b4f481ce28c1b71f5eeb85"
+    },
+    {
+      "name": "jekyll-document.rb",
+      "url": "https://raw.githubusercontent.com/jekyll/jekyll/6dd3cc21c40b98054851846425af06c64f9fb466/lib/jekyll/document.rb",
+      "bytes": 13773,
+      "sha256": "597ffc3486b42b2e017d0ef819c0bb0ff1dbbc16f572220ff3804793f79aa744"
+    },
+    {
+      "name": "jekyll-MIT.txt",
+      "url": "https://raw.githubusercontent.com/jekyll/jekyll/6dd3cc21c40b98054851846425af06c64f9fb466/LICENSE",
+      "bytes": 1090,
+      "sha256": "5d9f98524d5a7ac46ba836dfaec29d3b95665c50049fa79ea28cce5f0904f41b"
+    },
+    {
+      "name": "mermaid-regexes.ts",
+      "url": "https://raw.githubusercontent.com/mermaid-js/mermaid/1fb7869866dd619168d840291c9c54b4f129758b/packages/mermaid/src/diagram-api/regexes.ts",
+      "bytes": 8322,
+      "sha256": "2bda6a34c0762faab8abb7c3f09ebee2a5919d6bea874e2eae0b3fa7d15065e8"
+    }
+  ],
+  "sequence": {
+    "sourceCandidateCommit": "27c7a2b4fcb7b3366b9e371fde18911e08b13054",
+    "mermaidImportCommit": "2a0a2a2269545a26abf20c92de65f214eea5a425",
+    "changes": [
+      {
+        "kind": "insert",
+        "upstreamLines": [
+          25,
+          24
+        ],
+        "importLines": [
+          25,
+          25
+        ]
+      },
+      {
+        "kind": "replace",
+        "upstreamLines": [
+          42,
+          42
+        ],
+        "importLines": [
+          43,
+          43
+        ]
+      },
+      {
+        "kind": "replace",
+        "upstreamLines": [
+          56,
+          58
+        ],
+        "importLines": [
+          57,
+          59
+        ]
+      },
+      {
+        "kind": "replace",
+        "upstreamLines": [
+          63,
+          64
+        ],
+        "importLines": [
+          64,
+          65
+        ]
+      },
+      {
+        "kind": "replace",
+        "upstreamLines": [
+          73,
+          74
+        ],
+        "importLines": [
+          74,
+          75
+        ]
+      },
+      {
+        "kind": "replace",
+        "upstreamLines": [
+          79,
+          79
+        ],
+        "importLines": [
+          80,
+          80
+        ]
+      },
+      {
+        "kind": "replace",
+        "upstreamLines": [
+          83,
+          83
+        ],
+        "importLines": [
+          84,
+          85
+        ]
+      },
+      {
+        "kind": "replace",
+        "upstreamLines": [
+          92,
+          93
+        ],
+        "importLines": [
+          94,
+          95
+        ]
+      },
+      {
+        "kind": "replace",
+        "upstreamLines": [
+          97,
+          98
+        ],
+        "importLines": [
+          99,
+          100
+        ]
+      },
+      {
+        "kind": "delete",
+        "upstreamLines": [
+          105,
+          105
+        ],
+        "importLines": [
+          107,
+          106
+        ]
+      }
+    ],
+    "equalLineBlocks": 11,
+    "licenseCandidate": "BSD-2-Clause with 2012-2013 copyright",
+    "limitations": "Fixed upstream grammar is a candidate base for the adapted import; unique historical checkout or tag is not proven."
+  },
+  "jekyll": {
+    "sourceCommit": "6dd3cc21c40b98054851846425af06c64f9fb466",
+    "sourceExpression": "YAML_FRONT_MATTER_REGEXP = /\\A(---\\s*\\n.*?\\n?)^((---|\\.\\.\\.)\\s*$\\n?)/m",
+    "mermaidExpression": "export const frontMatterRegex = /^([^\\S\\n\\r]*)-{3}\\s*[\\n\\r](.*?)[\\n\\r]\\1-{3}\\s*[\\n\\r]+/s;",
+    "changes": [
+      "Ruby beginning anchor to JavaScript beginning anchor and capture of indentation",
+      "delimiter handling changed from --- or ... to --- closing with same indentation",
+      "newline handling and captured content changed",
+      "Ruby multiline mode replaced with JavaScript dotAll mode"
+    ],
+    "license": "MIT; retain source copyright and permission notice as conservative provision candidate"
+  },
+  "limitations": "Source comparison and original candidates; legal substantiality and exact originating revision remain separate judgments.",
+  "candidateMapping": {
+    "sourceCommit": "2086904e76c692331e34a45d7cc3bc30860d040e",
+    "sequenceAndJekyllContributingFilesByteIdenticalToReviewed122": true,
+    "note": "Historical origin candidates retained; does not uniquely identify the original import checkout."
+  }
+}

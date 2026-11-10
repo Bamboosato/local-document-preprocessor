@@ -18,14 +18,17 @@
     "fixtures:pdf": "node scripts/generate-pdf-fixtures.mjs",
     "check:dist": "node scripts/check-dist.mjs",
     "check:docs": "node scripts/check-docs.mjs",
-    "check": "npm run test:unit && npm run test:pwa && npm run build && npm run check:dist"
+    "check": "npm run test:unit && npm run test:pwa && npm run test:tiny && npm run build && npm run check:dist",
+    "test:tiny": "node --test scripts/tiny-materials.test.mjs",
+    "test:e2e:tiny-dev": "node scripts/test-tiny-dev.mjs",
+    "audit:tiny": "node scripts/audit-tiny-contributors.mjs"
   },
   "dependencies": {
     "@embedpdf/pdfium": "2.14.4",
     "@firecrawl/anydoc-wasm": "0.1.7",
+    "@mermaid-js/tiny": "12.3.0",
     "fflate": "0.8.3",
     "jsonc-parser": "3.3.1",
-    "mermaid": "12.2.0",
     "pdf-lib": "1.17.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",

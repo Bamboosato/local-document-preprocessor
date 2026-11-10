@@ -1,0 +1,406 @@
+{
+  "date": "2026-11-06T07:44:09.050089+00:00",
+  "baseCommit": "37ec3d3b09624a7efe53e8faa3ba4fa2560bac27",
+  "branch": "codex/mermaid-no-elk-reassessment",
+  "state": "Uncommitted local integration; functional verification passed; fixed-version distribution adoption held for embedded advisories",
+  "functionalPassed": true,
+  "allChecksPassed": false,
+  "publicDistributionAdoption": "held",
+  "environment": {
+    "os": "Windows",
+    "node": "24.22.1",
+    "npm": "11.19.1",
+    "browser": "Chrome headless 156.0.8078.81"
+  },
+  "sourceHashes": {
+    "package.json": "27801d2377268ae6da2c95e1d4525156fe4f9395138563e20a4301caf0085a4d",
+    "package-lock.json": "ead66bdc7b140190b37505ce47739fb8cf5225415731e6c48c351ad2a811d517",
+    "vite.config.ts": "0ceb7df9fd6f067bec22940b63d5ab2a1887cd5eac85e1a67fc1028afae47537",
+    "playwright.config.ts": "4640c4525f07fdb52c211f1d4373e6dea9e79b7d0f944e8c20f48df13fcfc29b",
+    ".github/workflows/ci.yml": "c69a1cc03775c97e0f427e32ab64e9cab4501725ca6b902903ef16fe3c4a2c33",
+    "src/App.tsx": "4c7777d81a1d622d230c1668ac452628256719cf1c9d8923e37c90850e794094",
+    "src/json/JsonWorkerClient.ts": "9c5275ae652b658f590f9bd3a49137158ce074df8839b3f859d0fc372a460c8e",
+    "src/json/json.worker.ts": "71403d0c2d0dd39f6cf3a4a8ec8d6024f253c2f458203a2cc9759f7ec625e8aa",
+    "src/json/jsonWorkerRuntime.ts": "5041f37abede574c21ba83f8eb299e5054686ef35d89d80f793769b6b1467ec7",
+    "src/json/tinyLoader.mjs": "56746a6bc2871eed08ab12b7591a46eaf4c9d7a906c8cbff2f1e587b8868149a",
+    "src/json/tinyLoader.d.mts": "2fe50ac6b2a2223d0d9a3a67f5dfdc56adb330ea8114caca3b6752cb3ef59d54",
+    "src/json/tinyLoader.test.ts": "910c47bff31abc8200b2cca137613d67ebb6b50336945ac1c9c4670a93b6f458",
+    "src/json/mermaidRenderer.mjs": "fcefb929847267ab865d1b3a58a606d689f992f01d636015fe1bf7c83fed03b4",
+    "src/json/core.mjs": "f8c2503c02744e455d3638b1969e69abe8352b78f1137d32c38927ebba55613a",
+    "src/json/pipeline.ts": "1d49483b1d6ee6aa438199140996cbbddd4922fb0e71bbdbe0ede443f2e5a856",
+    "src/components/JsonDiagram.tsx": "0a1d6b162b4de3e49c8405cf5fa82afefb4c89ffe2d9f85b3ffeea333ede4d6a",
+    "scripts/copy-third-party-licenses.mjs": "d725a96bf9a666ffcff8535de901c1fbe7d00e6a7dd44b1a3439dc4738c8eb9d",
+    "scripts/check-dist.mjs": "6290d963e46b70a3a4a2f16ae376decf0db72ac2677a1afab6c0a154e1c63655",
+    "scripts/tiny-materials.mjs": "682054cc84d40dd21186c9bed11ea4a4b4ca4c323181762d9128695420c242d9",
+    "scripts/tiny-materials.test.mjs": "539a759218236d9b50a288b6ae871068943524fd5e103dc2d5ec87bd86850033",
+    "scripts/freeze-tiny-licenses.mjs": "7485809bc4398ea0b395f0ec2d0e225442f2735170946839aa9d62c98953fac4",
+    "scripts/test-tiny-dev.mjs": "84820f4ae50553c3cba90f8c1c46f8b0d69394b4b3f819bba3a7f2b76c2dcf1a",
+    "scripts/audit-tiny-contributors.mjs": "4a9d27885d41c33f8a5ee75070f9dff72ef520b42fbb3d914e9938a8b44dca29",
+    "scripts/check-local-product-delivery.mjs": "9c7ca98cd28a850e9449b576e6af0a235cac431efdc50d46ba4ae48e36129ba6",
+    "tests/e2e/json.spec.ts": "d94898bce574fa2f8342b1a29831d6c39528053c44ec441e81ccc25d14427e1b",
+    "tests/e2e/json-state-recovery.spec.ts": "114a0ee34051a1a66a5579febf774e6301556c159e2462eaa041d8b513ffa83c",
+    "tests/e2e/json-target-ui.spec.ts": "9466a8ff58d325435956d3d6f4c1b0af375dae4d53d3f6c8e2215bbbff0113a1",
+    "tests/e2e/pwa.spec.ts": "3ae8e141e5bd1057b822e2196ca0a67fc18964d094ff1d27b8d548ec0954c0df",
+    "tests/e2e/pwa-generation.spec.js": "07f4e166bf3bc3b5a31ac815ac1752efde632f2bd5d532e9dba152e1926ee7e8",
+    "tests/e2e/conversion.spec.ts": "d395894116248d7f827de5837d8d223d947ac5ef935b32fb1a8de498cf3ae050"
+  },
+  "rootProductionPackages": 117,
+  "embeddedContributorPairs": 63,
+  "materialSnapshotSha256": "6e7228056dec8d33af45a4204ad8bc2d9c98cd28c02c705f07867e187a56bc0d",
+  "inventorySha256": "376faa14783679f8c0066589b30a0905c1e190f32d14752b9b40ddf473e57ed3",
+  "generation": "7bf6c785a2cc3a4084b9a1f7",
+  "pwaManifestSha256": "660b6641a0a051b1b548d812849e4335d15ace3e2f13b715a1545dcbe8dfe3fe",
+  "serviceWorkerSha256": "0c3698833402e6a21dc4a66bf0cbebc42fcaef608caf24d34edd5e4c6c50b31c",
+  "distributionAssets": [
+    {
+      "url": "/assets/anydoc_wasm_bg-BGHlcte-.wasm",
+      "bytes": 6485379,
+      "sha256": "409e45e75062df06bed445c352ffddaf3bae15ff376f5d514d45f4891debd09e"
+    },
+    {
+      "url": "/assets/converter.worker-DnNg2nND.js",
+      "bytes": 752427,
+      "sha256": "9904e9e8f7bead971511aad6e5d50836f11527d58a11c5a8d17ac81a1a938c77"
+    },
+    {
+      "url": "/assets/index-_-tn7U5c.css",
+      "bytes": 15304,
+      "sha256": "86d7d2e6fb682593d0f2fc655cde050cf96179e64d8a66c944e18d7572b75937"
+    },
+    {
+      "url": "/assets/index-rOQ7_vuA.js",
+      "bytes": 423775,
+      "sha256": "ee0300c38eb6c9528a3b512f6f6389d99fa44c5f55cf0a68823ad573586ac10a"
+    },
+    {
+      "url": "/assets/json.worker-C4CZx1Sw.js",
+      "bytes": 167979,
+      "sha256": "f66726feb2df0adeea088cb4523304763550a6a140f5f92942204634c2fd6e2a"
+    },
+    {
+      "url": "/assets/mermaid.tiny-DGC4wCF1.js",
+      "bytes": 2811424,
+      "sha256": "ea0cdf04eb31907eb20d956a34fe300095365c876887b54ffa29f1f847f56d00"
+    },
+    {
+      "url": "/assets/pdfium-RAgkpwfK.wasm",
+      "bytes": 4633788,
+      "sha256": "c0af5a6aca30d7e54a149c3a68e317116ca906d6edc28fd3318b12c7d9478ac8"
+    }
+  ],
+  "finalBuildEqualsProductionE2eBuild": true,
+  "pwaRegisteredAssetsExcludingManifestItself": 218,
+  "pwaEmbeddedAssetsIncludingManifest": 219,
+  "loopbackDelivery": {
+    "generation": "7bf6c785a2cc3a4084b9a1f7",
+    "count": 220,
+    "failures": [],
+    "scope": "Loopback HTTP rehearsal of body hashes, size and selected MIME types. Not deployed delivery or physical-device acceptance."
+  },
+  "wasmUnchangedFromPreviousProduct": [
+    {
+      "url": "/assets/anydoc_wasm_bg-BGHlcte-.wasm",
+      "bytes": 6485379,
+      "sha256": "409e45e75062df06bed445c352ffddaf3bae15ff376f5d514d45f4891debd09e"
+    },
+    {
+      "url": "/assets/pdfium-RAgkpwfK.wasm",
+      "bytes": 4633788,
+      "sha256": "c0af5a6aca30d7e54a149c3a68e317116ca906d6edc28fd3318b12c7d9478ac8"
+    }
+  ],
+  "originalsOfflineHashChecked": 68,
+  "noticeSnapshotFiles": 74,
+  "checks": {
+    "unit": {
+      "passed": 124,
+      "failed": 0,
+      "files": 22
+    },
+    "pwaUnit": {
+      "passed": 11,
+      "failed": 0
+    },
+    "materialSnapshot": {
+      "passed": 1,
+      "failed": 0
+    },
+    "auditPolicyAndScope": {
+      "passed": 12,
+      "failed": 0
+    },
+    "localDeliveryGuard": {
+      "passed": 6,
+      "failed": 0
+    },
+    "buildAndDist": {
+      "passed": true
+    },
+    "rootNpmAudit": {
+      "production": 0,
+      "all": 0
+    },
+    "embeddedAudit": {
+      "passed": false,
+      "contributors": 63,
+      "criticalPackages": 1,
+      "highPackages": 1,
+      "record": "mermaid-tiny-embedded-advisory-review.json"
+    },
+    "productE2e": {
+      "scope": "targeted",
+      "stats": {
+        "startTime": "2026-11-06T07:07:18.704Z",
+        "duration": 119999.129,
+        "expected": 33,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "cases": [
+        {
+          "file": "conversion.spec.ts",
+          "title": "実 WASM で日本語と半角カタカナを端末内変換する",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "conversion.spec.ts",
+          "title": "Type0・ToUnicode欠落PDFを客観比較し、完全一致のpartialとして出力する",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "conversion.spec.ts",
+          "title": "正常な機械可読PDFを誤ってpartialにしない",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "conversion.spec.ts",
+          "title": "画像のみPDFをOCR必須のfailedとして出力停止する",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "conversion.spec.ts",
+          "title": "テキストページと画像ページの混在PDFをpartialとして区別する",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "conversion.spec.ts",
+          "title": "[page-break] PDFの選択ページだけをMarkdownとplain textへ変換する",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "conversion.spec.ts",
+          "title": "[page-break] PowerPointの選択スライド間だけを設定に応じて区切る",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "conversion.spec.ts",
+          "title": "Excelの選択シートだけを変換し、非表示状態を明示する",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "conversion.spec.ts",
+          "title": "DOCX等の安定ページ境界がない形式は文書全体のみと明示する",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "conversion.spec.ts",
+          "title": "[page-break] DOCXの明示改ページをMarkdownだけの区切りとして保持する",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "json-state-recovery.spec.ts",
+          "title": "SR-10 UI-26 display-only failure keeps verified exports and explicit retry recovers",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "json-state-recovery.spec.ts",
+          "title": "SR-11 UI-26 validation asset failure blocks output, preserves another result and only explicit reconversion recovers",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "json-state-recovery.spec.ts",
+          "title": "SR-12 target reload failure has explicit retry; delayed obsolete target never enables confirmation",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "json-state-recovery.spec.ts",
+          "title": "SR-13 twenty files reuse only the current parse and preserve independent settings and results",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "json-state-recovery.spec.ts",
+          "title": "SR-19 UI-11 table pages contain 100/1 rows while MD and TXT exports retain all 101 records",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "json-state-recovery.spec.ts",
+          "title": "SR-20 UI-14/17 JSON A survives PDF B cancellation and file-specific settings reparse without restarting the queue",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "json-target-ui.spec.ts",
+          "title": "TU-07 paging, details, reveal and cancel preserve selection/style independently",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "json-target-ui.spec.ts",
+          "title": "TU-08 selected incompatible style remains checked and blocks confirmation until compatible again",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "json-target-ui.spec.ts",
+          "title": "TU-09 long keys, bounded detail and ten-item summaries are inspectable without output truncation",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "json-target-ui.spec.ts",
+          "title": "TU-10 virtual windows never mount more than 300 rows and restore an offscreen selected radio",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "json-target-ui.spec.ts",
+          "title": "TU-13 narrow desktop viewport keeps long-label controls reachable; background click discards draft",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "json.spec.ts",
+          "title": "JC-03 JSON selected subtree preserves numeric tokens in MD/TXT downloads without WASM or external requests",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "json.spec.ts",
+          "title": "JC-03 JSON Mermaid uses standard SVG under product CSP; source/plain text remain available",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "json.spec.ts",
+          "title": "JC-04 JSON records, draft cancel, confirmed invalidation and fresh settings do not mix results",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "json.spec.ts",
+          "title": "JC-04 mixed JSON CSV JSON and malformed file continue sequentially without cross-file contamination",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "json.spec.ts",
+          "title": "JC-03 JSON real generated source above display limit still exports verified text",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "json.spec.ts",
+          "title": "JC-04 cancellation preserves completed JSON and cancels active/waiting files",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "pwa-generation.spec.js",
+          "title": "PG-01 actual A/B builds wait for every old tab; old lazy worker and offline B conversion remain generation-correct",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "pwa-generation.spec.js",
+          "title": "PG-02 failed B install preserves A and explicit update retry can prepare B",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "pwa-generation.spec.js",
+          "title": "PG-03 evicted lazy JSON worker fails offline without false output; online asset repair recovers",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "pwa-generation.spec.js",
+          "title": "PG-04 legacy v1 controlling new HTML cannot enable conversion; closing all clients finishes migration",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "pwa-generation.spec.js",
+          "title": "PG-05 lost HTML can prepare the next build from the recovery page without discarding another tab",
+          "status": "expected",
+          "attempts": 1
+        },
+        {
+          "file": "pwa.spec.ts",
+          "title": "PWA manifestとService Workerは静的アセットだけを扱う",
+          "status": "expected",
+          "attempts": 1
+        }
+      ],
+      "logSha256": "54e2e97b2ec51e8b6048ab8fd8aa8da9f412e066fa2450d8628e51baa4c5b38a"
+    },
+    "developmentE2e": {
+      "stats": {
+        "startTime": "2026-11-06T07:27:19.024Z",
+        "duration": 10410.704,
+        "expected": 1,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "command": "npm run test:e2e:tiny-dev",
+      "commandPassed": true,
+      "logSha256": "3043ca4190e30b84722e64ff71d9e0d2ebff679af8aae2d18d3fc874271d269b"
+    },
+    "documentation": {
+      "documents": 79,
+      "localLinks": 362,
+      "issues": 0
+    }
+  },
+  "previousProductFixture": {
+    "sourceCommit": "37ec3d3b09624a7efe53e8faa3ba4fa2560bac27",
+    "gitObjectSnapshotSha256": "fd6a8cddc71792a9b3c7a1ae8223edc3679909c2dd30f733705e3973210e2e8f",
+    "files": 330,
+    "fixtureChanges": [
+      "App title changed to PWA fixture A",
+      "Inert worker fixture marker A appended"
+    ],
+    "scope": "Previous normal Mermaid product, local PWA migration fixture only"
+  },
+  "previousGeneration": "181f2ef2e02a0f4af66d9719",
+  "previousPwaEmbeddedAssetsIncludingManifest": 450,
+  "ci": {
+    "remoteRun": false,
+    "newEmbeddedAuditGate": "Will fail for current fixed candidate; no exception added",
+    "developmentCase": "Added after product E2E; sequential"
+  },
+  "limitations": [
+    "Targeted browser cases only, not all E2E or cross-browser",
+    "No physical-device or installed-PWA acceptance",
+    "No deployed delivery, merge, push, PR update or archive publication/attachment",
+    "macOS/iOS excluded",
+    "Advisory version matching is not exploit reachability proof",
+    "Root npm inventory is not an embedded dependency or WASM SBOM"
+  ]
+}

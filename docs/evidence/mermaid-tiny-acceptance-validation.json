@@ -1,0 +1,277 @@
+{
+  "node": "v24.22.1",
+  "platform": "win32",
+  "sourceHashes": {
+    "index.html": "0e1dbad7d38919cc4a586433688f8f27490d27ae0a72bfbb524a474c23dc7f01",
+    "main.mjs": "989ba0b03ab8b0d6f3b114b5fbbcfbd998ab51619d67340d6787f724e3a04ced",
+    "worker.js": "6d20336c6bbf95066bb1767aaa61d9563027c40a4077da171d15e9415f4a3f6d",
+    "build.mjs": "85f6d81df0b420b8be71b11580b1ddb444b9ae9fbf729861c6f8348d035ea930",
+    "write-sw.mjs": "084c97d82d94031b8418162a4d5a59abee116abe4dab2c891c69aee2d39d111e",
+    "poc-server.mjs": "48ab61cb4e7ed7df967509e2f60706afe2970e255cc9ff23346439a167b9729a",
+    "check.mjs": "1166a30c78e45b7d6cca2a6dadab9b09ffd3825478554a73e837a7a55fe308be",
+    "ui-safety-check.mjs": "264bd50a74b12b40eb4c7f681d577d9d5b762e25a4258c5ce99fe5f4df512a06",
+    "different-generation-check.mjs": "71f7daee179ea106c031c58de6211912a843f153f74c8367c4c2a0c3a103892c",
+    "licenses-check.mjs": "72991687a0d05c59ad7ea04c47a8fe5ff4623747769be87186a03d655a0de68f",
+    "offline-check.mjs": "69dd6f6e892a974573aa5c2f70eb0c5e31852d171bfc69026adf7390287168b3",
+    "prepare-license-candidates.mjs": "09911f5af38a03f4201c844f6ebaf696c4b9844aa1f122049ac0331d4220c63b",
+    "run-acceptance.mjs": "63b9b8c262a6427c9ebe00980752b574e8d6962a40b5e9e8254154e2ef57ec2f"
+  },
+  "results": [
+    {
+      "command": "build.mjs",
+      "passed": true,
+      "records": [
+        {
+          "cachedAssets": 4,
+          "licenseAssets": 0
+        }
+      ],
+      "warning": "Tiny IIFE is copied explicitly after the Vite build"
+    },
+    {
+      "command": "prepare-license-candidates.mjs",
+      "passed": true,
+      "records": [
+        {
+          "entries": 67,
+          "originals": 68,
+          "sourceOriginCandidates": 2,
+          "patched": [
+            "fastdom",
+            "roughjs"
+          ]
+        },
+        {
+          "cachedAssets": 78,
+          "licenseAssets": 74
+        }
+      ]
+    },
+    {
+      "command": "check.mjs",
+      "passed": true,
+      "records": [
+        {
+          "result": {
+            "code": true,
+            "svg": true,
+            "japanese": true,
+            "emoji": true,
+            "cases": [
+              {
+                "nodes": true,
+                "labelsMatch": true,
+                "edgeMatch": true,
+                "safe": true
+              },
+              {
+                "nodes": true,
+                "labelsMatch": true,
+                "edgeMatch": true,
+                "safe": true
+              },
+              {
+                "nodes": true,
+                "labelsMatch": true,
+                "edgeMatch": true,
+                "safe": true
+              },
+              {
+                "nodes": true,
+                "labelsMatch": true,
+                "edgeMatch": true,
+                "safe": true
+              }
+            ],
+            "limits": {
+              "199": true,
+              "200": true,
+              "201": false
+            },
+            "displayLimits": [
+              true,
+              true,
+              false
+            ],
+            "realBoundaries": [
+              {
+                "bytes": 51199,
+                "displayable": true
+              },
+              {
+                "bytes": 51200,
+                "displayable": true
+              },
+              {
+                "bytes": 51201,
+                "displayable": false
+              }
+            ],
+            "overRejected": true,
+            "boundaryRendered": [
+              true,
+              true
+            ],
+            "maxDurationMs": 1344,
+            "maxNodes": 200,
+            "maxGenerated": true,
+            "worker": {
+              "loaded": true,
+              "parse": true
+            },
+            "invalid": {
+              "loaded": true,
+              "parse": false,
+              "error": "Error: Parse error on line 3:\n...lowchart TD  A -->\n---------------------^\nExpecting 'AMP', 'COLON', 'PIPE', 'TESTSTR', 'DOWN', 'DEFAULT', 'NUM', 'COMMA', 'NODE_STRING', 'BRKT', 'MINUS', 'MULT', 'UNICODE_TEXT', got 'EOF'"
+            },
+            "stale": "stale",
+            "cleared": true,
+            "staleFailure": "stale",
+            "staleSuccess": "stale",
+            "invalidJsonRejected": true,
+            "recovered": true
+          },
+          "requests": [
+            "/",
+            "/assets/index-C2OhESLU.js",
+            "/tiny.js",
+            "/worker.js",
+            "/tiny.js",
+            "/worker.js",
+            "/tiny.js",
+            "/worker.js",
+            "/tiny.js",
+            "/worker.js",
+            "/tiny.js",
+            "/worker.js",
+            "/tiny.js",
+            "/worker.js",
+            "/tiny.js",
+            "/worker.js",
+            "/tiny.js",
+            "/worker.js",
+            "/tiny.js",
+            "/worker.js",
+            "/tiny.js",
+            "/worker.js",
+            "/tiny.js",
+            "/worker.js",
+            "/tiny.js",
+            "/worker.js",
+            "/tiny.js",
+            "/worker.js",
+            "/tiny.js",
+            "/worker.js",
+            "/tiny.js",
+            "/worker.js",
+            "/worker.js",
+            "/tiny.js"
+          ],
+          "external": []
+        }
+      ]
+    },
+    {
+      "command": "ui-safety-check.mjs",
+      "passed": true,
+      "records": [
+        {
+          "browser": "156.0.8078.81",
+          "checks": [
+            "selected pointer, source switch, copied source, downloaded Markdown",
+            "array element selection excludes other row and root",
+            "invalid scalar selection rejects and invalidates output",
+            "dangerous strings, remote references and SVG sanitization",
+            "worker crash, malformed response, deadline: no unverified exports and workers released",
+            "cancel terminates active worker, retry succeeds, clear invalidates"
+          ],
+          "externalRequests": 0,
+          "storage": {
+            "local": 0,
+            "session": 0,
+            "databases": 0
+          },
+          "clipboard": "test double including denial; OS integration not verified",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "command": "different-generation-check.mjs",
+      "passed": true,
+      "records": [
+        {
+          "cachedAssets": 78,
+          "licenseAssets": 74
+        },
+        {
+          "cachedAssets": 78,
+          "licenseAssets": 74
+        },
+        {
+          "browser": "156.0.8078.81",
+          "differentHtmlCodeAndWorkerBytes": true,
+          "failedUpdateRetainedA": true,
+          "BWaitedWithAClient": true,
+          "oldReloadUsedA": true,
+          "afterOldCloseActivatedB": true,
+          "offlineBRendered": true,
+          "offlineLicenseManifestAndOriginalsMatch": true,
+          "workerHashes": {
+            "A": "7e03dda4f07285d3718d2f6bc4b29a8d9824d524e710435d6df448a7fbabb0c3",
+            "B": "42fac34f595da74ee5b31d027593ccd1bb590d35952aadb176aa413f66954cbf"
+          },
+          "htmlHashes": {
+            "A": "5f2781f0248800070d72b34458d686dfcbf778b3e989f9d9328193fa34e0d0c3",
+            "B": "98727d95b88faa3032e923e1367dd9366dedc7a513261b93c68521641eae0705"
+          },
+          "entryHashes": {
+            "A": "510e06811acf33eac02326c2fd4b50d45c4f9b6e9762203acaee012a0392d9b2",
+            "B": "adbf3fa609ed8f5cbf20f2382e7d9550ba6f5104febd0ae4ac4b845054700487"
+          }
+        }
+      ]
+    },
+    {
+      "command": "licenses-check.mjs",
+      "passed": true,
+      "records": [
+        {
+          "browser": "156.0.8078.81",
+          "node": "v24.22.1",
+          "visibleLink": true,
+          "offline": true,
+          "items": 68,
+          "links": 68,
+          "allMatch": true,
+          "unique": true,
+          "noticeOk": true,
+          "patchesOk": true,
+          "originCandidatesOk": true,
+          "generatorOk": true,
+          "external": []
+        }
+      ]
+    },
+    {
+      "command": "offline-check.mjs",
+      "passed": true,
+      "records": [
+        {
+          "cachedAssets": 156,
+          "licenseAssets": 148,
+          "offlineRendered": true,
+          "syntheticDataCached": false,
+          "updateFailed": true,
+          "oldControllerKept": true
+        },
+        {
+          "newGenerationWaiting": true,
+          "oldTabStillControlled": true
+        }
+      ]
+    }
+  ],
+  "passed": true,
+  "scope": "Isolated PoC targeted acceptance. Clipboard is a test double; OS clipboard, physical devices, external distribution and actual product integration are unverified."
+}

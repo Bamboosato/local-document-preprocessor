@@ -1,3 +1,9 @@
 *.pdf binary
 *.pptx binary
 *.xlsx binary
+
+# Hash-pinned research evidence and vendor originals must retain their bytes
+# across Windows autocrlf and Linux CI checkouts, including upstream CRLF.
+docs/evidence/mermaid-tiny*.json -text whitespace=cr-at-eol
+docs/third-party-source-licenses/mermaid-tiny/** -text whitespace=cr-at-eol
+scripts/tiny-release.json -text whitespace=cr-at-eol
