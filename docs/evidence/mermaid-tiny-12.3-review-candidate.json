@@ -1363,5 +1363,14 @@
     "localLinks": 399,
     "issues": 0,
     "gitDiffCheck": "passed"
+  },
+  "postPinResearchGuardCorrection": {
+    "path": "experiments/json-gates/source-records.test.mjs",
+    "workingBytesSha256": "6487b6c7196b2280026fe928ecfd913ee7ac930cf9c8bc467800d6e8e1270a1e",
+    "reason": "SL-09 historical inventory scope must not include versioned Tiny materials; preserve historical 226 hashes/count/extra-file rejection and reject unknown root entries",
+    "localDistributionGuardsPassed": 8,
+    "localSourceGuardsPassed": 11,
+    "productSourceOrArtifactsChanged": false,
+    "initialCIRun": 42755003298
   }
 }

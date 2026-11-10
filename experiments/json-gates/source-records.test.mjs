@@ -30,13 +30,23 @@ test('SL-08: ELK source variant evidence never claims the exact publisher checko
   assert.ok(Object.values(elk.generatedWorker.features).every(Boolean));assert.equal(elk.generatedWorker.sha256,sha256(await readFile(new URL('./node_modules/elkjs/lib/elk-worker.js',import.meta.url))));assert.match(elk.resolution,/not uniquely proven/);
   for(const entry of elk.originals)await original(entry);
 });
-test('SL-09: PDFium candidates and every committed original remain complete without implying binary coverage',async()=>{
+test('SL-09: PDFium candidates and historical anydoc/ELK/PDFium originals remain complete without implying binary coverage',async()=>{
   assert.equal(pdf.commit,'cb29e78f2ba00c9298714d5f4a8bf7765f1e802f');assert.match(pdf.scope,/not proof/);assert.equal(pdf.external.length,9);assert.equal(pdf.originals.length,29);
   for(const component of pdf.external){assert.match(component.revision,/^[a-f0-9]{40}$/);assert.ok(component.originalCount>0);assert.equal(component.inclusionInPublishedWASM,'not-proven');}
   for(const entry of pdf.originals)await original(entry);
   const expected=[...anydoc.packages.flatMap(p=>p.originals),...anydoc.workspaceOriginals,...elk.originals,...pdf.originals].map(e=>e.reviewPath).sort();
   const base=new URL('docs/third-party-source-licenses/',project);
-  const files=(await readdir(base,{recursive:true})).map(p=>p.replaceAll('\\','/')).filter(p=>p.endsWith('.txt')).map(p=>'docs/third-party-source-licenses/'+p).sort();assert.deepEqual(files,expected);assert.equal(files.length,226);
+  // This record owns the three historical research inventories. Tiny now has
+  // versioned originals and its own pinned-byte gate (npm run test:tiny).
+  // Keep rejecting extra/missing historical originals and unknown root entries.
+  const roots=['anydoc','elk','pdfium'],allowed=new Set([...roots,'mermaid-tiny']);
+  for(const entry of await readdir(base,{withFileTypes:true}))assert.ok((entry.isFile()&&entry.name==='.gitattributes')||(entry.isDirectory()&&allowed.has(entry.name)),'Unclassified source-license inventory');
+  const files=[];
+  for(const name of roots){
+    const entries=await readdir(new URL(name+'/',base),{recursive:true});
+    files.push(...entries.map(p=>p.replaceAll('\\','/')).filter(p=>p.endsWith('.txt')).map(p=>'docs/third-party-source-licenses/'+name+'/'+p));
+  }
+  assert.deepEqual(files.sort(),expected);assert.equal(files.length,226);
 });
 
 test('SL-10: published archive WASM matches installed bytes and fixed lock integrity',async()=>{
