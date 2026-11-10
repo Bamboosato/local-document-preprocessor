@@ -4,11 +4,16 @@ import { readFile, readdir } from 'node:fs/promises';
 import {verifyTinySnapshot} from './tiny-materials.mjs';
 import {verifyTinyRuntime} from './tiny-release.mjs';
 import {verifyPakoMaterials} from './pako-materials.mjs';
+import {verifyInternalNotices} from './internal-notices.mjs';
 
 const assetDirectory = new URL('../dist/assets/', import.meta.url);
 const licenseDirectory = new URL('../dist/licenses/', import.meta.url);
 const distributionRoot = new URL('../dist/', import.meta.url);
 const assets = await readdir(assetDirectory);
+for(const name of assets.filter(name=>name.endsWith('.js')&&!name.startsWith('mermaid.tiny-'))){
+  const code=await readFile(new URL(name,assetDirectory),'utf8');
+  assert.ok(code.startsWith('/*! Local Document Preprocessor: generated, bundled and minified application code; not unmodified upstream sources.'),'Generated JS processing notice missing');
+}
 assert.ok(assets.some(name=>name.startsWith('json.worker-')&&name.endsWith('.js')),'JSON worker asset missing');
 const licenses = await readdir(licenseDirectory);
 const workerName = assets.find(
@@ -28,6 +33,13 @@ const manifest = JSON.parse(await readFile(new URL('manifest.webmanifest', distr
 const serviceWorker = await readFile(new URL('sw.js', distributionRoot), 'utf8');
 const pwa=JSON.parse(await readFile(new URL('pwa-manifest.json',distributionRoot),'utf8'));
 const inventory=JSON.parse(await readFile(new URL('licenses/inventory.json',distributionRoot),'utf8'));
+const internal=await verifyInternalNotices();
+const pdfLib=inventory.packages.find(item=>item.name==='pdf-lib');
+for(const file of internal.files){
+  assert.ok(pdfLib.originals.some(item=>item.path===file.outputPath&&item.sha256===file.sha256),'Internal rights original missing');
+  assert.deepEqual(await readFile(new URL(file.outputPath,licenseDirectory)),file.bytes,'Internal rights original changed');
+  assert.ok(pwa.assets.some(item=>item.url==='/licenses/'+file.outputPath&&item.sha256===file.sha256),'Internal notice PWA mismatch');
+}
 const pakoMaterial=await verifyPakoMaterials();
 const pakoPackage=inventory.packages.find(item=>item.name==='pako');
 assert.equal(pakoPackage?.version,pakoMaterial.record.version);
@@ -77,7 +89,7 @@ assert.ok(
 assert.deepEqual(
   licenses.sort(),
   [
-    'PDFium-Apache-2.0.txt',
+    'PDFium-LICENSE.txt',
     'anydoc-MIT.txt',
     'embedpdf-pdfium-MIT.txt',
     'fflate-MIT.txt',
@@ -116,7 +128,7 @@ assert.ok(!assets.some(name=>/mermaid\.core|^elk[-.]|flowDiagram-/.test(name)),'
 for(const name of assets.filter(name=>name.endsWith('.js')))assert.ok(!/elkjs|org\.eclipse\.elk/.test(await readFile(new URL(name,assetDirectory),'utf8')),'ELK implementation marker in a distributed script');
 const lock=JSON.parse(await readFile(new URL('../package-lock.json',import.meta.url),'utf8'));
 const candidateEvidence=JSON.parse(await readFile(new URL('../docs/evidence/json-anydoc-target-licenses.json',import.meta.url),'utf8'));
-assert.deepEqual(inventory.wasmCandidates.map(({name,version})=>`${name}@${version}`),['encoding_rs@0.8.35','unicode-ident@1.0.24']);
+assert.deepEqual(inventory.wasmCandidates.map(({name,version})=>`${name}@${version}`),['encoding_rs@0.8.35','unicode-ident@1.0.24','zlib-rs@0.6.6']);
 assert.ok(licensePage.includes('WASM 依存候補の原文')&&licensePage.includes('WASM に含まれることや依存一覧の網羅性を示すものではありません'));
 for(const candidate of inventory.wasmCandidates){
   const source=candidateEvidence.packages.find(pkg=>pkg.name===candidate.name&&pkg.version===candidate.version);
@@ -149,7 +161,10 @@ for(const pkg of inventory.packages){
 }
 }
 const originalHashes=new Set(inventory.packages.flatMap(pkg=>pkg.originals.map(original=>original.sha256)));
-for(const name of ['PDFium-Apache-2.0.txt','anydoc-MIT.txt','embedpdf-pdfium-MIT.txt','fflate-MIT.txt','pdf-lib-MIT.txt']){
+assert.ok(!licenses.includes('PDFium-Apache-2.0.txt'),'Legacy partial-license alias must not be emitted');
+const pdfiumLicense=await readFile(new URL('PDFium-LICENSE.txt',licenseDirectory),'utf8');
+assert.ok(pdfiumLicense.includes('Redistribution and use in source and binary forms')&&pdfiumLicense.includes('Apache License'),'PDFium combined original must retain both sections');
+for(const name of ['PDFium-LICENSE.txt','anydoc-MIT.txt','embedpdf-pdfium-MIT.txt','fflate-MIT.txt','pdf-lib-MIT.txt']){
   assert.ok(originalHashes.has(createHash('sha256').update(await readFile(new URL(name,licenseDirectory))).digest('hex')),'Top-level license must be reachable from the index');
 }
 assert.ok(

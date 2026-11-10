@@ -1,0 +1,147 @@
+{
+  "schema": 1,
+  "date": "2026-11-10",
+  "baseCommit": "12f82f39150b7736482fa0eae26e70a42f805a02",
+  "mergedPR": 40,
+  "mergedHead": "ec3cffa5b0c5e2f8fb6de7715082eb65fca0b2f3",
+  "preMergeCI": {
+    "run": 42759001781,
+    "bothJobs": "success",
+    "unresolvedReviewThreads": 0,
+    "fixedHeadMatched": true
+  },
+  "sourceDiscovery": {
+    "packages": 117,
+    "selectedFiles": 2162,
+    "internalMarkedFiles": 187,
+    "nestedNoticeFiles": 0,
+    "overLimitFiles": 0
+  },
+  "sourceDiscoveryFile": "production-internal-notice-discovery.json",
+  "sourceDiscoverySha256": "ae3585c3109ef3e1970d68242f56db4c3e4ff0aeb49a63fb6d91e176ac9e6453",
+  "internalMaterialsSource": "pdf-lib-1.17.1-notices.json",
+  "internalMaterialsSourceSha256": "090dc7df6ad45a361eac862f4fa6c8e7657f8560e5a3b0eaedd60573087e5174",
+  "pdfLibSourcesVerifiedAgainstNpmArchive": 15,
+  "rootProductionPackages": 117,
+  "rootOriginalMaterials": 121,
+  "wasmCandidatePackages": 3,
+  "wasmCandidateOriginals": 8,
+  "wasmReview": "wasm-individual-condition-review.json",
+  "generation": "8ac0428d0eb24c556bee2616",
+  "pwaManifestSha256": "2344942689f811c51ef181ac771dc12ad0ce50d47338a871b16bf111ed319fe2",
+  "serviceWorkerSha256": "6ea6ff2967b674a6d474d89b0a0ab998ca37c81750b5cc0eabaa6983e5802f36",
+  "manifestAssets": 223,
+  "httpAssets": 225,
+  "httpFailures": 0,
+  "emittedRuntimeAssets": [
+    {
+      "path": "dist/assets/anydoc_wasm_bg-BGHlcte-.wasm",
+      "bytes": 6485379,
+      "sha256": "409e45e75062df06bed445c352ffddaf3bae15ff376f5d514d45f4891debd09e"
+    },
+    {
+      "path": "dist/assets/converter.worker-ogDQCSzr.js",
+      "bytes": 752588,
+      "sha256": "8ac5bc078bb82a53aa973f30523edda5257931ab5232e452b58a5ccbe641ab41"
+    },
+    {
+      "path": "dist/assets/index-_-tn7U5c.css",
+      "bytes": 15304,
+      "sha256": "86d7d2e6fb682593d0f2fc655cde050cf96179e64d8a66c944e18d7572b75937"
+    },
+    {
+      "path": "dist/assets/index-D7qOaFf2.js",
+      "bytes": 423936,
+      "sha256": "eda64058c814b3cc82594a29dcb40c92bb1ae6c622b0eadec5689508129df81c"
+    },
+    {
+      "path": "dist/assets/json.worker-CAJiq6hk.js",
+      "bytes": 168140,
+      "sha256": "6e75d910874ee7f850cdd0a681e700018eb4068ef81b3aebfa015d09e3cf9aca"
+    },
+    {
+      "path": "dist/assets/mermaid.tiny-B1X2HQuM.js",
+      "bytes": 2852578,
+      "sha256": "c41f5236091b83f524c4940f97a16b2b14a76f21ff84aea4fd6b66421d8a2a9a"
+    },
+    {
+      "path": "dist/assets/pdfium-RAgkpwfK.wasm",
+      "bytes": 4633788,
+      "sha256": "c0af5a6aca30d7e54a149c3a68e317116ca906d6edc28fd3318b12c7d9478ac8"
+    }
+  ],
+  "unchangedRawTinyAndWasmAssets": 3,
+  "generatedApplicationJsHaveProcessingBanner": 3,
+  "validation": {
+    "licenseTests": 2,
+    "missingProcessingBannerRejected": true,
+    "distributionCheck": "passed after filename expectation corrected",
+    "targetedE2E": {
+      "startTime": "2026-11-10T05:13:41.633Z",
+      "duration": 12661.307,
+      "expected": 3,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "finalNamedArtifactPWA": {
+      "startTime": "2026-11-10T05:15:54.293Z",
+      "duration": 8923.409,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "rootProductionAudit": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "rootFullAudit": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "tinyAudit": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "tinyTargets": 67,
+    "licenseTestFilesSequential": true
+  },
+  "limitations": [
+    "Discovery markers are not a complete rights or NOTICE assessment",
+    "PDF.js historical NOTICE and referenced upstream MIT originals require follow-up",
+    "Only three anydoc registry candidates individually reviewed; 93 plus workspace obligations remain",
+    "PDFium supplied BSD-style section and Apache text retained, internal inclusion/applicability unresolved",
+    "No physical-device or actual-delivery proof; macOS/iOS excluded",
+    "No archive publication/attachment or deployment"
+  ],
+  "scope": "Generated application chunks only have post-minification labels; fixed Tiny JS and both WASM bytes unchanged",
+  "documentation": {
+    "documents": 83,
+    "localLinks": 411,
+    "issues": 0,
+    "gitDiffCheck": "passed"
+  },
+  "testedSourceSha256": {
+    "vite.config.ts": "cc09e9dd09872b70adb40edb1609746c8ab67aad112f9094a496134913186fa3",
+    "package.json": "bf182ed032b4b5d6103aa7655349170a3675bcb1d8259e6017ec110fde8fa553",
+    "scripts/internal-notices.mjs": "f3b34984c4f3942bd95eec21d2316eaf1d0fd1aea66b3dadf042f2c7c2d7ef67",
+    "scripts/internal-notices.test.mjs": "2cdd13d6501272b032d635739f82faff871837c5a2b5d63528a03d0ea6fe19b9",
+    "scripts/review-production-notices.mjs": "fc66f8e0bc0d7a013aab1c085b73768ea2ca0a7b9ebdb12be48c1e25492f5c26",
+    "scripts/copy-third-party-licenses.mjs": "9465296717d2bdb2f4e53bc429462cd60378e3907790d3ad37b27ab3aaeb3da0",
+    "scripts/check-dist.mjs": "ee8f515f6b94405e569740b3a4aeb2dca606484f815be169f7b2bc686dbcc71e",
+    "tests/e2e/pwa.spec.ts": "835d51adf1ec6cd654232e89e02bd01893ac16d4e91e74fba08bf9eaad0015ad"
+  }
+}

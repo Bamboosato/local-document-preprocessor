@@ -1,0 +1,234 @@
+{
+  "schema": 1,
+  "date": "2026-11-10",
+  "baseCommit": "12f82f39150b7736482fa0eae26e70a42f805a02",
+  "anydocSourceCommit": "4a45addbd607e8b59f0c263bca26aab228e10370",
+  "sourceInventorySha256": "2d7b682af4cfb0e25e94594e9a40665b9b51454c25488cb2b58053806abd078f",
+  "reviewedRegistryCandidates": 3,
+  "remainingRegistryCandidates": 93,
+  "workspaceOriginalsStillSeparate": 2,
+  "packages": [
+    {
+      "name": "encoding_rs",
+      "version": "0.8.35",
+      "declaredLicense": "(Apache-2.0 OR MIT) AND BSD-3-Clause",
+      "sourceArchive": "https://static.crates.io/crates/encoding_rs/encoding_rs-0.8.35.crate",
+      "archiveSha256": "75030f3c4f45dafd7586dd6780965a8c7e8e285a5ecb86713e63a79c5b2766f3",
+      "archiveVerified": true,
+      "noticeCandidates": [
+        {
+          "path": "COPYRIGHT",
+          "bytes": 713,
+          "sha256": "11789f45bb180841cd362a5eee6789c68ddb573a11105e30768c308a6add0190"
+        },
+        {
+          "path": "LICENSE-APACHE",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "LICENSE-MIT",
+          "bytes": 1053,
+          "sha256": "3fa4ca83dcc9237839b1bdeb2e6d16bdfb5ec0c5ce42b24694d8bbf0dcbef72c"
+        },
+        {
+          "path": "LICENSE-WHATWG",
+          "bytes": 1501,
+          "sha256": "838118388fe5c2e7f1dbbaeed13e1c7f3ebf88be91319c7c1d77c18e987d1a50"
+        }
+      ],
+      "sourceFileCount": 102,
+      "metadata": {
+        "Cargo.toml": "d7405d2bcf99cf9729075473c45f677630f4c1947c8ba9757db607f2025a7da2",
+        "Cargo.toml.orig": "7fece6ec8988f17d2bd64559ad444a5ceaed1e3cafb3832fc193e314b441bde3",
+        "src/lib.rs": "c4d9fa1c43105e2310122f1b9197125032e607fe6f79bc22769b340de76e2430"
+      },
+      "preparationRecommendation": "MIT AND BSD-3-Clause",
+      "rights": [
+        "Mozilla Foundation",
+        "WHATWG (Apple, Google, Mozilla, Microsoft)"
+      ],
+      "requirements": [
+        "Retain MIT copyright/permission notice",
+        "Retain WHATWG copyright, conditions and disclaimer with source; reproduce in binary documentation/materials",
+        "No endorsement using rightsholder/contributor names without permission"
+      ],
+      "additionalSourceOffer": "No general source-download requirement identified in these reviewed MIT/BSD texts; not a finding about all anydoc dependencies",
+      "originals": [
+        {
+          "path": "licenses/encoding_rs@0.8.35/COPYRIGHT",
+          "sha256": "11789f45bb180841cd362a5eee6789c68ddb573a11105e30768c308a6add0190",
+          "bytes": 713,
+          "reviewPath": "docs/third-party-source-licenses/anydoc/encoding_rs@0.8.35/000-COPYRIGHT.txt"
+        },
+        {
+          "path": "licenses/encoding_rs@0.8.35/LICENSE-APACHE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358,
+          "reviewPath": "docs/third-party-source-licenses/anydoc/encoding_rs@0.8.35/001-LICENSE-APACHE.txt"
+        },
+        {
+          "path": "licenses/encoding_rs@0.8.35/LICENSE-MIT",
+          "sha256": "3fa4ca83dcc9237839b1bdeb2e6d16bdfb5ec0c5ce42b24694d8bbf0dcbef72c",
+          "bytes": 1053,
+          "reviewPath": "docs/third-party-source-licenses/anydoc/encoding_rs@0.8.35/002-LICENSE-MIT.txt"
+        },
+        {
+          "path": "licenses/encoding_rs@0.8.35/LICENSE-WHATWG",
+          "sha256": "838118388fe5c2e7f1dbbaeed13e1c7f3ebf88be91319c7c1d77c18e987d1a50",
+          "bytes": 1501,
+          "reviewPath": "docs/third-party-source-licenses/anydoc/encoding_rs@0.8.35/003-LICENSE-WHATWG.txt"
+        }
+      ],
+      "candidateMaterials": "prepared offline in product; all collected alternative originals retained",
+      "selectionStatus": "Recommendation for preparation, not final public-distribution selection",
+      "publishedWasmInclusion": "not-proven",
+      "allApplicableConditionsSatisfied": false,
+      "remaining": [
+        "Confirm published-WASM relation and applicable scope",
+        "Confirm changes and retained notices for final distribution",
+        "Do not infer exclusion of other 93 registry dependencies or two workspace originals"
+      ]
+    },
+    {
+      "name": "unicode-ident",
+      "version": "1.0.24",
+      "declaredLicense": "(MIT OR Apache-2.0) AND Unicode-3.0",
+      "sourceArchive": "https://static.crates.io/crates/unicode-ident/unicode-ident-1.0.24.crate",
+      "archiveSha256": "e6e4313cd5fcd3dad5cafa179702e2b244f760991f45397d14d4ebf38247da75",
+      "archiveVerified": true,
+      "noticeCandidates": [
+        {
+          "path": "LICENSE-APACHE",
+          "bytes": 9723,
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "path": "LICENSE-MIT",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        },
+        {
+          "path": "LICENSE-UNICODE",
+          "bytes": 1995,
+          "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+        }
+      ],
+      "sourceFileCount": 26,
+      "metadata": {
+        "Cargo.toml": "0bb9c0e006a21355cb85c7df72e78dd8ba6fffbb7dc3f1e7a4c19af53cd354da",
+        "Cargo.toml.orig": "8d0abaf7ce10cb78f26edcd613dfe5a47faa4381e6e251c7d1c123608d2e037a",
+        "src/lib.rs": "078912e7c64ba3ea1081b88c2610deba31eeb057c28f9d78e929db4856b7774f"
+      },
+      "preparationRecommendation": "MIT AND Unicode-3.0",
+      "rights": [
+        "Unicode, Inc. (1991-2023 as in fixed original)"
+      ],
+      "requirements": [
+        "Retain the supplied MIT permission notice without inventing missing copyright text",
+        "Retain Unicode copyright and permission notice with files/software or associated documentation",
+        "Do not use holder name for advertising without prior written authorization"
+      ],
+      "additionalSourceOffer": "No general source-download requirement identified in these reviewed MIT/Unicode texts; original MIT file has no explicit copyright line and author/rightsholder scope remains to be confirmed",
+      "originals": [
+        {
+          "path": "licenses/unicode-ident@1.0.24/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+          "bytes": 9723,
+          "reviewPath": "docs/third-party-source-licenses/anydoc/unicode-ident@1.0.24/000-LICENSE-APACHE.txt"
+        },
+        {
+          "path": "licenses/unicode-ident@1.0.24/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+          "bytes": 1023,
+          "reviewPath": "docs/third-party-source-licenses/anydoc/unicode-ident@1.0.24/001-LICENSE-MIT.txt"
+        },
+        {
+          "path": "licenses/unicode-ident@1.0.24/LICENSE-UNICODE",
+          "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1",
+          "bytes": 1995,
+          "reviewPath": "docs/third-party-source-licenses/anydoc/unicode-ident@1.0.24/002-LICENSE-UNICODE.txt"
+        }
+      ],
+      "candidateMaterials": "prepared offline in product; all collected alternative originals retained",
+      "selectionStatus": "Recommendation for preparation, not final public-distribution selection",
+      "publishedWasmInclusion": "not-proven",
+      "allApplicableConditionsSatisfied": false,
+      "remaining": [
+        "Confirm published-WASM relation and applicable scope",
+        "Confirm changes and retained notices for final distribution",
+        "Do not infer exclusion of other 93 registry dependencies or two workspace originals"
+      ]
+    },
+    {
+      "name": "zlib-rs",
+      "version": "0.6.6",
+      "declaredLicense": "Zlib",
+      "sourceArchive": "https://static.crates.io/crates/zlib-rs/zlib-rs-0.6.6.crate",
+      "archiveSha256": "b142a20ec14a91d5bc708c1dc21b080c550113d8aa77afa29635673a65dd02c5",
+      "archiveVerified": true,
+      "noticeCandidates": [
+        {
+          "path": "LICENSE",
+          "bytes": 856,
+          "sha256": "e72111c52b7d96ebe25348dee19f0744f444d3c95ae6b1ecb6ccaecc5bce05ba"
+        }
+      ],
+      "sourceFileCount": 53,
+      "metadata": {
+        "Cargo.toml": "a23b4929dfa7fabec82da18b074b717762d8181b8668a5b8289735b90f3f44da",
+        "Cargo.toml.orig": "23d9784faacbe6aa6295f4de54f5cf75d0401f9e2e468676f5975d00962931ac",
+        "src/lib.rs": "402a892c266eeec8ff3f8309f28394aafe2c44c3d68b73c0ccea3cafa315a0cd"
+      },
+      "preparationRecommendation": "Zlib",
+      "rights": [
+        "Trifecta Tech Foundation (2024 as in fixed original)"
+      ],
+      "requirements": [
+        "Do not misrepresent origin",
+        "Plainly identify altered source versions",
+        "Retain notice in source distribution; product-documentation acknowledgment is appreciated, not required"
+      ],
+      "additionalSourceOffer": "No general source-download requirement identified in this reviewed Zlib text; generated WASM source/object treatment and change scope remain separate",
+      "originals": [
+        {
+          "path": "licenses/zlib-rs@0.6.6/LICENSE",
+          "sha256": "e72111c52b7d96ebe25348dee19f0744f444d3c95ae6b1ecb6ccaecc5bce05ba",
+          "bytes": 856,
+          "reviewPath": "docs/third-party-source-licenses/anydoc/zlib-rs@0.6.6/000-LICENSE.txt"
+        }
+      ],
+      "candidateMaterials": "prepared offline in product; all collected alternative originals retained",
+      "selectionStatus": "Recommendation for preparation, not final public-distribution selection",
+      "publishedWasmInclusion": "not-proven",
+      "allApplicableConditionsSatisfied": false,
+      "remaining": [
+        "Confirm published-WASM relation and applicable scope",
+        "Confirm changes and retained notices for final distribution",
+        "Do not infer exclusion of other 93 registry dependencies or two workspace originals"
+      ]
+    }
+  ],
+  "pdfium": {
+    "wrapper": "@embedpdf/pdfium@2.14.4",
+    "wrapperLicense": "MIT",
+    "suppliedOriginal": "node_modules/@embedpdf/pdfium/LICENSE.pdfium",
+    "suppliedOriginalSha256": "b033ffb8fc19c23ca81f7e98019ab658cc6f4cf14587c7c6a2a67fb0f6ac0f5a",
+    "retainedSections": [
+      "PDFium BSD-style three-clause conditions",
+      "Apache License Version 2.0 full text"
+    ],
+    "distributionPath": "PDFium-LICENSE.txt",
+    "contentChanged": false,
+    "requirements": [
+      "Retain supplied copyright, conditions and disclaimer; reproduce binary notices in documentation/materials",
+      "No endorsement without permission",
+      "Check Apache section 4 license/change/retention/NOTICE conditions for applicable portions"
+    ],
+    "remaining": [
+      "Identify applicable sections and historical NOTICE scope for actual WASM components",
+      "Nine external component revisions and 29 conservative source originals remain individual candidates, not a proved linked SBOM"
+    ]
+  },
+  "scope": "Technical condition preparation from fixed originals; no public release approval and no inference of complete WASM attribution"
+}

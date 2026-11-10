@@ -1,0 +1,4169 @@
+{
+  "schema": 1,
+  "date": "2026-11-10",
+  "lockSha256": "ab7c8dd6f32c47ff1f324d4050a462d6b67794c8a05b04c24aab66372e21274c",
+  "scope": "Installed source-package discovery, not proof of runtime contribution, archive authenticity or complete notice coverage",
+  "selection": "JS/TS/MD/TXT and LICENSE/COPYING/COPYRIGHT/NOTICE/AUTHORS names; <=4000000 bytes each; nested node_modules handled only by separate lock entries",
+  "packages": [
+    {
+      "name": "@embedpdf/pdfium",
+      "version": "2.14.4",
+      "lockPath": "node_modules/@embedpdf/pdfium",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-0tDPQEH1WtfXcASNVp5U3dqfzZboNvcE4rDok/P4JCN+DCTaJDG2E9lYHGMo9FtuS2IdHgrzkmPRpOo5WV9MKQ==",
+      "selectedFiles": 12,
+      "selectedInputListSha256": "4b1c2945fb0698b9f74b2e7d9faad38dc038b2909102763b58014ae9e2d709f9",
+      "skipped": {
+        "nonSelected": 6,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1075,
+          "sha256": "f5031b66adba8ef5ef57666deff980a7f2ccff5c8a8c22a8117e854d2b8dfcd3"
+        },
+        {
+          "path": "LICENSE.pdfium",
+          "bytes": 12880,
+          "sha256": "b033ffb8fc19c23ca81f7e98019ab658cc6f4cf14587c7c6a2a67fb0f6ac0f5a"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "@firecrawl/anydoc-wasm",
+      "version": "0.1.7",
+      "lockPath": "node_modules/@firecrawl/anydoc-wasm",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-FkuHl7K8Cl/kyt1ZS9DbX/0GubvW7dHPgiDWrmMoFDFI3GGAtyWsyvAnoqncbFA6yW/ZCjSiZ8jjhH0zeeBxfQ==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "3369e0ecfaba3286d8f5535b5c1f155052ac81f96b319a0f08708dd0ea71356f",
+      "skipped": {
+        "nonSelected": 2,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1084,
+          "sha256": "03a9e7657aac6536fb6458bd220347c4e7f85bd0a51d8d9e8528530b7a682ade"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "@mermaid-js/tiny",
+      "version": "12.3.0",
+      "lockPath": "node_modules/@mermaid-js/tiny",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-90BO2kQvmQWj9YjBX2IsLHCw61rN69dPTn5wFfDu+b9aT7qtzfzTA3wpKWeaRAKK85refSo9How5EOeY39DWfA==",
+      "selectedFiles": 3,
+      "selectedInputListSha256": "bfa37184e876b97937c2f5c706323ee74ee8e2e55288aa3398cef12c5a49701e",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1089,
+          "sha256": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "dist/mermaid.tiny.js",
+          "bytes": 2852578,
+          "sha256": "c41f5236091b83f524c4940f97a16b2b14a76f21ff84aea4fd6b66421d8a2a9a",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "@pdf-lib/standard-fonts",
+      "version": "1.0.0",
+      "lockPath": "node_modules/@pdf-lib/standard-fonts",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-hU30BK9IUN/su0Mn9VdlVKsWBS6GyhVfqjwl1FjZN4TxP6cCw0jP2w7V3Hf5uX7M0AZJ16vey9yE0ny7Sa59ZA==",
+      "selectedFiles": 20,
+      "selectedInputListSha256": "c849b609663e8a37618b7fc71e5d05fd93acc8415fff699f18394158c6a6676a",
+      "skipped": {
+        "nonSelected": 31,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE.md",
+          "bytes": 1070,
+          "sha256": "45cc2bb9957ed43f5c7f5eb1912f9f670730394d614079510477cae626194649"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "README.md",
+          "bytes": 2852,
+          "sha256": "3d90382b943272684c0387f6a25fc22ba93b823bbb5836b899a624b4a848450b",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "dist/standard-fonts.js",
+          "bytes": 359988,
+          "sha256": "8246278054381daf12e2e3d94ca2bf5a880d7171845955cff2f4766ae56d9811",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "es/utils.js",
+          "bytes": 1950,
+          "sha256": "dbd0352f9210373b1621123e91d417b45b56e47034549ffec5deda649d98afd0",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/utils.js",
+          "bytes": 2197,
+          "sha256": "9b2621d73b603671b9f9680abb1290a2972f79a0f5388ee2e2723c8c9c2fa82e",
+          "categories": [
+            "rights-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "@pdf-lib/upng",
+      "version": "1.0.1",
+      "lockPath": "node_modules/@pdf-lib/upng",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-dQK2FUMQtowVP00mtIksrlZhdFXQZPC+taih1q4CvPZ5vqdxR/LKBaFg0oAfzd1GlHZXXSPdQfzQnt+ViGvEIQ==",
+      "selectedFiles": 7,
+      "selectedInputListSha256": "5775251175a2e831d5909914556c9dae4c0c263a7ea89376995bf018bd482035",
+      "skipped": {
+        "nonSelected": 2,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1065,
+          "sha256": "c1fb8861eca211bf5aea574358aba7039396c0c1824c2a1477cc126d398efd89"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "dist/UPNG.js",
+          "bytes": 269521,
+          "sha256": "911872ae298adadf47d9ae29f21441e6a5c823f6e550445da5bb2a03840239c2",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "dist/UPNG.min.js",
+          "bytes": 269521,
+          "sha256": "911872ae298adadf47d9ae29f21441e6a5c823f6e550445da5bb2a03840239c2",
+          "categories": [
+            "rights-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "@types/debug",
+      "version": "4.1.13",
+      "lockPath": "node_modules/@types/debug",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-KSVgmQmzMwPlmtljOomayoR89W4FynCAi3E8PPs7vmDVPe84hT+vGPKkJfThkmXs0x0jAaa9U8uW8bbfyS2fWw==",
+      "selectedFiles": 3,
+      "selectedInputListSha256": "b50fabe8661aef4a7bbabe1e49809b8fda6ac637cc6d74802e56c53bcfb723e9",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1141,
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "README.md",
+          "bytes": 2253,
+          "sha256": "08701be73153c2555900347dcf4c603dec7493950849669f2ce3e3efedd86f05",
+          "categories": [
+            "origin-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "@types/estree",
+      "version": "1.0.9",
+      "lockPath": "node_modules/@types/estree",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "781beb42a4ce58480dc5862370d8f19696882163b06346c065267445ebfc4a33",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1141,
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "README.md",
+          "bytes": 458,
+          "sha256": "284daa8ee1deb294176001d299e950b7af96026497c7147e000f15c00ee6f541",
+          "categories": [
+            "origin-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "@types/estree-jsx",
+      "version": "1.0.5",
+      "lockPath": "node_modules/@types/estree-jsx",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-52CcUVNFyfb1A2ALocQw/Dd1BQFNmSdkuC3BkZ6iqhdMfQz7JWOFRuJFloOzjk+6WijU56m9oKXFAXc7o3Towg==",
+      "selectedFiles": 3,
+      "selectedInputListSha256": "6cbea9790a75d73ffeda91fb7564d8c928d8ba3e2c98c97907b3c5a87f86fed9",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1141,
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "README.md",
+          "bytes": 519,
+          "sha256": "e4532a20fcaf2c20dd95730b302a6d146ca9a1a2a990632b90f79cacbe9d3ec6",
+          "categories": [
+            "origin-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "@types/hast",
+      "version": "3.0.5",
+      "lockPath": "node_modules/@types/hast",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-rp/ezSWaD1m44dPKICGhiskI13nVr7qTloFwDa/IYkhhf5nzwP+zIQcIJh3WIFSBOy/H1PzB40jPjMDksN4F+g==",
+      "selectedFiles": 3,
+      "selectedInputListSha256": "b563e6dd5d9cffc224e947e23c9e35f3350bde374c665a178a003c77d6244cb3",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1141,
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "README.md",
+          "bytes": 711,
+          "sha256": "cf5e201104dfd6f9faaf321d08179f01e8d59305a07474e36d983989683ed441",
+          "categories": [
+            "origin-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "@types/mdast",
+      "version": "4.0.4",
+      "lockPath": "node_modules/@types/mdast",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-kGaNbPh1k7AFzgpud/gMdvIm5xuECykRR+JnWKQno9TAXVa6WIVCGTPvYGekIDL4uwCZQSYbUxNBSb1aUo79oA==",
+      "selectedFiles": 3,
+      "selectedInputListSha256": "acfa9ac46a219d0fcd3053fbf5e0accc2b40d497d6e9e1a26b82dc0902b36fba",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1141,
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "README.md",
+          "bytes": 706,
+          "sha256": "7184da5e880de0de1dc43eb88d210ca52a8a4d6bbe8c9263b678629df77669ce",
+          "categories": [
+            "origin-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "@types/ms",
+      "version": "2.1.0",
+      "lockPath": "node_modules/@types/ms",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==",
+      "selectedFiles": 3,
+      "selectedInputListSha256": "442dd9e3fefa34e2c647f625d1e106f899291359f9740b9ac54867ccd53c87bb",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1141,
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "README.md",
+          "bytes": 1863,
+          "sha256": "144b46b23751e926b606486898135b4a36b5cb2e55424d09110e5b153507ee94",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "index.d.ts",
+          "bytes": 1301,
+          "sha256": "fb893a0dfc3c9fb0f9ca93d0648694dd95f33cbad2c0f2c629f842981dfd4e2e",
+          "categories": [
+            "origin-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "@types/react",
+      "version": "19.2.18",
+      "lockPath": "node_modules/@types/react",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-AnzbBERsrLKtk2XSfTbYRLjQPdy116Sty4q+T+Bp3IC4l6jNBvreVPAHmpq9qhXQM7CXZPjLVmGMw9sy+hxQ3w==",
+      "selectedFiles": 15,
+      "selectedInputListSha256": "b8f729b4b1f459a45bec89748865078498f0455620790290a479c6f585e827cc",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1141,
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "README.md",
+          "bytes": 1750,
+          "sha256": "b9a756305320ca694df8235f7d7c64c3c04c327f656ac071e659ecd611e47663",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "index.d.ts",
+          "bytes": 177882,
+          "sha256": "814d5c7384f3ca276e9dc4bcfde5545801a3ea0bfae09916b3336774e662fd1b",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "ts5.0/index.d.ts",
+          "bytes": 176855,
+          "sha256": "f0a0ded7934137e0d1bb06ce10204d05f0d08557d054c28d8703a0729c385031",
+          "categories": [
+            "origin-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "@types/unist",
+      "version": "3.0.3",
+      "lockPath": "node_modules/@types/unist",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==",
+      "selectedFiles": 3,
+      "selectedInputListSha256": "7609523666cd881b6d0c048189cd8b46212c82bcc1018d075637ce029c5a4c73",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1141,
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "README.md",
+          "bytes": 770,
+          "sha256": "99b49ccf27f6da9bdb7cc65771f210a9f25a64f9db2876af0b0da43772c87292",
+          "categories": [
+            "origin-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "@ungap/structured-clone",
+      "version": "1.3.3",
+      "lockPath": "node_modules/@ungap/structured-clone",
+      "declaredLicense": "ISC",
+      "integrity": "sha512-60YRaenCQcVjYEKOcG824+DRGGIQ3VKErcBoAEDJZz5bKIs2ZG+X/H9Nk+Q6EVkwJk5QNApxbrc5QtBSwtrXAg==",
+      "selectedFiles": 13,
+      "selectedInputListSha256": "de1520581071e679438dcef0dae21b9f478f2e08968d8487c7f6fdce659e1d72",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 765,
+          "sha256": "dc6d4961d8b6ee747231582ae9c53ce1d66bf76bc9f5a28f554c0e97210953bf"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "bail",
+      "version": "2.0.2",
+      "lockPath": "node_modules/bail",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-0xO6mYd7JB2YesxDKplafRpsiOzPt9V02ddPCLbY1xYGPOX24NTyN50qnUxgCPcSoYMhKpAuBTjQoRZCAkUDRw==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "8176d7cf10fb7437b9c93b65bb00839dc1662479e3311cdee939f88566e37f46",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "ccount",
+      "version": "2.0.1",
+      "lockPath": "node_modules/ccount",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "014a55f0f98ae031b675fa027795d54bc36343b4893fe55894497c638648e7de",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "character-entities",
+      "version": "2.0.2",
+      "lockPath": "node_modules/character-entities",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-shx7oQ0Awen/BRIdkjkvz54PnEEI/EjwXDSIZp86/KKdbafHh1Df/RYGBhn4hbe2+uKC9FnT5UCEdyPz3ai9hQ==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "ef2a15a1eb6ae0c043c215f23dca40d372d9fd78fd0be9e64a4a3c8dc0336435",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "character-entities-html4",
+      "version": "2.1.0",
+      "lockPath": "node_modules/character-entities-html4",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-1v7fgQRj6hnSwFpq1Eu0ynr/CDEw0rXo2B61qXrLNdHZmPKgb7fqS1a2JwF0rISo9q77jDI8VMEHoApn8qDoZA==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "289a3f2aaf2dbf68e4cec5be057f64554328dffd8abf28530d320ba4074fc87f",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "character-entities-legacy",
+      "version": "3.0.0",
+      "lockPath": "node_modules/character-entities-legacy",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-RpPp0asT/6ufRm//AJVwpViZbGM/MkjQFxJccQRHmISF/22NBtsHqAWmL+/pmkPWoIUJdWyeVleTl1wydHATVQ==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "8b85f8506e5fc7c124b26d4482b63e0476bab114d5b9f2754270671b6dd440f2",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "character-reference-invalid",
+      "version": "2.0.1",
+      "lockPath": "node_modules/character-reference-invalid",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-iBZ4F4wRbyORVsu0jPV7gXkOsGYjGHPmAyv+HiHG8gi5PtC9KI2j1+v8/tlibRvjoWX027ypmG/n0HtO5t7unw==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "bd4f4855aac5f2cf04046a37edd223e659bcbeb33c021ae08cfca424fac79586",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "comma-separated-tokens",
+      "version": "2.0.3",
+      "lockPath": "node_modules/comma-separated-tokens",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "24345dd1603a0c7353924aad8965b54085636bdc4954dfd19a6c9f81e63dc5ee",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "csstype",
+      "version": "3.2.3",
+      "lockPath": "node_modules/csstype",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==",
+      "selectedFiles": 3,
+      "selectedInputListSha256": "e30a8785857b17221efea02d0403ea548bd33781ce046933fae201abff5450a2",
+      "skipped": {
+        "nonSelected": 2,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1062,
+          "sha256": "11d55bd4541c75ee7879547ac49089c489163dae49551389713c3d026cab383e"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "debug",
+      "version": "4.4.3",
+      "lockPath": "node_modules/debug",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-RGwwWnwQvkVfavKVt22FGLw+xYSdzARwm0ru6DhTVA3umU5hZc28V3kO4stgYryrTlLpuvgI9GiijltAjNbcqA==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "b12b8f86a1cf1ad31ac71e0c450679c9f7c5b3b70d643f3306ce6e9de4d0f6ba",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1139,
+          "sha256": "3a61c6c96caf5c1d9b623fb9b04c822b783dfcb78aa7e49c76a3f643e6ed7f95"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "README.md",
+          "bytes": 22115,
+          "sha256": "486cb669048bd5014adf9ea117e27a45c4e61b0e668f464c724273beb8170797",
+          "categories": [
+            "rights-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "decode-named-character-reference",
+      "version": "1.3.0",
+      "lockPath": "node_modules/decode-named-character-reference",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-GtpQYB283KrPp6nRw50q3U9/VfOutZOe103qlN7BPP6Ad27xYnOIWv4lPzo8HCAL+mMZofJ9KEy30fq6MfaK6Q==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "0ed03cafb19a6804fc5c655ccbbb47eebc6fc07cce9d76bc5ce64406f74282b0",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "dequal",
+      "version": "2.0.3",
+      "lockPath": "node_modules/dequal",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==",
+      "selectedFiles": 10,
+      "selectedInputListSha256": "0736e5fad8ef466810250e77d5b5ceb597bfe03400c0cd5882f538e76fe4e0dd",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1114,
+          "sha256": "306fa513e39b23a6e8747520de761809d206b99800ef41907b530226574c59ae"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "devlop",
+      "version": "1.1.0",
+      "lockPath": "node_modules/devlop",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==",
+      "selectedFiles": 5,
+      "selectedInputListSha256": "3740363c240a7d19b1db1a8f0486aa8e282d48c7186c8506bacfade9bf6d0cc8",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "6f296a5eccc1dc96714bb94ebaa9cac25b0a1467d74cc5263ac4d0646ab01f62"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "escape-string-regexp",
+      "version": "5.0.0",
+      "lockPath": "node_modules/escape-string-regexp",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "90ecd0a0cb428204a9271c92502ae344949244795798348154d0eff8890736b2",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1117,
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "estree-util-is-identifier-name",
+      "version": "3.0.0",
+      "lockPath": "node_modules/estree-util-is-identifier-name",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-hFtqIDZTIUZ9BXLb8y4pYGyk6+wekIivNVTcmvk8NoOh+VeRn5y6cEHzbURrWbfp1fIqdVipilzj+lfaadNZmg==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "f8d934e13d19c01dea494924327c8a658a171448e065e3b25e4ef807fb620011",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "extend",
+      "version": "3.0.2",
+      "lockPath": "node_modules/extend",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "4ddbfa9095ad813dd20b7af7b451caeb21835253da3f65202431f4b69e8ab9df",
+      "skipped": {
+        "nonSelected": 6,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1081,
+          "sha256": "97af7428f93afbab9bf79cd09254da1357161794f4255eb1b4599f04dd2d2e7c"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "fflate",
+      "version": "0.8.3",
+      "lockPath": "node_modules/fflate",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-tbZNuJrLwGUp3zshBtdy4W+ORxZuIh8a5ilyIEQDC5rY1f3U20JMry0Ll3WBzU58EZKsEuJFXhb5gwv8CsPvgA==",
+      "selectedFiles": 13,
+      "selectedInputListSha256": "8836009dfdf84d945738e74a295e02ff3e18c23a1484a0b177d0173171312431",
+      "skipped": {
+        "nonSelected": 4,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1069,
+          "sha256": "0a1df3a083d0c010560aa342e87959c8c1070e6fd54545741f083f22d0c8b551"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "README.md",
+          "bytes": 27362,
+          "sha256": "021950f8aa043d57876d65917abb546c29de4007e8f873cac142c5394d4e17bc",
+          "categories": [
+            "origin-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "hast-util-to-jsx-runtime",
+      "version": "2.3.6",
+      "lockPath": "node_modules/hast-util-to-jsx-runtime",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-zl6s8LwNyo1P9uw+XJGvZtdFF1GdAkOg8ujOw+4Pyb76874fLps4ueHXDhXWdk6YHQ6OgUtinliG7RsYvCbbBg==",
+      "selectedFiles": 8,
+      "selectedInputListSha256": "03aec19ea0c84e775682083ecb269353a69d7c186acd2144021d09e3f4dbfa0b",
+      "skipped": {
+        "nonSelected": 2,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "hast-util-whitespace",
+      "version": "3.0.0",
+      "lockPath": "node_modules/hast-util-whitespace",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-88JUN06ipLwsnv+dVn+OIYOvAuvBMy/Qoi6O7mQHxdPXpjy+Cd6xRkWwux7DKO+4sYILtLBRIKgsdpS2gQc7qw==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "ec24080a01c4db66de670fcd21ca1f999b4c6006d71f1d31f4c243222cba7234",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "html-url-attributes",
+      "version": "3.0.1",
+      "lockPath": "node_modules/html-url-attributes",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-ol6UPyBWqsrO6EJySPz2O7ZSr856WDrEzM5zMqp+FJJLGMW35cLYmmZnl0vztAZxRUoNZJFTCohfjuIJ8I4QBQ==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "8486ee689f3e6735a4e31a6793df5867ee0df6abdd6340000cd8b9bb656af57a",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1070,
+          "sha256": "e18cf5173e928f808f0cd208097fee8fbec9d28fc0255213938e4c559e29ff58"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "inline-style-parser",
+      "version": "0.2.7",
+      "lockPath": "node_modules/inline-style-parser",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-Nb2ctOyNR8DqQoR0OwRG95uNWIC0C1lCgf5Naz5H6Ji72KZ8OcFZLz2P5sNgwlyoJ8Yif11oMuYs5pBQa86csA==",
+      "selectedFiles": 7,
+      "selectedInputListSha256": "ffc0a297fe97b92f8a4fd279829b5df08f1146b39d0e7b7d62b84133fdf18e3b",
+      "skipped": {
+        "nonSelected": 7,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1098,
+          "sha256": "395c95f20598da653ff1eb1cb9d74947c7fac689697147f1d192fd0242a0e635"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "is-alphabetical",
+      "version": "2.0.1",
+      "lockPath": "node_modules/is-alphabetical",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-FWyyY60MeTNyeSRpkM2Iry0G9hpr7/9kD40mD/cGQEuilcZYS4okz8SN2Q6rLCJ8gbCt6fN+rC+6tMGS99LaxQ==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "55449630d49f9e15267f5417a8a83191976fb969435cf2003e3576d4cc23da37",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "is-alphanumerical",
+      "version": "2.0.1",
+      "lockPath": "node_modules/is-alphanumerical",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-hmbYhX/9MUMF5uh7tOXyK/n0ZvWpad5caBA17GsC6vyuCqaWliRG5K1qS9inmUhEMaOBIW7/whAnSwveW/LtZw==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "713d687519da97f594cac4a3c23bd2c4e16b3a99a7199e8d4b81af649c8e939a",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "is-decimal",
+      "version": "2.0.1",
+      "lockPath": "node_modules/is-decimal",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-AAB9hiomQs5DXWcRB1rqsxGUstbRroFOPPVAomNk/3XHR5JyEZChOyTWe2oayKnsSsr/kcGqF+z6yuH6HHpN0A==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "3059b8d0776013566679b05c7197a64826c07a2177a2be3e29f25409e262909e",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "is-hexadecimal",
+      "version": "2.0.1",
+      "lockPath": "node_modules/is-hexadecimal",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-DgZQp241c8oO6cA1SbTEWiXeoxV42vlcJxgH+B3hi1AiqqKruZR3ZGF8In3fj4+/y/7rHvlOZLZtgJ/4ttYGZg==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "68ce9ff2372bd727ac6bba1bf6264a2c29676379094e66619de39e5f055b8bf9",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "is-plain-obj",
+      "version": "4.1.0",
+      "lockPath": "node_modules/is-plain-obj",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-+Pgi+vMuUNkJyExiMBt5IlFoMyKnr5zhJ4Uspz58WOhBF5QoIZkFyNHIbBAtHwzVAgk5RtndVNsDRN61/mmDqg==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "627fab56ef54c43d0e8fe05ef7793ab8dfdf67158a5bfb666c47c7a2b49aaae1",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1117,
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "jsonc-parser",
+      "version": "3.3.1",
+      "lockPath": "node_modules/jsonc-parser",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-HUgH65KyejrUFPvHFPbqOY0rsFip3Bo5wb4ngvdi1EpCYWUQDC5V+Y7mZws+DLkr4M//zQJoanu1SP+87Dv1oQ==",
+      "selectedFiles": 18,
+      "selectedInputListSha256": "df353d2a3726fbc2fba97a46c4467aa015f805e40435bee5d7edb9ec3d650fff",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE.md",
+          "bytes": 1092,
+          "sha256": "c3a24c02d678e5f0711623dcf3ab3f243b273c2633f638a1fa8e35fb7c7f8e4d"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "README.md",
+          "bytes": 14273,
+          "sha256": "dbd5441ae6226fb80684fd71dc400e27c65bfb6e74e78e1c66e9b620bd82cd82",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/esm/impl/edit.js",
+          "bytes": 8613,
+          "sha256": "7e7bf98e740f560026df079056d3b0f5f34628124a8d34e2765fb101dde12911",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/esm/impl/format.js",
+          "bytes": 11098,
+          "sha256": "e57dee56700a844b18dea11548f9ba42b17bc857bde5bcd39554af06ca95bb1f",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/esm/impl/parser.js",
+          "bytes": 25765,
+          "sha256": "74fae1bbebf290a04e46c5457ac5d97988146a5503ea35d9f0c4c3768acd5a26",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/esm/impl/scanner.js",
+          "bytes": 19188,
+          "sha256": "e737e1774f87ca88d85d73e3bafff688b78cac06b81c53b96c54da8b3ca86cd9",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/esm/main.js",
+          "bytes": 9363,
+          "sha256": "72ff182105e158a1505ca3ecbf3f30359abb138a3980edaef1db7f4010ffb7dc",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/umd/impl/edit.js",
+          "bytes": 10061,
+          "sha256": "9ecd115039cf7a478f223e4a9649170c7f5e8fd8016df1b267723b57553f9483",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/umd/impl/format.js",
+          "bytes": 12888,
+          "sha256": "f9e468e436bf1014a4395b1ac70374edb918739ba90b19e6e6a22ca0214564a9",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/umd/impl/parser.js",
+          "bytes": 29455,
+          "sha256": "a35db1bfb9631dcba643fa42972e9ebe2a318b4de3cac239d29081577a43d688",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/umd/impl/scanner.js",
+          "bytes": 21446,
+          "sha256": "581d82c4f1aa84b0605369c01f414fb0164ee462e03daa298cb960076a2a9e82",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/umd/main.js",
+          "bytes": 11059,
+          "sha256": "6dc132e2e792a9616688ff93d10dd671c1fbcfa3301d76bff3e81193d049337d",
+          "categories": [
+            "rights-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "longest-streak",
+      "version": "3.1.0",
+      "lockPath": "node_modules/longest-streak",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-9Ri+o0JYgehTaVBBDoMqIl8GXtbWg711O3srftcHhZ0dqnETqLaoIK0x17fUw9rFSlK/0NlsKe0Ahhyl5pXE2g==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "463f3c10075de093ddaebd0e93129f7bf85025343c79a404a36d3485fe13b77f",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1106,
+          "sha256": "9f084fac69d8cf1e6ce983ba5a3499c7695ed74a26ec625c38f0fd19fddd5e10"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "markdown-table",
+      "version": "3.0.4",
+      "lockPath": "node_modules/markdown-table",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-wiYz4+JrLyb/DqW2hkFJxP7Vd7JuTDm77fvbM8VfEQdmSMqcImWeeRbHwZjBjIFki/VaMK2BhFi7oUUZeM5bqw==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "1df71f062141a01ba66846d26efb38fdc672d80557642914c63f0b042b0e7385",
+      "skipped": {
+        "nonSelected": 2,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "mdast-util-find-and-replace",
+      "version": "3.0.2",
+      "lockPath": "node_modules/mdast-util-find-and-replace",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-Tmd1Vg/m3Xz43afeNxDIhWRtFZgM2VLyaf4vSTYwudTyeuTneoL3qtWMA5jeLyz/O1vDJmmV4QuScFCA2tBPwg==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "d92c605fb76bd82ff439d4bdfea91cfeb1eedda680b1376953e458c3f2ac66bd",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "mdast-util-from-markdown",
+      "version": "2.0.3",
+      "lockPath": "node_modules/mdast-util-from-markdown",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-W4mAWTvSlKvf8L6J+VN9yLSqQ9AOAAvHuoDAmPkz4dHf553m5gVj2ejadHJhoJmcmxEnOv6Pa8XJhpxE93kb8Q==",
+      "selectedFiles": 14,
+      "selectedInputListSha256": "2ba44be5c8db9e8f2a24d133b2ce66bc4503766e6db00d718b763f1b8091ddaf",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "dev/index.js",
+          "bytes": 87,
+          "sha256": "0746a4015c41abf71353218a53f328659c33f62fbf6ad67c5fb0e7330d80c8b3",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "index.js",
+          "bytes": 89,
+          "sha256": "b5ac1d75a898f7e28ae90ce26ab937b5f574bd5b4e8c17745bd15ba78a4a33f5",
+          "categories": [
+            "origin-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mdast-util-gfm",
+      "version": "3.1.0",
+      "lockPath": "node_modules/mdast-util-gfm",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-0ulfdQOM3ysHhCJ1p06l0b0VKlhU0wuQs3thxZQagjcjPrlFRqY215uZGHHJan9GEAXd9MbfPjFJz+qMkVR6zQ==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "06c901f0f078d946f0fe558f752dca7d6876acfe8ba662a33df58739a6b86cfc",
+      "skipped": {
+        "nonSelected": 2,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "mdast-util-gfm-autolink-literal",
+      "version": "2.0.1",
+      "lockPath": "node_modules/mdast-util-gfm-autolink-literal",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-5HVP2MKaP6L+G6YaxPNjuL0BPrq9orG3TsrZ9YXbA3vDw/ACI4MEsnoDpn6ZNm7GnZgtAcONJyPhOP8tNJQavQ==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "71f068345fb01948c342bc16aa19c19013da71c077115c1f91440f9f2301e083",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "mdast-util-gfm-footnote",
+      "version": "2.1.0",
+      "lockPath": "node_modules/mdast-util-gfm-footnote",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-sqpDWlsHn7Ac9GNZQMeUzPQSMzR6Wv0WKRNvQRg0KqHh02fpTz69Qc1QSseNX29bhz1ROIyNyxExfawVKTm1GQ==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "c4f14006323055b27153f2afaa547e66ac2e8e10cb742a1f3ffc706a45abe5ef",
+      "skipped": {
+        "nonSelected": 2,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "index.js",
+          "bytes": 127,
+          "sha256": "b94bca85a6eefc173cd3a68381c45bfdc75643ed8f901a428d311d5a01575678",
+          "categories": [
+            "origin-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mdast-util-gfm-strikethrough",
+      "version": "2.0.0",
+      "lockPath": "node_modules/mdast-util-gfm-strikethrough",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-mKKb915TF+OC5ptj5bJ7WFRPdYtuHv0yTRxK2tJvi+BDqbkiG7h7u/9SI89nRAYcmap2xHQL9D+QG/6wSrTtXg==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "04203cd2f203c461c3c1a3986a7e173f99e372f51846852b8c8c1e4e2cc846a5",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "mdast-util-gfm-table",
+      "version": "2.0.0",
+      "lockPath": "node_modules/mdast-util-gfm-table",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-78UEvebzz/rJIxLvE7ZtDd/vIQ0RHv+3Mh5DR96p7cS7HsBhYIICDBCu8csTNWNO6tBWfqXPWekRuj2FNOGOZg==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "ff88b10a2d33189e4416144b55a2375d77e165cb718afe3a8d6f37f47a1280c8",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "mdast-util-gfm-task-list-item",
+      "version": "2.0.0",
+      "lockPath": "node_modules/mdast-util-gfm-task-list-item",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-IrtvNvjxC1o06taBAVJznEnkiHxLFTzgonUdy8hzFVeDun0uTjxxrRGVaNFqkU1wJR3RBPEfsxmU6jDWPofrTQ==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "02cc272f548867a924b6bef2301765cd478afeebfdc69f56f37ac5e35c9c1361",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "mdast-util-mdx-expression",
+      "version": "2.0.1",
+      "lockPath": "node_modules/mdast-util-mdx-expression",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-J6f+9hUp+ldTZqKRSg7Vw5V6MqjATc+3E4gf3CFNcuZNWD8XdyI6zQ8GqH7f8169MM6P7hMBRDVGnn7oHB9kXQ==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "92e6bef80aa7e83a5061a20d454cb4f1ed597abf6556c24418f3b8be3d8c9237",
+      "skipped": {
+        "nonSelected": 2,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "mdast-util-mdx-jsx",
+      "version": "3.2.0",
+      "lockPath": "node_modules/mdast-util-mdx-jsx",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-lj/z8v0r6ZtsN/cGNNtemmmfoLAFZnjMbNyLzBafjzikOM+glrjNHPlf6lQDOTccj9n5b0PPihEBbhneMyGs1Q==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "f67b092a08a8a7c67b044fb77c53142641f459a82c942ed3b91c60268849ac1e",
+      "skipped": {
+        "nonSelected": 2,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "mdast-util-mdxjs-esm",
+      "version": "2.0.1",
+      "lockPath": "node_modules/mdast-util-mdxjs-esm",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-EcmOpxsZ96CvlP03NghtH1EsLtr0n9Tm4lPUJUBccV9RwUOneqSycg19n5HGzCf+10LozMRSObtVr3ee1WoHtg==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "7ce3aaa932df5586cddfc9383669167d51108731318fc122ee678ade87a261fd",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "mdast-util-newline-to-break",
+      "version": "2.0.0",
+      "lockPath": "node_modules/mdast-util-newline-to-break",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-MbgeFca0hLYIEx/2zGsszCSEJJ1JSCdiY5xQxRcLDDGa8EPvlLPupJ4DSajbMPAnC0je8jfb9TiUATnxxrHUog==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "8e4f08eb247342a439569c17db6b7427f1f239a2a3c8c79400d50181d071fc15",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "d8fc337aaf98fc7a0f5498edc18b47a9df8cdfcc1a0f013519105905722c7a4c"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "mdast-util-phrasing",
+      "version": "4.1.0",
+      "lockPath": "node_modules/mdast-util-phrasing",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-TqICwyvJJpBwvGAMZjj4J2n0X8QWp21b9l0o7eXyVJ25YNWYbJDVIyD1bZXE6WtV6RmKJVYmQAKWa0zWOABz2w==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "cefd9b9de39d8e0fd9ebe117c3437b7091e63ed27b3a75778a65c940dbd5e705",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1150,
+          "sha256": "b6d1a4e1831b177acc96f22a817d4f0f4c18419355badc3125754445fc69e3a7"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "mdast-util-to-hast",
+      "version": "13.2.1",
+      "lockPath": "node_modules/mdast-util-to-hast",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-cctsq2wp5vTsLIcaymblUriiTcZd0CwWtCbLvrOzYCDZoWyMNV8sZ7krj09FSnsiJi3WVsHLM4k6Dq/yaPyCXA==",
+      "selectedFiles": 60,
+      "selectedInputListSha256": "156373ed322035f3f7112375c121f36d88aeef32eb35daa298e938dbd76f9f94",
+      "skipped": {
+        "nonSelected": 29,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "mdast-util-to-markdown",
+      "version": "2.1.2",
+      "lockPath": "node_modules/mdast-util-to-markdown",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-xj68wMTvGXVOKonmog6LwyJKrYXZPvlwabaryTjLh9LuvovB/KAH+kvi8Gjj+7rJjsFi23nkUxRQv1KqSroMqA==",
+      "selectedFiles": 101,
+      "selectedInputListSha256": "880cd5ee3d8df748df6c3e6f4369af1c8afd6dd30e38ac8141abdbffa24a788a",
+      "skipped": {
+        "nonSelected": 49,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "mdast-util-to-string",
+      "version": "4.0.0",
+      "lockPath": "node_modules/mdast-util-to-string",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-0H44vDimn51F0YwvxSJSm0eCDOJTRlmN0R1yBh4HLj9wiV1Dn0QoXGbvFAWj2hSItVTlCmBF1hqKlIyUBVFLPg==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "230f540c14804f93b34186094e3160b4ec9529cb541d39c83bf77fe0a97f9df6",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark",
+      "version": "4.0.2",
+      "lockPath": "node_modules/micromark",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-zpe98Q6kvavpCr1NPVSCMebCKfD7CA2NqZ+rykeNhONIJBpc1tFKt9hucLGwha3jNTNI8lHpctWJWoimVF4PfA==",
+      "selectedFiles": 50,
+      "selectedInputListSha256": "84e18afa8d981051567a36cae6b549a4b5027d5e5e769c7a645abdf26d131ff3",
+      "skipped": {
+        "nonSelected": 25,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-core-commonmark",
+      "version": "2.0.3",
+      "lockPath": "node_modules/micromark-core-commonmark",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-RDBrHEMSxVFLg6xvnXmb1Ayr2WzLAWjeSATAoxwKYJV94TeNavgoIdA0a9ytzDSVzBy2YKFK+emCPOEibLeCrg==",
+      "selectedFiles": 94,
+      "selectedInputListSha256": "efa56418f470d8333b2048aeb1a5087e5baf50b9aca330bbda314a14233c2e5b",
+      "skipped": {
+        "nonSelected": 47,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-extension-gfm",
+      "version": "3.0.0",
+      "lockPath": "node_modules/micromark-extension-gfm",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-vsKArQsicm7t0z2GugkCKtZehqUm31oeGBV/KVSorWSy8ZlNAv7ytjFhvaryUiCUJYqs+NoE6AFhpQvBTM6Q4w==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "414110955636613214e7be49d37cb7351994c4669a335a0e6924185a83204741",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-extension-gfm-autolink-literal",
+      "version": "2.1.0",
+      "lockPath": "node_modules/micromark-extension-gfm-autolink-literal",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-oOg7knzhicgQ3t4QCjCWgTmfNhvQbDDnJeVu9v81r7NltNCVmhPy1fJRX27pISafdjL+SVc4d3l48Gb6pbRypw==",
+      "selectedFiles": 14,
+      "selectedInputListSha256": "b6e576a97e4f0763bce7af2bf1fb55d863d4975e2480ccbf89f4786da4f05482",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-extension-gfm-footnote",
+      "version": "2.1.0",
+      "lockPath": "node_modules/micromark-extension-gfm-footnote",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-/yPhxI1ntnDNsiHtzLKYnE3vf9JZ6cAisqVDauhp4CEHxlb4uoOTxOCJ+9s51bIB8U1N1FJ1RXOKTIlD5B/gqw==",
+      "selectedFiles": 14,
+      "selectedInputListSha256": "36936285f266c455769618364592c6b8d3480e2e09e8e33c669151ed878985c8",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "807a88522a850092aece49486207c17c313c4d5708ac276524840fe1caa0b0fa"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "dev/index.js",
+          "bytes": 159,
+          "sha256": "8d79d4403430ac699174cd9ee4a37225e068abdf589c78837a6785b93e3ae360",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "index.js",
+          "bytes": 164,
+          "sha256": "9f2dd0393871a1d2db494fd4e5502ede219eda13ac05fea9ea6dd9c8ccf8dff6",
+          "categories": [
+            "origin-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "micromark-extension-gfm-strikethrough",
+      "version": "2.1.0",
+      "lockPath": "node_modules/micromark-extension-gfm-strikethrough",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-ADVjpOOkjz1hhkZLlBiYA9cR2Anf8F4HqZUO6e5eDcPQd0Txw5fxLzzxnEkSkfnD0wziSGiv7sYhk/ktvbf1uw==",
+      "selectedFiles": 14,
+      "selectedInputListSha256": "704d922a596236ae11902ba58fb2ee9f3cef51038540dceaecdfc2cbbb14d283",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-extension-gfm-table",
+      "version": "2.1.1",
+      "lockPath": "node_modules/micromark-extension-gfm-table",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-t2OU/dXXioARrC6yWfJ4hqB7rct14e8f7m0cbI5hUmDyyIlwv5vEtooptH8INkbLzOatzKuVbQmAYcbWoyz6Dg==",
+      "selectedFiles": 22,
+      "selectedInputListSha256": "45b1766700138d509a14470bf313e90671401ed1fca6688e3d57cf097a51d6b2",
+      "skipped": {
+        "nonSelected": 9,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-extension-gfm-tagfilter",
+      "version": "2.0.0",
+      "lockPath": "node_modules/micromark-extension-gfm-tagfilter",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-xHlTOmuCSotIA8TW1mDIM6X2O1SiX5P9IuDtqGonFhEK0qgRI4yeC6vMxEV2dgyr2TiD+2PQ10o+cOhdVAcwfg==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "4271da6887650f6f3e69679748d901a3408ef8a1c7faa0d140d4d4a5b783259d",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-extension-gfm-task-list-item",
+      "version": "2.1.0",
+      "lockPath": "node_modules/micromark-extension-gfm-task-list-item",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-qIBZhqxqI6fjLDYFTBIa4eivDMnP+OZqsNwmQ3xNLE4Cxwc+zfQEfbs6tzAo2Hjq+bh6q5F+Z8/cksrLFYWQQw==",
+      "selectedFiles": 14,
+      "selectedInputListSha256": "72f1d342343fab74e7830e4814d64c3cdcc15e0788cc656b2c92e050e85fe547",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-factory-destination",
+      "version": "2.0.1",
+      "lockPath": "node_modules/micromark-factory-destination",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-Xe6rDdJlkmbFRExpTOmRj9N3MaWmbAgdpSrBQvCFqhezUn4AHqJHbaEnfbVYYiexVSs//tqOdY/DxhjdCiJnIA==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "d262f76d27b39cb832f1a5d87d240c207ca3ac0c39d83c42ead67170e60a87f4",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-factory-label",
+      "version": "2.0.1",
+      "lockPath": "node_modules/micromark-factory-label",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-VFMekyQExqIW7xIChcXn4ok29YE3rnuyveW3wZQWWqF4Nv9Wk5rgJ99KzPvHjkmPXF93FXIbBp6YdW3t71/7Vg==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "3e1e29246dbb8fdcdaab6d0a22d32976a051f45382347b146b73ccc040d2c154",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-factory-space",
+      "version": "2.0.1",
+      "lockPath": "node_modules/micromark-factory-space",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-zRkxjtBxxLd2Sc0d+fbnEunsTj46SWXgXciZmHq0kDYGnck/ZSGj9/wULTV95uoeYiK5hRXP2mJ98Uo4cq/LQg==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "c0c0b2835cfe36a2578d12fcd37bead4d3534091d43e247a64c7f601877c4794",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-factory-title",
+      "version": "2.0.1",
+      "lockPath": "node_modules/micromark-factory-title",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-5bZ+3CjhAd9eChYTHsjy6TGxpOFSKgKKJPJxr293jTbfry2KDoWkhBb6TcPVB4NmzaPhMs1Frm9AZH7OD4Cjzw==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "16586d7b0eacc311bfdcc3d719b6364d50f47aea4e54c1dce7521f6a3284e62a",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-factory-whitespace",
+      "version": "2.0.1",
+      "lockPath": "node_modules/micromark-factory-whitespace",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-Ob0nuZ3PKt/n0hORHyvoD9uZhr+Za8sFoP+OnMcnWK5lngSzALgQYKMr9RJVOWLqQYuyn6ulqGWSXdwf6F80lQ==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "e6016a8288db221c51625acb745cb7061fa8471899e7ff179dc8aefd633b0f3e",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-util-character",
+      "version": "2.1.1",
+      "lockPath": "node_modules/micromark-util-character",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-wv8tdUTJ3thSFFFJKtpYKOYiGP2+v96Hvk4Tu8KpCAsTMs6yi+nVmGh1syvSCsaxz45J6Jbw+9DD6g97+NV67Q==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "437ba4af80f063b9516b2d5beb39c1394f863e47e5c2cda530ed4dec9b46462c",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-util-chunked",
+      "version": "2.0.1",
+      "lockPath": "node_modules/micromark-util-chunked",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-QUNFEOPELfmvv+4xiNg2sRYeS/P84pTW0TCgP5zc9FpXetHY0ab7SxKyAQCNCc1eK0459uoLI1y5oO5Vc1dbhA==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "3cf1915da0b36c3fdcf4ce055a2daa119f9e20c7e54d936b5cb705aa0299dd1c",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-util-classify-character",
+      "version": "2.0.1",
+      "lockPath": "node_modules/micromark-util-classify-character",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-K0kHzM6afW/MbeWYWLjoHQv1sgg2Q9EccHEDzSkxiP/EaagNzCm7T/WMKZ3rjMbvIpvBiZgwR3dKMygtA4mG1Q==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "e7a003314cafcefe31505f0fa541facddafe90bd49ab723f9b9f9d4ff788f7a1",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-util-combine-extensions",
+      "version": "2.0.1",
+      "lockPath": "node_modules/micromark-util-combine-extensions",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-OnAnH8Ujmy59JcyZw8JSbK9cGpdVY44NKgSM7E9Eh7DiLS2E9RNQf0dONaGDzEG9yjEl5hcqeIsj4hfRkLH/Bg==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "878b2e73dcbc042cac6e5b5f1b0ddc2a876aa0bf8edc029f1f00961b14c6915e",
+      "skipped": {
+        "nonSelected": 2,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-util-decode-numeric-character-reference",
+      "version": "2.0.2",
+      "lockPath": "node_modules/micromark-util-decode-numeric-character-reference",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-ccUbYk6CwVdkmCQMyr64dXz42EfHGkPQlBj5p7YVGzq8I7CtjXZJrubAYezf7Rp+bjPseiROqe7G6foFd+lEuw==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "f535c8707dd5c432a5c7c3af8ae217649996567cdd0703b2bdb688aa90d33aff",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-util-decode-string",
+      "version": "2.0.1",
+      "lockPath": "node_modules/micromark-util-decode-string",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-nDV/77Fj6eH1ynwscYTOsbK7rR//Uj0bZXBwJZRfaLEJ1iGBR6kIfNmlNqaqJf649EP0F3NWNdeJi03elllNUQ==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "0097a07b3b384b6b844496f136c69f67c11468d85e6f95ea14b6c6ce6f35ec7e",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-util-encode",
+      "version": "2.0.1",
+      "lockPath": "node_modules/micromark-util-encode",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-c3cVx2y4KqUnwopcO9b/SCdo2O67LwJJ/UyqGfbigahfegL9myoEFoDYZgkT7f36T0bLrM9hZTAaAyH+PCAXjw==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "fb7d59ef71be4f3fc124647d2b0f63000f857d347a0d01fde2f9eb506c913632",
+      "skipped": {
+        "nonSelected": 2,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-util-html-tag-name",
+      "version": "2.0.1",
+      "lockPath": "node_modules/micromark-util-html-tag-name",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-2cNEiYDhCWKI+Gs9T0Tiysk136SnR13hhO8yW6BGNyhOC4qYFnwF1nKfD3HFAIXA5c45RrIG1ub11GiXeYd1xA==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "6f02de41c79b1636525263e32a8869b15700d0698c4febe47fa5a02d88b6cfb3",
+      "skipped": {
+        "nonSelected": 2,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-util-normalize-identifier",
+      "version": "2.0.1",
+      "lockPath": "node_modules/micromark-util-normalize-identifier",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-sxPqmo70LyARJs0w2UclACPUUEqltCkJ6PhKdMIDuJ3gSf/Q+/GIe3WKl0Ijb/GyH9lOpUkRAO2wp0GVkLvS9Q==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "b54ee7b4d6f3e6c3a3ce84764894b0fec0b6f7f91a363effd57dfc6aab3bfddc",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-util-resolve-all",
+      "version": "2.0.1",
+      "lockPath": "node_modules/micromark-util-resolve-all",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-VdQyxFWFT2/FGJgwQnJYbe1jjQoNTS4RjglmSjTUlpUMa95Htx9NHeYW4rGDJzbjvCsl9eLjMQwGeElsqmzcHg==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "2d1393de875486a80c6d2e3f4b3cb2f6e077919eb71215473343c3c1d3c5545b",
+      "skipped": {
+        "nonSelected": 2,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-util-sanitize-uri",
+      "version": "2.0.1",
+      "lockPath": "node_modules/micromark-util-sanitize-uri",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-9N9IomZ/YuGGZZmQec1MbgxtlgougxTodVwDzzEouPKo3qFWvymFHWcnDi2vzV1ff6kas9ucW+o3yzJK9YB1AQ==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "f05d910f1b48a54f8aad6ee6deb1db98061274394f71caf43e11cbc94b7b499e",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-util-subtokenize",
+      "version": "2.1.0",
+      "lockPath": "node_modules/micromark-util-subtokenize",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-XQLu552iSctvnEcgXw6+Sx75GflAPNED1qx7eBJ+wydBb2KCbRZe+NwvIEEMM83uml1+2WSXpBAcp9IUCgCYWA==",
+      "selectedFiles": 10,
+      "selectedInputListSha256": "c6974586b51eb44123c977bd7c88ef90239396e68603dfcc0ba6a0dea015a93e",
+      "skipped": {
+        "nonSelected": 5,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-util-symbol",
+      "version": "2.0.1",
+      "lockPath": "node_modules/micromark-util-symbol",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-vs5t8Apaud9N28kgCrRUdEed4UJ+wWNvicHLPxCa9ENlYuAY31M0ETy5y1vA33YoNPDFTghEbnh6efaE8h4x0Q==",
+      "selectedFiles": 12,
+      "selectedInputListSha256": "368054b4e7c1df063e4cf53c8e40aefea18237e5edb5396d1424972d36ced4bd",
+      "skipped": {
+        "nonSelected": 6,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "micromark-util-types",
+      "version": "2.0.2",
+      "lockPath": "node_modules/micromark-util-types",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-Yw0ECSpJoViF1qTU4DC6NwtC4aWGt1EkzaQB8KPPyCRR8z9TWeV0HbEFGTO+ZY1wB22zmxnJqhPyTpOVCpeHTA==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "72255ce09210226bd5115b583fb5bc26ebaa52c86695072ac9c6bb3622d74136",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "index.js",
+          "bytes": 53,
+          "sha256": "957ecc25c3bef203a81f9f383ab055b3b9c1a8f56a86b60c7b722630fb3f61db",
+          "categories": [
+            "origin-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ms",
+      "version": "2.1.3",
+      "lockPath": "node_modules/ms",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==",
+      "selectedFiles": 3,
+      "selectedInputListSha256": "fc0db8b631369c34dfe603cb995eee10329377f5f0d1ed231d7b282bc58fcae3",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license.md",
+          "bytes": 1079,
+          "sha256": "1662fae9b5314d11cf51284e2dcd1f006a354f7343f08712a730fcff9a359801"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "pako",
+      "version": "1.0.11",
+      "lockPath": "node_modules/pako",
+      "declaredLicense": "(MIT AND Zlib)",
+      "integrity": "sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==",
+      "selectedFiles": 25,
+      "selectedInputListSha256": "76ba974928cf7ef36e7f06202e306d46b6e9e9293e2284be4056c8d096bfea4c",
+      "skipped": {
+        "nonSelected": 2,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1104,
+          "sha256": "a04665b3b2de56c66730c1f720f528175739e4104f79073614aa611da1e85539"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "dist/pako.js",
+          "bytes": 221496,
+          "sha256": "f407f7f15b7a0fc3af813a8cc526869e088c70801cadc31132a195fcb6f7b133",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "dist/pako_deflate.js",
+          "bytes": 128125,
+          "sha256": "da1738ff3bc96b16f25390d329f4cf90f409f73c2a3fc9ef00a14fa0240d7f9f",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "dist/pako_inflate.js",
+          "bytes": 108583,
+          "sha256": "ec7e5936c652800e132c63cc1fcd00c23103a6a10a294ed3736bab70e38fc592",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/zlib/adler32.js",
+          "bytes": 1656,
+          "sha256": "99618eb68a96858148e2dd56f478aa7e4321c434f5f2ee6c57f59c0c568f0596",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/zlib/constants.js",
+          "bytes": 2312,
+          "sha256": "e0c4148ed267a27f03aba9f9a34cba4bade2090c0f12905907539e38c842abbc",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/zlib/crc32.js",
+          "bytes": 1750,
+          "sha256": "213f85e8b2e52e2cf6f7634897197400f7ddaed587274f160045f0b548ec21da",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/zlib/deflate.js",
+          "bytes": 61184,
+          "sha256": "4b9b71ae7f42e506fe1fb134f1c21b944ef2b7ef79667ba1fe59eb963c353d22",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/zlib/gzheader.js",
+          "bytes": 2240,
+          "sha256": "8fa0b4995cea477be96b8783a7d6c7cf5fec96765c2108c3bd52e77104bfdbd3",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/zlib/inffast.js",
+          "bytes": 12668,
+          "sha256": "b1beb3b55270e8338f23fc397132d179942d5866153ca4e9be264200b00c0d44",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/zlib/inflate.js",
+          "bytes": 50284,
+          "sha256": "d31799a23f2ae87f0c52d21241c92278b41d23bb5365b452f2706d41b00c4245",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/zlib/inftrees.js",
+          "bytes": 12500,
+          "sha256": "75f75d8ae4a7bed86f90a4a38f70c5d95e807515e9326801f9a073a7f2bf8bc7",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/zlib/messages.js",
+          "bytes": 1538,
+          "sha256": "eec5f5d6b8120ada9cd48a3ca0a253c64777906e835477b090e053434d38cf6c",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/zlib/trees.js",
+          "bytes": 39879,
+          "sha256": "718adbbf68f4343bf17d61edffd9d0788a96a93e4e191d857459d95257e614cf",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "lib/zlib/zstream.js",
+          "bytes": 1811,
+          "sha256": "5fa10c7a59ca99113cf92d1260e56cbd6282e15afa85dc8a0eb8e8d6d2321298",
+          "categories": [
+            "rights-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "parse-entities",
+      "version": "4.0.2",
+      "lockPath": "node_modules/parse-entities",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-GG2AQYWoLgL877gQIKeRPGO1xF9+eG1ujIb5soS5gPvLQ1y2o8FL90w2QWNdf9I361Mpp7726c+lj3U0qK1uGw==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "ffac1a91d2f0a427b3b532c62fc23c9f6c615bf14243c4646aa601009d726e6b",
+      "skipped": {
+        "nonSelected": 2,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 1,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1101,
+          "sha256": "5d0698266086f217bb11ea0499d33453e401fe479fb9126ad04e625e63d3557b"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "@types/unist",
+      "version": "2.0.11",
+      "lockPath": "node_modules/parse-entities/node_modules/@types/unist",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==",
+      "selectedFiles": 3,
+      "selectedInputListSha256": "e46bd11965fd348427732cdf93c521a4ab5585bcaf27676adffbb8ce74b465f2",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1141,
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "README.md",
+          "bytes": 3298,
+          "sha256": "50b4697ac0fa85f07bbf36269501a3d29089eac5ff74892e1bf57438b9454e6e",
+          "categories": [
+            "origin-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pdf-lib",
+      "version": "1.17.1",
+      "lockPath": "node_modules/pdf-lib",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-V/mpyJAoTsN4cnP31vc0wfNA1+p20evqqnap0KLoRUN0Yk/p3wN52DOEsL4oBFcLdb76hlpKPtzJIgo67j/XLw==",
+      "selectedFiles": 980,
+      "selectedInputListSha256": "ffdd84ce8774b7fe2d1da6e7c3e5d6193f83bf91d5761b7354a438425c856e54",
+      "skipped": {
+        "nonSelected": 562,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE.md",
+          "bytes": 1070,
+          "sha256": "f2c9fc00fdb66eb99ac156ba52d734af66d8d309f65753ae809ad34ee2883bcb"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "cjs/api/form/PDFField.d.ts",
+          "bytes": 8026,
+          "sha256": "8d324bcc3c94b5e1167f5f01f456c85d14ffc2a63826207093f6548372e23e45",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "cjs/api/form/PDFField.js",
+          "bytes": 17452,
+          "sha256": "e3bf506a82ac65fe16d123603b384814e978387453061e81de571abfc2f06677",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "cjs/api/svgPath.js",
+          "bytes": 10645,
+          "sha256": "23a06727ba319fcee9877df3eafbc17f22c60d06ebcbbe1ea616724cdcdf57b6",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "cjs/core/acroform/flags.d.ts",
+          "bytes": 5780,
+          "sha256": "0e9faab44fc561cc2f086fa50f9baec1a24eeac3a638e223fa9bed570db63cee",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "cjs/core/acroform/flags.js",
+          "bytes": 7652,
+          "sha256": "cf1f70f47ea57ab04576d3fcd3b4cdf94b0ee489a96cd1ded9d56344f4a3c3d1",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "cjs/core/embedders/CustomFontEmbedder.d.ts",
+          "bytes": 2192,
+          "sha256": "31a919964ea657e38c2d3d448ad4695229c0660eaa0b0e8fe39a9cd0f5ec848e",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "cjs/core/embedders/CustomFontEmbedder.js",
+          "bytes": 11604,
+          "sha256": "3462feb2ccd7f29531edad80f7362c45693aeee37cc4a53c3103d80bf1e93ca3",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "cjs/core/embedders/CustomFontSubsetEmbedder.d.ts",
+          "bytes": 1003,
+          "sha256": "1e54c9e0d8bd03b093eb4ae7c92cadbb11a7c7473d0c572b9d7758965cee4735",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "cjs/core/embedders/CustomFontSubsetEmbedder.js",
+          "bytes": 3241,
+          "sha256": "3543c613008acee23126c90637842d0ed451c9494e2f738739e4a75ce6beb02a",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "cjs/core/embedders/JpegEmbedder.d.ts",
+          "bytes": 846,
+          "sha256": "176fbc70bf02df7a6aa81e25d12cf9784d546be6d5e56e0b3150dc0a2b6c683a",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "cjs/core/embedders/JpegEmbedder.js",
+          "bytes": 4421,
+          "sha256": "2b9b6c7dbad44204cbf4e7ebe05e9eaf493dda4d45072cfdb4cf4fa9fe6189c6",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "cjs/core/embedders/PngEmbedder.d.ts",
+          "bytes": 759,
+          "sha256": "a1288b96c281e3fff49dfa77a74253f20170b2710bcb3da403b0d1f1adde776a",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "cjs/core/embedders/PngEmbedder.js",
+          "bytes": 2636,
+          "sha256": "38e103d771ddcafcdd7232f92246295ed78f765b1664620d5686be942f67c620",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "cjs/core/embedders/StandardFontEmbedder.d.ts",
+          "bytes": 1439,
+          "sha256": "f81c618bfe3c18d50d5d6e007a7cc0de0dbfcb7c7f698154fbaf1125b32363d9",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "cjs/core/embedders/StandardFontEmbedder.js",
+          "bytes": 4472,
+          "sha256": "0bc8a8915c9ac3327d225ee0f013cc9236e44166d85f218bb4636e09bd92027d",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "cjs/core/streams/Ascii85Stream.js",
+          "bytes": 2876,
+          "sha256": "d08c5358acedbc23735a192ceb11e9bf4a1fd2897907e343fa694033d97d5de0",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "cjs/core/streams/AsciiHexStream.js",
+          "bytes": 2651,
+          "sha256": "b9b5eaeadb15010c15643e87e0d35512aacae183d0329d4bcda9c10dda332435",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "cjs/core/streams/DecodeStream.js",
+          "bytes": 5062,
+          "sha256": "666dc30139cceee5ef849a09a990d761c2de801e0aaa264178b93cf99640adcb",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "cjs/core/streams/FlateStream.js",
+          "bytes": 16547,
+          "sha256": "e5e279bd3642c8fd52582605f61514162cdff563523ae0963664a7aa05ff4f03",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "cjs/core/streams/LZWStream.js",
+          "bytes": 5461,
+          "sha256": "95a7269f43aa4f4a9658aefff678696eef12c33b0cf64f5f616270f3c1ec8d73",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "cjs/core/streams/RunLengthStream.js",
+          "bytes": 2184,
+          "sha256": "f9b5750a1048611740c50d15e4f3426615edf8537cdef1841661aa93fd00adc0",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "cjs/core/streams/Stream.js",
+          "bytes": 3429,
+          "sha256": "64854a09f25c4ab400459fb678213db41a1988f3e1620555332c44c3d3867634",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "cjs/utils/base64.js",
+          "bytes": 3173,
+          "sha256": "9bf227b07d33ff11515f83888f731c9d4c4c84d8b60648bc6a7628cffb1363a9",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "dist/pdf-lib.esm.js",
+          "bytes": 1587811,
+          "sha256": "4bd8dd3155d7b1062a161567bf68168c55283bd5fad6a638b16ae028846b52c5",
+          "categories": [
+            "rights-marker",
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "dist/pdf-lib.esm.min.js",
+          "bytes": 523417,
+          "sha256": "72c052d97b4d5d9fa6cdbdcb7ad709f03d4ddb1122390cb3afeba4d88651d969",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "dist/pdf-lib.js",
+          "bytes": 1743338,
+          "sha256": "bb3ee8ff88640cd6f91da2febd8fefa2d537cab5f8ef852500c52241b6cf7514",
+          "categories": [
+            "rights-marker",
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "dist/pdf-lib.min.js",
+          "bytes": 525099,
+          "sha256": "0f9a5cad07941f0826586c94e089d89b918c46e5c17cf2d5a3c6f666e3bc694f",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "es/api/form/PDFField.d.ts",
+          "bytes": 8026,
+          "sha256": "8d324bcc3c94b5e1167f5f01f456c85d14ffc2a63826207093f6548372e23e45",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "es/api/form/PDFField.js",
+          "bytes": 17158,
+          "sha256": "ed5da923a22c2b661b582c0f8b6c70e7e33eb2ed6b4ecd9d8e1866769f9f51f7",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "es/api/svgPath.js",
+          "bytes": 10363,
+          "sha256": "1e4420c38fa42963e110ea2d5300328c098eec3743bd3e0b311afef6d7d3cfb9",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "es/core/acroform/flags.d.ts",
+          "bytes": 5780,
+          "sha256": "0e9faab44fc561cc2f086fa50f9baec1a24eeac3a638e223fa9bed570db63cee",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "es/core/acroform/flags.js",
+          "bytes": 7361,
+          "sha256": "a9ac6e322aee74ef6826e602ec417b6c49f7feb84d0c080454b44b778342a0a3",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "es/core/embedders/CustomFontEmbedder.d.ts",
+          "bytes": 2192,
+          "sha256": "31a919964ea657e38c2d3d448ad4695229c0660eaa0b0e8fe39a9cd0f5ec848e",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "es/core/embedders/CustomFontEmbedder.js",
+          "bytes": 11364,
+          "sha256": "ed494b022b9aee88033352b4116040b31335b45910d04e97324ed85953a98fcb",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "es/core/embedders/CustomFontSubsetEmbedder.d.ts",
+          "bytes": 1003,
+          "sha256": "1e54c9e0d8bd03b093eb4ae7c92cadbb11a7c7473d0c572b9d7758965cee4735",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "es/core/embedders/CustomFontSubsetEmbedder.js",
+          "bytes": 3101,
+          "sha256": "8037be2aa1fb3fa73a1c791fc84878d5d93bc216334da7dd8b7eb8e04a95e711",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "es/core/embedders/JpegEmbedder.d.ts",
+          "bytes": 846,
+          "sha256": "176fbc70bf02df7a6aa81e25d12cf9784d546be6d5e56e0b3150dc0a2b6c683a",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "es/core/embedders/JpegEmbedder.js",
+          "bytes": 4325,
+          "sha256": "def2bfb476cb31d00b3607fbd43c04d91108c60724d5c385f8fcd7659166ee62",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "es/core/embedders/PngEmbedder.d.ts",
+          "bytes": 759,
+          "sha256": "a1288b96c281e3fff49dfa77a74253f20170b2710bcb3da403b0d1f1adde776a",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "es/core/embedders/PngEmbedder.js",
+          "bytes": 2533,
+          "sha256": "2a65b6333685f148b05d441ee4e2a74dc4ec2bb6e2516e1c3df844c8c7e708e6",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "es/core/embedders/StandardFontEmbedder.d.ts",
+          "bytes": 1439,
+          "sha256": "f81c618bfe3c18d50d5d6e007a7cc0de0dbfcb7c7f698154fbaf1125b32363d9",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "es/core/embedders/StandardFontEmbedder.js",
+          "bytes": 4215,
+          "sha256": "a7660ff811c4827ae8e04b9bc710d7c15b94502cf63f92fdbe245f4dc89f4fd4",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "es/core/streams/Ascii85Stream.js",
+          "bytes": 2751,
+          "sha256": "48d4f773e99c18732798f591b2eddde99d799f44bb4f25f3b69acc15349f9eca",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "es/core/streams/AsciiHexStream.js",
+          "bytes": 2526,
+          "sha256": "d1dffdf6c01d776abd2e7cc169f7b95757b41e50cf9f3ed7003eb115c0cc2cc1",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "es/core/streams/DecodeStream.js",
+          "bytes": 4919,
+          "sha256": "8fc3de152661a751f94fb060146049a99b11bad9b86ac158650cffe611b989a9",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "es/core/streams/FlateStream.js",
+          "bytes": 16422,
+          "sha256": "be168ba9842de2af1b42e8216f6943968a034bc7b023800837476e7bd7722455",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "es/core/streams/LZWStream.js",
+          "bytes": 5336,
+          "sha256": "a4fe561fdad957eeb6806a31841ce474d4d4bae41f34a32af414a444d500461e",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "es/core/streams/RunLengthStream.js",
+          "bytes": 2059,
+          "sha256": "cb69105deb0a34a689f364dece0606b699afd36d52ec5d0ea6edf7808f8650c9",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "es/core/streams/Stream.js",
+          "bytes": 3349,
+          "sha256": "e36d4286007e84967f1a5b5c8ac29e4d54454726c024b435221a2a3742609074",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "es/utils/base64.js",
+          "bytes": 2995,
+          "sha256": "5ac09ebb79669e0c7eadc5db5d6e2159cf7f7204ae55a1c5ac85f07a3ff06d5c",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "src/api/form/PDFField.ts",
+          "bytes": 16259,
+          "sha256": "2764dd39439312d30155985055fb20170f78faf1dbd59a34ffa09ca389673b55",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "src/api/svgPath.ts",
+          "bytes": 9545,
+          "sha256": "c19e79d50dc804f5726c1843d110554e981ed13f7254a99e2f7d834455da62d5",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "src/core/acroform/flags.ts",
+          "bytes": 5826,
+          "sha256": "53b0ea4c071c7575cc642d4db5a1116d47095d226e5e4cfb7a23f88c681147d3",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "src/core/embedders/CustomFontEmbedder.ts",
+          "bytes": 7731,
+          "sha256": "35091c0674268a4cda2b2393186a2eee2815bbfa8fdb5b7883642ba60a019876",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "src/core/embedders/CustomFontSubsetEmbedder.ts",
+          "bytes": 2505,
+          "sha256": "68afe7b09f5d5166c5851cf604a33d3f17699da6eecaec76e32e1e51e4791df8",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "src/core/embedders/JpegEmbedder.ts",
+          "bytes": 3323,
+          "sha256": "90029ad9dc85f3fe014a3793a33505602e938622f056cf5254122dca5804141f",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "src/core/embedders/PngEmbedder.ts",
+          "bytes": 1898,
+          "sha256": "d2abc79abdd1ed0e7fee878d42463b69e0108c99d1b426eda9d888f3490fa6b2",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "src/core/embedders/StandardFontEmbedder.ts",
+          "bytes": 3898,
+          "sha256": "578f309feaf74e5bb036726bec9426b534850a8f172e5d0c3696906c5d6a7f04",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "src/core/streams/Ascii85Stream.ts",
+          "bytes": 2283,
+          "sha256": "e4ddb58debf02b9c452757eb066e7ae718ba2f30c640888841ab8415d7121f5b",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "src/core/streams/AsciiHexStream.ts",
+          "bytes": 2088,
+          "sha256": "d4ed148500ae5bcf22b31af3232a3245b8b84b6920bf72090065448b082c5f41",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "src/core/streams/DecodeStream.ts",
+          "bytes": 4132,
+          "sha256": "5333336dc05b3605449a465435b18fe4e844a9cdd22fc1d03ca499d96b2b7047",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "src/core/streams/FlateStream.ts",
+          "bytes": 14462,
+          "sha256": "a7390d7d5ea67debca981a34182bc0ca34252e393f5f0211cebf36551cbd5db5",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "src/core/streams/LZWStream.ts",
+          "bytes": 4979,
+          "sha256": "ede24b9502ebb158342196b6f11a0bee0403b709a902336202d06194ded8e63f",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "src/core/streams/RunLengthStream.ts",
+          "bytes": 1736,
+          "sha256": "1bb1ea3f4ed0e52975bf792e2bf6d7ef854512c4e5fc4e64fab178de462d02a9",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "src/core/streams/Stream.ts",
+          "bytes": 2956,
+          "sha256": "6e088685ef1eb7e279482972d017d3489fddef01dfe3d43557b99064496f3664",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "src/utils/base64.ts",
+          "bytes": 2903,
+          "sha256": "433dc1d78f6e12c89a3118671499e0eb8ae333bedc059209ceb21250303ff7ed",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "ts3.4/cjs/api/form/PDFField.d.ts",
+          "bytes": 8231,
+          "sha256": "57017718fa5a6a6ebf62e8883e3c0e8ce56a37b3bc482280cfa3b60c7f5c329a",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "ts3.4/cjs/core/acroform/flags.d.ts",
+          "bytes": 5923,
+          "sha256": "6b383b93ff7fb93f68f63b225c4a2a4bd570f896803f7b1d1658f818b0537407",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "ts3.4/cjs/core/embedders/CustomFontEmbedder.d.ts",
+          "bytes": 2238,
+          "sha256": "942099abf4fa014f9e1282c6742e632b1fd3590ee5a404365c9eef5d232a2f02",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "ts3.4/cjs/core/embedders/CustomFontSubsetEmbedder.d.ts",
+          "bytes": 1025,
+          "sha256": "e842cc2d24158c20e1c312f5fba7ed5331a6fca32a3a907972538fe137ebca0b",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "ts3.4/cjs/core/embedders/JpegEmbedder.d.ts",
+          "bytes": 871,
+          "sha256": "bcaf29ec62fa131229783b736e6f2e5182c6695fd31f695d80a9e8fe0ffc7b4f",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "ts3.4/cjs/core/embedders/PngEmbedder.d.ts",
+          "bytes": 780,
+          "sha256": "e9d31f5a91acdc187fadefa599d67a6845965594ccbf66b9e2c8f922e99e6aec",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "ts3.4/cjs/core/embedders/StandardFontEmbedder.d.ts",
+          "bytes": 1477,
+          "sha256": "da55ce9bac8db7da4c00750bc4ad68ae8229b764e1823512a85fe2befe0a4f94",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "ts3.4/es/api/form/PDFField.d.ts",
+          "bytes": 8231,
+          "sha256": "57017718fa5a6a6ebf62e8883e3c0e8ce56a37b3bc482280cfa3b60c7f5c329a",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "ts3.4/es/core/acroform/flags.d.ts",
+          "bytes": 5923,
+          "sha256": "6b383b93ff7fb93f68f63b225c4a2a4bd570f896803f7b1d1658f818b0537407",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "ts3.4/es/core/embedders/CustomFontEmbedder.d.ts",
+          "bytes": 2238,
+          "sha256": "942099abf4fa014f9e1282c6742e632b1fd3590ee5a404365c9eef5d232a2f02",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "ts3.4/es/core/embedders/CustomFontSubsetEmbedder.d.ts",
+          "bytes": 1025,
+          "sha256": "e842cc2d24158c20e1c312f5fba7ed5331a6fca32a3a907972538fe137ebca0b",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "ts3.4/es/core/embedders/JpegEmbedder.d.ts",
+          "bytes": 871,
+          "sha256": "bcaf29ec62fa131229783b736e6f2e5182c6695fd31f695d80a9e8fe0ffc7b4f",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "ts3.4/es/core/embedders/PngEmbedder.d.ts",
+          "bytes": 780,
+          "sha256": "e9d31f5a91acdc187fadefa599d67a6845965594ccbf66b9e2c8f922e99e6aec",
+          "categories": [
+            "origin-marker"
+          ]
+        },
+        {
+          "path": "ts3.4/es/core/embedders/StandardFontEmbedder.d.ts",
+          "bytes": 1477,
+          "sha256": "da55ce9bac8db7da4c00750bc4ad68ae8229b764e1823512a85fe2befe0a4f94",
+          "categories": [
+            "origin-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "property-information",
+      "version": "7.2.0",
+      "lockPath": "node_modules/property-information",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-IAtzIB6sUiWaJYrX9smp3V46pBGbBeLFRGdh25kg1334VcBlD8HzhPeNIWQH9zhGmo2itIe25EHt9dQP7G5hmg==",
+      "selectedFiles": 38,
+      "selectedInputListSha256": "3d45e6be7ddcdeec757deab6a1f8a9f1e8fa402a4ef63332fb5bf4d567c21fdc",
+      "skipped": {
+        "nonSelected": 18,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1101,
+          "sha256": "5d0698266086f217bb11ea0499d33453e401fe479fb9126ad04e625e63d3557b"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "react",
+      "version": "19.2.8",
+      "lockPath": "node_modules/react",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-PWaYA1L/q9u2u7xYQi+Y3L3Yfnie7XyLeaJICV1MGD6LprsBxcAqGjYyr0eY3p+QdsA+x/Irkt4Qif8D63+Sbw==",
+      "selectedFiles": 26,
+      "selectedInputListSha256": "c1f1d38c364749045c6c11c8e3862c2228572ddd8fb4635805cad38e562cbe5b",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1088,
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "cjs/react-compiler-runtime.development.js",
+          "bytes": 1090,
+          "sha256": "7ae8fa77a54c404572cba7065e14fe599a3d8cc0b68d34d649d8acc776e4e096",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-compiler-runtime.production.js",
+          "bytes": 463,
+          "sha256": "f7d518f5c043cd008514b4fd8c665a9d2fa5686bd36c6e7d44d78187c0438700",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-compiler-runtime.profiling.js",
+          "bytes": 462,
+          "sha256": "821fc2969277b5bc7814965e0ac07f815aafb3880d8bca31bcb53ce5d875edd3",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-jsx-dev-runtime.development.js",
+          "bytes": 12056,
+          "sha256": "5a36d0fbb3554be840e6367736f88ebafdb1873a4f40c13f499c3969fa918dd6",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-jsx-dev-runtime.production.js",
+          "bytes": 387,
+          "sha256": "ba9b367119971ed746925a600256d342eb4cc3f2389de013f61e36ff1f3594a5",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-jsx-dev-runtime.profiling.js",
+          "bytes": 386,
+          "sha256": "c89fe850b7e66b6e1a10496321ea9d778a64512960d01dccf49ff0fd5d256b20",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-jsx-dev-runtime.react-server.development.js",
+          "bytes": 13213,
+          "sha256": "020946778a8dc16d04209bd6ab003bbfb929c96c2d195bf689bf60d7baeabe8b",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-jsx-dev-runtime.react-server.production.js",
+          "bytes": 1316,
+          "sha256": "c56f744270c8cd4d733575757eaf48de91edfa04d0f5e01ef5043bf9848263b3",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-jsx-runtime.development.js",
+          "bytes": 12452,
+          "sha256": "dd50fd0db2fba44e0eee66243a45c81cfa3774cf41e4e6c0c080a601815c694d",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-jsx-runtime.production.js",
+          "bytes": 976,
+          "sha256": "1e46f15002696985e80c61d47aaa30dabb03c954270a690f5f7dfbbacfa9002b",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-jsx-runtime.profiling.js",
+          "bytes": 975,
+          "sha256": "27b2fb3d04f9878687ab58717172592650e256de727e910366340be87e0f8352",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-jsx-runtime.react-server.development.js",
+          "bytes": 13209,
+          "sha256": "2338d052c495176d4e996090cb07bff4831f2faf95b89ad116e4e31769a5ca78",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-jsx-runtime.react-server.production.js",
+          "bytes": 1312,
+          "sha256": "44bdd0dbbf51d5d49ac46ece12e919151c7f27b7f5b174790c4ca6aef0b6a1eb",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react.development.js",
+          "bytes": 47219,
+          "sha256": "e7a035fea0b35de567a563966fdb5e05c01f01f8ff776770d3a44794990ba3d7",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react.production.js",
+          "bytes": 17217,
+          "sha256": "d348b80a78c8ea0bd02b1990c7b7b514f5c276f9e74fee6e3976297585385961",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react.react-server.development.js",
+          "bytes": 30389,
+          "sha256": "db0b3bdb71c5fd39a15f219a116b25c980c58bef26f54002dc3827fde596e79c",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react.react-server.production.js",
+          "bytes": 13270,
+          "sha256": "e9a7a278f37772c63206c69a7fe0f9edfce65a3e89d859ca2ba6f2452c279b1e",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "compiler-runtime.js",
+          "bytes": 412,
+          "sha256": "5c00456a0180b7b6b2366348f7218b0ea2c3a85c7fefe24c18533ed54126f601",
+          "categories": [
+            "rights-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "react-dom",
+      "version": "19.2.8",
+      "lockPath": "node_modules/react-dom",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-rVprimfGBG3DR+Tq0IQG2DT5PxKth1WIGDmj5yPmlzr4YBe7uyE+Du4oVqTDXZSHGGGXRtTJEGSSePyQCMBglQ==",
+      "selectedFiles": 42,
+      "selectedInputListSha256": "df94930adbd57ba4a4d040f211c9aca49b67c42ec5556b9ca07cbe6722ec7ab0",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1088,
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "cjs/react-dom-client.development.js",
+          "bytes": 1065698,
+          "sha256": "261c3275492d8f0b1f9b76f78268882316c8435217c39c78c65853bdcd89d500",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom-client.production.js",
+          "bytes": 536016,
+          "sha256": "6cf4932e0c20a4572ae395035ca2e512a42d7d49c1a659fa73d6197069c28df0",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom-profiling.development.js",
+          "bytes": 1082082,
+          "sha256": "68b75445dcd5d7ee62f712f017765e7d4c53c12366ab6581883415890620bd9c",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom-profiling.profiling.js",
+          "bytes": 607634,
+          "sha256": "0fdba3845eb5eb31d00dd0532ecd24d9b04a114501f43f34d0f3f97919d5f336",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom-server-legacy.browser.development.js",
+          "bytes": 395197,
+          "sha256": "6724ab5822dbc9337c1fc45e7979238bc8053ee3fbbd58ad7f8db4556d13ed85",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom-server-legacy.browser.production.js",
+          "bytes": 237937,
+          "sha256": "42694c0dd8b60c6ca8826da4e932ec767e2322cf494a80e71d2f8fb699156266",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom-server-legacy.node.development.js",
+          "bytes": 395194,
+          "sha256": "afb80c4aeca492da216a6e4abe6e27cf543c986d36bfb024ae2883fcb54177fb",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom-server-legacy.node.production.js",
+          "bytes": 242793,
+          "sha256": "5f3ec8c34ca8a294bfb9532fb6b95478513cc961709ea6da1eb8a5f126ed492c",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom-server.browser.development.js",
+          "bytes": 424658,
+          "sha256": "3243d514280f0bfd1312c91b6e66b8a58c1e90eb5f8767425c7068a81a973300",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom-server.browser.production.js",
+          "bytes": 268058,
+          "sha256": "c4e4f2a82a5bf1330c2bbd96689ef6a01d98054dd4475054353cf888aea2609e",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom-server.bun.development.js",
+          "bytes": 354659,
+          "sha256": "9d9f4fa5a502b42bd17473c221607cb50a175de1f7eecdf03780822c120d0a6f",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom-server.bun.production.js",
+          "bytes": 245324,
+          "sha256": "6cb0a418bcc09f2506a7943139c5ab03b13c8e2cf93ea9f4dbb5a478c211e228",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom-server.edge.development.js",
+          "bytes": 425439,
+          "sha256": "1995755e66224806c95bdfb151f43ce2ec3c62fb296ff7bf31c6058312c2c0b9",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom-server.edge.production.js",
+          "bytes": 273614,
+          "sha256": "08b1b330efd70e4e083600117a326b9178ff9d741f6526d087aa1d21a8666eda",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom-server.node.development.js",
+          "bytes": 429423,
+          "sha256": "acde2438469e46eb28a0d85828b0576ebf515844a00bbe243b554ac854374297",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom-server.node.production.js",
+          "bytes": 277046,
+          "sha256": "7c5f4361d4d1e8d3d5ab1d1a559e78821577e2ec3974e95ed302b9c8c0753730",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom-test-utils.development.js",
+          "bytes": 793,
+          "sha256": "a691b913756753dd769c1559b8efbd3d8157feb4c9368d2cb4b79eba67441841",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom-test-utils.production.js",
+          "bytes": 686,
+          "sha256": "d41ce0bee80299c8330fc080936da31afa5f307dfe4912bc8a6c68f9f566d344",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom.development.js",
+          "bytes": 17673,
+          "sha256": "07d30cb25cb9bdf68b9dc7c9467b8f29d9c7ffe0f65c6ade9924e16ac207061b",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom.production.js",
+          "bytes": 6655,
+          "sha256": "291e0682e8b69643e8e213b6bc13849527fdd97800fef587d5be7b4a8f6a58ca",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom.react-server.development.js",
+          "bytes": 14211,
+          "sha256": "ea05629cab85bd50fa03e0d9155642ac66ee634c870622cc06ed5e37e10e06be",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/react-dom.react-server.production.js",
+          "bytes": 4878,
+          "sha256": "227c24d4f42d54321b984f65a14c32a6b2b7562c2e8c7ab37b46eabc9e5fa73c",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "react-markdown",
+      "version": "10.1.0",
+      "lockPath": "node_modules/react-markdown",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-qKxVopLT/TyA6BX3Ue5NwabOsAzm0Q7kAPwq6L+wWDwisYs7R8vZ0nRXqq6rkueboxpkjvLGU9fWifiX/ZZFxQ==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "657ed596894deef0e3d7750cc84a7ff1f5841488c5e5afed334392f65ddb2d71",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1079,
+          "sha256": "f6196c64e144f9a6fa9154c3a80bc8b89615a9567934b83a8951879f06ba2aef"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "remark-breaks",
+      "version": "4.0.0",
+      "lockPath": "node_modules/remark-breaks",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-IjEjJOkH4FuJvHZVIW0QCDWxcG96kCq7An/KVH2NfJe6rKZU2AsHeB3OEjPNRxi4QC34Xdx7I2KGYn6IpT7gxQ==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "2cbdeadbae6bf9750ee70ab13263f0be1cc9378d5f898edd9004747c095239ab",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "d8fc337aaf98fc7a0f5498edc18b47a9df8cdfcc1a0f013519105905722c7a4c"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "remark-gfm",
+      "version": "4.0.1",
+      "lockPath": "node_modules/remark-gfm",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-1quofZ2RQ9EWdeN34S79+KExV1764+wCUGop5CPL1WGdD0ocPpu91lzPGbwWMECpEpd42kJGQwzRfyov9j4yNg==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "e05c76657edf20d1eb4eb32dff706c4117b75fb2ed1c8282e3e2805c210ddc41",
+      "skipped": {
+        "nonSelected": 2,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "remark-parse",
+      "version": "11.0.0",
+      "lockPath": "node_modules/remark-parse",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-FCxlKLNGknS5ba/1lmpYijMUzX2esxW5xQqjWxw2eHFfS2MSdaHVINFmhjo+qN1WhZhNimq0dZATN9pH0IDrpA==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "4b835d0676298b2f1bf66900e1a7389105c96bfc49d459fde67cbba8798f3c07",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "413654b0a78b98661dce96d2aff2e4d075603d220b8483e28b1aa010ccc138b4"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "remark-rehype",
+      "version": "11.1.2",
+      "lockPath": "node_modules/remark-rehype",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-Dh7l57ianaEoIpzbp0PC9UKAdCSVklD8E5Rpw7ETfbTl3FqcOOgq5q2LVDhgGCkaBv7p24JXikPdvhhmHvKMsw==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "cff18ef6e609685849fd48b0fc193f0cfd80b316eeb55cc3af4616e3a19dedc6",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "remark-stringify",
+      "version": "11.0.0",
+      "lockPath": "node_modules/remark-stringify",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-1OSmLd3awB/t8qdoEOMazZkNsfVTeY4fTsgzcQFdXNq8ToTN4ZGwrMnlda4K6smTFKD+GRV6O48i6Z4iKgPPpw==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "4d8418b436e6ded3793e57e9440a3497c64a5d2a81d54cef684bfec3b0cda3fa",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "413654b0a78b98661dce96d2aff2e4d075603d220b8483e28b1aa010ccc138b4"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "scheduler",
+      "version": "0.27.0",
+      "lockPath": "node_modules/scheduler",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==",
+      "selectedFiles": 14,
+      "selectedInputListSha256": "229d34760331b8bb37ba17b572bdd49eb06cbcd6f2a383354b0c43cb3317da19",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1088,
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "cjs/scheduler-unstable_mock.development.js",
+          "bytes": 13687,
+          "sha256": "de31e2407f585fd6ba00efd420485bff8b84aa6ea3ebcb870289214d27ca34b8",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/scheduler-unstable_mock.production.js",
+          "bytes": 11990,
+          "sha256": "d49069c9cfea586989b09fe16fa2b7ebdf064fd60fb7c932e9a3799f7e95cabf",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/scheduler-unstable_post_task.development.js",
+          "bytes": 4639,
+          "sha256": "34171513f5d7662f42d42c479445c2536cc02161c245b0f5083ef595f88f0e20",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/scheduler-unstable_post_task.production.js",
+          "bytes": 3974,
+          "sha256": "88e667020933b71752478d18e3f94271e9e8eb44d6dfff95ba014b06b47329be",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/scheduler.development.js",
+          "bytes": 12144,
+          "sha256": "646eb671c8585382baff16daf92fe16a4cdd10dcf1a363c58b2ae1f6bf3a2b8d",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/scheduler.native.development.js",
+          "bytes": 12327,
+          "sha256": "26401a9da7b51e0db1f506c5d1e8579081302460212d007593acdd8c5968570b",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/scheduler.native.production.js",
+          "bytes": 10869,
+          "sha256": "f6e15b1a0f7912a8dbae536f037b9c059026742f3dfe740b37bd03fc7d816d65",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        },
+        {
+          "path": "cjs/scheduler.production.js",
+          "bytes": 10181,
+          "sha256": "679adff761d31e9426604f80c0e99be44a3e6f4c6834b0218ecf0312a67c171f",
+          "categories": [
+            "rights-marker",
+            "license-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "space-separated-tokens",
+      "version": "2.0.2",
+      "lockPath": "node_modules/space-separated-tokens",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "74e88527c6e3a991b21da24be22c6c723fba7107f3f469a35b9d7b76ea1d336d",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "stringify-entities",
+      "version": "4.0.4",
+      "lockPath": "node_modules/stringify-entities",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-IwfBptatlO+QCJUo19AqvrPNqlVMpW9YEL2LIVY+Rpv2qsjCGxaDLNRgeGsQWJhfItebuJhsGSLjaBbNSQ+ieg==",
+      "selectedFiles": 20,
+      "selectedInputListSha256": "99c38ccc06777daec40ee456523f124ea54323296e824faad1c51a61bc2dbedb",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1106,
+          "sha256": "9f084fac69d8cf1e6ce983ba5a3499c7695ed74a26ec625c38f0fd19fddd5e10"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "style-to-js",
+      "version": "1.1.21",
+      "lockPath": "node_modules/style-to-js",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-RjQetxJrrUJLQPHbLku6U/ocGtzyjbJMP9lCNK7Ag0CNh690nSH8woqWH9u16nMjYBAok+i7JO1NP2pOy8IsPQ==",
+      "selectedFiles": 12,
+      "selectedInputListSha256": "7cbff0486a7bfff9825a1589612bf135eafb7a728e839c9528047bc995ea5ceb",
+      "skipped": {
+        "nonSelected": 7,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1110,
+          "sha256": "bbb380e5c1a717079378d6ea4d33c8a5a81655d4612b749f882e34e46712aab5"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "style-to-object",
+      "version": "1.0.14",
+      "lockPath": "node_modules/style-to-object",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-LIN7rULI0jBscWQYaSswptyderlarFkjQ+t79nzty8tcIAceVomEVlLzH5VP4Cmsv6MtKhs7qaAiwlcp+Mgaxw==",
+      "selectedFiles": 10,
+      "selectedInputListSha256": "6b0e0435ca6ec6af215ab5374881a2cf11d08033e8d39ca9ece81d88aaa1d15b",
+      "skipped": {
+        "nonSelected": 8,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1110,
+          "sha256": "896c9fd6b5fc48ac31800b9d29a6e3ffcb0c2d534ed077ebfa5c2fa388cc38b7"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "trim-lines",
+      "version": "3.0.1",
+      "lockPath": "node_modules/trim-lines",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-kRj8B+YHZCc9kQYdWfJB2/oUl9rA99qbowYYBtr4ui4mZyAQ2JpvVBd/6U2YloATfqBhBTSMhTpgBHtU0Mf3Rg==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "5c99aba85b126683fbaf17fdb9996fee0973d0c8f86e6e51aeece5f98243d34f",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1106,
+          "sha256": "9f084fac69d8cf1e6ce983ba5a3499c7695ed74a26ec625c38f0fd19fddd5e10"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "trough",
+      "version": "2.2.0",
+      "lockPath": "node_modules/trough",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-tmMpK00BjZiUyVyvrBK7knerNgmgvcV/KLVyuma/SC+TQN167GrMRciANTz09+k3zW8L8t60jWO1GpfkZdjTaw==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "fcbc29ef8b2e87bc3054386a40e5cb89ad13da67fc5b810c569e6a7b5c9d8fd3",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "6c03fd41cfd7c92d8aa8a2fa521b94b2683f059123281dcf921ddea9216b6254"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "tslib",
+      "version": "1.14.1",
+      "lockPath": "node_modules/tslib",
+      "declaredLicense": "0BSD",
+      "integrity": "sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==",
+      "selectedFiles": 8,
+      "selectedInputListSha256": "67d0cca18c4d4874843bdb5ad0f3efe1f3e6a4a65c191045d85a9189a690a0e2",
+      "skipped": {
+        "nonSelected": 5,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "LICENSE.txt",
+          "bytes": 655,
+          "sha256": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "CopyrightNotice.txt",
+          "bytes": 824,
+          "sha256": "dd835e67a9a297da32f9467d7677a5d02c8e50e10f15da43b810147c79c04b9b",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "tslib.d.ts",
+          "bytes": 2714,
+          "sha256": "4576b4e61049f5ffd7c9e935cf88832e089265bdb15ffc35077310042cbbbeea",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "tslib.es6.js",
+          "bytes": 10274,
+          "sha256": "cd10f47b56da85cf5d1b7fa03f973b1f011bfe975e2a82a18ef7abe844491b12",
+          "categories": [
+            "rights-marker"
+          ]
+        },
+        {
+          "path": "tslib.js",
+          "bytes": 13204,
+          "sha256": "84df36bfcbbdfdbea006f78f150e70655d4801a402dc56a8e466806fe018e585",
+          "categories": [
+            "rights-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "unified",
+      "version": "11.0.5",
+      "lockPath": "node_modules/unified",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-xKvGhPWw3k84Qjh8bI3ZeJjqnyadK+GEFtazSfZv/rKeTkTjOJho6mFqh2SM96iIcZokxiOpg78GazTSg8+KHA==",
+      "selectedFiles": 8,
+      "selectedInputListSha256": "0fb0f9cce381832fb7421329e30a02769a57ff83c598a73bdd075c05d3ba1f0a",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "05811400116ed61f1a7693b78fe8ca6598c155a12f3978e609db4df648a4cb3d"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "unist-util-is",
+      "version": "6.0.1",
+      "lockPath": "node_modules/unist-util-is",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-LsiILbtBETkDz8I9p1dQ0uyRUWuaQzd/cuEeS1hoRSyW5E5XGmTzlwY1OrNzzakGowI9Dr/I8HVaw4hTtnxy8g==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "dfb48d63e5e21aff7bdd52a90d714aa01287d7481d219ce4a854dfc267dfa175",
+      "skipped": {
+        "nonSelected": 3,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "82974dbf2639d13edab95c32ed9cb6c0867ede272cd2e07ce47ce8548fe55c05"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "unist-util-position",
+      "version": "5.0.0",
+      "lockPath": "node_modules/unist-util-position",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-fucsC7HjXvkB5R3kTCO7kUjRdrS0BJt3M/FPxmHMBOm8JQi2BsHAHFsy27E0EolP8rp0NzXsJ+jNPyDWvOJZPA==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "d0c7358e9e9c7ab4ec8f4147a3e03f46e7f869b8384a7f4199bf3dab46897b5e",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "unist-util-stringify-position",
+      "version": "4.0.0",
+      "lockPath": "node_modules/unist-util-stringify-position",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-0ASV06AAoKCDkS2+xw5RXJywruurpbC4JZSm7nr7MOt1ojAzvyyaO+UxZf18j8FCF6kmzCZKcAgN/yu2gm2XgQ==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "b304d88fb83c04e792974028310f70afca853c9a41f70d2e5d7faab00f0ffbd5",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "unist-util-visit",
+      "version": "5.1.0",
+      "lockPath": "node_modules/unist-util-visit",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-m+vIdyeCOpdr/QeQCu2EzxX/ohgS8KbnPDgFni4dQsfSCtpz8UqDyY5GjRru8PDKuYn7Fq19j1CQ+nJSsGKOzg==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "74dcecc9d11ec61586669ca389b4e728a180b95d365b64ff3dd9cc7ae3556095",
+      "skipped": {
+        "nonSelected": 2,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "index.js",
+          "bytes": 101,
+          "sha256": "0bd7a392932d4578d13e0ab49705ba1488ecaad56fa4cf865f85dac64d34de91",
+          "categories": [
+            "origin-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "unist-util-visit-parents",
+      "version": "6.0.2",
+      "lockPath": "node_modules/unist-util-visit-parents",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-goh1s1TBrqSqukSc8wrjwWhL0hiJxgA8m4kFxGlQ+8FYQ3C/m11FcTs4YYem7V664AhHVvgoQLk890Ssdsr2IQ==",
+      "selectedFiles": 10,
+      "selectedInputListSha256": "45552133d8a3141a5940826f68333b9867718cab1275b8178fef1fdb140d0000",
+      "skipped": {
+        "nonSelected": 4,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "index.js",
+          "bytes": 108,
+          "sha256": "6e3e10026230a33197e56422a2d95fc1815528c0bde7c1c790fd1a733b04bd39",
+          "categories": [
+            "origin-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "vfile",
+      "version": "6.0.3",
+      "lockPath": "node_modules/vfile",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==",
+      "selectedFiles": 20,
+      "selectedInputListSha256": "019521dd4a450a82847665ddecc4e2862ee6f8905ede80f46f8e70439bed86fb",
+      "skipped": {
+        "nonSelected": 9,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "05811400116ed61f1a7693b78fe8ca6598c155a12f3978e609db4df648a4cb3d"
+        }
+      ],
+      "internalMarkers": [
+        {
+          "path": "lib/minpath.browser.js",
+          "bytes": 11416,
+          "sha256": "6c011d74955d2c202e1af91c8616e92e0a2381dce628128553dd81b03c900f95",
+          "categories": [
+            "rights-marker"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "vfile-message",
+      "version": "4.0.3",
+      "lockPath": "node_modules/vfile-message",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-QTHzsGd1EhbZs4AsQ20JX1rC3cOlt/IWJruk893DfLRr57lcnOeMaWG4K0JrRta4mIJZKth2Au3mM3u03/JWKw==",
+      "selectedFiles": 6,
+      "selectedInputListSha256": "0b1e8207fcac4cb6bd23aee5ff6bff8c0a3913bb45e28cb9e704e40371a3182f",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1094,
+          "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+        }
+      ],
+      "internalMarkers": []
+    },
+    {
+      "name": "zwitch",
+      "version": "2.0.4",
+      "lockPath": "node_modules/zwitch",
+      "declaredLicense": "MIT",
+      "integrity": "sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==",
+      "selectedFiles": 4,
+      "selectedInputListSha256": "6ba4bf8ee8f17ed5d27e7849fa2ae9c5fc3718780cfa5a6fa282d5bb9bd89a96",
+      "skipped": {
+        "nonSelected": 1,
+        "overLimit": 0
+      },
+      "skippedNestedDependencyDirectories": 0,
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1099,
+          "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+        }
+      ],
+      "internalMarkers": []
+    }
+  ],
+  "summary": {
+    "packages": 117,
+    "selectedFiles": 2162,
+    "internalMarkedFiles": 187,
+    "nestedNoticeFiles": 0,
+    "overLimitFiles": 0
+  }
+}

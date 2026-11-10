@@ -99,6 +99,22 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
     });
     expect(verified).toBe(true);
     await popup.goBack();
+    const pdfLib=popup.locator('li').filter({has:popup.getByText('pdf-lib 1.17.1',{exact:true})});
+    await expect(pdfLib.getByRole('link',{name:'INTERNAL-NOTICES.txt',exact:true})).toBeVisible();
+    await expect(pdfLib.getByRole('link',{name:'APACHE-2.0.txt',exact:true})).toBeVisible();
+    const internalTexts=await popup.evaluate(async()=>{
+      const inventory=await(await fetch('./inventory.json')).json();const pkg=inventory.packages.find((p:{name:string})=>p.name==='pdf-lib');
+      const texts=[];
+      for(const original of pkg.originals){
+        const response=await fetch(original.path);if(!response.ok)throw Error('notice unavailable');const bytes=await response.arrayBuffer();
+        const hash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(b=>b.toString(16).padStart(2,'0')).join('');
+        if(hash!==original.sha256)throw Error('notice hash');texts.push(new TextDecoder().decode(bytes));
+      }return texts.join('\n');
+    });
+    expect(internalTexts).toContain('Copyright 2012 Mozilla Foundation');
+    expect(internalTexts).toContain('Copyright 1996-2003 Glyph & Cog, LLC');
+    expect(internalTexts).toContain('Copyright (c) 2012 Niklas von Hertzen');
+    expect(internalTexts).toContain('Apache License');
     const pako=popup.locator('li').filter({has:popup.getByText('pako 1.0.11',{exact:true})});
     await expect(pako.getByRole('link')).toHaveCount(2);
     await expect(pako.getByRole('link',{name:'ZLIB-README.txt',exact:true})).toBeVisible();
@@ -122,11 +138,14 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
     await expect(popup.getByText('調査対象の候補であり、WASM に含まれることや依存一覧の網羅性を示すものではありません。')).toBeVisible();
     const encoding=popup.locator('li').filter({has:popup.getByText('encoding_rs 0.8.35',{exact:true})});
     const unicode=popup.locator('li').filter({has:popup.getByText('unicode-ident 1.0.24',{exact:true})});
+    const zlib=popup.locator('li').filter({has:popup.getByText('zlib-rs 0.6.6',{exact:true})});
+    await expect(zlib.getByRole('link',{name:'LICENSE',exact:true})).toBeVisible();
     await expect(encoding.getByRole('link')).toHaveCount(4);
     await expect(unicode.getByRole('link')).toHaveCount(3);
     const candidatePaths=await Promise.all([
       encoding.getByRole('link',{name:'LICENSE-WHATWG',exact:true}).getAttribute('href'),
       unicode.getByRole('link',{name:'LICENSE-UNICODE',exact:true}).getAttribute('href'),
+      zlib.getByRole('link',{name:'LICENSE',exact:true}).getAttribute('href'),
     ]);
     expect(candidatePaths.every(Boolean)).toBe(true);
     const candidateTexts=await popup.evaluate(async paths=>Promise.all(paths.map(async path=>{const response=await fetch(path!);return {status:response.status,text:await response.text()};})),candidatePaths);
@@ -134,6 +153,8 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
     expect(candidateTexts[0].text).toContain('WHATWG');
     expect(candidateTexts[1].status).toBe(200);
     expect(candidateTexts[1].text).toContain('UNICODE LICENSE V3');
+    expect(candidateTexts[2].status).toBe(200);
+    expect(candidateTexts[2].text).toContain('2024 Trifecta Tech Foundation');
     await popup.close();
   } finally { await page.context().setOffline(false); }
 });
