@@ -102,6 +102,11 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
     const pdfLib=popup.locator('li').filter({has:popup.getByText('pdf-lib 1.17.1',{exact:true})});
     await expect(pdfLib.getByRole('link',{name:'INTERNAL-NOTICES.txt',exact:true})).toBeVisible();
     await expect(pdfLib.getByRole('link',{name:'APACHE-2.0.txt',exact:true})).toBeVisible();
+    await expect(pdfLib.getByRole('link',{name:'PDFKIT-MIT.txt',exact:true})).toBeVisible();
+    await expect(pdfLib.getByRole('link',{name:'BASE64-MIT.txt',exact:true})).toBeVisible();
+    await expect(pdfLib.getByRole('link',{name:'PDFJS-LICENSE.txt',exact:true})).toBeVisible();
+    await expect(pdfLib.getByText('（固定参照commitの原文）',{exact:true})).toHaveCount(1);
+    await expect(pdfLib.getByText('（参考候補・実借用版は未特定）',{exact:true})).toHaveCount(4);
     const internalTexts=await popup.evaluate(async()=>{
       const inventory=await(await fetch('./inventory.json')).json();const pkg=inventory.packages.find((p:{name:string})=>p.name==='pdf-lib');
       const texts=[];
@@ -115,6 +120,7 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
     expect(internalTexts).toContain('Copyright 1996-2003 Glyph & Cog, LLC');
     expect(internalTexts).toContain('Copyright (c) 2012 Niklas von Hertzen');
     expect(internalTexts).toContain('Apache License');
+    expect(internalTexts).toContain('Copyright (c) 2014 Devon Govett');
     const pako=popup.locator('li').filter({has:popup.getByText('pako 1.0.11',{exact:true})});
     await expect(pako.getByRole('link')).toHaveCount(2);
     await expect(pako.getByRole('link',{name:'ZLIB-README.txt',exact:true})).toBeVisible();

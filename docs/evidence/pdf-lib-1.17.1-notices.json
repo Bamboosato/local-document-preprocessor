@@ -112,8 +112,44 @@
       "outputPath": "dependencies/pdf-lib@1.17.1/APACHE-2.0.txt",
       "bytes": 11358,
       "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "source": "docs/third-party-npm-licenses/pdf-lib@1.17.1/PDFKIT-MIT.txt",
+      "outputPath": "dependencies/pdf-lib@1.17.1/PDFKIT-MIT.txt",
+      "bytes": 1067,
+      "sha256": "5f0d5197d2b5d91f41de43143b0be42fb55515bc2b894f2a9b62de9f7056c0f8",
+      "role": "fixed-pdf-lib-cited-commits"
+    },
+    {
+      "source": "docs/third-party-npm-licenses/pdf-lib@1.17.1/BASE64-MIT.txt",
+      "outputPath": "dependencies/pdf-lib@1.17.1/BASE64-MIT.txt",
+      "bytes": 1062,
+      "sha256": "f3eca6ff762533fa5a77caf954a143e48afa204668cf97dce758c45a9e006be3",
+      "role": "same-original-in-three-fixed-releases-borrowed-release-unproven"
+    },
+    {
+      "source": "docs/third-party-npm-licenses/pdf-lib@1.17.1/PDFJS-LICENSE.txt",
+      "outputPath": "dependencies/pdf-lib@1.17.1/PDFJS-LICENSE.txt",
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "role": "historical-reference-candidate-actual-borrowed-revision-unproven"
+    },
+    {
+      "source": "docs/third-party-npm-licenses/pdf-lib@1.17.1/PDFJS-AUTHORS-v1.10.100.txt",
+      "outputPath": "dependencies/pdf-lib@1.17.1/PDFJS-AUTHORS-v1.10.100.txt",
+      "bytes": 893,
+      "sha256": "ae52442006af71b38c834df67074c8fd3a52acf29f30fc943b4a7099a8954467",
+      "role": "historical-reference-candidate-actual-borrowed-revision-unproven"
+    },
+    {
+      "source": "docs/third-party-npm-licenses/pdf-lib@1.17.1/PDFJS-AUTHORS-v2.0.943.txt",
+      "outputPath": "dependencies/pdf-lib@1.17.1/PDFJS-AUTHORS-v2.0.943.txt",
+      "bytes": 981,
+      "sha256": "07e0810dd4f4ae7c35bd9ff6d892792b7d074fba9cd038ed2336fcb49b14ab27",
+      "role": "historical-reference-candidate-actual-borrowed-revision-unproven"
     }
   ],
   "apacheOriginalSource": "docs/third-party-source-licenses/anydoc/encoding_rs@0.8.35/001-LICENSE-APACHE.txt",
-  "scope": "Retain observed internal rights and port/borrow notices; separate from root MIT. Referenced upstream MIT originals and historical PDF.js NOTICE applicability remain to be confirmed."
+  "scope": "Retain observed internal rights and fixed pdfkit MIT original; base64 common MIT and PDF.js historical originals are labelled reference candidates, not uniquely proven borrowed revisions.",
+  "borrowedLicenseReview": "pdf-lib-borrowed-license-review.json"
 }

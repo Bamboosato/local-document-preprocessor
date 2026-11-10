@@ -1,0 +1,213 @@
+{
+  "schema": 1,
+  "date": "2026-11-10",
+  "pdfLib": "1.17.1",
+  "pdfkit": {
+    "referenceCount": 7,
+    "fixedCommits": 5,
+    "references": [
+      {
+        "pdfLibPath": "src/api/svgPath.ts",
+        "repository": "foliojs/pdfkit",
+        "commit": "1e62e6ffe24b378eb890df507a47610f4c4a7b24",
+        "path": "lib/path.js"
+      },
+      {
+        "pdfLibPath": "src/core/embedders/CustomFontEmbedder.ts",
+        "repository": "devongovett/pdfkit",
+        "commit": "e71edab0dd4657b5a767804ba86c94c58d01fbca",
+        "path": "lib/image/jpeg.coffee"
+      },
+      {
+        "pdfLibPath": "src/core/embedders/CustomFontSubsetEmbedder.ts",
+        "repository": "devongovett/pdfkit",
+        "commit": "e71edab0dd4657b5a767804ba86c94c58d01fbca",
+        "path": "lib/image/jpeg.coffee"
+      },
+      {
+        "pdfLibPath": "src/core/embedders/FontFlags.ts",
+        "repository": "foliojs/pdfkit",
+        "commit": "83f5f7243172a017adcf6a7faa5547c55982c57b",
+        "path": "lib/font/embedded.js"
+      },
+      {
+        "pdfLibPath": "src/core/embedders/JpegEmbedder.ts",
+        "repository": "foliojs/pdfkit",
+        "commit": "a6af76467ce06bd6a2af4aa7271ccac9ff152a7d",
+        "path": "lib/image/jpeg.js"
+      },
+      {
+        "pdfLibPath": "src/core/embedders/PngEmbedder.ts",
+        "repository": "devongovett/pdfkit",
+        "commit": "e71edab0dd4657b5a767804ba86c94c58d01fbca",
+        "path": "lib/image/png.coffee"
+      },
+      {
+        "pdfLibPath": "src/core/embedders/StandardFontEmbedder.ts",
+        "repository": "foliojs/pdfkit",
+        "commit": "f91bdd61c164a72ea06be1a43dc0a412afc3925f",
+        "path": "lib/font/afm.coffee"
+      }
+    ],
+    "originals": [
+      {
+        "commit": "1e62e6ffe24b378eb890df507a47610f4c4a7b24",
+        "url": "https://raw.githubusercontent.com/foliojs/pdfkit/1e62e6ffe24b378eb890df507a47610f4c4a7b24/LICENSE",
+        "bytes": 1067,
+        "sha256": "5f0d5197d2b5d91f41de43143b0be42fb55515bc2b894f2a9b62de9f7056c0f8"
+      },
+      {
+        "commit": "83f5f7243172a017adcf6a7faa5547c55982c57b",
+        "url": "https://raw.githubusercontent.com/foliojs/pdfkit/83f5f7243172a017adcf6a7faa5547c55982c57b/LICENSE",
+        "bytes": 1067,
+        "sha256": "5f0d5197d2b5d91f41de43143b0be42fb55515bc2b894f2a9b62de9f7056c0f8"
+      },
+      {
+        "commit": "a6af76467ce06bd6a2af4aa7271ccac9ff152a7d",
+        "url": "https://raw.githubusercontent.com/foliojs/pdfkit/a6af76467ce06bd6a2af4aa7271ccac9ff152a7d/LICENSE",
+        "bytes": 1067,
+        "sha256": "5f0d5197d2b5d91f41de43143b0be42fb55515bc2b894f2a9b62de9f7056c0f8"
+      },
+      {
+        "commit": "e71edab0dd4657b5a767804ba86c94c58d01fbca",
+        "url": "https://raw.githubusercontent.com/foliojs/pdfkit/e71edab0dd4657b5a767804ba86c94c58d01fbca/LICENSE",
+        "bytes": 1067,
+        "sha256": "5f0d5197d2b5d91f41de43143b0be42fb55515bc2b894f2a9b62de9f7056c0f8"
+      },
+      {
+        "commit": "f91bdd61c164a72ea06be1a43dc0a412afc3925f",
+        "url": "https://raw.githubusercontent.com/foliojs/pdfkit/f91bdd61c164a72ea06be1a43dc0a412afc3925f/LICENSE",
+        "bytes": 1067,
+        "sha256": "5f0d5197d2b5d91f41de43143b0be42fb55515bc2b894f2a9b62de9f7056c0f8"
+      }
+    ],
+    "licenseBytesIdentical": true,
+    "correspondence": "Declared fixed source references and their LICENSE matched; adapted source is not claimed byte-identical"
+  },
+  "base64Arraybuffer": {
+    "fixedPublicReleases": [
+      {
+        "version": "0.1.2",
+        "gitHead": null,
+        "license": null,
+        "integrity": "sha512-ewBKKVVPIl78B26mYQHYlaxR7NydMiD/GxwLNIwTAfLIE4xhN2Gxcy30//azq5UrejXjzGpWjcBu3NUJxzMMzg==",
+        "shasum": "474df4a9f2da24e05df3158c3b1db3c3cd46a154",
+        "licensePath": "package/LICENSE-MIT",
+        "bytes": 1062,
+        "sha256": "f3eca6ff762533fa5a77caf954a143e48afa204668cf97dce758c45a9e006be3"
+      },
+      {
+        "version": "0.2.0",
+        "gitHead": "29d0f8204348d913e5136f0c713a510c5a1da574",
+        "license": null,
+        "integrity": "sha512-7emyCsu1/xiBXgQZrscw/8KPRT44I4Yq9Pe6EGs3aPRTsWuggML1/1DTuZUuIaJPIm1FTDUVXl4x/yW8s0kQDQ==",
+        "shasum": "4b944fac0191aa5907afe2d8c999ccc57ce80f45",
+        "licensePath": "package/LICENSE-MIT",
+        "bytes": 1062,
+        "sha256": "f3eca6ff762533fa5a77caf954a143e48afa204668cf97dce758c45a9e006be3"
+      },
+      {
+        "version": "1.0.2",
+        "gitHead": "5339d8f0abed59c893e87116a785bf52acdc17aa",
+        "license": "MIT",
+        "integrity": "sha512-I3yl4r9QB5ZRY3XuJVEPfc2XhZO6YweFPI+UovAzn+8/hb3oJ6lnysaFcjVpkCPfVWFUDvoZ8kmVDP7WyRtYtQ==",
+        "shasum": "1c37589a7c4b0746e34bd1feb951da2df01c1bdc",
+        "licensePath": "package/LICENSE",
+        "bytes": 1062,
+        "sha256": "f3eca6ff762533fa5a77caf954a143e48afa204668cf97dce758c45a9e006be3"
+      }
+    ],
+    "licenseBytesIdentical": true,
+    "copyrightAndLicenseMatchPdfLibHeader": true,
+    "actualBorrowedRelease": "not-uniquely-identified; no version/commit in pdf-lib reference"
+  },
+  "pdfjs": {
+    "historicalCandidates": [
+      {
+        "tag": "v1.10.100",
+        "commit": "ea29ec83e1bb4ea44d71cccc451c6b9374e10fb9",
+        "treeTruncated": false,
+        "treeEntries": 1562,
+        "noticePaths": [],
+        "actualBorrowedRevision": "not uniquely identified from pdf-lib comment",
+        "originals": [
+          {
+            "path": "LICENSE",
+            "url": "https://raw.githubusercontent.com/mozilla/pdf.js/ea29ec83e1bb4ea44d71cccc451c6b9374e10fb9/LICENSE",
+            "bytes": 10174,
+            "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+          },
+          {
+            "path": "AUTHORS",
+            "url": "https://raw.githubusercontent.com/mozilla/pdf.js/ea29ec83e1bb4ea44d71cccc451c6b9374e10fb9/AUTHORS",
+            "bytes": 893,
+            "sha256": "ae52442006af71b38c834df67074c8fd3a52acf29f30fc943b4a7099a8954467"
+          }
+        ]
+      },
+      {
+        "tag": "v2.0.943",
+        "commit": "dc98bf76eb3f610bb86af441a5c71792bb58c825",
+        "treeTruncated": false,
+        "treeEntries": 1666,
+        "noticePaths": [],
+        "actualBorrowedRevision": "not uniquely identified from pdf-lib comment",
+        "originals": [
+          {
+            "path": "LICENSE",
+            "url": "https://raw.githubusercontent.com/mozilla/pdf.js/dc98bf76eb3f610bb86af441a5c71792bb58c825/LICENSE",
+            "bytes": 10174,
+            "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+          },
+          {
+            "path": "AUTHORS",
+            "url": "https://raw.githubusercontent.com/mozilla/pdf.js/dc98bf76eb3f610bb86af441a5c71792bb58c825/AUTHORS",
+            "bytes": 981,
+            "sha256": "07e0810dd4f4ae7c35bd9ff6d892792b7d074fba9cd038ed2336fcb49b14ab27"
+          }
+        ]
+      }
+    ],
+    "licenseBytesIdentical": true,
+    "actualBorrowedRevision": "not-uniquely-identified",
+    "NOTICEConclusion": "No NOTICE/NOTICE.txt files in complete trees of these two candidates only; not proof about actual borrowed revision"
+  },
+  "materials": [
+    {
+      "source": "docs/third-party-npm-licenses/pdf-lib@1.17.1/PDFKIT-MIT.txt",
+      "outputPath": "dependencies/pdf-lib@1.17.1/PDFKIT-MIT.txt",
+      "bytes": 1067,
+      "sha256": "5f0d5197d2b5d91f41de43143b0be42fb55515bc2b894f2a9b62de9f7056c0f8",
+      "role": "fixed-pdf-lib-cited-commits"
+    },
+    {
+      "source": "docs/third-party-npm-licenses/pdf-lib@1.17.1/BASE64-MIT.txt",
+      "outputPath": "dependencies/pdf-lib@1.17.1/BASE64-MIT.txt",
+      "bytes": 1062,
+      "sha256": "f3eca6ff762533fa5a77caf954a143e48afa204668cf97dce758c45a9e006be3",
+      "role": "same-original-in-three-fixed-releases-borrowed-release-unproven"
+    },
+    {
+      "source": "docs/third-party-npm-licenses/pdf-lib@1.17.1/PDFJS-LICENSE.txt",
+      "outputPath": "dependencies/pdf-lib@1.17.1/PDFJS-LICENSE.txt",
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "role": "historical-reference-candidate-actual-borrowed-revision-unproven"
+    },
+    {
+      "source": "docs/third-party-npm-licenses/pdf-lib@1.17.1/PDFJS-AUTHORS-v1.10.100.txt",
+      "outputPath": "dependencies/pdf-lib@1.17.1/PDFJS-AUTHORS-v1.10.100.txt",
+      "bytes": 893,
+      "sha256": "ae52442006af71b38c834df67074c8fd3a52acf29f30fc943b4a7099a8954467",
+      "role": "historical-reference-candidate-actual-borrowed-revision-unproven"
+    },
+    {
+      "source": "docs/third-party-npm-licenses/pdf-lib@1.17.1/PDFJS-AUTHORS-v2.0.943.txt",
+      "outputPath": "dependencies/pdf-lib@1.17.1/PDFJS-AUTHORS-v2.0.943.txt",
+      "bytes": 981,
+      "sha256": "07e0810dd4f4ae7c35bd9ff6d892792b7d074fba9cd038ed2336fcb49b14ab27",
+      "role": "historical-reference-candidate-actual-borrowed-revision-unproven"
+    }
+  ],
+  "scope": "Version-anchored source originals and explicitly marked reference candidates; no public release approval"
+}

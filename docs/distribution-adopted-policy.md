@@ -1,5 +1,7 @@
 # 配布準備方針と公開前の必須条件
 
+> 2026-11-10 PR #41マージ後: 内部表示・加工ラベルはmainへ反映。[借用元/WASM継続報告](borrowed-source-license-review.md)で固定参照と参考候補を分離し、WASM残93候補の出典・原文対応を確認。条件選択保留・内部表示/実対象・PDFium固有のbinary表示等は未完。正式公開保留と実配信/実機の別受入を維持する。
+
 > 2026-11-10 PR #40マージ後: pakoのMIT/Zlib原文はmainへ反映。[次段階の内部表示とWASM個別条件](distribution-internal-notices.md)でpdf-libの内部表示、生成JSの加工ラベル、WASM3候補を確認した。rootライセンスの宣言だけで内部原文の網羅性を判断せず、PDFium提供LICENSEのBSD系部分とApache本文の併記も維持する。全適用条件・実配信・実機と正式公開は保留。
 
 > 2026-11-10 PR #39マージ後: Tiny 12.3.0をmain `5f64651` へ反映した。現行版の通常依存は117組、Tiny内包63組に自前/補足対象を含む既定監査67組。pakoのMIT AND Zlibに対する[原文・由来表示の補強](distribution-pako-notices.md)を次の配布条件作業とする。以下の旧評価版のELK/233依存の表は履歴で、公開判定には現行版と下記4条件を使う。

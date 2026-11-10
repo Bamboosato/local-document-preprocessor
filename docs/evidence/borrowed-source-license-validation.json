@@ -1,0 +1,105 @@
+{
+  "schema": 1,
+  "date": "2026-11-10",
+  "baseCommit": "a76440c0eae6b85a8cd9caf77ff25e4a28cb5f5b",
+  "mergedPR": 41,
+  "mergedHead": "96d5a972e8bd7e349bd7b35bcd8770c5994a3a2b",
+  "preMergeCI": {
+    "run": 42761800541,
+    "bothJobs": "success",
+    "headMatched": true,
+    "unresolvedReviewThreads": 0
+  },
+  "borrowedLicenseReview": "pdf-lib-borrowed-license-review.json",
+  "borrowedLicenseReviewSha256": "57af09b8daf85353d2593b893c33d64db88c9e253f5c34bd3f4c436bbe58d8c7",
+  "pdfkitFixedCommits": 5,
+  "pdfkitSourceReferences": 7,
+  "base64CandidateVersions": 3,
+  "base64ActualBorrowedVersion": "not uniquely identified",
+  "pdfjsFixedCandidateVersions": 2,
+  "pdfjsActualBorrowedVersion": "not uniquely identified",
+  "additionalOfflineFiles": 5,
+  "additionalOfflineBytes": 14177,
+  "remainingWasmReview": "wasm-remaining-condition-review.json",
+  "remainingWasmReviewSha256": "c3ead8c7a61fb1a64f76e8b4a93e6bd21f9133eabd4789383722186e0397f95f",
+  "remainingRegistryArchivesVerified": 93,
+  "originalsVerified": 185,
+  "fixedWorkspaceFallbacksVerified": 2,
+  "legacySlashCases": 7,
+  "legacyAlternativesClarified": 5,
+  "legacySelectionPending": 2,
+  "pdfiumExternalConditionalProfiles": 9,
+  "pdfiumCandidateOriginalsVerified": 29,
+  "runtimeAssetsUnchanged": 7,
+  "generation": "633ebf4e3c51166b04f6b288",
+  "manifestAssets": 228,
+  "httpAssets": 230,
+  "httpFailures": 0,
+  "rootPackages": 117,
+  "rootMaterials": 126,
+  "validation": {
+    "licenseNodeTests": 2,
+    "offlineResearchTests": 3,
+    "build": "passed",
+    "distributionCheck": "passed",
+    "targetedPWA": {
+      "startTime": "2026-11-10T05:48:02.201Z",
+      "duration": 11623.684,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "initialPWA": "Exact-match role label check found no independent text element; role labels wrapped in spans and same test passed",
+    "rootProductionAudit": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "rootFullAudit": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "tinyAudit": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "tinyTargets": 67,
+    "combinedOfflineSourceGuardTests": 13,
+    "auditPolicyTests": 12
+  },
+  "limitations": [
+    "Archive/retained-original correspondence is not a full inline-rights review or proof of published WASM membership",
+    "Two legacy licence selections pending; preparation recommendations not final release choices",
+    "PDFium credits, component conditions and three metadata-only notice gaps remain",
+    "No actual deployed or physical-device acceptance; macOS/iOS excluded",
+    "No archive publication/attachment or deployment"
+  ],
+  "scope": "Original/notice additions and investigation only; no app runtime asset changes",
+  "documentation": {
+    "documents": 84,
+    "localLinks": 422,
+    "issues": 0,
+    "gitDiffCheck": "passed"
+  },
+  "testedSourceSha256": {
+    "scripts/internal-notices.mjs": "7971bc169a115e5f604e0109c87b54dfc439d6b7040e0fb4ed2c523214df24d7",
+    "scripts/internal-notices.test.mjs": "cf79560793f32266f652d5ac0a0b5bbd925db420279e14481aea08136af32a34",
+    "scripts/review_wasm_remaining.py": "7d6267513d64e6d07ba6c555a7366f29885ec52a16f5f443e2b1766b0f63f9a7",
+    "scripts/test_review_wasm_remaining.py": "75e7c38fbd15581be503d0ced8119370549f332571a710d90c7ff9d92da1ff75",
+    "scripts/copy-third-party-licenses.mjs": "6d0aa0a98c4b2ebcf2db044f904225a7fd479441f95d7380bfdd3190904a71fd",
+    "tests/e2e/pwa.spec.ts": "53911aa5015c90618276f0a5a4f496cf2ad2853cecf84da5723695d7e79ca660",
+    ".github/workflows/ci.yml": "c1f392e86a56d7ea5c7937d5d76df86f97a2335814c6e808f4c13e0a68c3a482"
+  }
+}
