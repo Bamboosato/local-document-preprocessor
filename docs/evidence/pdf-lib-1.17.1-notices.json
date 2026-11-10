@@ -1,0 +1,119 @@
+{
+  "schema": 1,
+  "date": "2026-11-10",
+  "name": "pdf-lib",
+  "version": "1.17.1",
+  "integrity": "sha512-V/mpyJAoTsN4cnP31vc0wfNA1+p20evqqnap0KLoRUN0Yk/p3wN52DOEsL4oBFcLdb76hlpKPtzJIgo67j/XLw==",
+  "tarball": "https://registry.npmjs.org/pdf-lib/-/pdf-lib-1.17.1.tgz",
+  "archiveSha256": "a7cc1eaf12e41e612a7be581162a63b18118aefc01e90f6a1f35347b1f324a1c",
+  "archiveSRI": "verified",
+  "commentSelection": "Complete comment blocks/line-comment groups in src/**/*.ts containing rights or explicit origin markers; code not copied",
+  "sourceFiles": [
+    {
+      "path": "src/api/svgPath.ts",
+      "bytes": 9545,
+      "sha256": "c19e79d50dc804f5726c1843d110554e981ed13f7254a99e2f7d834455da62d5",
+      "excerptSha256": "dc66e6f3e5ba5772e5d3a2583c45a0dbd0b5f7d7fa2e324e0b2658e47feb9b57"
+    },
+    {
+      "path": "src/core/embedders/CustomFontEmbedder.ts",
+      "bytes": 7731,
+      "sha256": "35091c0674268a4cda2b2393186a2eee2815bbfa8fdb5b7883642ba60a019876",
+      "excerptSha256": "73b51c0b5be03976c0ad624eaf0fe8e5adb531a8c20909839260f008fc370090"
+    },
+    {
+      "path": "src/core/embedders/CustomFontSubsetEmbedder.ts",
+      "bytes": 2505,
+      "sha256": "68afe7b09f5d5166c5851cf604a33d3f17699da6eecaec76e32e1e51e4791df8",
+      "excerptSha256": "73b51c0b5be03976c0ad624eaf0fe8e5adb531a8c20909839260f008fc370090"
+    },
+    {
+      "path": "src/core/embedders/FontFlags.ts",
+      "bytes": 1337,
+      "sha256": "a19d8a9842a152cf932595031f4c6950910956d0e212d21e9eef16f250b56b79",
+      "excerptSha256": "7a60e88910d31a647fb4979e74e6add91885a132d7bb4165983716f538eb024a"
+    },
+    {
+      "path": "src/core/embedders/JpegEmbedder.ts",
+      "bytes": 3323,
+      "sha256": "90029ad9dc85f3fe014a3793a33505602e938622f056cf5254122dca5804141f",
+      "excerptSha256": "43b47a995ca5ffcc3d76e7ea17705455a1ecd18c7aedafba02a07eabe29a1a3b"
+    },
+    {
+      "path": "src/core/embedders/PngEmbedder.ts",
+      "bytes": 1898,
+      "sha256": "d2abc79abdd1ed0e7fee878d42463b69e0108c99d1b426eda9d888f3490fa6b2",
+      "excerptSha256": "1948f5a9a8bf2d1b09625687569087f43fdfcbf07091c2cd112650c5e9c04bae"
+    },
+    {
+      "path": "src/core/embedders/StandardFontEmbedder.ts",
+      "bytes": 3898,
+      "sha256": "578f309feaf74e5bb036726bec9426b534850a8f172e5d0c3696906c5d6a7f04",
+      "excerptSha256": "3937cf61ed4167066efdbf50f35bb75e334118574ea7346e2a3859db4582ede2"
+    },
+    {
+      "path": "src/core/streams/Ascii85Stream.ts",
+      "bytes": 2283,
+      "sha256": "e4ddb58debf02b9c452757eb066e7ae718ba2f30c640888841ab8415d7121f5b",
+      "excerptSha256": "d08d0c54efe725584a64c43ad8e40057a81913762fe36f609d79768d7c888d19"
+    },
+    {
+      "path": "src/core/streams/AsciiHexStream.ts",
+      "bytes": 2088,
+      "sha256": "d4ed148500ae5bcf22b31af3232a3245b8b84b6920bf72090065448b082c5f41",
+      "excerptSha256": "6e45bee26d09b37a0e41bd16da3033d556ea64c0599360256f5ac2db2996c915"
+    },
+    {
+      "path": "src/core/streams/DecodeStream.ts",
+      "bytes": 4132,
+      "sha256": "5333336dc05b3605449a465435b18fe4e844a9cdd22fc1d03ca499d96b2b7047",
+      "excerptSha256": "e836b9d5f2c8a104e2ddbf9ccd32cd83624a3718cceed705d24863115d119a5c"
+    },
+    {
+      "path": "src/core/streams/FlateStream.ts",
+      "bytes": 14462,
+      "sha256": "a7390d7d5ea67debca981a34182bc0ca34252e393f5f0211cebf36551cbd5db5",
+      "excerptSha256": "eec50c6dd5e8d784ef103f7c41e171a84e6a5e0144350a48e6271c1ad1455c53"
+    },
+    {
+      "path": "src/core/streams/LZWStream.ts",
+      "bytes": 4979,
+      "sha256": "ede24b9502ebb158342196b6f11a0bee0403b709a902336202d06194ded8e63f",
+      "excerptSha256": "af8d79e99e2dd22b9f944b6ffec1cab7953a27674422a94a32cef3c4389141c8"
+    },
+    {
+      "path": "src/core/streams/RunLengthStream.ts",
+      "bytes": 1736,
+      "sha256": "1bb1ea3f4ed0e52975bf792e2bf6d7ef854512c4e5fc4e64fab178de462d02a9",
+      "excerptSha256": "ec5714c142f6237144eb86a7678146010466d9944fdee4d04a21ec8b42fd2d9b"
+    },
+    {
+      "path": "src/core/streams/Stream.ts",
+      "bytes": 2956,
+      "sha256": "6e088685ef1eb7e279482972d017d3489fddef01dfe3d43557b99064496f3664",
+      "excerptSha256": "3659b0ce82a0b8527516c13f69aa602a3f6c083d0cf8f159628405a7356bc964"
+    },
+    {
+      "path": "src/utils/base64.ts",
+      "bytes": 2903,
+      "sha256": "433dc1d78f6e12c89a3118671499e0eb8ae333bedc059209ceb21250303ff7ed",
+      "excerptSha256": "f19ccafa206de7a3bddd04ce16aeee11ab700cd08f3bb5289d36b299ae84224f"
+    }
+  ],
+  "materials": [
+    {
+      "source": "docs/third-party-npm-licenses/pdf-lib@1.17.1/INTERNAL-NOTICES.txt",
+      "outputPath": "dependencies/pdf-lib@1.17.1/INTERNAL-NOTICES.txt",
+      "bytes": 4505,
+      "sha256": "747b95be994d12f88e84ef4776397783c8bd6617d1ef83ab2bca8643ad2ff247"
+    },
+    {
+      "source": "docs/third-party-npm-licenses/pdf-lib@1.17.1/APACHE-2.0.txt",
+      "outputPath": "dependencies/pdf-lib@1.17.1/APACHE-2.0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    }
+  ],
+  "apacheOriginalSource": "docs/third-party-source-licenses/anydoc/encoding_rs@0.8.35/001-LICENSE-APACHE.txt",
+  "scope": "Retain observed internal rights and port/borrow notices; separate from root MIT. Referenced upstream MIT originals and historical PDF.js NOTICE applicability remain to be confirmed."
+}

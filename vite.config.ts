@@ -4,6 +4,7 @@ import { defineConfig } from 'vitest/config';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import tinyRelease from './scripts/tiny-release.json' with {type:'json'};
+const processingBanner='/*! Local Document Preprocessor: generated, bundled and minified application code; not unmodified upstream sources. Third-party notices: /licenses/index.html */';
 
 export default defineConfig({
   plugins: [react(),{name:'verify-fixed-tiny',buildStart(){
@@ -31,9 +32,11 @@ export default defineConfig({
     // JSON uses the unmodified Tiny IIFE via importScripts. Vite also inlines
     // converter imports into its worker bundle; mixed-WASM regression covers it.
     format: 'iife',
+    rolldownOptions: {output:{postBanner:processingBanner}},
   },
   build: {
     target: 'es2022',
+    rolldownOptions: {output:{postBanner:processingBanner}},
   },
   test: {
     // Avoid desktop fork fanout; physical/browser scripts also run serially.

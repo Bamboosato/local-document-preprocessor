@@ -1,0 +1,131 @@
+pdf-lib 1.17.1: notices retained from published source comments.
+These comments identify upstream origin and changes; this is not a complete dependency or license applicability determination.
+
+=== src/api/svgPath.ts ===
+// Originated from pdfkit Copyright (c) 2014 Devon Govett
+// https://github.com/foliojs/pdfkit/blob/1e62e6ffe24b378eb890df507a47610f4c4a7b24/lib/path.js
+// MIT LICENSE
+// Updated for pdf-lib & TypeScript by Jeremy Messenger
+
+
+=== src/core/embedders/CustomFontEmbedder.ts ===
+/**
+ * A note of thanks to the developers of https://github.com/foliojs/pdfkit, as
+ * this class borrows from:
+ *   https://github.com/devongovett/pdfkit/blob/e71edab0dd4657b5a767804ba86c94c58d01fbca/lib/image/jpeg.coffee
+ */
+
+=== src/core/embedders/CustomFontSubsetEmbedder.ts ===
+/**
+ * A note of thanks to the developers of https://github.com/foliojs/pdfkit, as
+ * this class borrows from:
+ *   https://github.com/devongovett/pdfkit/blob/e71edab0dd4657b5a767804ba86c94c58d01fbca/lib/image/jpeg.coffee
+ */
+
+=== src/core/embedders/FontFlags.ts ===
+// From: https://github.com/foliojs/pdfkit/blob/83f5f7243172a017adcf6a7faa5547c55982c57b/lib/font/embedded.js#L123-L129
+
+
+=== src/core/embedders/JpegEmbedder.ts ===
+/**
+ * A note of thanks to the developers of https://github.com/foliojs/pdfkit, as
+ * this class borrows from:
+ *   https://github.com/foliojs/pdfkit/blob/a6af76467ce06bd6a2af4aa7271ccac9ff152a7d/lib/image/jpeg.js
+ */
+
+=== src/core/embedders/PngEmbedder.ts ===
+/**
+ * A note of thanks to the developers of https://github.com/foliojs/pdfkit, as
+ * this class borrows from:
+ *   https://github.com/devongovett/pdfkit/blob/e71edab0dd4657b5a767804ba86c94c58d01fbca/lib/image/png.coffee
+ */
+
+=== src/core/embedders/StandardFontEmbedder.ts ===
+/**
+ * A note of thanks to the developers of https://github.com/foliojs/pdfkit, as
+ * this class borrows from:
+ *   https://github.com/foliojs/pdfkit/blob/f91bdd61c164a72ea06be1a43dc0a412afc3925f/lib/font/afm.coffee
+ */
+
+=== src/core/streams/Ascii85Stream.ts ===
+/*
+ * Copyright 2012 Mozilla Foundation
+ *
+ * The Ascii85Stream class contained in this file is a TypeScript port of the
+ * JavaScript Ascii85Stream class in Mozilla's pdf.js project, made available
+ * under the Apache 2.0 open source license.
+ */
+
+=== src/core/streams/AsciiHexStream.ts ===
+/*
+ * Copyright 2012 Mozilla Foundation
+ *
+ * The AsciiHexStream class contained in this file is a TypeScript port of the
+ * JavaScript AsciiHexStream class in Mozilla's pdf.js project, made available
+ * under the Apache 2.0 open source license.
+ */
+
+=== src/core/streams/DecodeStream.ts ===
+/*
+ * Copyright 2012 Mozilla Foundation
+ *
+ * The DecodeStream class contained in this file is a TypeScript port of the
+ * JavaScript DecodeStream class in Mozilla's pdf.js project, made available
+ * under the Apache 2.0 open source license.
+ */
+
+=== src/core/streams/FlateStream.ts ===
+/*
+ * Copyright 1996-2003 Glyph & Cog, LLC
+ *
+ * The flate stream implementation contained in this file is a JavaScript port
+ * of XPDF's implementation, made available under the Apache 2.0 open source
+ * license.
+ */
+/*
+ * Copyright 2012 Mozilla Foundation
+ *
+ * The FlateStream class contained in this file is a TypeScript port of the
+ * JavaScript FlateStream class in Mozilla's pdf.js project, made available
+ * under the Apache 2.0 open source license.
+ */
+
+=== src/core/streams/LZWStream.ts ===
+/*
+ * Copyright 2012 Mozilla Foundation
+ *
+ * The LZWStream class contained in this file is a TypeScript port of the
+ * JavaScript LZWStream class in Mozilla's pdf.js project, made available
+ * under the Apache 2.0 open source license.
+ */
+
+=== src/core/streams/RunLengthStream.ts ===
+/*
+ * Copyright 2012 Mozilla Foundation
+ *
+ * The RunLengthStream class contained in this file is a TypeScript port of the
+ * JavaScript RunLengthStream class in Mozilla's pdf.js project, made available
+ * under the Apache 2.0 open source license.
+ */
+
+=== src/core/streams/Stream.ts ===
+/*
+ * Copyright 2012 Mozilla Foundation
+ *
+ * The Stream class contained in this file is a TypeScript port of the
+ * JavaScript Stream class in Mozilla's pdf.js project, made available
+ * under the Apache 2.0 open source license.
+ */
+
+=== src/utils/base64.ts ===
+/*
+ * The `chars`, `lookup`, `encode`, and `decode` members of this file are
+ * licensed under the following:
+ *
+ *     base64-arraybuffer
+ *     https://github.com/niklasvh/base64-arraybuffer
+ *
+ *     Copyright (c) 2012 Niklas von Hertzen
+ *     Licensed under the MIT license.
+ *
+ */
