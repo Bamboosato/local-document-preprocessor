@@ -144,13 +144,16 @@ jobs:
         run: node --test scripts/local-delivery-check.test.mjs
       - name: Test source research guards
         if: github.event_name != 'schedule'
-        run: python -m unittest scripts/test_verify_elk_candidate.py scripts/test_build_elk_local_candidate.py scripts/test_review_wasm_remaining.py scripts/test_inspect_wasm_materials.py scripts/test_font_license_chain.py
+        run: python -m unittest scripts/test_verify_elk_candidate.py scripts/test_build_elk_local_candidate.py scripts/test_review_wasm_remaining.py scripts/test_inspect_wasm_materials.py scripts/test_font_license_chain.py scripts/test_mm_provenance.py
       - name: Recheck fixed WASM data evidence without execution
         if: github.event_name != 'schedule'
         run: python -m scripts.verify_wasm_data_evidence
       - name: Recheck MM font program and notice observations
         if: github.event_name != 'schedule'
         run: python -m scripts.verify_font_chain_evidence
+      - name: Recheck MM procedure token and initial-reference observations
+        if: github.event_name != 'schedule'
+        run: python -m scripts.verify_mm_provenance
       - name: Install Chromium
         if: github.event_name != 'schedule' && steps.scope.outputs.scope != 'none'
         run: npx --no-install playwright install --with-deps chromium

@@ -1,0 +1,177 @@
+{
+  "schema": 1,
+  "date": "2026-11-11",
+  "baseCommit": "64d19e883771dd06f2b6759da42f13985b298dfb",
+  "scope": "Literal arrays and selected PostScript token comparisons, not execution, complete grant fulfillment or pre-publication outline authorship",
+  "firstObservedFileCommit": "5110c4743751145c4ae1934cd1d83bc6c55bb43f",
+  "firstObservedFileDate": "2014-05-18T05:33:34Z",
+  "initialCommitParent": "76b563d2feed92ed328afb1f15e3466a9536b11b",
+  "parentTreeAvailability": {
+    "github": "404",
+    "officialGitiles": "https://pdfium.googlesource.com/pdfium/+/76b563d2feed92ed328afb1f15e3466a9536b11b/?format=JSON",
+    "entries": 0,
+    "meaning": "Empty parent tree confirms introduction at the observed commit; it is not a pre-publication font-origin record"
+  },
+  "initialLicense": {
+    "name": "license-initial46",
+    "url": "https://raw.githubusercontent.com/chromium/pdfium/5110c4743751145c4ae1934cd1d83bc6c55bb43f/LICENSE",
+    "bytes": 1553,
+    "sha256": "b578cdd2345840ada550bd12519533812320d5f1d21cf4c1c7e1b1b0a31c98b7"
+  },
+  "initialAuthors": {
+    "name": "authors-initial46",
+    "url": "https://raw.githubusercontent.com/chromium/pdfium/5110c4743751145c4ae1934cd1d83bc6c55bb43f/AUTHORS",
+    "bytes": 295,
+    "sha256": "ebdc109ef684b52edc19860c8d608110a8397c0ca2306f367d4c9b57bc1dcedd"
+  },
+  "fonts": [
+    {
+      "name": "FoxitSansMM",
+      "initialSource": {
+        "name": "sans-initial46",
+        "url": "https://raw.githubusercontent.com/chromium/pdfium/5110c4743751145c4ae1934cd1d83bc6c55bb43f/core/src/fxge/fontdata/chromefontdata/FoxitSansMM.c",
+        "bytes": 418546,
+        "sha256": "a4a9437626002fe07ad8cd79059a025b26199b7427e251eb804d22a502ccfad5"
+      },
+      "initialSourceFixture": "sans-initial46.txt",
+      "wasmOffset": 3245920,
+      "bytes": 66919,
+      "sha256": "ced6f6742bf591dacae1cc540792b163b6bedba4b0beafdcb4f3d7b9ad226b72",
+      "initialDataEqualsCurrent": true,
+      "appendixAPrefixTokenCount": 758,
+      "appendixAPrefixSha256": "9209f1af37cbce68cf6bc9ea59b4351f57abc16adcbd7c920a3e68e3fce20806",
+      "appendixAPrefixMatches": true,
+      "convertDesignVectorTokens": 47,
+      "convertDesignVectorSha256": "d224431db61929cd8a9bba697b23ac37362ef98edbd52759d557bb843e0f8f51",
+      "convertMatchesAppendixD": true,
+      "normalizeDesignVectorTokens": 15,
+      "normalizeDesignVectorSha256": "08fbe98e98b675d4fdc6e996c99d7edf9ab34908531b0d00484592842a8e64cf",
+      "normalizePrintedDesignRanges": [
+        [
+          50,
+          1450
+        ],
+        [
+          50,
+          1450
+        ]
+      ],
+      "normalizeMatchesRangeTemplate": true,
+      "findfontTokens": 206,
+      "findfontSha256": "4e295a707d8e5ac1eedabfcf77e901fec4df61502b3d7eea97c870ebffc70be4",
+      "findfontPrimaryBodyCompared": false
+    },
+    {
+      "name": "FoxitSerifMM",
+      "initialSource": {
+        "name": "serif-initial46",
+        "url": "https://raw.githubusercontent.com/chromium/pdfium/5110c4743751145c4ae1934cd1d83bc6c55bb43f/core/src/fxge/fontdata/chromefontdata/FoxitSerifMM.c",
+        "bytes": 709160,
+        "sha256": "7a54f1293e48d1e4f553065e0247b8886d3d166c43790976bb5ec83fd9dc40d0"
+      },
+      "initialSourceFixture": "serif-initial46.txt",
+      "wasmOffset": 3312839,
+      "bytes": 113417,
+      "sha256": "24b32eaeaf795e341e3818665062d3fdc2e06787686618a877944b6515746a46",
+      "initialDataEqualsCurrent": true,
+      "appendixAPrefixTokenCount": 758,
+      "appendixAPrefixSha256": "9209f1af37cbce68cf6bc9ea59b4351f57abc16adcbd7c920a3e68e3fce20806",
+      "appendixAPrefixMatches": true,
+      "convertDesignVectorTokens": 47,
+      "convertDesignVectorSha256": "d224431db61929cd8a9bba697b23ac37362ef98edbd52759d557bb843e0f8f51",
+      "convertMatchesAppendixD": true,
+      "normalizeDesignVectorTokens": 15,
+      "normalizeDesignVectorSha256": "68d994061b19ce5950705b5efec3c7c70a17dc93ab7a77873de54eb53c154285",
+      "normalizePrintedDesignRanges": [
+        [
+          110,
+          790
+        ],
+        [
+          100,
+          900
+        ]
+      ],
+      "normalizeMatchesRangeTemplate": true,
+      "findfontTokens": 206,
+      "findfontSha256": "4e295a707d8e5ac1eedabfcf77e901fec4df61502b3d7eea97c870ebffc70be4",
+      "findfontPrimaryBodyCompared": false
+    }
+  ],
+  "adobeReference": {
+    "url": "https://raw.githubusercontent.com/adobe-type-tools/font-tech-notes/eadd3b3ec80d0f3404d40b95cd5315453aa88c73/pdfs/5015.Type1_Supp.pdf",
+    "sha256": "1f56c69e80c4ee04e02c5b04944fda7f06a84a526947fa7c13a8a8b5932f7227",
+    "pagesChecked": [
+      26,
+      35,
+      36,
+      37,
+      43,
+      45
+    ],
+    "extractedPagesSha256": {
+      "35": "ab7006eb7f85be7e924b4996aa8f3b4d92757d3310c1237a750c0099a81e2af2",
+      "36": "a8e6378701e1b00b0b5c8a717ce35c409b5dcbe9a3deefac388ff0c2d2ef9dce",
+      "37": "bf06f999f6d1fa82db14a139b000d04c7e388b8dcb09e8f685cb499b51986336",
+      "43": "f49c0a1c271187ef5ff7da43e24451fbd8a5fda71596ecbe6158b523501f68c3",
+      "45": "62e7f7bd36a84fd8a003837eb3c94901bc7bf9105f51306182a07ffc22eced17",
+      "26": "1b19962a1b8229896a4358ac6bbc7cb2bc183660df192464aa5b52ab3c2d363f"
+    },
+    "appendixATokenCount": 758,
+    "appendixATokenSha256": "9209f1af37cbce68cf6bc9ea59b4351f57abc16adcbd7c920a3e68e3fce20806",
+    "appendixDTokenCount": 47,
+    "appendixDTokenSha256": "d224431db61929cd8a9bba697b23ac37362ef98edbd52759d557bb843e0f8f51",
+    "explicitPdfWrapRepairs": [
+      "/ + newline + operatortype",
+      "er- + newline + rordict",
+      "if- + newline + else",
+      "/ + newline + packedarraytype",
+      "ife- + newline + lse"
+    ],
+    "repairPolicy": "Each exact pattern occurs once; font bytes never repaired; comments/formatting are separate from license interpretation",
+    "appendixC": "Page43 requires font-specific axes/master design configuration; Minion example differs from these two-axis fonts",
+    "appendixD": "Page45 two-axis/four-master MyriadMM definition tokens match",
+    "visualPagesChecked": true,
+    "extractedPagesSha256CanonicalLF": {
+      "35": "f267f93bf931a3f61af7014307dda0341fe0984c6f059ceeb98b9db47a1be8fa",
+      "36": "e8f6d21d3726cd7b08add5eb02e218b179a1c0ca28394017aa4ee8fcd37ca2ac",
+      "37": "38c7061a7ff3fc6db1d5a6229cb78b9256d5a0d96a5d53c2197983ef7bd3e2ff",
+      "43": "396ccb205700f309980a5de050c01a3a69886b915e0a4b4dad53cdd6e0cc7b31",
+      "45": "3aeefb43ccf284ad5843a284c331fffea62a894d868bd4959f1ccd267b4b2b38",
+      "26": "91e233c759702061e83b05edf28e3d3e5bdcf372efbe3b36c51efd807fd912d9"
+    },
+    "textExtractor": {
+      "tool": "pypdf",
+      "version": "6.10.0",
+      "method": "PdfReader.pages[n-1].extract_text(); UTF-8, canonical LF hash"
+    },
+    "findfontPermissionPage": 26
+  },
+  "remaining": {
+    "findfont": "Both fonts share a definition fingerprint; original Adobe body not located in fixed reference repository",
+    "outlineLineage": "First-observed published bytes/source attribution established; earlier creation/outline lineage and non-Adobe-outline condition unproven",
+    "copyright": "Current two-line 76-byte notice preserved; Appendix A punctuation and extra comments differ, significance not resolved",
+    "permissionInterpretation": "Token matches and required font-specific parameterization are evidence, not independent clearance of every condition"
+  },
+  "publicationDecision": "hold pending remaining MM permission/outline evidence and other dependency obligations",
+  "pdfiumWasmSha256": "c0af5a6aca30d7e54a149c3a68e317116ca906d6edc28fd3318b12c7d9478ac8",
+  "pdfiumWasmBytes": 4633788,
+  "referenceMaterials": [
+    {
+      "source": "docs/third-party-wasm-notices/mm-font-origin/PDFIUM-INITIAL-BSD.txt",
+      "outputPath": "mm-font-origin/PDFIUM-INITIAL-BSD.txt",
+      "label": "MM初出時のBSD原文（参考）",
+      "url": "https://raw.githubusercontent.com/chromium/pdfium/5110c4743751145c4ae1934cd1d83bc6c55bb43f/LICENSE",
+      "bytes": 1553,
+      "sha256": "b578cdd2345840ada550bd12519533812320d5f1d21cf4c1c7e1b1b0a31c98b7"
+    },
+    {
+      "source": "docs/third-party-wasm-notices/mm-font-origin/PDFIUM-INITIAL-AUTHORS.txt",
+      "outputPath": "mm-font-origin/PDFIUM-INITIAL-AUTHORS.txt",
+      "label": "MM初出時の著作者一覧（参考）",
+      "url": "https://raw.githubusercontent.com/chromium/pdfium/5110c4743751145c4ae1934cd1d83bc6c55bb43f/AUTHORS",
+      "bytes": 295,
+      "sha256": "ebdc109ef684b52edc19860c8d608110a8397c0ca2306f367d4c9b57bc1dcedd"
+    }
+  ]
+}

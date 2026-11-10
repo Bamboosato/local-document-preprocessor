@@ -1,0 +1,123 @@
+{
+  "schema": 1,
+  "date": "2026-11-11",
+  "baseCommit": "64d19e883771dd06f2b6759da42f13985b298dfb",
+  "mergedPR": 45,
+  "mergedHead": "76b5ff97ef87b81750f12c40f76b8739adc1da85",
+  "preMergeCI": {
+    "run": 42783834578,
+    "bothJobs": "success",
+    "unresolvedReviews": 0
+  },
+  "evidenceRecord": "mm-font-provenance-review.json",
+  "evidenceSha256CanonicalLF": "103d902a0334a0343580a09266f9aa6b5abe7e8a3135d0bf9693557b6f7b08a8",
+  "validation": {
+    "newPythonCases": 6,
+    "combinedOfflineGuards": 33,
+    "licenseCases": 5,
+    "fullInitialAndPdfReferenceReplay": "passed; local fixed source inputs and visually reviewed PDF; no target program execution",
+    "appendixATokens": 758,
+    "appendixDTokens": 47,
+    "findfontComparedBetweenFontsTokens": 206,
+    "initialFontBytesMatched": [
+      66919,
+      113417
+    ],
+    "initialReferenceOriginalBytes": 1848,
+    "build": "passed",
+    "distributionCheck": "passed",
+    "targetedPWA": {
+      "startTime": "2026-11-10T23:50:39.375Z",
+      "duration": 10142.84,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "generation": "4c05634f7a78a8300d5247d3",
+    "manifestAssets": 243,
+    "httpAssets": 245,
+    "httpFailures": 0,
+    "rootProductionAuditVulnerabilities": 0,
+    "rootFullAuditVulnerabilities": 0,
+    "tinyAuditTargets": 67,
+    "tinyAuditVulnerabilities": 0,
+    "documentation": {
+      "documents": 88,
+      "localLinks": 449,
+      "issues": 0
+    }
+  },
+  "environment": {
+    "os": "Windows",
+    "node": "24.22.1",
+    "npm": "11.19.1",
+    "python": "3.14",
+    "chromeHeadless": "157.0.8103.50",
+    "pythonTemp": "workspace tmp/python-test-temp",
+    "browserExecution": "sequential",
+    "browserVersionEvidence": "Direct Playwright browser.version() annotation in final targeted run",
+    "finalReplayReason": "Installed Chrome changed since preceding task; capture actual executing version rather than reuse old metadata"
+  },
+  "investigationCorrections": [
+    "PDF page36 numbering is in a running header; add only that observed numbering shape, retain failure on unexpected numbering",
+    "findfont uses bind 3 index exec; recognize only with an explicit indirect flag, retain default rejection",
+    "GitHub parent-tree endpoint 404 was not treated as absence; official Gitiles showed an empty parent tree"
+  ],
+  "unchangedRuntimeAssets": [
+    {
+      "path": "dist/assets/anydoc_wasm_bg-BGHlcte-.wasm",
+      "bytes": 6485379,
+      "sha256": "409e45e75062df06bed445c352ffddaf3bae15ff376f5d514d45f4891debd09e"
+    },
+    {
+      "path": "dist/assets/converter.worker-ogDQCSzr.js",
+      "bytes": 752588,
+      "sha256": "8ac5bc078bb82a53aa973f30523edda5257931ab5232e452b58a5ccbe641ab41"
+    },
+    {
+      "path": "dist/assets/index-_-tn7U5c.css",
+      "bytes": 15304,
+      "sha256": "86d7d2e6fb682593d0f2fc655cde050cf96179e64d8a66c944e18d7572b75937"
+    },
+    {
+      "path": "dist/assets/index-D7qOaFf2.js",
+      "bytes": 423936,
+      "sha256": "eda64058c814b3cc82594a29dcb40c92bb1ae6c622b0eadec5689508129df81c"
+    },
+    {
+      "path": "dist/assets/json.worker-CAJiq6hk.js",
+      "bytes": 168140,
+      "sha256": "6e75d910874ee7f850cdd0a681e700018eb4068ef81b3aebfa015d09e3cf9aca"
+    },
+    {
+      "path": "dist/assets/mermaid.tiny-B1X2HQuM.js",
+      "bytes": 2852578,
+      "sha256": "c41f5236091b83f524c4940f97a16b2b14a76f21ff84aea4fd6b66421d8a2a9a"
+    },
+    {
+      "path": "dist/assets/pdfium-RAgkpwfK.wasm",
+      "bytes": 4633788,
+      "sha256": "c0af5a6aca30d7e54a149c3a68e317116ca906d6edc28fd3318b12c7d9478ac8"
+    }
+  ],
+  "testedSourceSha256CanonicalLF": {
+    "scripts/review_mm_provenance.py": "345eb1c375e3a2b59555a676b8de4f4b04cbe67e8d524a9f229850f449edf8e0",
+    "scripts/test_mm_provenance.py": "d3bcac56268a6e30920c745ee1c68ae4e457e33e89a87a8e8fee40e602c65f05",
+    "scripts/verify_mm_provenance.py": "c3617fae5d118456003f5206dbd8514bd4151d9ef5cf4892bf0f4317d19e1758",
+    "scripts/mm-origin-materials.mjs": "d4122e6dd7e05e3ef4573a7faa55f67792bd17bc4b973be562099cfdd0ca876b",
+    "scripts/mm-origin-materials.test.mjs": "96c10baba87d4bb5e80e3c9253b3ad1938ee66802feeb1e1f354dce5d3785c52",
+    "scripts/check-dist.mjs": "49b56ef66cea3d5c503e06f05bb284516fdc793540b0a382a4fbaec9cb40cdf1",
+    "scripts/copy-third-party-licenses.mjs": "74bb7318cfe17ba5b195fe2b4fb5d190fd4308010a278c0e42299052f5b77dbf",
+    "tests/e2e/pwa.spec.ts": "1d6ce34fd466d515ceaf9f6c2ee5227e80ac256dc051cba0ddad7ee23421128d",
+    ".github/workflows/ci.yml": "18b3de708a7689f30055d044118fb1f514ae012c1ab204ff3f62815099cba6f2",
+    "package.json": "fd97c7ca619544fbbf477fd6e42497f1bfec7841599262cb1f300a99e5de7b44"
+  },
+  "limits": [
+    "Selected token comparisons omit comments/formatting and apply five explicit PDF-side repairs; not full legal clearance",
+    "Initial/current bytes match does not independently establish pre-publication outline lineage",
+    "findfont primary body and notice interpretation remain unconfirmed; other WASM obligations remain separate",
+    "No local full/cross-browser E2E, actual delivery/device acceptance; macOS/iOS excluded",
+    "No archive publication/attachment, new PR merge, provider contact or deployment"
+  ]
+}

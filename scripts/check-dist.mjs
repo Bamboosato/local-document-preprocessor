@@ -1,3 +1,4 @@
+import {verifyMmOriginMaterials} from './mm-origin-materials.mjs';
 import {verifyWasmDataMaterials} from './wasm-data-materials.mjs';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
@@ -110,6 +111,7 @@ assert.deepEqual(
     'mermaid-tiny',
     'pdfium-candidates',
     'wasm-data',
+    'mm-font-origin',
   ].sort(),
   'The production build must retain all third-party license files.',
 );
@@ -198,4 +200,12 @@ for(const f of confirmedData.files){
  assert.ok(pwa.assets.some(a=>a.url==='/licenses/'+f.outputPath&&a.sha256===f.sha256));
 }
 
+const mmOrigins=await verifyMmOriginMaterials();
+assert.equal(inventory.mmFontOrigin.originals.length,2);
+for(const f of mmOrigins.files){
+ assert.deepEqual(await readFile(new URL(f.outputPath,licenseDirectory)),f.bytes);
+ assert.ok(inventory.mmFontOrigin.originals.some(i=>i.path===f.outputPath&&i.sha256===f.sha256));
+ assert.ok(licensePage.includes(f.outputPath));
+ assert.ok(pwa.assets.some(a=>a.url==='/licenses/'+f.outputPath&&a.sha256===f.sha256));
+}
 console.log(`dist check passed: ${workerName}, ${anydocWasmName}, ${pdfiumWasmName}`);
