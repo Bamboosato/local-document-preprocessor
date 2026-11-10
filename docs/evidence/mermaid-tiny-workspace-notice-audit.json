@@ -1,0 +1,163 @@
+{
+  "sourceCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "bundleSha256": "ea0cdf04eb31907eb20d956a34fe300095365c876887b54ffa29f1f847f56d00",
+  "inventorySha256": "376faa14783679f8c0066589b30a0905c1e190f32d14752b9b40ddf473e57ed3",
+  "tinyMetafileSha256": "1a794ecb6a81dd5d6bdb19e98ce60db8823dd4cde824737b71f554907f2749bb",
+  "parserMetafileSha256": "b92f7a892dc87d4d5404072bb2ab895cd69aff729365c0246e41f0326124c39c",
+  "workspaces": [
+    {
+      "name": "mermaid",
+      "contributingFiles": 452,
+      "generatedSources": 0,
+      "markedFiles": [
+        {
+          "path": "src/diagram-api/regexes.ts",
+          "physical": "src/diagram-api/regexes.ts",
+          "sha256": "2bda6a34c0762faab8abb7c3f09ebee2a5919d6bea874e2eae0b3fa7d15065e8",
+          "copyright": 0,
+          "spdx": 0,
+          "license": 0,
+          "attribution": 1,
+          "generated": false,
+          "virtual": false
+        },
+        {
+          "path": "src/diagrams/agentflow/parser/agentflow.jison",
+          "physical": "src/diagrams/agentflow/parser/agentflow.jison",
+          "sha256": "8bb23d09c1dcdf4a3d3139c4ba29b8a823d726b755c69067010a74cb621fd2a6",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 1,
+          "attribution": 0,
+          "generated": false,
+          "virtual": false
+        },
+        {
+          "path": "src/diagrams/c4/parser/c4Diagram.jison",
+          "physical": "src/diagrams/c4/parser/c4Diagram.jison",
+          "sha256": "5a5054b08f05a02b805a8959b78d733bec2c8c74156bfd924be8d37c7df17582",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 1,
+          "attribution": 0,
+          "generated": false,
+          "virtual": false
+        },
+        {
+          "path": "src/diagrams/class/parser/classDiagram.jison",
+          "physical": "src/diagrams/class/parser/classDiagram.jison",
+          "sha256": "c2ea20022e4adf501dbbcda909a1bdb74e05a2ac53ff5276d09d00fd54a3e21e",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 1,
+          "attribution": 0,
+          "generated": false,
+          "virtual": false
+        },
+        {
+          "path": "src/diagrams/flowchart/parser/flow.jison",
+          "physical": "src/diagrams/flowchart/parser/flow.jison",
+          "sha256": "e9891eb4f646140e5110e72ef5f79b099677a265ba1a84884b39a573b56d1c68",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 1,
+          "attribution": 0,
+          "generated": false,
+          "virtual": false
+        },
+        {
+          "path": "src/diagrams/gantt/parser/gantt.jison",
+          "physical": "src/diagrams/gantt/parser/gantt.jison",
+          "sha256": "14d325aa626a7fa220c341a75faecc712d0121203e0f88db6c11e68f0bc7e82f",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 1,
+          "attribution": 0,
+          "generated": false,
+          "virtual": false
+        },
+        {
+          "path": "src/diagrams/kanban/parser/kanban.jison",
+          "physical": "src/diagrams/kanban/parser/kanban.jison",
+          "sha256": "e9e8bb8c6938e9abf7f47b496f57cafa6b6c5f1288e1aeeae2951e9efb096b81",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 1,
+          "attribution": 0,
+          "generated": false,
+          "virtual": false
+        },
+        {
+          "path": "src/diagrams/requirement/parser/requirementDiagram.jison",
+          "physical": "src/diagrams/requirement/parser/requirementDiagram.jison",
+          "sha256": "32030ae34660128966d31ecc25e5ce224ce9bf947e1e31bd3961f3879ae26ae7",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 1,
+          "attribution": 0,
+          "generated": false,
+          "virtual": false
+        },
+        {
+          "path": "src/diagrams/sequence/parser/sequenceDiagram.jison",
+          "physical": "src/diagrams/sequence/parser/sequenceDiagram.jison",
+          "sha256": "f3f21ae48e3c334fc259e3f78ac60ef70cf930ac6df2dd3c43f2b0de6f2b24db",
+          "copyright": 2,
+          "spdx": 0,
+          "license": 1,
+          "attribution": 0,
+          "generated": false,
+          "virtual": false
+        },
+        {
+          "path": "src/diagrams/state/parser/stateDiagram.jison",
+          "physical": "src/diagrams/state/parser/stateDiagram.jison",
+          "sha256": "94d4715707c3b35192b8586fa271e843f2c084e9ff70dd8db07c510c1a23e231",
+          "copyright": 2,
+          "spdx": 0,
+          "license": 1,
+          "attribution": 0,
+          "generated": false,
+          "virtual": false
+        },
+        {
+          "path": "src/diagrams/timeline/parser/timeline.jison",
+          "physical": "src/diagrams/timeline/parser/timeline.jison",
+          "sha256": "65a1aaa24f2a9f5416b89b9774847e832cc2e810bb4233d77ad756c94f8baf8f",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 1,
+          "attribution": 0,
+          "generated": false,
+          "virtual": false
+        },
+        {
+          "path": "src/diagrams/user-journey/parser/journey.jison",
+          "physical": "src/diagrams/user-journey/parser/journey.jison",
+          "sha256": "2230b9f958f7c2f2381149b0e484cd203ff919cf43abd065beba7ab6b5a660a5",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 1,
+          "attribution": 0,
+          "generated": false,
+          "virtual": false
+        }
+      ],
+      "rootNoticeFiles": []
+    },
+    {
+      "name": "parser",
+      "contributingFiles": 65,
+      "generatedSources": 3,
+      "markedFiles": [],
+      "rootNoticeFiles": [
+        {
+          "path": "LICENSE",
+          "sha256": "d374061c40bfb6f99c5033290caefda97a9b3e7e477e5ee02f487143ef2177e8",
+          "bytes": 1077
+        }
+      ]
+    }
+  ],
+  "limitations": "Markers in contributing workspace files and root-level notice names only. Does not establish complete third-party attribution, source provenance of generated grammars or legal compliance."
+}

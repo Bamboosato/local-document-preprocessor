@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "name": "@mermaid-js/tiny",
+  "version": "12.3.0",
+  "bundleSha256": "c41f5236091b83f524c4940f97a16b2b14a76f21ff84aea4fd6b66421d8a2a9a",
+  "bundleBytes": 2852578,
+  "packageIntegrity": "sha512-90BO2kQvmQWj9YjBX2IsLHCw61rN69dPTn5wFfDu+b9aT7qtzfzTA3wpKWeaRAKK85refSo9How5EOeY39DWfA==",
+  "sourceCommit": "2086904e76c692331e34a45d7cc3bc30860d040e",
+  "thirdPartyInventory": "docs/evidence/mermaid-tiny-12.3-license-inventory.json",
+  "thirdPartyInventorySha256": "0cd30ca36f7f99760f0ba5207f0bd02793b2ba56ccc25521b259e3ef01188add",
+  "auditScope": "docs/evidence/mermaid-tiny-12.3-audit-scope.json",
+  "auditScopeSha256": "fa3f459dd8f12d77e12beb6a20740930c3093dfa4eea8202b14d533adb8181e0",
+  "auditPlan": "docs/evidence/mermaid-tiny-12.3-extended-audit-plan.json",
+  "auditPlanSha256": "76fcdce0f369944c5d8f286862c406540f306b467092b9802bc310761bf81862",
+  "auditTargets": 67,
+  "reviewedMaterials": "docs/evidence/mermaid-tiny-12.3-license-comparison.json",
+  "reviewedMaterialsSha256": "c771c20dea89130a6d1c67711d43cf1b0e728ed9e38c82fc0a00c8f06edc0acb",
+  "candidateDirectory": "docs/third-party-source-licenses/mermaid-tiny/12.3.0-candidate/",
+  "snapshotDirectory": "docs/third-party-source-licenses/mermaid-tiny/12.3.0/",
+  "productRecord": "docs/evidence/mermaid-tiny-12.3-product-materials.json",
+  "originals": 69,
+  "materialCount": 75
+}

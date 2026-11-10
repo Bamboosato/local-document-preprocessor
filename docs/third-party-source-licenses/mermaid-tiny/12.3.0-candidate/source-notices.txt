@@ -1,0 +1,191 @@
+chevrotain-allstar@0.5.0
+
+/******************************************************************************
+ * Copyright 2022 TypeFox GmbH
+ * This program and the accompanying materials are made available under the
+ * terms of the MIT License, which is available in the project root.
+ ******************************************************************************/
+
+---
+
+dompurify@3.4.17
+
+/*! @license DOMPurify 3.4.17 | (c) Cure53 and other contributors | Released under the Apache license 2.0 and Mozilla Public License 2.0 | github.com/cure53/DOMPurify/blob/3.4.17/LICENSE */
+
+/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */
+
+---
+
+langium@4.4.0
+
+/******************************************************************************
+ * Copyright 2021 TypeFox GmbH
+ * This program and the accompanying materials are made available under the
+ * terms of the MIT License, which is available in the project root.
+******************************************************************************/
+
+/******************************************************************************
+ * Copyright 2021 TypeFox GmbH
+ * This program and the accompanying materials are made available under the
+ * terms of the MIT License, which is available in the project root.
+ ******************************************************************************/
+
+/******************************************************************************
+ * Copyright 2023 TypeFox GmbH
+ * This program and the accompanying materials are made available under the
+ * terms of the MIT License, which is available in the project root.
+ ******************************************************************************/
+
+/******************************************************************************
+ * Copyright 2022 TypeFox GmbH
+ * This program and the accompanying materials are made available under the
+ * terms of the MIT License, which is available in the project root.
+ ******************************************************************************/
+
+/******************************************************************************
+ * Copyright 2021-2022 TypeFox GmbH
+ * This program and the accompanying materials are made available under the
+ * terms of the MIT License, which is available in the project root.
+ ******************************************************************************/
+
+/******************************************************************************
+ * Copyright 2024 TypeFox GmbH
+ * This program and the accompanying materials are made available under the
+ * terms of the MIT License, which is available in the project root.
+ ******************************************************************************/
+
+---
+
+lodash-es@4.18.1
+
+/**
+ * @license
+ * Lodash (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize exports="es" --repo lodash/lodash#4.18.1 -o ./`
+ * Copyright OpenJS Foundation and other contributors <https://openjsf.org/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
+
+---
+
+marked@16.3.0
+
+/**
+ * marked v16.3.0 - a markdown parser
+ * Copyright (c) 2011-2025, Christopher Jeffrey. (MIT Licensed)
+ * https://github.com/markedjs/marked
+ */
+
+---
+
+vscode-jsonrpc@9.0.3
+
+/* --------------------------------------------------------------------------------------------
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ * ------------------------------------------------------------------------------------------ */
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+---
+
+vscode-languageserver-protocol@3.18.4
+
+/* --------------------------------------------------------------------------------------------
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ * ------------------------------------------------------------------------------------------ */
+
+/* --------------------------------------------------------------------------------------------
+ * Copyright (c) TypeFox, Microsoft and others. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ * ------------------------------------------------------------------------------------------ */
+
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+---
+
+vscode-languageserver-textdocument@1.0.15
+
+/* --------------------------------------------------------------------------------------------
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ * ------------------------------------------------------------------------------------------ */
+
+---
+
+vscode-languageserver-types@3.18.4
+
+/* --------------------------------------------------------------------------------------------
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ * ------------------------------------------------------------------------------------------ */
+
+---
+
+mermaid@12.3.0
+
+// Match Jekyll-style front matter blocks (https://jekyllrb.com/docs/front-matter/).
+// Based on regex used by Jekyll: https://github.com/jekyll/jekyll/blob/6dd3cc21c40b98054851846425af06c64f9fb466/lib/jekyll/document.rb#L10
+// Note that JS doesn't support the "\A" anchor, which means we can't use
+// multiline mode.
+// Relevant YAML spec: https://yaml.org/spec/1.2.2/#914-explicit-documents
+// The \1 backreference anchors closing `---` to the same indent as the opening one, guards against indented `---` inside multi-line YAML scalars (#7613).
+// Kept byte-for-byte as released: it is part of the published surface. It backtracks quadratically
+// (see `matchFrontMatter` below), so internal hot paths must use `matchFrontMatter` instead of
+// matching with this regex directly.
+
+
+/** mermaid
+ *  https://mermaidjs.github.io/
+ *  (c) 2015 Knut Sveidqvist
+ *  MIT license.
+ */
+
+/** mermaid
+ *  https://mermaidjs.github.io/
+ *  (c) 2022 mzhx.meng@gmail.com
+ *  MIT license.
+ */
+
+/** mermaid
+ *  https://knsv.github.io/mermaid
+ *  (c) 2015 Knut Sveidqvist
+ *  MIT license.
+ */
+
+/** mermaid
+ *  https://mermaidjs.github.io/
+ *  (c) 2014-2015 Knut Sveidqvist
+ *  MIT license.
+ *
+ *  Based on js sequence diagrams jison grammar
+ *  https://bramp.github.io/js-sequence-diagrams/
+ *  (c) 2012-2013 Andrew Brampton (bramp.net)
+ *  Simplified BSD license.
+ */
+
+/** mermaid
+ *  https://mermaidjs.github.io/
+ *  (c) 2014-2021 Knut Sveidqvist
+ *  MIT license.
+ *
+ *  Based on js sequence diagrams jison grammar
+ *  https://bramp.github.io/js-sequence-diagrams/
+ *  (c) 2012-2013 Andrew Brampton (bramp.net)
+ *  Simplified BSD license.
+ */
+
+/** mermaid
+ *  https://mermaidjs.github.io/
+ *  (c) 2023 Knut Sveidqvist
+ *  MIT license.
+ */

@@ -1,0 +1,367 @@
+{
+  "date": "2026-11-10T03:09:45.610Z",
+  "defaultGateBoundToInstalledRelease": true,
+  "bundleSha256": "c41f5236091b83f524c4940f97a16b2b14a76f21ff84aea4fd6b66421d8a2a9a",
+  "inventorySha256": "fa3f459dd8f12d77e12beb6a20740930c3093dfa4eea8202b14d533adb8181e0",
+  "auditLockSha256": "b03a884a056f14b957d76fc8628d636ea3a3d965031e05a16c6e7e99980e28af",
+  "contributors": [
+    {
+      "alias": "tiny-input-000",
+      "name": "@braintree/sanitize-url",
+      "version": "7.1.2"
+    },
+    {
+      "alias": "tiny-input-001",
+      "name": "@chevrotain/cst-dts-gen",
+      "version": "13.2.0"
+    },
+    {
+      "alias": "tiny-input-002",
+      "name": "@chevrotain/gast",
+      "version": "13.2.0"
+    },
+    {
+      "alias": "tiny-input-003",
+      "name": "@chevrotain/regexp-to-ast",
+      "version": "13.2.0"
+    },
+    {
+      "alias": "tiny-input-004",
+      "name": "@chevrotain/utils",
+      "version": "13.2.0"
+    },
+    {
+      "alias": "tiny-input-005",
+      "name": "@iconify/utils",
+      "version": "3.0.2"
+    },
+    {
+      "alias": "tiny-input-006",
+      "name": "@upsetjs/venn.js",
+      "version": "2.0.0"
+    },
+    {
+      "alias": "tiny-input-007",
+      "name": "chevrotain",
+      "version": "13.2.0"
+    },
+    {
+      "alias": "tiny-input-008",
+      "name": "chevrotain-allstar",
+      "version": "0.5.0"
+    },
+    {
+      "alias": "tiny-input-009",
+      "name": "d3",
+      "version": "7.9.0"
+    },
+    {
+      "alias": "tiny-input-010",
+      "name": "d3-array",
+      "version": "2.12.1"
+    },
+    {
+      "alias": "tiny-input-011",
+      "name": "d3-array",
+      "version": "3.2.4"
+    },
+    {
+      "alias": "tiny-input-012",
+      "name": "d3-axis",
+      "version": "3.0.0"
+    },
+    {
+      "alias": "tiny-input-013",
+      "name": "d3-brush",
+      "version": "3.0.0"
+    },
+    {
+      "alias": "tiny-input-014",
+      "name": "d3-chord",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-015",
+      "name": "d3-color",
+      "version": "3.1.0"
+    },
+    {
+      "alias": "tiny-input-016",
+      "name": "d3-contour",
+      "version": "4.0.2"
+    },
+    {
+      "alias": "tiny-input-017",
+      "name": "d3-delaunay",
+      "version": "6.0.4"
+    },
+    {
+      "alias": "tiny-input-018",
+      "name": "d3-dispatch",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-019",
+      "name": "d3-drag",
+      "version": "3.0.0"
+    },
+    {
+      "alias": "tiny-input-020",
+      "name": "d3-dsv",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-021",
+      "name": "d3-ease",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-022",
+      "name": "d3-fetch",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-023",
+      "name": "d3-force",
+      "version": "3.0.0"
+    },
+    {
+      "alias": "tiny-input-024",
+      "name": "d3-format",
+      "version": "3.1.0"
+    },
+    {
+      "alias": "tiny-input-025",
+      "name": "d3-geo",
+      "version": "3.1.1"
+    },
+    {
+      "alias": "tiny-input-026",
+      "name": "d3-hierarchy",
+      "version": "3.1.2"
+    },
+    {
+      "alias": "tiny-input-027",
+      "name": "d3-interpolate",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-028",
+      "name": "d3-path",
+      "version": "1.0.9"
+    },
+    {
+      "alias": "tiny-input-029",
+      "name": "d3-path",
+      "version": "3.1.0"
+    },
+    {
+      "alias": "tiny-input-030",
+      "name": "d3-polygon",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-031",
+      "name": "d3-quadtree",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-032",
+      "name": "d3-random",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-033",
+      "name": "d3-sankey",
+      "version": "0.12.3"
+    },
+    {
+      "alias": "tiny-input-034",
+      "name": "d3-scale",
+      "version": "4.0.2"
+    },
+    {
+      "alias": "tiny-input-035",
+      "name": "d3-scale-chromatic",
+      "version": "3.1.0"
+    },
+    {
+      "alias": "tiny-input-036",
+      "name": "d3-selection",
+      "version": "3.0.0"
+    },
+    {
+      "alias": "tiny-input-037",
+      "name": "d3-shape",
+      "version": "1.3.7"
+    },
+    {
+      "alias": "tiny-input-038",
+      "name": "d3-shape",
+      "version": "3.2.0"
+    },
+    {
+      "alias": "tiny-input-039",
+      "name": "d3-time",
+      "version": "3.1.0"
+    },
+    {
+      "alias": "tiny-input-040",
+      "name": "d3-time-format",
+      "version": "4.1.0"
+    },
+    {
+      "alias": "tiny-input-041",
+      "name": "d3-timer",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-042",
+      "name": "d3-transition",
+      "version": "3.0.1"
+    },
+    {
+      "alias": "tiny-input-043",
+      "name": "d3-zoom",
+      "version": "3.0.0"
+    },
+    {
+      "alias": "tiny-input-044",
+      "name": "dagre-d3-es",
+      "version": "7.0.14"
+    },
+    {
+      "alias": "tiny-input-045",
+      "name": "dayjs",
+      "version": "1.11.21"
+    },
+    {
+      "alias": "tiny-input-046",
+      "name": "dompurify",
+      "version": "3.4.17"
+    },
+    {
+      "alias": "tiny-input-047",
+      "name": "es-toolkit",
+      "version": "1.45.1"
+    },
+    {
+      "alias": "tiny-input-048",
+      "name": "fastdom",
+      "version": "1.0.12"
+    },
+    {
+      "alias": "tiny-input-049",
+      "name": "internmap",
+      "version": "2.0.3"
+    },
+    {
+      "alias": "tiny-input-050",
+      "name": "js-yaml",
+      "version": "4.3.2"
+    },
+    {
+      "alias": "tiny-input-051",
+      "name": "khroma",
+      "version": "2.1.0"
+    },
+    {
+      "alias": "tiny-input-052",
+      "name": "langium",
+      "version": "4.4.0"
+    },
+    {
+      "alias": "tiny-input-053",
+      "name": "lodash-es",
+      "version": "4.18.1"
+    },
+    {
+      "alias": "tiny-input-054",
+      "name": "marked",
+      "version": "16.3.0"
+    },
+    {
+      "alias": "tiny-input-055",
+      "name": "roughjs",
+      "version": "4.6.6"
+    },
+    {
+      "alias": "tiny-input-056",
+      "name": "stylis",
+      "version": "4.3.6"
+    },
+    {
+      "alias": "tiny-input-057",
+      "name": "ts-dedent",
+      "version": "2.2.0"
+    },
+    {
+      "alias": "tiny-input-058",
+      "name": "vscode-jsonrpc",
+      "version": "9.0.3"
+    },
+    {
+      "alias": "tiny-input-059",
+      "name": "vscode-languageserver-protocol",
+      "version": "3.18.4"
+    },
+    {
+      "alias": "tiny-input-060",
+      "name": "vscode-languageserver-textdocument",
+      "version": "1.0.15"
+    },
+    {
+      "alias": "tiny-input-061",
+      "name": "vscode-languageserver-types",
+      "version": "3.18.4"
+    },
+    {
+      "alias": "tiny-input-062",
+      "name": "vscode-uri",
+      "version": "3.1.0"
+    },
+    {
+      "alias": "tiny-input-063",
+      "name": "mermaid",
+      "version": "12.3.0"
+    },
+    {
+      "alias": "tiny-input-064",
+      "name": "@mermaid-js/parser",
+      "version": "2.0.1"
+    },
+    {
+      "alias": "tiny-input-065",
+      "name": "@mermaid-js/tiny",
+      "version": "12.3.0"
+    },
+    {
+      "alias": "tiny-input-066",
+      "name": "@babel/helpers",
+      "version": "7.29.10"
+    }
+  ],
+  "audit": {
+    "auditReportVersion": 2,
+    "vulnerabilities": {},
+    "metadata": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      },
+      "dependencies": {
+        "prod": 68,
+        "dev": 0,
+        "optional": 0,
+        "peer": 0,
+        "peerOptional": 0,
+        "total": 67
+      }
+    }
+  },
+  "scope": "All 67 reviewed package/version pairs, alias-preserved; package advisory matching is not proof of application reachability. No dependencies installed or executed."
+}

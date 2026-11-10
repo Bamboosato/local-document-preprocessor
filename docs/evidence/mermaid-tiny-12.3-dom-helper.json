@@ -1,0 +1,89 @@
+{
+  "dompurifyVersion": "3.4.17",
+  "dompurifyGitHead": "a77a3e78b59f72fa4d1c83f22e121ad9cc7d3575",
+  "dompurifyDistUrl": "https://raw.githubusercontent.com/cure53/DOMPurify/a77a3e78b59f72fa4d1c83f22e121ad9cc7d3575/dist/purify.es.mjs",
+  "dompurifyDistSha256": "60c5d5ccbb466de3de3ba863461a92bf134f8c156cef7992da43e0f659bc5cbd",
+  "dompurifyNpmDistEqualsFixedGit": true,
+  "dompurifyLockUrl": "https://raw.githubusercontent.com/cure53/DOMPurify/a77a3e78b59f72fa4d1c83f22e121ad9cc7d3575/package-lock.json",
+  "dompurifyLockSha256": "765ce38d5001f2a31fa093a030d4b84ca6f2a42761ecd7a95f648d7ba08e41be",
+  "helper": {
+    "name": "@babel/helpers",
+    "version": "7.29.10",
+    "tarball": "https://registry.npmjs.org/@babel/helpers/-/helpers-7.29.10.tgz",
+    "integrity": "sha512-EMCx3AGZ3WfAl6ht7AyQoPm2Lh+BGYEMdc4Q6Hf7uSCDOZFuLq44qNwL+iaim8VlyYhRAo4X43+weadK8ZB4Yg==",
+    "license": "MIT",
+    "originalSha256": "4be9d87b56a306293223b490c0d0b245e9e94f39884147bf051a6c7b825aeb30",
+    "originalBytes": 1189,
+    "files": [
+      {
+        "path": "LICENSE",
+        "sha256": "4be9d87b56a306293223b490c0d0b245e9e94f39884147bf051a6c7b825aeb30"
+      },
+      {
+        "path": "lib/helpers/arrayWithHoles.js",
+        "sha256": "06069a2121aeca3b7ac41ce5ad1c34632180e74686d5a42dfea976b8efea63bf"
+      },
+      {
+        "path": "lib/helpers/iterableToArrayLimit.js",
+        "sha256": "eb231e7e3ee5091d6095d6bb66da3c7408685d8849cc596c84d7db10125d4a25"
+      },
+      {
+        "path": "lib/helpers/nonIterableRest.js",
+        "sha256": "4eb02ae6f1eb05eab58e542140af5be72a7096ddf469c871f79899e794f15d4e"
+      },
+      {
+        "path": "lib/helpers/regenerator.js",
+        "sha256": "1d9fc792ca971ae186948f5a0ca52b8b637c62752c773685c21bd3e1d3c88d24"
+      },
+      {
+        "path": "lib/helpers/regeneratorAsync.js",
+        "sha256": "7f606fc407dd26270d5e54703d3a65d3f924b2cb8f8fc969bc43e2931df67dfd"
+      },
+      {
+        "path": "lib/helpers/regeneratorAsyncGen.js",
+        "sha256": "e76e2b443a1f58af200a76194ea283e0be9ca5b4fa0b944ece60f617bcdc6292"
+      },
+      {
+        "path": "lib/helpers/regeneratorAsyncIterator.js",
+        "sha256": "b03e8e7a6c4bdbcc4427be4865dc1b0598e109eaa68cf811f2ca816db14fbc2c"
+      },
+      {
+        "path": "lib/helpers/regeneratorDefine.js",
+        "sha256": "91db5819b09b06f61255fcb58104e7593a1c9b432faf3e933e753144df179413"
+      },
+      {
+        "path": "lib/helpers/regeneratorKeys.js",
+        "sha256": "857aa9c908e19c239d6eb4d051e8edf260ec47bdfc780041ee23b142a50db81b"
+      },
+      {
+        "path": "lib/helpers/regeneratorRuntime.js",
+        "sha256": "75c52194f80bba83e3927c4e4e791fcfda493bdbf398b28535b9e9f964c46183"
+      },
+      {
+        "path": "lib/helpers/regeneratorValues.js",
+        "sha256": "e374041add014b2f86bcc60783a284ffc3246080a6f15bd8b28333cfec5f7227"
+      },
+      {
+        "path": "lib/helpers/slicedToArray.js",
+        "sha256": "9ee71b791042b9ccd87b1a723168ee881d9513c409964f2d2b04c1dd442a2ca0"
+      },
+      {
+        "path": "lib/helpers/unsupportedIterableToArray.js",
+        "sha256": "08d5c5c1f991b9d600bfe2786b44f46d2183738e5777ef0d8700ca6740bb42fb"
+      },
+      {
+        "path": "package.json",
+        "sha256": "ccd314c91c9bcd25324efe0d0f4da114a6b49554b96bf31ab5c65fcc083c4f03"
+      }
+    ]
+  },
+  "observedDistHelperNames": [
+    "_arrayWithHoles",
+    "_iterableToArrayLimit",
+    "_nonIterableRest",
+    "_slicedToArray",
+    "_unsupportedIterableToArray"
+  ],
+  "retainedNewNotice": "regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT)",
+  "limitations": "Version follows the fixed DOMPurify release lock and matching published dist. This does not prove the exact historical Babel process or an independently complete generator toolchain."
+}

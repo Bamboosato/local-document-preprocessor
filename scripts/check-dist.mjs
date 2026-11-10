@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import { readFile, readdir } from 'node:fs/promises';
+import {verifyTinySnapshot} from './tiny-materials.mjs';
+import {verifyTinyRuntime} from './tiny-release.mjs';
 
 const assetDirectory = new URL('../dist/assets/', import.meta.url);
 const licenseDirectory = new URL('../dist/licenses/', import.meta.url);
@@ -75,13 +77,34 @@ assert.deepEqual(
     'wasm-candidates',
     'index.html',
     'inventory.json',
+    'mermaid-tiny',
   ].sort(),
   'The production build must retain all third-party license files.',
 );
 
 const worker = await readFile(new URL(workerName, assetDirectory), 'utf8');
 const licensePage=await readFile(new URL('index.html',licenseDirectory),'utf8');
-assert.ok(licensePage.includes('<strong>dompurify 3.4.17</strong> ((MPL-2.0 OR Apache-2.0)) <span>選択したライセンス: Apache-2.0</span>'),'DOMPurify license selection must be visible in the distribution license index');
+assert.ok(licensePage.includes('mermaid-tiny/index.html'),'Tiny originals must be reachable from the root license page');
+const tiny=await verifyTinySnapshot();
+await verifyTinyRuntime(tiny.release);
+const tinyAssets=assets.filter(name=>/^mermaid\.tiny-.*\.js$/.test(name));
+assert.equal(tinyAssets.length,1,'Exactly one fixed Tiny asset is required');
+assert.equal(createHash('sha256').update(await readFile(new URL(tinyAssets[0],assetDirectory))).digest('hex'),tiny.record.bundleSha256,'Tiny public bytes must remain unchanged');
+for(const file of tiny.files){
+  const url='/licenses/mermaid-tiny/'+file.name;
+  assert.equal(createHash('sha256').update(await readFile(new URL(url.slice(1),distributionRoot))).digest('hex'),file.sha256,'Tiny license bytes mismatch');
+  assert.ok(pwa.assets.some(asset=>asset.url===url&&asset.sha256===file.sha256),'Tiny original must be in the same PWA generation');
+}
+assert.ok(tiny.files.find(file=>file.name==='index.html').bytes.toString().includes('DOMPurifyはApache-2.0を選択'),'Tiny DOMPurify selection missing');
+assert.equal(inventory.embeddedTiny.bundleSha256,tiny.record.bundleSha256);
+assert.equal(inventory.embeddedTiny.version,tiny.release.version);
+assert.ok(licensePage.includes(`Tiny ${tiny.release.version} 内包物のライセンス・由来・変更`),'Tiny visible version mismatch');
+const helper=tiny.manifest.items.find(item=>item.name==='@babel/helpers'&&item.version==='7.29.10');
+assert.ok(helper&&!helper.referenceOnly,'Embedded generated helper original missing');
+const helperText=tiny.files.find(file=>'/licenses/mermaid-tiny/'+file.name===helper.path)?.bytes.toString();
+assert.ok(helperText?.includes('Sebastian McKenzie')&&helperText.includes('Facebook')&&helperText.includes('Permission is hereby granted'),'Helper MIT original incomplete');
+assert.ok(!assets.some(name=>/mermaid\.core|^elk[-.]|flowDiagram-/.test(name)),'Old Mermaid chunks remain');
+for(const name of assets.filter(name=>name.endsWith('.js')))assert.ok(!/elkjs|org\.eclipse\.elk/.test(await readFile(new URL(name,assetDirectory),'utf8')),'ELK implementation marker in a distributed script');
 const lock=JSON.parse(await readFile(new URL('../package-lock.json',import.meta.url),'utf8'));
 const candidateEvidence=JSON.parse(await readFile(new URL('../docs/evidence/json-anydoc-target-licenses.json',import.meta.url),'utf8'));
 assert.deepEqual(inventory.wasmCandidates.map(({name,version})=>`${name}@${version}`),['encoding_rs@0.8.35','unicode-ident@1.0.24']);
@@ -106,7 +129,8 @@ for(const candidate of inventory.wasmCandidates){
   }
 }
 assert.ok(inventory.scope.includes('not linked WASM SBOM'));
-for(const name of ['mermaid','jsonc-parser'])assert.ok(inventory.packages.some(pkg=>pkg.name===name));
+for(const name of ['@mermaid-js/tiny','jsonc-parser'])assert.ok(inventory.packages.some(pkg=>pkg.name===name));
+assert.ok(!Object.keys(lock.packages).some(name=>/(?:^|\/)node_modules\/(?:mermaid|elkjs)$/.test(name)),'Old root Mermaid/ELK dependency remains');
 for(const pkg of inventory.packages){
   assert.equal(pkg.version,lock.packages[pkg.lockPath]?.version);assert.equal(pkg.integrity,lock.packages[pkg.lockPath]?.integrity);
   for(const original of pkg.originals){

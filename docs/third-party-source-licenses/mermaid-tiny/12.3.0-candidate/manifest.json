@@ -1,0 +1,580 @@
+{
+  "items": [
+    {
+      "path": "/licenses/original-000-0.txt",
+      "name": "@braintree/sanitize-url",
+      "version": "7.1.2",
+      "sourceName": "LICENSE",
+      "sha256": "0984740e0c3d725c8044dec7edcefe1dbce180ef5a7bc710c251e19607000158",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-001-0.txt",
+      "name": "@chevrotain/cst-dts-gen",
+      "version": "13.2.0",
+      "sourceName": "LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-002-0.txt",
+      "name": "@chevrotain/gast",
+      "version": "13.2.0",
+      "sourceName": "LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-003-0.txt",
+      "name": "@chevrotain/regexp-to-ast",
+      "version": "13.2.0",
+      "sourceName": "LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-004-0.txt",
+      "name": "@chevrotain/utils",
+      "version": "13.2.0",
+      "sourceName": "LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-005-0.txt",
+      "name": "@iconify/utils",
+      "version": "3.0.2",
+      "sourceName": "license.txt",
+      "sha256": "a86793ac023162ce98b91899601c15f6712f44943163c4f92a0a4bf89152b3bf",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-006-0.txt",
+      "name": "@upsetjs/venn.js",
+      "version": "2.0.0",
+      "sourceName": "LICENSE",
+      "sha256": "6a3508febf2cfccfee96597394543a6154a4bb0b1f91f28404be42c09e9fcb54",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-007-0.txt",
+      "name": "chevrotain",
+      "version": "13.2.0",
+      "sourceName": "LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-008-0.txt",
+      "name": "chevrotain-allstar",
+      "version": "0.5.0",
+      "sourceName": "LICENSE",
+      "sha256": "1db2cfbc7ce5fa3b82699b4ac4badce8984084d25b5308ece00f5c9b1381a0a5",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-009-0.txt",
+      "name": "d3",
+      "version": "7.9.0",
+      "sourceName": "LICENSE",
+      "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-010-0.txt",
+      "name": "d3-array",
+      "version": "2.12.1",
+      "sourceName": "LICENSE",
+      "sha256": "0747bebeb06b10954913149be9b9a8bdf6fad3e6fdcbd9f9524e7a94c13d2cea",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-011-0.txt",
+      "name": "d3-array",
+      "version": "3.2.4",
+      "sourceName": "LICENSE",
+      "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-012-0.txt",
+      "name": "d3-axis",
+      "version": "3.0.0",
+      "sourceName": "LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-013-0.txt",
+      "name": "d3-brush",
+      "version": "3.0.0",
+      "sourceName": "LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-014-0.txt",
+      "name": "d3-chord",
+      "version": "3.0.1",
+      "sourceName": "LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-015-0.txt",
+      "name": "d3-color",
+      "version": "3.1.0",
+      "sourceName": "LICENSE",
+      "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-016-0.txt",
+      "name": "d3-contour",
+      "version": "4.0.2",
+      "sourceName": "LICENSE",
+      "sha256": "e51cba0e4fa1d8c078e15319868f2b90188f413f9ce9dac1043b62db32901e93",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-017-0.txt",
+      "name": "d3-delaunay",
+      "version": "6.0.4",
+      "sourceName": "LICENSE",
+      "sha256": "582c3022bd01942336095f92b58a90b1be624dc547d987555c6c956512dd24c1",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-018-0.txt",
+      "name": "d3-dispatch",
+      "version": "3.0.1",
+      "sourceName": "LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-019-0.txt",
+      "name": "d3-drag",
+      "version": "3.0.0",
+      "sourceName": "LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-020-0.txt",
+      "name": "d3-dsv",
+      "version": "3.0.1",
+      "sourceName": "LICENSE",
+      "sha256": "7842a82012622e5a37bfe4f6c1b67cd3bae6350716b5bf87f36cea0bdc1319dc",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-021-0.txt",
+      "name": "d3-ease",
+      "version": "3.0.1",
+      "sourceName": "LICENSE",
+      "sha256": "b989d9085148d21ff64a75e14462aefa06b2589a55553b07b1460c70081c7d08",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-022-0.txt",
+      "name": "d3-fetch",
+      "version": "3.0.1",
+      "sourceName": "LICENSE",
+      "sha256": "ffdc17dc9040006bddeb891c95bfbb492e86d6bc64a4a4233666febab1be35e0",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-023-0.txt",
+      "name": "d3-force",
+      "version": "3.0.0",
+      "sourceName": "LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-024-0.txt",
+      "name": "d3-format",
+      "version": "3.1.0",
+      "sourceName": "LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-025-0.txt",
+      "name": "d3-geo",
+      "version": "3.1.1",
+      "sourceName": "LICENSE",
+      "sha256": "3e3edc1224eec9c39cd26491a21304a62883c1e5b6a65c5283ccc7a6cc94baee",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-026-0.txt",
+      "name": "d3-hierarchy",
+      "version": "3.1.2",
+      "sourceName": "LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-027-0.txt",
+      "name": "d3-interpolate",
+      "version": "3.0.1",
+      "sourceName": "LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-028-0.txt",
+      "name": "d3-path",
+      "version": "1.0.9",
+      "sourceName": "LICENSE",
+      "sha256": "b8265327ab678f554800e71188b1cc6b1ff57522e292d2b1c0be66f27cf328b6",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-029-0.txt",
+      "name": "d3-path",
+      "version": "3.1.0",
+      "sourceName": "LICENSE",
+      "sha256": "a09b0d6d76e768fca2085fad05743ee81ddd11946bcda160a3cf5e1081a479aa",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-030-0.txt",
+      "name": "d3-polygon",
+      "version": "3.0.1",
+      "sourceName": "LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-031-0.txt",
+      "name": "d3-quadtree",
+      "version": "3.0.1",
+      "sourceName": "LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-032-0.txt",
+      "name": "d3-random",
+      "version": "3.0.1",
+      "sourceName": "LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-033-0.txt",
+      "name": "d3-sankey",
+      "version": "0.12.3",
+      "sourceName": "LICENSE",
+      "sha256": "2bf785e778d67a4f5266cffcd4f2cc5bb98cde73791666e7efeb8002ba32dfa5",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-034-0.txt",
+      "name": "d3-scale",
+      "version": "4.0.2",
+      "sourceName": "LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-035-0.txt",
+      "name": "d3-scale-chromatic",
+      "version": "3.1.0",
+      "sourceName": "LICENSE",
+      "sha256": "0986d93944902cca9af86824b6a641b4b7c2d10602fc510c433a8bcd443919fe",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-036-0.txt",
+      "name": "d3-selection",
+      "version": "3.0.0",
+      "sourceName": "LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-037-0.txt",
+      "name": "d3-shape",
+      "version": "1.3.7",
+      "sourceName": "LICENSE",
+      "sha256": "7eea8533ea92bd8c32a901e89ecb0305890905bb12711449565ddff96891146d",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-038-0.txt",
+      "name": "d3-shape",
+      "version": "3.2.0",
+      "sourceName": "LICENSE",
+      "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-039-0.txt",
+      "name": "d3-time",
+      "version": "3.1.0",
+      "sourceName": "LICENSE",
+      "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-040-0.txt",
+      "name": "d3-time-format",
+      "version": "4.1.0",
+      "sourceName": "LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-041-0.txt",
+      "name": "d3-timer",
+      "version": "3.0.1",
+      "sourceName": "LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-042-0.txt",
+      "name": "d3-transition",
+      "version": "3.0.1",
+      "sourceName": "LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-043-0.txt",
+      "name": "d3-zoom",
+      "version": "3.0.0",
+      "sourceName": "LICENSE",
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-044-0.txt",
+      "name": "dagre-d3-es",
+      "version": "7.0.14",
+      "sourceName": "LICENSE.md",
+      "sha256": "d01eb84ccce437dbf5fd40853bceea0f287930920acea066597a4a25ead63858",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-045-0.txt",
+      "name": "dayjs",
+      "version": "1.11.21",
+      "sourceName": "LICENSE",
+      "sha256": "5faab7526d055651be3aab769d58897be6bd91f3d39d137f25f12dba1b31d5dc",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-046-0.txt",
+      "name": "dompurify",
+      "version": "3.4.17",
+      "sourceName": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-046-1.txt",
+      "name": "dompurify",
+      "version": "3.4.17",
+      "sourceName": "LICENSE-MPL",
+      "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-047-0.txt",
+      "name": "es-toolkit",
+      "version": "1.45.1",
+      "sourceName": "LICENSE",
+      "sha256": "ed68888a2a28f32a05e88f24d4d4ee75075a1bda2b6372a1f2e00fa0576a5524",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-048-0.txt",
+      "name": "fastdom",
+      "version": "1.0.12",
+      "sourceName": "README.md",
+      "sha256": "cc5669ab6f7741bb061c8a7244addc8e3af1f84ec7d2445744b59d0169a87d11",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-049-0.txt",
+      "name": "internmap",
+      "version": "2.0.3",
+      "sourceName": "LICENSE",
+      "sha256": "9ea8903938dab5f12c4572d60725069bec2d1b0dc3bcc210b09bae946a5ebb1f",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-050-0.txt",
+      "name": "js-yaml",
+      "version": "4.3.2",
+      "sourceName": "LICENSE",
+      "sha256": "a07bc24468b9654ce76a547d47a2db282d07733b715db4c73a98bd63961f9550",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-051-0.txt",
+      "name": "khroma",
+      "version": "2.1.0",
+      "sourceName": "license",
+      "sha256": "66b333b0f66759a0b710459e03f7029abe17f4358114a128d2c972e642961b49",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-052-0.txt",
+      "name": "langium",
+      "version": "4.4.0",
+      "sourceName": "LICENSE",
+      "sha256": "599bf70b4e55f06250571d103dbd8441e0c47cb7f858c0147ca312ce38e9ef2a",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-053-0.txt",
+      "name": "lodash-es",
+      "version": "4.18.1",
+      "sourceName": "LICENSE",
+      "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-054-0.txt",
+      "name": "marked",
+      "version": "16.3.0",
+      "sourceName": "LICENSE.md",
+      "sha256": "8e3a3f82f59a60958f56ca08f445647c32a4733dc7ca6c2c46f6eb898471ab9c",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-055-0.txt",
+      "name": "roughjs",
+      "version": "4.6.6",
+      "sourceName": "LICENSE",
+      "sha256": "dca9a392272606ac748ac0976a2a1133f14eef841c27beaa51a844d53c56a09d",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-056-0.txt",
+      "name": "stylis",
+      "version": "4.3.6",
+      "sourceName": "LICENSE",
+      "sha256": "88c579c6ee44b41137a21321190d177982e5b17d4fa1b83a4a2e3ea325a8fc9a",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-057-0.txt",
+      "name": "ts-dedent",
+      "version": "2.2.0",
+      "sourceName": "LICENSE",
+      "sha256": "eff13095d9d762c3bd9dda74370c81e2130c28f2691bc455603abf973bac25b9",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-058-0.txt",
+      "name": "vscode-jsonrpc",
+      "version": "9.0.3",
+      "sourceName": "License.txt",
+      "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-059-0.txt",
+      "name": "vscode-languageserver-protocol",
+      "version": "3.18.4",
+      "sourceName": "License.txt",
+      "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-060-0.txt",
+      "name": "vscode-languageserver-textdocument",
+      "version": "1.0.15",
+      "sourceName": "License.txt",
+      "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-061-0.txt",
+      "name": "vscode-languageserver-types",
+      "version": "3.18.4",
+      "sourceName": "License.txt",
+      "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-062-0.txt",
+      "name": "vscode-uri",
+      "version": "3.1.0",
+      "sourceName": "LICENSE.md",
+      "sha256": "c669138cb1eb01fbb745e8e460b291e4f2869c14a40061390b6095d845ed4c82",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-063-0.txt",
+      "name": "mermaid",
+      "version": "12.3.0",
+      "sourceName": "LICENSE",
+      "sha256": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-064-0.txt",
+      "name": "@mermaid-js/parser",
+      "version": "2.0.1",
+      "sourceName": "LICENSE",
+      "sha256": "d374061c40bfb6f99c5033290caefda97a9b3e7e477e5ee02f487143ef2177e8",
+      "referenceOnly": false
+    },
+    {
+      "path": "/licenses/original-065-0.txt",
+      "name": "js-sequence-diagrams",
+      "version": "27c7a2b4fcb7b3366b9e371fde18911e08b13054",
+      "sourceName": "sequence-BSD.txt",
+      "sha256": "75edd32c01669aa6a3876f162d5e9a36d2e3dff3aff93c53578c32c287b54070",
+      "referenceOnly": true
+    },
+    {
+      "path": "/licenses/original-066-0.txt",
+      "name": "Jekyll",
+      "version": "6dd3cc21c40b98054851846425af06c64f9fb466",
+      "sourceName": "jekyll-MIT.txt",
+      "sha256": "5d9f98524d5a7ac46ba836dfaec29d3b95665c50049fa79ea28cce5f0904f41b",
+      "referenceOnly": true
+    },
+    {
+      "path": "/licenses/original-067-0.txt",
+      "name": "@babel/helpers",
+      "version": "7.29.10",
+      "sourceName": "LICENSE",
+      "sha256": "4be9d87b56a306293223b490c0d0b245e9e94f39884147bf051a6c7b825aeb30",
+      "referenceOnly": false,
+      "role": "inlined generated helper; version correspondence from fixed DOMPurify release lock"
+    }
+  ],
+  "sourceNotices": {
+    "path": "/licenses/source-notices.txt",
+    "sha256": "8bd7002901926e4231341dc94be0988b40ead3cff03a632be18de418f6084e16"
+  },
+  "generatorReference": {
+    "name": "langium-cli",
+    "version": "4.4.0",
+    "path": "/licenses/generator-license.txt",
+    "sha256": "599bf70b4e55f06250571d103dbd8441e0c47cb7f858c0147ca312ce38e9ef2a",
+    "role": "generator reference, not runtime contributor"
+  },
+  "patches": [
+    {
+      "name": "fastdom@1.0.12",
+      "path": "/licenses/fastdom.patch.txt",
+      "sha256": "10bad52c2ff6c742f43492850f2a5a74e9d70a33f42a442cdbda4e174356aa87"
+    },
+    {
+      "name": "roughjs@4.6.6",
+      "path": "/licenses/roughjs.patch.txt",
+      "sha256": "3543d47108cb41b68ec6a671c0e1f9d0cfe2ce524fea5b0992511ae84c3c6b64"
+    }
+  ]
+}

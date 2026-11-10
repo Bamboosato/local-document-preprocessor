@@ -1,0 +1,101 @@
+{
+  "sourceCommit": "1fb7869866dd619168d840291c9c54b4f129758b",
+  "sourceProofSha256": "651b9163ece98cc97f276dbebca22def185f7b96d1b37c20d1724cb70fff7e01",
+  "configurationSha256": "69c572c63e0ef243c5ba9c8a12caf8c501732f799a19392ae6b9c38bfaf01552",
+  "grammarEntries": 15,
+  "grammars": [
+    {
+      "path": "src/language/architecture/arch.langium",
+      "sha256": "69755c428b2409c874786f5e40c69f85f543496e8929b54f0af30fd97a6c345d"
+    },
+    {
+      "path": "src/language/architecture/architecture.langium",
+      "sha256": "08b6acbfa6f48b3dc6b590e3a5339a3fe554c394a0307d6cbfebb75c175b5147"
+    },
+    {
+      "path": "src/language/common/common.langium",
+      "sha256": "3c861872811260396786ee50129795274d7ef4208d53fcc3251d15d32a788cd4"
+    },
+    {
+      "path": "src/language/cynefin/cynefin.langium",
+      "sha256": "e39c321b5a98b7160270c4275d4dfc309769478fca6e8f93fa67973431b66881"
+    },
+    {
+      "path": "src/language/eventmodeling/event-modeling.langium",
+      "sha256": "9432c3c986e2d2135fbdedbc5b4cf7fe22b9c893e10b4d23cc63332f776bbba4"
+    },
+    {
+      "path": "src/language/gitGraph/gitGraph.langium",
+      "sha256": "7983e2cb45fad0c62a81c6ebb40c942637ea7874cb6c324a99e84feae100b514"
+    },
+    {
+      "path": "src/language/gitGraph/reference.langium",
+      "sha256": "34cbd8a9066c6560f28ba486f50739c6cdc226be00d764582ee0366aa0fd9d25"
+    },
+    {
+      "path": "src/language/info/info.langium",
+      "sha256": "d83494b9b7efe43d7d6af6f29336e7ee87652bac136f7ed785ef7575ac1ca543"
+    },
+    {
+      "path": "src/language/packet/packet.langium",
+      "sha256": "05e4541d176be506b9e0b373f6d86ee3b0d3489650a3d027aaf3319dba4c3176"
+    },
+    {
+      "path": "src/language/pie/pie.langium",
+      "sha256": "dc326f2fb756e9d2e171a9f26328d4d106164fea21e2e359d46cb62b9d82f45c"
+    },
+    {
+      "path": "src/language/radar/radar.langium",
+      "sha256": "e6bab113778803c5b45969fc3197a9c01f7b8162b9dd4b71d421da20625ec535"
+    },
+    {
+      "path": "src/language/railroad-abnf/railroad-abnf.langium",
+      "sha256": "2b4a3993ba3df8e43e7719437f40ba5c36d03a229f671441bcb2771136017b41"
+    },
+    {
+      "path": "src/language/railroad-ebnf/railroad-ebnf.langium",
+      "sha256": "9cf1a6d19bbe0452a79f87480775e418dbff6664eb95cc32d270c6acdd02f221"
+    },
+    {
+      "path": "src/language/railroad-peg/railroad-peg.langium",
+      "sha256": "90494f697158eddd41b2a60c42cb96a40b5f9d665392bcc4efe489b529e178cb"
+    },
+    {
+      "path": "src/language/railroad/railroad.langium",
+      "sha256": "6a9a9a1793b98c3dbc04d922867681a1663cd1d14d70f29098fb3dda018f625e"
+    },
+    {
+      "path": "src/language/treeView/treeView.langium",
+      "sha256": "05e6901b3931203420e45d754bb521a69623445f168c1124205c2b35a110e92b"
+    },
+    {
+      "path": "src/language/treemap/treemap.langium",
+      "sha256": "09ae0dfbd0cb7747a6c161ada9a529b657c5181aa5e98dc5501b4b6a33d7f909"
+    },
+    {
+      "path": "src/language/wardley/wardley.langium",
+      "sha256": "8c8ce9a0df6eefa14aa32a7c2c9c8515933ff67ed703b5400d5f31ea0bff11d5"
+    }
+  ],
+  "generator": {
+    "name": "langium-cli",
+    "version": "4.4.0",
+    "license": "MIT",
+    "licenseSha256": "599bf70b4e55f06250571d103dbd8441e0c47cb7f858c0147ca312ce38e9ef2a"
+  },
+  "outputs": [
+    {
+      "path": "src/language/generated/ast.ts",
+      "sha256": "d3f65a21b61c2c66e0b3a7464fec4b5fcce6ba63bd5ccb266d53f13674f224a4"
+    },
+    {
+      "path": "src/language/generated/grammar.ts",
+      "sha256": "2baa0fa32da1b13264470770784deb9512d159e4d761532758a44849091521be"
+    },
+    {
+      "path": "src/language/generated/module.ts",
+      "sha256": "02a77ad902c10e18dd15dd50d5bf1ab61c7c79c9e9cc2bc31befc1c9be73c07c"
+    }
+  ],
+  "limitations": "Identifies local reproducible generated inputs, not license coverage or release-time generator dependency graph."
+}

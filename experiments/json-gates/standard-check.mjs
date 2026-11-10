@@ -84,17 +84,19 @@ try{
         const clean=await page.evaluate(async()=>localStorage.length===0&&sessionStorage.length===0&&(await indexedDB.databases()).length===0&&(await caches.keys()).length===0);assert.equal(clean,true);
         await page.reload();await page.waitForFunction(()=>Boolean(window.standard));assert.equal(await page.evaluate(()=>standard.view.state().status==='empty'&&standard.view.source()===undefined&&document.querySelector('#standard-input').value===''),true);assert.equal(external.length,0);assert.equal(pageErrors.length,0);
       });
-      await check('SM-08','real lazy chunk request failure preserves source; explicit retry reloads library',async()=>{
+      await check('SM-08','real Tiny asset request failure preserves source; explicit retry reloads library',async()=>{
         const isolated=await browser.newContext();const fresh=await isolated.newPage();
         try{
-          await fresh.route('**/assets/mermaid.core-*.js',route=>route.abort());
+          const asset='**/assets/mermaid.tiny-*.js';let blocked=0;
+          await fresh.route(asset,route=>{blocked++;return route.abort();});
           await fresh.goto('http://127.0.0.1:4194/standard.html');await fresh.waitForFunction(()=>Boolean(window.standard));
           const result=await fresh.evaluate(async()=>{await standard.view.show(standard.make('{"case":1}'));return {status:standard.view.state().status,allowed:standard.view.output()!==undefined};});
-          assert.equal(result.status,'error');assert.equal(result.allowed,true);
-          // Dynamic import failure can remain cached by the browser. A reload is
-          // the recovery boundary for failed module fetches, not endless retries.
-          await fresh.unroute('**/assets/mermaid.core-*.js');await fresh.reload();await fresh.waitForFunction(()=>Boolean(window.standard));
-          const recovered=await fresh.evaluate(async()=>{await standard.view.show(standard.make('{"case":1}'));return standard.view.state().status==='rendered';});assert.equal(recovered,true);
+          assert.equal(blocked,1);assert.equal(result.status,'error');assert.equal(result.allowed,true);
+          // Tiny is a classic script with explicit failed-load cleanup. Exercise
+          // the actual retry control without masking the failure with a reload.
+          await fresh.unroute(asset);await fresh.locator('#standard-retry').click();
+          await fresh.waitForFunction(()=>standard.view.state().status==='rendered');
+          assert.equal(await fresh.evaluate(()=>standard.view.output()!==undefined),true);
         }finally{await isolated.close();}
       });
       await writeFile(cwd+'evidence/standard-'+target+'.json',JSON.stringify({browser:target,version:browser.version(),checks,externalRequests:external.length,pageErrors:pageErrors.length,scope:'headless synthetic fixtures; not device or installed PWA proof'},null,2));

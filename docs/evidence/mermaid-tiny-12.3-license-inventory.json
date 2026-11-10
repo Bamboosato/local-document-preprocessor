@@ -1,0 +1,1054 @@
+{
+  "sourceCommit": "2086904e76c692331e34a45d7cc3bc30860d040e",
+  "bundleSha256": "c41f5236091b83f524c4940f97a16b2b14a76f21ff84aea4fd6b66421d8a2a9a",
+  "tinyMetafileSha256": "03011f279b8c7f819d93dc39e2801bd11a3e455df18b56d4523e9589eef054d1",
+  "parserMetafileSha256": "ab11f3c8ada9e56a4e5f81493c2b55b52cc67add7b162c661b4f216cb80f3901",
+  "parserHashesSha256": "2b1e2e0b5dd1dafcc9141229aaa2c2c7dc2eced5d755bd7668217318706ef820",
+  "parserChunksUsed": 32,
+  "workspace": [
+    {
+      "name": "mermaid",
+      "version": "12.3.0",
+      "declaredLicense": "MIT",
+      "role": "mermaid",
+      "original": {
+        "path": "LICENSE",
+        "bytes": 1089,
+        "sha256": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80"
+      }
+    },
+    {
+      "name": "@mermaid-js/parser",
+      "version": "2.0.1",
+      "declaredLicense": "MIT",
+      "role": "parser",
+      "original": {
+        "path": "packages/parser/LICENSE",
+        "bytes": 1077,
+        "sha256": "d374061c40bfb6f99c5033290caefda97a9b3e7e477e5ee02f487143ef2177e8"
+      }
+    }
+  ],
+  "packages": [
+    {
+      "name": "@braintree/sanitize-url",
+      "version": "7.1.2",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1066,
+          "sha256": "0984740e0c3d725c8044dec7edcefe1dbce180ef5a7bc710c251e19607000158"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "@chevrotain/cst-dts-gen",
+      "version": "13.2.0",
+      "declaredLicense": "Apache-2.0",
+      "originals": [
+        {
+          "name": "LICENSE.txt",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "@chevrotain/gast",
+      "version": "13.2.0",
+      "declaredLicense": "Apache-2.0",
+      "originals": [
+        {
+          "name": "LICENSE.txt",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "stages": [
+        "tiny",
+        "parser"
+      ],
+      "patched": false
+    },
+    {
+      "name": "@chevrotain/regexp-to-ast",
+      "version": "13.2.0",
+      "declaredLicense": "Apache-2.0",
+      "originals": [
+        {
+          "name": "LICENSE.txt",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "stages": [
+        "tiny",
+        "parser"
+      ],
+      "patched": false
+    },
+    {
+      "name": "@chevrotain/utils",
+      "version": "13.2.0",
+      "declaredLicense": "Apache-2.0",
+      "originals": [
+        {
+          "name": "LICENSE.txt",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "stages": [
+        "tiny",
+        "parser"
+      ],
+      "patched": false
+    },
+    {
+      "name": "@iconify/utils",
+      "version": "3.0.2",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "license.txt",
+          "bytes": 1083,
+          "sha256": "a86793ac023162ce98b91899601c15f6712f44943163c4f92a0a4bf89152b3bf"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "@upsetjs/venn.js",
+      "version": "2.0.0",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1106,
+          "sha256": "6a3508febf2cfccfee96597394543a6154a4bb0b1f91f28404be42c09e9fcb54"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "chevrotain",
+      "version": "13.2.0",
+      "declaredLicense": "Apache-2.0",
+      "originals": [
+        {
+          "name": "LICENSE.txt",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "stages": [
+        "tiny",
+        "parser"
+      ],
+      "patched": false
+    },
+    {
+      "name": "chevrotain-allstar",
+      "version": "0.5.0",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1068,
+          "sha256": "1db2cfbc7ce5fa3b82699b4ac4badce8984084d25b5308ece00f5c9b1381a0a5"
+        }
+      ],
+      "stages": [
+        "parser"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3",
+      "version": "7.9.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-array",
+      "version": "2.12.1",
+      "declaredLicense": "BSD-3-Clause",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1475,
+          "sha256": "0747bebeb06b10954913149be9b9a8bdf6fad3e6fdcbd9f9524e7a94c13d2cea"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-array",
+      "version": "3.2.4",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-axis",
+      "version": "3.0.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-brush",
+      "version": "3.0.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-chord",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-color",
+      "version": "3.1.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-contour",
+      "version": "4.0.2",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e51cba0e4fa1d8c078e15319868f2b90188f413f9ce9dac1043b62db32901e93"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-delaunay",
+      "version": "6.0.4",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 757,
+          "sha256": "582c3022bd01942336095f92b58a90b1be624dc547d987555c6c956512dd24c1"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-dispatch",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-drag",
+      "version": "3.0.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-dsv",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "7842a82012622e5a37bfe4f6c1b67cd3bae6350716b5bf87f36cea0bdc1319dc"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-ease",
+      "version": "3.0.1",
+      "declaredLicense": "BSD-3-Clause",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1504,
+          "sha256": "b989d9085148d21ff64a75e14462aefa06b2589a55553b07b1460c70081c7d08"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-fetch",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "ffdc17dc9040006bddeb891c95bfbb492e86d6bc64a4a4233666febab1be35e0"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-force",
+      "version": "3.0.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-format",
+      "version": "3.1.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-geo",
+      "version": "3.1.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1857,
+          "sha256": "3e3edc1224eec9c39cd26491a21304a62883c1e5b6a65c5283ccc7a6cc94baee"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-hierarchy",
+      "version": "3.1.2",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-interpolate",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-path",
+      "version": "1.0.9",
+      "declaredLicense": "BSD-3-Clause",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1475,
+          "sha256": "b8265327ab678f554800e71188b1cc6b1ff57522e292d2b1c0be66f27cf328b6"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-path",
+      "version": "3.1.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "a09b0d6d76e768fca2085fad05743ee81ddd11946bcda160a3cf5e1081a479aa"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-polygon",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-quadtree",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-random",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-sankey",
+      "version": "0.12.3",
+      "declaredLicense": "BSD-3-Clause",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1471,
+          "sha256": "2bf785e778d67a4f5266cffcd4f2cc5bb98cde73791666e7efeb8002ba32dfa5"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-scale",
+      "version": "4.0.2",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-scale-chromatic",
+      "version": "3.1.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1423,
+          "sha256": "0986d93944902cca9af86824b6a641b4b7c2d10602fc510c433a8bcd443919fe"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-selection",
+      "version": "3.0.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-shape",
+      "version": "1.3.7",
+      "declaredLicense": "BSD-3-Clause",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1475,
+          "sha256": "7eea8533ea92bd8c32a901e89ecb0305890905bb12711449565ddff96891146d"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-shape",
+      "version": "3.2.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-time",
+      "version": "3.1.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-time-format",
+      "version": "4.1.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-timer",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-transition",
+      "version": "3.0.1",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "d3-zoom",
+      "version": "3.0.0",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "dagre-d3-es",
+      "version": "7.0.14",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE.md",
+          "bytes": 1328,
+          "sha256": "d01eb84ccce437dbf5fd40853bceea0f287930920acea066597a4a25ead63858"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "dayjs",
+      "version": "1.11.21",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1072,
+          "sha256": "5faab7526d055651be3aab769d58897be6bd91f3d39d137f25f12dba1b31d5dc"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "dompurify",
+      "version": "3.4.17",
+      "declaredLicense": "(MPL-2.0 OR Apache-2.0)",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "name": "LICENSE-MPL",
+          "bytes": 16726,
+          "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "es-toolkit",
+      "version": "1.45.1",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1424,
+          "sha256": "ed68888a2a28f32a05e88f24d4d4ee75075a1bda2b6372a1f2e00fa0576a5524"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "fastdom",
+      "version": "1.0.12",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "README.md",
+          "bytes": 7525,
+          "sha256": "cc5669ab6f7741bb061c8a7244addc8e3af1f84ec7d2445744b59d0169a87d11",
+          "note": "MIT license section; preserve attribution"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": true
+    },
+    {
+      "name": "internmap",
+      "version": "2.0.3",
+      "declaredLicense": "ISC",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 726,
+          "sha256": "9ea8903938dab5f12c4572d60725069bec2d1b0dc3bcc210b09bae946a5ebb1f"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "js-yaml",
+      "version": "4.3.2",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1084,
+          "sha256": "a07bc24468b9654ce76a547d47a2db282d07733b715db4c73a98bd63961f9550"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "khroma",
+      "version": "2.1.0",
+      "declaredLicense": null,
+      "originals": [
+        {
+          "name": "license",
+          "bytes": 1105,
+          "sha256": "66b333b0f66759a0b710459e03f7029abe17f4358114a128d2c972e642961b49"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "langium",
+      "version": "4.4.0",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1052,
+          "sha256": "599bf70b4e55f06250571d103dbd8441e0c47cb7f858c0147ca312ce38e9ef2a"
+        }
+      ],
+      "stages": [
+        "parser"
+      ],
+      "patched": false
+    },
+    {
+      "name": "lodash-es",
+      "version": "4.18.1",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1952,
+          "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc"
+        }
+      ],
+      "stages": [
+        "tiny",
+        "parser"
+      ],
+      "patched": false
+    },
+    {
+      "name": "marked",
+      "version": "16.3.0",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE.md",
+          "bytes": 2942,
+          "sha256": "8e3a3f82f59a60958f56ca08f445647c32a4733dc7ca6c2c46f6eb898471ab9c"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "roughjs",
+      "version": "4.6.6",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1068,
+          "sha256": "dca9a392272606ac748ac0976a2a1133f14eef841c27beaa51a844d53c56a09d"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": true
+    },
+    {
+      "name": "stylis",
+      "version": "4.3.6",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1078,
+          "sha256": "88c579c6ee44b41137a21321190d177982e5b17d4fa1b83a4a2e3ea325a8fc9a"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "ts-dedent",
+      "version": "2.2.0",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE",
+          "bytes": 1073,
+          "sha256": "eff13095d9d762c3bd9dda74370c81e2130c28f2691bc455603abf973bac25b9"
+        }
+      ],
+      "stages": [
+        "tiny"
+      ],
+      "patched": false
+    },
+    {
+      "name": "vscode-jsonrpc",
+      "version": "9.0.3",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "License.txt",
+          "bytes": 1095,
+          "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0"
+        }
+      ],
+      "stages": [
+        "parser"
+      ],
+      "patched": false
+    },
+    {
+      "name": "vscode-languageserver-protocol",
+      "version": "3.18.4",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "License.txt",
+          "bytes": 1095,
+          "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0"
+        }
+      ],
+      "stages": [
+        "parser"
+      ],
+      "patched": false
+    },
+    {
+      "name": "vscode-languageserver-textdocument",
+      "version": "1.0.15",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "License.txt",
+          "bytes": 1095,
+          "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0"
+        }
+      ],
+      "stages": [
+        "parser"
+      ],
+      "patched": false
+    },
+    {
+      "name": "vscode-languageserver-types",
+      "version": "3.18.4",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "License.txt",
+          "bytes": 1095,
+          "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0"
+        }
+      ],
+      "stages": [
+        "parser"
+      ],
+      "patched": false
+    },
+    {
+      "name": "vscode-uri",
+      "version": "3.1.0",
+      "declaredLicense": "MIT",
+      "originals": [
+        {
+          "name": "LICENSE.md",
+          "bytes": 1070,
+          "sha256": "c669138cb1eb01fbb745e8e460b291e4f2869c14a40061390b6095d845ed4c82"
+        }
+      ],
+      "stages": [
+        "parser"
+      ],
+      "patched": false
+    }
+  ],
+  "limitations": "Source metadata and root-level original candidates only; not final legal applicability, original attribution, notices within sources, or a complete independently verified SBOM."
+}

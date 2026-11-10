@@ -1,0 +1,355 @@
+{
+  "sourceCommit": "2086904e76c692331e34a45d7cc3bc30860d040e",
+  "rebuildSha256": "c41f5236091b83f524c4940f97a16b2b14a76f21ff84aea4fd6b66421d8a2a9a",
+  "publishedSha256": "c41f5236091b83f524c4940f97a16b2b14a76f21ff84aea4fd6b66421d8a2a9a",
+  "metafileSha256": "03011f279b8c7f819d93dc39e2801bd11a3e455df18b56d4523e9589eef054d1",
+  "metafileInputs": 2502,
+  "outputContributors": 1177,
+  "elkjsResolvedInputs": 1,
+  "elkjsOutputContributors": 0,
+  "mermaidElkSourceContributors": [
+    {
+      "source": "src/rendering-util/layout-algorithms/elk/algorithms.ts",
+      "bytesInOutput": 30
+    }
+  ],
+  "packages": [
+    {
+      "name": "@braintree/sanitize-url",
+      "version": "7.1.2",
+      "bytesInOutput": 2027,
+      "files": 2
+    },
+    {
+      "name": "@chevrotain/cst-dts-gen",
+      "version": "13.2.0",
+      "bytesInOutput": 107,
+      "files": 3
+    },
+    {
+      "name": "@chevrotain/gast",
+      "version": "13.2.0",
+      "bytesInOutput": 5234,
+      "files": 4
+    },
+    {
+      "name": "@chevrotain/regexp-to-ast",
+      "version": "13.2.0",
+      "bytesInOutput": 11148,
+      "files": 5
+    },
+    {
+      "name": "@chevrotain/utils",
+      "version": "13.2.0",
+      "bytesInOutput": 604,
+      "files": 4
+    },
+    {
+      "name": "@iconify/utils",
+      "version": "3.0.2",
+      "bytesInOutput": 5242,
+      "files": 13
+    },
+    {
+      "name": "@upsetjs/venn.js",
+      "version": "2.0.0",
+      "bytesInOutput": 21304,
+      "files": 1
+    },
+    {
+      "name": "chevrotain",
+      "version": "13.2.0",
+      "bytesInOutput": 100585,
+      "files": 37
+    },
+    {
+      "name": "d3",
+      "version": "7.9.0",
+      "bytesInOutput": 179,
+      "files": 1
+    },
+    {
+      "name": "d3-array",
+      "version": "2.12.1",
+      "bytesInOutput": 670,
+      "files": 4
+    },
+    {
+      "name": "d3-array",
+      "version": "3.2.4",
+      "bytesInOutput": 2784,
+      "files": 10
+    },
+    {
+      "name": "d3-axis",
+      "version": "3.0.0",
+      "bytesInOutput": 2969,
+      "files": 3
+    },
+    {
+      "name": "d3-brush",
+      "version": "3.0.0",
+      "bytesInOutput": 922,
+      "files": 5
+    },
+    {
+      "name": "d3-chord",
+      "version": "3.0.1",
+      "bytesInOutput": 29,
+      "files": 1
+    },
+    {
+      "name": "d3-color",
+      "version": "3.1.0",
+      "bytesInOutput": 10171,
+      "files": 5
+    },
+    {
+      "name": "d3-contour",
+      "version": "4.0.2",
+      "bytesInOutput": 29,
+      "files": 1
+    },
+    {
+      "name": "d3-delaunay",
+      "version": "6.0.4",
+      "bytesInOutput": 29,
+      "files": 1
+    },
+    {
+      "name": "d3-dispatch",
+      "version": "3.0.1",
+      "bytesInOutput": 1751,
+      "files": 2
+    },
+    {
+      "name": "d3-drag",
+      "version": "3.0.0",
+      "bytesInOutput": 29,
+      "files": 1
+    },
+    {
+      "name": "d3-dsv",
+      "version": "3.0.1",
+      "bytesInOutput": 29,
+      "files": 1
+    },
+    {
+      "name": "d3-ease",
+      "version": "3.0.1",
+      "bytesInOutput": 136,
+      "files": 2
+    },
+    {
+      "name": "d3-fetch",
+      "version": "3.0.1",
+      "bytesInOutput": 29,
+      "files": 1
+    },
+    {
+      "name": "d3-force",
+      "version": "3.0.0",
+      "bytesInOutput": 29,
+      "files": 1
+    },
+    {
+      "name": "d3-format",
+      "version": "3.1.0",
+      "bytesInOutput": 5778,
+      "files": 16
+    },
+    {
+      "name": "d3-geo",
+      "version": "3.1.1",
+      "bytesInOutput": 29,
+      "files": 1
+    },
+    {
+      "name": "d3-hierarchy",
+      "version": "3.1.2",
+      "bytesInOutput": 6138,
+      "files": 22
+    },
+    {
+      "name": "d3-interpolate",
+      "version": "3.0.1",
+      "bytesInOutput": 6329,
+      "files": 18
+    },
+    {
+      "name": "d3-path",
+      "version": "1.0.9",
+      "bytesInOutput": 2098,
+      "files": 2
+    },
+    {
+      "name": "d3-path",
+      "version": "3.1.0",
+      "bytesInOutput": 2234,
+      "files": 2
+    },
+    {
+      "name": "d3-polygon",
+      "version": "3.0.1",
+      "bytesInOutput": 29,
+      "files": 1
+    },
+    {
+      "name": "d3-quadtree",
+      "version": "3.0.1",
+      "bytesInOutput": 29,
+      "files": 1
+    },
+    {
+      "name": "d3-random",
+      "version": "3.0.1",
+      "bytesInOutput": 29,
+      "files": 1
+    },
+    {
+      "name": "d3-sankey",
+      "version": "0.12.3",
+      "bytesInOutput": 6138,
+      "files": 5
+    },
+    {
+      "name": "d3-scale",
+      "version": "4.0.2",
+      "bytesInOutput": 6199,
+      "files": 11
+    },
+    {
+      "name": "d3-scale-chromatic",
+      "version": "3.1.0",
+      "bytesInOutput": 285,
+      "files": 3
+    },
+    {
+      "name": "d3-selection",
+      "version": "3.0.0",
+      "bytesInOutput": 16095,
+      "files": 47
+    },
+    {
+      "name": "d3-shape",
+      "version": "1.3.7",
+      "bytesInOutput": 1249,
+      "files": 5
+    },
+    {
+      "name": "d3-shape",
+      "version": "3.2.0",
+      "bytesInOutput": 24378,
+      "files": 28
+    },
+    {
+      "name": "d3-time",
+      "version": "3.1.0",
+      "bytesInOutput": 5399,
+      "files": 11
+    },
+    {
+      "name": "d3-time-format",
+      "version": "4.1.0",
+      "bytesInOutput": 11944,
+      "files": 3
+    },
+    {
+      "name": "d3-timer",
+      "version": "3.0.1",
+      "bytesInOutput": 1708,
+      "files": 3
+    },
+    {
+      "name": "d3-transition",
+      "version": "3.0.1",
+      "bytesInOutput": 13575,
+      "files": 28
+    },
+    {
+      "name": "d3-zoom",
+      "version": "3.0.0",
+      "bytesInOutput": 1331,
+      "files": 6
+    },
+    {
+      "name": "dagre-d3-es",
+      "version": "7.0.14",
+      "bytesInOutput": 36633,
+      "files": 42
+    },
+    {
+      "name": "dayjs",
+      "version": "1.11.21",
+      "bytesInOutput": 18295,
+      "files": 5
+    },
+    {
+      "name": "dompurify",
+      "version": "3.4.17",
+      "bytesInOutput": 34182,
+      "files": 1
+    },
+    {
+      "name": "es-toolkit",
+      "version": "1.45.1",
+      "bytesInOutput": 10541,
+      "files": 26
+    },
+    {
+      "name": "fastdom",
+      "version": "1.0.12",
+      "bytesInOutput": 2132,
+      "files": 2
+    },
+    {
+      "name": "internmap",
+      "version": "2.0.3",
+      "bytesInOutput": 771,
+      "files": 1
+    },
+    {
+      "name": "js-yaml",
+      "version": "4.3.2",
+      "bytesInOutput": 48388,
+      "files": 1
+    },
+    {
+      "name": "khroma",
+      "version": "2.1.0",
+      "bytesInOutput": 12262,
+      "files": 28
+    },
+    {
+      "name": "lodash-es",
+      "version": "4.18.1",
+      "bytesInOutput": 48039,
+      "files": 240
+    },
+    {
+      "name": "marked",
+      "version": "16.3.0",
+      "bytesInOutput": 39927,
+      "files": 1
+    },
+    {
+      "name": "roughjs",
+      "version": "4.6.6",
+      "bytesInOutput": 28374,
+      "files": 1
+    },
+    {
+      "name": "stylis",
+      "version": "4.3.6",
+      "bytesInOutput": 4687,
+      "files": 6
+    },
+    {
+      "name": "ts-dedent",
+      "version": "2.2.0",
+      "bytesInOutput": 796,
+      "files": 1
+    }
+  ],
+  "limitations": "Metafile records contributors to one rebuilt bundle; package attribution excludes workspace and bundled generated modules. Rebuild bytes match published bytes. License and generated-module attribution require separate review."
+}

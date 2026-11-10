@@ -1,0 +1,1541 @@
+{
+  "bundleSha256": "ea0cdf04eb31907eb20d956a34fe300095365c876887b54ffa29f1f847f56d00",
+  "inventorySha256": "376faa14783679f8c0066589b30a0905c1e190f32d14752b9b40ddf473e57ed3",
+  "tinyMetafileSha256": "1a794ecb6a81dd5d6bdb19e98ce60db8823dd4cde824737b71f554907f2749bb",
+  "parserMetafileSha256": "b92f7a892dc87d4d5404072bb2ab895cd69aff729365c0246e41f0326124c39c",
+  "packages": [
+    {
+      "name": "@braintree/sanitize-url",
+      "version": "7.1.2",
+      "contributingFiles": 2,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1066,
+          "sha256": "0984740e0c3d725c8044dec7edcefe1dbce180ef5a7bc710c251e19607000158"
+        }
+      ]
+    },
+    {
+      "name": "@chevrotain/cst-dts-gen",
+      "version": "13.2.0",
+      "contributingFiles": 3,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE.txt",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "name": "@chevrotain/gast",
+      "version": "13.2.0",
+      "contributingFiles": 4,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE.txt",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "name": "@chevrotain/regexp-to-ast",
+      "version": "13.2.0",
+      "contributingFiles": 5,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE.txt",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "name": "@chevrotain/utils",
+      "version": "13.2.0",
+      "contributingFiles": 4,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE.txt",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "name": "@iconify/utils",
+      "version": "3.0.2",
+      "contributingFiles": 13,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "license.txt",
+          "bytes": 1083,
+          "sha256": "a86793ac023162ce98b91899601c15f6712f44943163c4f92a0a4bf89152b3bf"
+        }
+      ]
+    },
+    {
+      "name": "@upsetjs/venn.js",
+      "version": "2.0.0",
+      "contributingFiles": 1,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1106,
+          "sha256": "6a3508febf2cfccfee96597394543a6154a4bb0b1f91f28404be42c09e9fcb54"
+        }
+      ]
+    },
+    {
+      "name": "chevrotain",
+      "version": "13.2.0",
+      "contributingFiles": 37,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE.txt",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ]
+    },
+    {
+      "name": "chevrotain-allstar",
+      "version": "0.5.0",
+      "contributingFiles": 4,
+      "markedFiles": [
+        {
+          "path": "lib/all-star-lookahead.js",
+          "sha256": "d4d99705b83166c37a2627c36386797e5c7b48fc6ebf19a8c8f9f8ee9b118a82",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/atn.js",
+          "sha256": "c9893c4c3b1db6fd2f8f28b9545cbc764870d5da747db31855d0a2b56f576a7c",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/dfa.js",
+          "sha256": "9df7a8ea729ab0d73366268f7f29754b0f6ed5ce0e11483b2db3d0a59d9869bc",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/index.js",
+          "sha256": "128f53805e491e3e18ceda499cc4431965037c7b6bfa72941e0188f2bb4efa7f",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        }
+      ],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1068,
+          "sha256": "1db2cfbc7ce5fa3b82699b4ac4badce8984084d25b5308ece00f5c9b1381a0a5"
+        }
+      ]
+    },
+    {
+      "name": "d3",
+      "version": "7.9.0",
+      "contributingFiles": 1,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4"
+        }
+      ]
+    },
+    {
+      "name": "d3-array",
+      "version": "2.12.1",
+      "contributingFiles": 4,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1475,
+          "sha256": "0747bebeb06b10954913149be9b9a8bdf6fad3e6fdcbd9f9524e7a94c13d2cea"
+        }
+      ]
+    },
+    {
+      "name": "d3-array",
+      "version": "3.2.4",
+      "contributingFiles": 10,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4"
+        }
+      ]
+    },
+    {
+      "name": "d3-axis",
+      "version": "3.0.0",
+      "contributingFiles": 3,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ]
+    },
+    {
+      "name": "d3-brush",
+      "version": "3.0.0",
+      "contributingFiles": 5,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ]
+    },
+    {
+      "name": "d3-chord",
+      "version": "3.0.1",
+      "contributingFiles": 1,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ]
+    },
+    {
+      "name": "d3-color",
+      "version": "3.1.0",
+      "contributingFiles": 5,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
+        }
+      ]
+    },
+    {
+      "name": "d3-contour",
+      "version": "4.0.2",
+      "contributingFiles": 1,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "e51cba0e4fa1d8c078e15319868f2b90188f413f9ce9dac1043b62db32901e93"
+        }
+      ]
+    },
+    {
+      "name": "d3-delaunay",
+      "version": "6.0.4",
+      "contributingFiles": 1,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 757,
+          "sha256": "582c3022bd01942336095f92b58a90b1be624dc547d987555c6c956512dd24c1"
+        }
+      ]
+    },
+    {
+      "name": "d3-dispatch",
+      "version": "3.0.1",
+      "contributingFiles": 2,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ]
+    },
+    {
+      "name": "d3-drag",
+      "version": "3.0.0",
+      "contributingFiles": 1,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ]
+    },
+    {
+      "name": "d3-dsv",
+      "version": "3.0.1",
+      "contributingFiles": 1,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "7842a82012622e5a37bfe4f6c1b67cd3bae6350716b5bf87f36cea0bdc1319dc"
+        }
+      ]
+    },
+    {
+      "name": "d3-ease",
+      "version": "3.0.1",
+      "contributingFiles": 2,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1504,
+          "sha256": "b989d9085148d21ff64a75e14462aefa06b2589a55553b07b1460c70081c7d08"
+        }
+      ]
+    },
+    {
+      "name": "d3-fetch",
+      "version": "3.0.1",
+      "contributingFiles": 1,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "ffdc17dc9040006bddeb891c95bfbb492e86d6bc64a4a4233666febab1be35e0"
+        }
+      ]
+    },
+    {
+      "name": "d3-force",
+      "version": "3.0.0",
+      "contributingFiles": 1,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ]
+    },
+    {
+      "name": "d3-format",
+      "version": "3.1.0",
+      "contributingFiles": 16,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ]
+    },
+    {
+      "name": "d3-geo",
+      "version": "3.1.1",
+      "contributingFiles": 1,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1857,
+          "sha256": "3e3edc1224eec9c39cd26491a21304a62883c1e5b6a65c5283ccc7a6cc94baee"
+        }
+      ]
+    },
+    {
+      "name": "d3-hierarchy",
+      "version": "3.1.2",
+      "contributingFiles": 22,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ]
+    },
+    {
+      "name": "d3-interpolate",
+      "version": "3.0.1",
+      "contributingFiles": 18,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ]
+    },
+    {
+      "name": "d3-path",
+      "version": "1.0.9",
+      "contributingFiles": 2,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1475,
+          "sha256": "b8265327ab678f554800e71188b1cc6b1ff57522e292d2b1c0be66f27cf328b6"
+        }
+      ]
+    },
+    {
+      "name": "d3-path",
+      "version": "3.1.0",
+      "contributingFiles": 2,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "a09b0d6d76e768fca2085fad05743ee81ddd11946bcda160a3cf5e1081a479aa"
+        }
+      ]
+    },
+    {
+      "name": "d3-polygon",
+      "version": "3.0.1",
+      "contributingFiles": 1,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ]
+    },
+    {
+      "name": "d3-quadtree",
+      "version": "3.0.1",
+      "contributingFiles": 1,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ]
+    },
+    {
+      "name": "d3-random",
+      "version": "3.0.1",
+      "contributingFiles": 1,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ]
+    },
+    {
+      "name": "d3-sankey",
+      "version": "0.12.3",
+      "contributingFiles": 5,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1471,
+          "sha256": "2bf785e778d67a4f5266cffcd4f2cc5bb98cde73791666e7efeb8002ba32dfa5"
+        }
+      ]
+    },
+    {
+      "name": "d3-scale",
+      "version": "4.0.2",
+      "contributingFiles": 11,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ]
+    },
+    {
+      "name": "d3-scale-chromatic",
+      "version": "3.1.0",
+      "contributingFiles": 3,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1423,
+          "sha256": "0986d93944902cca9af86824b6a641b4b7c2d10602fc510c433a8bcd443919fe"
+        }
+      ]
+    },
+    {
+      "name": "d3-selection",
+      "version": "3.0.0",
+      "contributingFiles": 47,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ]
+    },
+    {
+      "name": "d3-shape",
+      "version": "1.3.7",
+      "contributingFiles": 5,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1475,
+          "sha256": "7eea8533ea92bd8c32a901e89ecb0305890905bb12711449565ddff96891146d"
+        }
+      ]
+    },
+    {
+      "name": "d3-shape",
+      "version": "3.2.0",
+      "contributingFiles": 28,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
+        }
+      ]
+    },
+    {
+      "name": "d3-time",
+      "version": "3.1.0",
+      "contributingFiles": 11,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
+        }
+      ]
+    },
+    {
+      "name": "d3-time-format",
+      "version": "4.1.0",
+      "contributingFiles": 3,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ]
+    },
+    {
+      "name": "d3-timer",
+      "version": "3.0.1",
+      "contributingFiles": 3,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ]
+    },
+    {
+      "name": "d3-transition",
+      "version": "3.0.1",
+      "contributingFiles": 28,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ]
+    },
+    {
+      "name": "d3-zoom",
+      "version": "3.0.0",
+      "contributingFiles": 6,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 731,
+          "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+        }
+      ]
+    },
+    {
+      "name": "dagre-d3-es",
+      "version": "7.0.14",
+      "contributingFiles": 42,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE.md",
+          "bytes": 1328,
+          "sha256": "d01eb84ccce437dbf5fd40853bceea0f287930920acea066597a4a25ead63858"
+        }
+      ]
+    },
+    {
+      "name": "dayjs",
+      "version": "1.11.21",
+      "contributingFiles": 5,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1072,
+          "sha256": "5faab7526d055651be3aab769d58897be6bd91f3d39d137f25f12dba1b31d5dc"
+        }
+      ]
+    },
+    {
+      "name": "dompurify",
+      "version": "3.4.12",
+      "contributingFiles": 1,
+      "markedFiles": [
+        {
+          "path": "dist/purify.es.mjs",
+          "sha256": "b51207de097d14ff9af93bb923d1a245d196a474cbbfdcfeda5e2166734715e1",
+          "copyright": 0,
+          "spdx": 0,
+          "license": 1
+        }
+      ],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "LICENSE-MPL",
+          "bytes": 16726,
+          "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85"
+        },
+        {
+          "path": "src/license_header",
+          "bytes": 192,
+          "sha256": "5803fa925ae1703b9c752921c95a321570e6cabf06fcf2de895ddaf1687cebef"
+        }
+      ]
+    },
+    {
+      "name": "es-toolkit",
+      "version": "1.45.1",
+      "contributingFiles": 26,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1424,
+          "sha256": "ed68888a2a28f32a05e88f24d4d4ee75075a1bda2b6372a1f2e00fa0576a5524"
+        }
+      ]
+    },
+    {
+      "name": "fastdom",
+      "version": "1.0.12",
+      "contributingFiles": 2,
+      "markedFiles": [],
+      "noticeFiles": []
+    },
+    {
+      "name": "internmap",
+      "version": "2.0.3",
+      "contributingFiles": 1,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 726,
+          "sha256": "9ea8903938dab5f12c4572d60725069bec2d1b0dc3bcc210b09bae946a5ebb1f"
+        }
+      ]
+    },
+    {
+      "name": "js-yaml",
+      "version": "4.3.0",
+      "contributingFiles": 1,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1084,
+          "sha256": "a07bc24468b9654ce76a547d47a2db282d07733b715db4c73a98bd63961f9550"
+        }
+      ]
+    },
+    {
+      "name": "khroma",
+      "version": "2.1.0",
+      "contributingFiles": 28,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "license",
+          "bytes": 1105,
+          "sha256": "66b333b0f66759a0b710459e03f7029abe17f4358114a128d2c972e642961b49"
+        }
+      ]
+    },
+    {
+      "name": "langium",
+      "version": "4.4.0",
+      "contributingFiles": 51,
+      "markedFiles": [
+        {
+          "path": "lib/default-module.js",
+          "sha256": "37611eaa17285eca8365bf65dcf427bbb26626e08ae9e9ba596999ec518d0d15",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/dependency-injection.js",
+          "sha256": "b80729ffe8380c9edb526271638f36dbdde7aa4541811f4062000080021c7152",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/documentation/comment-provider.js",
+          "sha256": "d9a391447e1590458fb7a738741da61d2db667f4731edda6bbe8435239c63049",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/documentation/documentation-provider.js",
+          "sha256": "3c49b9e4026bf52c2512cd9ea66cb68bb1a2b7c4e1f5e866ca37e959d8ab1394",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/documentation/jsdoc.js",
+          "sha256": "4d1d984bd7823089966bc2753bc4044abfaed4e0e846a0666acccb0ba5b3fa6c",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/languages/grammar-config.js",
+          "sha256": "3f047276b9ad2de1e99272bdc8f0d95ececb7f1d51a25537adfc83927258f2a9",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/parser/async-parser.js",
+          "sha256": "a8f02f5ae76aec0beadf269d4dfa1fa9938e7538fca3bea1cf3ae6e99ba57a42",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/parser/completion-parser-builder.js",
+          "sha256": "a37e3013361654ba538d892852cd9cceeb2cd35d7ed26942edafef3da5d460a2",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/parser/cst-node-builder.js",
+          "sha256": "464808f686f28a9e35cb590944152090b7acfe4ab4f46e6a929465bf24c3d397",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/parser/langium-parser-builder.js",
+          "sha256": "2a2ade9ed79e86fa42755f4f31a940bd793fe252974058fdefddc7b23a8ae084",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/parser/langium-parser.js",
+          "sha256": "d952290c8550756e44e0da2a9fd6542ef4153eb036a9db6469821a704b1c3b0b",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/parser/lexer.js",
+          "sha256": "42074f2f7e1afe44432a9ad5b628ad90a8810570c9d355a152f3d16176c74c53",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/parser/parser-builder-base.js",
+          "sha256": "f3174e10192b0db1c5e7cb537d9788f431c29eb1b82808a8a06604532a606c4e",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/parser/token-builder.js",
+          "sha256": "3be01a9f668bc9bdf48e3586a9b38271b24cafb699f1e2f78f89ddf6d82c6154",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/parser/value-converter.js",
+          "sha256": "ab34145a2447f49e45bba7ecc11c8934cba3261e5febf33e1e8a7c18211bc1a5",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/references/linker.js",
+          "sha256": "66275373ea70177c2fb2a1153e36825845d97d6d72b46986ae7496400d94e529",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/references/name-provider.js",
+          "sha256": "df327d184498fe0d2919256512c8e8a431b74a80356a545b5bf937da71c977c0",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/references/references.js",
+          "sha256": "33416187c8f6d581de9cf5b352f750bf2c3ba5f66a098bcdfcc7e60b28e3a2ed",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/references/scope-computation.js",
+          "sha256": "a03e98ae21d9c0831f974ee9ff4d7b7a1dff8ce39bf2918bc33dcc4abb979e94",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/references/scope-provider.js",
+          "sha256": "4dceecad3e6b966db7ae4b43cf02d9af1d8fe0433ce0e0775feb39f86524c1de",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/references/scope.js",
+          "sha256": "cc4c5cdd37ba6522bb4d557f6a83473d538db365e5cf0f13023eff6a873f406e",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/serializer/hydrator.js",
+          "sha256": "3c7c7a0ddfd390158435b800dc8f848988862f4be319d9dd1a83d672d36b6020",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/serializer/json-serializer.js",
+          "sha256": "838a12d8fc23a30fac706ccca55f25ddf8d9c44eb2495e5b2b01683ddb4200b8",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/service-registry.js",
+          "sha256": "08f902cc72e436980819c5e6c72f0c6c0ab915afd43226be309ff36627aa2e3f",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/syntax-tree.js",
+          "sha256": "5e2ca3e9d6b49b9e5705b75fb26e60e4b567349e512c95e5160c92a04466440b",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/utils/ast-utils.js",
+          "sha256": "e9e454fab26622e0f45a028627727c924cbef551effd0f2f50a70a9e3fd55f70",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/utils/caching.js",
+          "sha256": "1c43c2f2a449c6b34e4e07eb17299f21ec7852da898e7581918e01be9adca31a",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/utils/cancellation.js",
+          "sha256": "6585d656a63f3a7046317aa68c808b59ba2f290262f3eb913d70968537cc690c",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/utils/collections.js",
+          "sha256": "cbaf55df51a2ca8a321c91b35ff4d8796e2b7bedb94fe33b27e9e65d7f5cdd86",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/utils/cst-utils.js",
+          "sha256": "13f5f8c684eea897784e7b4e476c8689eba813af86f664777ca632fbf9e2f240",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/utils/disposable.js",
+          "sha256": "3017e0f762ef634152a8eb6a2dc8cdc1d5af66a67a26ac74db775bede4708c87",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/utils/errors.js",
+          "sha256": "eabad9bc072cc360dbeed5b4e0d64d29c6d4c10b1befbddfc4de2703744bbd34",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/utils/event.js",
+          "sha256": "0141d76d4f45995714f69e861694111ec1332ec5cafa8dfbb2768b12c02bba16",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/utils/grammar-loader.js",
+          "sha256": "3ace25863489b074eb2a54a9d815b4dff93f3df0bb823eab525e72bafd6cc199",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/utils/grammar-utils.js",
+          "sha256": "b047b52adf3bffa60f30645ee17b1faa6cc643f759330261fb83851d38e007b8",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/utils/promise-utils.js",
+          "sha256": "7ed8bd23ef95408ed7608273d0660be8952ca70aaca633275912bc8ed3e22d28",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/utils/regexp-utils.js",
+          "sha256": "6fe6d57273d9bad8b92279373d11e2df73b8d0ad97466176df95a4bfb5ebbefa",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/utils/stream.js",
+          "sha256": "d6e18a12467ae897a23bb444b5f808e3ee459c0723121de365837a7cb3942294",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/utils/uri-utils.js",
+          "sha256": "f9441f75db77918e0f8c0a01e947c6d524c44a4648fd8c682ccb35079b9fea89",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/validation/document-validator.js",
+          "sha256": "a5822e06b2ba41bf0bb816cb97c897182b0abeed6a3b45ea44bf65189a6359aa",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/validation/validation-registry.js",
+          "sha256": "3fd6c890510f1becf37eeaa4c0b9eebf7782c720844fc9d2d06d476ac2fb2099",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/workspace/ast-descriptions.js",
+          "sha256": "b69c07a1f25ecf9471fcadb967e92447915c9f25eb0cc66875182203bde4e08e",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/workspace/ast-node-locator.js",
+          "sha256": "21d0191721d0a032078fee139ba1d5a0690357a5dc47b460d7c29d32c7ba6e88",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/workspace/configuration.js",
+          "sha256": "4097bf2e5eee31e8bed6a45dd4fe9575c81f3667eb64d2b5bba59a9291968c06",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/workspace/document-builder.js",
+          "sha256": "04badf818f8a9d6d7b784ccd094bcde54c9e68c7b1a21e7a1d3cfd24bb1a6469",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/workspace/documents.js",
+          "sha256": "05b0cb9da9a75197d51fdd9920267a9a9cb946aa4ce4e124beb1a72ebd499102",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/workspace/file-system-provider.js",
+          "sha256": "512e5a16807e7eb3a357f60c75fb2640d6dee1411d1a998865d01c81e7b902a7",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/workspace/index-manager.js",
+          "sha256": "522c70c4740b47fde322c54fd1455811538f3e0870bf19b98d92094dd2c40292",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/workspace/workspace-lock.js",
+          "sha256": "ab4ecc195d8166ff6e462c9df92c21322e1b53e3c55f52ecd3fcc41e49fe124c",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/workspace/workspace-manager.js",
+          "sha256": "df0a7e212d29fd5244b84305b784cdbe3286528ae0372ca8d7cd0dc241d27e79",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        }
+      ],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1052,
+          "sha256": "599bf70b4e55f06250571d103dbd8441e0c47cb7f858c0147ca312ce38e9ef2a"
+        }
+      ]
+    },
+    {
+      "name": "lodash-es",
+      "version": "4.18.1",
+      "contributingFiles": 242,
+      "markedFiles": [
+        {
+          "path": "lodash.js",
+          "sha256": "c4128d6e15996b3dbcec4902f743ffedbca7126ddfdc34c27cf1a261bb154f70",
+          "copyright": 2,
+          "spdx": 0,
+          "license": 1
+        }
+      ],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1952,
+          "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc"
+        }
+      ]
+    },
+    {
+      "name": "marked",
+      "version": "16.3.0",
+      "contributingFiles": 1,
+      "markedFiles": [
+        {
+          "path": "lib/marked.esm.js",
+          "sha256": "2cf87a5a5f9f677fedca30aee75c2d791e79b2330cccc77345efc87091d09f12",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        }
+      ],
+      "noticeFiles": [
+        {
+          "path": "LICENSE.md",
+          "bytes": 2942,
+          "sha256": "8e3a3f82f59a60958f56ca08f445647c32a4733dc7ca6c2c46f6eb898471ab9c"
+        }
+      ]
+    },
+    {
+      "name": "roughjs",
+      "version": "4.6.6",
+      "contributingFiles": 1,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1068,
+          "sha256": "dca9a392272606ac748ac0976a2a1133f14eef841c27beaa51a844d53c56a09d"
+        }
+      ]
+    },
+    {
+      "name": "stylis",
+      "version": "4.3.6",
+      "contributingFiles": 6,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1078,
+          "sha256": "88c579c6ee44b41137a21321190d177982e5b17d4fa1b83a4a2e3ea325a8fc9a"
+        }
+      ]
+    },
+    {
+      "name": "ts-dedent",
+      "version": "2.2.0",
+      "contributingFiles": 1,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE",
+          "bytes": 1073,
+          "sha256": "eff13095d9d762c3bd9dda74370c81e2130c28f2691bc455603abf973bac25b9"
+        }
+      ]
+    },
+    {
+      "name": "vscode-jsonrpc",
+      "version": "9.0.3",
+      "contributingFiles": 14,
+      "markedFiles": [
+        {
+          "path": "lib/common/api.js",
+          "sha256": "0d8ccd38514f3994256d0c271b9b6e288174e13847ed2c8561abd5f005bdeb76",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/cancellation.js",
+          "sha256": "b851c4246fa5a644bcebe56b1fb74048948eab0886d706e59e2090fa7e41550b",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/connection.js",
+          "sha256": "421934733f3449fd2af9c1ff376a0318f1d6b1bb75aa204cb434e09ed2018987",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/disposable.js",
+          "sha256": "ad43f37a324cf41af376ea66004063ac5867a2e3dfce81b47ab617b9105a0a7d",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/events.js",
+          "sha256": "d521b1fc2887c04a2d3f4d4403b5bd9fa734ef83e6f53e99bcc781d791db1508",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/is.js",
+          "sha256": "db07129f8322e52c81034004a1a1eb9b1be743c9ec55f5f6a5b33da48cb8a2a8",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/linkedMap.js",
+          "sha256": "9c2041c8828be66893ba5f97933cc7d3698a1bad2f34b742761e6f2a3e615346",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/messageBuffer.js",
+          "sha256": "27beae232413871d20551178d3342ee0bc927e8b05862883c75ce021291f11cc",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/messageReader.js",
+          "sha256": "5f912919f4b2584a38812535e7894c851a13b8f51a7ad6b769f2b5e35beffaef",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/messageWriter.js",
+          "sha256": "cd9cd263bdd57b32eac86a0dd83ac7241aa95ffb7a43af1e680b65449799afbc",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/messages.js",
+          "sha256": "7a06cfd7456c2f2471dc6aab3fb69683a62245d2a91859b337e03e0e66fa0b26",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/ral.js",
+          "sha256": "9b4736fe0168adf1dff8a1f41cf76dc8e9f380684cbb39056403e81a05a51cb3",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/semaphore.js",
+          "sha256": "9a7afb92b0ae8d9c341373fdecfb0133b4ba7414455110408809c2f4a05af1d1",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/sharedArrayCancellation.js",
+          "sha256": "91a1128bc09e21d95be67dd441e13a0373af7c97d6ccf912b7b4168d11190efa",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        }
+      ],
+      "noticeFiles": [
+        {
+          "path": "License.txt",
+          "bytes": 1095,
+          "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0"
+        }
+      ]
+    },
+    {
+      "name": "vscode-languageserver-protocol",
+      "version": "3.18.4",
+      "contributingFiles": 27,
+      "markedFiles": [
+        {
+          "path": "lib/common/api.js",
+          "sha256": "9e6a38c7fa9e9c895a9def3b2782aa6d237478fcb9ca50fe2bf7a8e01a30ae52",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/connection.js",
+          "sha256": "a7b55f520671b542393beee973efbf243fc47db28c7e175bc46068adf4710759",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/messages.js",
+          "sha256": "491e071f4da94a5b4bbfb7d573c8194745597f761a9d0fbe6da3cdcb068c7cdc",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.callHierarchy.js",
+          "sha256": "92f7bb30800e725bb687335cb3d19c088ae15f447e202f9db00b0df0c9a6b2b1",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.colorProvider.js",
+          "sha256": "2ca2588634b72e9dd03b174f52313da6f1cade1cfe53438321dd0937dc107573",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.configuration.js",
+          "sha256": "e87abad3e9be4e839070faba1e6c9457fcf6abac29c8c985e50759289271782b",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.declaration.js",
+          "sha256": "b094e776b11137cb606f34e74ef2e462a84c60e581ea4a55224279bff3242a1d",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.diagnostic.js",
+          "sha256": "52a3e4d87d094fc07aa76d555e7c676850ab1d03aff6fae9275815e371e7f1eb",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.fileOperations.js",
+          "sha256": "bae3899e7183f24d0ea4c1c688cb8061f093a426f9b335465b24871259938780",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.foldingRange.js",
+          "sha256": "baeecc15cc5d76bbfba6f1096c767034afa9554c353c077fa028e0ddcdb69f4a",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.implementation.js",
+          "sha256": "fc5ca87fb2c2b3af88df91ae568f0b7ba64377dc82332defbbc77d84e3b7a0c7",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.inlayHint.js",
+          "sha256": "d891eb86bde82dee8c44580adfae8aa1a5c81a45bb57d1fb08b98eb4d171fc49",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.inlineCompletion.js",
+          "sha256": "51e1126ff547dd732a937dd7cf2fb97f2aa0931e6839ccd8b81139bb9f92a452",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.inlineValue.js",
+          "sha256": "754720f427104773bc0fa70313ec575e05ef3dad34c6bfb758ec32bb22e466c3",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.js",
+          "sha256": "07f8786a8f601e519fd1034118d282b3c4b65256ebb7a621073255bfb347b8ea",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.linkedEditingRange.js",
+          "sha256": "f3b76181d8c4c9afeed9be946fa0a723e138757a47891ad48adcdf1009e3c94a",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.moniker.js",
+          "sha256": "ea27088811886c348580c6e61447739627e4f4ee755d285e4a81fcd43cde2d68",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.notebook.js",
+          "sha256": "f5b46409ff764edab300aedf107bede6d1f194e8b89902c49c0cabf3bf905ab6",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.progress.js",
+          "sha256": "79bd7aa21988af048003de7376b9130e34951ca7b1c94eb007c4c98b0523ecab",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.selectionRange.js",
+          "sha256": "030b6d71857f4ac1ebc4c6ccbc4c00ab5b0329f022ef2db7964154e4d84f807b",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.semanticTokens.js",
+          "sha256": "90b7b9a28126b7fc3bf3248bca9829c512a2e28f76d7fb8be7932b17ca4765a0",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.showDocument.js",
+          "sha256": "1ea7e9adbe3807d7086641fc3585add72779b230734858dfe3930977bad8f844",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.textDocumentContent.js",
+          "sha256": "316f2f26d5f2a2a248d6c2fa856ecae0b3dea694d1ffbca7281aaae75c4a9775",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.typeDefinition.js",
+          "sha256": "d36018325431765a055d70627e34b13836077c58250dd7f2603876558b0e7a80",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.typeHierarchy.js",
+          "sha256": "a28b4ba2c95ccc41d87c541b9ed48b1224aa2711b8a05b9ead589e4dda513c2e",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/protocol.workspaceFolder.js",
+          "sha256": "cb140890bd30cafa74f6feeb1c3333077dbc4af12c871ca29facd4623ad96a66",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        },
+        {
+          "path": "lib/common/utils/is.js",
+          "sha256": "90686a238bf35cff10f2fbdb397f383a74a1de6067ac95576368547088fa296c",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        }
+      ],
+      "noticeFiles": [
+        {
+          "path": "License.txt",
+          "bytes": 1095,
+          "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0"
+        }
+      ]
+    },
+    {
+      "name": "vscode-languageserver-textdocument",
+      "version": "1.0.15",
+      "contributingFiles": 1,
+      "markedFiles": [
+        {
+          "path": "lib/esm/main.js",
+          "sha256": "a0b45326a09bec7a4cde8062cdf39cd52d223b12752f0377e44a80a920421b3e",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        }
+      ],
+      "noticeFiles": [
+        {
+          "path": "License.txt",
+          "bytes": 1095,
+          "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0"
+        }
+      ]
+    },
+    {
+      "name": "vscode-languageserver-types",
+      "version": "3.18.4",
+      "contributingFiles": 1,
+      "markedFiles": [
+        {
+          "path": "lib/esm/main.js",
+          "sha256": "a3b917f6fee370fa0393caf96803d2c13e05ed2713c4bbf2e35f758d4530b3a2",
+          "copyright": 1,
+          "spdx": 0,
+          "license": 0
+        }
+      ],
+      "noticeFiles": [
+        {
+          "path": "License.txt",
+          "bytes": 1095,
+          "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0"
+        }
+      ]
+    },
+    {
+      "name": "vscode-uri",
+      "version": "3.1.0",
+      "contributingFiles": 1,
+      "markedFiles": [],
+      "noticeFiles": [
+        {
+          "path": "LICENSE.md",
+          "bytes": 1070,
+          "sha256": "c669138cb1eb01fbb745e8e460b291e4f2869c14a40061390b6095d845ed4c82"
+        }
+      ]
+    }
+  ],
+  "limitations": "Automated marker and notice filename search; misses unmarked attribution, generated workspace sources, semantic license obligations, symlink contents and release-time modifications. Manual review is required."
+}

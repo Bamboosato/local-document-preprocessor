@@ -1,0 +1,227 @@
+{
+  "date": "2026-11-06T08:43:04.669097+00:00",
+  "candidate": "@mermaid-js/tiny@12.3.0",
+  "candidateDecision": "recommend adoption as the replacement for the next product migration; not public release approval",
+  "candidateScopePassed": true,
+  "baseCommit": "37ec3d3b09624a7efe53e8faa3ba4fa2560bac27",
+  "sourceCommit": "2086904e76c692331e34a45d7cc3bc30860d040e",
+  "source": {
+    "version": "12.3.0",
+    "sourceCommit": "2086904e76c692331e34a45d7cc3bc30860d040e",
+    "url": "https://codeload.github.com/mermaid-js/mermaid/tar.gz/2086904e76c692331e34a45d7cc3bc30860d040e",
+    "sourceTarSha256": "04077bb929196318ead77bb37db35455044705f426d6ca9d527b611000cbf914",
+    "sourceTarBytes": 7726728,
+    "regularFiles": 4363,
+    "expandedBytes": 20424867,
+    "omittedSymlinks": [
+      "mermaid-2086904e76c692331e34a45d7cc3bc30860d040e/CHANGELOG.md"
+    ],
+    "provenanceSubjectMatchesIntegrity": true
+  },
+  "npm": {
+    "version": "12.3.0",
+    "integrity": "sha512-90BO2kQvmQWj9YjBX2IsLHCw61rN69dPTn5wFfDu+b9aT7qtzfzTA3wpKWeaRAKK85refSo9How5EOeY39DWfA==",
+    "tarball": "https://registry.npmjs.org/@mermaid-js/tiny/-/tiny-12.3.0.tgz",
+    "bundleBytes": 2852578,
+    "bundleSha256": "c41f5236091b83f524c4940f97a16b2b14a76f21ff84aea4fd6b66421d8a2a9a",
+    "attestationSha256": "95537d5f0d68e877c1c317ff8e492966ae46aecd67141c9f6ca8d5dfa521865a",
+    "invalidSignatures": 0,
+    "missingSignatures": 0,
+    "provenanceSubjectMatchesNpmIntegrity": true,
+    "releaseRun": {
+      "id": 41641880995,
+      "head_sha": "2086904e76c692331e34a45d7cc3bc30860d040e",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/mermaid-js/mermaid/actions/runs/41641880995",
+      "created_at": "2026-11-03T13:09:49Z",
+      "updated_at": "2026-11-03T13:11:26Z",
+      "path": ".github/workflows/release.yml"
+    }
+  },
+  "environment": {
+    "platform": "Windows",
+    "node": "v24.22.1",
+    "npm": "11.19.1",
+    "pnpm": "10.30.3; local shim pins nested invocations",
+    "sourceRequestedNode": "24.16.0",
+    "browserVersions": [
+      "156.0.8078.81"
+    ],
+    "releasePlatform": "ubuntu-latest per fixed workflow"
+  },
+  "rebuildMatchesPublishedBytes": true,
+  "parserCoreOutputsHashMatched": 32,
+  "sourceMapElkProof": {
+    "rebuildSha256": "c41f5236091b83f524c4940f97a16b2b14a76f21ff84aea4fd6b66421d8a2a9a",
+    "sourceMapSha256": "7dcbd920276c749fd9e74504cfc91396c82e5a90bf703097658ddbc7865fe090",
+    "mappedSegments": 4,
+    "originalPositions": "line 1 column 0",
+    "generatedWrapper": "var Xre=A(()=>{\"use strict\"});",
+    "wrapperBytes": 30
+  },
+  "thirdPartyPairs": 63,
+  "additionalInlinedHelper": {
+    "name": "@babel/helpers",
+    "version": "7.29.10",
+    "tarball": "https://registry.npmjs.org/@babel/helpers/-/helpers-7.29.10.tgz",
+    "integrity": "sha512-EMCx3AGZ3WfAl6ht7AyQoPm2Lh+BGYEMdc4Q6Hf7uSCDOZFuLq44qNwL+iaim8VlyYhRAo4X43+weadK8ZB4Yg==",
+    "license": "MIT",
+    "originalSha256": "4be9d87b56a306293223b490c0d0b245e9e94f39884147bf051a6c7b825aeb30",
+    "originalBytes": 1189,
+    "files": [
+      {
+        "path": "LICENSE",
+        "sha256": "4be9d87b56a306293223b490c0d0b245e9e94f39884147bf051a6c7b825aeb30"
+      },
+      {
+        "path": "lib/helpers/arrayWithHoles.js",
+        "sha256": "06069a2121aeca3b7ac41ce5ad1c34632180e74686d5a42dfea976b8efea63bf"
+      },
+      {
+        "path": "lib/helpers/iterableToArrayLimit.js",
+        "sha256": "eb231e7e3ee5091d6095d6bb66da3c7408685d8849cc596c84d7db10125d4a25"
+      },
+      {
+        "path": "lib/helpers/nonIterableRest.js",
+        "sha256": "4eb02ae6f1eb05eab58e542140af5be72a7096ddf469c871f79899e794f15d4e"
+      },
+      {
+        "path": "lib/helpers/regenerator.js",
+        "sha256": "1d9fc792ca971ae186948f5a0ca52b8b637c62752c773685c21bd3e1d3c88d24"
+      },
+      {
+        "path": "lib/helpers/regeneratorAsync.js",
+        "sha256": "7f606fc407dd26270d5e54703d3a65d3f924b2cb8f8fc969bc43e2931df67dfd"
+      },
+      {
+        "path": "lib/helpers/regeneratorAsyncGen.js",
+        "sha256": "e76e2b443a1f58af200a76194ea283e0be9ca5b4fa0b944ece60f617bcdc6292"
+      },
+      {
+        "path": "lib/helpers/regeneratorAsyncIterator.js",
+        "sha256": "b03e8e7a6c4bdbcc4427be4865dc1b0598e109eaa68cf811f2ca816db14fbc2c"
+      },
+      {
+        "path": "lib/helpers/regeneratorDefine.js",
+        "sha256": "91db5819b09b06f61255fcb58104e7593a1c9b432faf3e933e753144df179413"
+      },
+      {
+        "path": "lib/helpers/regeneratorKeys.js",
+        "sha256": "857aa9c908e19c239d6eb4d051e8edf260ec47bdfc780041ee23b142a50db81b"
+      },
+      {
+        "path": "lib/helpers/regeneratorRuntime.js",
+        "sha256": "75c52194f80bba83e3927c4e4e791fcfda493bdbf398b28535b9e9f964c46183"
+      },
+      {
+        "path": "lib/helpers/regeneratorValues.js",
+        "sha256": "e374041add014b2f86bcc60783a284ffc3246080a6f15bd8b28333cfec5f7227"
+      },
+      {
+        "path": "lib/helpers/slicedToArray.js",
+        "sha256": "9ee71b791042b9ccd87b1a723168ee881d9513c409964f2d2b04c1dd442a2ca0"
+      },
+      {
+        "path": "lib/helpers/unsupportedIterableToArray.js",
+        "sha256": "08d5c5c1f991b9d600bfe2786b44f46d2183738e5777ef0d8700ca6740bb42fb"
+      },
+      {
+        "path": "package.json",
+        "sha256": "ccd314c91c9bcd25324efe0d0f4da114a6b49554b96bf31ab5c65fcc083c4f03"
+      }
+    ]
+  },
+  "audit": {
+    "thirdPartyPairs": 63,
+    "extendedTargets": 67,
+    "thirdPartyVulnerabilities": 0,
+    "extendedVulnerabilities": 0,
+    "legacy122NegativeControlVulnerablePackages": 2,
+    "exceptionsAdded": false,
+    "scope": "Version advisory matching; own workspace/container/helper correspondence includes nominal identities, not a claim that whole npm helper/parser packages are embedded"
+  },
+  "materials": {
+    "cleanPackages": 63,
+    "cleanFiles": 249,
+    "directRetrievalRequests": 68,
+    "sourceRetrievalRepeatedByteIdentically": true,
+    "planSha256": "6cede13efdef7e8dfb5d7f8954980b173dc93693c07f097491fd8d38a3bd5c83",
+    "materialIndexSha256": "cb9a97b19a3292f7d91aa607a4888d3968c0a6e16398e5775d09a529baf206de",
+    "originals": 69,
+    "previousOriginalsUnchanged": 68,
+    "licenseAssets": 75,
+    "staticPocAssets": 79,
+    "candidateFolder": "docs/third-party-source-licenses/mermaid-tiny/12.3.0-candidate",
+    "helperWrongOriginalRejectedWithoutChangingSuccessAssets": {
+      "wrongOriginalRejected": true,
+      "successAssetsUnchanged": true,
+      "assets": 75
+    }
+  },
+  "acceptance": {
+    "stages": 8,
+    "passed": true,
+    "record": "mermaid-tiny-12.3-acceptance-validation.json",
+    "fixture": {
+      "evidencePrefix": "mermaid-tiny-12.3",
+      "packageLockSha256": "68c8be62bd657e138e37953f4d4fa8346f9a6a2c5591dc38191f77b2f85cb08e",
+      "originalMainSha256": "989ba0b03ab8b0d6f3b114b5fbbcfbd998ab51619d67340d6787f724e3a04ced",
+      "fixtureMainSha256": "0432cbc1cc10decc60b45856ee49dd126a6f25dd481a7d22e3be872e6ef99e76",
+      "productRendererSha256": "fcefb929847267ab865d1b3a58a606d689f992f01d636015fe1bf7c83fed03b4",
+      "sanitizerFragmentSha256": "2fea969b9cf5b7432cfda902fe3cdf10920a090631a44c934d3f4626c86c6072",
+      "adaptation": "Only sanitizer import redirected to an exact copied function body; candidate Tiny package and evidence isolated; active product untouched"
+    },
+    "adaptation": "Exact sanitizer function body copied and candidate import redirected, avoiding active 12.2 asset; 69 originals expected explicitly"
+  },
+  "sourceHashes": {
+    "scripts/audit-tiny-contributors.mjs": "bf837b1d6586af84d94690418cdd832227252456e1ab89bbbdab80324e21475c",
+    "experiments/mermaid-no-elk/fetch-tiny-candidate.py": "94f8a36bc0ce8d787bee3a6dcaf258c2a3d0e4147330e991609ba29a6f33b92e",
+    "experiments/mermaid-no-elk/prepare-candidate-poc.mjs": "f3abbb6085630bc537f7ddaf0a0d60cc1bc8f8ea4e906ff37a106259d358a91c",
+    "experiments/mermaid-no-elk/analyze-meta.mjs": "876a97c2d930a372c473e5a8765436b943db2bdf30087bb5f0409f6ae2e6ca03",
+    "experiments/mermaid-no-elk/analyze-elk-map.py": "6329a9ede90e0883cde27b8d4395cd841577583d546a1cf2ee43d77717e5ebd7",
+    "experiments/mermaid-no-elk/inventory-bundle-licenses.mjs": "a0a4e74268f6c108a461eb3a9a617155de4f79093008a48b644055fb484ec299",
+    "experiments/mermaid-no-elk/audit-bundle-notices.mjs": "ba7303c2cbf8423a16ba90389d671003ac18f8e40462bd088cdaadd74cd19735",
+    "experiments/mermaid-no-elk/audit-workspace-notices.mjs": "1c31bc45069225be6297a379c2d8282c2641e1628755c2131ad1e0e7de9343a9",
+    "experiments/mermaid-no-elk/verify-workspace-sources.py": "13a2488e0e1299f3128c4765a895d8f5d825bde00b9e524946e147542138de98",
+    "experiments/mermaid-no-elk/verify-parser-lineage.py": "c21832f79db440ad71da8a1b93737f10599a2b2e50b0604c635dfa586e283101",
+    "experiments/mermaid-no-elk/make-material-plan.py": "7ea6ff379a391cd280bc201f38b2fc8ceff857f957bbf4abdcc3a3b73497ad15",
+    "experiments/mermaid-no-elk/fetch-materials.py": "15caaa5052ac164048c5931e28da6b137149f61631bbb46a41b91763c1739882",
+    "experiments/mermaid-no-elk/review-dompurify-helper.py": "01b97b277c9437cf5b1dee62b1c1db9fe459774e7338909bf9a55b07990d43ee",
+    "experiments/mermaid-no-elk/append-helper-original.mjs": "07a6d4a179dbb76396ac1f76efd479b7c8b3719b981f8b696dd164177a5602af",
+    "experiments/mermaid-no-elk/licenses-check.mjs": "2a6a51fe40511da9b1603d531a041769b56f7e1453900dee3d0b5820a46242e8",
+    "experiments/mermaid-no-elk/run-acceptance.mjs": "14077a70946852dfea6630a434447f4cf3ad77e58929ab7cb7e298703d3ece41"
+  },
+  "evidenceHashes": {
+    "mermaid-tiny-12.3-acceptance-validation.json": "1f96ba7cc751f18254447e60b1fed22dddae637c0dc1f60cfd917123c0e0cb5c",
+    "mermaid-tiny-12.3-attribution.json": "35c897cb03ffa5c81c795d18d66198c60ee166dfa3573e691aaf76fa66e598e9",
+    "mermaid-tiny-12.3-audit-scope.json": "fa3f459dd8f12d77e12beb6a20740930c3093dfa4eea8202b14d533adb8181e0",
+    "mermaid-tiny-12.3-dom-helper.json": "854e04e656d43983988828581fcc6a9aa936274a57d4cb434d5ce14659e037af",
+    "mermaid-tiny-12.3-embedded-audit.json": "8c8d6f3dc062cb2e29b4f0c2645537933979bee8211a3fe1dd4ecd23ef17d03a",
+    "mermaid-tiny-12.3-extended-audit-plan.json": "76fcdce0f369944c5d8f286862c406540f306b467092b9802bc310761bf81862",
+    "mermaid-tiny-12.3-extended-audit.json": "e92056b1a260068bc01289467f3d994eafdc4b440c90c9bf1a185a978ea947f3",
+    "mermaid-tiny-12.3-initial-acceptance-validation.json": "eb5c393c28de81013ef70bad38cadb6ca98826263ccddead72c85a9ca08db4e3",
+    "mermaid-tiny-12.3-license-comparison.json": "c771c20dea89130a6d1c67711d43cf1b0e728ed9e38c82fc0a00c8f06edc0acb",
+    "mermaid-tiny-12.3-license-inventory.json": "0cd30ca36f7f99760f0ba5207f0bd02793b2ba56ccc25521b259e3ef01188add",
+    "mermaid-tiny-12.3-material-retrieval-plan.json": "6cede13efdef7e8dfb5d7f8954980b173dc93693c07f097491fd8d38a3bd5c83",
+    "mermaid-tiny-12.3-notice-audit.json": "22e5c54c9fc494398dd582e8db014693385114be01744a7fc5ed21047e7d55f6",
+    "mermaid-tiny-12.3-parser-lineage.json": "61edc6f680612391d79baf8b4e96811638256fa54a5222416ddd755330c823aa",
+    "mermaid-tiny-12.3-release-run.json": "fbdc727888636352cd93521639c9959a443a51c2ca2fb84ed2ee608c19c6536d",
+    "mermaid-tiny-12.3-source-origins.json": "795ddb65dc4dfe66ef14f7d08671d9f8534fc7119be90113b6189d306778e2f8",
+    "mermaid-tiny-12.3-workspace-notice-audit.json": "ea41ef2335d9e5b40bb6d5239f2bd3556ca38080fe122d8047c273fd968ae0f6",
+    "mermaid-tiny-12.3-workspace-source-proof.json": "1dad98dbdd65f986e80a8635de29f33d52cd048562fc89c8d445a2257e781b61"
+  },
+  "activeLocalProduct": {
+    "version": "12.2.0",
+    "switchedTo123": false,
+    "defaultAuditGateStillFailsFor122": true
+  },
+  "scopeLimits": [
+    "No product bundle/notice/PWA cutover in this investigation",
+    "No product E2E 33-case re-run for 12.3; isolated candidate targeted stages only",
+    "No cross-browser, deployed delivery or physical-device acceptance",
+    "macOS/iOS excluded",
+    "No merge, deployment, push, archive publication/attachment or GitHub write",
+    "Generator binary used in historical DOMPurify release not uniquely proven; fixed lock and byte-identical release dist support helper correspondence"
+  ]
+}

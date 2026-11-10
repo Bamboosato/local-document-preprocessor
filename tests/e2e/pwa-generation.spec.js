@@ -4,14 +4,31 @@ import {resolve,join,extname,sep} from 'node:path';
 import {tmpdir} from 'node:os';
 import {createServer} from 'node:http';
 import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
 import {buildPwaManifest} from '../../scripts/build-pwa-manifest.mjs';
 
 let temporary,server,base,current='A',blocked='',blockedHits=0,legacy=false,builds={};
 const root=process.cwd();
+const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
 test.beforeAll(async()=>{
   test.setTimeout(120000);
   temporary=await mkdtemp(join(tmpdir(),'ldp-pwa-browser-'));
   for(const version of ['A','B']){
+    // Optional fixed previous-product build exercises Tiny 12.2 or normal Mermaid -> Tiny.
+    // Default CI still exercises two different builds of the current product.
+    if(version==='A'&&process.env.PWA_MIGRATION_OLD_DIST){
+      const dist=resolve(process.env.PWA_MIGRATION_OLD_DIST);
+      const html=await readFile(join(dist,'index.html'),'utf8');
+      if(!html.includes('ldp-generation'))throw Error('old fixture has no generation');
+      builds.A={dist,manifest:JSON.parse(await readFile(join(dist,'pwa-manifest.json'),'utf8'))};
+      const inventory=JSON.parse(await readFile(join(dist,'licenses/inventory.json'),'utf8'));
+      const oldTiny=builds.A.manifest.assets.find(asset=>/\/mermaid\.tiny-.*\.js$/.test(asset.url));
+      if(oldTiny){
+        const expected='ea0cdf04eb31907eb20d956a34fe300095365c876887b54ffa29f1f847f56d00';
+        if(inventory.embeddedTiny?.version!=='12.2.0'||oldTiny.sha256!==expected||digest(await readFile(join(dist,oldTiny.url.slice(1))))!==expected)throw Error('old Tiny fixture identity mismatch');
+      }else if(!builds.A.manifest.assets.some(asset=>asset.url.includes('mermaid.core-'))||!inventory.packages.some(pkg=>pkg.name==='mermaid'&&pkg.version==='12.2.0'))throw Error('old fixture is not an identified previous product');
+      continue;
+    }
     const project=join(temporary,version);await mkdir(project);
     for(const file of ['src','public','index.html','package.json'])await cp(resolve(root,file),join(project,file),{recursive:true});
     await symlink(resolve(root,'node_modules'),join(project,'node_modules'),process.platform==='win32'?'junction':'dir');
@@ -21,6 +38,8 @@ test.beforeAll(async()=>{
     const dist=join(project,'dist');await cp(resolve(root,'dist/licenses'),join(dist,'licenses'),{recursive:true});
     builds[version]={dist,manifest:await buildPwaManifest(dist)};
   }
+  for(const build of Object.values(builds))build.licenseInventorySha256=digest(await readFile(join(build.dist,'licenses/inventory.json')));
+  if(process.env.PWA_MIGRATION_OLD_DIST&&builds.A.licenseInventorySha256===builds.B.licenseInventorySha256)throw Error('old/new notice inventories must differ for version migration');
   server=createServer(async(request,response)=>{
     try{
       const path=decodeURIComponent(new URL(request.url,'http://fixture').pathname);
@@ -63,7 +82,10 @@ test('PG-01 actual A/B builds wait for every old tab; old lazy worker and offlin
     await a.evaluate(async()=>{await(await navigator.serviceWorker.getRegistration()).update();});
     await expect(a.getByText(/更新の準備ができました/)).toBeVisible({timeout:30000});await expect(a.locator('.result-card')).toContainText('PRESERVED_A');
     await expect(second.getByRole('heading',{name:'PWA fixture A',exact:true})).toBeVisible();
-    await context.setOffline(true);await convert(second,'late-A.json','OLD_LAZY_WORKER_A');await context.setOffline(false);
+    await context.setOffline(true);
+    const oldNoticeHash=await second.evaluate(async()=>{const bytes=await(await fetch('/licenses/inventory.json')).arrayBuffer();return [...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(b=>b.toString(16).padStart(2,'0')).join('');});
+    expect(oldNoticeHash).toBe(builds.A.licenseInventorySha256);
+    await convert(second,'late-A.json','OLD_LAZY_WORKER_A','mermaid');await expect(second.locator('.json-svg svg')).toBeVisible();await context.setOffline(false);
     await a.close();await expect(second.getByRole('heading',{name:'PWA fixture A',exact:true})).toBeVisible();
     let next;for(const worker of context.serviceWorkers())if(await worker.evaluate(()=>self.__LDP_BUILD__?.id)===builds.B.manifest.id)next=worker;
     expect(next).toBeDefined();
@@ -72,6 +94,16 @@ test('PG-01 actual A/B builds wait for every old tab; old lazy worker and offlin
     const b=await context.newPage();await b.goto(base);await expect(b.getByRole('heading',{name:'PWA fixture B',exact:true})).toBeVisible();
     const caches=await b.evaluate(()=>window.caches.keys());expect(caches).toEqual(['ldp-static-'+builds.B.manifest.id]);
     await context.setOffline(true);await b.reload();await convert(b,'B.json','OFFLINE_B','mermaid');await expect(b.locator('.json-svg svg')).toBeVisible();
+    // The newly activated generation must carry matching originals, not just a working renderer.
+    const notices=await b.evaluate(async()=>{
+      const manifest=await(await fetch('/licenses/mermaid-tiny/manifest.json')).json();
+      for(const item of [...manifest.items,manifest.sourceNotices,manifest.generatorReference,...manifest.patches]){
+        const response=await fetch(item.path);if(!response.ok)return false;
+        const digest=[...new Uint8Array(await crypto.subtle.digest('SHA-256',await response.arrayBuffer()))].map(b=>b.toString(16).padStart(2,'0')).join('');
+        if(digest!==item.sha256)return false;
+      }
+      return manifest.items.length===69;
+    });expect(notices).toBe(true);
     await b.locator('input[type=file]').setInputFiles([{name:'offline.pdf',mimeType:'application/pdf',buffer:await readFile(resolve(root,'tests/fixtures/pdf/normal-machine-readable.pdf'))},{name:'offline.csv',mimeType:'text/csv',buffer:Buffer.from('name,value\nOFFLINE_CSV,2\n')}]);
     await expect(b.getByText('構造確認中',{exact:true})).toHaveCount(0);await b.getByRole('button',{name:'2 ファイルを変換',exact:true}).click();await expect(b.locator('.result-card')).toHaveCount(2);await expect(b.locator('.result-card').filter({has:b.getByRole('heading',{name:'offline.csv',exact:true})})).toContainText('OFFLINE_CSV');
     for(const card of await b.locator('.result-card').all())await expect(card.getByRole('button',{name:'Markdown をダウンロード',exact:true})).toBeEnabled();
