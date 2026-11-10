@@ -116,7 +116,8 @@
       "critical": 0,
       "total": 0
     },
-    "tinyTargets": 67
+    "tinyTargets": 67,
+    "licenseTestFilesSequential": true
   },
   "limitations": [
     "Discovery markers are not a complete rights or NOTICE assessment",
@@ -135,7 +136,7 @@
   },
   "testedSourceSha256": {
     "vite.config.ts": "cc09e9dd09872b70adb40edb1609746c8ab67aad112f9094a496134913186fa3",
-    "package.json": "1a3048fd1c24d2ce6a93d9426d2da91a5a900b35a4b0624d3ed00d5f45327101",
+    "package.json": "bf182ed032b4b5d6103aa7655349170a3675bcb1d8259e6017ec110fde8fa553",
     "scripts/internal-notices.mjs": "f3b34984c4f3942bd95eec21d2316eaf1d0fd1aea66b3dadf042f2c7c2d7ef67",
     "scripts/internal-notices.test.mjs": "2cdd13d6501272b032d635739f82faff871837c5a2b5d63528a03d0ea6fe19b9",
     "scripts/review-production-notices.mjs": "fc66f8e0bc0d7a013aab1c085b73768ea2ca0a7b9ebdb12be48c1e25492f5c26",
