@@ -1,5 +1,7 @@
 # JSON本体接続の現行残件と旧方式のクローズ
 
+2026-11-10 PR #39マージ後: main `5f64651` にTiny 12.3.0を反映済み。マージ直前の同一headの両CI成功を確認。現行の追加対応は [pakoのMIT/Zlib提供補強](distribution-pako-notices.md)。旧通常版ELK専用の調査は下記の履歴欄へ分け、現行Tinyの停止条件にしない。実配信・ユーザー実機・WASM条件と正式公開は別途。
+
 2026-11-10 現行更新: [Tiny 12.3.0の本体切替と回帰](mermaid-tiny-12.3-product-cutover.md)をローカル完了した。通常依存/既定67対象監査0件、69原文/75資産とPWAの同時更新を確認。以下の旧候補調査・ELKの未証明は履歴であり、現行Tinyの停止条件へ無条件に持ち越さない。実配信・ユーザー実機・anydoc/PDFiumの個別条件と公開可否は未完。
 
 2026-11-06 追記: [ELK非同梱構成の隔離PoC](mermaid-no-elk-reassessment.md)を受けてユーザーが本体接続を指示し、[Tinyの本体移行と回帰](mermaid-tiny-product-migration.md)をローカル実施。通常版依存・ELK配布資産の除去は本ローカル候補の確認であり、mainや既公開版の変更・公開条件の達成を意味しない。
@@ -32,15 +34,15 @@
 |CUR-01・1|PR #20をマージ済み|展開型仮想ツリー/50件ページ/位置復元/詳細/適合理由をmainへ接続。[第二段階の結果](json-target-ui-validation.md)を参照。実機はCUR-05|
 |CUR-02・2|PR #21をマージ済み|[状態・保持量・故障回復の報告](json-state-recovery-validation.md)。UI-01〜26、20ファイル、混在PDF取消、世代/設定照合、中断可能読込、50MiB/10万ノードと完了結果・両WASM/図の反復を検証。全環境の一括受入ではなく、全プロセス/実負荷はCUR-05|
 |CUR-03・3|PR #22マージ済み、実機は後日|[PWA世代固定・回復の報告と実機手順](pwa-generation-validation.md)。保存拒否・容量不足は故障注入。実インストール/復帰/実容量はCUR-05|
-|CUR-04・4|12.3.0本体切替・ローカル回帰完了/こちら|[本体切替報告](mermaid-tiny-12.3-product-cutover.md)：69原文/75資産、通常依存/既定67対象監査0件、本体33件・旧通常版移行追加1件・開発起動1件成功。[最終commit/221生成物は固定済み](evidence/mermaid-tiny-12.3-review-candidate.json)。残す作業はレビューとCI確認、anydoc/PDFiumの個別条件、許可された実配信先とユーザー実機の受入・公開判定。旧12.2.0の不合格とELK調査は履歴を保持する|
+|CUR-04・4|PR #39マージ済み、次の配布条件確認/こちら|[Tiny切替報告](mermaid-tiny-12.3-product-cutover.md)と固定221生成物をmainへ反映。通常依存/内包67対象監査0、両CI成功。[pakoのMIT/Zlib原文補強](distribution-pako-notices.md)を別レビューへ準備。残件は通常依存の内部表示・WASM各条件、実配信、ユーザー実機、最終公開版の再固定と公開判断|
 |CUR-04・追加|ローカル検証のみ|[配信照合の試行](local-delivery-verification.md)。manifest と SW を含む同一世代の照合を追加。実配信・対応ソースの完全性の証明にはならない|
 |CUR-04・追加|Windows ローカル再生成を確認|[クリーンインストール検証](windows-clean-rebuild-validation.md)。生成物444件一致。既定設定は単一ワーカーで、一括検査の再実行は成功。他環境と実配信は未確認|
 |CUR-04・方針|準備を継続、公開可否は保留|[採用した配布準備方針](distribution-adopted-policy.md)と公開前4条件。Vercel/GitHub Releases は採用方針であり、公開・添付・デプロイの実施許可ではない|
-|CUR-04・候補照合|個別判断は未完|[ELK ソース範囲と WASM 原文の照合](distribution-source-triage.md)。現行 ELK ZIP は本体2ファイルの部分候補、WASM 原文224件の個別適用は保留|
+|CUR-04・WASM照合|個別条件は未完|[過去の原文照合](distribution-source-triage.md)のWASM候補224件を参照し、必要な原文/権利表示/NOTICE/変更表示/追加提供を個別判定する。候補収集やnpm監査を条件充足に置き換えない|
 |CUR-04・WASM準備|2依存の原文を保守的に追加|[anydoc 候補原文の準備](wasm-candidate-originals-preparation.md)。実リンク・条件適用、他の候補、実配信・実機は未完|
-|CUR-04・ELK取得|ローカル候補の同一性を確認|[固定ソース候補の照合](elk-fixed-source-validation.md)。候補の全2,111ファイルと上流 tree は一致。ビルド時 checkout・必要範囲・提供物の最終判断は未完|
-|CUR-04・ELK準備|ローカル候補のみ|[パス形式と11領域の候補](elk-source-pattern-review.md)。候補の提供可否・必要範囲・checkout の対応は未判定|
-|CUR-04・ELK生成入力|直接領域は候補間で一致、生成条件は未確定|[生成入力の照合](elk-generation-input-review.md)。658ファイルは2候補で一致、生成器関連領域などには差があり、実 checkout・提供要否は未判定|
+
+
+
 |CUR-05・並行|未実施/ユーザー、前提整備はこちら|Windows読み上げ・実ブラウザー200%倍率・対応機タッチ・復帰と、安全な実負荷/インストール済みPWA。現行UI/パッケージの前提が整った項目から別途実施。旧手順をそのまま転用しない|
 
 CUR-02の文書混入/未検証出力、CUR-03の世代混在/回復不能は致命・重大リスクを優先して検査する。CUR-01の操作不能や警告不可視も重大として扱う。第一段階の成功証拠は保持し、既に確認済みのCSP共存・基本変換/出力を理由なく未着手へ戻さない。
@@ -68,3 +70,13 @@ PR #29 を承認によりマージ後、main `17aa0fe254214fbec327f2870098c7fc1e
 PR #30 マージ後、main `57ad1abe9d557626a77eeeded9fb114ea710ff29` を基点に[ローカル配布候補と原文・ソース候補の台帳](distribution-candidate-57ad1ab.md)を作成した。最終版の承認や実配信の証明ではない。
 
 旧[初回](json-gates-validation.md)・[代替](json-g04-alternative-validation.md)・[後続](json-g04-followup-validation.md)・[採用検証](json-adoption-followup-validation.md)・[接続前共存](json-integration-readiness-validation.md)・[出典/原文](json-source-license-validation.md)の内容と証跡は、各実施時点の履歴として保持する。履歴の「残件」はその時点の記述であり、現行の作業指示は本書のCUR-01～05だけとする。
+
+## 旧通常版ELK調査の履歴（現行Tinyでは対象外）
+
+新しいTiny配布物にELKを含めないため、以下は現行版の公開を止める残件から外す。実checkout等の未証明は未証明のまま保存し、旧版が実際に配布されていた場合の条件を遡及的に解消したとはしない。別PR #38は自動で閉じない。
+
+|過去のID|当時の状態|保存する調査|
+|---|---|---|
+|CUR-04・ELK取得|ローカル候補の同一性を確認|[固定ソース候補の照合](elk-fixed-source-validation.md)。候補の全2,111ファイルと上流 tree は一致。ビルド時 checkout・必要範囲・提供物の最終判断は未完|
+|CUR-04・ELK準備|ローカル候補のみ|[パス形式と11領域の候補](elk-source-pattern-review.md)。候補の提供可否・必要範囲・checkout の対応は未判定|
+|CUR-04・ELK生成入力|直接領域は候補間で一致、生成条件は未確定|[生成入力の照合](elk-generation-input-review.md)。658ファイルは2候補で一致、生成器関連領域などには差があり、実 checkout・提供要否は未判定|

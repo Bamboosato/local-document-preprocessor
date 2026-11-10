@@ -3,6 +3,7 @@
   "git": {
     "deploymentEnabled": {
       "main": false,
+      "codex/distribution-pako-notices": false,
       "codex/mermaid-no-elk-reassessment": false,
       "codex/elk-generation-input-review": false,
       "codex/wasm-notice-review": false,

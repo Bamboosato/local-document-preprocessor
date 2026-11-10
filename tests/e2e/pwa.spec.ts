@@ -99,6 +99,25 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
     });
     expect(verified).toBe(true);
     await popup.goBack();
+    const pako=popup.locator('li').filter({has:popup.getByText('pako 1.0.11',{exact:true})});
+    await expect(pako.getByRole('link')).toHaveCount(2);
+    await expect(pako.getByRole('link',{name:'ZLIB-README.txt',exact:true})).toBeVisible();
+    await expect(popup.getByText('pakoはMITとZlibの両条件を適用し、移植元・権利表示・変更説明も提供しています。',{exact:true})).toBeVisible();
+    const pakoOriginals=await popup.evaluate(async()=>{
+      const inventory=await(await fetch('./inventory.json')).json();
+      const pkg=inventory.packages.find((item:{name:string})=>item.name==='pako');
+      const texts=[];
+      for(const original of pkg.originals){
+        const response=await fetch(original.path);if(!response.ok)return {valid:false,texts};
+        const bytes=await response.arrayBuffer();
+        const hash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(b=>b.toString(16).padStart(2,'0')).join('');
+        if(hash!==original.sha256)return {valid:false,texts};texts.push(new TextDecoder().decode(bytes));
+      }
+      return {valid:pkg.originals.length===2,texts};
+    });
+    expect(pakoOriginals.valid).toBe(true);
+    expect(pakoOriginals.texts.some(text=>text.includes('Permission is hereby granted'))).toBe(true);
+    expect(pakoOriginals.texts.some(text=>text.includes('This port is based on zlib 1.2.8.')&&text.includes('1995-2013 Jean-loup Gailly and Mark Adler')&&text.includes('2014-2017 Vitaly Puzrin and Andrey Tupitsin'))).toBe(true);
     await expect(popup.getByRole('heading', { name: 'WASM 依存候補の原文' })).toBeVisible();
     await expect(popup.getByText('調査対象の候補であり、WASM に含まれることや依存一覧の網羅性を示すものではありません。')).toBeVisible();
     const encoding=popup.locator('li').filter({has:popup.getByText('encoding_rs 0.8.35',{exact:true})});

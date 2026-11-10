@@ -1,0 +1,113 @@
+{
+  "schema": 1,
+  "date": "2026-11-10",
+  "baseCommit": "5f64651d2b5b9df38b11cedd724500c238532d7d",
+  "mergedPR": 39,
+  "mergedHead": "cc392347ac4f0f9f7570074d17d2704258f9f229",
+  "preMergeCI": {
+    "run": 42755772146,
+    "conclusion": "success",
+    "latestHeadMatched": true,
+    "unresolvedReviewThreads": 0,
+    "prototypeFirstAttempt": "Job timeout after AD-01 through AD-06; identical-head prototype rerun passed; cause not established"
+  },
+  "purpose": "Complete missing Zlib material delivery for pako MIT AND Zlib; not overall release approval",
+  "sourceRecord": "pako-1.0.11-notices.json",
+  "sourceRecordSha256": "d1c3cf92c7d4e5dd58439865b88604a1c4af6382f232b8a15d72e93d945cd111",
+  "packageVersion": "pako@1.0.11",
+  "archiveSRI": "verified",
+  "archiveInputsCompared": 13,
+  "zlibSourceFiles": 11,
+  "runtimeAssetsUnchangedFromPR39": 7,
+  "runtimeAssetHashMismatches": 0,
+  "pakoOriginals": [
+    {
+      "path": "dependencies/pako@1.0.11/LICENSE",
+      "sha256": "a04665b3b2de56c66730c1f720f528175739e4104f79073614aa611da1e85539"
+    },
+    {
+      "path": "dependencies/pako@1.0.11/ZLIB-README.txt",
+      "sha256": "d8b499598e43d755ea8918448128259ff01820c50d94d5a48c8883d0a594ddb1"
+    }
+  ],
+  "noticeBytes": 2180,
+  "rootPackages": 117,
+  "rootOriginals": 119,
+  "newGeneration": "30ea0d6ec96dafadb49133aa",
+  "oldGeneration": "429747bec5da3853ab4ffe06",
+  "manifestAssets": 220,
+  "http": {
+    "assets": 222,
+    "failures": 0,
+    "evidenceSha256": "4dbfcbdb1ee0b76ff8510641c7fceffaddad1cbec42865a44420d0e980f4e6bc"
+  },
+  "tests": {
+    "materialGateCases": 1,
+    "negativePremises": [
+      "missing notice",
+      "modified notice",
+      "wrong installed version",
+      "wrong lock integrity",
+      "modified Zlib source",
+      "unknown Zlib source file"
+    ],
+    "targetedPWA": {
+      "startTime": "2026-11-10T04:52:09.830Z",
+      "duration": 10132.364,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "e2eEvidenceSha256": "9e3304e64feac9181907972130426995417de41888422bc5463d1b2391fc28fd",
+    "build": "passed",
+    "distributionCheck": "passed",
+    "rootProductionAudit": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "rootFullAudit": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "tinyAudit": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "tinyAuditTargets": 67
+  },
+  "limits": [
+    "Only PWA targeted E2E locally; no full or cross-browser execution",
+    "No physical-device or deployed acceptance",
+    "macOS/iOS excluded",
+    "No archives published or attached; no deployment",
+    "Remaining npm/Tiny internal notices and WASM individual conditions not marked complete",
+    "Bundled/minified JavaScript notice/alteration treatment is not a universal legal-compliance conclusion"
+  ],
+  "documentation": {
+    "documents": 82,
+    "localLinks": 403,
+    "issues": 0,
+    "gitDiffCheck": "passed"
+  },
+  "testedSourceSha256": {
+    "package.json": "0f2ba89d3587298e83dc3deee7fad95add208d7f039c82d350ba624ee392fd31",
+    "scripts/pako-materials.mjs": "13d9de091c8f8730ab67c65990c621703360760aa2f87d9a0ea8969974073d33",
+    "scripts/pako-materials.test.mjs": "91b1ceae6df18c6a4b449db8724081bf8572fc4162a7df5658320e5c1ab21ba3",
+    "scripts/copy-third-party-licenses.mjs": "296cbaa36b094f7ff276ef1f8e3f1c144503687beed86b02af091255341723f0",
+    "scripts/check-dist.mjs": "5bd16775797d870e96017bd5d9649bcccd0ac1e012c7a21378c546c9c01242c9",
+    "tests/e2e/pwa.spec.ts": "d40dcb2b10d6771bfdf5eac910e84f631bd2b6df40a6cbb9e751177098ef1c75"
+  }
+}
