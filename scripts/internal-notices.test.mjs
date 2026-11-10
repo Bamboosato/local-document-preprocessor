@@ -7,7 +7,7 @@ import {verifyInternalNotices} from './internal-notices.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url)),scratch=resolve(root,'tmp');
 test('Internal rights materials keep their fixed sources; missing, changed or wrong-version evidence cannot pass',async()=>{
   await mkdir(scratch,{recursive:true});const valid=await verifyInternalNotices();
-  assert.equal(valid.record.sourceFiles.length,15);assert.equal(valid.files.length,2);
+  assert.equal(valid.record.sourceFiles.length,15);assert.equal(valid.files.length,7);
   const directory=await mkdtemp(resolve(scratch,'internal-notice-test-')),url=pathToFileURL(directory+sep);
   try{
     await mkdir(resolve(directory,'node_modules'),{recursive:true});
@@ -18,6 +18,9 @@ test('Internal rights materials keep their fixed sources; missing, changed or wr
     await verifyInternalNotices(url);
     const material=valid.files[0];await writeFile(resolve(directory,material.source),'synthetic altered rights');
     await assert.rejects(verifyInternalNotices(url),/material mismatch/);await writeFile(resolve(directory,material.source),material.bytes);
+    const borrowed=valid.files.find(file=>file.outputPath.endsWith('/PDFKIT-MIT.txt'));
+    await writeFile(resolve(directory,borrowed.source),'synthetic wrong-version borrowed license');
+    await assert.rejects(verifyInternalNotices(url),/material mismatch/);await writeFile(resolve(directory,borrowed.source),borrowed.bytes);
     const source=resolve(directory,'node_modules/pdf-lib/'+valid.record.sourceFiles[0].path),before=await readFile(source);
     await writeFile(source,'synthetic source without notice');await assert.rejects(verifyInternalNotices(url),/source mismatch/);await writeFile(source,before);
     const path=resolve(directory,'node_modules/pdf-lib/package.json'),pkg=JSON.parse(await readFile(path));

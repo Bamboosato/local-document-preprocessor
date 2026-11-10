@@ -1,5 +1,7 @@
 # JSON本体接続の現行残件と旧方式のクローズ
 
+2026-11-10 PR #41マージ後: main `a76440c` に内部表示・加工ラベルを反映。[借用元原文とWASM残依存](borrowed-source-license-review.md)でpdfkit固定5commit、base64/PDF.jsの参考候補を照合し、残93crate/185原文を再照合。旧形式5件は選択根拠を確認、2件保留。PDFiumのFTL/IJG/ICU固有条件・未収集3領域を優先し、原文対応だけで公開条件完了とはしない。
+
 2026-11-10 PR #40マージ後: main `12f82f3` にpako両原文の補強を反映済み。続く[内部NOTICE・加工表示とWASM個別条件](distribution-internal-notices.md)をレビュー用ブランチで実施。内部表示候補187ファイルを発見し、pdf-libの表示補完・加工ラベル・WASM3候補の条件準備を行った。残るpdf-lib借用元原文、他の内部表示、WASM93依存等を完了扱いにしない。
 
 2026-11-10 PR #39マージ後: main `5f64651` にTiny 12.3.0を反映済み。マージ直前の同一headの両CI成功を確認。現行の追加対応は [pakoのMIT/Zlib提供補強](distribution-pako-notices.md)。旧通常版ELK専用の調査は下記の履歴欄へ分け、現行Tinyの停止条件にしない。実配信・ユーザー実機・WASM条件と正式公開は別途。
