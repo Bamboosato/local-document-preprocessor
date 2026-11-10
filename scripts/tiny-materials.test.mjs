@@ -6,6 +6,8 @@ import {pathToFileURL,fileURLToPath} from 'node:url';
 import {verifyTinySnapshot} from './tiny-materials.mjs';
 import {readTinyRelease,verifyTinyRuntime,verifyTinyAuditBinding,digest} from './tiny-release.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url)),scratch=resolve(root,'tmp');
+// Fresh checkouts have no ignored scratch directory; establish it before mkdtemp.
+await mkdir(scratch,{recursive:true});
 test('Tiny snapshot preserves originals and rejects changed or extra materials',async()=>{
   const valid=await verifyTinySnapshot();assert.equal(valid.record.version,'12.3.0');assert.equal(valid.files.length,75);assert.equal(valid.manifest.items.length,69);
   assert.ok(valid.manifest.items.some(i=>i.name==='@babel/helpers'&&i.version==='7.29.10'));
