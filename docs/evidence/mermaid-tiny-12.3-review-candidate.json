@@ -1372,5 +1372,15 @@
     "localSourceGuardsPassed": 11,
     "productSourceOrArtifactsChanged": false,
     "initialCIRun": 42755003298
+  },
+  "postPinStandardGuardCorrection": {
+    "path": "experiments/json-gates/standard-check.mjs",
+    "workingBytesSha256": "021826f7510d0c4979fe727bf4fe5a2ff65fbbddc20abc3713749a1bccec086c",
+    "reason": "Fault injection targeted obsolete mermaid.core chunk; now assert one actual Tiny request blocked and same-page retry succeeds",
+    "localStandardBrowserCasesPassed": 8,
+    "browser": "Chrome headless on Windows",
+    "localEvidenceSha256": "01e7157b8524c2ef3a4b047f9ff48f5dd5fcddc760f57eb676deb98a14d2907e",
+    "productSourceOrArtifactsChanged": false,
+    "secondCIRun": 42755350118
   }
 }
