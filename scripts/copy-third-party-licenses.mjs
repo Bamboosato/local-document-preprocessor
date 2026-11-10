@@ -2,6 +2,7 @@ import { copyFile, mkdir,readFile,readdir,writeFile } from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import {copyTinyMaterials} from './tiny-materials.mjs';
+import {verifyPakoMaterials} from './pako-materials.mjs';
 
 const projectRoot = new URL('../', import.meta.url);
 const outputDirectory = new URL('dist/licenses/', projectRoot);
@@ -27,6 +28,7 @@ console.log(
 // Conservative source-package inventory, not a linked WASM SBOM.
 const lock=JSON.parse(await readFile(new URL('package-lock.json',projectRoot),'utf8'));
 const packages=[];
+const pako=await verifyPakoMaterials();
 for(const [path,meta] of Object.entries(lock.packages)){
   if(!path||meta.dev)continue;
   const dir=new URL(path+'/',projectRoot),pkg=JSON.parse(await readFile(new URL('package.json',dir),'utf8'));
@@ -35,6 +37,10 @@ for(const [path,meta] of Object.entries(lock.packages)){
   if(!names.length||!meta.integrity||!meta.resolved)throw new Error('production-license-missing');
   const originals=[];
   for(const name of names){const bytes=await readFile(new URL(name,dir));const relative=`dependencies/${pkg.name.replaceAll('/','__')}@${pkg.version}/${name}`;const target=new URL(relative,outputDirectory);await mkdir(new URL('.',target),{recursive:true});await writeFile(target,bytes);originals.push({path:relative,sha256:createHash('sha256').update(bytes).digest('hex')});}
+  if(pkg.name==='pako'){
+    const target=new URL(pako.path,outputDirectory);await mkdir(new URL('.',target),{recursive:true});await writeFile(target,pako.bytes);
+    originals.push({path:pako.path,sha256:pako.sha256});
+  }
   packages.push({name:pkg.name,version:pkg.version,lockPath:path,license:pkg.license??meta.license??null,tarball:meta.resolved,integrity:meta.integrity,originals});
 }
 // Conservatively retain originals for two reviewed AND-license candidates.
@@ -71,5 +77,5 @@ await writeFile(new URL('inventory.json',outputDirectory),JSON.stringify({scope:
 const escapeHtml=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const links=packages.map(pkg=>`<li><strong>${escapeHtml(pkg.name)} ${escapeHtml(pkg.version)}</strong> (${escapeHtml(pkg.license??'未記載')})${pkg.name==='dompurify'?' <span>選択したライセンス: Apache-2.0</span>':''} <ul>${pkg.originals.map(original=>`<li><a href="${original.path.split('/').map(segment=>encodeURIComponent(segment).replace(/%40/gi,'@')).join('/')}">${escapeHtml(original.path.split('/').at(-1))}</a></li>`).join('')}</ul></li>`).join('\n');
 const candidateLinks=wasmCandidates.map(pkg=>`<li><strong>${escapeHtml(pkg.name)} ${escapeHtml(pkg.version)}</strong> (${escapeHtml(pkg.declaredLicense)})<ul>${pkg.originals.map(original=>`<li><a href="${original.path.split('/').map(segment=>encodeURIComponent(segment).replace(/%40/gi,'@')).join('/')}">${escapeHtml(original.path.split('/').at(-1))}</a></li>`).join('')}</ul></li>`).join('\n');
-await writeFile(new URL('index.html',outputDirectory),`<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>第三者ライセンス</title></head><body><h1>第三者ライセンス</h1><p>本番npm依存から収集した原文です。WASMの内包物一覧を保証するものではありません。</p><p><a href="inventory.json">機械可読の一覧</a></p><ul>${links}</ul><h2>Tinyに含まれる第三者の原文・権利表示</h2><p><a href="mermaid-tiny/index.html">Tiny ${escapeHtml(embeddedTiny.version)} 内包物のライセンス・由来・変更</a></p><h2>WASM 依存候補の原文</h2><p>調査対象の候補であり、WASM に含まれることや依存一覧の網羅性を示すものではありません。</p><ul>${candidateLinks}</ul></body></html>\n`);
+await writeFile(new URL('index.html',outputDirectory),`<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>第三者ライセンス</title></head><body><h1>第三者ライセンス</h1><p>本番npm依存から収集した原文です。WASMの内包物一覧を保証するものではありません。</p><p>pakoはMITとZlibの両条件を適用し、移植元・権利表示・変更説明も提供しています。</p><p><a href="inventory.json">機械可読の一覧</a></p><ul>${links}</ul><h2>Tinyに含まれる第三者の原文・権利表示</h2><p><a href="mermaid-tiny/index.html">Tiny ${escapeHtml(embeddedTiny.version)} 内包物のライセンス・由来・変更</a></p><h2>WASM 依存候補の原文</h2><p>調査対象の候補であり、WASM に含まれることや依存一覧の網羅性を示すものではありません。</p><ul>${candidateLinks}</ul></body></html>\n`);
 console.log(`Collected ${packages.length} root production package originals`);

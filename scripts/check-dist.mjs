@@ -3,6 +3,7 @@ import {createHash} from 'node:crypto';
 import { readFile, readdir } from 'node:fs/promises';
 import {verifyTinySnapshot} from './tiny-materials.mjs';
 import {verifyTinyRuntime} from './tiny-release.mjs';
+import {verifyPakoMaterials} from './pako-materials.mjs';
 
 const assetDirectory = new URL('../dist/assets/', import.meta.url);
 const licenseDirectory = new URL('../dist/licenses/', import.meta.url);
@@ -27,6 +28,14 @@ const manifest = JSON.parse(await readFile(new URL('manifest.webmanifest', distr
 const serviceWorker = await readFile(new URL('sw.js', distributionRoot), 'utf8');
 const pwa=JSON.parse(await readFile(new URL('pwa-manifest.json',distributionRoot),'utf8'));
 const inventory=JSON.parse(await readFile(new URL('licenses/inventory.json',distributionRoot),'utf8'));
+const pakoMaterial=await verifyPakoMaterials();
+const pakoPackage=inventory.packages.find(item=>item.name==='pako');
+assert.equal(pakoPackage?.version,pakoMaterial.record.version);
+assert.equal(pakoPackage?.license,'(MIT AND Zlib)');
+assert.equal(pakoPackage.originals.length,2,'pako must retain MIT and Zlib originals');
+assert.ok(pakoPackage.originals.some(item=>item.path===pakoMaterial.path&&item.sha256===pakoMaterial.sha256),'pako Zlib notice missing');
+assert.deepEqual(await readFile(new URL(pakoMaterial.path,licenseDirectory)),pakoMaterial.bytes,'pako Zlib notice changed');
+assert.ok(pwa.assets.some(item=>item.url==='/licenses/'+pakoMaterial.path&&item.sha256===pakoMaterial.sha256),'pako notice must share the PWA generation');
 const dompurify=inventory.packages.find(item=>item.name==='dompurify');
 if(dompurify)assert.ok(dompurify.originals.some(item=>item.path.endsWith('/LICENSE-MPL')),'DOMPurify MPL original is missing');
 assert.match(pwa.id,/^[a-f0-9]{24}$/);
