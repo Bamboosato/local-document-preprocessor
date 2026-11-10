@@ -1,0 +1,114 @@
+{
+  "schema": 1,
+  "date": "2026-11-10",
+  "baseline": "wasm-condition-dispositions.json",
+  "cases": [
+    {
+      "name": "fnv",
+      "commit": "4b4784ebfd3332dc61f0640764d6f1140e03a9ab",
+      "url": "https://raw.githubusercontent.com/servo/rust-fnv/4b4784ebfd3332dc61f0640764d6f1140e03a9ab/README.md",
+      "licenseHints": [
+        "get the hasher is the next best option."
+      ],
+      "version": "1.0.7",
+      "declaredExpression": "Apache-2.0 / MIT",
+      "originals": [
+        {
+          "path": "licenses/fnv@1.0.7/LICENSE-APACHE",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847,
+          "reviewPath": "docs/third-party-source-licenses/anydoc/fnv@1.0.7/000-LICENSE-APACHE.txt",
+          "verification": "verified-crate-original",
+          "archivePathsWithSameBytes": [
+            "LICENSE-APACHE"
+          ],
+          "copyrightLines": [
+            "\"Licensor\" shall mean the copyright owner or entity authorized by",
+            "the copyright owner that is granting the License.",
+            "copyright notice that is included in or attached to the work",
+            "submitted to Licensor for inclusion in the Work by the copyright owner",
+            "the copyright owner. For the purposes of this definition, \"submitted\"",
+            "designated in writing by the copyright owner as \"Not a Contribution.\"",
+            "2. Grant of Copyright License. Subject to the terms and conditions of",
+            "copyright license to reproduce, prepare Derivative Works of,",
+            "that You distribute, all copyright, patent, trademark, and",
+            "You may add Your own copyright statement to Your modifications and",
+            "same \"printed page\" as the copyright notice for easier",
+            "Copyright [yyyy] [name of copyright owner]"
+          ]
+        },
+        {
+          "path": "licenses/fnv@1.0.7/LICENSE-MIT",
+          "sha256": "65fdb6c76cd61612070c066eec9ecdb30ee74fb27859d0d9af58b9f499fd0c3e",
+          "bytes": 1056,
+          "reviewPath": "docs/third-party-source-licenses/anydoc/fnv@1.0.7/001-LICENSE-MIT.txt",
+          "verification": "verified-crate-original",
+          "archivePathsWithSameBytes": [
+            "LICENSE-MIT"
+          ],
+          "copyrightLines": [
+            "Copyright (c) 2017 Contributors",
+            "The above copyright notice and this permission notice",
+            "SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY"
+          ]
+        }
+      ],
+      "preparationPolicy": "retain and prepare both sets of conditions; selection-specific waiting work removed without claiming final compliance"
+    },
+    {
+      "name": "rangemap",
+      "commit": "414e9c7c10afbe576abd2513a4ffc71343d5c7bd",
+      "url": "https://raw.githubusercontent.com/jeffparsons/rangemap/414e9c7c10afbe576abd2513a4ffc71343d5c7bd/README.md",
+      "licenseHints": [],
+      "version": "1.7.1",
+      "declaredExpression": "MIT/Apache-2.0",
+      "originals": [
+        {
+          "path": "licenses/rangemap@1.7.1/LICENSE-APACHE",
+          "sha256": "1c7745cc26c7294bc9dbc883bcd50700b99a8c0f4859bfce84ec555098ce1ab5",
+          "bytes": 10837,
+          "reviewPath": "docs/third-party-source-licenses/anydoc/rangemap@1.7.1/000-LICENSE-APACHE.txt",
+          "verification": "verified-crate-original",
+          "archivePathsWithSameBytes": [
+            "LICENSE-APACHE"
+          ],
+          "copyrightLines": [
+            "\"Licensor\" shall mean the copyright owner or entity authorized by",
+            "the copyright owner that is granting the License.",
+            "copyright notice that is included in or attached to the work",
+            "submitted to Licensor for inclusion in the Work by the copyright owner",
+            "the copyright owner. For the purposes of this definition, \"submitted\"",
+            "designated in writing by the copyright owner as \"Not a Contribution.\"",
+            "2. Grant of Copyright License. Subject to the terms and conditions of",
+            "copyright license to reproduce, prepare Derivative Works of,",
+            "that You distribute, all copyright, patent, trademark, and",
+            "You may add Your own copyright statement to Your modifications and",
+            "Copyright 2019-2022 Jeff Parsons, and [contributors](https://github.com/jeffparsons/rangemap/contributors)"
+          ]
+        },
+        {
+          "path": "licenses/rangemap@1.7.1/LICENSE-MIT",
+          "sha256": "29a4c3823ee29ee5a97c145574a1bac20629fd5e6708be1df0d25bab563e093c",
+          "bytes": 1055,
+          "reviewPath": "docs/third-party-source-licenses/anydoc/rangemap@1.7.1/001-LICENSE-MIT.txt",
+          "verification": "verified-crate-original",
+          "archivePathsWithSameBytes": [
+            "LICENSE-MIT"
+          ],
+          "copyrightLines": [
+            "Copyright 2019 Jeffrey Parsons",
+            "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.",
+            "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT"
+          ]
+        }
+      ],
+      "preparationPolicy": "retain and prepare both sets of conditions; selection-specific waiting work removed without claiming final compliance"
+    }
+  ],
+  "preparationDecision": "Keep original slash expression and conservatively prepare to satisfy both MIT and Apache-2.0 conditions; do not relabel upstream grant as AND or assert OR semantics",
+  "remaining": [
+    "Confirm notices/changes/actual scope and final fulfillment",
+    "Grant interpretation remains historical uncertainty, no silent license-expression rewrite"
+  ],
+  "releaseApproval": false
+}

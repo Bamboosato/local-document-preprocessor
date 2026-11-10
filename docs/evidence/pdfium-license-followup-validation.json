@@ -1,0 +1,92 @@
+{
+  "schema": 1,
+  "date": "2026-11-10",
+  "baseCommit": "03fd82656916ede1e9f74c6bfa61356a2fcca04b",
+  "mergedPR": 42,
+  "mergedHead": "33a0fcadb8465c3fbdc9f40a30359f57249f45c3",
+  "preMergeCI": {
+    "run": 42765212024,
+    "bothJobs": "success",
+    "fixedHeadMatched": true,
+    "unresolvedReviewThreads": 0
+  },
+  "materialsRecord": "pdfium-notice-materials.json",
+  "materialsRecordSha256": "9a909483b603bf29fbfaf52e8cd88e2acbb5176e647d38ec1c0cd72d312ef2d2",
+  "newOriginalsForMissingComponents": 4,
+  "candidateOriginalsOffered": 9,
+  "conditionalCreditDrafts": 1,
+  "candidateMaterialBytes": 81276,
+  "sourceAndDepsCandidateNotWasmSBOM": true,
+  "borrowedVersionInvestigation": "borrowed-actual-version-investigation.json",
+  "legacyPreparationPolicy": "legacy-license-preparation-policy.json",
+  "rawRuntimeAssetsUnchanged": 7,
+  "rootPackages": 117,
+  "rootMaterials": 126,
+  "generation": "745e49248a4954c0b159e423",
+  "manifestAssets": 238,
+  "httpAssets": 240,
+  "httpFailures": 0,
+  "validation": {
+    "nodeLicenseCases": 3,
+    "pythonResearchCases": 5,
+    "targetedPWA": {
+      "startTime": "2026-11-10T06:54:12.848Z",
+      "duration": 11006.309,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "build": "passed",
+    "distributionCheck": "passed",
+    "rootProductionAudit": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "rootFullAudit": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "tinyAudit": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "tinyTargets": 67,
+    "documentation": {
+      "documents": 85,
+      "localLinks": 429,
+      "issues": 0
+    },
+    "combinedOfflineGuards": 15,
+    "securityPolicyCases": 12
+  },
+  "limits": [
+    "Actual borrowed versions and published-WASM inclusion remain unproven",
+    "Conditional credit draft is not final product attribution or release approval",
+    "Prepare both MIT/Apache conditions without relabelling upstream slash expression; final scope/fulfillment pending",
+    "No actual delivery or device acceptance; macOS/iOS excluded",
+    "No archive publication/attachment or deployment"
+  ],
+  "verifiedSourceSha256": {
+    "scripts/pdfium-notice-materials.mjs": "09685f3f8eb6b95241286a400a66e9bc0966c766f3a807eb851e6a27be89064a",
+    "scripts/pdfium-notice-materials.test.mjs": "333cbdc48300dec02d88a32ab8de0f31fae08acfc7bea7c47531e3043f18153c",
+    "scripts/compare_borrowed_sources.py": "645a19d0cb3d99730cc16412fb02700c8225460c18f214134dc4b523bd232922",
+    "scripts/test_review_wasm_remaining.py": "f8bc804afbadc38593a486c9ebc5e63024b5db25dc21de338fc5ca0aba2bb46f",
+    "scripts/copy-third-party-licenses.mjs": "43d2185d61978e0fa060d87f0172ca42ed12cd69e9705da2366c6974953148f7",
+    "scripts/check-dist.mjs": "5dbd67ca8dd944690823aa28419b1533675ec3c01a86b7616655f11d7f68846d",
+    "tests/e2e/pwa.spec.ts": "a525b9bb7719428b26c12dbc73fdb12222a01245e635c9c149d86ff8df323ef1",
+    "package.json": "94376da8bc108d09995c7ad7637e89f424c20dc7c495751afa3f67d27fe0bd0b"
+  }
+}

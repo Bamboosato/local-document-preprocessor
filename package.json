@@ -19,7 +19,7 @@
     "check:dist": "node scripts/check-dist.mjs",
     "check:docs": "node scripts/check-docs.mjs",
     "check": "npm run test:unit && npm run test:pwa && npm run test:tiny && npm run test:licenses && npm run build && npm run check:dist",
-    "test:licenses": "node --test --test-concurrency=1 scripts/pako-materials.test.mjs scripts/internal-notices.test.mjs",
+    "test:licenses": "node --test --test-concurrency=1 scripts/pako-materials.test.mjs scripts/internal-notices.test.mjs scripts/pdfium-notice-materials.test.mjs",
     "test:tiny": "node --test scripts/tiny-materials.test.mjs",
     "test:e2e:tiny-dev": "node scripts/test-tiny-dev.mjs",
     "audit:tiny": "node scripts/audit-tiny-contributors.mjs"

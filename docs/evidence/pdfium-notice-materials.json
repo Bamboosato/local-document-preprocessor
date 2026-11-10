@@ -1,0 +1,169 @@
+{
+  "schema": 1,
+  "date": "2026-11-10",
+  "wrapper": "@embedpdf/pdfium",
+  "wrapperVersion": "2.14.4",
+  "wrapperIntegrity": "sha512-0tDPQEH1WtfXcASNVp5U3dqfzZboNvcE4rDok/P4JCN+DCTaJDG2E9lYHGMo9FtuS2IdHgrzkmPRpOo5WV9MKQ==",
+  "pdfiumSourceCommit": "cb29e78f2ba00c9298714d5f4a8bf7765f1e802f",
+  "sourceTreeTruncated": false,
+  "sourceTreeEntries": 5366,
+  "depsSha256": "f456f116824717cde93a32fa9cb2df1bae776226dadfa225a211dd5686ed05f1",
+  "groups": [
+    {
+      "name": "cpu_features",
+      "revision": "936b9ab5515dead115606559502e3864958f7f6e",
+      "depsCondition": "checkout_android",
+      "role": "fixed-source-DEPS-candidate-not-proof-of-WASM-inclusion",
+      "files": [
+        {
+          "source": "docs/third-party-wasm-notices/pdfium/cpu_features/LICENSE.txt",
+          "outputPath": "pdfium-candidates/cpu_features/LICENSE.txt",
+          "bytes": 12876,
+          "sha256": "af272c1b4dd08dd61d43e001d3134119d03ca7a2b057a64f7355fdf27fbea3dd",
+          "sourceUrl": "https://chromium.googlesource.com/external/github.com/google/cpu_features.git/+/936b9ab5515dead115606559502e3864958f7f6e/LICENSE?format=TEXT",
+          "gitBlobSha1": "a7043c6fdedacc991803384333201058ea1a8865"
+        }
+      ]
+    },
+    {
+      "name": "dragonbox",
+      "revision": "beeeef91cf6fef89a4d4ba5e95d47ca64ccb3a44",
+      "depsCondition": "checkout_v8",
+      "role": "fixed-source-DEPS-candidate-not-proof-of-WASM-inclusion",
+      "files": [
+        {
+          "source": "docs/third-party-wasm-notices/pdfium/dragonbox/LICENSE-Apache2-LLVM.txt",
+          "outputPath": "pdfium-candidates/dragonbox/LICENSE-Apache2-LLVM.txt",
+          "bytes": 12262,
+          "sha256": "9e45e856bedccee9f67254082ca11851d954de2fed7448c4bed19ad9aab99a91",
+          "sourceUrl": "https://chromium.googlesource.com/external/github.com/jk-jeon/dragonbox.git/+/beeeef91cf6fef89a4d4ba5e95d47ca64ccb3a44/LICENSE-Apache2-LLVM?format=TEXT",
+          "gitBlobSha1": "bd8b243dfa02d4e7080150180520f742d2861d15"
+        },
+        {
+          "source": "docs/third-party-wasm-notices/pdfium/dragonbox/LICENSE-Boost.txt",
+          "outputPath": "pdfium-candidates/dragonbox/LICENSE-Boost.txt",
+          "bytes": 1338,
+          "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566",
+          "sourceUrl": "https://chromium.googlesource.com/external/github.com/jk-jeon/dragonbox.git/+/beeeef91cf6fef89a4d4ba5e95d47ca64ccb3a44/LICENSE-Boost?format=TEXT",
+          "gitBlobSha1": "36b7cd93cdfbac762f5be4c6ce276df2ea6305c2"
+        }
+      ]
+    },
+    {
+      "name": "googletest",
+      "revision": "4fe3307fb2d9f86d19777c7eb0e4809e9694dde7",
+      "depsCondition": null,
+      "role": "fixed-source-DEPS-candidate-not-proof-of-WASM-inclusion",
+      "files": [
+        {
+          "source": "docs/third-party-wasm-notices/pdfium/googletest/LICENSE.txt",
+          "outputPath": "pdfium-candidates/googletest/LICENSE.txt",
+          "bytes": 1475,
+          "sha256": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+          "sourceUrl": "https://chromium.googlesource.com/external/github.com/google/googletest.git/+/4fe3307fb2d9f86d19777c7eb0e4809e9694dde7/LICENSE?format=TEXT",
+          "gitBlobSha1": "1941a11f8ce94389160b458927a29ba217542818"
+        }
+      ]
+    },
+    {
+      "name": "freetype",
+      "revision": "b91f75bd02db43b06d634591eb286d3eb0ce3b65",
+      "depsCondition": null,
+      "role": "fixed-source-DEPS-candidate-not-proof-of-WASM-inclusion",
+      "files": [
+        {
+          "source": "docs/third-party-wasm-notices/pdfium/freetype/FTL.TXT.txt",
+          "outputPath": "pdfium-candidates/freetype/FTL.TXT.txt",
+          "bytes": 6743,
+          "sha256": "5a5ee54c5001bbad1cdc1a57cc3dd4c42199b2da09d39c7ee41fab002d02967f",
+          "legacyReviewPath": "docs/third-party-source-licenses/pdfium/deps__freetype__docs__FTL.TXT.txt",
+          "sourceUrl": "https://chromium.googlesource.com/chromium/src/third_party/freetype2/+/b91f75bd02db43b06d634591eb286d3eb0ce3b65/docs/FTL.TXT?format=TEXT"
+        }
+      ]
+    },
+    {
+      "name": "jpeg-turbo",
+      "revision": "6bb85251a8382b5e07f635a981ac685cc5ab5053",
+      "depsCondition": null,
+      "role": "fixed-source-DEPS-candidate-not-proof-of-WASM-inclusion",
+      "files": [
+        {
+          "source": "docs/third-party-wasm-notices/pdfium/jpeg-turbo/LICENSE.md.txt",
+          "outputPath": "pdfium-candidates/jpeg-turbo/LICENSE.md.txt",
+          "bytes": 5620,
+          "sha256": "96f5b328adbb78eeaaec6980d73fd558cb1e4d62560ed615646bc3cf5e532430",
+          "legacyReviewPath": "docs/third-party-source-licenses/pdfium/deps__jpeg-turbo__LICENSE.md.txt",
+          "sourceUrl": "https://chromium.googlesource.com/chromium/deps/libjpeg_turbo/+/6bb85251a8382b5e07f635a981ac685cc5ab5053/LICENSE.md?format=TEXT"
+        },
+        {
+          "source": "docs/third-party-wasm-notices/pdfium/jpeg-turbo/README.ijg.txt",
+          "outputPath": "pdfium-candidates/jpeg-turbo/README.ijg.txt",
+          "bytes": 12799,
+          "sha256": "75815e3bf6484201a3c3d17a1bbf10f2e8e3237f84df10a2357ea896db2a81d6",
+          "legacyReviewPath": "docs/third-party-source-licenses/pdfium/deps__jpeg-turbo__README.ijg.txt",
+          "sourceUrl": "https://chromium.googlesource.com/chromium/deps/libjpeg_turbo/+/6bb85251a8382b5e07f635a981ac685cc5ab5053/README.ijg?format=TEXT"
+        }
+      ]
+    },
+    {
+      "name": "icu",
+      "revision": "a86a32e67b8d1384b33f8fa48c83a6079b86f8cd",
+      "depsCondition": null,
+      "role": "fixed-source-DEPS-candidate-not-proof-of-WASM-inclusion",
+      "files": [
+        {
+          "source": "docs/third-party-wasm-notices/pdfium/icu/LICENSE.txt",
+          "outputPath": "pdfium-candidates/icu/LICENSE.txt",
+          "bytes": 26487,
+          "sha256": "451167c55c0fa447cc2d5632714f5e3c567fe4f1e1badefab2c1333852198aca",
+          "legacyReviewPath": "docs/third-party-source-licenses/pdfium/deps__icu__LICENSE.txt",
+          "sourceUrl": "https://chromium.googlesource.com/chromium/deps/icu/+/a86a32e67b8d1384b33f8fa48c83a6079b86f8cd/LICENSE?format=TEXT"
+        },
+        {
+          "source": "docs/third-party-wasm-notices/pdfium/icu/license.html.txt",
+          "outputPath": "pdfium-candidates/icu/license.html.txt",
+          "bytes": 622,
+          "sha256": "c62d7697c03979f5056d28b338fafc7a1152820f7b379adf4a9d88cd37160f96",
+          "legacyReviewPath": "docs/third-party-source-licenses/pdfium/deps__icu__license.html.txt",
+          "sourceUrl": "https://chromium.googlesource.com/chromium/deps/icu/+/a86a32e67b8d1384b33f8fa48c83a6079b86f8cd/license.html?format=TEXT"
+        }
+      ]
+    }
+  ],
+  "credits": {
+    "source": "docs/third-party-wasm-notices/pdfium/CANDIDATE-CREDITS.txt",
+    "outputPath": "pdfium-candidates/CANDIDATE-CREDITS.txt",
+    "bytes": 1054,
+    "sha256": "680aade3ef73959d600fe4fe82609622878a233937206262efe56b77249ee8da",
+    "role": "conditional-acknowledgment-draft-not-final-product-claim"
+  },
+  "originalCount": 9,
+  "artifactCount": 10,
+  "dragonboxRevisionComparison": [
+    {
+      "readmeRevision": "6c7c925b571d54486b9ffae8d9d18a822801cbda",
+      "depsRevision": "beeeef91cf6fef89a4d4ba5e95d47ca64ccb3a44",
+      "path": "LICENSE-Apache2-LLVM",
+      "url": "https://raw.githubusercontent.com/jk-jeon/dragonbox/6c7c925b571d54486b9ffae8d9d18a822801cbda/LICENSE-Apache2-LLVM",
+      "sha256": "9e45e856bedccee9f67254082ca11851d954de2fed7448c4bed19ad9aab99a91",
+      "matchesDepsOriginal": true
+    },
+    {
+      "readmeRevision": "6c7c925b571d54486b9ffae8d9d18a822801cbda",
+      "depsRevision": "beeeef91cf6fef89a4d4ba5e95d47ca64ccb3a44",
+      "path": "LICENSE-Boost",
+      "url": "https://raw.githubusercontent.com/jk-jeon/dragonbox/6c7c925b571d54486b9ffae8d9d18a822801cbda/LICENSE-Boost",
+      "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566",
+      "matchesDepsOriginal": true
+    }
+  ],
+  "conditionalRequirements": {
+    "cpu_features": "Full LICENSE includes Apache and Android BSD-style text; do not omit appended section",
+    "dragonbox": "Retain Apache-with-LLVM-Exception and Boost original alternatives; do not strip LLVM exception or assume both applied as AND",
+    "googletest": "Retain BSD-style rights/conditions; do not use names to endorse",
+    "freetype": "If FTL applies: preserve source notices/change information, binary documentation acknowledgment; verify year/exception scope",
+    "jpeg-turbo": "If IJG/libjpeg applies: binary IJG acknowledgment; TurboJPEG use may add Modified BSD notice; preserve originals and changes",
+    "icu": "Retain full composite original notices; do not reduce to a single MIT statement"
+  },
+  "scope": "Conservative preparation materials from fixed source/DEPS; actual published-WASM membership and fulfillment remain unproven"
+}

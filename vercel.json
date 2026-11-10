@@ -3,6 +3,7 @@
   "git": {
     "deploymentEnabled": {
       "main": false,
+      "codex/pdfium-license-followup": false,
       "codex/borrowed-source-license-review": false,
       "codex/distribution-internal-notices": false,
       "codex/distribution-pako-notices": false,
