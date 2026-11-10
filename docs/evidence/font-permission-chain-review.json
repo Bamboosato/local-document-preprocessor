@@ -1,0 +1,139 @@
+{
+  "schema": 1,
+  "date": "2026-11-10",
+  "baseCommit": "26470b9f6471df4edadd6e1e3dc47da83bd53e3d",
+  "scope": "Static font/container observations and primary-source permission conditions; not a complete legal chain or release approval",
+  "pdfiumWasmSha256": "c0af5a6aca30d7e54a149c3a68e317116ca906d6edc28fd3318b12c7d9478ac8",
+  "fonts": [
+    {
+      "name": "FoxitSansMM",
+      "sourceUrl": "https://raw.githubusercontent.com/embedpdf/runtime/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/core/fxge/fontdata/chromefontdata/FoxitSansMM.cpp",
+      "sourceSha256": "4ef293af20b2c9fd1fa3233d45a3efc20fdd0033388bac198f29a24b6682c868",
+      "wasmOffset": 3245920,
+      "pfb": {
+        "bytes": 66919,
+        "sha256": "ced6f6742bf591dacae1cc540792b163b6bedba4b0beafdcb4f3d7b9ad226b72",
+        "segments": [
+          {
+            "kind": 1,
+            "offset": 6,
+            "bytes": 10706,
+            "sha256": "c1a7ec6bc38bb5c2588abd4352b49a5a6876d2ba58eac16e8901112c177ec2aa",
+            "type1Header": true,
+            "blankFontInfoNoticeObserved": true,
+            "adobeCopyrightOffset": 5368,
+            "makeblendedfont": true,
+            "normalizeDesignVector": true,
+            "convertDesignVector": true,
+            "adobeNoticeBytes": 76,
+            "adobeNoticeSha256": "2a07910337327fcc0c913664c6e060aeead15a3048a77fbe572da4f371ab43fa"
+          },
+          {
+            "kind": 2,
+            "offset": 10718,
+            "bytes": 55661,
+            "sha256": "e0f95084599755421613167bf8b2aa844cb5710e752e355638b4a5b5a35439d5"
+          },
+          {
+            "kind": 1,
+            "offset": 66385,
+            "bytes": 532,
+            "sha256": "b0030046a101986e6c14bb3a80bb6f38c747b7e80a20bf40644a19670ce6a53a",
+            "type1Header": false,
+            "blankFontInfoNoticeObserved": false,
+            "adobeCopyrightOffset": null,
+            "makeblendedfont": false,
+            "normalizeDesignVector": false,
+            "convertDesignVector": false
+          }
+        ],
+        "scope": "PFB framing and cleartext observations only; encrypted sections not interpreted; not proof of grant fulfillment or outline origin"
+      }
+    },
+    {
+      "name": "FoxitSerifMM",
+      "sourceUrl": "https://raw.githubusercontent.com/embedpdf/runtime/cb29e78f2ba00c9298714d5f4a8bf7765f1e802f/core/fxge/fontdata/chromefontdata/FoxitSerifMM.cpp",
+      "sourceSha256": "1235f3f04b1ca78c8a1244cf858a556428a8491e1f4d1fb707e948508837da09",
+      "wasmOffset": 3312839,
+      "pfb": {
+        "bytes": 113417,
+        "sha256": "24b32eaeaf795e341e3818665062d3fdc2e06787686618a877944b6515746a46",
+        "segments": [
+          {
+            "kind": 1,
+            "offset": 6,
+            "bytes": 10710,
+            "sha256": "78b6e050ed922b520c58a0830e8024ab10c2e5768cc390ccdfe6f845ebcc0f40",
+            "type1Header": true,
+            "blankFontInfoNoticeObserved": true,
+            "adobeCopyrightOffset": 5372,
+            "makeblendedfont": true,
+            "normalizeDesignVector": true,
+            "convertDesignVector": true,
+            "adobeNoticeBytes": 76,
+            "adobeNoticeSha256": "2a07910337327fcc0c913664c6e060aeead15a3048a77fbe572da4f371ab43fa"
+          },
+          {
+            "kind": 2,
+            "offset": 10722,
+            "bytes": 102155,
+            "sha256": "e81a59cab8e08f545aad87b0e86feb2e4b447b45bc7fd1114070c6889cebcae3"
+          },
+          {
+            "kind": 1,
+            "offset": 112883,
+            "bytes": 532,
+            "sha256": "b0030046a101986e6c14bb3a80bb6f38c747b7e80a20bf40644a19670ce6a53a",
+            "type1Header": false,
+            "blankFontInfoNoticeObserved": false,
+            "adobeCopyrightOffset": null,
+            "makeblendedfont": false,
+            "normalizeDesignVector": false,
+            "convertDesignVector": false
+          }
+        ],
+        "scope": "PFB framing and cleartext observations only; encrypted sections not interpreted; not proof of grant fulfillment or outline origin"
+      }
+    }
+  ],
+  "adobePrimary": {
+    "repository": "https://github.com/adobe-type-tools/font-tech-notes",
+    "commit": "eadd3b3ec80d0f3404d40b95cd5315453aa88c73",
+    "url": "https://raw.githubusercontent.com/adobe-type-tools/font-tech-notes/eadd3b3ec80d0f3404d40b95cd5315453aa88c73/pdfs/5015.Type1_Supp.pdf",
+    "bytes": 231862,
+    "sha256": "1f56c69e80c4ee04e02c5b04944fda7f06a84a526947fa7c13a8a8b5932f7227",
+    "printedAndPdfPage": 35,
+    "visualPageChecked": true,
+    "edition": "Type 1 Font Format Supplement, 15 May 1994",
+    "conditionsParaphrased": [
+      "Use in Type 1 font programs",
+      "Code must remain as in the document",
+      "Copyright notice must remain intact",
+      "Character outlines must neither be copied nor derived from an Adobe font program"
+    ],
+    "conditionsStatus": {
+      "type1Container": "observed in two PFB cleartext headers",
+      "codeUnchanged": "unresolved: whole procedure comparison against source original, with comments and font-specific parameters distinguished",
+      "copyright": "matching embedded 1990-1994 Adobe/All Rights Reserved lines retained; exact condition interpretation not finalized",
+      "outlineOrigin": "unresolved; Foxit source attribution alone does not independently establish outline lineage"
+    },
+    "documentLicense": {
+      "url": "https://raw.githubusercontent.com/adobe-type-tools/font-tech-notes/eadd3b3ec80d0f3404d40b95cd5315453aa88c73/LICENSE.md",
+      "sha256": "a91cd2fa350f28986ff73036e7bb546219bf2b32554e5d79562c824a799ba460",
+      "label": "CC-BY-ND-4.0 document license, not assumed to override the specific code permission"
+    }
+  },
+  "notice": {
+    "source": "docs/third-party-wasm-notices/confirmed-data/PDFIUM-MM-ADOBE-COPYRIGHT.txt",
+    "outputPath": "wasm-data/PDFIUM-MM-ADOBE-COPYRIGHT.txt",
+    "label": "MMフォント内のAdobe著作権表示（許諾条件確認中）",
+    "bytes": 76,
+    "sha256": "2a07910337327fcc0c913664c6e060aeead15a3048a77fbe572da4f371ab43fa"
+  },
+  "publicationDecision": "hold until MM-specific applicable permission and outline lineage are resolved; notice reproduction alone is insufficient",
+  "neededEvidence": [
+    "Authoritative statement for exact two font/program hashes and outline origins",
+    "Applicable grant for any changes to the embedded Adobe procedures, or documented alternate basis",
+    "Confirmed scope and final original/notice provision; no provider messages sent"
+  ]
+}

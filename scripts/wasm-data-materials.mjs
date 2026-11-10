@@ -5,6 +5,7 @@ export async function verifyWasmDataMaterials(project=root){
   const record=JSON.parse(await readFile(new URL('docs/evidence/wasm-data-notice-materials.json',root)));
   const evidence=JSON.parse(await readFile(new URL('docs/evidence/wasm-data-inclusion-review.json',root)));
   const published=JSON.parse(await readFile(new URL('docs/evidence/json-published-wasm-correspondence.json',root)));
+  const fontChain=JSON.parse(await readFile(new URL('docs/evidence/font-permission-chain-review.json',root)));
   for(const [key,path,blobs] of [
     ['anydoc','node_modules/@firecrawl/anydoc-wasm/anydoc_wasm_bg.wasm',[...evidence.cmapSource.blobs,evidence.cmapSource.license]],
     ['pdfium','node_modules/@embedpdf/pdfium/dist/pdfium.wasm',evidence.fontBlobs],
@@ -24,15 +25,23 @@ export async function verifyWasmDataMaterials(project=root){
       const blob=evidence.cmapSource.fragmentedBlob;
       if(hash(memory.subarray(blob.memoryOffset,blob.memoryOffset+blob.bytes))!==blob.sha256)throw Error('WASM split data blob mismatch');
     }
+    if(key==='pdfium'){
+      if(fontChain.pdfiumWasmSha256!==expected.sha256||fontChain.fonts.length!==2)throw Error('MM font reference mismatch');
+      for(const f of fontChain.fonts){
+        const raw=bytes.subarray(f.wasmOffset,f.wasmOffset+f.pfb.bytes);
+        if(hash(raw)!==f.pfb.sha256||!evidence.fontBlobs.some(b=>b.wasmOffset===f.wasmOffset&&b.fontSha256===f.pfb.sha256))throw Error('MM font data mismatch');
+      }
+    }
   }
   const files=[];
-  for(const item of record.artifacts){
+  for(const item of [...record.artifacts,fontChain.notice]){
     if(!item.source.startsWith('docs/third-party-wasm-notices/confirmed-data/')||!item.outputPath.startsWith('wasm-data/')||[item.source,item.outputPath].some(p=>p.includes('..')||/[\\:]/.test(p)))throw Error('WASM data notice unsafe path');
     const bytes=await readFile(new URL(item.source,project));
     if(bytes.length!==item.bytes||hash(bytes)!==item.sha256)throw Error('WASM data notice hash mismatch');
+    if(item===fontChain.notice&&fontChain.fonts.some(f=>!f.pfb.segments.some(s=>s.adobeNoticeSha256===item.sha256&&s.adobeNoticeBytes===item.bytes)))throw Error('MM embedded notice mismatch');
     files.push({...item,bytes});
   }
-  if(files.length!==2||new Set(files.map(f=>f.outputPath)).size!==2)throw Error('WASM data notice count mismatch');
+  if(files.length!==3||new Set(files.map(f=>f.outputPath)).size!==3)throw Error('WASM data notice count mismatch');
   return {record,files};
 }
 export async function copyWasmDataMaterials(output){

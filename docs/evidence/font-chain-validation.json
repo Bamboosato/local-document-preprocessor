@@ -1,0 +1,123 @@
+{
+  "schema": 1,
+  "date": "2026-11-10",
+  "baseCommit": "26470b9f6471df4edadd6e1e3dc47da83bd53e3d",
+  "mergedPR": 44,
+  "mergedHead": "86ce61ca4e939cd70c9017c72f9047ecc7087b17",
+  "preMergeCI": {
+    "run": 42777893050,
+    "bothJobs": "success",
+    "unresolvedReviews": 0
+  },
+  "evidenceHashesCanonicalLF": {
+    "docs/evidence/font-permission-chain-review.json": "d6631eafa20a76f70416fd75ea903e4a4c3d8a72977e557a35a70f65df690960",
+    "docs/evidence/pdfjs-file-revision-review.json": "5d1043b72268f3f8706b1aa132a72c9a414f230f4bcee0e0cf56369e14578332"
+  },
+  "validation": {
+    "newPythonCases": 4,
+    "combinedOfflineGuards": 27,
+    "licenseCases": 4,
+    "historyInputs": 79,
+    "historyAcquisitionFailures": 0,
+    "selectedSevenClosuresMatchEvents": 2,
+    "selectedSevenPlusGlyphNoticeEvents": 1,
+    "contentReferenceOriginals": "PDF.js LICENSE/AUTHORS and base64 LICENSE-MIT match existing provision",
+    "MMFonts": 2,
+    "MMNoticeBytes": 76,
+    "fontReplay": "passed; static PFB framing, no PostScript execution or outline decryption",
+    "build": "passed",
+    "distributionCheck": "passed",
+    "targetedPWA": {
+      "startTime": "2026-11-10T08:28:32.286Z",
+      "duration": 10874.646999999999,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "generation": "db9addd002390ea6e80d4bae",
+    "manifestAssets": 241,
+    "httpAssets": 243,
+    "httpFailures": 0,
+    "rootProductionAuditVulnerabilities": 0,
+    "rootFullAuditVulnerabilities": 0,
+    "tinyAuditTargets": 67,
+    "tinyAuditVulnerabilities": 0,
+    "documentation": {
+      "documents": 87,
+      "localLinks": 443,
+      "issues": 0
+    }
+  },
+  "environment": {
+    "os": "Windows",
+    "node": "24.22.1",
+    "npm": "11.19.1",
+    "python": "3.14",
+    "chromeHeadless": "156.0.8078.81",
+    "pythonTemporaryDirectory": "workspace tmp/python-test-temp",
+    "browserExecution": "sequential"
+  },
+  "testFixtureCorrection": {
+    "initialIssue": "WASM mutation test used paths[2]; adding a third notice changed its mutation target",
+    "classification": "test data positional dependency",
+    "detection": "Expected binary mismatch did not match notice hash mismatch",
+    "fix": "Select the exact anydoc WASM path; keep strict error expectation",
+    "result": "4 Node license cases passed after correction"
+  },
+  "unchangedRuntimeAssets": [
+    {
+      "path": "dist/assets/anydoc_wasm_bg-BGHlcte-.wasm",
+      "bytes": 6485379,
+      "sha256": "409e45e75062df06bed445c352ffddaf3bae15ff376f5d514d45f4891debd09e"
+    },
+    {
+      "path": "dist/assets/converter.worker-ogDQCSzr.js",
+      "bytes": 752588,
+      "sha256": "8ac5bc078bb82a53aa973f30523edda5257931ab5232e452b58a5ccbe641ab41"
+    },
+    {
+      "path": "dist/assets/index-_-tn7U5c.css",
+      "bytes": 15304,
+      "sha256": "86d7d2e6fb682593d0f2fc655cde050cf96179e64d8a66c944e18d7572b75937"
+    },
+    {
+      "path": "dist/assets/index-D7qOaFf2.js",
+      "bytes": 423936,
+      "sha256": "eda64058c814b3cc82594a29dcb40c92bb1ae6c622b0eadec5689508129df81c"
+    },
+    {
+      "path": "dist/assets/json.worker-CAJiq6hk.js",
+      "bytes": 168140,
+      "sha256": "6e75d910874ee7f850cdd0a681e700018eb4068ef81b3aebfa015d09e3cf9aca"
+    },
+    {
+      "path": "dist/assets/mermaid.tiny-B1X2HQuM.js",
+      "bytes": 2852578,
+      "sha256": "c41f5236091b83f524c4940f97a16b2b14a76f21ff84aea4fd6b66421d8a2a9a"
+    },
+    {
+      "path": "dist/assets/pdfium-RAgkpwfK.wasm",
+      "bytes": 4633788,
+      "sha256": "c0af5a6aca30d7e54a149c3a68e317116ca906d6edc28fd3318b12c7d9478ac8"
+    }
+  ],
+  "testedSourceSha256CanonicalLF": {
+    "scripts/review_font_chain.py": "ac23b2496700161f62daf1067c5bcea7eed33319d3801bc6ffc8a82e028e4ca2",
+    "scripts/review_pdfjs_history.py": "db25b369809e2a1131898a0efc24525717405672ab5f4ceecf0542f901f6757c",
+    "scripts/test_font_license_chain.py": "fd5723b0643c596770f667b9bba561b25f00c0171313ef76a9cd023b3c0ac4c9",
+    "scripts/verify_font_chain_evidence.py": "e37477abd6297497035d739590b6de7f605326905fa79619c93431133ab37fa5",
+    "scripts/wasm-data-materials.mjs": "48bddcd7e8e3c37a1a4011a55aadd172e59866b7913ee8ce924152aeeabfd1bb",
+    "scripts/wasm-data-materials.test.mjs": "9a8eb87a0a88321346eb1a08d20af3ee0483ec19947cb9c95ceff88275d2a1d9",
+    "scripts/check-dist.mjs": "82eec18bc4f4aed26036aaa3fe911d3b495c5d00282106bc58d23589d1cc95e2",
+    "tests/e2e/pwa.spec.ts": "1b35bf9dfa37c4d4448ca3e10e65e7516b006aa806a5fd4c5613b629d12921c4",
+    ".github/workflows/ci.yml": "0f1c62a136922cb54c6bd2382f2f0d50c73d92677e18c64b1942de18208427aa"
+  },
+  "limits": [
+    "Actual borrow tag/global checkout unrecorded; file-content correspondence is narrower",
+    "MM grant fulfillment, code changes and outline lineage unresolved; no release approval",
+    "Other WASM dependencies and formal fulfillment remain separate",
+    "No local full/cross-browser E2E, actual delivery or device acceptance; macOS/iOS excluded",
+    "No new PR merge, archive publication/attachment, provider contact or deployment"
+  ]
+}

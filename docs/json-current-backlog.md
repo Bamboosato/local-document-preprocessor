@@ -1,5 +1,6 @@
 # JSON本体接続の現行残件と旧方式のクローズ
 
+2026-11-10 PR #44マージ後: main `26470b9`。[内容版とフォント許諾](font-license-chain-review.md)でPDF.js参照内容版6adeabbb…と既存原文/AUTHORSの一致を確認。MM内AdobeのType 1処理条件を原典で特定し、76 bytesの表示を追加。処理の原典保持・輪郭由来、その他WASM条件の判定は公開前の残件。実borrow checkoutの未記録と原文対応の不足は区別する。
 2026-11-10 PR #43マージ後: main `16e2d1d`。最新の[WASM内包・正式表示の確認](wasm-inclusion-attribution-review.md)でanydocの34組のpath痕跡、168 CMap（1個は分割配置像）、Adobe許諾文とPDFiumの16フォントデータを照合。借用コード系列と固有の原文導線を補強したが、実checkout・全コード内包・フォントの許諾連鎖・最終配布条件は未完。
 2026-11-10 PR #42マージ後: main `03fd826` に借用元/WASM93候補の照合を反映。[実借用版・条件選択・PDFium追加原文](pdfium-license-followup.md)で未収集3領域の4原文と固有条件の提供準備を補完。fnv/rangemapは両条件を満たす準備へ切替。実借用版の一意性・実内包・最終履行は未完として保持する。
 

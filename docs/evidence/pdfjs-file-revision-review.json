@@ -1,0 +1,1151 @@
+{
+  "method": "Selected seven ES5 closures, lexical normalization and only the explicit FlateStream assignment delta; no unique borrow-event proof",
+  "query": "https://api.github.com/repos/mozilla/pdf.js/commits?path=src/core/stream.js&until=2019-05-22T00%3A48%3A26Z&per_page=100",
+  "results": [
+    {
+      "commit": "6adeabbb66b8acf63dbd4e52f56a8cedfcfe21a4",
+      "date": "2018-09-12T20:59:56Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/6adeabbb66b8acf63dbd4e52f56a8cedfcfe21a4/src/core/stream.js",
+      "sha256": "c997a3d4c44736d74eb4855b08857b5f7ccec38b16c0930a3e8ca335ac99da64",
+      "bytes": 40056,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "DecodeStream",
+        "FlateStream",
+        "LZWStream",
+        "RunLengthStream",
+        "Stream"
+      ],
+      "matchCount": 7,
+      "glyphCogNotice": true
+    },
+    {
+      "commit": "32bfa55d981909f764720120dcbb5a2426ad9873",
+      "date": "2018-07-26T11:42:59Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/32bfa55d981909f764720120dcbb5a2426ad9873/src/core/stream.js",
+      "sha256": "1608bd7b4a71039e7a2e5c2d0ddd111dceb1e7e99773ae760a6262553b4da805",
+      "bytes": 39841,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "DecodeStream",
+        "FlateStream",
+        "LZWStream",
+        "RunLengthStream",
+        "Stream"
+      ],
+      "matchCount": 7,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "32367c596803cff992401f1a69d7ae7b7772a19f",
+      "date": "2018-06-12T09:01:32Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/32367c596803cff992401f1a69d7ae7b7772a19f/src/core/stream.js",
+      "sha256": "2ab9fde35f4d7733647d8c4b7baabfa7ef30f4271a3e197cfdb2a3d0477ca3e3",
+      "bytes": 39518,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "FlateStream",
+        "LZWStream",
+        "RunLengthStream",
+        "Stream"
+      ],
+      "matchCount": 6,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "903bad1906540e7202343483197f45bcd3a10458",
+      "date": "2018-06-10T13:24:09Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/903bad1906540e7202343483197f45bcd3a10458/src/core/stream.js",
+      "sha256": "c906076d9d619edd822add038195b1ff440c9f7a056b7dad97f9478c1c64a140",
+      "bytes": 39034,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "FlateStream",
+        "LZWStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 5,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "36593d6bbc563a0892f94888d2b244f711ef3cef",
+      "date": "2017-11-11T10:22:16Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/36593d6bbc563a0892f94888d2b244f711ef3cef/src/core/stream.js",
+      "sha256": "58c7958d3b79a9fe3b552b9d91d1d93e58be4829f32c3fa05311c25832b39e77",
+      "bytes": 39052,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "FlateStream",
+        "LZWStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 5,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "5e627810e4153d5a940e704b3b72bf59dc37ccf9",
+      "date": "2017-10-26T09:01:13Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/5e627810e4153d5a940e704b3b72bf59dc37ccf9/src/core/stream.js",
+      "sha256": "84b837e6c18c6c0ec2031e2e7a1a65db0c6729fdaded8cc492196045332aaa1f",
+      "bytes": 44441,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "FlateStream",
+        "LZWStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 5,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "bb35095083e3b930b9a42a2c970fb8b1fe4ce042",
+      "date": "2017-10-24T10:00:40Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/bb35095083e3b930b9a42a2c970fb8b1fe4ce042/src/core/stream.js",
+      "sha256": "bb6124329eacfbf0c35b0243d97fd2c4f4c8ea69da6db9211b64b35b9fe9d54f",
+      "bytes": 44540,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "FlateStream",
+        "LZWStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 5,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "3d99b8d706749e1f6b56bf2c70ac519815965c36",
+      "date": "2017-09-19T19:19:40Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/3d99b8d706749e1f6b56bf2c70ac519815965c36/src/core/stream.js",
+      "sha256": "710939d855c021c64cf9abd340282963ea6914e8d69c2113da47050961131438",
+      "bytes": 83759,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "FlateStream",
+        "LZWStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 5,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "d75a497a6b55897bfcc1e806a78e25ad55862cbb",
+      "date": "2017-09-18T20:24:25Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/d75a497a6b55897bfcc1e806a78e25ad55862cbb/src/core/stream.js",
+      "sha256": "226cfce26f36bb43a9d3d12f9e6c6f93c4434080cac1bfe0889c745897d429b9",
+      "bytes": 83649,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "FlateStream",
+        "LZWStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 5,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "eece66fa3e7062c62209bb491d2b1be45f8c02e9",
+      "date": "2017-09-15T21:02:16Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/eece66fa3e7062c62209bb491d2b1be45f8c02e9/src/core/stream.js",
+      "sha256": "83b5f588478bfa212f123620c9b6a7db1191de061fdee7525dcbce3e3e30476d",
+      "bytes": 83147,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "FlateStream",
+        "LZWStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 5,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "cfb4955a92e6882ce9ff925181312ae624d7af1d",
+      "date": "2017-09-01T18:27:13Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/cfb4955a92e6882ce9ff925181312ae624d7af1d/src/core/stream.js",
+      "sha256": "3854d7219d6123eceaae43d619bc0b119e920d24019cc7482df0e9b759a9925e",
+      "bytes": 83123,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "FlateStream",
+        "LZWStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 5,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "11408da340ada9c0af32ea22a769d7f4b9eeb6a8",
+      "date": "2017-09-01T14:52:50Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/11408da340ada9c0af32ea22a769d7f4b9eeb6a8/src/core/stream.js",
+      "sha256": "66e14d0a8d2f1c199605408efbe30715bf3a07c11d625e52607859b44fddc056",
+      "bytes": 83126,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "FlateStream",
+        "LZWStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 5,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "f6636d6b19442ffbc59ee8df8383f046c886c622",
+      "date": "2017-08-16T11:24:28Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/f6636d6b19442ffbc59ee8df8383f046c886c622/src/core/stream.js",
+      "sha256": "3dd6ef05531caef5553acca4728a704a142de6b837c487368ebd1906c2ec3775",
+      "bytes": 83122,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "FlateStream",
+        "LZWStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 5,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "d028c262102587a5374fc2a20a976c92d283438c",
+      "date": "2017-07-07T14:40:24Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/d028c262102587a5374fc2a20a976c92d283438c/src/core/stream.js",
+      "sha256": "2e22fe92711e2a7a00c6c8b6a1ae4100123b24f0e21bcd75515755d31247f2cd",
+      "bytes": 83115,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "FlateStream",
+        "LZWStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 5,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "a8c87f8019aed3e9fcc5a7c2733ea3b8aa33e59a",
+      "date": "2017-06-02T09:20:19Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/a8c87f8019aed3e9fcc5a7c2733ea3b8aa33e59a/src/core/stream.js",
+      "sha256": "2f27e73b71e14aa32bf60ac7fa973dbd08f782b979d7c118c631e83c35ec3f99",
+      "bytes": 82867,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "LZWStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 4,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "982b6aa65bcd2f17fe58b9006ac7fadbdda6b8b4",
+      "date": "2017-05-30T20:06:21Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/982b6aa65bcd2f17fe58b9006ac7fadbdda6b8b4/src/core/stream.js",
+      "sha256": "f1ae38ec635b51c7e42f95e1c92fce870174b6940c1e6310cc64356bf94fe388",
+      "bytes": 82856,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 3,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "afc74b0178202bbaa5a9d7527059666245df6641",
+      "date": "2017-04-27T15:29:40Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/afc74b0178202bbaa5a9d7527059666245df6641/src/core/stream.js",
+      "sha256": "2adca0a6b28689df53cfc1dd7c6441ec6da0c5006dc2e336a8b101298da0d2e8",
+      "bytes": 84146,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 3,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "6f0cf8c4cb15debe3616de6ddb9e642ff424ff23",
+      "date": "2017-02-01T22:50:23Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/6f0cf8c4cb15debe3616de6ddb9e642ff424ff23/src/core/stream.js",
+      "sha256": "c225081a9a2c10d7c32951ae81c8068ba2b03ddb911a1c3b18b34e25be225df0",
+      "bytes": 84159,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 3,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "f7d99ccc26cd35225102ea764bf3cb49cf702dc4",
+      "date": "2017-02-01T10:38:11Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/f7d99ccc26cd35225102ea764bf3cb49cf702dc4/src/core/stream.js",
+      "sha256": "abad83e2019949035ec860876246aeaf9700b3bc8e07be1a9020a82ce9e9d540",
+      "bytes": 84187,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 3,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "52e0f519172df020042a9e4cde5c228f654a7f42",
+      "date": "2017-01-29T22:23:17Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/52e0f519172df020042a9e4cde5c228f654a7f42/src/core/stream.js",
+      "sha256": "0719535baa131fd8aa3ac6d68813a068d4de9ed62b03f5ec27c64d50ae810984",
+      "bytes": 84178,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 3,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "493853031b4ad6d372c36555819afa7d3ebdbb23",
+      "date": "2017-01-10T16:42:43Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/493853031b4ad6d372c36555819afa7d3ebdbb23/src/core/stream.js",
+      "sha256": "33c2db011fb71a466dfed5a04c2ecc89785912fb4ec44daee73283930118c65e",
+      "bytes": 84206,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 3,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "c8f83d6487a1a4080c7373ad78d16811cfafa045",
+      "date": "2016-10-15T10:09:51Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/c8f83d6487a1a4080c7373ad78d16811cfafa045/src/core/stream.js",
+      "sha256": "9fe508c7c1913692cc13f36e0759298d5325c2697be46be4cac7d64d32832155",
+      "bytes": 84193,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 3,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "116ba19dd90c56d729c0d1b163adcece9c291296",
+      "date": "2016-09-26T19:55:43Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/116ba19dd90c56d729c0d1b163adcece9c291296/src/core/stream.js",
+      "sha256": "012482c1d762ec622bea826674d0f55517da5841dca80882314af2b95cb41828",
+      "bytes": 84518,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 3,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "a35773ec8c2e547e71370db6de2515592267bbc9",
+      "date": "2016-09-04T14:28:23Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/a35773ec8c2e547e71370db6de2515592267bbc9/src/core/stream.js",
+      "sha256": "a6afb02cef34f5e048d17f37b556dced3221b035f2ebfbb08652671b61a26fa0",
+      "bytes": 84200,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 3,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "a36a946976168226593f8b09f7e50404f8ad36d8",
+      "date": "2016-06-06T07:11:33Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/a36a946976168226593f8b09f7e50404f8ad36d8/src/core/stream.js",
+      "sha256": "fc9bc62c4293ade22b18c0d896de1096809a5caa12520690fbb85bf87fc47c72",
+      "bytes": 84319,
+      "found": 7,
+      "matches": [
+        "Ascii85Stream",
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 3,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "6111c17c8aa3e196743aa34185a6e9330b37aa53",
+      "date": "2016-05-05T17:42:57Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/6111c17c8aa3e196743aa34185a6e9330b37aa53/src/core/stream.js",
+      "sha256": "5a3114ce6589e8d8c25df4e8152bd481646362bc2eb266db7a39a768c429539e",
+      "bytes": 84462,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "079b563e2d2f998b970b53e32755de89f6ed1684",
+      "date": "2016-04-15T14:30:18Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/079b563e2d2f998b970b53e32755de89f6ed1684/src/core/stream.js",
+      "sha256": "3da21e3c895757912e50b3a79887c3bc283c89ac33cf72c3b4a471b89cea0e2d",
+      "bytes": 84509,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "35cbf74b129c7d2672ec0954978539d5a29a9096",
+      "date": "2016-04-01T12:36:16Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/35cbf74b129c7d2672ec0954978539d5a29a9096/src/core/stream.js",
+      "sha256": "6046abb665c7129387c8516cc0d6160566c9b08a05acad25d3cd01fca63b9aa2",
+      "bytes": 84405,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "df7afcf004c407cc9488a5120425b62d22aaecd4",
+      "date": "2016-03-25T20:19:43Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/df7afcf004c407cc9488a5120425b62d22aaecd4/src/core/stream.js",
+      "sha256": "de172cfdcaba719ee6399f19c77a7b178e989b042712a848a024a701e9bfd26a",
+      "bytes": 85574,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "bda5e6235e9a8309ace5c13c0fb557b3fd657709",
+      "date": "2016-03-24T00:24:37Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/bda5e6235e9a8309ace5c13c0fb557b3fd657709/src/core/stream.js",
+      "sha256": "722b57f695b1003b02032bb921a7613501d27f3cca49865ace787a733450d1d8",
+      "bytes": 85668,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "6038c236b24b7d60181ee4a3df0ec43de5ba2900",
+      "date": "2016-03-22T19:06:01Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/6038c236b24b7d60181ee4a3df0ec43de5ba2900/src/core/stream.js",
+      "sha256": "4d7fe7f484d55dd4b7fab85a119bfb7109a435adf1b5920618984c05b0d71874",
+      "bytes": 85518,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "6b60c8f4dbd87233ccf5ad7e0fca617fd02dca9c",
+      "date": "2015-12-15T19:24:39Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/6b60c8f4dbd87233ccf5ad7e0fca617fd02dca9c/src/core/stream.js",
+      "sha256": "b41a6c9875a8e533a030259c5aff617db2c718418ddaa86c044674a328c958ea",
+      "bytes": 85612,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "a2ba1b81894f65bab35a5126d290bf4282d27e62",
+      "date": "2015-11-14T02:02:18Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/a2ba1b81894f65bab35a5126d290bf4282d27e62/src/core/stream.js",
+      "sha256": "05ea0aa4b858485164033f99812ce41d5bbe7e19846cf0ed56b1a5f780bc9d68",
+      "bytes": 83432,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "385e2e5aaf07df8c5e581fbf7668947e5f3660a9",
+      "date": "2015-07-21T10:23:07Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/385e2e5aaf07df8c5e581fbf7668947e5f3660a9/src/core/stream.js",
+      "sha256": "2a653f348a8f16272e1c1df2ae9000b0a933835c215152931a4513722953d998",
+      "bytes": 83581,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "a1743d9952157db21f36a5cb0b77c3bd05d3d211",
+      "date": "2015-05-29T10:58:17Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/a1743d9952157db21f36a5cb0b77c3bd05d3d211/src/core/stream.js",
+      "sha256": "b60deab37e23574918e4cd380d26f4f894e02bcc41588e605e7659afe833e279",
+      "bytes": 83477,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "dd4fc29cbc88760b303375773f3b0aeea32ac1f9",
+      "date": "2015-05-15T19:40:34Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/dd4fc29cbc88760b303375773f3b0aeea32ac1f9/src/core/stream.js",
+      "sha256": "4d664adddab3991f061c5b32f3dfe51af1e951e04e00f5b2eeba453e1f5bd69d",
+      "bytes": 84085,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "1bd952f897d160f0ec55dfc36495004ff1dff489",
+      "date": "2015-04-17T14:33:04Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/1bd952f897d160f0ec55dfc36495004ff1dff489/src/core/stream.js",
+      "sha256": "b60deab37e23574918e4cd380d26f4f894e02bcc41588e605e7659afe833e279",
+      "bytes": 83477,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "27e3558a41c8f891539aab32b9015f5fbaef6402",
+      "date": "2015-02-13T20:29:00Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/27e3558a41c8f891539aab32b9015f5fbaef6402/src/core/stream.js",
+      "sha256": "314c3ccf3532782635cb3b15297dc866df0bc6b5dab2c66dbd08bb71b303bcfe",
+      "bytes": 83483,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "6dfc73a5da34197e13ea1ca120be0880bfe2b8c1",
+      "date": "2015-01-10T22:55:54Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/6dfc73a5da34197e13ea1ca120be0880bfe2b8c1/src/core/stream.js",
+      "sha256": "e5f08c223d6966bc8902392f61bf398f7486e3422bd3906f0c9852be92cdd336",
+      "bytes": 83494,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "b835ef425e8035c282fc4465ad71f282502a0698",
+      "date": "2014-12-29T23:07:35Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/b835ef425e8035c282fc4465ad71f282502a0698/src/core/stream.js",
+      "sha256": "4ccd5b2f165fb4ea0cbf111ba4db3c4504112fdb00671b244a39a59ec8f871e2",
+      "bytes": 83368,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "3e1b5216ac2722e6b834b1c5dc622ff2e12c8faa",
+      "date": "2014-12-05T16:24:27Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/3e1b5216ac2722e6b834b1c5dc622ff2e12c8faa/src/core/stream.js",
+      "sha256": "a0ded371b419fd46d1ee90a9d19ee50d6e78fa2f61d744ff79a08d4174281d92",
+      "bytes": 83404,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "2d7a34d692a8a26348e27c7dd584729711029f2d",
+      "date": "2014-10-15T20:56:29Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/2d7a34d692a8a26348e27c7dd584729711029f2d/src/core/stream.js",
+      "sha256": "b365ffcd4edc8aa413109dedc8921a9b02b871400cab1ad2198767a6358da03a",
+      "bytes": 83134,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "d1974eae34bce9e275f1a9c3505012513d7aa45e",
+      "date": "2014-09-11T14:42:41Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/d1974eae34bce9e275f1a9c3505012513d7aa45e/src/core/stream.js",
+      "sha256": "d00281062274ccfc54cfb11e992fe8c4406dc4601db68c5a1e6c25259d424111",
+      "bytes": 83117,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "7c044bc30dca9fa9abade16875489cabececbb90",
+      "date": "2014-09-09T19:49:35Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/7c044bc30dca9fa9abade16875489cabececbb90/src/core/stream.js",
+      "sha256": "4430d9a17439131d402664df079f738c1a451ac0ba1c0d0762344f7b2f06d4e8",
+      "bytes": 82855,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "238a5f8a3002719182adf1968e27d80220f8fc34",
+      "date": "2014-08-07T20:07:20Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/238a5f8a3002719182adf1968e27d80220f8fc34/src/core/stream.js",
+      "sha256": "069e7d453938f162a000fd7517fe637943bde43b33334191edea2b5f0ce837ab",
+      "bytes": 82790,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "5cc7d23066de073581659ad823c4c255ef237dce",
+      "date": "2014-08-05T17:08:00Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/5cc7d23066de073581659ad823c4c255ef237dce/src/core/stream.js",
+      "sha256": "e657270268b39d8209c63affcb1958c552173504dec7d5ca054811d968688010",
+      "bytes": 82733,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "4b54d6fd433462761bb58a0b56e657727d7f5274",
+      "date": "2014-08-02T15:59:14Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/4b54d6fd433462761bb58a0b56e657727d7f5274/src/core/stream.js",
+      "sha256": "ec6cc6b22135b0d92029c0d8443a5800e34b1d90e35f5c8fb1e46745d4df0547",
+      "bytes": 82534,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream",
+        "RunLengthStream"
+      ],
+      "matchCount": 2,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "b9501186810dfc461ec3701456ee3f9e13db7cf1",
+      "date": "2014-07-22T19:17:57Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/b9501186810dfc461ec3701456ee3f9e13db7cf1/src/core/stream.js",
+      "sha256": "dc075f90ad240f145c48ec78ff37c8b165ae34a34a0587ff308f872ccff8c8ef",
+      "bytes": 82503,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream"
+      ],
+      "matchCount": 1,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "9c6316fc156b43a437bd109f290200ac68b41e26",
+      "date": "2014-07-18T16:23:49Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/9c6316fc156b43a437bd109f290200ac68b41e26/src/core/stream.js",
+      "sha256": "8eba5cf20a0de7da226977db871b7b47b2722189e178ad60aad4db30cf77094a",
+      "bytes": 82474,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream"
+      ],
+      "matchCount": 1,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "db866945b7650d96c052c184c58856d7df277e5c",
+      "date": "2014-07-03T01:53:21Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/db866945b7650d96c052c184c58856d7df277e5c/src/core/stream.js",
+      "sha256": "dc075f90ad240f145c48ec78ff37c8b165ae34a34a0587ff308f872ccff8c8ef",
+      "bytes": 82503,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream"
+      ],
+      "matchCount": 1,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "fc73e2e17354d5e5682f956da35ad73ccfa3d710",
+      "date": "2014-06-27T07:09:54Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/fc73e2e17354d5e5682f956da35ad73ccfa3d710/src/core/stream.js",
+      "sha256": "53e05e7d199db98baeec4469b9995ccfaee6134d246b4f13ca69eeaab3ba6a9f",
+      "bytes": 82490,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream"
+      ],
+      "matchCount": 1,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "9c072a5d4b7378629db0c118c44a6ce3869f183d",
+      "date": "2014-06-16T20:10:10Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/9c072a5d4b7378629db0c118c44a6ce3869f183d/src/core/stream.js",
+      "sha256": "967738adeef9add3f21b0e9d8f280b9893a52babc173e43663b5d06a90ca8b20",
+      "bytes": 82519,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream"
+      ],
+      "matchCount": 1,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "cff2c3afc109e02cfcc8063f26b2c79ed1314066",
+      "date": "2014-06-10T14:16:12Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/cff2c3afc109e02cfcc8063f26b2c79ed1314066/src/core/stream.js",
+      "sha256": "4bfd3e293a4c48767b8f09fd653667e4de5467aa15265649673100220a2df309",
+      "bytes": 82524,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream"
+      ],
+      "matchCount": 1,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "22a0e7fe65583b73c956080e03067403d4f3a83f",
+      "date": "2014-06-09T18:55:31Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/22a0e7fe65583b73c956080e03067403d4f3a83f/src/core/stream.js",
+      "sha256": "a7b63a6b10c26838209d1007324576b65b082cdc7d5da5068594f1508b65cc1e",
+      "bytes": 82537,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream"
+      ],
+      "matchCount": 1,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "6b411b559db5b26c9a7ff85ace58f95af30c4f8b",
+      "date": "2014-06-04T20:53:46Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/6b411b559db5b26c9a7ff85ace58f95af30c4f8b/src/core/stream.js",
+      "sha256": "2a8ba7b365155324412eb3dbe2bc3217195e472b64c1d9439908b72b4c31241f",
+      "bytes": 82430,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream"
+      ],
+      "matchCount": 1,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "6235e3a61cd3fd91cda5b9fecf3ac2581a82bc86",
+      "date": "2014-06-03T13:51:57Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/6235e3a61cd3fd91cda5b9fecf3ac2581a82bc86/src/core/stream.js",
+      "sha256": "f1d2ab44927df19fbd829e8cbd315ea6cf7f7d5ba1381fe3c5f410045fe03aad",
+      "bytes": 82443,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream"
+      ],
+      "matchCount": 1,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "ea0453f106ecdb98e43bdfb8a0fa2c4cfb009f06",
+      "date": "2014-05-18T19:41:05Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/ea0453f106ecdb98e43bdfb8a0fa2c4cfb009f06/src/core/stream.js",
+      "sha256": "90820dcd66aa76db8d2316abde5c676fe1e206e1ecfdaffa6d43a82776f662c9",
+      "bytes": 81694,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream"
+      ],
+      "matchCount": 1,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "330b99f428bd8cfc8423fd307a1d65ad086d9392",
+      "date": "2014-05-14T15:06:39Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/330b99f428bd8cfc8423fd307a1d65ad086d9392/src/core/stream.js",
+      "sha256": "0e59708beddeea75894fceb4799c3c64e57a39fbd17758ef67a20d91971f97be",
+      "bytes": 81477,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream"
+      ],
+      "matchCount": 1,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "e8f0700bfaa875817f3f460b64435c5b80943e0d",
+      "date": "2014-04-24T13:07:12Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/e8f0700bfaa875817f3f460b64435c5b80943e0d/src/core/stream.js",
+      "sha256": "d908442e1b04a77e10b130fdc67b5de7b11f8820bbd59bea3f91fe6a7ca39a8e",
+      "bytes": 81502,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream"
+      ],
+      "matchCount": 1,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "b06c10cbbd669d964ef9f733204f8dd81223a0bb",
+      "date": "2014-04-16T19:31:16Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/b06c10cbbd669d964ef9f733204f8dd81223a0bb/src/core/stream.js",
+      "sha256": "1e1ddc44305ed3c045ddb877c540affe0465a66f32ba5069b8e5f1f67b1ca3b9",
+      "bytes": 81364,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream"
+      ],
+      "matchCount": 1,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "04602c8a5e95bf6c1d57e94188fb88249a9ad105",
+      "date": "2014-04-16T08:40:04Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/04602c8a5e95bf6c1d57e94188fb88249a9ad105/src/core/stream.js",
+      "sha256": "1274f0d70928fd2e27cfb08fdaff9d2a4cb6633c796c729fa749edcc321a4bb4",
+      "bytes": 81368,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream"
+      ],
+      "matchCount": 1,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "2e97c0d085d708959c632338ac37a50ddedaad38",
+      "date": "2014-04-15T15:10:23Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/2e97c0d085d708959c632338ac37a50ddedaad38/src/core/stream.js",
+      "sha256": "c418962ed4b3e2c2f22989ed14ffed5615dfc97a29f338ab212d535245fcd4cf",
+      "bytes": 82879,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream"
+      ],
+      "matchCount": 1,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "df91acf23951ced605f9020291532d6171e9de19",
+      "date": "2014-04-10T22:41:08Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/df91acf23951ced605f9020291532d6171e9de19/src/core/stream.js",
+      "sha256": "530d82bf01b99508c2d4b50f3a9025e57a33f2457521a7a651018e46983b6737",
+      "bytes": 82890,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream"
+      ],
+      "matchCount": 1,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "31f081ae173497af1c6a6fd6064703bc9e64c622",
+      "date": "2014-03-26T14:07:38Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/31f081ae173497af1c6a6fd6064703bc9e64c622/src/core/stream.js",
+      "sha256": "e47327c281c5fbf63cd1aced80a8174f522ff81f3bac59001f8e19a066418da9",
+      "bytes": 82894,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream"
+      ],
+      "matchCount": 1,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "6883362a844187a1f94ba0eb0bf1e9306b5154fa",
+      "date": "2014-03-22T20:21:01Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/6883362a844187a1f94ba0eb0bf1e9306b5154fa/src/core/stream.js",
+      "sha256": "4f46c7caba84e057a959ce3a6f17305fb6f130e912d7f6677ad29d95ead1e235",
+      "bytes": 82894,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream"
+      ],
+      "matchCount": 1,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "6a75e453093a750d65ab867ce304e2e504ab35e1",
+      "date": "2014-03-14T05:15:05Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/6a75e453093a750d65ab867ce304e2e504ab35e1/src/core/stream.js",
+      "sha256": "019ba14c4e1e32009db97a108fb95edbf45bbf5d24c5eafaf78bf70932935d10",
+      "bytes": 81842,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream"
+      ],
+      "matchCount": 1,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "b3024db67708eee5b9106708406deae87f525eda",
+      "date": "2014-03-13T09:06:58Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/b3024db67708eee5b9106708406deae87f525eda/src/core/stream.js",
+      "sha256": "6180f4dc6b847b8d183fc3edd3a3a04943e79e1dea6fb086bf2d170efe3e163e",
+      "bytes": 81082,
+      "found": 7,
+      "matches": [
+        "AsciiHexStream"
+      ],
+      "matchCount": 1,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "ea17749b93dce793e899764274db7eb87d5713b7",
+      "date": "2014-03-11T23:03:15Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/ea17749b93dce793e899764274db7eb87d5713b7/src/core/stream.js",
+      "sha256": "71b6f1604d6c8a1f2a2a6ef3f664afb42c680f2b0b424832776cc8a9010ce4d8",
+      "bytes": 79924,
+      "found": 7,
+      "matches": [],
+      "matchCount": 0,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "d0253c829134e06959f32248d195887cd8887d94",
+      "date": "2014-03-11T23:03:15Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/d0253c829134e06959f32248d195887cd8887d94/src/core/stream.js",
+      "sha256": "6b2871128f4e4fd183d2e66e7f33b8814e0ed0e23aa87b8a2d51be841f25062b",
+      "bytes": 80320,
+      "found": 7,
+      "matches": [],
+      "matchCount": 0,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "6755ea70b0f127b62b009cf4867ea29c8f8e36d2",
+      "date": "2014-03-06T09:31:18Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/6755ea70b0f127b62b009cf4867ea29c8f8e36d2/src/core/stream.js",
+      "sha256": "d214ab96b6f86b2a48c4be981e99c676b24eee9ecc59561c140aef75c6b0c597",
+      "bytes": 79589,
+      "found": 7,
+      "matches": [],
+      "matchCount": 0,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "f46942758f0ed309ca3da5c33dd152b8036e0cc4",
+      "date": "2014-03-05T04:27:33Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/f46942758f0ed309ca3da5c33dd152b8036e0cc4/src/core/stream.js",
+      "sha256": "98a7f8c90957d11637bd32f2d32bbb43eb94e640617f46ce0043a4997914d614",
+      "bytes": 79570,
+      "found": 7,
+      "matches": [],
+      "matchCount": 0,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "fe8b6b0950dbf6df6046240263c1723eb6aaa3c6",
+      "date": "2014-03-05T02:07:15Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/fe8b6b0950dbf6df6046240263c1723eb6aaa3c6/src/core/stream.js",
+      "sha256": "7612aae6ceb7b7c1bfd36c0da4d667e35d46b3822e124798d43344d73aba1dad",
+      "bytes": 79485,
+      "found": 7,
+      "matches": [],
+      "matchCount": 0,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "64431a99093c7c51d0dc8535ccdd5baccc9d862e",
+      "date": "2014-03-04T02:03:48Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/64431a99093c7c51d0dc8535ccdd5baccc9d862e/src/core/stream.js",
+      "sha256": "c53fc5007dc90978cb6498de883db04f2d887307101a3fb7aeacb22bc0776460",
+      "bytes": 80529,
+      "found": 7,
+      "matches": [],
+      "matchCount": 0,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "33dd1b0c3c58acf677486c20e85d5bd3870e555d",
+      "date": "2014-02-25T00:45:18Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/33dd1b0c3c58acf677486c20e85d5bd3870e555d/src/core/stream.js",
+      "sha256": "f513ad040b123b68439d25f7279596fcd7d3f2f82d4251c1d08ad9392a0cb672",
+      "bytes": 80444,
+      "found": 7,
+      "matches": [],
+      "matchCount": 0,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "2e7c71c75ee1983479850c8a2de5d6bd126644df",
+      "date": "2014-01-07T18:52:37Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/2e7c71c75ee1983479850c8a2de5d6bd126644df/src/core/stream.js",
+      "sha256": "9dea7a96df5a32f3d0e13dce8fd935d28317b0967093e10942f2f752bb457130",
+      "bytes": 80587,
+      "found": 7,
+      "matches": [],
+      "matchCount": 0,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "e6c805490b84bfaab41862313330ce92ff5e72f0",
+      "date": "2013-12-19T19:23:58Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/e6c805490b84bfaab41862313330ce92ff5e72f0/src/core/stream.js",
+      "sha256": "1aa4d884c78ab29069d2b8e82ace15a000511adb8a3c3cd686bcbf815e3ac6f1",
+      "bytes": 80432,
+      "found": 7,
+      "matches": [],
+      "matchCount": 0,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "43847d7ff8da1876975edf741f889342a816e216",
+      "date": "2013-12-19T17:37:39Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/43847d7ff8da1876975edf741f889342a816e216/src/core/stream.js",
+      "sha256": "68f955cceb74aebed93d302439622fa9501ed6b267e876f4b38946a653b1d909",
+      "bytes": 80211,
+      "found": 7,
+      "matches": [],
+      "matchCount": 0,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "c8af2565f18f7f22caa3f870a15a3afa1969743d",
+      "date": "2013-11-14T23:21:42Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/c8af2565f18f7f22caa3f870a15a3afa1969743d/src/core/stream.js",
+      "sha256": "428599b74cbec4e0892d4bc542e225c0df916b557f42b5bc7f2010259576ae11",
+      "bytes": 80056,
+      "found": 7,
+      "matches": [],
+      "matchCount": 0,
+      "glyphCogNotice": false
+    },
+    {
+      "commit": "5ecce4996b787fc891246d2b9cab5c86ba0f45ca",
+      "date": "2013-08-12T17:48:06Z",
+      "url": "https://raw.githubusercontent.com/mozilla/pdf.js/5ecce4996b787fc891246d2b9cab5c86ba0f45ca/src/core/stream.js",
+      "sha256": "b0916431ed79e13c03b1febb963dca950863891fc092cb5105fca9f102910e84",
+      "bytes": 80027,
+      "found": 7,
+      "matches": [],
+      "matchCount": 0,
+      "glyphCogNotice": false
+    }
+  ],
+  "copyCommit": "a942700f0ad0d184ba6147f450fdb9f6f2a21b24",
+  "copyDate": "2019-05-22T00:48:26Z",
+  "returnedFileChangeEvents": 79,
+  "queryFirstPageCompleteForReturnedHistory": true,
+  "contentCorrespondence": {
+    "sevenClosuresMatchAt": [
+      "6adeabbb66b8acf63dbd4e52f56a8cedfcfe21a4",
+      "32bfa55d981909f764720120dcbb5a2426ad9873"
+    ],
+    "sevenPlusGlyphCogNoticeMatchAt": [
+      "6adeabbb66b8acf63dbd4e52f56a8cedfcfe21a4"
+    ],
+    "fileContentRevision": "6adeabbb66b8acf63dbd4e52f56a8cedfcfe21a4",
+    "v2_0_943FileRawIdentical": true,
+    "actualGlobalCheckout": "not recorded; unchanged files can occur at many repository commits/tags"
+  },
+  "rightsAtContentRevision": {
+    "licenseSha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+    "authorsSha256": "07e0810dd4f4ae7c35bd9ff6d892792b7d074fba9cd038ed2336fcb49b14ab27",
+    "licenseMatchesProvided": true,
+    "authorsMatchProvidedV2": true,
+    "treeTruncated": false,
+    "namedNotices": [],
+    "limit": "Exact-name tree check for this content reference only; not exhaustive source-header or borrow-event proof"
+  },
+  "base64FixedContentLicense": {
+    "commit": "1616895ea14ed71f6e629501215512aa97f3b9c3",
+    "url": "https://raw.githubusercontent.com/niklasvh/base64-arraybuffer/1616895ea14ed71f6e629501215512aa97f3b9c3/LICENSE-MIT",
+    "bytes": 1062,
+    "sha256": "f3eca6ff762533fa5a77caf954a143e48afa204668cf97dce758c45a9e006be3",
+    "matchesProvided": true,
+    "treeTruncated": false,
+    "treeEntries": 11,
+    "namedNOTICEFiles": [],
+    "scope": "Fixed content-family LICENSE-MIT matches; not proof of the borrow event"
+  }
+}
