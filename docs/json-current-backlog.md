@@ -32,7 +32,7 @@
 |CUR-01・1|PR #20をマージ済み|展開型仮想ツリー/50件ページ/位置復元/詳細/適合理由をmainへ接続。[第二段階の結果](json-target-ui-validation.md)を参照。実機はCUR-05|
 |CUR-02・2|PR #21をマージ済み|[状態・保持量・故障回復の報告](json-state-recovery-validation.md)。UI-01〜26、20ファイル、混在PDF取消、世代/設定照合、中断可能読込、50MiB/10万ノードと完了結果・両WASM/図の反復を検証。全環境の一括受入ではなく、全プロセス/実負荷はCUR-05|
 |CUR-03・3|PR #22マージ済み、実機は後日|[PWA世代固定・回復の報告と実機手順](pwa-generation-validation.md)。保存拒否・容量不足は故障注入。実インストール/復帰/実容量はCUR-05|
-|CUR-04・4|12.3.0本体切替・ローカル回帰完了/こちら|[本体切替報告](mermaid-tiny-12.3-product-cutover.md)：69原文/75資産、通常依存/既定67対象監査0件、本体33件・旧通常版移行追加1件・開発起動1件成功。残す作業は最終commit/生成物の固定とレビュー、anydoc/PDFiumの個別条件、許可された実配信先とユーザー実機の受入・公開判定。旧12.2.0の不合格とELK調査は履歴を保持する|
+|CUR-04・4|12.3.0本体切替・ローカル回帰完了/こちら|[本体切替報告](mermaid-tiny-12.3-product-cutover.md)：69原文/75資産、通常依存/既定67対象監査0件、本体33件・旧通常版移行追加1件・開発起動1件成功。[最終commit/221生成物は固定済み](evidence/mermaid-tiny-12.3-review-candidate.json)。残す作業はレビューとCI確認、anydoc/PDFiumの個別条件、許可された実配信先とユーザー実機の受入・公開判定。旧12.2.0の不合格とELK調査は履歴を保持する|
 |CUR-04・追加|ローカル検証のみ|[配信照合の試行](local-delivery-verification.md)。manifest と SW を含む同一世代の照合を追加。実配信・対応ソースの完全性の証明にはならない|
 |CUR-04・追加|Windows ローカル再生成を確認|[クリーンインストール検証](windows-clean-rebuild-validation.md)。生成物444件一致。既定設定は単一ワーカーで、一括検査の再実行は成功。他環境と実配信は未確認|
 |CUR-04・方針|準備を継続、公開可否は保留|[採用した配布準備方針](distribution-adopted-policy.md)と公開前4条件。Vercel/GitHub Releases は採用方針であり、公開・添付・デプロイの実施許可ではない|

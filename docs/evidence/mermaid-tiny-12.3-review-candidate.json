@@ -1,0 +1,1367 @@
+{
+  "schema": 1,
+  "date": "2026-11-10",
+  "status": "Fixed review candidate; not release approval",
+  "sourceCommit": "180f44c9e5039e2cbdb15af59f5bbb463b5c6562",
+  "sourceTree": "75b33bf838f6efca6be0739730fa4defa375c5b8",
+  "baseCommit": "37ec3d3b09624a7efe53e8faa3ba4fa2560bac27",
+  "branch": "codex/mermaid-no-elk-reassessment",
+  "sourceFiles": [
+    {
+      "path": "package.json",
+      "gitBlob": "624f791d7952f4a2e7241b0236ce4b99b0f2412e",
+      "reviewedWorkingBytesSha256": "0faad140b5e7f4f5b20d0fdd5dbe780e1b6240af8ab7cefec59eb44746cb5ace"
+    },
+    {
+      "path": "package-lock.json",
+      "gitBlob": "7536a931963579d4cfef1ece501e9842aae30631",
+      "reviewedWorkingBytesSha256": "ab7c8dd6f32c47ff1f324d4050a462d6b67794c8a05b04c24aab66372e21274c"
+    },
+    {
+      "path": "vite.config.ts",
+      "gitBlob": "7ec43e9f62b723acc1dabcec088b018039238578",
+      "reviewedWorkingBytesSha256": "da1fd019a1b7fc8b140248fd94ad22d4190161f0fbb3da65392f9345fe5ba47c"
+    },
+    {
+      "path": "playwright.config.ts",
+      "gitBlob": "9a9b26a9b04903c7900782c90b1f60f19c9c16be",
+      "reviewedWorkingBytesSha256": "4640c4525f07fdb52c211f1d4373e6dea9e79b7d0f944e8c20f48df13fcfc29b"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "gitBlob": "d9d4118f9d7e478e7042e8a048fa8c87af6e8ade",
+      "reviewedWorkingBytesSha256": "c69a1cc03775c97e0f427e32ab64e9cab4501725ca6b902903ef16fe3c4a2c33"
+    },
+    {
+      "path": "scripts/tiny-release.json",
+      "gitBlob": "9df6985228b0568f5f1a7cd6f768bee9f8fa4c7d",
+      "reviewedWorkingBytesSha256": "49396d549377ba91aa4be67ce47c2765073117f1720b389280886943b5b6ce28"
+    },
+    {
+      "path": "scripts/tiny-release.mjs",
+      "gitBlob": "ab24be1dd7faaf38d0b0039c557ff6391b995645",
+      "reviewedWorkingBytesSha256": "1f6272ed9233a02692c16253103a0ec2d1aaae206ca521bdb4308f37e3d5de44"
+    },
+    {
+      "path": "scripts/tiny-materials.mjs",
+      "gitBlob": "6b1686ceb7b3a581fa2881462ac00fe2c78c4649",
+      "reviewedWorkingBytesSha256": "dd836d297ec1e3144a2a21f2672c54ee2199fd44dc8d9e4a7da15fc853cd575c"
+    },
+    {
+      "path": "scripts/tiny-materials.test.mjs",
+      "gitBlob": "3b8f138f489621f76a3cb8e18112f646152165a8",
+      "reviewedWorkingBytesSha256": "407543eee9e692ade147172daf769bad5ab2c03a5e8e747dcb099a384265e172"
+    },
+    {
+      "path": "scripts/freeze-tiny-licenses.mjs",
+      "gitBlob": "4a50981e1647e37e516d47cc422c1ac8ba110ed7",
+      "reviewedWorkingBytesSha256": "7b436ec8824d700619af0760b83d456ce02a015f24a90001867dbe417c2ca32d"
+    },
+    {
+      "path": "scripts/audit-tiny-contributors.mjs",
+      "gitBlob": "2e1fa7cf92dfb3e95042c096af4ea97345b4f19b",
+      "reviewedWorkingBytesSha256": "25c59c29e0162c81f8dc4fcb99884cb07b23d26cafc18fb00fc76aa7790d7195"
+    },
+    {
+      "path": "scripts/check-dist.mjs",
+      "gitBlob": "242fe2ec2520629703d51f2d9a897b4f1f5432dd",
+      "reviewedWorkingBytesSha256": "7656b4638fc581a7d5c81aa2c1e0dfaf21b03d4fe02b3ea475d769b239b37760"
+    },
+    {
+      "path": "scripts/copy-third-party-licenses.mjs",
+      "gitBlob": "7f63470fbfd856c278e1b2184855641334426f3f",
+      "reviewedWorkingBytesSha256": "945b91723b51526eb55b3c5a592622a3a04472ad42dc225c7b2fb013ac56f3af"
+    },
+    {
+      "path": "scripts/build-pwa-manifest.mjs",
+      "gitBlob": "c66aba7ff68c0cef57945674e848c1b4e5a7784b",
+      "reviewedWorkingBytesSha256": "69d39dddd9d1a396ae9e0993283537d980bb4f288d33577675b277c8345650b5"
+    },
+    {
+      "path": "scripts/test-tiny-dev.mjs",
+      "gitBlob": "8045a9603327a652fbf9ea5274aa570d1513fab9",
+      "reviewedWorkingBytesSha256": "84820f4ae50553c3cba90f8c1c46f8b0d69394b4b3f819bba3a7f2b76c2dcf1a"
+    },
+    {
+      "path": "src/json/tinyLoader.mjs",
+      "gitBlob": "09c595d5358031737b2596d6947c563b46ac9fd2",
+      "reviewedWorkingBytesSha256": "56746a6bc2871eed08ab12b7591a46eaf4c9d7a906c8cbff2f1e587b8868149a"
+    },
+    {
+      "path": "src/json/json.worker.ts",
+      "gitBlob": "c2f4cf45287bee439a8694874bc89d70933014ac",
+      "reviewedWorkingBytesSha256": "71403d0c2d0dd39f6cf3a4a8ec8d6024f253c2f458203a2cc9759f7ec625e8aa"
+    },
+    {
+      "path": "src/json/jsonWorkerRuntime.ts",
+      "gitBlob": "66ec1777777155d82c060017c5cbbb6bfbf3a686",
+      "reviewedWorkingBytesSha256": "5041f37abede574c21ba83f8eb299e5054686ef35d89d80f793769b6b1467ec7"
+    },
+    {
+      "path": "src/json/mermaidRenderer.mjs",
+      "gitBlob": "599a8bced7647df5d46e43b21dc1abccc138eacb",
+      "reviewedWorkingBytesSha256": "fcefb929847267ab865d1b3a58a606d689f992f01d636015fe1bf7c83fed03b4"
+    },
+    {
+      "path": "src/json/JsonWorkerClient.ts",
+      "gitBlob": "de7e86782698cb109e44fd8ce5dd2bb8b77102d8",
+      "reviewedWorkingBytesSha256": "9c5275ae652b658f590f9bd3a49137158ce074df8839b3f859d0fc372a460c8e"
+    },
+    {
+      "path": "public/sw.js",
+      "gitBlob": "0a66ffabe8bf1d8bd18ca08dec8aaf057eda78cf",
+      "reviewedWorkingBytesSha256": "7083a6a12910956d4ca60be2e9768982ea09e9b25234dbe0b2b24dcf7ddd6f0a"
+    },
+    {
+      "path": "tests/e2e/json.spec.ts",
+      "gitBlob": "f00014a714f79313a621e8a311e41a6ca72d2d66",
+      "reviewedWorkingBytesSha256": "d94898bce574fa2f8342b1a29831d6c39528053c44ec441e81ccc25d14427e1b"
+    },
+    {
+      "path": "tests/e2e/json-state-recovery.spec.ts",
+      "gitBlob": "8d91903ff44019768031e9ac48e78b9f8e81a38d",
+      "reviewedWorkingBytesSha256": "114a0ee34051a1a66a5579febf774e6301556c159e2462eaa041d8b513ffa83c"
+    },
+    {
+      "path": "tests/e2e/json-target-ui.spec.ts",
+      "gitBlob": "b8fd1d83438031ad59af20afee78d4b1a6017103",
+      "reviewedWorkingBytesSha256": "9466a8ff58d325435956d3d6f4c1b0af375dae4d53d3f6c8e2215bbbff0113a1"
+    },
+    {
+      "path": "tests/e2e/pwa.spec.ts",
+      "gitBlob": "7fd021079ee1d9a5be75f8739ec921ffa6e8c022",
+      "reviewedWorkingBytesSha256": "9b570c9cd4fb40798dcbc07102fb7a434901da8f1c865b7c4e32b0d415ac481d"
+    },
+    {
+      "path": "tests/e2e/pwa-generation.spec.js",
+      "gitBlob": "706d62488c66f4289f06ee532e8c98f20a9c3fd2",
+      "reviewedWorkingBytesSha256": "a8e77138384c87ad54d1f228a493e842c1c66bb766878c0015d6c21efe4e88da"
+    },
+    {
+      "path": "tests/e2e/conversion.spec.ts",
+      "gitBlob": "6e2ace713e26e9410751e2a06264f0982815da1f",
+      "reviewedWorkingBytesSha256": "d395894116248d7f827de5837d8d223d947ac5ef935b32fb1a8de498cf3ae050"
+    },
+    {
+      "path": "experiments/mermaid-no-elk/prepare-tiny122-fixture.mjs",
+      "gitBlob": "b46bfebed305cab7d9776ed27dfebcb1e3e0630b",
+      "reviewedWorkingBytesSha256": "8b3c8575e7d92730d569c0478344f16f3593e1f5766fa4fb3d7c9b4da5374ac6"
+    },
+    {
+      "path": ".gitattributes",
+      "gitBlob": "d9460c803f44db455bd44620f015581e36702e62",
+      "reviewedWorkingBytesSha256": "776f793206243b26bd2d85b8eb33c3f48ce432e374c437d898df1942a3ac5ff9"
+    }
+  ],
+  "priorProductRegression": "mermaid-tiny-12.3-product-cutover-validation.json",
+  "priorRegressionSourceDifferences": {
+    "paths": [
+      "scripts/tiny-materials.test.mjs"
+    ],
+    "reason": "Test setup now creates ignored tmp directory in fresh checkouts; product runtime and build unchanged"
+  },
+  "generation": "429747bec5da3853ab4ffe06",
+  "fileCount": 221,
+  "totalBytes": 17028044,
+  "assetListSha256": "65202cb357d66827d3614a6bc6e14554350ad4c7d423121ce44109e5f7a1cead",
+  "files": [
+    {
+      "path": "assets/anydoc_wasm_bg-BGHlcte-.wasm",
+      "bytes": 6485379,
+      "sha256": "409e45e75062df06bed445c352ffddaf3bae15ff376f5d514d45f4891debd09e"
+    },
+    {
+      "path": "assets/converter.worker-DnNg2nND.js",
+      "bytes": 752427,
+      "sha256": "9904e9e8f7bead971511aad6e5d50836f11527d58a11c5a8d17ac81a1a938c77"
+    },
+    {
+      "path": "assets/index-_-tn7U5c.css",
+      "bytes": 15304,
+      "sha256": "86d7d2e6fb682593d0f2fc655cde050cf96179e64d8a66c944e18d7572b75937"
+    },
+    {
+      "path": "assets/index-zTwcKO_r.js",
+      "bytes": 423775,
+      "sha256": "483091635161a11b1e3f69af3f8442bdf37a2f161f2986d39d0301af7e2b1d75"
+    },
+    {
+      "path": "assets/json.worker-BGzrxN2M.js",
+      "bytes": 167979,
+      "sha256": "9de1e3bd7eff90941bae722b142343aecd48fbba0f32869f05cd5e7f272238cb"
+    },
+    {
+      "path": "assets/mermaid.tiny-B1X2HQuM.js",
+      "bytes": 2852578,
+      "sha256": "c41f5236091b83f524c4940f97a16b2b14a76f21ff84aea4fd6b66421d8a2a9a"
+    },
+    {
+      "path": "assets/pdfium-RAgkpwfK.wasm",
+      "bytes": 4633788,
+      "sha256": "c0af5a6aca30d7e54a149c3a68e317116ca906d6edc28fd3318b12c7d9478ac8"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1468,
+      "sha256": "46d934cf883e52df9dd31851f55889ef268fac9fc288271cf1363fccf585f387"
+    },
+    {
+      "path": "ldp_icon-192.png",
+      "bytes": 29462,
+      "sha256": "1eea49eb267383ea5457348388810beb4750f949e917c0fe0f0e1b5f13d89ff5"
+    },
+    {
+      "path": "ldp_icon-512.png",
+      "bytes": 233603,
+      "sha256": "a3d4826a3a860d0bc10498e41488ea1bf413fcbaef9b651febaa6307651b7eb7"
+    },
+    {
+      "path": "ldp_icon.png",
+      "bytes": 881615,
+      "sha256": "c95889fc6f6f8e62bbe85d7546a2de7c41821dfd2016f43b608e0a145dd21872"
+    },
+    {
+      "path": "licenses/anydoc-MIT.txt",
+      "bytes": 1084,
+      "sha256": "03a9e7657aac6536fb6458bd220347c4e7f85bd0a51d8d9e8528530b7a682ade"
+    },
+    {
+      "path": "licenses/dependencies/@embedpdf__pdfium@2.14.4/LICENSE",
+      "bytes": 1075,
+      "sha256": "f5031b66adba8ef5ef57666deff980a7f2ccff5c8a8c22a8117e854d2b8dfcd3"
+    },
+    {
+      "path": "licenses/dependencies/@embedpdf__pdfium@2.14.4/LICENSE.pdfium",
+      "bytes": 12880,
+      "sha256": "b033ffb8fc19c23ca81f7e98019ab658cc6f4cf14587c7c6a2a67fb0f6ac0f5a"
+    },
+    {
+      "path": "licenses/dependencies/@firecrawl__anydoc-wasm@0.1.7/LICENSE",
+      "bytes": 1084,
+      "sha256": "03a9e7657aac6536fb6458bd220347c4e7f85bd0a51d8d9e8528530b7a682ade"
+    },
+    {
+      "path": "licenses/dependencies/@mermaid-js__tiny@12.3.0/LICENSE",
+      "bytes": 1089,
+      "sha256": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80"
+    },
+    {
+      "path": "licenses/dependencies/@pdf-lib__standard-fonts@1.0.0/LICENSE.md",
+      "bytes": 1070,
+      "sha256": "45cc2bb9957ed43f5c7f5eb1912f9f670730394d614079510477cae626194649"
+    },
+    {
+      "path": "licenses/dependencies/@pdf-lib__upng@1.0.1/LICENSE",
+      "bytes": 1065,
+      "sha256": "c1fb8861eca211bf5aea574358aba7039396c0c1824c2a1477cc126d398efd89"
+    },
+    {
+      "path": "licenses/dependencies/@types__debug@4.1.13/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "path": "licenses/dependencies/@types__estree-jsx@1.0.5/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "path": "licenses/dependencies/@types__estree@1.0.9/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "path": "licenses/dependencies/@types__hast@3.0.5/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "path": "licenses/dependencies/@types__mdast@4.0.4/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "path": "licenses/dependencies/@types__ms@2.1.0/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "path": "licenses/dependencies/@types__react@19.2.18/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "path": "licenses/dependencies/@types__unist@2.0.11/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "path": "licenses/dependencies/@types__unist@3.0.3/LICENSE",
+      "bytes": 1141,
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+    },
+    {
+      "path": "licenses/dependencies/@ungap__structured-clone@1.3.3/LICENSE",
+      "bytes": 765,
+      "sha256": "dc6d4961d8b6ee747231582ae9c53ce1d66bf76bc9f5a28f554c0e97210953bf"
+    },
+    {
+      "path": "licenses/dependencies/bail@2.0.2/license",
+      "bytes": 1099,
+      "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+    },
+    {
+      "path": "licenses/dependencies/ccount@2.0.1/license",
+      "bytes": 1099,
+      "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+    },
+    {
+      "path": "licenses/dependencies/character-entities-html4@2.1.0/license",
+      "bytes": 1099,
+      "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+    },
+    {
+      "path": "licenses/dependencies/character-entities-legacy@3.0.0/license",
+      "bytes": 1099,
+      "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+    },
+    {
+      "path": "licenses/dependencies/character-entities@2.0.2/license",
+      "bytes": 1099,
+      "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+    },
+    {
+      "path": "licenses/dependencies/character-reference-invalid@2.0.1/license",
+      "bytes": 1099,
+      "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+    },
+    {
+      "path": "licenses/dependencies/comma-separated-tokens@2.0.3/license",
+      "bytes": 1099,
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+    },
+    {
+      "path": "licenses/dependencies/csstype@3.2.3/LICENSE",
+      "bytes": 1062,
+      "sha256": "11d55bd4541c75ee7879547ac49089c489163dae49551389713c3d026cab383e"
+    },
+    {
+      "path": "licenses/dependencies/debug@4.4.3/LICENSE",
+      "bytes": 1139,
+      "sha256": "3a61c6c96caf5c1d9b623fb9b04c822b783dfcb78aa7e49c76a3f643e6ed7f95"
+    },
+    {
+      "path": "licenses/dependencies/decode-named-character-reference@1.3.0/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/dequal@2.0.3/license",
+      "bytes": 1114,
+      "sha256": "306fa513e39b23a6e8747520de761809d206b99800ef41907b530226574c59ae"
+    },
+    {
+      "path": "licenses/dependencies/devlop@1.1.0/license",
+      "bytes": 1099,
+      "sha256": "6f296a5eccc1dc96714bb94ebaa9cac25b0a1467d74cc5263ac4d0646ab01f62"
+    },
+    {
+      "path": "licenses/dependencies/escape-string-regexp@5.0.0/license",
+      "bytes": 1117,
+      "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+    },
+    {
+      "path": "licenses/dependencies/estree-util-is-identifier-name@3.0.0/license",
+      "bytes": 1099,
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+    },
+    {
+      "path": "licenses/dependencies/extend@3.0.2/LICENSE",
+      "bytes": 1081,
+      "sha256": "97af7428f93afbab9bf79cd09254da1357161794f4255eb1b4599f04dd2d2e7c"
+    },
+    {
+      "path": "licenses/dependencies/fflate@0.8.3/LICENSE",
+      "bytes": 1069,
+      "sha256": "0a1df3a083d0c010560aa342e87959c8c1070e6fd54545741f083f22d0c8b551"
+    },
+    {
+      "path": "licenses/dependencies/hast-util-to-jsx-runtime@2.3.6/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/hast-util-whitespace@3.0.0/license",
+      "bytes": 1099,
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+    },
+    {
+      "path": "licenses/dependencies/html-url-attributes@3.0.1/license",
+      "bytes": 1070,
+      "sha256": "e18cf5173e928f808f0cd208097fee8fbec9d28fc0255213938e4c559e29ff58"
+    },
+    {
+      "path": "licenses/dependencies/inline-style-parser@0.2.7/LICENSE",
+      "bytes": 1098,
+      "sha256": "395c95f20598da653ff1eb1cb9d74947c7fac689697147f1d192fd0242a0e635"
+    },
+    {
+      "path": "licenses/dependencies/is-alphabetical@2.0.1/license",
+      "bytes": 1099,
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+    },
+    {
+      "path": "licenses/dependencies/is-alphanumerical@2.0.1/license",
+      "bytes": 1099,
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+    },
+    {
+      "path": "licenses/dependencies/is-decimal@2.0.1/license",
+      "bytes": 1099,
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+    },
+    {
+      "path": "licenses/dependencies/is-hexadecimal@2.0.1/license",
+      "bytes": 1099,
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+    },
+    {
+      "path": "licenses/dependencies/is-plain-obj@4.1.0/license",
+      "bytes": 1117,
+      "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3"
+    },
+    {
+      "path": "licenses/dependencies/jsonc-parser@3.3.1/LICENSE.md",
+      "bytes": 1092,
+      "sha256": "c3a24c02d678e5f0711623dcf3ab3f243b273c2633f638a1fa8e35fb7c7f8e4d"
+    },
+    {
+      "path": "licenses/dependencies/longest-streak@3.1.0/license",
+      "bytes": 1106,
+      "sha256": "9f084fac69d8cf1e6ce983ba5a3499c7695ed74a26ec625c38f0fd19fddd5e10"
+    },
+    {
+      "path": "licenses/dependencies/markdown-table@3.0.4/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/mdast-util-find-and-replace@3.0.2/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/mdast-util-from-markdown@2.0.3/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/mdast-util-gfm-autolink-literal@2.0.1/license",
+      "bytes": 1099,
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+    },
+    {
+      "path": "licenses/dependencies/mdast-util-gfm-footnote@2.1.0/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/mdast-util-gfm-strikethrough@2.0.0/license",
+      "bytes": 1099,
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+    },
+    {
+      "path": "licenses/dependencies/mdast-util-gfm-table@2.0.0/license",
+      "bytes": 1099,
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+    },
+    {
+      "path": "licenses/dependencies/mdast-util-gfm-task-list-item@2.0.0/license",
+      "bytes": 1099,
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+    },
+    {
+      "path": "licenses/dependencies/mdast-util-gfm@3.1.0/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/mdast-util-mdx-expression@2.0.1/license",
+      "bytes": 1099,
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+    },
+    {
+      "path": "licenses/dependencies/mdast-util-mdx-jsx@3.2.0/license",
+      "bytes": 1099,
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+    },
+    {
+      "path": "licenses/dependencies/mdast-util-mdxjs-esm@2.0.1/license",
+      "bytes": 1099,
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+    },
+    {
+      "path": "licenses/dependencies/mdast-util-newline-to-break@2.0.0/license",
+      "bytes": 1099,
+      "sha256": "d8fc337aaf98fc7a0f5498edc18b47a9df8cdfcc1a0f013519105905722c7a4c"
+    },
+    {
+      "path": "licenses/dependencies/mdast-util-phrasing@4.1.0/license",
+      "bytes": 1150,
+      "sha256": "b6d1a4e1831b177acc96f22a817d4f0f4c18419355badc3125754445fc69e3a7"
+    },
+    {
+      "path": "licenses/dependencies/mdast-util-to-hast@13.2.1/license",
+      "bytes": 1099,
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+    },
+    {
+      "path": "licenses/dependencies/mdast-util-to-markdown@2.1.2/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/mdast-util-to-string@4.0.0/license",
+      "bytes": 1099,
+      "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+    },
+    {
+      "path": "licenses/dependencies/micromark-core-commonmark@2.0.3/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark-extension-gfm-autolink-literal@2.1.0/license",
+      "bytes": 1099,
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+    },
+    {
+      "path": "licenses/dependencies/micromark-extension-gfm-footnote@2.1.0/license",
+      "bytes": 1099,
+      "sha256": "807a88522a850092aece49486207c17c313c4d5708ac276524840fe1caa0b0fa"
+    },
+    {
+      "path": "licenses/dependencies/micromark-extension-gfm-strikethrough@2.1.0/license",
+      "bytes": 1099,
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+    },
+    {
+      "path": "licenses/dependencies/micromark-extension-gfm-table@2.1.1/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark-extension-gfm-tagfilter@2.0.0/license",
+      "bytes": 1099,
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+    },
+    {
+      "path": "licenses/dependencies/micromark-extension-gfm-task-list-item@2.1.0/license",
+      "bytes": 1099,
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+    },
+    {
+      "path": "licenses/dependencies/micromark-extension-gfm@3.0.0/license",
+      "bytes": 1099,
+      "sha256": "536804b3adbff17dbbb9ed0d2bf9655b78f07640278581e37e3d7475282d5e61"
+    },
+    {
+      "path": "licenses/dependencies/micromark-factory-destination@2.0.1/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark-factory-label@2.0.1/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark-factory-space@2.0.1/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark-factory-title@2.0.1/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark-factory-whitespace@2.0.1/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark-util-character@2.1.1/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark-util-chunked@2.0.1/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark-util-classify-character@2.0.1/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark-util-combine-extensions@2.0.1/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark-util-decode-numeric-character-reference@2.0.2/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark-util-decode-string@2.0.1/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark-util-encode@2.0.1/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark-util-html-tag-name@2.0.1/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark-util-normalize-identifier@2.0.1/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark-util-resolve-all@2.0.1/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark-util-sanitize-uri@2.0.1/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark-util-subtokenize@2.1.0/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark-util-symbol@2.0.1/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark-util-types@2.0.2/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/micromark@4.0.2/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/ms@2.1.3/license.md",
+      "bytes": 1079,
+      "sha256": "1662fae9b5314d11cf51284e2dcd1f006a354f7343f08712a730fcff9a359801"
+    },
+    {
+      "path": "licenses/dependencies/pako@1.0.11/LICENSE",
+      "bytes": 1104,
+      "sha256": "a04665b3b2de56c66730c1f720f528175739e4104f79073614aa611da1e85539"
+    },
+    {
+      "path": "licenses/dependencies/parse-entities@4.0.2/license",
+      "bytes": 1101,
+      "sha256": "5d0698266086f217bb11ea0499d33453e401fe479fb9126ad04e625e63d3557b"
+    },
+    {
+      "path": "licenses/dependencies/pdf-lib@1.17.1/LICENSE.md",
+      "bytes": 1070,
+      "sha256": "f2c9fc00fdb66eb99ac156ba52d734af66d8d309f65753ae809ad34ee2883bcb"
+    },
+    {
+      "path": "licenses/dependencies/property-information@7.2.0/license",
+      "bytes": 1101,
+      "sha256": "5d0698266086f217bb11ea0499d33453e401fe479fb9126ad04e625e63d3557b"
+    },
+    {
+      "path": "licenses/dependencies/react-dom@19.2.8/LICENSE",
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "path": "licenses/dependencies/react-markdown@10.1.0/license",
+      "bytes": 1079,
+      "sha256": "f6196c64e144f9a6fa9154c3a80bc8b89615a9567934b83a8951879f06ba2aef"
+    },
+    {
+      "path": "licenses/dependencies/react@19.2.8/LICENSE",
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "path": "licenses/dependencies/remark-breaks@4.0.0/license",
+      "bytes": 1099,
+      "sha256": "d8fc337aaf98fc7a0f5498edc18b47a9df8cdfcc1a0f013519105905722c7a4c"
+    },
+    {
+      "path": "licenses/dependencies/remark-gfm@4.0.1/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/remark-parse@11.0.0/license",
+      "bytes": 1099,
+      "sha256": "413654b0a78b98661dce96d2aff2e4d075603d220b8483e28b1aa010ccc138b4"
+    },
+    {
+      "path": "licenses/dependencies/remark-rehype@11.1.2/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/remark-stringify@11.0.0/license",
+      "bytes": 1099,
+      "sha256": "413654b0a78b98661dce96d2aff2e4d075603d220b8483e28b1aa010ccc138b4"
+    },
+    {
+      "path": "licenses/dependencies/scheduler@0.27.0/LICENSE",
+      "bytes": 1088,
+      "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+    },
+    {
+      "path": "licenses/dependencies/space-separated-tokens@2.0.2/license",
+      "bytes": 1099,
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+    },
+    {
+      "path": "licenses/dependencies/stringify-entities@4.0.4/license",
+      "bytes": 1106,
+      "sha256": "9f084fac69d8cf1e6ce983ba5a3499c7695ed74a26ec625c38f0fd19fddd5e10"
+    },
+    {
+      "path": "licenses/dependencies/style-to-js@1.1.21/LICENSE",
+      "bytes": 1110,
+      "sha256": "bbb380e5c1a717079378d6ea4d33c8a5a81655d4612b749f882e34e46712aab5"
+    },
+    {
+      "path": "licenses/dependencies/style-to-object@1.0.14/LICENSE",
+      "bytes": 1110,
+      "sha256": "896c9fd6b5fc48ac31800b9d29a6e3ffcb0c2d534ed077ebfa5c2fa388cc38b7"
+    },
+    {
+      "path": "licenses/dependencies/trim-lines@3.0.1/license",
+      "bytes": 1106,
+      "sha256": "9f084fac69d8cf1e6ce983ba5a3499c7695ed74a26ec625c38f0fd19fddd5e10"
+    },
+    {
+      "path": "licenses/dependencies/trough@2.2.0/license",
+      "bytes": 1099,
+      "sha256": "6c03fd41cfd7c92d8aa8a2fa521b94b2683f059123281dcf921ddea9216b6254"
+    },
+    {
+      "path": "licenses/dependencies/tslib@1.14.1/LICENSE.txt",
+      "bytes": 655,
+      "sha256": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751"
+    },
+    {
+      "path": "licenses/dependencies/unified@11.0.5/license",
+      "bytes": 1099,
+      "sha256": "05811400116ed61f1a7693b78fe8ca6598c155a12f3978e609db4df648a4cb3d"
+    },
+    {
+      "path": "licenses/dependencies/unist-util-is@6.0.1/license",
+      "bytes": 1099,
+      "sha256": "82974dbf2639d13edab95c32ed9cb6c0867ede272cd2e07ce47ce8548fe55c05"
+    },
+    {
+      "path": "licenses/dependencies/unist-util-position@5.0.0/license",
+      "bytes": 1099,
+      "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+    },
+    {
+      "path": "licenses/dependencies/unist-util-stringify-position@4.0.0/license",
+      "bytes": 1099,
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+    },
+    {
+      "path": "licenses/dependencies/unist-util-visit-parents@6.0.2/license",
+      "bytes": 1099,
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+    },
+    {
+      "path": "licenses/dependencies/unist-util-visit@5.1.0/license",
+      "bytes": 1099,
+      "sha256": "63cb98b3f6abfb3c3592c16f88253c1bdc834087bf52671e8ce5609e4eb693cf"
+    },
+    {
+      "path": "licenses/dependencies/vfile-message@4.0.3/license",
+      "bytes": 1094,
+      "sha256": "dd1081884a92952802f4803110a6bb543acea9a814c786d58605b4c1219b5ebb"
+    },
+    {
+      "path": "licenses/dependencies/vfile@6.0.3/license",
+      "bytes": 1099,
+      "sha256": "05811400116ed61f1a7693b78fe8ca6598c155a12f3978e609db4df648a4cb3d"
+    },
+    {
+      "path": "licenses/dependencies/zwitch@2.0.4/license",
+      "bytes": 1099,
+      "sha256": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d"
+    },
+    {
+      "path": "licenses/embedpdf-pdfium-MIT.txt",
+      "bytes": 1075,
+      "sha256": "f5031b66adba8ef5ef57666deff980a7f2ccff5c8a8c22a8117e854d2b8dfcd3"
+    },
+    {
+      "path": "licenses/fflate-MIT.txt",
+      "bytes": 1069,
+      "sha256": "0a1df3a083d0c010560aa342e87959c8c1070e6fd54545741f083f22d0c8b551"
+    },
+    {
+      "path": "licenses/index.html",
+      "bytes": 18639,
+      "sha256": "3a58e72d5d9b4265bfded31a66b211c10142af568a572d9d51df05d9e5a270c5"
+    },
+    {
+      "path": "licenses/inventory.json",
+      "bytes": 69481,
+      "sha256": "32f26710c1430dc91cf0224932cf081558c1c08fd4399f7f4852d6bc57a088ba"
+    },
+    {
+      "path": "licenses/mermaid-tiny/fastdom.patch.txt",
+      "bytes": 4381,
+      "sha256": "10bad52c2ff6c742f43492850f2a5a74e9d70a33f42a442cdbda4e174356aa87"
+    },
+    {
+      "path": "licenses/mermaid-tiny/generator-license.txt",
+      "bytes": 1052,
+      "sha256": "599bf70b4e55f06250571d103dbd8441e0c47cb7f858c0147ca312ce38e9ef2a"
+    },
+    {
+      "path": "licenses/mermaid-tiny/index.html",
+      "bytes": 8178,
+      "sha256": "a07b0fdadfabcbe1d6624d44562f4410d8f22414ae294fecbd8ab2943366c696"
+    },
+    {
+      "path": "licenses/mermaid-tiny/manifest.json",
+      "bytes": 19831,
+      "sha256": "1fe9cb4404150e2277ba3719417481ccc27e8346683b3f5cf2617f1e3e98b0de"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-000-0.txt",
+      "bytes": 1066,
+      "sha256": "0984740e0c3d725c8044dec7edcefe1dbce180ef5a7bc710c251e19607000158"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-001-0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-002-0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-003-0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-004-0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-005-0.txt",
+      "bytes": 1083,
+      "sha256": "a86793ac023162ce98b91899601c15f6712f44943163c4f92a0a4bf89152b3bf"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-006-0.txt",
+      "bytes": 1106,
+      "sha256": "6a3508febf2cfccfee96597394543a6154a4bb0b1f91f28404be42c09e9fcb54"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-007-0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-008-0.txt",
+      "bytes": 1068,
+      "sha256": "1db2cfbc7ce5fa3b82699b4ac4badce8984084d25b5308ece00f5c9b1381a0a5"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-009-0.txt",
+      "bytes": 731,
+      "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-010-0.txt",
+      "bytes": 1475,
+      "sha256": "0747bebeb06b10954913149be9b9a8bdf6fad3e6fdcbd9f9524e7a94c13d2cea"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-011-0.txt",
+      "bytes": 731,
+      "sha256": "3e6849627f74ff73c257a3ae1efb574015d94fc1035c05ec3c15805165efcbc4"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-012-0.txt",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-013-0.txt",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-014-0.txt",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-015-0.txt",
+      "bytes": 731,
+      "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-016-0.txt",
+      "bytes": 731,
+      "sha256": "e51cba0e4fa1d8c078e15319868f2b90188f413f9ce9dac1043b62db32901e93"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-017-0.txt",
+      "bytes": 757,
+      "sha256": "582c3022bd01942336095f92b58a90b1be624dc547d987555c6c956512dd24c1"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-018-0.txt",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-019-0.txt",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-020-0.txt",
+      "bytes": 731,
+      "sha256": "7842a82012622e5a37bfe4f6c1b67cd3bae6350716b5bf87f36cea0bdc1319dc"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-021-0.txt",
+      "bytes": 1504,
+      "sha256": "b989d9085148d21ff64a75e14462aefa06b2589a55553b07b1460c70081c7d08"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-022-0.txt",
+      "bytes": 731,
+      "sha256": "ffdc17dc9040006bddeb891c95bfbb492e86d6bc64a4a4233666febab1be35e0"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-023-0.txt",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-024-0.txt",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-025-0.txt",
+      "bytes": 1857,
+      "sha256": "3e3edc1224eec9c39cd26491a21304a62883c1e5b6a65c5283ccc7a6cc94baee"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-026-0.txt",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-027-0.txt",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-028-0.txt",
+      "bytes": 1475,
+      "sha256": "b8265327ab678f554800e71188b1cc6b1ff57522e292d2b1c0be66f27cf328b6"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-029-0.txt",
+      "bytes": 731,
+      "sha256": "a09b0d6d76e768fca2085fad05743ee81ddd11946bcda160a3cf5e1081a479aa"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-030-0.txt",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-031-0.txt",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-032-0.txt",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-033-0.txt",
+      "bytes": 1471,
+      "sha256": "2bf785e778d67a4f5266cffcd4f2cc5bb98cde73791666e7efeb8002ba32dfa5"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-034-0.txt",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-035-0.txt",
+      "bytes": 1423,
+      "sha256": "0986d93944902cca9af86824b6a641b4b7c2d10602fc510c433a8bcd443919fe"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-036-0.txt",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-037-0.txt",
+      "bytes": 1475,
+      "sha256": "7eea8533ea92bd8c32a901e89ecb0305890905bb12711449565ddff96891146d"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-038-0.txt",
+      "bytes": 731,
+      "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-039-0.txt",
+      "bytes": 731,
+      "sha256": "faa682e3e430941f958d26180458f5934a62f58dac4d70ccdd15608c15d0f884"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-040-0.txt",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-041-0.txt",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-042-0.txt",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-043-0.txt",
+      "bytes": 731,
+      "sha256": "e008c5e25a6be382593089c29bfabbc553c6378eee02895aec46ce396cc404ee"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-044-0.txt",
+      "bytes": 1328,
+      "sha256": "d01eb84ccce437dbf5fd40853bceea0f287930920acea066597a4a25ead63858"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-045-0.txt",
+      "bytes": 1072,
+      "sha256": "5faab7526d055651be3aab769d58897be6bd91f3d39d137f25f12dba1b31d5dc"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-046-0.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-046-1.txt",
+      "bytes": 16726,
+      "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-047-0.txt",
+      "bytes": 1424,
+      "sha256": "ed68888a2a28f32a05e88f24d4d4ee75075a1bda2b6372a1f2e00fa0576a5524"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-048-0.txt",
+      "bytes": 7525,
+      "sha256": "cc5669ab6f7741bb061c8a7244addc8e3af1f84ec7d2445744b59d0169a87d11"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-049-0.txt",
+      "bytes": 726,
+      "sha256": "9ea8903938dab5f12c4572d60725069bec2d1b0dc3bcc210b09bae946a5ebb1f"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-050-0.txt",
+      "bytes": 1084,
+      "sha256": "a07bc24468b9654ce76a547d47a2db282d07733b715db4c73a98bd63961f9550"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-051-0.txt",
+      "bytes": 1105,
+      "sha256": "66b333b0f66759a0b710459e03f7029abe17f4358114a128d2c972e642961b49"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-052-0.txt",
+      "bytes": 1052,
+      "sha256": "599bf70b4e55f06250571d103dbd8441e0c47cb7f858c0147ca312ce38e9ef2a"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-053-0.txt",
+      "bytes": 1952,
+      "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-054-0.txt",
+      "bytes": 2942,
+      "sha256": "8e3a3f82f59a60958f56ca08f445647c32a4733dc7ca6c2c46f6eb898471ab9c"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-055-0.txt",
+      "bytes": 1068,
+      "sha256": "dca9a392272606ac748ac0976a2a1133f14eef841c27beaa51a844d53c56a09d"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-056-0.txt",
+      "bytes": 1078,
+      "sha256": "88c579c6ee44b41137a21321190d177982e5b17d4fa1b83a4a2e3ea325a8fc9a"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-057-0.txt",
+      "bytes": 1073,
+      "sha256": "eff13095d9d762c3bd9dda74370c81e2130c28f2691bc455603abf973bac25b9"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-058-0.txt",
+      "bytes": 1095,
+      "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-059-0.txt",
+      "bytes": 1095,
+      "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-060-0.txt",
+      "bytes": 1095,
+      "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-061-0.txt",
+      "bytes": 1095,
+      "sha256": "ec9ee83580841e8eb687aca9867f221503809ba6426c7f876ede17d91b9fcfd0"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-062-0.txt",
+      "bytes": 1070,
+      "sha256": "c669138cb1eb01fbb745e8e460b291e4f2869c14a40061390b6095d845ed4c82"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-063-0.txt",
+      "bytes": 1089,
+      "sha256": "ec9fb67dcb25eccc416ed56e1aab819222c805a2a4bfe4cb19e7556bf2ffde80"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-064-0.txt",
+      "bytes": 1077,
+      "sha256": "d374061c40bfb6f99c5033290caefda97a9b3e7e477e5ee02f487143ef2177e8"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-065-0.txt",
+      "bytes": 1309,
+      "sha256": "75edd32c01669aa6a3876f162d5e9a36d2e3dff3aff93c53578c32c287b54070"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-066-0.txt",
+      "bytes": 1090,
+      "sha256": "5d9f98524d5a7ac46ba836dfaec29d3b95665c50049fa79ea28cce5f0904f41b"
+    },
+    {
+      "path": "licenses/mermaid-tiny/original-067-0.txt",
+      "bytes": 1189,
+      "sha256": "4be9d87b56a306293223b490c0d0b245e9e94f39884147bf051a6c7b825aeb30"
+    },
+    {
+      "path": "licenses/mermaid-tiny/roughjs.patch.txt",
+      "bytes": 348,
+      "sha256": "3543d47108cb41b68ec6a671c0e1f9d0cfe2ce524fea5b0992511ae84c3c6b64"
+    },
+    {
+      "path": "licenses/mermaid-tiny/source-notices.txt",
+      "bytes": 7790,
+      "sha256": "8bd7002901926e4231341dc94be0988b40ead3cff03a632be18de418f6084e16"
+    },
+    {
+      "path": "licenses/pdf-lib-MIT.txt",
+      "bytes": 1070,
+      "sha256": "f2c9fc00fdb66eb99ac156ba52d734af66d8d309f65753ae809ad34ee2883bcb"
+    },
+    {
+      "path": "licenses/PDFium-Apache-2.0.txt",
+      "bytes": 12880,
+      "sha256": "b033ffb8fc19c23ca81f7e98019ab658cc6f4cf14587c7c6a2a67fb0f6ac0f5a"
+    },
+    {
+      "path": "licenses/wasm-candidates/anydoc/encoding_rs@0.8.35/COPYRIGHT",
+      "bytes": 713,
+      "sha256": "11789f45bb180841cd362a5eee6789c68ddb573a11105e30768c308a6add0190"
+    },
+    {
+      "path": "licenses/wasm-candidates/anydoc/encoding_rs@0.8.35/LICENSE-APACHE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "licenses/wasm-candidates/anydoc/encoding_rs@0.8.35/LICENSE-MIT",
+      "bytes": 1053,
+      "sha256": "3fa4ca83dcc9237839b1bdeb2e6d16bdfb5ec0c5ce42b24694d8bbf0dcbef72c"
+    },
+    {
+      "path": "licenses/wasm-candidates/anydoc/encoding_rs@0.8.35/LICENSE-WHATWG",
+      "bytes": 1501,
+      "sha256": "838118388fe5c2e7f1dbbaeed13e1c7f3ebf88be91319c7c1d77c18e987d1a50"
+    },
+    {
+      "path": "licenses/wasm-candidates/anydoc/unicode-ident@1.0.24/LICENSE-APACHE",
+      "bytes": 9723,
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "path": "licenses/wasm-candidates/anydoc/unicode-ident@1.0.24/LICENSE-MIT",
+      "bytes": 1023,
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "path": "licenses/wasm-candidates/anydoc/unicode-ident@1.0.24/LICENSE-UNICODE",
+      "bytes": 1995,
+      "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "bytes": 609,
+      "sha256": "9ab4078be1b893e732104b81ff7c846554a424e1a0c6ce94edaf6e64245ae01f"
+    },
+    {
+      "path": "pwa-manifest.json",
+      "bytes": 40029,
+      "sha256": "57c7bb0aa15f80a281cefb89feb8abf6a270ceaf3e12957e0d9b09b569503d0a"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 40024,
+      "sha256": "6f2f74ec930ffde70c2991d987130038325fcc413b59b0872b0a92abf29a6991"
+    }
+  ],
+  "verification": {
+    "os": "Windows",
+    "node": "24.22.1",
+    "npm": "11.19.1",
+    "independentDependencyInstall": "npm ci, independent node_modules, fixed root lock",
+    "gitRestoration": "git checkout-index from source commit tree (before test-only correction copied identically); pinned evidence/material blobs verified byte-for-byte",
+    "pinnedGitBytesVerified": 263,
+    "unitTestsPassed": 124,
+    "pwaTestsPassed": 11,
+    "materialGateTestsPassedAfterFreshScratchFix": 2,
+    "initialFreshCheckResult": "124 unit + 11 PWA passed; 2 material tests failed because tmp absent; corrected, verified from absent tmp, build and remaining gates then passed",
+    "buildAndDistChecks": "passed",
+    "documents": 81,
+    "localLinks": 397,
+    "documentIssues": 0,
+    "rootProductionVulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "rootAllVulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "defaultEmbeddedAudit": {
+      "targets": 67,
+      "boundToInstalledRelease": true,
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      }
+    },
+    "independentRebuildComparedFiles": 221,
+    "independentRebuildMismatches": 0,
+    "httpComparedFiles": 221,
+    "httpFailures": 0,
+    "targetedBrowserRegressionReused": {
+      "cases": 33,
+      "additionalNormalMermaidMigrationCases": 1,
+      "developmentStartupCases": 1,
+      "reason": "Runtime, build and browser test source hashes unchanged; only Git byte preservation and material test scratch setup corrected"
+    }
+  },
+  "localLogSha256": {
+    "tiny123-review-index-install.txt": "eb68d70c474f2fa6428fec93775216686a45c4a1206cdd540cb171f437cb76bf",
+    "tiny123-review-independent-check.txt": "ec17159901f915ac043083a9789b23e07de398b9efe3aead1519bbf9617e55b9",
+    "tiny123-review-independent-material-tests.txt": "3696a603931de92f6fe40180049a0fa676f4f936c3eed8f589a89ade66a019d4",
+    "tiny123-review-independent-build.txt": "bdf67fdec4f12c5cc5c9ef033323f82098ae288f076da60933b6500d11596f9c",
+    "tiny123-review-independent-docs.txt": "2c58a74a203590e8a7c6475787a41e44ee059d2fd3c66ed104ab870babe83fa5",
+    "tiny123-review-independent-audit.txt": "2d96c560ff13cb27aab06da841bbdd447f276f553cfdbfd081a9200aa32bdbf6",
+    "tiny123-review-independent-root-audit.txt": "648137307389dba8bd0296c6c19e94aeaa8e4d6273dee11b31caf73142e966ff",
+    "tiny123-review-independent-http.json": "b478c8dbc4d28a1a9899812509982d0c80caf1e0f7b455822d26aca43ed406b9",
+    "tiny123-review-root-material-tests.txt": "c075941865aebdaac2e6662395a7022ab461318da0bd79cc17cffb43882a6b68",
+    "tiny123-review-thread-probe.txt": "07003db5962cfba53e711bb2983b6868664433b4b7c790402485c9d6180e5559",
+    "tiny123-review-junction-failure.txt": "e32261c08387e951206f76b91e9f90344f8c89d085b675a09ed983bca2fc4576"
+  },
+  "localArtifactRetention": "tmp/tiny123-review-final-180f44c/dist",
+  "artifactPublication": "None; no archive created or attached; file hash inventory only in Git",
+  "remoteCI": "Recorded separately in PR; this record contains local results only",
+  "limitations": [
+    "No merge or deploy",
+    "No published release or archive attachment",
+    "macOS/iOS excluded",
+    "Windows physical-device acceptance by user separately",
+    "Actual delivery and anydoc/PDFium conditions remain separate"
+  ],
+  "localHarnessProblems": [
+    {
+      "case": "Shared node_modules junction",
+      "result": "Vite denied Tiny URL outside copied root; replaced by independent npm ci; no product allow-list relaxation"
+    },
+    {
+      "case": "Fresh checkout tmp absent",
+      "result": "Actual test initialization defect fixed and verified from missing tmp; original working tree had hidden this assumption"
+    }
+  ],
+  "finalDocumentationValidation": {
+    "documents": 81,
+    "localLinks": 399,
+    "issues": 0,
+    "gitDiffCheck": "passed"
+  }
+}

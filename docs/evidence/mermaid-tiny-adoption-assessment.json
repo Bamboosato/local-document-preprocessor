@@ -53,7 +53,7 @@
   "cleanMaterialValidation": "mermaid-tiny-12.3-review.json",
   "materialProcedure": "../mermaid-tiny-12.3-review.md",
   "productAcceptanceRemaining": [
-    "Final candidate commit/artifact pinning and review remain separate",
+    "Review fixed candidate; remote CI results tracked in PR",
     "User Windows physical-device acceptance and authorized actual delivery acceptance remain separate",
     "anydoc/PDFium distribution conditions and final public-release judgement remain separate"
   ],
@@ -76,5 +76,6 @@
   "latestCandidateReview": "mermaid-tiny-12.3-review.json",
   "candidateReviewGaps": [],
   "activeLocalProductCandidate": "@mermaid-js/tiny@12.3.0",
-  "activeProductEmbeddedAdvisories": "mermaid-tiny-12.3-product-cutover-audit.json"
+  "activeProductEmbeddedAdvisories": "mermaid-tiny-12.3-product-cutover-audit.json",
+  "fixedReviewCandidate": "mermaid-tiny-12.3-review-candidate.json"
 }
