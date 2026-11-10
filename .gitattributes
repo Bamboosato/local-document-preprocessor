@@ -10,3 +10,4 @@ scripts/tiny-release.json -text whitespace=cr-at-eol
 docs/third-party-npm-licenses/** -text whitespace=cr-at-eol
 docs/evidence/pako-1.0.11-notices.json -text whitespace=cr-at-eol
 docs/evidence/pdf-lib-1.17.1-notices.json -text whitespace=cr-at-eol
+docs/evidence/production-internal-notice-discovery.json -text whitespace=cr-at-eol
