@@ -3,6 +3,7 @@
   "git": {
     "deploymentEnabled": {
       "main": false,
+      "codex/production-release-record": false,
       "codex/e01-separate-release-decision": false,
       "codex/json-scope-completion": false,
       "codex/pdfium-license-followup": false,
