@@ -7,7 +7,8 @@ async function waitForActiveServiceWorker(page: Page) {
     )), { timeout: 60_000 }).toBe(true);
 }
 
-test('PWA manifestとService Workerは静的アセットだけを扱う', async ({ page }) => {
+test('PWA manifestとService Workerは静的アセットだけを扱う', async ({ page, browser }, testInfo) => {
+  testInfo.annotations.push({type:'browser-version',description:browser.version()});
   // All distribution assets are installed sequentially; the readiness check
   // must await activation rather than treating an async predicate as truthy.
   test.setTimeout(90_000);
@@ -199,6 +200,36 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
     expect(dataNotices[1]).toContain('Original code copyright 2014 Foxit');
     expect(dataNotices[2]).toContain('Copyright (c) 1990-1994 Adobe Systems Incorporated');
     await expect(popup.getByRole('link',{name:'MMフォント内のAdobe著作権表示（許諾条件確認中）',exact:true})).toBeVisible();
+    await expect(popup.getByRole('heading',{name:'MMフォント初出時の参考原文',exact:true})).toBeVisible();
+    await expect(popup.getByText('初出時の参考資料です。MMフォントの全許諾や文字輪郭の由来の確定を示すものではありません。',{exact:true})).toBeVisible();
+    const origins=await popup.evaluate(async()=>{
+      const inventory=await(await fetch('./inventory.json')).json(),texts=[];
+      for(const item of inventory.mmFontOrigin.originals){
+        const response=await fetch(item.path);if(!response.ok)throw Error('origin unavailable');const bytes=await response.arrayBuffer();
+        const hash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(b=>b.toString(16).padStart(2,'0')).join('');
+        if(hash!==item.sha256)throw Error('origin hash');texts.push(new TextDecoder().decode(bytes));
+      }
+      return texts;
+    });
+    expect(origins).toHaveLength(2);
+    expect(origins[0]).toContain('Redistribution and use in source and binary forms');
+    expect(origins[1]).toContain('Foxit Software Inc');
+    expect(origins[1]).toContain('Google Inc.');
+    await expect(popup.getByRole('heading',{name:'配布準備用の候補原文・条件別の告知案',exact:true})).toBeVisible();
+    await expect(popup.getByText('固定ソース候補を保守的にまとめた資料です。完全な内包一覧や配布承認ではありません。',{exact:true})).toBeVisible();
+    const conditionBundle=await popup.evaluate(async()=>{
+      const inventory=await(await fetch('./inventory.json')).json(),bundle=inventory.conditionPreparation;
+      const items=[...bundle.units.flatMap((u:{originals:{path:string;sha256:string}[]})=>u.originals),bundle.credits];
+      let total=0;
+      for(const item of items){
+        const response=await fetch(item.path);if(!response.ok)throw Error('condition material unavailable');const bytes=await response.arrayBuffer();
+        const hash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(b=>b.toString(16).padStart(2,'0')).join('');
+        if(hash!==item.sha256)throw Error('condition material hash');total+=bytes.byteLength;
+      }
+      return {units:bundle.units.length,files:items.length,total,approved:bundle.releaseApproval};
+    });
+    expect(conditionBundle.units).toBe(119);expect(conditionBundle.files).toBe(229);
+    expect(conditionBundle.total).toBeGreaterThan(1_111_370);expect(conditionBundle.approved).toBe(false);
     await popup.close();
   } finally { await page.context().setOffline(false); }
 });

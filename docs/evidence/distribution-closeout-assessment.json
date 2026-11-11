@@ -1,0 +1,3311 @@
+{
+  "schema": 1,
+  "date": "2026-11-11",
+  "scope": "Conservative fixed-candidate provision and condition-preparation review; not complete linked SBOM, final legal approval or actual-delivery proof",
+  "inputsSha256CanonicalLF": {
+    "docs/evidence/json-anydoc-target-licenses.json": "c0d4047fb50ca7c82ce48150c00444e9b20ed6dba8f975b2989222634784502b",
+    "docs/evidence/wasm-remaining-condition-review.json": "c3ead8c7a61fb1a64f76e8b4a93e6bd21f9133eabd4789383722186e0397f95f",
+    "docs/evidence/wasm-individual-condition-review.json": "ce781cf25526f15fadf8cdcd1dc9606282da387344beea03373c3c874622a3bf",
+    "docs/evidence/wasm-condition-dispositions.json": "0a48a54c6f0fee3b083e27d5b9e74080a6133001062070558eb804a485b8a186",
+    "docs/evidence/legacy-license-preparation-policy.json": "77ccd1c4bbd9a5acb3b4c7ab7182ae1314d467ac58107c100507f59f3eef2b40",
+    "docs/evidence/json-pdfium-source-licenses.json": "338644daf7b56969870128823ff1a6172b967189e129cdb2d52d6153c083005d",
+    "docs/evidence/pdfium-notice-materials.json": "8b48f4587abaa58345fd36d291652d7066898cb5907bfcaf8faf1d6bafb66f1a",
+    "docs/evidence/json-published-wasm-correspondence.json": "5a46a317ff2e65f1b14630a4ac73453a2e5d775c62400d625356390f6ac726da"
+  },
+  "candidateCounts": {
+    "anydocRegistry": 96,
+    "workspaceUnits": 1,
+    "pdfiumGroups": 22,
+    "units": 119,
+    "originals": 228
+  },
+  "units": [
+    {
+      "id": "anydoc/adler2@2.0.1",
+      "name": "adler2",
+      "version": "2.0.1",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "0BSD OR MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/adler2@2.0.1/000-LICENSE-0BSD.txt",
+          "outputPath": "wasm-conditions/anydoc/adler2@2.0.1/00-LICENSE-0BSD.txt",
+          "label": "licenses/adler2@2.0.1/LICENSE-0BSD",
+          "bytes": 665,
+          "sha256": "861399f8c21c042b110517e76dc6b63a2b334276c8cf17412fc3c8908ca8dc17"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/adler2@2.0.1/001-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/adler2@2.0.1/01-LICENSE-APACHE.txt",
+          "label": "licenses/adler2@2.0.1/LICENSE-APACHE",
+          "bytes": 10860,
+          "sha256": "8ada45cd9f843acf64e4722ae262c622a2b3b3007c7310ef36ac1061a30f6adb"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/adler2@2.0.1/002-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/adler2@2.0.1/02-LICENSE-MIT.txt",
+          "label": "licenses/adler2@2.0.1/LICENSE-MIT",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/aes@0.8.4",
+      "name": "aes",
+      "version": "0.8.4",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/aes@0.8.4/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/aes@0.8.4/00-LICENSE-APACHE.txt",
+          "label": "licenses/aes@0.8.4/LICENSE-APACHE",
+          "bytes": 10849,
+          "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/aes@0.8.4/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/aes@0.8.4/01-LICENSE-MIT.txt",
+          "label": "licenses/aes@0.8.4/LICENSE-MIT",
+          "bytes": 1057,
+          "sha256": "f7e8ab639afef15573680c97f796166835cbeb3865175882fea41c60d106b733"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/aho-corasick@1.1.5",
+      "name": "aho-corasick",
+      "version": "1.1.5",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "Unlicense OR MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/aho-corasick@1.1.5/000-COPYING.txt",
+          "outputPath": "wasm-conditions/anydoc/aho-corasick@1.1.5/00-COPYING.txt",
+          "label": "licenses/aho-corasick@1.1.5/COPYING",
+          "bytes": 126,
+          "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/aho-corasick@1.1.5/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/aho-corasick@1.1.5/01-LICENSE-MIT.txt",
+          "label": "licenses/aho-corasick@1.1.5/LICENSE-MIT",
+          "bytes": 1081,
+          "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/atoi_simd@0.18.1",
+      "name": "atoi_simd",
+      "version": "0.18.1",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/atoi_simd@0.18.1/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/atoi_simd@0.18.1/00-LICENSE-APACHE.txt",
+          "label": "licenses/atoi_simd@0.18.1/LICENSE-APACHE",
+          "bytes": 10842,
+          "sha256": "18d98423c078c531baafb7ed6248639fca1a45c718f2fd2bbf249c56127b2e3b"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/atoi_simd@0.18.1/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/atoi_simd@0.18.1/01-LICENSE-MIT.txt",
+          "label": "licenses/atoi_simd@0.18.1/LICENSE-MIT",
+          "bytes": 1059,
+          "sha256": "f155f18a8148391a82157dae8f5a300bb32fec6a338ae19dcb52de6f2f3dbe21"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/autocfg@1.5.1",
+      "name": "autocfg",
+      "version": "1.5.1",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "Apache-2.0 OR MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/autocfg@1.5.1/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/autocfg@1.5.1/00-LICENSE-APACHE.txt",
+          "label": "licenses/autocfg@1.5.1/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/autocfg@1.5.1/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/autocfg@1.5.1/01-LICENSE-MIT.txt",
+          "label": "licenses/autocfg@1.5.1/LICENSE-MIT",
+          "bytes": 1054,
+          "sha256": "27995d58ad5c1145c1a8cd86244ce844886958a35eb2b78c6b772748669999ac"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/bitflags@2.13.1",
+      "name": "bitflags",
+      "version": "2.13.1",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/bitflags@2.13.1/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/bitflags@2.13.1/00-LICENSE-APACHE.txt",
+          "label": "licenses/bitflags@2.13.1/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/bitflags@2.13.1/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/bitflags@2.13.1/01-LICENSE-MIT.txt",
+          "label": "licenses/bitflags@2.13.1/LICENSE-MIT",
+          "bytes": 1071,
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/block-buffer@0.10.4",
+      "name": "block-buffer",
+      "version": "0.10.4",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/block-buffer@0.10.4/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/block-buffer@0.10.4/00-LICENSE-APACHE.txt",
+          "label": "licenses/block-buffer@0.10.4/LICENSE-APACHE",
+          "bytes": 10849,
+          "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/block-buffer@0.10.4/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/block-buffer@0.10.4/01-LICENSE-MIT.txt",
+          "label": "licenses/block-buffer@0.10.4/LICENSE-MIT",
+          "bytes": 1082,
+          "sha256": "d5c22aa3118d240e877ad41c5d9fa232f9c77d757d4aac0c2f943afc0a95e0ef"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/block-padding@0.3.3",
+      "name": "block-padding",
+      "version": "0.3.3",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/block-padding@0.3.3/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/block-padding@0.3.3/00-LICENSE-APACHE.txt",
+          "label": "licenses/block-padding@0.3.3/LICENSE-APACHE",
+          "bytes": 10849,
+          "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/block-padding@0.3.3/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/block-padding@0.3.3/01-LICENSE-MIT.txt",
+          "label": "licenses/block-padding@0.3.3/LICENSE-MIT",
+          "bytes": 1082,
+          "sha256": "d5c22aa3118d240e877ad41c5d9fa232f9c77d757d4aac0c2f943afc0a95e0ef"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/bumpalo@3.20.3",
+      "name": "bumpalo",
+      "version": "3.20.3",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/bumpalo@3.20.3/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/bumpalo@3.20.3/00-LICENSE-APACHE.txt",
+          "label": "licenses/bumpalo@3.20.3/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/bumpalo@3.20.3/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/bumpalo@3.20.3/01-LICENSE-MIT.txt",
+          "label": "licenses/bumpalo@3.20.3/LICENSE-MIT",
+          "bytes": 1059,
+          "sha256": "65f94e99ddaf4f5d1782a6dae23f35d4293a9a01444a13135a6887017d353cee"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/byteorder@1.5.0",
+      "name": "byteorder",
+      "version": "1.5.0",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "Unlicense OR MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/byteorder@1.5.0/000-COPYING.txt",
+          "outputPath": "wasm-conditions/anydoc/byteorder@1.5.0/00-COPYING.txt",
+          "label": "licenses/byteorder@1.5.0/COPYING",
+          "bytes": 126,
+          "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/byteorder@1.5.0/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/byteorder@1.5.0/01-LICENSE-MIT.txt",
+          "label": "licenses/byteorder@1.5.0/LICENSE-MIT",
+          "bytes": 1081,
+          "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/calamine@0.36.1",
+      "name": "calamine",
+      "version": "0.36.1",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/calamine@0.36.1/000-LICENSE-MIT.md.txt",
+          "outputPath": "wasm-conditions/anydoc/calamine@0.36.1/00-LICENSE-MIT.md.txt",
+          "label": "licenses/calamine@0.36.1/LICENSE-MIT.md",
+          "bytes": 1082,
+          "sha256": "f0cf9b1c62bbe3bd3a69f5f79c7158f513f612b4940a0a812d1db39d605318bc"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/cbc@0.1.2",
+      "name": "cbc",
+      "version": "0.1.2",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/cbc@0.1.2/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/cbc@0.1.2/00-LICENSE-APACHE.txt",
+          "label": "licenses/cbc@0.1.2/LICENSE-APACHE",
+          "bytes": 10849,
+          "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/cbc@0.1.2/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/cbc@0.1.2/01-LICENSE-MIT.txt",
+          "label": "licenses/cbc@0.1.2/LICENSE-MIT",
+          "bytes": 1103,
+          "sha256": "63af4bea227c94d021e99427f6ca3a4b8efddadcca93ab6130f708cf6138cf68"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/cfb@0.14.0",
+      "name": "cfb",
+      "version": "0.14.0",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/cfb@0.14.0/000-LICENSE.txt",
+          "outputPath": "wasm-conditions/anydoc/cfb@0.14.0/00-LICENSE.txt",
+          "label": "licenses/cfb@0.14.0/LICENSE",
+          "bytes": 1074,
+          "sha256": "ebaac853b53fec0ed475796f533ce676912a4df9ad9d8a621fa76d5060591e10"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/cfg-if@1.0.4",
+      "name": "cfg-if",
+      "version": "1.0.4",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/cfg-if@1.0.4/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/cfg-if@1.0.4/00-LICENSE-APACHE.txt",
+          "label": "licenses/cfg-if@1.0.4/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/cfg-if@1.0.4/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/cfg-if@1.0.4/01-LICENSE-MIT.txt",
+          "label": "licenses/cfg-if@1.0.4/LICENSE-MIT",
+          "bytes": 1057,
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/chacha20@0.10.1",
+      "name": "chacha20",
+      "version": "0.10.1",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/chacha20@0.10.1/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/chacha20@0.10.1/00-LICENSE-APACHE.txt",
+          "label": "licenses/chacha20@0.10.1/LICENSE-APACHE",
+          "bytes": 10849,
+          "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/chacha20@0.10.1/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/chacha20@0.10.1/01-LICENSE-MIT.txt",
+          "label": "licenses/chacha20@0.10.1/LICENSE-MIT",
+          "bytes": 1082,
+          "sha256": "b8c6939380a400f53e11923d50fcc4dd2fa1ba8339fd9d04cda38a0251b6c9b0"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/chrono@0.4.45",
+      "name": "chrono",
+      "version": "0.4.45",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/chrono@0.4.45/000-LICENSE.txt.txt",
+          "outputPath": "wasm-conditions/anydoc/chrono@0.4.45/00-LICENSE.txt.txt",
+          "label": "licenses/chrono@0.4.45/LICENSE.txt",
+          "bytes": 12307,
+          "sha256": "946c9835d8034d24404f8cfec5f4654cee5dad17e944afc3d06d742cf2882831"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/cipher@0.4.4",
+      "name": "cipher",
+      "version": "0.4.4",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/cipher@0.4.4/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/cipher@0.4.4/00-LICENSE-APACHE.txt",
+          "label": "licenses/cipher@0.4.4/LICENSE-APACHE",
+          "bytes": 10849,
+          "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/cipher@0.4.4/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/cipher@0.4.4/01-LICENSE-MIT.txt",
+          "label": "licenses/cipher@0.4.4/LICENSE-MIT",
+          "bytes": 1070,
+          "sha256": "5c7bd92d1f096f12203dc1b601e3cb17484fa1b023e30b6b8edcc80e416237ec"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/codepage@0.1.2",
+      "name": "codepage",
+      "version": "0.1.2",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "Apache-2.0 OR MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/codepage@0.1.2/000-COPYRIGHT.txt",
+          "outputPath": "wasm-conditions/anydoc/codepage@0.1.2/00-COPYRIGHT.txt",
+          "label": "licenses/codepage@0.1.2/COPYRIGHT",
+          "bytes": 371,
+          "sha256": "9cd0dc38d18929dc5c3dfc36ed2e96ab1a11d618a514a2e82de6b368b2c1604c"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/codepage@0.1.2/001-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/codepage@0.1.2/01-LICENSE-APACHE.txt",
+          "label": "licenses/codepage@0.1.2/LICENSE-APACHE",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/codepage@0.1.2/002-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/codepage@0.1.2/02-LICENSE-MIT.txt",
+          "label": "licenses/codepage@0.1.2/LICENSE-MIT",
+          "bytes": 1053,
+          "sha256": "3fa4ca83dcc9237839b1bdeb2e6d16bdfb5ec0c5ce42b24694d8bbf0dcbef72c"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/crc32fast@1.5.0",
+      "name": "crc32fast",
+      "version": "1.5.0",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/crc32fast@1.5.0/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/crc32fast@1.5.0/00-LICENSE-APACHE.txt",
+          "label": "licenses/crc32fast@1.5.0/LICENSE-APACHE",
+          "bytes": 11358,
+          "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/crc32fast@1.5.0/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/crc32fast@1.5.0/01-LICENSE-MIT.txt",
+          "label": "licenses/crc32fast@1.5.0/LICENSE-MIT",
+          "bytes": 1097,
+          "sha256": "61d383b05b87d78f94d2937e2580cce47226d17823c0430fbcad09596537efcf"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/crypto-common@0.1.7",
+      "name": "crypto-common",
+      "version": "0.1.7",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/crypto-common@0.1.7/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/crypto-common@0.1.7/00-LICENSE-APACHE.txt",
+          "label": "licenses/crypto-common@0.1.7/LICENSE-APACHE",
+          "bytes": 10849,
+          "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/crypto-common@0.1.7/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/crypto-common@0.1.7/01-LICENSE-MIT.txt",
+          "label": "licenses/crypto-common@0.1.7/LICENSE-MIT",
+          "bytes": 1065,
+          "sha256": "3521672491a3479422d5fe1aca6645dd2984090f85da6e5205abfb18fb7a6897"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/csv-core@0.1.13",
+      "name": "csv-core",
+      "version": "0.1.13",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "Unlicense/MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/csv-core@0.1.13/000-COPYING.txt",
+          "outputPath": "wasm-conditions/anydoc/csv-core@0.1.13/00-COPYING.txt",
+          "label": "licenses/csv-core@0.1.13/COPYING",
+          "bytes": 126,
+          "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/csv-core@0.1.13/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/csv-core@0.1.13/01-LICENSE-MIT.txt",
+          "label": "licenses/csv-core@0.1.13/LICENSE-MIT",
+          "bytes": 1081,
+          "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/csv@1.4.0",
+      "name": "csv",
+      "version": "1.4.0",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "Unlicense/MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/csv@1.4.0/000-COPYING.txt",
+          "outputPath": "wasm-conditions/anydoc/csv@1.4.0/00-COPYING.txt",
+          "label": "licenses/csv@1.4.0/COPYING",
+          "bytes": 126,
+          "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/csv@1.4.0/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/csv@1.4.0/01-LICENSE-MIT.txt",
+          "label": "licenses/csv@1.4.0/LICENSE-MIT",
+          "bytes": 1081,
+          "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/debug_unsafe@0.1.4",
+      "name": "debug_unsafe",
+      "version": "0.1.4",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/debug_unsafe@0.1.4/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/debug_unsafe@0.1.4/00-LICENSE-APACHE.txt",
+          "label": "licenses/debug_unsafe@0.1.4/LICENSE-APACHE",
+          "bytes": 10842,
+          "sha256": "8286bf891c9503f40be70ddab1f3b83475d6bda0c5e2004e79928895b3cfa28b"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/debug_unsafe@0.1.4/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/debug_unsafe@0.1.4/01-LICENSE-MIT.txt",
+          "label": "licenses/debug_unsafe@0.1.4/LICENSE-MIT",
+          "bytes": 1059,
+          "sha256": "81c54baa1c7b9d422b9e28ec26d0d0062480cad4ee5737cacaefc473c6880e1c"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/digest@0.10.7",
+      "name": "digest",
+      "version": "0.10.7",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/digest@0.10.7/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/digest@0.10.7/00-LICENSE-APACHE.txt",
+          "label": "licenses/digest@0.10.7/LICENSE-APACHE",
+          "bytes": 10849,
+          "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/digest@0.10.7/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/digest@0.10.7/01-LICENSE-MIT.txt",
+          "label": "licenses/digest@0.10.7/LICENSE-MIT",
+          "bytes": 1057,
+          "sha256": "9e0dfd2dd4173a530e238cb6adb37aa78c34c6bc7444e0e10c1ab5d8881f63ba"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/ecb@0.1.2",
+      "name": "ecb",
+      "version": "0.1.2",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/ecb@0.1.2/000-LICENSE.txt",
+          "outputPath": "wasm-conditions/anydoc/ecb@0.1.2/00-LICENSE.txt",
+          "label": "licenses/ecb@0.1.2/LICENSE",
+          "bytes": 1062,
+          "sha256": "305f0f8f4db8470887a8819b2dd0779371b960de48067f4a4ace0bb311ba71da"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/encoding_rs@0.8.35",
+      "name": "encoding_rs",
+      "version": "0.8.35",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "(Apache-2.0 OR MIT) AND BSD-3-Clause",
+      "preparationChoice": "MIT AND BSD-3-Clause",
+      "requirements": [
+        "Retain MIT copyright/permission notice",
+        "Retain WHATWG copyright, conditions and disclaimer with source; reproduce in binary documentation/materials",
+        "No endorsement using rightsholder/contributor names without permission"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/encoding_rs@0.8.35/000-COPYRIGHT.txt",
+          "outputPath": "wasm-conditions/anydoc/encoding_rs@0.8.35/00-COPYRIGHT.txt",
+          "label": "licenses/encoding_rs@0.8.35/COPYRIGHT",
+          "bytes": 713,
+          "sha256": "11789f45bb180841cd362a5eee6789c68ddb573a11105e30768c308a6add0190"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/encoding_rs@0.8.35/001-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/encoding_rs@0.8.35/01-LICENSE-APACHE.txt",
+          "label": "licenses/encoding_rs@0.8.35/LICENSE-APACHE",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/encoding_rs@0.8.35/002-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/encoding_rs@0.8.35/02-LICENSE-MIT.txt",
+          "label": "licenses/encoding_rs@0.8.35/LICENSE-MIT",
+          "bytes": 1053,
+          "sha256": "3fa4ca83dcc9237839b1bdeb2e6d16bdfb5ec0c5ce42b24694d8bbf0dcbef72c"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/encoding_rs@0.8.35/003-LICENSE-WHATWG.txt",
+          "outputPath": "wasm-conditions/anydoc/encoding_rs@0.8.35/03-LICENSE-WHATWG.txt",
+          "label": "licenses/encoding_rs@0.8.35/LICENSE-WHATWG",
+          "bytes": 1501,
+          "sha256": "838118388fe5c2e7f1dbbaeed13e1c7f3ebf88be91319c7c1d77c18e987d1a50"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/equivalent@1.0.2",
+      "name": "equivalent",
+      "version": "1.0.2",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "Apache-2.0 OR MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/equivalent@1.0.2/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/equivalent@1.0.2/00-LICENSE-APACHE.txt",
+          "label": "licenses/equivalent@1.0.2/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/equivalent@1.0.2/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/equivalent@1.0.2/01-LICENSE-MIT.txt",
+          "label": "licenses/equivalent@1.0.2/LICENSE-MIT",
+          "bytes": 1049,
+          "sha256": "7365cc8878a1d7ce155a58c4ca09c3d7a6be413efa5334a80ea842912b669349"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/fast-float2@0.2.3",
+      "name": "fast-float2",
+      "version": "0.2.3",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/fast-float2@0.2.3/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/fast-float2@0.2.3/00-LICENSE-APACHE.txt",
+          "label": "licenses/fast-float2@0.2.3/LICENSE-APACHE",
+          "bytes": 10832,
+          "sha256": "2aec41511a0274b6841a1d197ca5f8eecefa5f93faeb6dca48f8f9137398fd93"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/fast-float2@0.2.3/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/fast-float2@0.2.3/01-LICENSE-MIT.txt",
+          "label": "licenses/fast-float2@0.2.3/LICENSE-MIT",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/flate2@1.1.9",
+      "name": "flate2",
+      "version": "1.1.9",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/flate2@1.1.9/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/flate2@1.1.9/00-LICENSE-APACHE.txt",
+          "label": "licenses/flate2@1.1.9/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/flate2@1.1.9/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/flate2@1.1.9/01-LICENSE-MIT.txt",
+          "label": "licenses/flate2@1.1.9/LICENSE-MIT",
+          "bytes": 1062,
+          "sha256": "025436edff4cfcdde17a5811fdea78892d8482efd1abdec5a17872d07a4f2112"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/fnv@1.0.7",
+      "name": "fnv",
+      "version": "1.0.7",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "Apache-2.0 / MIT",
+      "preparationChoice": "prepare-both-MIT-and-Apache; declaration unchanged",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions",
+        "Provide license; mark modified files; retain applicable source attributions and readable NOTICE if supplied; source/object forms have distinct conditions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/fnv@1.0.7/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/fnv@1.0.7/00-LICENSE-APACHE.txt",
+          "label": "licenses/fnv@1.0.7/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/fnv@1.0.7/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/fnv@1.0.7/01-LICENSE-MIT.txt",
+          "label": "licenses/fnv@1.0.7/LICENSE-MIT",
+          "bytes": 1056,
+          "sha256": "65fdb6c76cd61612070c066eec9ecdb30ee74fb27859d0d9af58b9f499fd0c3e"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/futures-core@0.3.33",
+      "name": "futures-core",
+      "version": "0.3.33",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/futures-core@0.3.33/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/futures-core@0.3.33/00-LICENSE-APACHE.txt",
+          "label": "licenses/futures-core@0.3.33/LICENSE-APACHE",
+          "bytes": 10874,
+          "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/futures-core@0.3.33/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/futures-core@0.3.33/01-LICENSE-MIT.txt",
+          "label": "licenses/futures-core@0.3.33/LICENSE-MIT",
+          "bytes": 1094,
+          "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/futures-task@0.3.33",
+      "name": "futures-task",
+      "version": "0.3.33",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/futures-task@0.3.33/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/futures-task@0.3.33/00-LICENSE-APACHE.txt",
+          "label": "licenses/futures-task@0.3.33/LICENSE-APACHE",
+          "bytes": 10874,
+          "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/futures-task@0.3.33/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/futures-task@0.3.33/01-LICENSE-MIT.txt",
+          "label": "licenses/futures-task@0.3.33/LICENSE-MIT",
+          "bytes": 1094,
+          "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/futures-util@0.3.33",
+      "name": "futures-util",
+      "version": "0.3.33",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/futures-util@0.3.33/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/futures-util@0.3.33/00-LICENSE-APACHE.txt",
+          "label": "licenses/futures-util@0.3.33/LICENSE-APACHE",
+          "bytes": 10874,
+          "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/futures-util@0.3.33/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/futures-util@0.3.33/01-LICENSE-MIT.txt",
+          "label": "licenses/futures-util@0.3.33/LICENSE-MIT",
+          "bytes": 1094,
+          "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/generic-array@0.14.7",
+      "name": "generic-array",
+      "version": "0.14.7",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/generic-array@0.14.7/000-LICENSE.txt",
+          "outputPath": "wasm-conditions/anydoc/generic-array@0.14.7/00-LICENSE.txt",
+          "label": "licenses/generic-array@0.14.7/LICENSE",
+          "bytes": 1107,
+          "sha256": "c09aae9d3c77b531f56351a9947bc7446511d6b025b3255312d3e3442a9a7583"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/getrandom@0.4.3",
+      "name": "getrandom",
+      "version": "0.4.3",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/getrandom@0.4.3/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/getrandom@0.4.3/00-LICENSE-APACHE.txt",
+          "label": "licenses/getrandom@0.4.3/LICENSE-APACHE",
+          "bytes": 10849,
+          "sha256": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/getrandom@0.4.3/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/getrandom@0.4.3/01-LICENSE-MIT.txt",
+          "label": "licenses/getrandom@0.4.3/LICENSE-MIT",
+          "bytes": 1130,
+          "sha256": "523a42c25d245dde9c015f882cec7f4555aad883382a6cf19b4b7d9b2cd5419b"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/hashbrown@0.17.1",
+      "name": "hashbrown",
+      "version": "0.17.1",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/hashbrown@0.17.1/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/hashbrown@0.17.1/00-LICENSE-APACHE.txt",
+          "label": "licenses/hashbrown@0.17.1/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/hashbrown@0.17.1/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/hashbrown@0.17.1/01-LICENSE-MIT.txt",
+          "label": "licenses/hashbrown@0.17.1/LICENSE-MIT",
+          "bytes": 1060,
+          "sha256": "ff8f68cb076caf8cefe7a6430d4ac086ce6af2ca8ce2c4e5a2004d4552ef52a2"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/include_dir_macros@0.7.4",
+      "name": "include_dir_macros",
+      "version": "0.7.4",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/include_dir_macros@0.7.4/000-UPSTREAM-LICENSE.txt",
+          "outputPath": "wasm-conditions/anydoc/include_dir_macros@0.7.4/00-UPSTREAM-LICENSE.txt",
+          "label": "licenses/include_dir_macros@0.7.4/UPSTREAM-LICENSE",
+          "bytes": 1070,
+          "sha256": "9369f62987b3a116111f2edfdc4cc72633e44ddc94d5d0c68659cf537b76a31f"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/include_dir@0.7.4",
+      "name": "include_dir",
+      "version": "0.7.4",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/include_dir@0.7.4/000-UPSTREAM-LICENSE.txt",
+          "outputPath": "wasm-conditions/anydoc/include_dir@0.7.4/00-UPSTREAM-LICENSE.txt",
+          "label": "licenses/include_dir@0.7.4/UPSTREAM-LICENSE",
+          "bytes": 1070,
+          "sha256": "9369f62987b3a116111f2edfdc4cc72633e44ddc94d5d0c68659cf537b76a31f"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/indexmap@2.14.0",
+      "name": "indexmap",
+      "version": "2.14.0",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "Apache-2.0 OR MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/indexmap@2.14.0/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/indexmap@2.14.0/00-LICENSE-APACHE.txt",
+          "label": "licenses/indexmap@2.14.0/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/indexmap@2.14.0/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/indexmap@2.14.0/01-LICENSE-MIT.txt",
+          "label": "licenses/indexmap@2.14.0/LICENSE-MIT",
+          "bytes": 1049,
+          "sha256": "ecc269ef87fd38a1d98e30bfac9ba964a9dbd9315c3770fed98d4d7cb5882055"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/inout@0.1.4",
+      "name": "inout",
+      "version": "0.1.4",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/inout@0.1.4/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/inout@0.1.4/00-LICENSE-APACHE.txt",
+          "label": "licenses/inout@0.1.4/LICENSE-APACHE",
+          "bytes": 10849,
+          "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/inout@0.1.4/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/inout@0.1.4/01-LICENSE-MIT.txt",
+          "label": "licenses/inout@0.1.4/LICENSE-MIT",
+          "bytes": 1110,
+          "sha256": "304b898acad7f02e03d6d8832d682a3b43ee729ab5d3a069af5a36979083b6b4"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/itoa@1.0.18",
+      "name": "itoa",
+      "version": "1.0.18",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/itoa@1.0.18/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/itoa@1.0.18/00-LICENSE-APACHE.txt",
+          "label": "licenses/itoa@1.0.18/LICENSE-APACHE",
+          "bytes": 9723,
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/itoa@1.0.18/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/itoa@1.0.18/01-LICENSE-MIT.txt",
+          "label": "licenses/itoa@1.0.18/LICENSE-MIT",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/js-sys@0.3.103",
+      "name": "js-sys",
+      "version": "0.3.103",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/js-sys@0.3.103/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/js-sys@0.3.103/00-LICENSE-APACHE.txt",
+          "label": "licenses/js-sys@0.3.103/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/js-sys@0.3.103/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/js-sys@0.3.103/01-LICENSE-MIT.txt",
+          "label": "licenses/js-sys@0.3.103/LICENSE-MIT",
+          "bytes": 1057,
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/log@0.4.33",
+      "name": "log",
+      "version": "0.4.33",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/log@0.4.33/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/log@0.4.33/00-LICENSE-APACHE.txt",
+          "label": "licenses/log@0.4.33/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/log@0.4.33/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/log@0.4.33/01-LICENSE-MIT.txt",
+          "label": "licenses/log@0.4.33/LICENSE-MIT",
+          "bytes": 1071,
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/lopdf@0.41.0",
+      "name": "lopdf",
+      "version": "0.41.0",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/lopdf@0.41.0/000-LICENSE.txt",
+          "outputPath": "wasm-conditions/anydoc/lopdf@0.41.0/00-LICENSE.txt",
+          "label": "licenses/lopdf@0.41.0/LICENSE",
+          "bytes": 1068,
+          "sha256": "2fb01e6708ea9d53e8b7e74bd82af23bce5256f19f4de93915027a53173c50d8"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/md-5@0.10.6",
+      "name": "md-5",
+      "version": "0.10.6",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/md-5@0.10.6/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/md-5@0.10.6/00-LICENSE-APACHE.txt",
+          "label": "licenses/md-5@0.10.6/LICENSE-APACHE",
+          "bytes": 10849,
+          "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/md-5@0.10.6/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/md-5@0.10.6/01-LICENSE-MIT.txt",
+          "label": "licenses/md-5@0.10.6/LICENSE-MIT",
+          "bytes": 1138,
+          "sha256": "b4eb00df6e2a4d22518fcaa6a2b4646f249b3a3c9814509b22bd2091f1392ff1"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/memchr@2.8.3",
+      "name": "memchr",
+      "version": "2.8.3",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "Unlicense OR MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/memchr@2.8.3/000-COPYING.txt",
+          "outputPath": "wasm-conditions/anydoc/memchr@2.8.3/00-COPYING.txt",
+          "label": "licenses/memchr@2.8.3/COPYING",
+          "bytes": 126,
+          "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/memchr@2.8.3/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/memchr@2.8.3/01-LICENSE-MIT.txt",
+          "label": "licenses/memchr@2.8.3/LICENSE-MIT",
+          "bytes": 1081,
+          "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/miniz_oxide@0.8.9",
+      "name": "miniz_oxide",
+      "version": "0.8.9",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Zlib OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/miniz_oxide@0.8.9/000-LICENSE.txt",
+          "outputPath": "wasm-conditions/anydoc/miniz_oxide@0.8.9/00-LICENSE.txt",
+          "label": "licenses/miniz_oxide@0.8.9/LICENSE",
+          "bytes": 1213,
+          "sha256": "4108245a1f2df9d4e94df8abed5b4ba0759bb2f9b40a6b939f1be141077ae50b"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/miniz_oxide@0.8.9/001-LICENSE-APACHE.md.txt",
+          "outputPath": "wasm-conditions/anydoc/miniz_oxide@0.8.9/01-LICENSE-APACHE.md.txt",
+          "label": "licenses/miniz_oxide@0.8.9/LICENSE-APACHE.md",
+          "bytes": 10174,
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/miniz_oxide@0.8.9/002-LICENSE-MIT.md.txt",
+          "outputPath": "wasm-conditions/anydoc/miniz_oxide@0.8.9/02-LICENSE-MIT.md.txt",
+          "label": "licenses/miniz_oxide@0.8.9/LICENSE-MIT.md",
+          "bytes": 1212,
+          "sha256": "799e9ca9d179295ef372f25d3769cdda7d25bb2668add6a6a1e22d1e4c678b8d"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/miniz_oxide@0.8.9/003-LICENSE-ZLIB.md.txt",
+          "outputPath": "wasm-conditions/anydoc/miniz_oxide@0.8.9/03-LICENSE-ZLIB.md.txt",
+          "label": "licenses/miniz_oxide@0.8.9/LICENSE-ZLIB.md",
+          "bytes": 984,
+          "sha256": "0a54e647fe54104658b5e563c04c6f9edf251710e47bce692e0bd990a4ddaa39"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/nom@8.0.0",
+      "name": "nom",
+      "version": "8.0.0",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/nom@8.0.0/000-LICENSE.txt",
+          "outputPath": "wasm-conditions/anydoc/nom@8.0.0/00-LICENSE.txt",
+          "label": "licenses/nom@8.0.0/LICENSE",
+          "bytes": 1065,
+          "sha256": "4dbda04344456f09a7a588140455413a9ac59b6b26a1ef7cdf9c800c012d87f0"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/num-traits@0.2.19",
+      "name": "num-traits",
+      "version": "0.2.19",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/num-traits@0.2.19/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/num-traits@0.2.19/00-LICENSE-APACHE.txt",
+          "label": "licenses/num-traits@0.2.19/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/num-traits@0.2.19/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/num-traits@0.2.19/01-LICENSE-MIT.txt",
+          "label": "licenses/num-traits@0.2.19/LICENSE-MIT",
+          "bytes": 1071,
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/once_cell@1.21.4",
+      "name": "once_cell",
+      "version": "1.21.4",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/once_cell@1.21.4/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/once_cell@1.21.4/00-LICENSE-APACHE.txt",
+          "label": "licenses/once_cell@1.21.4/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/once_cell@1.21.4/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/once_cell@1.21.4/01-LICENSE-MIT.txt",
+          "label": "licenses/once_cell@1.21.4/LICENSE-MIT",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/pdf-inspector@0.1.7",
+      "name": "pdf-inspector",
+      "version": "0.1.7",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/pdf-inspector@0.1.7/000-LICENSE.txt",
+          "outputPath": "wasm-conditions/anydoc/pdf-inspector@0.1.7/00-LICENSE.txt",
+          "label": "licenses/pdf-inspector@0.1.7/LICENSE",
+          "bytes": 1066,
+          "sha256": "c0689c6b1f93155007b113acbb55a3a9b8bf1c7bdae4b14aa4175b04b37207de"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/pdf-inspector@0.1.7/001-LICENSE.txt",
+          "outputPath": "wasm-conditions/anydoc/pdf-inspector@0.1.7/01-LICENSE.txt",
+          "label": "licenses/pdf-inspector@0.1.7/external/bcmaps/LICENSE",
+          "bytes": 2080,
+          "sha256": "aa92ab5a472974865a96fd4a4e9c13bb41bf6fe1b309cb6b8da48bc9e19839a2"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/pin-project-lite@0.2.17",
+      "name": "pin-project-lite",
+      "version": "0.2.17",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "Apache-2.0 OR MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/pin-project-lite@0.2.17/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/pin-project-lite@0.2.17/00-LICENSE-APACHE.txt",
+          "label": "licenses/pin-project-lite@0.2.17/LICENSE-APACHE",
+          "bytes": 10174,
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/pin-project-lite@0.2.17/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/pin-project-lite@0.2.17/01-LICENSE-MIT.txt",
+          "label": "licenses/pin-project-lite@0.2.17/LICENSE-MIT",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/proc-macro2@1.0.107",
+      "name": "proc-macro2",
+      "version": "1.0.107",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/proc-macro2@1.0.107/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/proc-macro2@1.0.107/00-LICENSE-APACHE.txt",
+          "label": "licenses/proc-macro2@1.0.107/LICENSE-APACHE",
+          "bytes": 9723,
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/proc-macro2@1.0.107/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/proc-macro2@1.0.107/01-LICENSE-MIT.txt",
+          "label": "licenses/proc-macro2@1.0.107/LICENSE-MIT",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/quick-xml@0.41.0",
+      "name": "quick-xml",
+      "version": "0.41.0",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/quick-xml@0.41.0/000-LICENSE-MIT.md.txt",
+          "outputPath": "wasm-conditions/anydoc/quick-xml@0.41.0/00-LICENSE-MIT.md.txt",
+          "label": "licenses/quick-xml@0.41.0/LICENSE-MIT.md",
+          "bytes": 1105,
+          "sha256": "5b2c207dcf571267ebe0bbdd5bf321f561ddc22ff597e7b363e96f4539507a29"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/quote@1.0.47",
+      "name": "quote",
+      "version": "1.0.47",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/quote@1.0.47/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/quote@1.0.47/00-LICENSE-APACHE.txt",
+          "label": "licenses/quote@1.0.47/LICENSE-APACHE",
+          "bytes": 9723,
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/quote@1.0.47/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/quote@1.0.47/01-LICENSE-MIT.txt",
+          "label": "licenses/quote@1.0.47/LICENSE-MIT",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/rand_core@0.10.1",
+      "name": "rand_core",
+      "version": "0.10.1",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/rand_core@0.10.1/000-COPYRIGHT.txt",
+          "outputPath": "wasm-conditions/anydoc/rand_core@0.10.1/00-COPYRIGHT.txt",
+          "label": "licenses/rand_core@0.10.1/COPYRIGHT",
+          "bytes": 478,
+          "sha256": "92b81db30f7ab6d693e0af5661a40d273ca1947e891123ed823924192c10cbc7"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/rand_core@0.10.1/001-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/rand_core@0.10.1/01-LICENSE-APACHE.txt",
+          "label": "licenses/rand_core@0.10.1/LICENSE-APACHE",
+          "bytes": 10282,
+          "sha256": "6df43f6f4b5d4587f3d8d71e45532c688fd168afa5fe89d571cb32fa09c4ef51"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/rand_core@0.10.1/002-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/rand_core@0.10.1/02-LICENSE-MIT.txt",
+          "label": "licenses/rand_core@0.10.1/LICENSE-MIT",
+          "bytes": 1076,
+          "sha256": "8b6e9feec03e7c9a5facb26855cecd31662bf989b636bcfe79521bdf8ac863f0"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/rand@0.10.2",
+      "name": "rand",
+      "version": "0.10.2",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/rand@0.10.2/000-COPYRIGHT.txt",
+          "outputPath": "wasm-conditions/anydoc/rand@0.10.2/00-COPYRIGHT.txt",
+          "label": "licenses/rand@0.10.2/COPYRIGHT",
+          "bytes": 569,
+          "sha256": "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/rand@0.10.2/001-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/rand@0.10.2/01-LICENSE-APACHE.txt",
+          "label": "licenses/rand@0.10.2/LICENSE-APACHE",
+          "bytes": 9724,
+          "sha256": "35242e7a83f69875e6edeff02291e688c97caafe2f8902e4e19b49d3e78b4cab"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/rand@0.10.2/002-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/rand@0.10.2/02-LICENSE-MIT.txt",
+          "label": "licenses/rand@0.10.2/LICENSE-MIT",
+          "bytes": 1117,
+          "sha256": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/rangemap@1.7.1",
+      "name": "rangemap",
+      "version": "1.7.1",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT/Apache-2.0",
+      "preparationChoice": "prepare-both-MIT-and-Apache; declaration unchanged",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions",
+        "Provide license; mark modified files; retain applicable source attributions and readable NOTICE if supplied; source/object forms have distinct conditions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/rangemap@1.7.1/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/rangemap@1.7.1/00-LICENSE-APACHE.txt",
+          "label": "licenses/rangemap@1.7.1/LICENSE-APACHE",
+          "bytes": 10837,
+          "sha256": "1c7745cc26c7294bc9dbc883bcd50700b99a8c0f4859bfce84ec555098ce1ab5"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/rangemap@1.7.1/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/rangemap@1.7.1/01-LICENSE-MIT.txt",
+          "label": "licenses/rangemap@1.7.1/LICENSE-MIT",
+          "bytes": 1055,
+          "sha256": "29a4c3823ee29ee5a97c145574a1bac20629fd5e6708be1df0d25bab563e093c"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/regex-automata@0.4.16",
+      "name": "regex-automata",
+      "version": "0.4.16",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/regex-automata@0.4.16/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/regex-automata@0.4.16/00-LICENSE-APACHE.txt",
+          "label": "licenses/regex-automata@0.4.16/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/regex-automata@0.4.16/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/regex-automata@0.4.16/01-LICENSE-MIT.txt",
+          "label": "licenses/regex-automata@0.4.16/LICENSE-MIT",
+          "bytes": 1071,
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/regex-syntax@0.8.11",
+      "name": "regex-syntax",
+      "version": "0.8.11",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/regex-syntax@0.8.11/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/regex-syntax@0.8.11/00-LICENSE-APACHE.txt",
+          "label": "licenses/regex-syntax@0.8.11/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/regex-syntax@0.8.11/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/regex-syntax@0.8.11/01-LICENSE-MIT.txt",
+          "label": "licenses/regex-syntax@0.8.11/LICENSE-MIT",
+          "bytes": 1071,
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/regex-syntax@0.8.11/002-LICENSE-UNICODE.txt",
+          "outputPath": "wasm-conditions/anydoc/regex-syntax@0.8.11/02-LICENSE-UNICODE.txt",
+          "label": "licenses/regex-syntax@0.8.11/src/unicode_tables/LICENSE-UNICODE",
+          "bytes": 2847,
+          "sha256": "74db5baf44a41b1000312c673544b3374e4198af5605c7f9080a402cec42cfa3"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/regex@1.13.1",
+      "name": "regex",
+      "version": "1.13.1",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/regex@1.13.1/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/regex@1.13.1/00-LICENSE-APACHE.txt",
+          "label": "licenses/regex@1.13.1/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/regex@1.13.1/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/regex@1.13.1/01-LICENSE-MIT.txt",
+          "label": "licenses/regex@1.13.1/LICENSE-MIT",
+          "bytes": 1071,
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/rustversion@1.0.23",
+      "name": "rustversion",
+      "version": "1.0.23",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/rustversion@1.0.23/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/rustversion@1.0.23/00-LICENSE-APACHE.txt",
+          "label": "licenses/rustversion@1.0.23/LICENSE-APACHE",
+          "bytes": 9723,
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/rustversion@1.0.23/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/rustversion@1.0.23/01-LICENSE-MIT.txt",
+          "label": "licenses/rustversion@1.0.23/LICENSE-MIT",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/ryu@1.0.23",
+      "name": "ryu",
+      "version": "1.0.23",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "Apache-2.0 OR BSL-1.0",
+      "preparationChoice": "Apache-2.0",
+      "requirements": [
+        "Provide license; mark modified files; retain applicable source attributions and readable NOTICE if supplied; source/object forms have distinct conditions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/ryu@1.0.23/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/ryu@1.0.23/00-LICENSE-APACHE.txt",
+          "label": "licenses/ryu@1.0.23/LICENSE-APACHE",
+          "bytes": 9723,
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/ryu@1.0.23/001-LICENSE-BOOST.txt",
+          "outputPath": "wasm-conditions/anydoc/ryu@1.0.23/01-LICENSE-BOOST.txt",
+          "label": "licenses/ryu@1.0.23/LICENSE-BOOST",
+          "bytes": 1338,
+          "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/serde_bytes@0.11.19",
+      "name": "serde_bytes",
+      "version": "0.11.19",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/serde_bytes@0.11.19/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/serde_bytes@0.11.19/00-LICENSE-APACHE.txt",
+          "label": "licenses/serde_bytes@0.11.19/LICENSE-APACHE",
+          "bytes": 9723,
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/serde_bytes@0.11.19/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/serde_bytes@0.11.19/01-LICENSE-MIT.txt",
+          "label": "licenses/serde_bytes@0.11.19/LICENSE-MIT",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/serde_core@1.0.229",
+      "name": "serde_core",
+      "version": "1.0.229",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/serde_core@1.0.229/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/serde_core@1.0.229/00-LICENSE-APACHE.txt",
+          "label": "licenses/serde_core@1.0.229/LICENSE-APACHE",
+          "bytes": 9723,
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/serde_core@1.0.229/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/serde_core@1.0.229/01-LICENSE-MIT.txt",
+          "label": "licenses/serde_core@1.0.229/LICENSE-MIT",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/serde_derive@1.0.229",
+      "name": "serde_derive",
+      "version": "1.0.229",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/serde_derive@1.0.229/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/serde_derive@1.0.229/00-LICENSE-APACHE.txt",
+          "label": "licenses/serde_derive@1.0.229/LICENSE-APACHE",
+          "bytes": 9723,
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/serde_derive@1.0.229/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/serde_derive@1.0.229/01-LICENSE-MIT.txt",
+          "label": "licenses/serde_derive@1.0.229/LICENSE-MIT",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/serde-wasm-bindgen@0.6.5",
+      "name": "serde-wasm-bindgen",
+      "version": "0.6.5",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/serde-wasm-bindgen@0.6.5/000-LICENSE.txt",
+          "outputPath": "wasm-conditions/anydoc/serde-wasm-bindgen@0.6.5/00-LICENSE.txt",
+          "label": "licenses/serde-wasm-bindgen@0.6.5/LICENSE",
+          "bytes": 1094,
+          "sha256": "62a81c033fcf173693b50f068939cd903d8a414d915776ff1fef5d5869aabcb7"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/serde@1.0.229",
+      "name": "serde",
+      "version": "1.0.229",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/serde@1.0.229/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/serde@1.0.229/00-LICENSE-APACHE.txt",
+          "label": "licenses/serde@1.0.229/LICENSE-APACHE",
+          "bytes": 9723,
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/serde@1.0.229/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/serde@1.0.229/01-LICENSE-MIT.txt",
+          "label": "licenses/serde@1.0.229/LICENSE-MIT",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/sha2@0.10.9",
+      "name": "sha2",
+      "version": "0.10.9",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/sha2@0.10.9/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/sha2@0.10.9/00-LICENSE-APACHE.txt",
+          "label": "licenses/sha2@0.10.9/LICENSE-APACHE",
+          "bytes": 10849,
+          "sha256": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/sha2@0.10.9/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/sha2@0.10.9/01-LICENSE-MIT.txt",
+          "label": "licenses/sha2@0.10.9/LICENSE-MIT",
+          "bytes": 1138,
+          "sha256": "b4eb00df6e2a4d22518fcaa6a2b4646f249b3a3c9814509b22bd2091f1392ff1"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/simd-adler32@0.3.10",
+      "name": "simd-adler32",
+      "version": "0.3.10",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/simd-adler32@0.3.10/000-LICENSE.md.txt",
+          "outputPath": "wasm-conditions/anydoc/simd-adler32@0.3.10/00-LICENSE.md.txt",
+          "label": "licenses/simd-adler32@0.3.10/LICENSE.md",
+          "bytes": 1078,
+          "sha256": "42a35170233e83e18856792e748de4c1ce4a63b2afce9a370c89ef3fe23f9f2d"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/slab@0.4.12",
+      "name": "slab",
+      "version": "0.4.12",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/slab@0.4.12/000-LICENSE.txt",
+          "outputPath": "wasm-conditions/anydoc/slab@0.4.12/00-LICENSE.txt",
+          "label": "licenses/slab@0.4.12/LICENSE",
+          "bytes": 1055,
+          "sha256": "8ce0830173fdac609dfb4ea603fdc002c2f4af0dc9b1a005653f5da9cf534b18"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/stringprep@0.1.5",
+      "name": "stringprep",
+      "version": "0.1.5",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT/Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/stringprep@0.1.5/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/stringprep@0.1.5/00-LICENSE-APACHE.txt",
+          "label": "licenses/stringprep@0.1.5/LICENSE-APACHE",
+          "bytes": 11358,
+          "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/stringprep@0.1.5/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/stringprep@0.1.5/01-LICENSE-MIT.txt",
+          "label": "licenses/stringprep@0.1.5/LICENSE-MIT",
+          "bytes": 1074,
+          "sha256": "a07450fd4496cb8b58466e6d529f1f502444eee4a235659337e9194d694739d6"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/syn@2.0.119",
+      "name": "syn",
+      "version": "2.0.119",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/syn@2.0.119/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/syn@2.0.119/00-LICENSE-APACHE.txt",
+          "label": "licenses/syn@2.0.119/LICENSE-APACHE",
+          "bytes": 9723,
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/syn@2.0.119/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/syn@2.0.119/01-LICENSE-MIT.txt",
+          "label": "licenses/syn@2.0.119/LICENSE-MIT",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/syn@3.0.3",
+      "name": "syn",
+      "version": "3.0.3",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/syn@3.0.3/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/syn@3.0.3/00-LICENSE-APACHE.txt",
+          "label": "licenses/syn@3.0.3/LICENSE-APACHE",
+          "bytes": 9723,
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/syn@3.0.3/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/syn@3.0.3/01-LICENSE-MIT.txt",
+          "label": "licenses/syn@3.0.3/LICENSE-MIT",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/thiserror-impl@2.0.19",
+      "name": "thiserror-impl",
+      "version": "2.0.19",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/thiserror-impl@2.0.19/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/thiserror-impl@2.0.19/00-LICENSE-APACHE.txt",
+          "label": "licenses/thiserror-impl@2.0.19/LICENSE-APACHE",
+          "bytes": 9723,
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/thiserror-impl@2.0.19/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/thiserror-impl@2.0.19/01-LICENSE-MIT.txt",
+          "label": "licenses/thiserror-impl@2.0.19/LICENSE-MIT",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/thiserror@2.0.19",
+      "name": "thiserror",
+      "version": "2.0.19",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/thiserror@2.0.19/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/thiserror@2.0.19/00-LICENSE-APACHE.txt",
+          "label": "licenses/thiserror@2.0.19/LICENSE-APACHE",
+          "bytes": 9723,
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/thiserror@2.0.19/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/thiserror@2.0.19/01-LICENSE-MIT.txt",
+          "label": "licenses/thiserror@2.0.19/LICENSE-MIT",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/tinyvec_macros@0.1.1",
+      "name": "tinyvec_macros",
+      "version": "0.1.1",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0 OR Zlib",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/tinyvec_macros@0.1.1/000-LICENSE-APACHE.md.txt",
+          "outputPath": "wasm-conditions/anydoc/tinyvec_macros@0.1.1/00-LICENSE-APACHE.md.txt",
+          "label": "licenses/tinyvec_macros@0.1.1/LICENSE-APACHE.md",
+          "bytes": 11350,
+          "sha256": "4f44572785f35152c1fd2eadf565b7e079c0f300b4324f0af653419f9d76b735"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/tinyvec_macros@0.1.1/001-LICENSE-MIT.md.txt",
+          "outputPath": "wasm-conditions/anydoc/tinyvec_macros@0.1.1/01-LICENSE-MIT.md.txt",
+          "label": "licenses/tinyvec_macros@0.1.1/LICENSE-MIT.md",
+          "bytes": 1062,
+          "sha256": "1dd8eca0f83669e75fa119e34fb9e1be9d16e3e9b6368962b8019db6e8ae5f7b"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/tinyvec_macros@0.1.1/002-LICENSE-ZLIB.md.txt",
+          "outputPath": "wasm-conditions/anydoc/tinyvec_macros@0.1.1/02-LICENSE-ZLIB.md.txt",
+          "label": "licenses/tinyvec_macros@0.1.1/LICENSE-ZLIB.md",
+          "bytes": 864,
+          "sha256": "41ace205715d9f19a3214218cc1c01d57c533e02cd0fef7c8e51a49a7fce5ac5"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/tinyvec@1.12.0",
+      "name": "tinyvec",
+      "version": "1.12.0",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "Zlib OR Apache-2.0 OR MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/tinyvec@1.12.0/000-LICENSE-APACHE.md.txt",
+          "outputPath": "wasm-conditions/anydoc/tinyvec@1.12.0/00-LICENSE-APACHE.md.txt",
+          "label": "licenses/tinyvec@1.12.0/LICENSE-APACHE.md",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/tinyvec@1.12.0/001-LICENSE-MIT.md.txt",
+          "outputPath": "wasm-conditions/anydoc/tinyvec@1.12.0/01-LICENSE-MIT.md.txt",
+          "label": "licenses/tinyvec@1.12.0/LICENSE-MIT.md",
+          "bytes": 1023,
+          "sha256": "fd80a26fbb3f644af1fa994134446702932968519797227e07a1368dea80f0bc"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/tinyvec@1.12.0/002-LICENSE-ZLIB.md.txt",
+          "outputPath": "wasm-conditions/anydoc/tinyvec@1.12.0/02-LICENSE-ZLIB.md.txt",
+          "label": "licenses/tinyvec@1.12.0/LICENSE-ZLIB.md",
+          "bytes": 851,
+          "sha256": "84b34dd7608f7fb9b17bd588a6bf392bf7de504e2716f024a77d89f1b145a151"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/ttf-parser@0.25.1",
+      "name": "ttf-parser",
+      "version": "0.25.1",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/ttf-parser@0.25.1/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/ttf-parser@0.25.1/00-LICENSE-APACHE.txt",
+          "label": "licenses/ttf-parser@0.25.1/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/ttf-parser@0.25.1/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/ttf-parser@0.25.1/01-LICENSE-MIT.txt",
+          "label": "licenses/ttf-parser@0.25.1/LICENSE-MIT",
+          "bytes": 1061,
+          "sha256": "f3c9fe731c701ed77fd5fbaac573872af04dc5869385eb9bd5e3c73c42713814"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/typed-path@0.12.3",
+      "name": "typed-path",
+      "version": "0.12.3",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/typed-path@0.12.3/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/typed-path@0.12.3/00-LICENSE-APACHE.txt",
+          "label": "licenses/typed-path@0.12.3/LICENSE-APACHE",
+          "bytes": 9723,
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/typed-path@0.12.3/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/typed-path@0.12.3/01-LICENSE-MIT.txt",
+          "label": "licenses/typed-path@0.12.3/LICENSE-MIT",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/typenum@1.20.1",
+      "name": "typenum",
+      "version": "1.20.1",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/typenum@1.20.1/000-LICENSE.txt",
+          "outputPath": "wasm-conditions/anydoc/typenum@1.20.1/00-LICENSE.txt",
+          "label": "licenses/typenum@1.20.1/LICENSE",
+          "bytes": 17,
+          "sha256": "db11fec9946737df39ca3898d9cd8c10ec6f6c3a884a6802b0ad0b81b4e8f23a"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/typenum@1.20.1/001-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/typenum@1.20.1/01-LICENSE-APACHE.txt",
+          "label": "licenses/typenum@1.20.1/LICENSE-APACHE",
+          "bytes": 10835,
+          "sha256": "516b24e051bf5630880ebbd55c40a25ce9552ebaf8970a53e8976eb70e522406"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/typenum@1.20.1/002-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/typenum@1.20.1/02-LICENSE-MIT.txt",
+          "label": "licenses/typenum@1.20.1/LICENSE-MIT",
+          "bytes": 1083,
+          "sha256": "a825bd853ab71619a4923d7b4311221427848070ff44d990da39b0b274c1683f"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/unicode-bidi@0.3.18",
+      "name": "unicode-bidi",
+      "version": "0.3.18",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/unicode-bidi@0.3.18/000-AUTHORS.txt",
+          "outputPath": "wasm-conditions/anydoc/unicode-bidi@0.3.18/00-AUTHORS.txt",
+          "label": "licenses/unicode-bidi@0.3.18/AUTHORS",
+          "bytes": 121,
+          "sha256": "1ff3a7c8519b29544bb28ba9b1e7502df0cb764051fb9a1172e60006aa2b8dcc"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/unicode-bidi@0.3.18/001-COPYRIGHT.txt",
+          "outputPath": "wasm-conditions/anydoc/unicode-bidi@0.3.18/01-COPYRIGHT.txt",
+          "label": "licenses/unicode-bidi@0.3.18/COPYRIGHT",
+          "bytes": 412,
+          "sha256": "edb20b474f6cbd4f4db066b54a9e0f687d0009d309412a63431189b59b8e2a07"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/unicode-bidi@0.3.18/002-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/unicode-bidi@0.3.18/02-LICENSE-APACHE.txt",
+          "label": "licenses/unicode-bidi@0.3.18/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/unicode-bidi@0.3.18/003-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/unicode-bidi@0.3.18/03-LICENSE-MIT.txt",
+          "label": "licenses/unicode-bidi@0.3.18/LICENSE-MIT",
+          "bytes": 1071,
+          "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/unicode-ident@1.0.24",
+      "name": "unicode-ident",
+      "version": "1.0.24",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "(MIT OR Apache-2.0) AND Unicode-3.0",
+      "preparationChoice": "MIT AND Unicode-3.0",
+      "requirements": [
+        "Retain the supplied MIT permission notice without inventing missing copyright text",
+        "Retain Unicode copyright and permission notice with files/software or associated documentation",
+        "Do not use holder name for advertising without prior written authorization"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/unicode-ident@1.0.24/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/unicode-ident@1.0.24/00-LICENSE-APACHE.txt",
+          "label": "licenses/unicode-ident@1.0.24/LICENSE-APACHE",
+          "bytes": 9723,
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/unicode-ident@1.0.24/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/unicode-ident@1.0.24/01-LICENSE-MIT.txt",
+          "label": "licenses/unicode-ident@1.0.24/LICENSE-MIT",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/unicode-ident@1.0.24/002-LICENSE-UNICODE.txt",
+          "outputPath": "wasm-conditions/anydoc/unicode-ident@1.0.24/02-LICENSE-UNICODE.txt",
+          "label": "licenses/unicode-ident@1.0.24/LICENSE-UNICODE",
+          "bytes": 1995,
+          "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/unicode-normalization@0.1.25",
+      "name": "unicode-normalization",
+      "version": "0.1.25",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/unicode-normalization@0.1.25/000-COPYRIGHT.txt",
+          "outputPath": "wasm-conditions/anydoc/unicode-normalization@0.1.25/00-COPYRIGHT.txt",
+          "label": "licenses/unicode-normalization@0.1.25/COPYRIGHT",
+          "bytes": 321,
+          "sha256": "23860c2a7b5d96b21569afedf033469bab9fe14a1b24a35068b8641c578ce24d"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/unicode-normalization@0.1.25/001-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/unicode-normalization@0.1.25/01-LICENSE-APACHE.txt",
+          "label": "licenses/unicode-normalization@0.1.25/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/unicode-normalization@0.1.25/002-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/unicode-normalization@0.1.25/02-LICENSE-MIT.txt",
+          "label": "licenses/unicode-normalization@0.1.25/LICENSE-MIT",
+          "bytes": 1071,
+          "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/unicode-properties@0.1.4",
+      "name": "unicode-properties",
+      "version": "0.1.4",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT/Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/unicode-properties@0.1.4/000-COPYRIGHT.txt",
+          "outputPath": "wasm-conditions/anydoc/unicode-properties@0.1.4/00-COPYRIGHT.txt",
+          "label": "licenses/unicode-properties@0.1.4/COPYRIGHT",
+          "bytes": 321,
+          "sha256": "23860c2a7b5d96b21569afedf033469bab9fe14a1b24a35068b8641c578ce24d"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/unicode-properties@0.1.4/001-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/unicode-properties@0.1.4/01-LICENSE-APACHE.txt",
+          "label": "licenses/unicode-properties@0.1.4/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/unicode-properties@0.1.4/002-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/unicode-properties@0.1.4/02-LICENSE-MIT.txt",
+          "label": "licenses/unicode-properties@0.1.4/LICENSE-MIT",
+          "bytes": 1071,
+          "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/uuid@1.24.0",
+      "name": "uuid",
+      "version": "1.24.0",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "Apache-2.0 OR MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/uuid@1.24.0/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/uuid@1.24.0/00-LICENSE-APACHE.txt",
+          "label": "licenses/uuid@1.24.0/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/uuid@1.24.0/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/uuid@1.24.0/01-LICENSE-MIT.txt",
+          "label": "licenses/uuid@1.24.0/LICENSE-MIT",
+          "bytes": 1157,
+          "sha256": "436bc5a105d8e57dcd8778730f3754f7bf39c14d2f530e4cde4bd2d17a83ec3d"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/version_check@0.9.5",
+      "name": "version_check",
+      "version": "0.9.5",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT/Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/version_check@0.9.5/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/version_check@0.9.5/00-LICENSE-APACHE.txt",
+          "label": "licenses/version_check@0.9.5/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/version_check@0.9.5/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/version_check@0.9.5/01-LICENSE-MIT.txt",
+          "label": "licenses/version_check@0.9.5/LICENSE-MIT",
+          "bytes": 1085,
+          "sha256": "b7e650f3fce5c53249d1cdc608b54df156a97edd636cf9d23498d0cfe7aec63e"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/wasm-bindgen-macro-support@0.2.126",
+      "name": "wasm-bindgen-macro-support",
+      "version": "0.2.126",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/wasm-bindgen-macro-support@0.2.126/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/wasm-bindgen-macro-support@0.2.126/00-LICENSE-APACHE.txt",
+          "label": "licenses/wasm-bindgen-macro-support@0.2.126/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/wasm-bindgen-macro-support@0.2.126/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/wasm-bindgen-macro-support@0.2.126/01-LICENSE-MIT.txt",
+          "label": "licenses/wasm-bindgen-macro-support@0.2.126/LICENSE-MIT",
+          "bytes": 1057,
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/wasm-bindgen-macro@0.2.126",
+      "name": "wasm-bindgen-macro",
+      "version": "0.2.126",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/wasm-bindgen-macro@0.2.126/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/wasm-bindgen-macro@0.2.126/00-LICENSE-APACHE.txt",
+          "label": "licenses/wasm-bindgen-macro@0.2.126/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/wasm-bindgen-macro@0.2.126/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/wasm-bindgen-macro@0.2.126/01-LICENSE-MIT.txt",
+          "label": "licenses/wasm-bindgen-macro@0.2.126/LICENSE-MIT",
+          "bytes": 1057,
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/wasm-bindgen-shared@0.2.126",
+      "name": "wasm-bindgen-shared",
+      "version": "0.2.126",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/wasm-bindgen-shared@0.2.126/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/wasm-bindgen-shared@0.2.126/00-LICENSE-APACHE.txt",
+          "label": "licenses/wasm-bindgen-shared@0.2.126/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/wasm-bindgen-shared@0.2.126/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/wasm-bindgen-shared@0.2.126/01-LICENSE-MIT.txt",
+          "label": "licenses/wasm-bindgen-shared@0.2.126/LICENSE-MIT",
+          "bytes": 1057,
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/wasm-bindgen@0.2.126",
+      "name": "wasm-bindgen",
+      "version": "0.2.126",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/wasm-bindgen@0.2.126/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/wasm-bindgen@0.2.126/00-LICENSE-APACHE.txt",
+          "label": "licenses/wasm-bindgen@0.2.126/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/wasm-bindgen@0.2.126/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/wasm-bindgen@0.2.126/01-LICENSE-MIT.txt",
+          "label": "licenses/wasm-bindgen@0.2.126/LICENSE-MIT",
+          "bytes": 1057,
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/web-time@1.1.0",
+      "name": "web-time",
+      "version": "1.1.0",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/web-time@1.1.0/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/web-time@1.1.0/00-LICENSE-APACHE.txt",
+          "label": "licenses/web-time@1.1.0/LICENSE-APACHE",
+          "bytes": 11338,
+          "sha256": "54a744942eb3fa63a74d8d359989ed6962c04f3f10ff20cfa08ff8aa7efbe4e6"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/web-time@1.1.0/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/web-time@1.1.0/01-LICENSE-MIT.txt",
+          "label": "licenses/web-time@1.1.0/LICENSE-MIT",
+          "bytes": 1065,
+          "sha256": "f428305bbf2e70fbd807af0f3c7ac1b7acfb95311640f451e9d2e48db6d7e96b"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/weezl@0.1.12",
+      "name": "weezl",
+      "version": "0.1.12",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT OR Apache-2.0",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/weezl@0.1.12/000-LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/anydoc/weezl@0.1.12/00-LICENSE-APACHE.txt",
+          "label": "licenses/weezl@0.1.12/LICENSE-APACHE",
+          "bytes": 10846,
+          "sha256": "769f80b5bcb42ed0af4e4d2fd74e1ac9bf843cb80c5a29219d1ef3544428a6bb"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/weezl@0.1.12/001-LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/anydoc/weezl@0.1.12/01-LICENSE-MIT.txt",
+          "label": "licenses/weezl@0.1.12/LICENSE-MIT",
+          "bytes": 1080,
+          "sha256": "573f5227db835cd30bbdd3aed3f82615f80119a4d5c82b4daf642dbfe2b6afde"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/zip@8.6.0",
+      "name": "zip",
+      "version": "8.6.0",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain applicable copyright and permission notice with copies/substantial portions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/zip@8.6.0/000-LICENSE.txt",
+          "outputPath": "wasm-conditions/anydoc/zip@8.6.0/00-LICENSE.txt",
+          "label": "licenses/zip@8.6.0/LICENSE",
+          "bytes": 1085,
+          "sha256": "58545fed1565e42d687aecec6897d35c6d37ccb71479a137c0deb2203e125c79"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/zlib-rs@0.6.6",
+      "name": "zlib-rs",
+      "version": "0.6.6",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "Zlib",
+      "preparationChoice": "Zlib",
+      "requirements": [
+        "Do not misrepresent origin",
+        "Plainly identify altered source versions",
+        "Retain notice in source distribution; product-documentation acknowledgment is appreciated, not required"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/zlib-rs@0.6.6/000-LICENSE.txt",
+          "outputPath": "wasm-conditions/anydoc/zlib-rs@0.6.6/00-LICENSE.txt",
+          "label": "licenses/zlib-rs@0.6.6/LICENSE",
+          "bytes": 856,
+          "sha256": "e72111c52b7d96ebe25348dee19f0744f444d3c95ae6b1ecb6ccaecc5bce05ba"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/zopfli@0.8.3",
+      "name": "zopfli",
+      "version": "0.8.3",
+      "scope": "anydoc fixed source target candidate, not asserted complete linked SBOM",
+      "declaredExpression": "Apache-2.0",
+      "preparationChoice": "Apache-2.0",
+      "requirements": [
+        "Provide license; mark modified files; retain applicable source attributions and readable NOTICE if supplied; source/object forms have distinct conditions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/zopfli@0.8.3/000-COPYING.txt",
+          "outputPath": "wasm-conditions/anydoc/zopfli@0.8.3/00-COPYING.txt",
+          "label": "licenses/zopfli@0.8.3/COPYING",
+          "bytes": 11341,
+          "sha256": "018b1cb87efdf7a04c2fcc13d57ed63f62149113fb207b27ea13430d64f13513"
+        }
+      ]
+    },
+    {
+      "id": "anydoc/workspace",
+      "name": "anydoc workspace and wasm binding",
+      "version": "source 4a45addb",
+      "scope": "fixed source workspace references",
+      "declaredExpression": "MIT",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Preserve both workspace originals and applicable copyright/permission text"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/anydoc/workspace/000-LICENSE.txt",
+          "outputPath": "wasm-conditions/anydoc/workspace/00-LICENSE.txt",
+          "label": "licenses/workspace/LICENSE",
+          "bytes": 1084,
+          "sha256": "03a9e7657aac6536fb6458bd220347c4e7f85bd0a51d8d9e8528530b7a682ade"
+        },
+        {
+          "source": "docs/third-party-source-licenses/anydoc/workspace/001-LICENSE.txt",
+          "outputPath": "wasm-conditions/anydoc/workspace/01-LICENSE.txt",
+          "label": "licenses/workspace/wasm/LICENSE",
+          "bytes": 1084,
+          "sha256": "03a9e7657aac6536fb6458bd220347c4e7f85bd0a51d8d9e8528530b7a682ade"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/deps/abseil",
+      "name": "deps/abseil",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "Apache-2.0",
+      "requirements": [
+        "Retain license, applicable rights/AUTHORS and any NOTICE; prominently identify modified files"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/pdfium/deps__abseil__AUTHORS.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-abseil/00-AUTHORS.txt",
+          "label": "deps/abseil/AUTHORS",
+          "bytes": 295,
+          "sha256": "1fd39030c119b4c97014f59e0ad0ed65f23475bbdf55a52740f31eb82b34b4ee"
+        },
+        {
+          "source": "docs/third-party-source-licenses/pdfium/deps__abseil__LICENSE.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-abseil/01-LICENSE.txt",
+          "label": "deps/abseil/LICENSE",
+          "bytes": 11361,
+          "sha256": "c79a7fea0e3cac04cd43f20e7b648e5a0ff8fa5344e644b0ee09ca1162b62747"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/deps/brotli",
+      "name": "deps/brotli",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain copyright, permission and disclaimer"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/pdfium/deps__brotli__LICENSE.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-brotli/00-LICENSE.txt",
+          "label": "deps/brotli/LICENSE",
+          "bytes": 1084,
+          "sha256": "3d180008e36922a4e8daec11c34c7af264fed5962d07924aea928c38e8663c94"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/deps/cpu_features",
+      "name": "deps/cpu_features",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "Apache plus appended Android BSD-style text",
+      "requirements": [
+        "Retain the entire combined original, Android copyright/conditions/disclaimer and applicable Apache obligations"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-wasm-notices/pdfium/cpu_features/LICENSE.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-cpu_features/00-LICENSE.txt.txt",
+          "label": "docs/third-party-wasm-notices/pdfium/cpu_features/LICENSE.txt",
+          "bytes": 12876,
+          "sha256": "af272c1b4dd08dd61d43e001d3134119d03ca7a2b057a64f7355fdf27fbea3dd"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/deps/dragonbox",
+      "name": "deps/dragonbox",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "Apache-with-LLVM-exception preparation option",
+      "requirements": [
+        "Retain Apache/LLVM exception intact; keep Boost alternative as reference, not automatically cumulative"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-wasm-notices/pdfium/dragonbox/LICENSE-Apache2-LLVM.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-dragonbox/00-LICENSE-Apache2-LLVM.txt.txt",
+          "label": "docs/third-party-wasm-notices/pdfium/dragonbox/LICENSE-Apache2-LLVM.txt",
+          "bytes": 12262,
+          "sha256": "9e45e856bedccee9f67254082ca11851d954de2fed7448c4bed19ad9aab99a91"
+        },
+        {
+          "source": "docs/third-party-wasm-notices/pdfium/dragonbox/LICENSE-Boost.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-dragonbox/01-LICENSE-Boost.txt.txt",
+          "label": "docs/third-party-wasm-notices/pdfium/dragonbox/LICENSE-Boost.txt",
+          "bytes": 1338,
+          "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/deps/fast-float",
+      "name": "deps/fast-float",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "MIT preparation option",
+      "requirements": [
+        "Preserve MIT notice and authors; retain Apache/Boost alternatives as candidates, not automatically cumulative"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/pdfium/deps__fast-float__AUTHORS.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-fast-float/00-AUTHORS.txt",
+          "label": "deps/fast-float/AUTHORS",
+          "bytes": 36,
+          "sha256": "ed249424bce4e318fa190dd6d8becf60cfc37287132ad3f89e16e0f28d878dcf"
+        },
+        {
+          "source": "docs/third-party-source-licenses/pdfium/deps__fast-float__LICENSE-APACHE.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-fast-float/01-LICENSE-APACHE.txt",
+          "label": "deps/fast-float/LICENSE-APACHE",
+          "bytes": 10767,
+          "sha256": "097a889aa954d04e088b790b10a4014d6189561d0a6013935a73ce3d4ddaaf06"
+        },
+        {
+          "source": "docs/third-party-source-licenses/pdfium/deps__fast-float__LICENSE-BOOST.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-fast-float/02-LICENSE-BOOST.txt",
+          "label": "deps/fast-float/LICENSE-BOOST",
+          "bytes": 1337,
+          "sha256": "8d8291caf1cee26d23acf3eb67c9f9a2d58f1c681b16a4fbe8cbfb9e3c0b5a9b"
+        },
+        {
+          "source": "docs/third-party-source-licenses/pdfium/deps__fast-float__LICENSE-MIT.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-fast-float/03-LICENSE-MIT.txt",
+          "label": "deps/fast-float/LICENSE-MIT",
+          "bytes": 1079,
+          "sha256": "e562f3f974ced7e69dd1db77b820b36bcf8f30377f1aa105723fba449c53c4e6"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/deps/freetype",
+      "name": "deps/freetype",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "FTL preparation option; GPLv2 alternative retained",
+      "requirements": [
+        "FTL source notice/change retention and mandatory binary documentation acknowledgment of FreeType work; verify exceptions and actual year; GPLv2 text does not automatically make FTL-selected distribution GPL"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/pdfium/deps__freetype__LICENSE.TXT.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-freetype/00-LICENSE.TXT.txt",
+          "label": "deps/freetype/LICENSE.TXT",
+          "bytes": 2149,
+          "sha256": "bd36c8b474855fa294c2ec5c184544478ef3720aad37d65a6296a4f264fd2d3b"
+        },
+        {
+          "source": "docs/third-party-source-licenses/pdfium/deps__freetype__docs__FTL.TXT.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-freetype/01-FTL.TXT.txt",
+          "label": "deps/freetype/docs/FTL.TXT",
+          "bytes": 6743,
+          "sha256": "5a5ee54c5001bbad1cdc1a57cc3dd4c42199b2da09d39c7ee41fab002d02967f"
+        },
+        {
+          "source": "docs/third-party-source-licenses/pdfium/deps__freetype__docs__GPLv2.TXT.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-freetype/02-GPLv2.TXT.txt",
+          "label": "deps/freetype/docs/GPLv2.TXT",
+          "bytes": 17994,
+          "sha256": "c4120c6752c910c299e3bd9cb3a46ff262c268303ca2069b61f92f10a5656c18"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/deps/googletest",
+      "name": "deps/googletest",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "BSD-3-Clause",
+      "requirements": [
+        "Retain copyright/conditions/disclaimer, no unauthorized endorsement; shipped=no alone is not exclusion"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-wasm-notices/pdfium/googletest/LICENSE.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-googletest/00-LICENSE.txt.txt",
+          "label": "docs/third-party-wasm-notices/pdfium/googletest/LICENSE.txt",
+          "bytes": 1475,
+          "sha256": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/deps/harfbuzz",
+      "name": "deps/harfbuzz",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "MIT-style variant",
+      "requirements": [
+        "Preserve COPYING and applicable author/copyright notices; verify notice text rather than rely on generic MIT label"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/pdfium/deps__harfbuzz__AUTHORS.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-harfbuzz/00-AUTHORS.txt",
+          "label": "deps/harfbuzz/AUTHORS",
+          "bytes": 201,
+          "sha256": "19bfe8f5ed100636cd24ab0c90a3f71c21d8b02d9ba00719447a0faab364d49f"
+        },
+        {
+          "source": "docs/third-party-source-licenses/pdfium/deps__harfbuzz__COPYING.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-harfbuzz/01-COPYING.txt",
+          "label": "deps/harfbuzz/COPYING",
+          "bytes": 1971,
+          "sha256": "ba8f810f2455c2f08e2d56bb49b72f37fcf68f1f4fade38977cfd7372050ad64"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/deps/icu",
+      "name": "deps/icu",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "Composite ICU/Unicode and incorporated notices",
+      "requirements": [
+        "Retain complete license and incorporated third-party terms; do not reduce composite license to a single MIT marker"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/pdfium/deps__icu__LICENSE.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-icu/00-LICENSE.txt",
+          "label": "deps/icu/LICENSE",
+          "bytes": 26487,
+          "sha256": "451167c55c0fa447cc2d5632714f5e3c567fe4f1e1badefab2c1333852198aca"
+        },
+        {
+          "source": "docs/third-party-source-licenses/pdfium/deps__icu__license.html.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-icu/01-license.html.txt",
+          "label": "deps/icu/license.html",
+          "bytes": 622,
+          "sha256": "c62d7697c03979f5056d28b338fafc7a1152820f7b379adf4a9d88cd37160f96"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/deps/jpeg-turbo",
+      "name": "deps/jpeg-turbo",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "IJG plus Modified BSD as applicable; SIMD Zlib described by upstream",
+      "requirements": [
+        "If linked, binary documentation needs IJG acknowledgment; TurboJPEG use adds Modified BSD text; preserve source-change notices and README.ijg; no blind OR selection"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/pdfium/deps__jpeg-turbo__LICENSE.md.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-jpeg-turbo/00-LICENSE.md.txt",
+          "label": "deps/jpeg-turbo/LICENSE.md",
+          "bytes": 5620,
+          "sha256": "96f5b328adbb78eeaaec6980d73fd558cb1e4d62560ed615646bc3cf5e532430"
+        },
+        {
+          "source": "docs/third-party-source-licenses/pdfium/deps__jpeg-turbo__README.ijg.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-jpeg-turbo/01-README.ijg.txt",
+          "label": "deps/jpeg-turbo/README.ijg",
+          "bytes": 12799,
+          "sha256": "75815e3bf6484201a3c3d17a1bbf10f2e8e3237f84df10a2357ea896db2a81d6"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/deps/libpng",
+      "name": "deps/libpng",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "libpng license",
+      "requirements": [
+        "Preserve notices, origin and alteration restrictions; review version-specific contributing-author list"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/pdfium/deps__libpng__LICENSE.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-libpng/00-LICENSE.txt",
+          "label": "deps/libpng/LICENSE",
+          "bytes": 5345,
+          "sha256": "bf5e22b9dce8464064ae17a48ea1133c3369ac9e1d80ef9e320e5219aa14ea9b"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/deps/zlib",
+      "name": "deps/zlib",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "Zlib",
+      "requirements": [
+        "Do not misrepresent origin; mark altered source; preserve source notice; documentation acknowledgment optional"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/pdfium/deps__zlib__LICENSE.txt",
+          "outputPath": "wasm-conditions/pdfium/deps-zlib/00-LICENSE.txt",
+          "label": "deps/zlib/LICENSE",
+          "bytes": 910,
+          "sha256": "e1cfcc55c325b3f78cf55df9664abaa066e2271dffe8213347d9fccdfbac8f2c"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/in-tree/NotoSansCJK",
+      "name": "in-tree/NotoSansCJK",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "OFL-1.1 reference",
+      "requirements": [
+        "Retain copyright/OFL; no standalone font sale or relicensing; respect declared reserved names/endorsement limits; no app-made font changes"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/pdfium/in-tree__third_party__NotoSansCJK__LICENSE.txt",
+          "outputPath": "wasm-conditions/pdfium/in-tree-NotoSansCJK/00-LICENSE.txt",
+          "label": "in-tree/third_party/NotoSansCJK/LICENSE",
+          "bytes": 4361,
+          "sha256": "d6639d6624144ef0611b03172e085251c29d4c929b3c11e891e72db6a5b5c2e1"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/in-tree/agg23",
+      "name": "in-tree/agg23",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "AGG-2.3 permission",
+      "requirements": [
+        "Retain the exact copyright/permission/disclaimer with copies"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/pdfium/in-tree__third_party__agg23__copying.txt",
+          "outputPath": "wasm-conditions/pdfium/in-tree-agg23/00-copying.txt",
+          "label": "in-tree/third_party/agg23/copying",
+          "bytes": 443,
+          "sha256": "0e16f9c2285583269242e94c6f502de0c9910dfcbbc7b386e236cdf29ecd4333"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/in-tree/bigint",
+      "name": "in-tree/bigint",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "Public-domain waiver",
+      "requirements": [
+        "Retain author waiver and no-warranty reference without inventing additional attribution conditions"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/pdfium/in-tree__third_party__bigint__LICENSE.txt",
+          "outputPath": "wasm-conditions/pdfium/in-tree-bigint/00-LICENSE.txt",
+          "label": "in-tree/third_party/bigint/LICENSE",
+          "bytes": 3367,
+          "sha256": "32759d1397d8f7b9e15ece146e4038b22b90e93b4935b5a840bcef4d2ba5ea55"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/in-tree/fp16",
+      "name": "in-tree/fp16",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain all named copyrights and permission/disclaimer"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/pdfium/in-tree__third_party__fp16__LICENSE.txt",
+          "outputPath": "wasm-conditions/pdfium/in-tree-fp16/00-LICENSE.txt",
+          "label": "in-tree/third_party/fp16/LICENSE",
+          "bytes": 1158,
+          "sha256": "c91377adafa2f498211a4fe017788e20c38892124673860f068f2919c289193d"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/in-tree/freetype",
+      "name": "in-tree/freetype",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "FTL preparation option",
+      "requirements": [
+        "Retain this distinct FTL original; retain applicable source/change notices and binary FreeType credit"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/pdfium/in-tree__third_party__freetype__FTL.TXT.txt",
+          "outputPath": "wasm-conditions/pdfium/in-tree-freetype/00-FTL.TXT.txt",
+          "label": "in-tree/third_party/freetype/FTL.TXT",
+          "bytes": 6741,
+          "sha256": "f4b133e25df1f86ad3ffea453aa0e613f0474f34778dbbb3e437e7b2724937d8"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/in-tree/highway",
+      "name": "in-tree/highway",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "Apache-2.0",
+      "requirements": [
+        "Provide complete Apache original and supplied notices; identify app-made changes if any"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/pdfium/in-tree__third_party__highway__LICENSE.txt",
+          "outputPath": "wasm-conditions/pdfium/in-tree-highway/00-LICENSE.txt",
+          "label": "in-tree/third_party/highway/LICENSE",
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/in-tree/lcms",
+      "name": "in-tree/lcms",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "MIT",
+      "requirements": [
+        "Retain copyright/permission/disclaimer"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/pdfium/in-tree__third_party__lcms__LICENSE.txt",
+          "outputPath": "wasm-conditions/pdfium/in-tree-lcms/00-LICENSE.txt",
+          "label": "in-tree/third_party/lcms/LICENSE",
+          "bytes": 1080,
+          "sha256": "6dbd60437f8ef91d8de1f08ad75882547fd4931bfcc3566a0735f28db1484d31"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/in-tree/libopenjpeg",
+      "name": "in-tree/libopenjpeg",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "BSD-2-Clause variant",
+      "requirements": [
+        "Retain full multi-author copyright, source/binary conditions and disclaimer; do not imply patent rights beyond grant"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/pdfium/in-tree__third_party__libopenjpeg__LICENSE.txt",
+          "outputPath": "wasm-conditions/pdfium/in-tree-libopenjpeg/00-LICENSE.txt",
+          "label": "in-tree/third_party/libopenjpeg/LICENSE",
+          "bytes": 2112,
+          "sha256": "a6af136f3e15038a666b61f376612a07d9a4e48cb7c01adbf3e33b3f14ab49b6"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/in-tree/libtiff",
+      "name": "in-tree/libtiff",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "LibTIFF permission variant",
+      "requirements": [
+        "Retain source copyright/permission/disclaimer; no unauthorized advertising with named holders"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/pdfium/in-tree__third_party__libtiff__LICENSE.md.txt",
+          "outputPath": "wasm-conditions/pdfium/in-tree-libtiff/00-LICENSE.md.txt",
+          "label": "in-tree/third_party/libtiff/LICENSE.md",
+          "bytes": 1164,
+          "sha256": "0780558a8bfba0af1160ec1ff11ade4f41c0d7deafd6ecfc796b492a788e380d"
+        }
+      ]
+    },
+    {
+      "id": "pdfium/root",
+      "name": "root",
+      "version": "fixed source/DEPS candidate",
+      "scope": "PDFium fixed source candidate; actual inclusion not asserted by material retention",
+      "preparationChoice": "BSD-style plus Apache text",
+      "requirements": [
+        "Retain the full combined original and AUTHORS; MM-specific permission is E-01"
+      ],
+      "sourceAndProfileStage": "closed",
+      "materials": [
+        {
+          "source": "docs/third-party-source-licenses/pdfium/in-tree__AUTHORS.txt",
+          "outputPath": "wasm-conditions/pdfium/root/00-AUTHORS.txt",
+          "label": "in-tree/AUTHORS",
+          "bytes": 2437,
+          "sha256": "294a637d1cbc298f355282bef80fcf803d49dd3ee57560bdeb63e37dca48f4df"
+        },
+        {
+          "source": "docs/third-party-source-licenses/pdfium/in-tree__LICENSE.txt",
+          "outputPath": "wasm-conditions/pdfium/root/01-LICENSE.txt",
+          "label": "in-tree/LICENSE",
+          "bytes": 12896,
+          "sha256": "1fe9dea718fbd75cf149adaf4d8a22a4335604d964ddb76d1b45383dec8668c9"
+        }
+      ]
+    }
+  ],
+  "credits": {
+    "source": "docs/third-party-wasm-notices/DISTRIBUTION-PREPARATION-CREDITS.txt",
+    "outputPath": "wasm-conditions/DISTRIBUTION-PREPARATION-CREDITS.txt",
+    "label": "配布準備用の貢献表示案",
+    "bytes": 836,
+    "sha256": "8b1b420252863f5d98250645cb7fb660ad22c925ae203d2a81cc8f0a8e0be6b8"
+  },
+  "wasm": [
+    {
+      "name": "@firecrawl/anydoc-wasm",
+      "version": "0.1.7",
+      "tarball": "https://registry.npmjs.org/@firecrawl/anydoc-wasm/-/anydoc-wasm-0.1.7.tgz",
+      "integrity": "sha512-FkuHl7K8Cl/kyt1ZS9DbX/0GubvW7dHPgiDWrmMoFDFI3GGAtyWsyvAnoqncbFA6yW/ZCjSiZ8jjhH0zeeBxfQ==",
+      "archiveSha256": "0c9005506f19e275ba970485a4877e0ffdec6bce51cc563ac707e17f458cc645",
+      "archiveBytes": 2909258,
+      "archiveIntegrity": "verified",
+      "archivePath": "package/anydoc_wasm_bg.wasm",
+      "wasmSha256": "409e45e75062df06bed445c352ffddaf3bae15ff376f5d514d45f4891debd09e",
+      "wasmBytes": 6485379,
+      "installedMatch": true
+    },
+    {
+      "name": "@embedpdf/pdfium",
+      "version": "2.14.4",
+      "tarball": "https://registry.npmjs.org/@embedpdf/pdfium/-/pdfium-2.14.4.tgz",
+      "integrity": "sha512-0tDPQEH1WtfXcASNVp5U3dqfzZboNvcE4rDok/P4JCN+DCTaJDG2E9lYHGMo9FtuS2IdHgrzkmPRpOo5WV9MKQ==",
+      "archiveSha256": "3ae8f6aab9e24a35d5e5978c3a12f3e2dea6e4e43b0c991b8c6c33e91b9dc36d",
+      "archiveBytes": 2665003,
+      "archiveIntegrity": "verified",
+      "archivePath": "package/dist/pdfium.wasm",
+      "wasmSha256": "c0af5a6aca30d7e54a149c3a68e317116ca906d6edc28fd3318b12c7d9478ac8",
+      "wasmBytes": 4633788,
+      "installedMatch": true
+    }
+  ],
+  "changeHandling": "The application keeps the two published WASM files unchanged. Upstream changes are not inferred absent. Existing application JS change labels remain separate.",
+  "engineeringStage": "W-01 and W-02 preparation closed locally; E-01 and U-01/U-02/U-03 remain pending; no release approval",
+  "releaseApproval": false,
+  "baseReviewHead": "77fc6fc7b60718ce2b89c4568c3f80abe617c8a7"
+}

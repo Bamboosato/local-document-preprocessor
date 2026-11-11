@@ -1,5 +1,10 @@
 # JSON本体接続の現行残件と旧方式のクローズ
 
+2026-11-11 方針変更: [配布準備の完了・待ち案件](distribution-closeout-register.md)を現行の作業管理の正とする。完了工程を再起票せず、MMは外部判断へ移す。PR #46上の原文提供・告知案準備はローカル完了で、main追加マージ/公開は未実施。
+
+## 更新履歴（現行の未完数として数えない）
+
+2026-11-11 PR #45マージ後: main `64d19e8`。[MM処理・由来の追補](mm-font-provenance-review.md)で初出2配列と現WASMの全bytes、Adobe Aの758字句、Dの47字句を照合。輪郭の公開前の由来、findfont原本、コメント保持条件と他WASM条件は公開前の残件。初出参考原文2点の追加は別レビュー。
 2026-11-10 PR #44マージ後: main `26470b9`。[内容版とフォント許諾](font-license-chain-review.md)でPDF.js参照内容版6adeabbb…と既存原文/AUTHORSの一致を確認。MM内AdobeのType 1処理条件を原典で特定し、76 bytesの表示を追加。処理の原典保持・輪郭由来、その他WASM条件の判定は公開前の残件。実borrow checkoutの未記録と原文対応の不足は区別する。
 2026-11-10 PR #43マージ後: main `16e2d1d`。最新の[WASM内包・正式表示の確認](wasm-inclusion-attribution-review.md)でanydocの34組のpath痕跡、168 CMap（1個は分割配置像）、Adobe許諾文とPDFiumの16フォントデータを照合。借用コード系列と固有の原文導線を補強したが、実checkout・全コード内包・フォントの許諾連鎖・最終配布条件は未完。
 2026-11-10 PR #42マージ後: main `03fd826` に借用元/WASM93候補の照合を反映。[実借用版・条件選択・PDFium追加原文](pdfium-license-followup.md)で未収集3領域の4原文と固有条件の提供準備を補完。fnv/rangemapは両条件を満たす準備へ切替。実借用版の一意性・実内包・最終履行は未完として保持する。
@@ -42,12 +47,7 @@
 |CUR-01・1|PR #20をマージ済み|展開型仮想ツリー/50件ページ/位置復元/詳細/適合理由をmainへ接続。[第二段階の結果](json-target-ui-validation.md)を参照。実機はCUR-05|
 |CUR-02・2|PR #21をマージ済み|[状態・保持量・故障回復の報告](json-state-recovery-validation.md)。UI-01〜26、20ファイル、混在PDF取消、世代/設定照合、中断可能読込、50MiB/10万ノードと完了結果・両WASM/図の反復を検証。全環境の一括受入ではなく、全プロセス/実負荷はCUR-05|
 |CUR-03・3|PR #22マージ済み、実機は後日|[PWA世代固定・回復の報告と実機手順](pwa-generation-validation.md)。保存拒否・容量不足は故障注入。実インストール/復帰/実容量はCUR-05|
-|CUR-04・4|PR #39〜42マージ済み、追加候補は別レビュー/こちら|mainはTiny 12.3.0と借用元/WASM原文照合まで反映。[最新のPDFium・借用版報告](pdfium-license-followup.md)で未収集4原文と条件付き表示案を準備。残す作業はsource/DEPS候補の実適用・内包・変更/NOTICEの判定、正式表示、他の内部表示、実配信・ユーザー実機、最終公開判断|
-|CUR-04・追加|ローカル検証のみ|[配信照合の試行](local-delivery-verification.md)。manifest と SW を含む同一世代の照合を追加。実配信・対応ソースの完全性の証明にはならない|
-|CUR-04・追加|旧評価版の再生成履歴|[クリーンインストール検証](windows-clean-rebuild-validation.md)。旧通常版の生成物444件一致。現行Tinyの生成物との一致を示す記録ではない。既定設定は単一ワーカーで、一括検査の再実行は成功。他環境と実配信は未確認|
-|CUR-04・方針|準備を継続、公開可否は保留|[採用した配布準備方針](distribution-adopted-policy.md)と公開前4条件。Vercel/GitHub Releases は採用方針であり、公開・添付・デプロイの実施許可ではない|
-|CUR-04・WASM照合|出典対応と条件準備、最終適用は未完|[残93候補の条件表](borrowed-source-license-review.md)と[最新の固有条件・原文](pdfium-license-followup.md)。旧224原文の照合は履歴を保持し、追加PDFium4原文を区別。原文対応と監査を全条件充足に置き換えない|
-|CUR-04・WASM準備|mainは3crate/8原文、PDFium追加はレビュー案|[最新報告](pdfium-license-followup.md)のPDFium候補9原文・表示案をオフライン準備。公開WASMの実対象・例外・固有の正式表示・履行は未確定|
+|CUR-04・4|PR #46で通常の準備完了、E/U待ち|[現行完了台帳](distribution-closeout-register.md)を正とする。収集/照合/告知準備の完了10件と、外部判断E-01・公開受入U-01〜03を分離。mainへの追加マージ・配布承認は未実施|
 
 
 
@@ -85,6 +85,16 @@ PR #30 マージ後、main `57ad1abe9d557626a77eeeded9fb114ea710ff29` を基点�
 
 |過去のID|当時の状態|保存する調査|
 |---|---|---|
+
+## 旧CUR-04補助行（履歴・独立した残作業ではない）
+
+|ID|当時の状態|当時の記録|
+|---|---|---|
+|CUR-04・追加|ローカル検証のみ|[配信照合の試行](local-delivery-verification.md)。manifest と SW を含む同一世代の照合を追加。実配信・対応ソースの完全性の証明にはならない|
+|CUR-04・追加|旧評価版の再生成履歴|[クリーンインストール検証](windows-clean-rebuild-validation.md)。旧通常版の生成物444件一致。現行Tinyの生成物との一致を示す記録ではない。既定設定は単一ワーカーで、一括検査の再実行は成功。他環境と実配信は未確認|
+|CUR-04・方針|準備を継続、公開可否は保留|[採用した配布準備方針](distribution-adopted-policy.md)と公開前4条件。Vercel/GitHub Releases は採用方針であり、公開・添付・デプロイの実施許可ではない|
+|CUR-04・WASM照合|部分データ・内容版と条件準備、最終適用は未完|[残93候補](borrowed-source-license-review.md)、[実データ](wasm-inclusion-attribution-review.md)、[最新MM条件](mm-font-provenance-review.md)を区別。部分データ/原文の対応と監査を全条件充足へ置き換えない|
+|CUR-04・WASM準備|mainは3crate/8原文・PDFium9原文/案・実データ3表示、初出原文2点はレビュー案|[最新MM報告](mm-font-provenance-review.md)。オフライン提供は準備の証拠であり、全実対象・例外・正式な条件履行や公開承認ではない|
 |CUR-04・ELK取得|ローカル候補の同一性を確認|[固定ソース候補の照合](elk-fixed-source-validation.md)。候補の全2,111ファイルと上流 tree は一致。ビルド時 checkout・必要範囲・提供物の最終判断は未完|
 |CUR-04・ELK準備|ローカル候補のみ|[パス形式と11領域の候補](elk-source-pattern-review.md)。候補の提供可否・必要範囲・checkout の対応は未判定|
 |CUR-04・ELK生成入力|直接領域は候補間で一致、生成条件は未確定|[生成入力の照合](elk-generation-input-review.md)。658ファイルは2候補で一致、生成器関連領域などには差があり、実 checkout・提供要否は未判定|
