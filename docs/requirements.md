@@ -1,6 +1,8 @@
 # local-document-preprocessor 要件定義
 
-更新日: 2026-10-06
+更新日: 2026-11-11
+
+> 2026-11-11 JSON作業の範囲変更: 個人・チーム内での利用を目的に、実装済みJSON入力を必要な品質で完了させる。対象選択、数値・文字の保持、Markdown／plain textの出力、取消・回復、非送信・非保存を完了基準とする。[専用要件](local-document-preprocessor-json-requirements-v0.2.md)と[現行backlog](json-current-backlog.md)に従い、技術的な機能完成、依存の確認状況、実際の提供判断を分ける。E-01やユーザー実機試用の待ちをJSON実装残件に含めない。
 
 > 2026-11-02追記: PR #19～22でJSON専用Worker・対象ツリー/詳細・既存キュー/結果/出力・状態/保持量/故障回復と[本体PWA世代固定・回復](pwa-generation-validation.md)をmainへ取り込んだ。anydocにJSONを渡さない。特大プレビューと全量出力の区別は[専用要件](local-document-preprocessor-json-requirements-v0.2.md)のCUR-02追補を参照。[配布条件・ライセンス照合](distribution-license-review.md)の新変更はレビュー対象であり、main取り込み・デプロイは行わない。
 
@@ -8,13 +10,15 @@
 
 本製品は、利用者が選択した文書をブラウザ内だけで Markdown と plain text に変換する静的 Web アプリである。既存の `document-preprocessor` とは別リポジトリ・別製品とし、既存版を変更しない。PII 検出・マスキングは `local-pii-masker` の責務とし、本製品には実装しない。
 
+今回のJSON追加では、個人・チーム内の通常利用を満たす品質を求める。内容破壊、選択外・旧要求・別文書の混入、操作不能、外部送信やスクリプト実行、既存形式への回帰を修正対象とする。既存の入力・表示上限、軽微な配置差、高度な編集・任意図種の非対応は明記して残す。アプリ全体の再設計、依存由来の全面再監査、PDFium交換・MMフォント除去ビルド、PDF入力や独立したPDF文字比較の撤去は対象外とする。
+
 ### 対象
 
-- ファイル内容をサーバーや外部 API に送らず、Firecrawl anydoc WASM で変換する。
+- ファイル内容をサーバーや外部 API に送らず、JSONは専用Worker、既存文書形式はFirecrawl anydoc WASMで変換する。
 - Markdown / plain text のプレビュー、コピー、ダウンロードを提供する。
 - Markdown のダウンロードには、元ファイル名と元ファイルの更新日時を YAML frontmatter のメタデータとして付与する。plain text のダウンロード、プレビュー、コピーには付与しない。
 - 1 回の選択に含まれる複数ファイルを選択順に逐次処理する。再選択は既存キューと結果を置き換える。
-- PWA のホーム画面追加用 manifest とアイコンを提供し、production では静的アプリ資産だけをキャッシュする。文書データの保存禁止はADR-0004、レビュー中の全資産/世代固定/更新・回復方式は[ADR-0005](adr/0005-pwa-generation-cache.md)に従う。
+- PWA のホーム画面追加用 manifest とアイコンを提供し、production では静的アプリ資産だけをキャッシュする。文書データの保存禁止はADR-0004、全資産/世代固定/更新・回復方式は[ADR-0005](adr/0005-pwa-generation-cache.md)に従う。
 - plain text は Markdown から同一入力に対して常に同一結果となる規則で生成する。
 - `local-pii-masker` へは plain text の手動コピーまたはダウンロードで渡す。
 
@@ -123,8 +127,8 @@ anydoc の変換形式は可能な限り内容から判定する。CSV のよう
 - 変換中もメインスレッドを長時間占有せず、キャンセル操作を受け付ける。
 - アプリ自身から外部オリジンへ通信しない。実行に必要な JS/WASM/CSS は同一オリジンから取得する。
 - CSP で外部接続・外部画像・プラグイン・フォーム送信を拒否する。
-- Chrome、Edge、macOS Safari、iPhone Safari を最終対応対象とする。
-- 端末ごとのメモリ上限差、とくに iPhone Safari での Worker/WASM 再生成を実機確認する。
+- 今回のJSON確認はWindows・Chromeを主対象とする。Edge・macOS Safari・iPhone Safari等の未検証範囲を対応済みへ一般化せず、全ブラウザー・全端末の検証をJSON完了の条件にしない。
+- 端末ごとのメモリ・権限・PWA保持の差を考慮する。ユーザーの実機試用は別途とし、その待ちをCodex側のJSON実装未完とは扱わない。
 - 同一実機に対する E2E は並列実行しない。
 
 ## 7. MVP 受入条件

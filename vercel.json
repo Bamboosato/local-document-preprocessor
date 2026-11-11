@@ -3,6 +3,7 @@
   "git": {
     "deploymentEnabled": {
       "main": false,
+      "codex/json-scope-completion": false,
       "codex/pdfium-license-followup": false,
       "codex/wasm-inclusion-attribution-review": false,
       "codex/font-license-chain-review": false,
