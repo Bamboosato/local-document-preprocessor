@@ -2,6 +2,8 @@
 
 更新日: 2026-11-11
 
+> 2026-11-11追加判断: E-01は未解決の別件として管理し、JSON実装だけでなく公開可否・検証用配信開始・公開受入の条件からも除外する。[現行完了台帳](distribution-closeout-register.md)に従い、E-01の回答取得・解消を公開の前提にしない。原文・NOTICE・未確認事項は保持する。
+
 > 2026-11-11 JSON作業の範囲変更: 個人・チーム内での利用を目的に、実装済みJSON入力を必要な品質で完了させる。対象選択、数値・文字の保持、Markdown／plain textの出力、取消・回復、非送信・非保存を完了基準とする。[専用要件](local-document-preprocessor-json-requirements-v0.2.md)と[現行backlog](json-current-backlog.md)に従い、技術的な機能完成、依存の確認状況、実際の提供判断を分ける。E-01やユーザー実機試用の待ちをJSON実装残件に含めない。
 
 > 2026-11-02追記: PR #19～22でJSON専用Worker・対象ツリー/詳細・既存キュー/結果/出力・状態/保持量/故障回復と[本体PWA世代固定・回復](pwa-generation-validation.md)をmainへ取り込んだ。anydocにJSONを渡さない。特大プレビューと全量出力の区別は[専用要件](local-document-preprocessor-json-requirements-v0.2.md)のCUR-02追補を参照。[配布条件・ライセンス照合](distribution-license-review.md)の新変更はレビュー対象であり、main取り込み・デプロイは行わない。
