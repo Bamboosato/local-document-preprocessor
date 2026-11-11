@@ -1,0 +1,13 @@
+Distribution-preparation acknowledgments (review candidate, not release approval).
+The fixed source/DEPS candidates may include the following work. These credits
+are prepared conservatively; this is not a complete linked-code SBOM.
+
+This software is based in part on the work of the FreeType Team.
+This software is based in part on the work of the Independent JPEG Group.
+
+Original copyright/permission/NOTICE texts are retained separately, including
+composite ICU texts, Android BSD text, LLVM exception, Unicode terms and
+alternative grants. Retaining an alternative does not automatically select it.
+Published WASM bytes are unchanged by this application. This statement does not
+assert that the publisher never modified its inputs. MM permission/outline
+questions remain E-01; final applicability and public acceptance remain U-03.

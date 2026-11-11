@@ -1,0 +1,98 @@
+{
+  "schema": 1,
+  "date": "2026-11-11",
+  "baseReviewHead": "77fc6fc7b60718ce2b89c4568c3f80abe617c8a7",
+  "existingPRUpdated": 46,
+  "assessment": "distribution-closeout-assessment.json",
+  "assessmentSha256CanonicalLF": "bad290c6b45cf11b813664ec3066f3ca62b9d770a41face1b8b63c55eac8edb9",
+  "closureCounts": {
+    "completedPreparationStages": 10,
+    "continuingInternalResearch": 0,
+    "externalDecisionCases": 1,
+    "publicAcceptanceCases": 3
+  },
+  "validation": {
+    "conditionUnits": 119,
+    "originals": 228,
+    "originalBytes": 1111370,
+    "creditDrafts": 1,
+    "licenseTestCases": 6,
+    "build": "passed",
+    "distributionCheck": "passed",
+    "targetedPWA": {
+      "startTime": "2026-11-11T00:27:24.284Z",
+      "duration": 17312.234,
+      "expected": 1,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "executingBrowserVersion": "157.0.8103.50",
+    "generation": "045e2b8de3ab54b323e424e4",
+    "manifestAssets": 472,
+    "httpAssets": 474,
+    "httpFailures": 0,
+    "rootProductionAuditVulnerabilities": 0,
+    "rootFullAuditVulnerabilities": 0,
+    "tinyTargets": 67,
+    "tinyAuditVulnerabilities": 0,
+    "gitStoredOriginalsMatchPinnedWorkingBytes": 228,
+    "documentation": {
+      "documents": 90,
+      "localLinks": 467,
+      "issues": 0
+    }
+  },
+  "unchangedRuntimeAssets": [
+    {
+      "path": "dist/assets/anydoc_wasm_bg-BGHlcte-.wasm",
+      "bytes": 6485379,
+      "sha256": "409e45e75062df06bed445c352ffddaf3bae15ff376f5d514d45f4891debd09e"
+    },
+    {
+      "path": "dist/assets/converter.worker-ogDQCSzr.js",
+      "bytes": 752588,
+      "sha256": "8ac5bc078bb82a53aa973f30523edda5257931ab5232e452b58a5ccbe641ab41"
+    },
+    {
+      "path": "dist/assets/index-_-tn7U5c.css",
+      "bytes": 15304,
+      "sha256": "86d7d2e6fb682593d0f2fc655cde050cf96179e64d8a66c944e18d7572b75937"
+    },
+    {
+      "path": "dist/assets/index-D7qOaFf2.js",
+      "bytes": 423936,
+      "sha256": "eda64058c814b3cc82594a29dcb40c92bb1ae6c622b0eadec5689508129df81c"
+    },
+    {
+      "path": "dist/assets/json.worker-CAJiq6hk.js",
+      "bytes": 168140,
+      "sha256": "6e75d910874ee7f850cdd0a681e700018eb4068ef81b3aebfa015d09e3cf9aca"
+    },
+    {
+      "path": "dist/assets/mermaid.tiny-B1X2HQuM.js",
+      "bytes": 2852578,
+      "sha256": "c41f5236091b83f524c4940f97a16b2b14a76f21ff84aea4fd6b66421d8a2a9a"
+    },
+    {
+      "path": "dist/assets/pdfium-RAgkpwfK.wasm",
+      "bytes": 4633788,
+      "sha256": "c0af5a6aca30d7e54a149c3a68e317116ca906d6edc28fd3318b12c7d9478ac8"
+    }
+  ],
+  "testedSourceSha256CanonicalLF": {
+    "scripts/distribution-condition-materials.mjs": "933f8c750e95a92949e90133149a40bc82923a9ebaacc199062f58f9fa8d83cf",
+    "scripts/distribution-condition-materials.test.mjs": "7c8696bb968953fe4164aad26e2688d07c998e9f3d893223558c8619c1d50f14",
+    "scripts/copy-third-party-licenses.mjs": "8f2391633d0732559c7305f40ef09ac297caa30b8d46618af86c470ffde16d89",
+    "scripts/check-dist.mjs": "83ac3578514f052697f4f6ac8161e6bae5fd43209d011439865ce83ad9f63cd5",
+    "tests/e2e/pwa.spec.ts": "0806afb06e5f89c8f4b5ea5bbd145bf1691f3798229c1548157db8431fa01d87",
+    "package.json": "77fab800a3d2edc477b28d9fa233fd88f8dceda87b48aedc83bf6965a5ddba77"
+  },
+  "limits": [
+    "Completed preparation is not complete license fulfillment or release approval",
+    "Conservative source/DEPS candidates, not full linked-code SBOM",
+    "E-01 external MM permission case is not silently closed",
+    "No archive publication/attachment, merge, deployment, physical-device test or external contact",
+    "Local E2E is one targeted PWA case; other browsers/full suite not run locally; macOS/iOS excluded"
+  ]
+}

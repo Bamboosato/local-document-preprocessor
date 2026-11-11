@@ -1,3 +1,4 @@
+import {verifyDistributionConditionMaterials} from './distribution-condition-materials.mjs';
 import {verifyMmOriginMaterials} from './mm-origin-materials.mjs';
 import {verifyWasmDataMaterials} from './wasm-data-materials.mjs';
 import assert from 'node:assert/strict';
@@ -112,6 +113,7 @@ assert.deepEqual(
     'pdfium-candidates',
     'wasm-data',
     'mm-font-origin',
+    'wasm-conditions',
   ].sort(),
   'The production build must retain all third-party license files.',
 );
@@ -207,5 +209,13 @@ for(const f of mmOrigins.files){
  assert.ok(inventory.mmFontOrigin.originals.some(i=>i.path===f.outputPath&&i.sha256===f.sha256));
  assert.ok(licensePage.includes(f.outputPath));
  assert.ok(pwa.assets.some(a=>a.url==='/licenses/'+f.outputPath&&a.sha256===f.sha256));
+}
+const conditionMaterials=await verifyDistributionConditionMaterials();
+assert.equal(inventory.conditionPreparation.units.length,119);
+assert.equal(inventory.conditionPreparation.releaseApproval,false);
+for(const f of conditionMaterials.files){
+ assert.deepEqual(await readFile(new URL(f.outputPath,licenseDirectory)),f.content);
+ assert.ok(pwa.assets.some(a=>a.url==='/licenses/'+f.outputPath&&a.sha256===f.sha256));
+ assert.ok(licensePage.includes(f.outputPath.split('/').map(encodeURIComponent).join('/'))||f.outputPath===inventory.conditionPreparation.credits.path);
 }
 console.log(`dist check passed: ${workerName}, ${anydocWasmName}, ${pdfiumWasmName}`);
