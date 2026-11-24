@@ -1,5 +1,27 @@
 import { expect, test, type Page } from '@playwright/test';
 
+test('オフラインの準備中は同じ高さのバッジ内でスピナーが回る', async ({ page }) => {
+  await page.setViewportSize({ width: 375, height: 812 });
+  await page.emulateMedia({ reducedMotion: 'no-preference' });
+  await page.addInitScript(() => {
+    // Hold registration open so the preparing state is observable on fast and slow runners.
+    navigator.serviceWorker.register = () => new Promise(() => {});
+  });
+  await page.goto('/');
+
+  const badge = page.locator('.privacy-badge + .offline-badge');
+  await expect(badge).toHaveText('オフライン準備中');
+  const spinner = badge.locator('.offline-badge-spinner');
+  await expect(spinner).toBeVisible();
+  await expect(spinner).toHaveCSS('animation-name', 'offline-badge-spin');
+  await expect(page.locator('.pwa-status')).toHaveCount(0);
+
+  const badgeHeights = await page.locator('.hero-badges > *').evaluateAll(
+    badges => badges.map(item => item.getBoundingClientRect().height),
+  );
+  expect(badgeHeights[0]).toBe(badgeHeights[1]);
+});
+
 async function waitForActiveServiceWorker(page: Page) {
   await expect.poll(() => page.evaluate(async () =>
     'serviceWorker' in navigator && (await navigator.serviceWorker.getRegistrations()).some(
@@ -77,6 +99,10 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
   await page.reload();
   await expect.poll(() => page.evaluate(() => Boolean(navigator.serviceWorker.controller))).toBe(true);
   await expect(page.locator('.privacy-badge + .offline-badge')).toHaveText('オフライン可');
+  const badgeHeights = await page.locator('.hero-badges > *').evaluateAll(
+    badges => badges.map(badge => badge.getBoundingClientRect().height),
+  );
+  expect(badgeHeights[0]).toBe(badgeHeights[1]);
   await expect(page.locator('.pwa-status')).toHaveCount(0);
   await page.context().setOffline(true);
   try {
