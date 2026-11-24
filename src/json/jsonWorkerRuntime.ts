@@ -42,7 +42,7 @@ export const handleJsonRequest=async({data:request}:{data:JsonRequest})=>{
     if (inputError) errorCode = inputError;
     else if (limit) errorCode = 'resourceLimit';
     else if (code === 'initialization') errorCode = 'initializationFailed';
-    else if (['pointer','selection','style'].includes(code)) errorCode = 'invalidSelection';
+    else if (['pointer','selection','style','emptyArraySelection'].includes(code)) errorCode = 'invalidSelection';
     scope.postMessage({id:request.id,operation:request.operation,fileId:request.fileId,parseGeneration:request.parseGeneration,settings:request.settings,error:errorCode});
   }
 };

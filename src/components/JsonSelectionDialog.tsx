@@ -21,6 +21,11 @@ export function JsonSelectionDialog({file,client,settings,onCancel,onConfirm}:{f
   const current=answer?.request===request&&answer.draft===draft ? answer.page : undefined;
   const visible=answer?.page;
   const valid=current?.styles.find(style=>style.style===draft.style)?.valid===true;
+  const arrayPage=visible?.pointer===draft.pointer&&visible.type==='array'&&visible.childCount>0?visible:undefined;
+  const detailPage=arrayPage??current;
+  const allByDefault=draft.arraySelection?.all??true;
+  const exceptions=new Set(draft.arraySelection?.exceptions);
+  const selectedCount=allByDefault?(arrayPage?.childCount??0)-exceptions.size:exceptions.size;
 
   useEffect(()=>{
     const el=dialog.current,origin=document.activeElement instanceof HTMLElement?document.activeElement:undefined;
@@ -64,8 +69,17 @@ export function JsonSelectionDialog({file,client,settings,onCancel,onConfirm}:{f
     changeView({pages:{...(current?.view.pages??request.view.pages),[pointer]:page},start:visible?.view.start??0});
   };
   const select=(pointer:string)=>{
-    setDraft(previous=>({...previous,pointer}));
+    setDraft(previous=>({...previous,pointer,arraySelection:undefined}));
     changeView({detailPage:0});
+  };
+  const toggleArrayChild=(index:number)=>{
+    setDraft(previous=>{
+      const all=previous.arraySelection?.all??true;
+      const nextExceptions=new Set(previous.arraySelection?.exceptions);
+      if(nextExceptions.has(index))nextExceptions.delete(index);
+      else nextExceptions.add(index);
+      return {...previous,arraySelection:all&&nextExceptions.size===0?undefined:{all,exceptions:[...nextExceptions]}};
+    });
   };
   return <dialog ref={dialog} className="json-settings" aria-labelledby="json-settings-title"
     onClick={event=>{if(event.target===event.currentTarget){const rect=event.currentTarget.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)onCancel();}}}
@@ -76,7 +90,9 @@ export function JsonSelectionDialog({file,client,settings,onCancel,onConfirm}:{f
     </div>
     <p role="status">{message}</p>
     {failed&&<div><button type="button" onClick={()=>changeView({})}>JSONを再読込</button><button type="button" onClick={()=>select('')}>ルートを選択して再読込</button></div>}
-    {current&&current.styles.every(style=>!style.valid)&&<p role="alert">選択対象を縮小してください。小さいコンテナーを選択できない場合は、入力を分割・縮小して再選択してください。</p>}
+    {current&&current.styles.every(style=>!style.valid)&&<p role="alert">{arrayPage&&selectedCount===0
+      ?'配列の要素を1件以上選択してください。'
+      :'選択対象を縮小してください。小さいコンテナーを選択できない場合は、入力を分割・縮小して再選択してください。'}</p>}
     <div className="json-selection-columns">
       <section aria-label="対象ツリー"><p>開閉・ページ移動は変換対象を変更しません。object・array（ルートはすべての型）から一つ選びます。</p>
         <div ref={tree} className="json-virtual-tree" aria-label="JSON階層の項目" role="group"
@@ -111,12 +127,35 @@ export function JsonSelectionDialog({file,client,settings,onCancel,onConfirm}:{f
           <p>絶対 JSON Pointer（JSON文字列）</p><pre className="json-full-pointer">{JSON.stringify(current.pointer)}</pre>
           <p>対象名（JSON文字列）</p><pre className="json-full-name">{current.pointer===''?'"ファイル全体（ルート）"':JSON.stringify(current.pointer.slice(current.pointer.lastIndexOf('/')+1).replace(/~1/g,'/').replace(/~0/g,'~'))}</pre>
           <p>{current.pointer===''?'ファイル全体（ルート） / ':''}{current.type} / 直下 {current.childCount} 項目</p>
-          <p>選択した要素自身と、そのすべての子孫が変換対象です。</p>
-          <ul className="json-detail-children">{current.children.map(child=><li key={child.pointer}><span>{child.name}</span> / {child.type}</li>)}</ul>
-          <p>{current.childCount===0?0:current.view.detailPage*10+1}〜{Math.min((current.view.detailPage+1)*10,current.childCount)} / {current.childCount}項目</p>
-          <button type="button" disabled={current.view.detailPage===0} onClick={()=>changeView({detailPage:current.view.detailPage-1})}>詳細の前の10項目</button>
-          <button type="button" disabled={(current.view.detailPage+1)*10>=current.childCount} onClick={()=>changeView({detailPage:current.view.detailPage+1})}>詳細の次の10項目</button>
+          {!arrayPage&&<>
+            <p>選択した要素自身と、そのすべての子孫が変換対象です。</p>
+            <ul className="json-detail-children">{current.children.map(child=><li key={child.pointer}><span>{child.name}</span> / {child.type}</li>)}</ul>
+          </>}
         </>:<p>詳細を確認中</p>}
+        {arrayPage&&<fieldset>
+          <legend>変換に含める配列の要素</legend>
+          <label>
+            <input type="checkbox" checked={selectedCount===arrayPage.childCount}
+              ref={input=>{if(input)input.indeterminate=selectedCount>0&&selectedCount<arrayPage.childCount;}}
+              onChange={event=>{
+                const checked=event.currentTarget.checked;
+                setDraft(previous=>({...previous,arraySelection:checked?undefined:{all:false,exceptions:[]}}));
+              }} />
+            配列の全要素（選択 {selectedCount} / {arrayPage.childCount} 件）
+          </label>
+          <ul className="json-detail-children">{arrayPage.children.map((child,offset)=>{
+            const index=arrayPage.view.detailPage*10+offset;
+            return <li key={child.pointer}><label>
+              <input type="checkbox" checked={allByDefault!==exceptions.has(index)} onChange={()=>toggleArrayChild(index)} />
+              [{index}] {child.type} <code>{child.preview}</code>
+            </label></li>;
+          })}</ul>
+        </fieldset>}
+        {detailPage&&<>
+          <p>{detailPage.childCount===0?0:detailPage.view.detailPage*10+1}〜{Math.min((detailPage.view.detailPage+1)*10,detailPage.childCount)} / {detailPage.childCount}項目</p>
+          <button type="button" disabled={detailPage.view.detailPage===0} onClick={()=>changeView({detailPage:detailPage.view.detailPage-1})}>詳細の前の10項目</button>
+          <button type="button" disabled={(detailPage.view.detailPage+1)*10>=detailPage.childCount} onClick={()=>changeView({detailPage:detailPage.view.detailPage+1})}>詳細の次の10項目</button>
+        </>}
         <button type="button" aria-expanded={request.view.detailOpen} onClick={()=>changeView({detailOpen:!request.view.detailOpen})}>JSON詳細{request.view.detailOpen?'を閉じる':'を開く'}</button>
         {current&&request.view.detailOpen&&<><pre className="json-detail-source">{current.detail}</pre>{current.truncated&&<p>先頭10,000文字の抜粋です。変換出力の省略ではありません。</p>}</>}
       </section>

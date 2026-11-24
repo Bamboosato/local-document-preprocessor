@@ -31,7 +31,10 @@ export class JsonWorkerClient {
       if(this.worker!==worker||generation!==this.generation)return;
       const p=this.pending.get(data?.id);if(!p||p.operation!==data.operation)return;
       this.pending.delete(data.id);p.cleanup();
-      if(data.fileId!==p.fileId||data.parseGeneration!==p.parseGeneration||data.settings?.pointer!==p.settings.pointer||data.settings?.style!==p.settings.style){this.residentFileId=undefined;p.reject(new WorkerConversionError('conversionFailed'));}
+      if(data.fileId!==p.fileId||data.parseGeneration!==p.parseGeneration||data.settings?.pointer!==p.settings.pointer||data.settings?.style!==p.settings.style||
+        data.settings?.diagramDirection!==p.settings.diagramDirection||JSON.stringify(data.settings?.arraySelection)!==JSON.stringify(p.settings.arraySelection)){
+        this.residentFileId=undefined;p.reject(new WorkerConversionError('conversionFailed'));
+      }
       else if(data.error){this.residentFileId=undefined;const error=new WorkerConversionError(data.error as ConversionErrorCode);p.reject(error);if(p.operation==='convert')this.cancel(error);}
       else if(!validPayload(p.operation,data.payload)||(p.operation==='target'&&data.payload.pointer!==p.settings.pointer)){this.residentFileId=undefined;p.reject(new WorkerConversionError('conversionFailed'));}
       else {this.residentFileId=p.operation==='release'?undefined:p.fileId;p.resolve(data.payload);}
@@ -39,7 +42,7 @@ export class JsonWorkerClient {
     worker.onerror=event=>{event.preventDefault();if(this.worker===worker&&generation===this.generation)this.cancel(new WorkerConversionError('conversionFailed'));};return worker;
   }
   private request<T>(file:File,operation:JsonOperation,settings:JsonSettings,offset:number,signal?:AbortSignal,extra?:{view:JsonView;reveal:boolean}):Promise<T>{
-    const generation=this.generation,snapshot={...settings};
+    const generation=this.generation,snapshot=structuredClone(settings);
     let aborted=signal?.aborted??false,active=false;
     return new Promise<T>((resolve,reject)=>{
       const readController=new AbortController();
