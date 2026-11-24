@@ -133,11 +133,28 @@ h1 {
 }
 
 .hero-description {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1em;
   max-width: 720px;
   margin: 6px 0 24px;
   color: #4a5568;
   font-size: 0.875rem;
   line-height: 1.55;
+}
+
+.hero-description > p {
+  min-inline-size: 0;
+  margin: 0;
+}
+
+/* Keep room for the notice at its natural line count, including on narrow screens. */
+.hero-update-hidden {
+  visibility: hidden;
+}
+
+.hero-update-notice {
+  color: var(--amber);
 }
 
 .hero-badges {
@@ -170,6 +187,17 @@ h1 {
   border: 2px solid var(--line);
   border-top-color: currentColor;
   border-radius: 50%;
+}
+
+.offline-badge {
+  min-inline-size: 11em;
+  justify-content: center;
+}
+
+.offline-badge--update {
+  border-color: var(--amber);
+  color: var(--amber);
+  background: var(--amber-soft);
 }
 
 @media (prefers-reduced-motion: no-preference) {

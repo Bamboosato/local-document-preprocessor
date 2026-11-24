@@ -27,6 +27,21 @@ it('PC-02 wrong generation blocks new conversions without reloading the page',as
 it('PC-03 waiting update preserves old-generation work and does not request takeover',async()=>{
   const {reg,client}=await fixture();reg.waiting=new WorkerFixture();reg.waiting.generation='B';await client.startPwa();expect(client.getPwaState()).toEqual({phase:'waiting',canConvert:true});
 });
+it('reports update preparation only after a new worker is found and preserves conversion',async()=>{
+  const {reg,client}=await fixture();
+  await client.startPwa();
+  expect(client.getPwaState().phase).toBe('ready');
+  const update=new WorkerFixture();
+  update.generation='B';
+  reg.installing=update;
+  reg.dispatchEvent(new Event('updatefound'));
+  await vi.waitFor(()=>expect(client.getPwaState()).toEqual({phase:'updating',canConvert:true}));
+  reg.installing=null;
+  reg.waiting=update;
+  update.state='installed';
+  update.dispatchEvent(new Event('statechange'));
+  await vi.waitFor(()=>expect(client.getPwaState()).toEqual({phase:'waiting',canConvert:true}));
+});
 it('PC-04 legacy/nonresponsive controller cannot be called offline-ready',async()=>{
   vi.useFakeTimers();const {reg,client}=await fixture();reg.active!.silent=true;const start=client.startPwa();await vi.advanceTimersByTimeAsync(2100);await start;expect(client.getPwaState()).toEqual({phase:'error',canConvert:false});
 });

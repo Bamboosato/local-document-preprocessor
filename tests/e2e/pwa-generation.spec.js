@@ -8,6 +8,9 @@ import {createHash} from 'node:crypto';
 import {buildPwaManifest} from '../../scripts/build-pwa-manifest.mjs';
 
 let temporary,server,base,current='A',blocked='',blockedHits=0,legacy=false,builds={};
+let updateInstallHold;
+const updateNotice='変換結果があれば保存し、アプリを開きなおしてください。';
+const updateNoticeForA=process.env.PWA_MIGRATION_OLD_DIST?/更新の準備ができました/:updateNotice;
 const root=process.cwd();
 const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
 test.beforeAll(async()=>{
@@ -51,6 +54,7 @@ test.beforeAll(async()=>{
       }
       if(blocked&&current==='B'&&path===blocked){blockedHits++;response.writeHead(503);response.end('fixture missing');return;}
       const directory=builds[current].dist,file=resolve(directory,'.'+(path==='/'?'/index.html':path));
+      if(current==='B'&&path==='/index.html'&&updateInstallHold)await updateInstallHold;
       if(!file.startsWith(directory+sep)){response.writeHead(404);response.end();return;}
       const bytes=await readFile(file),mime={'.js':'text/javascript','.css':'text/css','.html':'text/html','.wasm':'application/wasm','.png':'image/png','.json':'application/json','.webmanifest':'application/manifest+json'}[extname(file)]??'text/plain';
       response.writeHead(200,{'content-type':mime,'cache-control':'no-store'});response.end(bytes);
@@ -78,11 +82,35 @@ async function convert(page,name,value,style='items'){
 test('PG-01 actual A/B builds wait for every old tab; old lazy worker and offline B conversion remain generation-correct',async({browser})=>{
   test.setTimeout(60000); // Two installs plus first-use offline JSON/SVG/PDF/CSV.
   const context=await browser.newContext(),a=await context.newPage();
+  let releaseUpdateInstall;
   try{
+    await a.setViewportSize({width:375,height:812});
     await controlled(a);await expect(a.getByRole('heading',{name:'PWA fixture A',exact:true})).toBeVisible();await convert(a,'A.json','PRESERVED_A');
-    const second=await context.newPage();await second.goto(base);current='B';
+    const second=await context.newPage();await second.goto(base);
+    const pages=[a,second];
+    const before=await Promise.all(pages.map(page=>page.locator('.drop-zone').boundingBox()));
+    if(!process.env.PWA_MIGRATION_OLD_DIST){
+      updateInstallHold=new Promise(resolve=>{releaseUpdateInstall=resolve;});
+    }
+    current='B';
     await a.evaluate(async()=>{await(await navigator.serviceWorker.getRegistration()).update();});
-    await expect(a.getByText(/更新の準備ができました/)).toBeVisible({timeout:30000});await expect(a.locator('.result-card')).toContainText('PRESERVED_A');
+    if(releaseUpdateInstall){
+      for(const [index,page] of pages.entries()){
+        await expect(page.locator('.offline-badge')).toHaveText('更新を準備中');
+        await expect(page.getByText(updateNotice,{exact:true})).toBeHidden();
+        expect(await page.locator('.drop-zone').boundingBox()).toEqual(before[index]);
+      }
+      releaseUpdateInstall();
+    }
+    await expect(a.getByText(updateNoticeForA,{exact:true})).toBeVisible({timeout:30000});await expect(a.locator('.result-card')).toContainText('PRESERVED_A');
+    if(releaseUpdateInstall){
+      for(const [index,page] of pages.entries()){
+        await expect(page.locator('.offline-badge')).toHaveText('更新できます');
+        await expect(page.locator('.hero').getByText(updateNotice,{exact:true})).toBeVisible();
+        await expect(page.locator('.pwa-status')).toHaveCount(0);
+        expect(await page.locator('.drop-zone').boundingBox()).toEqual(before[index]);
+      }
+    }
     await expect(a.getByText('オフライン可',{exact:true})).toHaveCount(0);
     await expect(second.getByRole('heading',{name:'PWA fixture A',exact:true})).toBeVisible();
     await context.setOffline(true);
@@ -110,7 +138,7 @@ test('PG-01 actual A/B builds wait for every old tab; old lazy worker and offlin
     await b.locator('input[type=file]').setInputFiles([{name:'offline.pdf',mimeType:'application/pdf',buffer:await readFile(resolve(root,'tests/fixtures/pdf/normal-machine-readable.pdf'))},{name:'offline.csv',mimeType:'text/csv',buffer:Buffer.from('name,value\nOFFLINE_CSV,2\n')}]);
     await expect(b.getByText('構造確認中',{exact:true})).toHaveCount(0);await b.getByRole('button',{name:'2 ファイルを変換',exact:true}).click();await expect(b.locator('.result-card')).toHaveCount(2);await expect(b.locator('.result-card').filter({has:b.getByRole('heading',{name:'offline.csv',exact:true})})).toContainText('OFFLINE_CSV');
     for(const card of await b.locator('.result-card').all())await expect(card.getByRole('button',{name:'Markdown をダウンロード',exact:true})).toBeEnabled();
-  }finally{await context.close();}
+  }finally{releaseUpdateInstall?.();updateInstallHold=undefined;await context.close();}
 });
 test('PG-02 failed B install preserves A and explicit update retry can prepare B',async({browser})=>{
   const context=await browser.newContext(),page=await context.newPage();
@@ -127,7 +155,7 @@ test('PG-02 failed B install preserves A and explicit update retry can prepare B
       return {oldReady:old?await old.text():null,candidateReady:candidate?await candidate.text():null,active};
     },{a:builds.A.manifest.id,b:builds.B.manifest.id});
     expect(state.oldReady).toBe(builds.A.manifest.id);expect(state.candidateReady).toBeNull();expect(state.active.generation).toBe(builds.A.manifest.id);expect(state.active.complete).toBe(true);
-    blocked='';await page.getByRole('button',{name:'もう一度試す',exact:true}).click();await expect(page.getByText(/更新の準備ができました/)).toBeVisible({timeout:30000});
+    blocked='';await page.getByRole('button',{name:'もう一度試す',exact:true}).click();await expect(page.getByText(updateNoticeForA,{exact:true})).toBeVisible({timeout:30000});
     await expect(page.locator('.result-card')).toContainText('KEPT_ON_FAILURE');
   }finally{await context.close();}
 });
@@ -155,7 +183,7 @@ test('PG-04 legacy v1 controlling new HTML cannot enable conversion; closing all
     await expect.poll(()=>old.evaluate(async()=>!!(await navigator.serviceWorker.getRegistration()).waiting),{timeout:30000}).toBe(true);
     const mixed=await context.newPage();await mixed.goto(base);await expect(mixed.getByRole('heading',{name:'PWA fixture B',exact:true})).toBeVisible();
     await mixed.locator('input[type=file]').setInputFiles(json('guard.json','{"value":"NO_MIXED_SUCCESS"}'));await mixed.getByRole('button',{name:'この設定に決定',exact:true}).click();
-    await expect(mixed.getByRole('button',{name:'1 ファイルを変換',exact:true})).toBeDisabled();await expect(mixed.getByText(/更新の準備ができました/)).toBeVisible();await expect(mixed.locator('.result-card')).toHaveCount(0);
+    await expect(mixed.getByRole('button',{name:'1 ファイルを変換',exact:true})).toBeDisabled();await expect(mixed.getByText(updateNotice,{exact:true})).toBeVisible();await expect(mixed.locator('.result-card')).toHaveCount(0);
     let next;for(const worker of context.serviceWorkers())if(await worker.evaluate(()=>self.__LDP_BUILD__?.id)===builds.B.manifest.id)next=worker;expect(next).toBeDefined();
     await old.close();await mixed.close();await expect.poll(()=>next.evaluate(()=>!self.registration.waiting&&self.registration.active?.state==='activated'),{timeout:30000}).toBe(true);
     const page=await context.newPage();await page.goto(base);await convert(page,'migrated.json','MIGRATION_COMPLETE');expect(await page.evaluate(()=>caches.keys())).toEqual(['ldp-static-'+builds.B.manifest.id]);
