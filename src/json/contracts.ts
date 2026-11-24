@@ -1,5 +1,6 @@
 export type JsonStyle='items'|'records'|'mermaid';
-export interface JsonSettings {pointer:string;style:JsonStyle}
+export type JsonDiagramDirection='TD'|'LR';
+export interface JsonSettings {pointer:string;style:JsonStyle;diagramDirection?:JsonDiagramDirection}
 export const defaultJsonSettings:JsonSettings={pointer:'',style:'items'};
 export const isJsonFile=(name:string)=>/\.json$/i.test(name);
 export function pointerLabel(pointer:string){let text='',count=0;for(const cp of pointer){if(++count>300)return JSON.stringify(text)+'…（抜粋）';text+=cp;}return JSON.stringify(text);}

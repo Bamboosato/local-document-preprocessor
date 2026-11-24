@@ -14,7 +14,7 @@ export function browseJson(model:JsonModel,settings:JsonSettings,offset=0):JsonP
     rows:descendants.slice(offset,offset+300).map(({key,node:child})=>({pointer:settings.pointer+'/'+encodeSegment(key),name:literal(excerpt(key)),type:child.type,container:['object','array'].includes(child.type),preview:child.type==='string'?literal(excerpt(String(child.value))):excerpt(valueText(model,child))}))};
 }
 export async function convertJson(model:JsonModel,settings:JsonSettings,fileName:string,validate:(code:string)=>Promise<void>):Promise<ConversionResult> {
-  const generated=generate(model,settings.pointer,settings.style,fileName);
+  const generated=generate(model,settings.pointer,settings.style,fileName,settings.diagramDirection);
   if(generated.code)await validate(generated.code);
   return {markdown:generated.markdown,plainText:markdownToPlainText(generated.markdown),detectedFormat:'JSON',
     jsonDiagram:generated.code?{code:generated.code}:undefined,
