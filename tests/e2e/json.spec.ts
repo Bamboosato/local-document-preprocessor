@@ -12,7 +12,7 @@ test('JC-03 JSON selected subtree preserves numeric tokens in MD/TXT downloads w
   await page.addInitScript(()=>{Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async(value:string)=>{(window as Window & {copiedFixture?:string}).copiedFixture=value;}}});});
   const wasm:string[]=[],external:string[]=[];page.on('request',r=>{if(r.url().endsWith('.wasm'))wasm.push('wasm');const u=new URL(r.url());if(['http:','https:'].includes(u.protocol)&&u.hostname!=='127.0.0.1')external.push('external');});
   await page.goto('/');await page.locator('input[type=file]').setInputFiles(json('fixture.JSON',fixture));await expect(dialog(page)).toBeVisible();
-  await page.getByRole('radio',{name:'"a/b"',exact:true}).check();await confirm(page);await convert(page);
+  await page.getByRole('checkbox',{name:'"a/b"',exact:true}).check();await confirm(page);await convert(page);
   const card=page.locator('.result-card');await expect(card).toContainText('9007199254740993');await expect(card).not.toContainText('NOT_SELECTED');
   await card.getByRole('button',{name:'Markdown をコピー',exact:true}).click();expect(await page.evaluate(()=>{const text=(window as Window & {copiedFixture?:string}).copiedFixture;return Boolean(text?.includes('9007199254740993'))&&!text?.includes('originalUpdatedAt:');})).toBe(true);
   const mdPromise=page.waitForEvent('download');await card.getByRole('button',{name:'Markdown をダウンロード'}).click();const md=await mdPromise;const mdText=await (await md.createReadStream())!.toArray();const content=Buffer.concat(mdText).toString('utf8');expect(content).toContain('title: "fixture.JSON"');expect(content).toContain('9007199254740993');expect(content).toContain('/a~1b');

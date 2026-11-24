@@ -59,8 +59,8 @@ test('SR-12 target reload failure has explicit retry; delayed obsolete target ne
     await expect(page.getByRole('button',{name:'JSONを再読込',exact:true})).toBeVisible();expect(injected).toBeGreaterThan(0);
     await expect(page.getByRole('button',{name:'この設定に決定',exact:true})).toBeDisabled();
     await page.getByRole('button',{name:'JSONを再読込',exact:true}).click();await ready(page);
-    await page.getByRole('radio',{name:'"slow"',exact:true}).check();await expect(page.getByRole('button',{name:'この設定に決定',exact:true})).toBeDisabled();
-    await page.getByRole('radio',{name:'"fast"',exact:true}).check();
+    await page.getByRole('checkbox',{name:'"slow"',exact:true}).check();await expect(page.getByRole('button',{name:'この設定に決定',exact:true})).toBeDisabled();
+    await page.getByRole('checkbox',{name:'"fast"',exact:true}).check();
     // A new Worker also receives the one-shot read fault; recover without resetting the draft.
     await expect(page.getByRole('button',{name:'JSONを再読込',exact:true})).toBeVisible();await page.getByRole('button',{name:'JSONを再読込',exact:true}).click();await ready(page);
     await expect(page.locator('.json-full-pointer')).toHaveText('"/fast"');await expect(page.locator('.json-target-detail')).toContainText('CURRENT');await expect(page.locator('.json-target-detail')).not.toContainText('OBSOLETE');
@@ -117,7 +117,7 @@ test('SR-20 UI-14/17 JSON A survives PDF B cancellation and file-specific settin
     await page.goto('/');await page.locator('input[type=file]').setInputFiles([json('A.json','{"keep":{"value":"PRESERVED_A"},"outside":"OUTSIDE_A"}'),{name:'B.pdf',mimeType:'application/pdf',buffer:await (await import('node:fs/promises')).readFile(resolve('tests/fixtures/pdf/three-page-range.pdf'))},json('C.json','{"value":"RECOVERED_C"}')]);
     await expect(page.getByText('構造確認中',{exact:true})).toHaveCount(0);expect(injected).toBeGreaterThan(0);
     await row(page,'B.pdf').getByRole('button',{name:'変更',exact:true}).click();await page.getByRole('radio',{name:'範囲を指定',exact:true}).check();await page.getByLabel('開始').fill('2');await page.getByLabel('終了').fill('2');await page.getByRole('button',{name:'この範囲に決定',exact:true}).click();
-    await row(page,'A.json').getByRole('button',{name:'変更',exact:true}).click();await ready(page);await page.getByRole('radio',{name:'"keep"',exact:true}).check();await confirm(page);
+    await row(page,'A.json').getByRole('button',{name:'変更',exact:true}).click();await ready(page);await page.getByRole('checkbox',{name:'"keep"',exact:true}).check();await confirm(page);
     await page.getByRole('button',{name:'3 ファイルを変換',exact:true}).click();await expect(card(page,'A.json')).toContainText('PRESERVED_A');await expect(row(page,'B.pdf')).toContainText('変換中');
     await page.getByRole('button',{name:'変換をキャンセル',exact:true}).click();await expect(page.getByText('キャンセル済み',{exact:true})).toHaveCount(2);
     await row(page,'A.json').getByRole('button',{name:'変更',exact:true}).click();await ready(page);await expect(page.locator('.json-full-pointer')).toHaveText('"/keep"');await page.getByRole('button',{name:'キャンセル',exact:true}).click();
