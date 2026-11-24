@@ -25,6 +25,38 @@ test('JC-03 JSON Mermaid uses standard SVG under product CSP; source/plain text 
   await page.getByRole('button',{name:'Mermaidソース',exact:true}).click();await expect(page.locator('.json-source')).toContainText('flowchart TD');await page.getByRole('tab',{name:'plain text',exact:true}).click();await expect(page.locator('.plain-preview')).toContainText('flowchart TD');expect(errors).toHaveLength(0);
 });
 
+test('JSON Mermaid layout keeps the top-down default and renders siblings vertically in left-to-right mode', async ({page}) => {
+  await page.goto('/');
+  await page.locator('input[type=file]').setInputFiles(json('layout.json','{"a":1,"b":2,"c":3}'));
+  await expect(dialog(page)).toBeVisible();
+  const layout = dialog(page).getByRole('group', {name:'Mermaid構造図の配置'});
+  await expect(layout).toBeHidden();
+  await dialog(page).getByRole('radio', {name:'Mermaid構造図',exact:true}).check();
+  await expect(layout.getByRole('radio', {name:'親子を上下に配置'})).toBeChecked();
+  const leftToRight = layout.getByRole('radio', {name:/親子を左右に配置/});
+  await leftToRight.check();
+  await confirm(page,'mermaid');
+  await convert(page);
+
+  const svg = page.locator('.json-svg svg');
+  await expect(svg).toBeVisible();
+  await expect(svg.locator('.node')).toHaveCount(4);
+  const centers = await svg.locator('.node').evaluateAll(nodes => Object.fromEntries(nodes.map(node => {
+    const {x,y,width,height} = node.getBoundingClientRect();
+    return [node.textContent?.split('｜')[0].replaceAll('"',''), {x:x+width/2,y:y+height/2}];
+  })));
+  const children = [centers.a,centers.b,centers.c];
+  expect(new Set(children.map(child => child.y)).size).toBe(3);
+  expect(Math.max(...children.map(child => child.x))-Math.min(...children.map(child => child.x))).toBeLessThan(1);
+
+  await page.getByRole('button',{name:'Mermaidソース',exact:true}).click();
+  await expect(page.locator('.json-source')).toContainText('flowchart LR');
+  await page.getByRole('tab',{name:'plain text',exact:true}).click();
+  await expect(page.locator('.plain-preview')).toContainText('flowchart LR');
+  await page.getByRole('button',{name:'変更',exact:true}).click();
+  await expect(leftToRight).toBeChecked();
+});
+
 test('JC-04 JSON records, draft cancel, confirmed invalidation and fresh settings do not mix results',async({page})=>{
   await page.goto('/');await page.locator('input[type=file]').setInputFiles(json('records.json','[{"a":1},{"b":2}]'));await confirm(page,'records');await convert(page);await expect(page.locator('.result-card')).toContainText('（項目なし）');
   await page.getByRole('button',{name:'変更',exact:true}).click();await page.getByRole('radio',{name:'Mermaid構造図',exact:true}).check();await page.getByRole('button',{name:'キャンセル',exact:true}).click();await expect(page.locator('.result-card')).toHaveCount(1);

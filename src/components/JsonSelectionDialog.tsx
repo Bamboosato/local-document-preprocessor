@@ -1,5 +1,5 @@
 import {useEffect,useRef,useState} from 'react';
-import type {JsonSettings,JsonView,JsonTargetPage,JsonStyle} from '../json/contracts';
+import type {JsonDiagramDirection,JsonSettings,JsonView,JsonTargetPage,JsonStyle} from '../json/contracts';
 import {defaultJsonSettings,pointerLabel,initialJsonView} from '../json/contracts';
 import type {JsonWorkerClient} from '../json/JsonWorkerClient';
 
@@ -13,6 +13,7 @@ export function JsonSelectionDialog({file,client,settings,onCancel,onConfirm}:{f
   const dialog=useRef<HTMLDialogElement>(null),tree=useRef<HTMLDivElement>(null);
   const restored=useRef(false);
   const [draft,setDraft]=useState<JsonSettings>(()=>({...settings??defaultJsonSettings}));
+  const [diagramDirection,setDiagramDirection]=useState<JsonDiagramDirection>(settings?.diagramDirection??'TD');
   const [request,setRequest]=useState(()=>({view:structuredClone(savedViews.get(file)??initialJsonView()),reveal:false}));
   const [answer,setAnswer]=useState<{request:typeof request;draft:JsonSettings;page:JsonTargetPage}>();
   const [message,setMessage]=useState('対象とスタイルを確認中');
@@ -124,6 +125,11 @@ export function JsonSelectionDialog({file,client,settings,onCancel,onConfirm}:{f
       const suitability=current?.styles.find(item=>item.style===style);
       return <div key={style} className="json-style-choice"><label><input type="radio" name="json-style" value={style} checked={draft.style===style} disabled={draft.style!==style&&!suitability?.valid} onChange={()=>setDraft({...draft,style})}/>{styleNames[style]}</label><p>{descriptions[style]} {suitability?`${suitability.count} — ${suitability.reason}`:'適合性を確認中'}</p></div>;
     })}</fieldset>
-    <div className="dialog-actions"><button type="button" onClick={onCancel}>キャンセル</button><button type="button" disabled={!valid} onClick={()=>{if(valid)onConfirm({...draft});}}>この設定に決定</button></div>
+    {draft.style==='mermaid'&&<fieldset>
+      <legend>Mermaid構造図の配置</legend>
+      <div><label><input type="radio" name="json-diagram-direction" value="TD" checked={diagramDirection==='TD'} onChange={()=>setDiagramDirection('TD')} />親子を上下に配置</label></div>
+      <div><label><input type="radio" name="json-diagram-direction" value="LR" checked={diagramDirection==='LR'} onChange={()=>setDiagramDirection('LR')} />親子を左右に配置（同じ親の子が縦に並ぶ）</label></div>
+    </fieldset>}
+    <div className="dialog-actions"><button type="button" onClick={onCancel}>キャンセル</button><button type="button" disabled={!valid} onClick={()=>{if(valid)onConfirm({...draft,diagramDirection});}}>この設定に決定</button></div>
   </dialog>;
 }

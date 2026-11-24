@@ -138,7 +138,7 @@ export const diagramLiteral = value => '"'+Array.from(value,ch=>{
   if(cp<32||/[ <>&{}'"\\]/u.test(ch)||[0x2028,0x2029,0xfffe,0xffff].includes(cp))return '\\u'+cp.toString(16).padStart(4,'0');
   return ch;
 }).join('')+'"';
-export function generate(model, pointer = '', style = 'items', fileName = 'fixture.json') {
+export function generate(model, pointer = '', style = 'items', fileName = 'fixture.json', diagramDirection = 'TD') {
   const selected = resolve(model, pointer);
   if (pointer !== '' && !['object', 'array'].includes(selected.type)) fail('selection');
   if(pointer.length>limits.markdown||fileName.length>limits.markdown)fail('markdown');
@@ -175,7 +175,8 @@ export function generate(model, pointer = '', style = 'items', fileName = 'fixtu
     if (labels.some(label => cpLength(label) > limits.label)) fail('label');
     const ids = new Map(nodes.map((n, i) => [n.pointer, `n${i}`]));
     graph = {labels, parents:nodes.map(n=>n.parent===null?-1:Number(ids.get(n.parent).slice(1)))};
-    code = 'flowchart TD\n' + nodes.map((n, i) => `n${i}@{ shape: rect, labelType: text, label: '${labels[i].replace(/'/g,"''")}' }\n${n.parent === null ? '' : `${ids.get(n.parent)} --> n${i}\n`}`).join('');
+    const direction = diagramDirection === 'LR' ? 'LR' : 'TD';
+    code = `flowchart ${direction}\n` + nodes.map((n, i) => `n${i}@{ shape: rect, labelType: text, label: '${labels[i].replace(/'/g,"''")}' }\n${n.parent === null ? '' : `${ids.get(n.parent)} --> n${i}\n`}`).join('');
     if (cpLength(code) > limits.code) fail('code');
     body = '```mermaid\n' + code + '```';
   } else fail('style');
