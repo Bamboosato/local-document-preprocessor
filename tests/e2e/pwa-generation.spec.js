@@ -83,6 +83,7 @@ test('PG-01 actual A/B builds wait for every old tab; old lazy worker and offlin
     const second=await context.newPage();await second.goto(base);current='B';
     await a.evaluate(async()=>{await(await navigator.serviceWorker.getRegistration()).update();});
     await expect(a.getByText(/更新の準備ができました/)).toBeVisible({timeout:30000});await expect(a.locator('.result-card')).toContainText('PRESERVED_A');
+    await expect(a.getByText('オフライン可',{exact:true})).toHaveCount(0);
     await expect(second.getByRole('heading',{name:'PWA fixture A',exact:true})).toBeVisible();
     await context.setOffline(true);
     const oldNoticeHash=await second.evaluate(async()=>{const bytes=await(await fetch('/licenses/inventory.json')).arrayBuffer();return [...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(b=>b.toString(16).padStart(2,'0')).join('');});
@@ -137,11 +138,13 @@ test('PG-03 evicted lazy JSON worker fails offline without false output; online 
     await page.evaluate(async({name,asset})=>{await(await caches.open(name)).delete(asset);},{name:'ldp-static-'+builds.A.manifest.id,asset});
     await context.setOffline(true);await page.locator('input[type=file]').setInputFiles(json('missing.json','{"value":"RECOVERED"}'));
     await expect(page.getByText(/ネットなしでは一部の機能を使えません/)).toBeVisible();await expect(page.locator('.result-card')).toHaveCount(0);
+    await expect(page.getByText('オフライン可',{exact:true})).toHaveCount(0);
     await context.setOffline(false);await page.getByRole('button',{name:'もう一度試す',exact:true}).click();
     await expect.poll(()=>page.evaluate(async({name,asset})=>Boolean(await caches.match(asset,{cacheName:name})),
       {name:'ldp-static-'+builds.A.manifest.id,asset}),{timeout:30000}).toBe(true);
     await context.setOffline(true);
     await convert(page,'retry.json','RECOVERED');
+    await expect(page.getByText('オフライン可',{exact:true})).toBeVisible();
     await expect(page.locator('.pwa-status')).toHaveCount(0);
   }finally{await context.close();}
 });

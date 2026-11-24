@@ -10,6 +10,7 @@ describe('App initial workspace', () => {
     try {
       render(<App />);
       expect(screen.queryByLabelText('オフラインと更新の状態')).not.toBeInTheDocument();
+      expect(screen.queryByText('オフライン可')).not.toBeInTheDocument();
     } finally {
       getState.mockRestore();
     }
