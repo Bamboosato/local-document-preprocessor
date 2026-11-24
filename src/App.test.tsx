@@ -4,13 +4,14 @@ import App from './App';
 import * as pwa from './pwa/client';
 
 describe('App initial workspace', () => {
-  it('shows no offline notice while the app prepares its offline files', () => {
+  it('shows progress inside the badge while the app prepares its offline files', () => {
     const state: pwa.PwaState = { phase: 'preparing', canConvert: true };
     const getState = vi.spyOn(pwa, 'getPwaState').mockReturnValue(state);
     try {
       render(<App />);
       expect(screen.queryByLabelText('オフラインと更新の状態')).not.toBeInTheDocument();
-      expect(screen.queryByText('オフライン可')).not.toBeInTheDocument();
+      const badge = screen.getByText('オフライン準備中');
+      expect(badge.querySelector('.offline-badge-spinner')).toHaveAttribute('aria-hidden', 'true');
     } finally {
       getState.mockRestore();
     }

@@ -86,6 +86,8 @@ function defaultOptions(inspection: DocumentInspection): ConversionOptions {
 
 export default function App() {
   const pwa=usePwaState();
+  const isPreparingOffline = pwa.phase === 'preparing';
+  const offlineBadgeText = pwa.phase === 'ready' ? 'オフライン可' : 'オフライン未確認';
   const [items, setItems] = useState<QueueItem[]>([]);
   const [isConverting, setIsConverting] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
@@ -357,7 +359,10 @@ export default function App() {
                 </svg>
                 端末内で処理
               </div>
-              {pwa.phase === 'ready' && <span className="offline-badge">オフライン可</span>}
+              <span className="offline-badge">
+                {isPreparingOffline && <span className="offline-badge-spinner" aria-hidden="true" />}
+                {isPreparingOffline ? 'オフライン準備中' : offlineBadgeText}
+              </span>
             </div>
           </div>
           <p className="hero-description">

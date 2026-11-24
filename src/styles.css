@@ -142,7 +142,7 @@ h1 {
 
 .hero-badges {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   gap: 6px;
 }
 
@@ -163,9 +163,23 @@ h1 {
   white-space: nowrap;
 }
 
-.offline-badge {
-  padding: 4px 8px;
-  font-size: 0.75rem;
+.offline-badge-spinner {
+  width: 0.9em;
+  height: 0.9em;
+  flex: none;
+  border: 2px solid var(--line);
+  border-top-color: currentColor;
+  border-radius: 50%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .offline-badge-spinner {
+    animation: offline-badge-spin 0.8s linear infinite;
+  }
+}
+
+@keyframes offline-badge-spin {
+  to { transform: rotate(1turn); }
 }
 
 .privacy-badge-icon {
