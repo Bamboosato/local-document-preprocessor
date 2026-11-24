@@ -567,7 +567,10 @@ export default function App() {
         )}
       </main>
       <footer className="app-footer">
-        <a href="/licenses/index.html" target="_blank" rel="noopener noreferrer">ライセンス</a>
+        <a href="/licenses/index.html" target="_blank" rel="noopener noreferrer">
+          <span aria-hidden="true">ⓘ</span>
+          <span className="app-footer-link-label">ライセンス</span>
+        </a>
       </footer>
       {dialogItem && dialogItem.inspection.json && dialogItem.file && <JsonSelectionDialog
         key={dialogItem.id} file={dialogItem.file} client={jsonClient()} settings={dialogItem.options?.json}

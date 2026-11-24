@@ -69,9 +69,15 @@ input:focus-visible,
 .app-footer a {
   display: inline-flex;
   align-items: center;
+  gap: 0.35em;
   min-height: 24px;
   color: var(--muted);
   font-size: 0.8125rem;
+  text-decoration: none;
+}
+
+.app-footer-link-label {
+  text-decoration: underline;
   text-underline-offset: 0.15em;
 }
 
