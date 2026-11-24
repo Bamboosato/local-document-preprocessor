@@ -110,7 +110,7 @@ await writeFile(new URL('index.html',outputDirectory),`<!doctype html>
   <p>このアプリで使用する第三者のソフトウェアやデータのライセンス原文、著作権表示、出典を掲載しています。</p>
   <h2>公開しているライセンス原文と権利表示</h2>
   <h3>アプリが使用するパッケージ</h3>
-  <p>pakoにはMITとZlibの両条件を適用し、移植元、権利表示、変更説明を掲載しています。</p>
+  <p>pakoはMITとZlibの両条件を適用し、移植元・権利表示・変更説明も提供しています。</p>
   <p>pdf-libはMIT原文に加え、移植・借用箇所の権利表示とApache-2.0原文を掲載しています。base64とPDF.jsの原文には参考資料であることを示しています。</p>
   <p>アプリ配信時のJavaScriptは結合・最適化・圧縮しています。Tinyの公開JavaScriptは無改変で掲載しています。</p>
   <p><a href="inventory.json">機械可読の一覧</a></p>
