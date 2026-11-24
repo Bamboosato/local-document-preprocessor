@@ -138,9 +138,11 @@ test('PG-03 evicted lazy JSON worker fails offline without false output; online 
     await context.setOffline(true);await page.locator('input[type=file]').setInputFiles(json('missing.json','{"value":"RECOVERED"}'));
     await expect(page.getByText(/ネットなしでは一部の機能を使えません/)).toBeVisible();await expect(page.locator('.result-card')).toHaveCount(0);
     await context.setOffline(false);await page.getByRole('button',{name:'もう一度試す',exact:true}).click();
-    await expect(page.locator('.pwa-status')).toHaveCount(0,{timeout:30000});
+    await expect.poll(()=>page.evaluate(async({name,asset})=>Boolean(await caches.match(asset,{cacheName:name})),
+      {name:'ldp-static-'+builds.A.manifest.id,asset}),{timeout:30000}).toBe(true);
     await context.setOffline(true);
     await convert(page,'retry.json','RECOVERED');
+    await expect(page.locator('.pwa-status')).toHaveCount(0);
   }finally{await context.close();}
 });
 test('PG-04 legacy v1 controlling new HTML cannot enable conversion; closing all clients finishes migration',async({browser})=>{
