@@ -140,7 +140,14 @@ h1 {
   line-height: 1.55;
 }
 
-.privacy-badge {
+.hero-badges {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.privacy-badge,
+.offline-badge {
   display: inline-flex;
   flex: none;
   align-items: center;
@@ -154,6 +161,11 @@ h1 {
   font-size: 0.78rem;
   font-weight: 600;
   white-space: nowrap;
+}
+
+.offline-badge {
+  padding: 4px 8px;
+  font-size: 0.75rem;
 }
 
 .privacy-badge-icon {

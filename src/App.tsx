@@ -340,21 +340,24 @@ export default function App() {
         <div className="hero-copy">
           <div className="hero-title-row">
             <h1>Local Document Preprocessor</h1>
-            <div className="privacy-badge" aria-label="端末内で処理">
-              <svg
-                className="privacy-badge-icon"
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M12 3 19 6v5c0 4.6-3 8.3-7 10-4-1.7-7-5.4-7-10V6l7-3Z" />
-                <path d="m9.5 12 1.6 1.6 3.5-3.5" />
-              </svg>
-              端末内で処理
+            <div className="hero-badges">
+              <div className="privacy-badge" aria-label="端末内で処理">
+                <svg
+                  className="privacy-badge-icon"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 3 19 6v5c0 4.6-3 8.3-7 10-4-1.7-7-5.4-7-10V6l7-3Z" />
+                  <path d="m9.5 12 1.6 1.6 3.5-3.5" />
+                </svg>
+                端末内で処理
+              </div>
+              {pwa.phase === 'ready' && <span className="offline-badge">オフライン可</span>}
             </div>
           </div>
           <p className="hero-description">

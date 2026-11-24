@@ -76,6 +76,7 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
 
   await page.reload();
   await expect.poll(() => page.evaluate(() => Boolean(navigator.serviceWorker.controller))).toBe(true);
+  await expect(page.locator('.privacy-badge + .offline-badge')).toHaveText('オフライン可');
   await expect(page.locator('.pwa-status')).toHaveCount(0);
   await page.context().setOffline(true);
   try {
