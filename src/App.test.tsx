@@ -1,8 +1,20 @@
 import { render, screen } from '@testing-library/react';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import App from './App';
+import * as pwa from './pwa/client';
 
 describe('App initial workspace', () => {
+  it('shows no offline notice while the app prepares its offline files', () => {
+    const state: pwa.PwaState = { phase: 'preparing', canConvert: true };
+    const getState = vi.spyOn(pwa, 'getPwaState').mockReturnValue(state);
+    try {
+      render(<App />);
+      expect(screen.queryByLabelText('オフラインと更新の状態')).not.toBeInTheDocument();
+    } finally {
+      getState.mockRestore();
+    }
+  });
+
   it('uses the LPM-aligned app title and keeps usage boundaries compact', () => {
     render(<App />);
 
