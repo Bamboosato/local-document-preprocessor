@@ -75,11 +75,11 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
   ).toBe(true);
 
   await page.reload();
-  await expect(page.getByText('この世代のオフライン資産は準備済みです。', { exact: true })).toBeVisible();
+  await expect(page.getByText('ネットなしで使えます。', { exact: true })).toBeVisible();
   await page.context().setOffline(true);
   try {
     const popupPromise=page.waitForEvent('popup');
-    await page.getByRole('link', { name: '第三者ライセンス' }).click();
+    await page.getByRole('link', { name: 'ライセンス', exact: true }).click();
     const popup=await popupPromise;
     await expect(popup.getByRole('heading', { name: '第三者ライセンス' })).toBeVisible();
     await popup.getByRole('link',{name:'Tiny 12.3.0 内包物のライセンス・由来・変更',exact:true}).click();
