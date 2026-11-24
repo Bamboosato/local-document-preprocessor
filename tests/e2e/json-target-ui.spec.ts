@@ -3,6 +3,48 @@ const data=(text:string)=>({name:'TU.json',mimeType:'application/json',buffer:Bu
 const ready=(page:Page)=>expect(page.getByRole('status').filter({hasText:'対象と出力スタイルの確認が完了しました。'})).toBeVisible();
 const root=(page:Page)=>page.getByRole('radio',{name:'ファイル全体（ルート）',exact:true});
 
+test('JSON array checkboxes select across pages, preserve indices and discard cancelled edits',async({page})=>{
+  await page.setViewportSize({width:390,height:844});
+  const values=Array.from({length:12},(_,i)=>i===1||i===11?{name:`KEEP_${i}_END`}:i===0?{unused:'EXCLUDED_COLUMN'}:`EXCLUDED_${i}_END`);
+  await page.goto('/');
+  await page.locator('input[type=file]').setInputFiles(data(JSON.stringify(values)));
+  await ready(page);
+  const group=page.getByRole('group',{name:'変換に含める配列の要素'});
+  const all=group.getByRole('checkbox',{name:/配列の全要素/});
+  const first=group.getByRole('checkbox',{name:/^\[1\]/});
+  const last=group.getByRole('checkbox',{name:/^\[11\]/});
+  const confirm=page.getByRole('button',{name:'この設定に決定'});
+  const records=page.getByRole('radio',{name:'一覧表',exact:true});
+  await expect(all).toBeChecked();
+  await expect(records).toBeDisabled();
+  await all.uncheck();
+  await expect(page.getByText('配列の要素を1件以上選択してください。',{exact:true}).first()).toBeVisible();
+  await expect(confirm).toBeDisabled();
+  await first.check();
+  await expect(all).toBeChecked({indeterminate:true});
+  await page.getByRole('button',{name:'詳細の次の10項目'}).click();
+  await last.check();
+  await expect(all).toHaveAccessibleName(/選択 2 \/ 12 件/);
+  await records.check();
+  await confirm.click();
+  await page.getByRole('button',{name:'1 ファイルを変換',exact:true}).click();
+  const result=page.locator('.result-card');
+  await expect(result).toContainText('KEEP_1_END');
+  await expect(result).toContainText('KEEP_11_END');
+  await expect(result).not.toContainText('EXCLUDED');
+  await expect(result.locator('tbody tr').first().locator('td').first()).toHaveText('1');
+  await expect(result.locator('tbody tr').last().locator('td').first()).toHaveText('11');
+
+  const change=page.getByRole('button',{name:'変更',exact:true});
+  await change.click();
+  await expect(all).toBeChecked({indeterminate:true});
+  await all.click();
+  await expect(all).toBeChecked();
+  await page.getByRole('button',{name:'キャンセル',exact:true}).click();
+  await change.click();
+  await expect(all).toHaveAccessibleName(/選択 2 \/ 12 件/);
+});
+
 test('TU-07 paging, details, reveal and cancel preserve selection/style independently',async({page})=>{
   await page.goto('/');
   await page.locator('input[type=file]').setInputFiles(data(JSON.stringify(Array.from({length:51},(_,i)=>({id:i})))));

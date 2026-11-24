@@ -10,5 +10,5 @@ export function resolve(model:JsonModel,pointer:string):JsonNode;
 export function literal(value:unknown):string;
 export function encodeSegment(value:string):string;
 export function valueText(model:JsonModel,node:JsonNode):string;
-export function generate(model:JsonModel,pointer?:string,style?:string,fileName?:string,diagramDirection?:'TD'|'LR'):GeneratedJson;
+export function generate(model:JsonModel,pointer?:string,style?:string,fileName?:string,diagramDirection?:'TD'|'LR',arraySelection?:import('./contracts').JsonArraySelection):GeneratedJson;
 export class ParseCache {get(id:string,bytes:Uint8Array):JsonModel;reset():void;stats():{sets:number;epoch:number;parses:number}}

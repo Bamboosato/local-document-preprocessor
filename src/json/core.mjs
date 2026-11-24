@@ -78,9 +78,9 @@ export function resolve(model, pointer) {
   }
   return node;
 }
-export function* walk(node, pointer = '', key = 'root', parent = null) {
+export function* walk(node, pointer = '', key = 'root', parent = null, directChildren = children(node)) {
   yield { node, pointer, key, parent };
-  for (const child of children(node)) yield* walk(child.node, `${pointer}/${encodeSegment(child.key)}`, child.key, pointer);
+  for (const child of directChildren) yield* walk(child.node, `${pointer}/${encodeSegment(child.key)}`, child.key, pointer);
 }
 export function compact(model, node) {
   function* chunks(current) {
@@ -138,40 +138,56 @@ export const diagramLiteral = value => '"'+Array.from(value,ch=>{
   if(cp<32||/[ <>&{}'"\\]/u.test(ch)||[0x2028,0x2029,0xfffe,0xffff].includes(cp))return '\\u'+cp.toString(16).padStart(4,'0');
   return ch;
 }).join('')+'"';
-export function generate(model, pointer = '', style = 'items', fileName = 'fixture.json', diagramDirection = 'TD') {
+export function generate(model, pointer = '', style = 'items', fileName = 'fixture.json', diagramDirection = 'TD', arraySelection) {
   const selected = resolve(model, pointer);
   if (pointer !== '' && !['object', 'array'].includes(selected.type)) fail('selection');
+  let directChildren = children(selected);
+  if (arraySelection !== undefined) {
+    if (selected.type !== 'array' || typeof arraySelection?.all !== 'boolean' || !Array.isArray(arraySelection.exceptions)) fail('selection');
+    const exceptions = new Set(arraySelection.exceptions);
+    if (exceptions.size !== arraySelection.exceptions.length ||
+        [...exceptions].some(index => !Number.isInteger(index) || index < 0 || index >= directChildren.length)) fail('selection');
+    directChildren = directChildren.filter((_, index) => arraySelection.all !== exceptions.has(index));
+    if (!directChildren.length) fail('emptyArraySelection');
+  }
+  const selectedValueText = node => node === selected && arraySelection !== undefined
+    ? `${directChildren.length}件`
+    : valueText(model, node);
   if(pointer.length>limits.markdown||fileName.length>limits.markdown)fail('markdown');
-  const header = `元ファイル: ${markdownText(literal(fileName))}\n\n変換対象: ${markdownText(literal(pointer))}${pointer === '' ? ' ファイル全体（ルート）' : ''}\n\n出力スタイル: ${style}\n\n`;
+  const originalCount = selected.children?.length ?? 0;
+  const filtered = selected.type === 'array' && directChildren.length !== originalCount;
+  const selectionNote = filtered ? `（配列の選択要素 ${directChildren.length} / ${originalCount} 件）` : '';
+  const targetName = pointer === '' ? (filtered ? ' ルート配列' : ' ファイル全体（ルート）') : '';
+  const header = `元ファイル: ${markdownText(literal(fileName))}\n\n変換対象: ${markdownText(literal(pointer))}${targetName}${selectionNote}\n\n出力スタイル: ${style}\n\n`;
   let body, rows, code, labels, graph;
   if (style === 'items') {
     rows = [['パス', '型', '値']];
-    for (const { node, pointer: path } of walk(selected, pointer)) {
+    for (const { node, pointer: path } of walk(selected, pointer, 'root', null, directChildren)) {
       if (rows.length > limits.rows) fail('rows');
       if(path.length>limits.markdown)fail('markdown');
-      rows.push([literal(path), node.type, valueText(model, node)]);
+      rows.push([literal(path), node.type, selectedValueText(node)]);
     }
     body = table(rows);
   } else if (style === 'records') {
-    const records = children(selected);
+    const records = directChildren;
     if (selected.type !== 'array' || !records.length || records.some(c => c.node.type !== 'object' || !c.node.children?.length)) fail('style');
     if (records.length > limits.rows) fail('rows');
     const keys = [...new Set(records.flatMap(c => children(c.node).map(x => x.key)))];
     if (keys.length > limits.columns) fail('columns');
     if(keys.some(key=>key.length>limits.markdown))fail('markdown');
-    rows = [['配列位置', ...keys.map(literal)], ...records.map((record, i) => {
+    rows = [['配列位置', ...keys.map(literal)], ...records.map(record => {
       const map = new Map(children(record.node).map(c => [c.key, c.node]));
-      return [String(i), ...keys.map(key => map.has(key) ? compact(model, map.get(key)) : '（項目なし）')];
+      return [record.key, ...keys.map(key => map.has(key) ? compact(model, map.get(key)) : '（項目なし）')];
     })];
     body = table(rows);
   } else if (style === 'mermaid') {
     const nodes=[];
-    for(const entry of walk(selected,pointer)){
+    for(const entry of walk(selected,pointer,'root',null,directChildren)){
       if(nodes.length===limits.diagramNodes)fail('diagramNodes');
       nodes.push(entry);
     }
     if(nodes.some(entry=>entry.key.length>limits.label*2||(entry.node.type==='string'&&entry.node.value.length>limits.label*2)||(entry.node.type==='number'&&entry.node.length>limits.label)))fail('label');
-    labels = nodes.map(({ node, key }) => `${diagramLiteral(key)}｜${node.type}｜${node.type==='string'?diagramLiteral(node.value):valueText(model, node)}`);
+    labels = nodes.map(({ node, key }) => `${diagramLiteral(key)}｜${node.type}｜${node.type==='string'?diagramLiteral(node.value):selectedValueText(node)}`);
     if (labels.some(label => cpLength(label) > limits.label)) fail('label');
     const ids = new Map(nodes.map((n, i) => [n.pointer, `n${i}`]));
     graph = {labels, parents:nodes.map(n=>n.parent===null?-1:Number(ids.get(n.parent).slice(1)))};
