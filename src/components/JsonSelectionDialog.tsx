@@ -13,19 +13,24 @@ export function JsonSelectionDialog({file,client,settings,onCancel,onConfirm}:{f
   const dialog=useRef<HTMLDialogElement>(null),tree=useRef<HTMLDivElement>(null);
   const restored=useRef(false);
   const [draft,setDraft]=useState<JsonSettings>(()=>({...settings??defaultJsonSettings}));
+  const [hasTarget,setHasTarget]=useState(true);
   const [diagramDirection,setDiagramDirection]=useState<JsonDiagramDirection>(settings?.diagramDirection??'TD');
   const [request,setRequest]=useState(()=>({view:structuredClone(savedViews.get(file)??initialJsonView()),reveal:false}));
+  const revealedRequest=useRef<typeof request>(undefined);
   const [answer,setAnswer]=useState<{request:typeof request;draft:JsonSettings;page:JsonTargetPage}>();
   const [message,setMessage]=useState('対象とスタイルを確認中');
   const [failed,setFailed]=useState(false);
   const current=answer?.request===request&&answer.draft===draft ? answer.page : undefined;
   const visible=answer?.page;
-  const valid=current?.styles.find(style=>style.style===draft.style)?.valid===true;
-  const arrayPage=visible?.pointer===draft.pointer&&visible.type==='array'&&visible.childCount>0?visible:undefined;
-  const detailPage=arrayPage??current;
+  const valid=hasTarget&&current?.styles.find(style=>style.style===draft.style)?.valid===true;
+  const targetRow=visible?.rows.find(row=>row.kind==='node'&&row.pointer===draft.pointer);
+  const targetArraySize=visible?.pointer===draft.pointer&&visible.type==='array'
+    ? visible.childCount
+    : targetRow?.type==='array'?targetRow.count:0;
+  const filterArray=hasTarget&&targetArraySize>0;
   const allByDefault=draft.arraySelection?.all??true;
   const exceptions=new Set(draft.arraySelection?.exceptions);
-  const selectedCount=allByDefault?(arrayPage?.childCount??0)-exceptions.size:exceptions.size;
+  const selectedCount=allByDefault?targetArraySize-exceptions.size:exceptions.size;
 
   useEffect(()=>{
     const el=dialog.current,origin=document.activeElement instanceof HTMLElement?document.activeElement:undefined;
@@ -55,22 +60,25 @@ export function JsonSelectionDialog({file,client,settings,onCancel,onConfirm}:{f
 
   useEffect(()=>{
     if(!current||!tree.current)return;
-    if(request.reveal){
+    if(request.reveal&&revealedRequest.current!==request){
+      revealedRequest.current=request;
       tree.current.scrollTop=current.view.start*rowHeight;
-      const radio=[...tree.current.querySelectorAll<HTMLInputElement>('input[type=radio]')].find(el=>el.value===draft.pointer);
-      radio?.focus({preventScroll:true});
+      const checkbox=[...tree.current.querySelectorAll<HTMLInputElement>('input[name=json-target]')].find(el=>el.value===draft.pointer);
+      checkbox?.focus({preventScroll:true});
     }
     else if(!restored.current)tree.current.scrollTop=request.view.scrollTop??current.view.start*rowHeight;
     restored.current=true;
-  },[current,request.reveal,draft.pointer]);
+  },[current,request,draft.pointer]);
 
   const changeView=(patch:Partial<JsonView>,reveal=false)=>setRequest(previous=>({view:{...(current?.view??previous.view),...patch},reveal}));
   const changePage=(pointer:string,page:number)=>{
     changeView({pages:{...(current?.view.pages??request.view.pages),[pointer]:page},start:visible?.view.start??0});
   };
-  const select=(pointer:string)=>{
+  const select=(pointer:string,expand=false)=>{
+    setHasTarget(true);
     setDraft(previous=>({...previous,pointer,arraySelection:undefined}));
-    changeView({detailPage:0});
+    const expanded=current?.view.expanded??request.view.expanded;
+    changeView(expand?{detailPage:0,expanded:[...new Set([...expanded,pointer])]}:{detailPage:0});
   };
   const toggleArrayChild=(index:number)=>{
     setDraft(previous=>{
@@ -85,16 +93,18 @@ export function JsonSelectionDialog({file,client,settings,onCancel,onConfirm}:{f
     onClick={event=>{if(event.target===event.currentTarget){const rect=event.currentTarget.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)onCancel();}}}
     onCancel={event=>{event.preventDefault();onCancel();}}>
     <h2 id="json-settings-title">JSONの変換設定</h2><p>{file.name}</p>
-    <div className="json-selection-summary"><strong>変換対象: {draft.pointer===''?'ファイル全体（ルート）':pointerLabel(draft.pointer)}</strong>
-      <button type="button" onClick={()=>changeView({},true)}>選択位置を表示</button>
+    <div className="json-selection-summary"><strong>変換対象: {hasTarget?(draft.pointer===''?'ファイル全体（ルート）':pointerLabel(draft.pointer)):'未選択'}</strong>
+      {filterArray&&<span>（選択 {selectedCount} / {targetArraySize} 件）</span>}
+      <button type="button" disabled={!hasTarget} onClick={()=>changeView({},true)}>選択位置を表示</button>
+      {filterArray&&<button type="button" onClick={()=>setHasTarget(false)}>変換対象を解除</button>}
     </div>
     <p role="status">{message}</p>
     {failed&&<div><button type="button" onClick={()=>changeView({})}>JSONを再読込</button><button type="button" onClick={()=>select('')}>ルートを選択して再読込</button></div>}
-    {current&&current.styles.every(style=>!style.valid)&&<p role="alert">{arrayPage&&selectedCount===0
+    {hasTarget&&current&&current.styles.every(style=>!style.valid)&&<p role="alert">{filterArray&&selectedCount===0
       ?'配列の要素を1件以上選択してください。'
       :'選択対象を縮小してください。小さいコンテナーを選択できない場合は、入力を分割・縮小して再選択してください。'}</p>}
     <div className="json-selection-columns">
-      <section aria-label="対象ツリー"><p>開閉・ページ移動は変換対象を変更しません。object・array（ルートはすべての型）から一つ選びます。</p>
+      <section aria-label="対象ツリー"><p>変換対象を選びます。配列を選んだら、同じツリーで含める要素を選べます。</p>
         <div ref={tree} className="json-virtual-tree" aria-label="JSON階層の項目" role="group"
           onScroll={event=>{
             if(!visible)return;
@@ -106,58 +116,55 @@ export function JsonSelectionDialog({file,client,settings,onCancel,onConfirm}:{f
           }}>
           {visible&&<>
             <div aria-hidden="true" style={{height:visible.view.start*rowHeight}} />
-            {visible.rows.map(row=><div className="json-tree-row" key={`${row.kind}:${row.pointer}`} style={{paddingLeft:Math.min(row.depth*16,64)}}>
+            {visible.rows.map(row=>{
+              const separator=row.pointer.lastIndexOf('/');
+              const directChild=filterArray&&separator>=0&&row.pointer.slice(0,separator)===draft.pointer;
+              const childIndex=Number(row.pointer.slice(separator+1));
+              const target=hasTarget&&row.pointer===draft.pointer;
+              const arrayParent=target&&filterArray;
+              const checked=directChild?allByDefault!==exceptions.has(childIndex):target&&(!arrayParent||selectedCount===targetArraySize);
+              return <div className="json-tree-row" key={`${row.kind}:${row.pointer}`} style={{paddingLeft:Math.min(row.depth*16,64)}}>
               {row.kind==='pager'?<><span>{row.page*50+1}〜{Math.min((row.page+1)*50,row.count)} / {row.count}項目</span><button type="button" aria-label={`${row.name}の前の50項目`} disabled={row.page===0} onClick={()=>changePage(row.pointer,row.page-1)}>前</button><button type="button" aria-label={`${row.name}の次の50項目`} disabled={(row.page+1)*50>=row.count} onClick={()=>changePage(row.pointer,row.page+1)}>次</button></>:<>
                 {['object','array'].includes(row.type)&&row.count>0?<button type="button" aria-label={`${row.name}を${row.expanded?'閉じる':'開く'}`} aria-expanded={row.expanded} onClick={()=>{
                   const expanded=new Set(current?.view.expanded??request.view.expanded);
                   if(row.expanded)expanded.delete(row.pointer);else expanded.add(row.pointer);
                   changeView({expanded:[...expanded],start:visible.view.start});
                 }}>{row.expanded?'−':'＋'}</button>:<span className="json-toggle-space" />}
-                {row.selectable?<label title={row.name}><input type="radio" name="json-target" value={row.pointer} checked={draft.pointer===row.pointer} onChange={()=>select(row.pointer)} /><span>{row.name}</span></label>:<span title={row.name}>{row.name}（参照のみ）</span>}
+                {(row.selectable||directChild)?<label title={row.name}>
+                  <input type="checkbox" name="json-target" value={row.pointer} checked={checked}
+                    ref={input=>{if(input)input.indeterminate=arrayParent&&selectedCount>0&&selectedCount<targetArraySize;}}
+                    onChange={event=>{
+                      if(directChild)toggleArrayChild(childIndex);
+                      else if(arrayParent){
+                        const includeAll=event.currentTarget.checked;
+                        setDraft(previous=>({...previous,arraySelection:includeAll?undefined:{all:false,exceptions:[]}}));
+                      }else if(target)setHasTarget(false);
+                      else select(row.pointer,row.type==='array'&&row.count>0);
+                    }} />
+                  <span>{row.name}</span>
+                </label>:<span title={row.name}>{row.name}（参照のみ）</span>}
                 <small>{row.type}</small>
               </>}
-            </div>)}
+            </div>;})}
             <div aria-hidden="true" style={{height:Math.max(0,visible.total-visible.view.start-visible.rows.length)*rowHeight}} />
           </>}
         </div>
       </section>
       <section className="json-target-detail" aria-label="選択対象の詳細">
         <h3>選択対象の詳細</h3>
-        {current?<>
+        {!hasTarget?<p>ツリーから変換対象を選択してください。</p>:current?<>
           <p>絶対 JSON Pointer（JSON文字列）</p><pre className="json-full-pointer">{JSON.stringify(current.pointer)}</pre>
           <p>対象名（JSON文字列）</p><pre className="json-full-name">{current.pointer===''?'"ファイル全体（ルート）"':JSON.stringify(current.pointer.slice(current.pointer.lastIndexOf('/')+1).replace(/~1/g,'/').replace(/~0/g,'~'))}</pre>
           <p>{current.pointer===''?'ファイル全体（ルート） / ':''}{current.type} / 直下 {current.childCount} 項目</p>
-          {!arrayPage&&<>
-            <p>選択した要素自身と、そのすべての子孫が変換対象です。</p>
-            <ul className="json-detail-children">{current.children.map(child=><li key={child.pointer}><span>{child.name}</span> / {child.type}</li>)}</ul>
-          </>}
+          <ul className="json-detail-children">{current.children.map(child=><li key={child.pointer}>
+            <span>{child.name}</span> / {child.type}{child.preview&&<> <code>{child.preview}</code></>}
+          </li>)}</ul>
+          <p>{current.childCount===0?0:current.view.detailPage*10+1}〜{Math.min((current.view.detailPage+1)*10,current.childCount)} / {current.childCount}項目</p>
+          <button type="button" disabled={current.view.detailPage===0} onClick={()=>changeView({detailPage:current.view.detailPage-1})}>詳細の前の10項目</button>
+          <button type="button" disabled={(current.view.detailPage+1)*10>=current.childCount} onClick={()=>changeView({detailPage:current.view.detailPage+1})}>詳細の次の10項目</button>
         </>:<p>詳細を確認中</p>}
-        {arrayPage&&<fieldset>
-          <legend>変換に含める配列の要素</legend>
-          <label>
-            <input type="checkbox" checked={selectedCount===arrayPage.childCount}
-              ref={input=>{if(input)input.indeterminate=selectedCount>0&&selectedCount<arrayPage.childCount;}}
-              onChange={event=>{
-                const checked=event.currentTarget.checked;
-                setDraft(previous=>({...previous,arraySelection:checked?undefined:{all:false,exceptions:[]}}));
-              }} />
-            配列の全要素（選択 {selectedCount} / {arrayPage.childCount} 件）
-          </label>
-          <ul className="json-detail-children">{arrayPage.children.map((child,offset)=>{
-            const index=arrayPage.view.detailPage*10+offset;
-            return <li key={child.pointer}><label>
-              <input type="checkbox" checked={allByDefault!==exceptions.has(index)} onChange={()=>toggleArrayChild(index)} />
-              [{index}] {child.type} <code>{child.preview}</code>
-            </label></li>;
-          })}</ul>
-        </fieldset>}
-        {detailPage&&<>
-          <p>{detailPage.childCount===0?0:detailPage.view.detailPage*10+1}〜{Math.min((detailPage.view.detailPage+1)*10,detailPage.childCount)} / {detailPage.childCount}項目</p>
-          <button type="button" disabled={detailPage.view.detailPage===0} onClick={()=>changeView({detailPage:detailPage.view.detailPage-1})}>詳細の前の10項目</button>
-          <button type="button" disabled={(detailPage.view.detailPage+1)*10>=detailPage.childCount} onClick={()=>changeView({detailPage:detailPage.view.detailPage+1})}>詳細の次の10項目</button>
-        </>}
-        <button type="button" aria-expanded={request.view.detailOpen} onClick={()=>changeView({detailOpen:!request.view.detailOpen})}>JSON詳細{request.view.detailOpen?'を閉じる':'を開く'}</button>
-        {current&&request.view.detailOpen&&<><pre className="json-detail-source">{current.detail}</pre>{current.truncated&&<p>先頭10,000文字の抜粋です。変換出力の省略ではありません。</p>}</>}
+        {hasTarget&&<button type="button" aria-expanded={request.view.detailOpen} onClick={()=>changeView({detailOpen:!request.view.detailOpen})}>JSON詳細{request.view.detailOpen?'を閉じる':'を開く'}</button>}
+        {hasTarget&&current&&request.view.detailOpen&&<><pre className="json-detail-source">{current.detail}</pre>{current.truncated&&<p>先頭10,000文字の抜粋です。変換出力の省略ではありません。</p>}</>}
       </section>
     </div>
     <fieldset><legend>JSON出力スタイル</legend>{(['items','records','mermaid'] as JsonStyle[]).map(style=>{
