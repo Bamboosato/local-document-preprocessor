@@ -142,7 +142,7 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
     expect(pakoOriginals.texts.some(text=>text.includes('Permission is hereby granted'))).toBe(true);
     expect(pakoOriginals.texts.some(text=>text.includes('This port is based on zlib 1.2.8.')&&text.includes('1995-2013 Jean-loup Gailly and Mark Adler')&&text.includes('2014-2017 Vitaly Puzrin and Andrey Tupitsin'))).toBe(true);
     await expect(popup.getByRole('heading', { name: 'WASM 依存候補の原文' })).toBeVisible();
-    await expect(popup.getByText('調査対象の候補であり、WASM に含まれることや依存一覧の網羅性を示すものではありません。')).toBeVisible();
+    await expect(popup.getByText('配信しているWASMに含まれるか未確認の依存候補です。',{exact:true})).toBeVisible();
     const encoding=popup.locator('li').filter({has:popup.getByText('encoding_rs 0.8.35',{exact:true})});
     const unicode=popup.locator('li').filter({has:popup.getByText('unicode-ident 1.0.24',{exact:true})});
     const zlib=popup.locator('li').filter({has:popup.getByText('zlib-rs 0.6.6',{exact:true})});
@@ -162,8 +162,7 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
     expect(candidateTexts[1].text).toContain('UNICODE LICENSE V3');
     expect(candidateTexts[2].status).toBe(200);
     expect(candidateTexts[2].text).toContain('2024 Trifecta Tech Foundation');
-    await expect(popup.getByRole('heading',{name:'PDFiumの原文候補と貢献表示案',exact:true})).toBeVisible();
-    await expect(popup.getByText('固定source/DEPSの提供準備資料です。公開WASM内の実リンク・条件充足は未確認です。',{exact:true})).toBeVisible();
+    await expect(popup.getByRole('heading',{name:'PDFiumの依存候補と貢献表示案',exact:true})).toBeVisible();
     await expect(popup.getByRole('link',{name:'条件付き貢献表示案',exact:true})).toBeVisible();
     const pdfiumNotices=await popup.evaluate(async()=>{
       const inventory=await(await fetch('./inventory.json')).json(),candidate=inventory.pdfiumNoticeCandidates;
@@ -201,7 +200,7 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
     expect(dataNotices[2]).toContain('Copyright (c) 1990-1994 Adobe Systems Incorporated');
     await expect(popup.getByRole('link',{name:'MMフォント内のAdobe著作権表示（許諾条件確認中）',exact:true})).toBeVisible();
     await expect(popup.getByRole('heading',{name:'MMフォント初出時の参考原文',exact:true})).toBeVisible();
-    await expect(popup.getByText('初出時の参考資料です。MMフォントの全許諾や文字輪郭の由来の確定を示すものではありません。',{exact:true})).toBeVisible();
+    await expect(popup.getByText('MMフォントが最初に収録された時点の原文です。',{exact:true})).toBeVisible();
     const origins=await popup.evaluate(async()=>{
       const inventory=await(await fetch('./inventory.json')).json(),texts=[];
       for(const item of inventory.mmFontOrigin.originals){
@@ -215,8 +214,9 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
     expect(origins[0]).toContain('Redistribution and use in source and binary forms');
     expect(origins[1]).toContain('Foxit Software Inc');
     expect(origins[1]).toContain('Google Inc.');
-    await expect(popup.getByRole('heading',{name:'配布準備用の候補原文・条件別の告知案',exact:true})).toBeVisible();
-    await expect(popup.getByText('固定ソース候補を保守的にまとめた資料です。完全な内包一覧や配布承認ではありません。',{exact:true})).toBeVisible();
+    await expect(popup.getByRole('heading',{name:'依存候補のライセンス原文と条件別の告知案',exact:true})).toBeVisible();
+    await expect(popup.getByRole('heading',{name:'未確認の点',exact:true})).toBeVisible();
+    await expect(popup.getByText('配信しているWASMについて、実際に含まれる依存の全体と各配布条件の充足は未確認です。',{exact:true})).toBeVisible();
     const conditionBundle=await popup.evaluate(async()=>{
       const inventory=await(await fetch('./inventory.json')).json(),bundle=inventory.conditionPreparation;
       const items=[...bundle.units.flatMap((u:{originals:{path:string;sha256:string}[]})=>u.originals),bundle.credits];
