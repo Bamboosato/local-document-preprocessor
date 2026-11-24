@@ -97,7 +97,7 @@ test('実 WASM で日本語と半角カタカナを端末内変換する', async
     timeout: 30_000,
   });
   await expect(page.locator('.result-handoff')).toContainText(
-    '結果は local-pii-masker へ手動で受け渡せます。',
+    '個人情報を伏せるには、結果をコピーして local-pii-masker に貼り付けてください。',
   );
   await expect(page.getByTestId('markdown-preview')).toContainText(expected);
 
@@ -485,17 +485,13 @@ test('初期表示で STEP 1 とドロップエリアをファーストビュー
     return Math.abs(titleRect.bottom - badgeRect.bottom) < 2;
   });
   expect(titleBadgeAlignment).toBe(true);
-  await expect(
-    page.getByText(
-      '文書を、端末の中だけでテキストへ。ブラウザ内で完結し、外部送信やサーバー保存は行いません。',
-    ),
-  ).toBeVisible();
+  await expect(page.getByText('文書をテキストに変換します。')).toBeVisible();
   await expect(page.getByRole('heading', { name: '文書を選択' })).toBeVisible();
   await expect(page.locator('.drop-zone')).toBeVisible();
   await expect(page.locator('.hero-description')).toHaveCSS('color', 'rgb(74, 85, 104)');
   await expect(page.locator('.boundary-info')).toHaveCSS('color', 'rgb(82, 82, 82)');
   await expect(page.locator('.drop-zone')).toHaveCSS('border-style', 'dashed');
-  await expect(page.getByText(/外部送信・永続保存なし/)).toBeVisible();
+  await expect(page.getByText(/文書は外部に送信しません/)).toBeVisible();
   await expect(
     page.getByRole('heading', { name: '変換後は必ず原本と照合してください' }),
   ).toHaveCount(0);
@@ -556,9 +552,9 @@ test('iPhone相当の狭幅でも補足情報と選択操作が横にはみ出�
   await expect(page.getByRole('heading', { name: 'Local Document Preprocessor' })).toBeVisible();
   await expect(page.locator('.hero-title-row .privacy-badge')).toBeVisible();
   await expect(page.getByRole('heading', { name: '文書を選択' })).toBeVisible();
-  await expect(page.getByText(/外部送信・永続保存なし/)).toBeVisible();
-  await expect(page.getByText(/OCR非対応/)).toBeVisible();
-  await expect(page.getByText(/local-pii-masker へ手動でコピー／ダウンロード/)).toBeVisible();
+  await expect(page.getByText(/文書は外部に送信しません/)).toBeVisible();
+  await expect(page.getByText('画像だけのPDFからは文字を読み取れません。')).toBeVisible();
+  await expect(page.locator('.boundary-info')).not.toContainText('local-pii-masker');
   await expect(
     page.getByRole('heading', { name: '変換後は必ず原本と照合してください' }),
   ).toHaveCount(0);
