@@ -1,4 +1,4 @@
-export type PwaPhase='online'|'preparing'|'ready'|'uncontrolled'|'waiting'|'error'|'degraded'|'mismatch';
+export type PwaPhase='online'|'preparing'|'updating'|'ready'|'uncontrolled'|'waiting'|'error'|'degraded'|'mismatch';
 export interface PwaState {phase:PwaPhase;canConvert:boolean}
 let state:PwaState={phase:'online',canConvert:typeof navigator==='undefined'||!('serviceWorker'in navigator)||!navigator.serviceWorker.controller};
 const listeners=new Set<()=>void>();
@@ -20,7 +20,7 @@ async function check(){
   try{
     const reply=await ask(active);if(token!==revision||registration!==reg||reg.active!==active)return;
     const matches=reply.generation===pageGeneration();
-    emit({phase:reg.waiting?'waiting':!matches?'mismatch':reg.installing?'preparing':updateFailed?'error':!reply.complete?'degraded':navigator.serviceWorker.controller?'ready':'uncontrolled',canConvert:matches});
+    emit({phase:reg.waiting?'waiting':!matches?'mismatch':reg.installing?'updating':updateFailed?'error':!reply.complete?'degraded':navigator.serviceWorker.controller?'ready':'uncontrolled',canConvert:matches});
   }catch{if(token===revision)emit({phase:reg.waiting?'waiting':'error',canConvert:!navigator.serviceWorker.controller});}
 }
 export async function retryPwa(){
@@ -41,7 +41,7 @@ export async function startPwa(){
   };
   try{
     registration=await navigator.serviceWorker.register('/sw.js',{updateViaCache:'none'});
-    const reg=registration;watch(reg);reg.addEventListener('updatefound',()=>{watch(reg);});
+    const reg=registration;watch(reg);reg.addEventListener('updatefound',()=>{watch(reg);void check();});
     navigator.serviceWorker.addEventListener('controllerchange',()=>void check());
     navigator.serviceWorker.addEventListener('message',event=>{if(state.phase!=='waiting'&&event.source===navigator.serviceWorker.controller&&event.data?.type==='LDP_CACHE_DEGRADED')emit({...state,phase:'degraded'});});
     await check();

@@ -22,6 +22,14 @@ import {
 import { conversionErrorMessage } from './converter/errors';
 import { processSequentially } from './conversion/processQueue';
 import { formatBytes } from './utils/files';
+import type { PwaPhase } from './pwa/client';
+
+const pwaBadgeLabels: Partial<Record<PwaPhase, string>> = {
+  preparing: 'オフライン準備中',
+  updating: '更新を準備中',
+  waiting: '更新できます',
+  ready: 'オフライン可',
+};
 
 type ItemStatus =
   | 'inspecting'
@@ -86,8 +94,10 @@ function defaultOptions(inspection: DocumentInspection): ConversionOptions {
 
 export default function App() {
   const pwa=usePwaState();
-  const isPreparingOffline = pwa.phase === 'preparing';
-  const offlineBadgeText = pwa.phase === 'ready' ? 'オフライン可' : 'オフライン未確認';
+  const updateReady = pwa.phase === 'waiting';
+  const updatePreparing = pwa.phase === 'updating';
+  const showPwaSpinner = pwa.phase === 'preparing' || updatePreparing;
+  const offlineBadgeText = pwaBadgeLabels[pwa.phase] ?? 'オフライン未確認';
   const [items, setItems] = useState<QueueItem[]>([]);
   const [isConverting, setIsConverting] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
@@ -359,15 +369,18 @@ export default function App() {
                 </svg>
                 端末内で処理
               </div>
-              <span className="offline-badge">
-                {isPreparingOffline && <span className="offline-badge-spinner" aria-hidden="true" />}
-                {isPreparingOffline ? 'オフライン準備中' : offlineBadgeText}
+              <span className={`offline-badge${updatePreparing || updateReady ? ' offline-badge--update' : ''}`}>
+                {showPwaSpinner && <span className="offline-badge-spinner" aria-hidden="true" />}
+                {offlineBadgeText}
               </span>
             </div>
           </div>
-          <p className="hero-description">
-            文書をテキストに変換します。
-          </p>
+          <div className="hero-description">
+            <p>文書をテキストに変換します。</p>
+            <p className="hero-update-notice" role="status">
+              <span className={updateReady ? undefined : 'hero-update-hidden'}>変換結果があれば保存し、アプリを開きなおしてください。</span>
+            </p>
+          </div>
         </div>
       </header>
 
