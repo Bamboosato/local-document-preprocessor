@@ -98,5 +98,50 @@ const pdfiumLinks=pdfiumNoticeCandidates.groups.map(group=>`<li><strong>${escape
 const conditionLinks=conditionPreparation.units.map(unit=>`<details><summary>${escapeHtml(unit.id)}</summary><p>原文の条件式: ${escapeHtml(unit.declaredExpression??'原文参照')}</p><p>準備条件: ${escapeHtml(unit.preparationChoice)}</p><ul>${unit.requirements.map(r=>`<li>${escapeHtml(r)}</li>`).join('')}</ul><ul>${unit.originals.map(f=>`<li><a href="${f.path.split('/').map(encodeURIComponent).join('/')}">${escapeHtml(f.label)}</a></li>`).join('')}</ul></details>`).join('');
 const mmOriginLinks=mmFontOrigin.originals.map(f=>`<li><a href="${f.path}">${escapeHtml(f.label)}</a></li>`).join('');
 const dataLinks=confirmedWasmData.originals.map(f=>`<li><a href="${f.path}">${escapeHtml(f.label)}</a></li>`).join('');
-await writeFile(new URL('index.html',outputDirectory),`<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>第三者ライセンス</title></head><body><h1>第三者ライセンス</h1><p>本番npm依存から収集した原文です。WASMの内包物一覧を保証するものではありません。</p><p>pakoはMITとZlibの両条件を適用し、移植元・権利表示・変更説明も提供しています。</p><p><a href="inventory.json">機械可読の一覧</a></p><ul>${links}</ul><p>pdf-libのroot MIT原文とは別に、内部の移植・借用・権利表示とApache-2.0原文を保持しています。pdfkitの固定参照原文を提供し、base64とPDF.jsは参考候補として区別しています。実借用版や適用範囲の確認は継続中です。</p><p>本アプリの生成JSは結合・最適化・圧縮した版で、上流原本ではありません。Tinyの公開JSは無改変で保持しています。</p><h2>Tinyに含まれる第三者の原文・権利表示</h2><p><a href="mermaid-tiny/index.html">Tiny ${escapeHtml(embeddedTiny.version)} 内包物のライセンス・由来・変更</a></p><h2>WASM内のデータと権利表示</h2><p>データ一致を確認した範囲の表示資料です。その他の依存や配布条件の確認は継続中です。</p><ul>${dataLinks}</ul><p>PDFiumのフォント原文に示されたBSD系条件は<a href="PDFium-LICENSE.txt">PDFiumの原文</a>を参照してください。フォント内のAdobe表示を含め、許諾範囲の最終確認は継続中です。</p><h2>MMフォント初出時の参考原文</h2><p>初出時の参考資料です。MMフォントの全許諾や文字輪郭の由来の確定を示すものではありません。</p><ul>${mmOriginLinks}</ul><h2>WASM 依存候補の原文</h2><p>調査対象の候補であり、WASM に含まれることや依存一覧の網羅性を示すものではありません。</p><ul>${candidateLinks}</ul><h2>PDFiumの原文候補と貢献表示案</h2><p>固定source/DEPSの提供準備資料です。公開WASM内の実リンク・条件充足は未確認です。</p><ul>${pdfiumLinks}</ul><p><a href="${escapeHtml(pdfiumNoticeCandidates.credits.path)}">条件付き貢献表示案</a></p><h2>配布準備用の候補原文・条件別の告知案</h2><p>固定ソース候補を保守的にまとめた資料です。完全な内包一覧や配布承認ではありません。</p><p><a href="${conditionPreparation.credits.path}">配布準備用の貢献表示案</a></p>${conditionLinks}</body></html>\n`);
+await writeFile(new URL('index.html',outputDirectory),`<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>第三者ライセンス</title>
+</head>
+<body>
+  <h1>第三者ライセンス</h1>
+  <p>このアプリで使用する第三者のソフトウェアやデータのライセンス原文、著作権表示、出典を掲載しています。</p>
+  <h2>公開しているライセンス原文と権利表示</h2>
+  <h3>アプリが使用するパッケージ</h3>
+  <p>pakoはMITとZlibの両条件を適用し、移植元・権利表示・変更説明も提供しています。</p>
+  <p>pdf-libはMIT原文に加え、移植・借用箇所の権利表示とApache-2.0原文を掲載しています。base64とPDF.jsの原文には参考資料であることを示しています。</p>
+  <p>アプリ配信時のJavaScriptは結合・最適化・圧縮しています。Tinyの公開JavaScriptは無改変で掲載しています。</p>
+  <p><a href="inventory.json">機械可読の一覧</a></p>
+  <ul>${links}</ul>
+  <h3>Tinyに含まれる第三者の原文・権利表示</h3>
+  <p><a href="mermaid-tiny/index.html">Tiny ${escapeHtml(embeddedTiny.version)} 内包物のライセンス・由来・変更</a></p>
+  <h3>WASM内のデータと権利表示</h3>
+  <p>配信ファイルとのデータの一致を確認できた範囲の権利表示です。PDFiumのフォント原文に記載されたBSD系条件は<a href="PDFium-LICENSE.txt">PDFiumの原文</a>で確認できます。</p>
+  <ul>${dataLinks}</ul>
+  <h2>参考資料</h2>
+  <p>配信ファイルへの収録や適用条件を確認するために参照した原文と、条件ごとの表示案を掲載しています。</p>
+  <h3>MMフォント初出時の参考原文</h3>
+  <p>MMフォントが最初に収録された時点の原文です。</p>
+  <ul>${mmOriginLinks}</ul>
+  <h3>WASM 依存候補の原文</h3>
+  <p>配信しているWASMに含まれるか未確認の依存候補です。</p>
+  <ul>${candidateLinks}</ul>
+  <h3>PDFiumの依存候補と貢献表示案</h3>
+  <p>対象版のソースコードと依存関係の定義をもとに収集した原文と、条件ごとの表示案です。</p>
+  <ul>${pdfiumLinks}</ul>
+  <p><a href="${escapeHtml(pdfiumNoticeCandidates.credits.path)}">条件付き貢献表示案</a></p>
+  <h3>依存候補のライセンス原文と条件別の告知案</h3>
+  <p><a href="${conditionPreparation.credits.path}">依存候補の貢献表示案</a></p>
+  ${conditionLinks}
+  <h2>未確認の点</h2>
+  <ul>
+    <li>pdf-libのbase64とPDF.jsについて、実際に借用された版や適用範囲は未確定です。</li>
+    <li>配信しているWASMについて、実際に含まれる依存の全体と各配布条件の充足は未確認です。</li>
+    <li>PDFiumのMMフォントについて、初出以前の文字の輪郭の由来、Adobeの著作権表示に関係する許諾範囲、元コードの表示・変更に関する条件は未確定です。</li>
+  </ul>
+</body>
+</html>
+`);
 console.log(`Collected ${packages.length} root production package originals`);

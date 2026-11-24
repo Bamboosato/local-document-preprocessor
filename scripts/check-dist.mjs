@@ -144,7 +144,7 @@ for(const name of assets.filter(name=>name.endsWith('.js')))assert.ok(!/elkjs|or
 const lock=JSON.parse(await readFile(new URL('../package-lock.json',import.meta.url),'utf8'));
 const candidateEvidence=JSON.parse(await readFile(new URL('../docs/evidence/json-anydoc-target-licenses.json',import.meta.url),'utf8'));
 assert.deepEqual(inventory.wasmCandidates.map(({name,version})=>`${name}@${version}`),['encoding_rs@0.8.35','unicode-ident@1.0.24','zlib-rs@0.6.6']);
-assert.ok(licensePage.includes('WASM 依存候補の原文')&&licensePage.includes('WASM に含まれることや依存一覧の網羅性を示すものではありません'));
+assert.ok(licensePage.includes('WASM 依存候補の原文')&&licensePage.includes('配信しているWASMに含まれるか未確認の依存候補です。'));
 for(const candidate of inventory.wasmCandidates){
   const source=candidateEvidence.packages.find(pkg=>pkg.name===candidate.name&&pkg.version===candidate.version);
   assert.ok(source);
