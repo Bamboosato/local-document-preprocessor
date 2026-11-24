@@ -99,7 +99,7 @@ it('SR-16 the existing 30-second Worker deadline rejects and recovers without le
   vi.useFakeTimers();const workers:FakeWorker[]=[],c=new JsonWorkerClient(()=>{const w=new FakeWorker();workers.push(w);return w as unknown as Worker;});
   try{
     const timed=c.inspect(file()).catch(e=>e.code);await vi.advanceTimersByTimeAsync(0);expect(workers[0].sent).toHaveLength(1);
-    await vi.advanceTimersByTimeAsync(30001);expect(await timed).toBe('resourceLimit');expect(workers[0].terminated).toBe(true);
+    await vi.advanceTimersByTimeAsync(30001);expect(await timed).toBe('jsonInspectionFailed');expect(workers[0].terminated).toBe(true);
     const next=c.inspect(file());await vi.advanceTimersByTimeAsync(0);workers[1].reply(inspection);await next;
   }finally{c.dispose();vi.useRealTimers();}
 });
