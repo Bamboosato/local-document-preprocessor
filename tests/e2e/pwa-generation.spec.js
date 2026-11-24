@@ -65,7 +65,7 @@ test.afterAll(async()=>{
 test.beforeEach(()=>{current='A';blocked='';blockedHits=0;legacy=false;});
 async function controlled(page){
   await page.goto(base);await expect.poll(()=>page.evaluate(async()=>!!(await navigator.serviceWorker.getRegistration())?.active),{timeout:30000}).toBe(true);
-  await page.reload();await expect(page.getByText('この世代のオフライン資産は準備済みです。',{exact:true})).toBeVisible({timeout:30000});
+  await page.reload();await expect(page.getByText('ネットなしで使えます。',{exact:true})).toBeVisible({timeout:30000});
 }
 const json=(name,text)=>({name,mimeType:'application/json',buffer:Buffer.from(text)});
 async function convert(page,name,value,style='items'){
@@ -114,7 +114,7 @@ test('PG-02 failed B install preserves A and explicit update retry can prepare B
   try{
     await controlled(page);await convert(page,'safe.json','KEPT_ON_FAILURE');expect(await page.evaluate(()=>caches.keys())).toEqual(['ldp-static-'+builds.A.manifest.id]);current='B';blocked=new URL(builds.B.manifest.assets.find(asset=>asset.url.includes('json.worker-')).url,base).pathname;
     await page.evaluate(async()=>{await(await navigator.serviceWorker.getRegistration()).update();});
-    await expect(page.getByRole('button',{name:'オフライン資産を再取得',exact:true})).toBeVisible({timeout:30000});await expect(page.locator('.result-card')).toContainText('KEPT_ON_FAILURE');
+    await expect(page.getByRole('button',{name:'もう一度試す',exact:true})).toBeVisible({timeout:30000});await expect(page.locator('.result-card')).toContainText('KEPT_ON_FAILURE');
     await expect.poll(()=>blockedHits).toBeGreaterThan(0);
     await page.waitForFunction(async()=>{const r=await navigator.serviceWorker.getRegistration();return !r.installing&&!r.waiting;});
     const state=await page.evaluate(async({a,b})=>{
@@ -124,7 +124,7 @@ test('PG-02 failed B install preserves A and explicit update retry can prepare B
       return {oldReady:old?await old.text():null,candidateReady:candidate?await candidate.text():null,active};
     },{a:builds.A.manifest.id,b:builds.B.manifest.id});
     expect(state.oldReady).toBe(builds.A.manifest.id);expect(state.candidateReady).toBeNull();expect(state.active.generation).toBe(builds.A.manifest.id);expect(state.active.complete).toBe(true);
-    blocked='';await page.getByRole('button',{name:'オフライン資産を再取得',exact:true}).click();await expect(page.getByText(/更新の準備ができました/)).toBeVisible({timeout:30000});
+    blocked='';await page.getByRole('button',{name:'もう一度試す',exact:true}).click();await expect(page.getByText(/更新の準備ができました/)).toBeVisible({timeout:30000});
     await expect(page.locator('.result-card')).toContainText('KEPT_ON_FAILURE');
   }finally{await context.close();}
 });
@@ -134,8 +134,8 @@ test('PG-03 evicted lazy JSON worker fails offline without false output; online 
     await controlled(page);const asset=builds.A.manifest.assets.find(asset=>asset.url.includes('json.worker-')).url;
     await page.evaluate(async({name,asset})=>{await(await caches.open(name)).delete(asset);},{name:'ldp-static-'+builds.A.manifest.id,asset});
     await context.setOffline(true);await page.locator('input[type=file]').setInputFiles(json('missing.json','{"value":"RECOVERED"}'));
-    await expect(page.getByText(/オフライン資産の一部を利用できません/)).toBeVisible();await expect(page.locator('.result-card')).toHaveCount(0);
-    await context.setOffline(false);await page.getByRole('button',{name:'オフライン資産を再取得',exact:true}).click();await expect(page.getByText('この世代のオフライン資産は準備済みです。',{exact:true})).toBeVisible({timeout:30000});
+    await expect(page.getByText(/ネットなしでは一部の機能を使えません/)).toBeVisible();await expect(page.locator('.result-card')).toHaveCount(0);
+    await context.setOffline(false);await page.getByRole('button',{name:'もう一度試す',exact:true}).click();await expect(page.getByText('ネットなしで使えます。',{exact:true})).toBeVisible({timeout:30000});
     await convert(page,'retry.json','RECOVERED');
   }finally{await context.close();}
 });
