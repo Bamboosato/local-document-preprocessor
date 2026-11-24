@@ -340,7 +340,7 @@ export default function App() {
         <div className="hero-copy">
           <div className="hero-title-row">
             <h1>Local Document Preprocessor</h1>
-            <div className="privacy-badge" aria-label="ローカル処理・保存なし">
+            <div className="privacy-badge" aria-label="端末内で処理">
               <svg
                 className="privacy-badge-icon"
                 aria-hidden="true"
@@ -354,11 +354,11 @@ export default function App() {
                 <path d="M12 3 19 6v5c0 4.6-3 8.3-7 10-4-1.7-7-5.4-7-10V6l7-3Z" />
                 <path d="m9.5 12 1.6 1.6 3.5-3.5" />
               </svg>
-              ローカル処理・保存なし
+              端末内で処理
             </div>
           </div>
           <p className="hero-description">
-            文書を、端末の中だけでテキストへ。ブラウザ内で完結し、外部送信やサーバー保存は行いません。
+            文書をテキストに変換します。
           </p>
         </div>
       </header>
@@ -401,22 +401,18 @@ export default function App() {
               }}
             />
             <span className="drop-icon" aria-hidden="true">↓</span>
-            <strong>ファイルをここにドロップ</strong>
-            <span>またはクリックして選択</span>
+            <strong>ファイルを選択</strong>
+            <span>ここにドロップすることもできます</span>
             <small>Word / PowerPoint / Excel / OpenDocument / RTF / EPUB / CSV / PDF / JSON</small>
           </label>
           <ul className="boundary-info" aria-label="利用上の注意">
             <li>
               <span className="boundary-info-icon" aria-hidden="true">🔒</span>
-              <span>外部送信・永続保存なし（タブを閉じると結果は失われます）</span>
+              <span>文書は外部に送信しません。結果はタブを閉じる前に保存してください。</span>
             </li>
             <li>
               <span className="boundary-info-icon" aria-hidden="true">🚫</span>
-              <span>OCR非対応（画像のみ／スキャンPDFは不可）</span>
-            </li>
-            <li>
-              <span className="boundary-info-icon" aria-hidden="true">↗</span>
-              <span>PII処理は local-pii-masker へ手動でコピー／ダウンロード</span>
+              <span>画像だけのPDFからは文字を読み取れません。</span>
             </li>
           </ul>
           <p className="selection-notice" role="alert">{selectionNotice}</p>
@@ -520,7 +516,7 @@ export default function App() {
                   disabled={queuedCount === 0 || isConverting || isInspecting || Boolean(dialogItemId)||!pwa.canConvert}
                   onClick={startConversion}
                 >
-                  {isConverting ? '逐次変換中…' : `${queuedCount} ファイルを変換`}
+                  {isConverting ? '変換中…' : `${queuedCount} ファイルを変換`}
                 </button>
                 {isConverting && (
                   <button type="button" className="danger-button" onClick={cancelConversion}>
@@ -533,7 +529,7 @@ export default function App() {
               </div>
               {isConverting && (
                 <p className="worker-note" role="status">
-                  1 ファイルずつ処理しています。キャンセルすると実行中 Worker を破棄します。
+                  1ファイルずつ変換しています。
                 </p>
               )}
             </div>
@@ -549,7 +545,7 @@ export default function App() {
               </div>
               <p className="result-handoff">
                 <span aria-hidden="true">↗</span>
-                結果は local-pii-masker へ手動で受け渡せます。
+                個人情報を伏せるには、結果をコピーして local-pii-masker に貼り付けてください。
               </p>
             </div>
             <div className="result-list">

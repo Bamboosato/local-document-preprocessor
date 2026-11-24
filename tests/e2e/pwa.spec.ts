@@ -75,7 +75,8 @@ test('PWA manifestとService Workerは静的アセットだけを扱う', async 
   ).toBe(true);
 
   await page.reload();
-  await expect(page.getByText('ネットなしで使えます。', { exact: true })).toBeVisible();
+  await expect.poll(() => page.evaluate(() => Boolean(navigator.serviceWorker.controller))).toBe(true);
+  await expect(page.locator('.pwa-status')).toHaveCount(0);
   await page.context().setOffline(true);
   try {
     const popupPromise=page.waitForEvent('popup');

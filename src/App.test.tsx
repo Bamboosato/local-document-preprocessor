@@ -7,22 +7,17 @@ describe('App initial workspace', () => {
     render(<App />);
 
     const title = screen.getByRole('heading', { name: 'Local Document Preprocessor' });
-    const privacyBadge = screen.getByLabelText('ローカル処理・保存なし');
+    const privacyBadge = screen.getByLabelText('端末内で処理');
     expect(title).toBeInTheDocument();
     expect(title.parentElement).toHaveClass('hero-title-row');
     expect(title.parentElement).toContainElement(privacyBadge);
-    expect(
-      screen.getByText(
-        '文書を、端末の中だけでテキストへ。ブラウザ内で完結し、外部送信やサーバー保存は行いません。',
-      ),
-    ).toBeInTheDocument();
-    expect(screen.getByText('ローカル処理・保存なし')).toBeInTheDocument();
+    expect(screen.getByText('文書をテキストに変換します。')).toBeInTheDocument();
     expect(screen.queryByText('LOCAL DOCUMENT PREPROCESSOR')).not.toBeInTheDocument();
     expect(screen.getByRole('heading', { name: '文書を選択' })).toBeInTheDocument();
-    expect(screen.getByText('ファイルをここにドロップ')).toBeInTheDocument();
-    expect(screen.getByText(/外部送信・永続保存なし/)).toBeInTheDocument();
-    expect(screen.getByText(/OCR非対応/)).toBeInTheDocument();
-    expect(screen.getByText(/local-pii-masker へ手動でコピー／ダウンロード/)).toBeInTheDocument();
+    expect(screen.getByText('ファイルを選択')).toBeInTheDocument();
+    expect(screen.getByText('文書は外部に送信しません。結果はタブを閉じる前に保存してください。')).toBeInTheDocument();
+    expect(screen.getByText('画像だけのPDFからは文字を読み取れません。')).toBeInTheDocument();
+    expect(screen.queryByText(/local-pii-masker/)).not.toBeInTheDocument();
 
     expect(screen.queryByText('送信・保存なし')).not.toBeInTheDocument();
     expect(screen.queryByText('OCR 非対応')).not.toBeInTheDocument();

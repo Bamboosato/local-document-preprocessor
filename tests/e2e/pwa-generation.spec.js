@@ -65,7 +65,9 @@ test.afterAll(async()=>{
 test.beforeEach(()=>{current='A';blocked='';blockedHits=0;legacy=false;});
 async function controlled(page){
   await page.goto(base);await expect.poll(()=>page.evaluate(async()=>!!(await navigator.serviceWorker.getRegistration())?.active),{timeout:30000}).toBe(true);
-  await page.reload();await expect(page.getByText('ネットなしで使えます。',{exact:true})).toBeVisible({timeout:30000});
+  await page.reload();
+  await expect.poll(()=>page.evaluate(()=>Boolean(navigator.serviceWorker.controller)),{timeout:30000}).toBe(true);
+  await expect(page.locator('.pwa-status')).toHaveCount(0,{timeout:30000});
 }
 const json=(name,text)=>({name,mimeType:'application/json',buffer:Buffer.from(text)});
 async function convert(page,name,value,style='items'){
@@ -135,7 +137,9 @@ test('PG-03 evicted lazy JSON worker fails offline without false output; online 
     await page.evaluate(async({name,asset})=>{await(await caches.open(name)).delete(asset);},{name:'ldp-static-'+builds.A.manifest.id,asset});
     await context.setOffline(true);await page.locator('input[type=file]').setInputFiles(json('missing.json','{"value":"RECOVERED"}'));
     await expect(page.getByText(/ネットなしでは一部の機能を使えません/)).toBeVisible();await expect(page.locator('.result-card')).toHaveCount(0);
-    await context.setOffline(false);await page.getByRole('button',{name:'もう一度試す',exact:true}).click();await expect(page.getByText('ネットなしで使えます。',{exact:true})).toBeVisible({timeout:30000});
+    await context.setOffline(false);await page.getByRole('button',{name:'もう一度試す',exact:true}).click();
+    await expect(page.locator('.pwa-status')).toHaveCount(0,{timeout:30000});
+    await context.setOffline(true);
     await convert(page,'retry.json','RECOVERED');
   }finally{await context.close();}
 });
