@@ -27,7 +27,11 @@ export const SUPPORTED_EXTENSIONS = [
 ] as const;
 
 export type ConversionErrorCode =
-  | 'jsonInvalid'
+  | 'jsonEncoding'
+  | 'jsonSyntax'
+  | 'jsonDuplicateKey'
+  | 'jsonUnicode'
+  | 'jsonInspectionFailed'
   | 'unsupported'
   | 'malformed'
   | 'encrypted'

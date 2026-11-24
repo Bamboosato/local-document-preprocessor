@@ -1,8 +1,15 @@
-import {ParseCache} from './core.mjs';
+import {GateError, ParseCache} from './core.mjs';
+import type {ConversionErrorCode} from '../converter/contracts';
 import {browseJson,convertJson} from './pipeline';
 import type {JsonRequest} from './contracts';
 import {targetPage,suitability} from './targetUi';
 import {loadTiny} from './tinyLoader.mjs';
+const inputErrors: ReadonlyMap<string, ConversionErrorCode> = new Map([
+  ['encoding', 'jsonEncoding'],
+  ['syntax', 'jsonSyntax'],
+  ['duplicate', 'jsonDuplicateKey'],
+  ['unicode', 'jsonUnicode'],
+]);
 const cache=new ParseCache();
 let cachedGeneration:number|undefined;
 const scope=self as unknown as {onmessage:((event:MessageEvent<JsonRequest>)=>void)|null;postMessage:(value:unknown)=>void};
@@ -28,8 +35,14 @@ export const handleJsonRequest=async({data:request}:{data:JsonRequest})=>{
     else throw new Error('operation');
     scope.postMessage({id:request.id,operation:request.operation,fileId:request.fileId,parseGeneration:request.parseGeneration,settings:request.settings,payload});
   }catch(error){
-    const code=(error as {code?:string})?.code??'syntax';
+    const code=(error as {code?:string})?.code??'';
+    const inputError=error instanceof GateError ? inputErrors.get(code) : undefined;
     const limit=['bytes','nodes','depth','rows','columns','markdown','diagramNodes','label','code'].includes(code);
-    scope.postMessage({id:request.id,operation:request.operation,fileId:request.fileId,parseGeneration:request.parseGeneration,settings:request.settings,error:code==='initialization'?'initializationFailed':['verification','cache'].includes(code)?'conversionFailed':limit?'resourceLimit':['pointer','selection','style'].includes(code)?'invalidSelection':'jsonInvalid'});
+    let errorCode: ConversionErrorCode = 'conversionFailed';
+    if (inputError) errorCode = inputError;
+    else if (limit) errorCode = 'resourceLimit';
+    else if (code === 'initialization') errorCode = 'initializationFailed';
+    else if (['pointer','selection','style'].includes(code)) errorCode = 'invalidSelection';
+    scope.postMessage({id:request.id,operation:request.operation,fileId:request.fileId,parseGeneration:request.parseGeneration,settings:request.settings,error:errorCode});
   }
 };

@@ -4,7 +4,11 @@ import type {
 } from './contracts';
 
 const KNOWN_CODES = new Set<ConversionErrorCode>([
-  'jsonInvalid',
+  'jsonEncoding',
+  'jsonSyntax',
+  'jsonDuplicateKey',
+  'jsonUnicode',
+  'jsonInspectionFailed',
   'unsupported',
   'malformed',
   'encrypted',
@@ -29,8 +33,16 @@ export function serializeConversionError(error: unknown): SerializedConversionEr
 
 export function conversionErrorMessage(code: ConversionErrorCode): string {
   switch (code) {
-    case 'jsonInvalid':
-      return 'JSONを検査できませんでした。UTF-8、構文、重複キー、文字列のUnicodeを確認してください。';
+    case 'jsonEncoding':
+      return 'JSONファイルの文字コードがUTF-8ではないか、UTF-8として不正なバイトがあります。';
+    case 'jsonSyntax':
+      return 'JSONの構文に誤りがあります。';
+    case 'jsonDuplicateKey':
+      return '同じオブジェクト内に重複したキーがあります。';
+    case 'jsonUnicode':
+      return 'JSONの文字列に不正なUnicodeエスケープがあります。';
+    case 'jsonInspectionFailed':
+      return 'JSONを検査できませんでした。ファイルを選び直して再度お試しください。';
     case 'encrypted':
       return 'パスワード付き・暗号化文書は変換できません。パスワードを解除した複製を選択してください。';
     case 'unsupported':

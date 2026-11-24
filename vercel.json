@@ -3,6 +3,7 @@
   "git": {
     "deploymentEnabled": {
       "main": false,
+      "codex/json-inspection-and-pagination": false,
       "codex/production-release-record": false,
       "codex/e01-separate-release-decision": false,
       "codex/json-scope-completion": false,

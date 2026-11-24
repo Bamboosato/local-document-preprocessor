@@ -35,10 +35,28 @@ test('JC-04 mixed JSON CSV JSON and malformed file continue sequentially without
   await page.goto('/');await page.locator('input[type=file]').setInputFiles([json('A.json','{"case":"CASE_A"}'),{name:'B.csv',mimeType:'text/csv',buffer:Buffer.from('name,value\nCASE_B,2\n')},json('bad.json','{"duplicate":1,"duplicate":2}'),json('C.json','{"case":"CASE_C"}')]);
   await expect(page.getByText('構造確認中',{exact:true})).toHaveCount(0,{timeout:30000});await page.getByRole('button',{name:'3 ファイルを変換',exact:true}).click();await expect(page.locator('.result-card')).toHaveCount(3,{timeout:30000});
   for(const [name,marker]of [['A.json','CASE_A'],['B.csv','CASE_B'],['C.json','CASE_C']]){const card=page.locator('.result-card').filter({has:page.getByRole('heading',{name,exact:true})});await expect(card).toContainText(marker);for(const other of ['CASE_A','CASE_B','CASE_C'].filter(v=>v!==marker))await expect(card).not.toContainText(other);}
-  await expect(page.getByText('JSONを検査できませんでした。UTF-8、構文、重複キー、文字列のUnicodeを確認してください。')).toBeVisible();
+  await expect(page.getByText('同じオブジェクト内に重複したキーがあります。')).toBeVisible();
   await page.locator('.file-list > li').filter({hasText:'A.json'}).getByRole('button',{name:'変更',exact:true}).click();await confirm(page,'mermaid');await expect(page.locator('.result-card')).toHaveCount(2);
   await page.getByRole('button',{name:'1 ファイルを変換',exact:true}).click();await expect(page.locator('.result-card')).toHaveCount(3);await expect(page.locator('.json-svg svg')).toBeVisible();
   await expect(page.locator('.result-card').filter({has:page.getByRole('heading',{name:'B.csv',exact:true})})).toContainText('CASE_B');await expect(page.locator('.result-card').filter({has:page.getByRole('heading',{name:'C.json',exact:true})})).toContainText('CASE_C');
+});
+
+test('JSON inspection distinguishes invalid UTF-8, syntax and Unicode', async ({page}) => {
+  await page.goto('/');
+  await page.locator('input[type=file]').setInputFiles([
+    {name:'encoding.json',mimeType:'application/json',buffer:Buffer.from([0xff])},
+    json('syntax.json', '{"value":1,}'),
+    json('unicode.json', '{"value":"\\uD800"}'),
+  ]);
+  for (const [name, message] of [
+    ['encoding.json', 'JSONファイルの文字コードがUTF-8ではないか、UTF-8として不正なバイトがあります。'],
+    ['syntax.json', 'JSONの構文に誤りがあります。'],
+    ['unicode.json', 'JSONの文字列に不正なUnicodeエスケープがあります。'],
+  ]) {
+    const row = page.locator('.file-list > li').filter({hasText:name});
+    await expect(row.getByText(message, {exact:true})).toBeVisible();
+  }
+  await expect(page.locator('.result-card')).toHaveCount(0);
 });
 
 test('JC-03 JSON real generated source above display limit still exports verified text',async({page})=>{

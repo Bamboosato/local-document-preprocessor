@@ -855,6 +855,18 @@ h1 {
   margin-bottom: 0;
 }
 
+.json-table-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-block: 0.75rem 0.5rem;
+}
+
+.json-table-pagination p {
+  flex-basis: 100%;
+  margin: 0;
+}
+
 .markdown-table-scroll {
   max-width: 100%;
   overflow-x: auto;

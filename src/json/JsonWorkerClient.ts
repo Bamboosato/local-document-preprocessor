@@ -56,7 +56,18 @@ export class JsonWorkerClient {
         if(this.residentFileId&&this.residentFileId!==fileId){
           active=true;await this.exchange(this.ensure(),'release',this.residentFileId,defaultJsonSettings,0);active=false;check();
         }
-        if(this.residentFileId!==fileId){this.residentFileId=undefined;buffer=await this.readBytes(file,readController.signal);check();this.parseGeneration++;}
+        if(this.residentFileId!==fileId){
+          this.residentFileId=undefined;
+          try {
+            buffer=await this.readBytes(file,readController.signal);
+          } catch (error) {
+            if (operation === 'inspect' && error instanceof WorkerConversionError) {
+              throw new WorkerConversionError('jsonInspectionFailed');
+            }
+            throw error;
+          }
+          check();this.parseGeneration++;
+        }
         active=true;
         return this.exchange(this.ensure(),operation,fileId,snapshot,offset,buffer,extra,file.name);
       });
@@ -67,7 +78,7 @@ export class JsonWorkerClient {
   private exchange(worker:Worker,operation:JsonOperation,fileId:string,settings:JsonSettings,offset:number,buffer?:ArrayBuffer,extra?:{view:JsonView;reveal:boolean},fileName=''){
     const id=crypto.randomUUID(),parseGeneration=this.parseGeneration;
     return new Promise<unknown>((resolve,reject)=>{
-      const timer=setTimeout(()=>this.cancel(new WorkerConversionError('resourceLimit')),30000);
+      const timer=setTimeout(()=>this.cancel(new WorkerConversionError(operation==='inspect'?'jsonInspectionFailed':'resourceLimit')),30000);
       this.pending.set(id,{operation,fileId,parseGeneration,settings,resolve,reject,cleanup:()=>clearTimeout(timer)});
       try{worker.postMessage({id,operation,fileId,fileName,parseGeneration,buffer,settings,offset,...extra},buffer?[buffer]:[]);}catch{this.cancel(new WorkerConversionError('initializationFailed'));}
     });

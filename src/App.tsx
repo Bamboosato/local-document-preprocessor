@@ -204,8 +204,11 @@ export default function App() {
           if (inspectable.length === 1) setDialogItemId(item.id);
         } catch (error) {
           if (generation !== inspectionGenerationRef.current || controller.signal.aborted) return;
-          const errorCode =
-            error instanceof WorkerConversionError ? error.code : 'unknown';
+          const code = error instanceof WorkerConversionError ? error.code : 'unknown';
+          const errorCode = isJsonFile(item.name) &&
+            ['unknown', 'initializationFailed', 'conversionFailed', 'invalidSelection'].includes(code)
+            ? 'jsonInspectionFailed'
+            : code;
           setItems((current) =>
             current.map((currentItem) =>
               currentItem.id === item.id
