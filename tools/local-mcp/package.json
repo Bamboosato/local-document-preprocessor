@@ -1,0 +1,13 @@
+{
+  "name": "ldp-local-mcp",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "audit:security": "node ../../scripts/security-audit.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "playwright-core": "1.62.1",
+    "zod": "^4.1.0"
+  }
+}

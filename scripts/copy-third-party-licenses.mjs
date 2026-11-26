@@ -10,7 +10,10 @@ import {copyWasmDataMaterials} from './wasm-data-materials.mjs';
 import {copyPdfiumNoticeMaterials} from './pdfium-notice-materials.mjs';
 
 const projectRoot = new URL('../', import.meta.url);
-const outputDirectory = new URL('dist/licenses/', projectRoot);
+const outputDirectory = new URL(
+  process.argv.includes('--local-mcp') ? 'tools/local-mcp/dist/licenses/' : 'dist/licenses/',
+  projectRoot,
+);
 const licenses = [
   ['node_modules/@firecrawl/anydoc-wasm/LICENSE', 'anydoc-MIT.txt'],
   ['node_modules/@embedpdf/pdfium/LICENSE', 'embedpdf-pdfium-MIT.txt'],

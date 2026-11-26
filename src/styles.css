@@ -81,6 +81,14 @@ input:focus-visible,
   text-underline-offset: 0.15em;
 }
 
+.about-app { display: inline-block; max-width: 100%; margin: 0 1em 0 0; vertical-align: top; }
+.about-app[open] { display: block; max-width: 72ch; }
+.about-app summary { cursor: pointer; padding-block: .5em; }
+.about-app summary:focus-visible { outline: 3px solid #4c9ffe; outline-offset: 2px; }
+.about-app h3 { font-size: 1rem; margin-bottom: .25em; }
+.about-app p { margin-top: .25em; }
+@media (max-width: 599px) { .about-app { display: block; } }
+
 .app-footer a:hover,
 .app-footer a:focus-visible {
   color: var(--ink);

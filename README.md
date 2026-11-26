@@ -88,6 +88,8 @@ E2E は文書だけなら未実施、PWA / UI / 品質変更なら対象ケー�
 
 - [開発・テスト設計ルール](AGENTS.md)
 - [要件定義](docs/requirements.md)
+- [WindowsでのローカルMCPの初回登録・添付とプロジェクト文書の変換・MKBへの保存](tools/local-mcp/README.md)
+- [ローカルエージェントによるLDPのMarkdown変換とMKB保存の要件・UI仕様・基本設計](docs/local-mcp-spec.md)
 - [JSON入力追加 要件定義 v0.2（段階的接続検証中）](docs/local-document-preprocessor-json-requirements-v0.2.md)
 - [JSON入力追加 画面設計 v0.2（全UI受入は未完）](docs/local-document-preprocessor-json-screen-design-v0.2.md)
 - [JSON入力追加 Codex向け作業指示書](docs/json-input-codex-instructions.md)

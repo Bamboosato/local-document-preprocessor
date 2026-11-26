@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { ResultCard } from './components/ResultCard';
+import { AboutApp } from './components/AboutApp';
+import { defaultOptions } from './converter/defaultOptions';
 import {PwaStatus,usePwaState} from './components/PwaStatus';
 import { SelectionDialog } from './components/SelectionDialog';
 import {JsonSelectionDialog} from './components/JsonSelectionDialog';
@@ -80,16 +82,6 @@ function selectionSummary(
   if (inspection.selectionKind === 'document') return '文書全体';
   if (inspection.selectionKind === 'sheets') return 'すべてのシート';
   return `すべて（${inspection.totalUnits ?? 0}${inspection.selectionKind === 'slides' ? '枚' : 'ページ'}）`;
-}
-
-function defaultOptions(inspection: DocumentInspection): ConversionOptions {
-  if(inspection.json)return {insertPageBreaks:false,json:{...defaultJsonSettings}};
-  return {
-    insertPageBreaks:
-      inspection.selectionKind === 'pages' ||
-      inspection.selectionKind === 'slides' ||
-      (inspection.explicitPageBreakCount ?? 0) > 0,
-  };
 }
 
 export default function App() {
@@ -584,6 +576,7 @@ export default function App() {
         )}
       </main>
       <footer className="app-footer">
+        <AboutApp />
         <a href="/licenses/index.html" target="_blank" rel="noopener noreferrer">
           <span aria-hidden="true">ⓘ</span>
           <span className="app-footer-link-label">ライセンス</span>
