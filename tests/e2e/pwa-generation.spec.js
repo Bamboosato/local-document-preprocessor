@@ -9,6 +9,7 @@ import {buildPwaManifest} from '../../scripts/build-pwa-manifest.mjs';
 
 let temporary,server,base,current='A',blocked='',blockedHits=0,legacy=false,builds={};
 let updateInstallHold;
+let updateRequests;
 const updateNotice='変換結果があれば保存し、アプリを開きなおしてください。';
 const updateNoticeForA=process.env.PWA_MIGRATION_OLD_DIST?/更新の準備ができました/:updateNotice;
 const root=process.cwd();
@@ -46,6 +47,7 @@ test.beforeAll(async()=>{
   server=createServer(async(request,response)=>{
     try{
       const path=decodeURIComponent(new URL(request.url,'http://fixture').pathname);
+      if(current==='B')updateRequests?.push(path);
       if(legacy&&current==='A'&&path==='/sw.js'){
         // Migration fixture reproduces v1's network-first HTML, static cache,
         // skipWaiting/claim and absence of the new status protocol.
@@ -92,6 +94,7 @@ test('PG-01 actual A/B builds wait for every old tab; old lazy worker and offlin
     if(!process.env.PWA_MIGRATION_OLD_DIST){
       updateInstallHold=new Promise(resolve=>{releaseUpdateInstall=resolve;});
     }
+    updateRequests=[];
     current='B';
     await a.evaluate(async()=>{await(await navigator.serviceWorker.getRegistration()).update();});
     if(releaseUpdateInstall){
@@ -103,6 +106,12 @@ test('PG-01 actual A/B builds wait for every old tab; old lazy worker and offlin
       releaseUpdateInstall();
     }
     await expect(a.getByText(updateNoticeForA,{exact:true})).toBeVisible({timeout:30000});await expect(a.locator('.result-card')).toContainText('PRESERVED_A');
+    const previousHashes=new Map(builds.A.manifest.assets.map(asset=>[asset.url,asset.sha256]));
+    const assets=builds.B.manifest.assets;
+    const changed=assets.filter(asset=>previousHashes.get(asset.url)!==asset.sha256);
+    const assetPaths=new Set(assets.map(asset=>decodeURIComponent(asset.url)));
+    expect(updateRequests.filter(path=>assetPaths.has(path)).sort()).toEqual(changed.map(asset=>decodeURIComponent(asset.url)).sort());
+    test.info().annotations.push({type:'PWA update',description:`${changed.length}/${assets.length} assets fetched, ${changed.reduce((sum,asset)=>sum+asset.bytes,0)} uncompressed bytes`});
     if(releaseUpdateInstall){
       for(const [index,page] of pages.entries()){
         await expect(page.locator('.offline-badge')).toHaveText('更新できます');
@@ -138,7 +147,7 @@ test('PG-01 actual A/B builds wait for every old tab; old lazy worker and offlin
     await b.locator('input[type=file]').setInputFiles([{name:'offline.pdf',mimeType:'application/pdf',buffer:await readFile(resolve(root,'tests/fixtures/pdf/normal-machine-readable.pdf'))},{name:'offline.csv',mimeType:'text/csv',buffer:Buffer.from('name,value\nOFFLINE_CSV,2\n')}]);
     await expect(b.getByText('構造確認中',{exact:true})).toHaveCount(0);await b.getByRole('button',{name:'2 ファイルを変換',exact:true}).click();await expect(b.locator('.result-card')).toHaveCount(2);await expect(b.locator('.result-card').filter({has:b.getByRole('heading',{name:'offline.csv',exact:true})})).toContainText('OFFLINE_CSV');
     for(const card of await b.locator('.result-card').all())await expect(card.getByRole('button',{name:'Markdown をダウンロード',exact:true})).toBeEnabled();
-  }finally{releaseUpdateInstall?.();updateInstallHold=undefined;await context.close();}
+  }finally{releaseUpdateInstall?.();updateInstallHold=undefined;updateRequests=undefined;await context.close();}
 });
 test('PG-02 failed B install preserves A and explicit update retry can prepare B',async({browser})=>{
   const context=await browser.newContext(),page=await context.newPage();
