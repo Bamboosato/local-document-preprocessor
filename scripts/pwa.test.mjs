@@ -8,8 +8,8 @@ import {resolve,sep} from 'node:path';
 import {buildPwaManifest} from './build-pwa-manifest.mjs';
 const source=await readFile(new URL('../public/sw.js',import.meta.url),'utf8'),origin='https://pwa.invalid';
 const digest=value=>createHash('sha256').update(value).digest('hex');
-function harness({id='a'.repeat(24),store=new Map(),fault={},network={}}={}){
-  const bodies={'/index.html':['<html>A</html>','text/html'],'/assets/a.js':['export const version="A";','text/javascript'],'/assets/a.wasm':['binary-A','application/wasm'],'/licenses/@scope__pkg@1/LICENSE':['fixture license','text/plain']};
+function harness({id='a'.repeat(24),store=new Map(),fault={},network={},changes={}}={}){
+  const bodies={'/index.html':['<html>A</html>','text/html'],'/assets/a.js':['export const version="A";','text/javascript'],'/assets/a.wasm':['binary-A','application/wasm'],'/licenses/@scope__pkg@1/LICENSE':['fixture license','text/plain'],...changes};
   const assets=Object.entries(bodies).map(([url,[body]])=>({url,sha256:digest(body),bytes:Buffer.byteLength(body)}));
   const key=request=>new URL(typeof request==='string'?request:request.url,origin).href;
   const cache=name=>({
@@ -19,6 +19,7 @@ function harness({id='a'.repeat(24),store=new Map(),fault={},network={}}={}){
     put:async(request,response)=>{if(fault.put&&key(request).includes(fault.put))throw new DOMException('synthetic','QuotaExceededError');store.get(name).set(key(request),response.clone());},
   });
   const caches={has:async name=>store.has(name),keys:async()=>{if(fault.keys)throw Error('denied');return[...store.keys()];},delete:async name=>{if(fault.delete)throw Error('denied');return store.delete(name);},open:async name=>{if(fault.open)throw Error('denied');if(!store.has(name))store.set(name,new Map());return cache(name);}};
+  caches.match=async(request,{cacheName})=>cache(cacheName).match(request);
   const handlers=new Map(),fetches=[],messages=[];
   const self={__LDP_BUILD__:{id,assets},location:new URL(origin),addEventListener:(name,handler)=>handlers.set(name,handler),clients:{matchAll:async options=>{assert.equal(options.type,'window');return[{postMessage:message=>messages.push(message)}];}},skipWaiting:()=>{throw Error('forced-takeover');}};
   vm.runInNewContext(source,{self,caches,crypto:webcrypto,Request,Response,URL,Uint8Array,fetch:async request=>{const path=new URL(request.url).pathname;fetches.push(path);const [body,type]=network[path]??bodies[path]??['missing','text/plain'];return new Response(body,{headers:{'content-type':type}});}});
@@ -33,7 +34,7 @@ test('PW-01 install verifies all assets and status; activation cleans only owned
   await h.cache().put('/__ldp_static_ready__',new Response('wrong-generation'));assert.equal((await h.message('LDP_STATUS')).complete,false);
 });
 test('PW-02 corrupt update rolls back only the new cache and preserves the active generation',async()=>{
-  const old=harness();await old.dispatch('install');const next=harness({id:'b'.repeat(24),store:old.store,network:{'/assets/a.js':['corrupt','text/javascript']}});
+  const old=harness();await old.dispatch('install');const next=harness({id:'b'.repeat(24),store:old.store,changes:{'/assets/a.js':['export const version="B";','text/javascript']},network:{'/assets/a.js':['corrupt','text/javascript']}});
   await assert.rejects(next.dispatch('install'));assert.equal(old.store.has(old.name),true);assert.equal(old.store.has(next.name),false);assert.equal((await old.message('LDP_STATUS')).complete,true);
 });
 test('PW-03 quota failure at completion cannot publish partial ready state',async()=>{
@@ -75,4 +76,32 @@ test('PW-11 literal and encoded at-signs address the same verified cached licens
   assert.equal(await(await h.request('/licenses/@scope__pkg@1/LICENSE','navigate')).text(),'fixture license');
   assert.equal(await(await h.request('/licenses/%40scope__pkg%401/LICENSE','navigate')).text(),'fixture license');
   assert.equal(h.fetches.length,0);
+});
+test('PW-12 install fetches only changed, missing or corrupt assets and keeps the old generation intact',async()=>{
+  const old=harness();
+  await old.dispatch('install');
+  const license='/licenses/@scope__pkg@1/LICENSE';
+  await old.cache().delete(license);
+  const unrelated=await old.caches.open('unrelated-cache');
+  await unrelated.put(license,new Response('fixture license'));
+  await old.cache().put('/assets/a.js',new Response('export const version="X";',{headers:{'content-type':'text/javascript'}}));
+  const next=harness({id:'b'.repeat(24),store:old.store,changes:{'/index.html':['<html>B</html>','text/html']}});
+  await next.dispatch('install');
+  assert.deepEqual(next.fetches,['/index.html','/assets/a.js',license]);
+  assert.equal((await next.message('LDP_STATUS')).complete,true);
+  assert.equal(await(await old.cache().match('/index.html')).text(),'<html>A</html>');
+  assert.equal(await old.cache().match(license),undefined);
+  await next.dispatch('activate');
+  next.fetches.length=0;
+  assert.equal(await(await next.request('/assets/a.wasm')).text(),'binary-A');
+  assert.deepEqual(next.fetches,[]);
+});
+test('PW-13 an old response with matching bytes but invalid WASM MIME must be refetched',async()=>{
+  const old=harness();
+  await old.dispatch('install');
+  await old.cache().put('/assets/a.wasm',new Response('binary-A',{headers:{'content-type':'text/plain'}}));
+  const next=harness({id:'b'.repeat(24),store:old.store});
+  await next.dispatch('install');
+  assert.deepEqual(next.fetches,['/assets/a.wasm']);
+  assert.equal((await next.cache().match('/assets/a.wasm')).headers.get('content-type'),'application/wasm');
 });

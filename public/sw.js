@@ -25,14 +25,33 @@ async function verifiedNetwork(entry){
   if(!await valid(response,entry))throw new Error('invalid-static-asset');
   return response;
 }
-async function fill(){
+async function readVerifiedAsset(cacheName,entry){
+  try{
+    const response=await caches.match(entry.url,{cacheName});
+    if(await valid(response,entry))return response;
+  }catch{
+    // An unreadable cached body is a miss. Keep the source generation intact.
+  }
+}
+async function fill(reusePrevious=false){
   if(!BUILD||!entries.has('/index.html'))throw new Error('unbuilt-worker');
   const existed=await caches.has(CACHE_NAME),cache=await caches.open(CACHE_NAME);
   try{
+    let previous=[];
+    if(reusePrevious){
+      try{
+        previous=(await caches.keys()).reverse().filter(name=>name!==CACHE_NAME&&/^ldp-static-[a-f0-9]{24}$/.test(name));
+      }catch{ /* Cache discovery is optional; verified network fetches still work. */ }
+    }
     // Sequential verification limits simultaneous large WASM buffers.
     for(const entry of entries.values()){
-      const cached=await cache.match(entry.url);
-      if(!await valid(cached,entry))await cache.put(entry.url,await verifiedNetwork(entry));
+      if(existed&&await readVerifiedAsset(CACHE_NAME,entry))continue;
+      let response;
+      for(const name of previous){
+        response=await readVerifiedAsset(name,entry);
+        if(response)break;
+      }
+      await cache.put(entry.url,response??await verifiedNetwork(entry));
     }
     await cache.put(READY,new Response(BUILD.id));
     degraded=false;
@@ -67,7 +86,7 @@ async function assetResponse(entry,event){
     return response;
   }catch{return unavailable(event.request.mode==='navigate');}
 }
-self.addEventListener('install',event=>event.waitUntil(fill()));
+self.addEventListener('install',event=>event.waitUntil(fill(true)));
 self.addEventListener('activate',event=>event.waitUntil((async()=>{
   // Native waiting preserves all old controlled windows. Never force takeover.
   try{for(const name of await caches.keys()){
