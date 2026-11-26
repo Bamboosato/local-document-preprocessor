@@ -19,7 +19,7 @@ async function selectRange(page: Page, start: number, end: number) {
   await page.getByRole('button', { name: 'この範囲に決定' }).click();
 }
 
-test('[local-mcp] 利用案内の開閉後も手動コピーが同じ選択範囲のMarkdownを返す', async ({ page }) => {
+test('[local-mcp] 別タブの利用案内を閉じても手動コピーが同じ選択範囲のMarkdownを返す', async ({ page }) => {
   await page.addInitScript(() => {
     Object.defineProperty(navigator, 'clipboard', {value:{
       writeText: async (text: string) => { document.documentElement.dataset.copied = text; },
@@ -28,15 +28,18 @@ test('[local-mcp] 利用案内の開閉後も手動コピーが同じ選択範�
   await page.goto('/');
   await page.locator('input[type="file"]').setInputFiles(resolve('tests/fixtures/pdf/three-page-range.pdf'));
   await selectRange(page, 2, 3);
-  const guide = page.getByText('このアプリについて', {exact:true});
+  const guide = page.getByRole('link', {name:'このアプリについて', exact:true});
   for (const width of [390, 1280]) {
     await page.setViewportSize({width,height:800});
     await guide.focus();
-    await page.keyboard.press('Enter');
-    await expect(page.getByRole('heading', {name:'ローカルエージェントで使う'})).toBeVisible();
-    await expect(page.getByRole('link', {name:/導入・登録手順/})).toHaveAttribute('download','LDP-local-MCP.md');
+    const [about] = await Promise.all([page.waitForEvent('popup'), page.keyboard.press('Enter')]);
+    await about.setViewportSize({width,height:800});
+    await expect(about.getByRole('heading', {level:1, name:'このアプリについて'})).toBeVisible();
+    await expect(about.getByRole('heading', {name:'ローカルエージェントで使う'})).toBeVisible();
+    await expect(about.getByRole('link', {name:/導入・登録手順/})).toHaveAttribute('download','LDP-local-MCP.md');
+    expect(await about.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
-    await page.keyboard.press('Space');
+    await about.close();
     await expect(guide).toBeFocused();
   }
   await page.getByRole('button', {name:'1 ファイルを変換'}).click();

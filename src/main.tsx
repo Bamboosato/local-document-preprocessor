@@ -1,10 +1,15 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
+import { AboutApp } from './components/AboutApp';
 import './styles.css';
 import {startPwa} from './pwa/client';
 
-if (import.meta.env.PROD && 'serviceWorker' in navigator) {
+const isAboutPage = new URLSearchParams(window.location.search).get('page') === 'about';
+
+if (isAboutPage) {
+  document.title = 'このアプリについて | Local Document Preprocessor';
+} else if (import.meta.env.PROD && 'serviceWorker' in navigator) {
   window.addEventListener(
     'load',
     () => {
@@ -16,6 +21,6 @@ if (import.meta.env.PROD && 'serviceWorker' in navigator) {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    {isAboutPage ? <AboutApp /> : <App />}
   </StrictMode>,
 );
