@@ -33,7 +33,7 @@ test.beforeAll(async()=>{
       continue;
     }
     const project=join(temporary,version);await mkdir(project);
-    for(const file of ['src','public','index.html','package.json'])await cp(resolve(root,file),join(project,file),{recursive:true});
+    for(const file of ['src','public','index.html','package.json','tools/local-mcp/README.md'])await cp(resolve(root,file),join(project,file),{recursive:true});
     await symlink(resolve(root,'node_modules'),join(project,'node_modules'),process.platform==='win32'?'junction':'dir');
     const app=join(project,'src/App.tsx');await writeFile(app,(await readFile(app,'utf8')).replaceAll('Local Document Preprocessor',`PWA fixture ${version}`));
     const worker=join(project,'src/json/json.worker.ts');await writeFile(worker,(await readFile(worker,'utf8'))+`\n(self as unknown as {fixture:string}).fixture=${JSON.stringify(version)};\n`);
