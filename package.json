@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:mcp": "tsc -b && vite build --mode local-mcp && node scripts/copy-third-party-licenses.mjs --local-mcp",
     "postbuild": "node scripts/copy-third-party-licenses.mjs && node scripts/build-pwa-manifest.mjs",
     "preview": "vite preview",
     "test": "npm run test:unit",

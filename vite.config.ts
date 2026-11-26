@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import tinyRelease from './scripts/tiny-release.json' with {type:'json'};
 const processingBanner='/*! Local Document Preprocessor: generated, bundled and minified application code; not unmodified upstream sources. Third-party notices: /licenses/index.html */';
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   plugins: [react(),{name:'verify-fixed-tiny',buildStart(){
     const bytes=readFileSync(new URL('./node_modules/@mermaid-js/tiny/dist/mermaid.tiny.js',import.meta.url));
     const pkg=JSON.parse(readFileSync(new URL('./node_modules/@mermaid-js/tiny/package.json',import.meta.url),'utf8'));
@@ -31,12 +31,16 @@ export default defineConfig({
   worker: {
     // JSON uses the unmodified Tiny IIFE via importScripts. Vite also inlines
     // converter imports into its worker bundle; mixed-WASM regression covers it.
-    format: 'iife',
+    format: 'iife' as const,
     rolldownOptions: {output:{postBanner:processingBanner}},
   },
   build: {
     target: 'es2022',
-    rolldownOptions: {output:{postBanner:processingBanner}},
+    ...(mode === 'local-mcp' ? {outDir:'tools/local-mcp/dist', copyPublicDir:false} : {}),
+    rolldownOptions: {
+      ...(mode === 'local-mcp' ? {input:'tools/local-mcp/engine.html'} : {}),
+      output:{postBanner:processingBanner},
+    },
   },
   test: {
     // Avoid desktop fork fanout; physical/browser scripts also run serially.
@@ -47,4 +51,4 @@ export default defineConfig({
     css: true,
     include: ['src/**/*.test.{ts,tsx}'],
   },
-});
+}));

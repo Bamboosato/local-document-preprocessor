@@ -133,6 +133,9 @@ jobs:
         run: npm run audit:security
       - name: Audit versions embedded in the fixed Tiny bundle
         run: npm run audit:tiny
+      - name: Audit the local MCP runtime lockfile
+        run: npm run audit:security
+        working-directory: tools/local-mcp
       - name: Check document links and structure
         if: github.event_name != 'schedule'
         run: npm run check:docs
