@@ -576,7 +576,7 @@ export default function App() {
       </main>
       <footer className="app-footer">
         <a href="?page=about" target="_blank" rel="noopener noreferrer">
-          <span aria-hidden="true">ⓘ</span>
+          <span aria-hidden="true">📖</span>
           <span className="app-footer-link-label">このアプリについて</span>
         </a>
         <a href="/licenses/index.html" target="_blank" rel="noopener noreferrer">
